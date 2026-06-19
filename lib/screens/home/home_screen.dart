@@ -10,6 +10,7 @@ import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_backdrop.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
+import '../exam/mock_exam_setup_screen.dart';
 import '../quiz/quiz_launcher.dart';
 
 /// 오늘의 학습 대상 (인덱스에서 해석).
@@ -99,6 +100,8 @@ class HomeScreen extends ConsumerWidget {
                 _ContinueCard(),
                 const SizedBox(height: 12),
                 _CsatRandomCard(),
+                const SizedBox(height: 12),
+                _MockExamCard(),
                 const SizedBox(height: 12),
                 _ReviewCard(count: wrongCount, onTap: () => onOpenTab(2)),
                 const SizedBox(height: 20),
@@ -326,6 +329,48 @@ class _CsatRandomCard extends ConsumerWidget {
               );
             }).toList(),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MockExamCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    return AppCard(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => const MockExamSetupScreen()),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 46,
+            height: 46,
+            decoration: BoxDecoration(
+              color: scheme.secondary.withValues(alpha: 0.14),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(Icons.timer_outlined, color: scheme.secondary),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('모의수능 보기',
+                    style: theme.textTheme.titleSmall
+                        ?.copyWith(fontWeight: FontWeight.w800)),
+                const SizedBox(height: 2),
+                Text('공통 + 선택 1과목, 시간 재고 실전처럼',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                        color: scheme.onSurfaceVariant)),
+              ],
+            ),
+          ),
+          Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant),
         ],
       ),
     );

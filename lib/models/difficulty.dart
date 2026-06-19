@@ -24,6 +24,13 @@ extension DifficultyInfo on Difficulty {
 
   Color get color => AppColors.difficultyColors[index];
 
+  /// 모의수능 배점: 쉬움 2점 / 중간 3점 / 어려움 4점
+  int get examPoints => switch (this) {
+        Difficulty.conceptCheck || Difficulty.basic => 2,
+        Difficulty.typical || Difficulty.applied => 3,
+        Difficulty.csatBasic || Difficulty.csatReal => 4,
+      };
+
   static Difficulty fromLabel(String label) => Difficulty.values.firstWhere(
         (d) => d.label == label,
         orElse: () => Difficulty.conceptCheck,
