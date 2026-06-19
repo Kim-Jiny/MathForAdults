@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/content_repository.dart';
+import '../models/concept_card.dart';
 import '../models/curriculum_index.dart';
 import '../models/math_problem.dart';
 import '../models/user_stats.dart';
@@ -28,6 +29,11 @@ final contentRepositoryProvider = Provider<ContentRepository>(
 /// 메타데이터 인덱스 (시작 시 1회 로드). 탐색 화면이 watch.
 final curriculumIndexProvider = FutureProvider<CurriculumIndex>(
   (ref) => ref.watch(contentRepositoryProvider).loadIndex(),
+);
+
+/// 개념 카드 맵 (키: "과목|단원|세부단원").
+final conceptsProvider = FutureProvider<Map<String, ConceptCard>>(
+  (ref) => ref.watch(contentRepositoryProvider).loadConcepts(),
 );
 
 // ───────────────────────── 사용자 상태 ─────────────────────────

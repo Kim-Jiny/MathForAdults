@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 
+import '../models/concept_card.dart';
 import '../models/curriculum_index.dart';
 import '../models/difficulty.dart';
 import '../models/math_problem.dart';
@@ -13,6 +14,7 @@ class ContentRepository {
 
   CurriculumIndex? _index;
   final Map<String, List<MathProblem>> _subjectCache = {};
+  Map<String, ConceptCard>? _concepts;
 
   /// 메타데이터 인덱스 (시작 시 1회).
   Future<CurriculumIndex> loadIndex() async {
@@ -20,6 +22,22 @@ class ContentRepository {
     final raw = await rootBundle.loadString('$_base/index.json');
     _index = CurriculumIndex.fromJson(jsonDecode(raw) as Map<String, dynamic>);
     return _index!;
+  }
+
+  /// 개념 카드 (1회 로드, 캐시). 키: "과목|단원|세부단원".
+  Future<Map<String, ConceptCard>> loadConcepts() async {
+    if (_concepts != null) return _concepts!;
+    try {
+      final raw = await rootBundle.loadString('assets/concepts.json');
+      final json = jsonDecode(raw) as Map<String, dynamic>;
+      _concepts = {
+        for (final e in json.entries)
+          e.key: ConceptCard.fromJson(e.key, e.value as Map<String, dynamic>)
+      };
+    } catch (_) {
+      _concepts = {};
+    }
+    return _concepts!;
   }
 
   /// 한 과목의 전체 문제 (캐시). 그 과목에 진입할 때만 호출.

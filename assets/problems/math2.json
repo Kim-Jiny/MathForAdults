@@ -321,7 +321,11 @@
     "answerIndex": 2,
     "explanation": "f′(x) = 3x² − 3 = 0 → x = ±1. f(−1) = 2 (극대), f(1) = −2 (극소).",
     "detailedExplanation": "f′(x) = 3(x−1)(x+1).\nx = −1 에서 f′ 부호가 +→− 이므로 극대, f(−1) = −1 + 3 = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "극값 후보는 f′(x) = 0 인 x 입니다. 먼저 f′(x)를 구하세요.",
+      "x 좌우로 f′ 의 부호가 +→− 로 바뀌면 그 점이 극대입니다."
+    ]
   },
   {
     "id": "m2_diff_006",
@@ -519,7 +523,11 @@
     "answerIndex": 1,
     "explanation": "넓이 = ∫₀² x² dx = [x³/3]₀² = 8/3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x축 위 곡선과 둘러싸인 넓이는 ∫(a~b) f(x) dx 입니다.",
+      "∫₀² x² dx = [x³/3]₀² 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_1",

@@ -717,7 +717,11 @@
     "answerIndex": 2,
     "explanation": "a₇ − a₃ = 4d = 12 이므로 d = 3. a₁ = a₃ − 2d = 10 − 6 = 4.",
     "detailedExplanation": "a₇ − a₃ = 4d = 12, d = 3.\na₁ = a₃ − 2d = 10 − 6 = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 항의 차로 공차를 먼저 구해요. a₇ − a₃ 은 공차 d의 몇 배일까요?",
+      "a₇ − a₃ = 4d 입니다. d를 구한 뒤 a₁ = a₃ − 2d."
+    ]
   },
   {
     "id": "seq_004",
@@ -735,7 +739,11 @@
     "answerIndex": 2,
     "explanation": "Sₙ = n/2 × {2a₁ + (n−1)d}. S₁₀ = 5 × (4 + 27) = 155.",
     "detailedExplanation": "S₁₀ = 10/2 × {2×2 + 9×3} = 5 × 31 = 155.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "등차수열의 합 공식 Sₙ = n/2 × {2a₁ + (n−1)d} 를 떠올려요.",
+      "a₁=2, d=3, n=10 을 그대로 대입하세요."
+    ]
   },
   {
     "id": "seq_005",
@@ -771,7 +779,11 @@
     "answerIndex": 0,
     "explanation": "a₃=5−d, a₅=5+d 이므로 25−d² = 21, d=2. a₁ = a₄ − 3d = 5 − 6 = −1.",
     "detailedExplanation": "a₄=5 기준 a₃ = 5−d, a₅ = 5+d.\n(5−d)(5+d) = 25 − d² = 21 → d² = 4, 공차 양수이므로 d = 2.\na₁ = a₄ − 3d = 5 − 6 = −1.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "a₄=5 를 기준으로 a₃, a₅ 를 d로 표현해요 (a₃=5−d, a₅=5+d).",
+      "(5−d)(5+d) = 25 − d² = 21. 공차가 양수인 점으로 d를 정합니다."
+    ]
   },
   {
     "id": "seq_011",
@@ -825,7 +837,11 @@
     "answerIndex": 1,
     "explanation": "a₄ / a₂ = r² = 4 이므로 r = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₄ 를 a₂ 와 공비 r로 나타내면? a₄ = a₂·r².",
+      "a₄ / a₂ = r² 이고 r > 0 입니다."
+    ]
   },
   {
     "id": "seq_016",
@@ -969,7 +985,11 @@
     "answerIndex": 2,
     "explanation": "n≥2 에서 aₙ = Sₙ − Sₙ₋₁ = (n²+2n) − {(n−1)²+2(n−1)} = 2n+1. a₅ = 11.",
     "detailedExplanation": "Sₙ − Sₙ₋₁ = 2n + 1 (n≥2). a₅ = 2×5 + 1 = 11.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ 과 Sₙ 의 관계를 떠올려요: aₙ = Sₙ − Sₙ₋₁ (n ≥ 2).",
+      "Sₙ − Sₙ₋₁ 을 전개하면 aₙ 의 식이 나옵니다."
+    ]
   },
   {
     "id": "seq_031",

@@ -41,6 +41,7 @@ flutter:
 
   assets:
     - assets/problems/
+    - assets/concepts.json
 
 # 앱 아이콘 (dart run flutter_launcher_icons)
 flutter_launcher_icons:

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../models/concept_card.dart';
 import '../../models/curriculum_index.dart';
 import '../../models/difficulty.dart';
 import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../quiz/quiz_launcher.dart';
 
@@ -22,6 +24,7 @@ class ChapterLessonsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final indexAsync = ref.watch(curriculumIndexProvider);
+    ref.watch(conceptsProvider); // 개념 카드 선로드
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -103,7 +106,24 @@ class ChapterLessonsScreen extends ConsumerWidget {
                 Text('난이도를 골라 시작하세요',
                     style: theme.textTheme.bodyMedium?.copyWith(
                         color: theme.colorScheme.onSurfaceVariant)),
-                const SizedBox(height: 16),
+                const SizedBox(height: 14),
+                Builder(builder: (_) {
+                  final concept = ref
+                      .read(conceptsProvider)
+                      .valueOrNull?[ConceptCard.keyOf(
+                          subjectName, chapter, lesson.name)];
+                  if (concept == null) return const SizedBox.shrink();
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 14),
+                    child: OutlinedButton.icon(
+                      style: OutlinedButton.styleFrom(
+                          minimumSize: const Size.fromHeight(46)),
+                      onPressed: () => showConceptSheet(context, concept),
+                      icon: const Text('📘', style: TextStyle(fontSize: 16)),
+                      label: const Text('개념 카드 먼저 보기'),
+                    ),
+                  );
+                }),
                 Flexible(
                   child: ListView(
                     shrinkWrap: true,

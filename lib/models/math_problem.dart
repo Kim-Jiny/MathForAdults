@@ -22,6 +22,7 @@ class MathProblem {
 
   final String explanation; // 짧은 해설
   final String? detailedExplanation; // 상세 해설(접기)
+  final List<String> hints; // 단계별 힌트(정답 전 단계적으로 공개)
   final String estimatedTime; // 예: "1분"
 
   const MathProblem({
@@ -37,6 +38,7 @@ class MathProblem {
     this.answerText,
     required this.explanation,
     this.detailedExplanation,
+    this.hints = const [],
     required this.estimatedTime,
   });
 
@@ -80,6 +82,9 @@ class MathProblem {
         answerText: json['answer'] as String?,
         explanation: json['explanation'] as String,
         detailedExplanation: json['detailedExplanation'] as String?,
+        hints: (json['hints'] as List<dynamic>? ?? const [])
+            .map((e) => e.toString())
+            .toList(),
         estimatedTime: json['estimatedTime'] as String? ?? '1분',
       );
 
@@ -96,6 +101,7 @@ class MathProblem {
         if (answerText != null) 'answer': answerText,
         'explanation': explanation,
         'detailedExplanation': detailedExplanation,
+        if (hints.isNotEmpty) 'hints': hints,
         'estimatedTime': estimatedTime,
       };
 }

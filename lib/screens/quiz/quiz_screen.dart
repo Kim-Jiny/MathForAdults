@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../models/concept_card.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
+import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
 import 'explanation_panel.dart';
@@ -27,9 +29,16 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   bool _lastCorrect = false;
   int _correctCount = 0;
   bool _finished = false;
+  int _revealedHints = 0;
 
   MathProblem get _problem => widget.problems[_index];
   int get _total => widget.problems.length;
+
+  @override
+  void initState() {
+    super.initState();
+    ref.read(conceptsProvider); // 개념 카드 선로드
+  }
 
   @override
   void dispose() {
@@ -64,6 +73,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     _shortController.clear();
     _checked = false;
     _lastCorrect = false;
+    _revealedHints = 0;
   }
 
   void _next() {
@@ -122,9 +132,20 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final theme = Theme.of(context);
     final p = _problem;
 
+    final concept = ref.read(conceptsProvider).valueOrNull?[
+        ConceptCard.keyOf(p.subject, p.chapter, p.lesson)];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.sessionTitle ?? p.chapter),
+        actions: [
+          if (concept != null)
+            IconButton(
+              tooltip: '개념 보기',
+              onPressed: () => showConceptSheet(context, concept),
+              icon: const Text('📘', style: TextStyle(fontSize: 18)),
+            ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(3),
           child: LinearProgressIndicator(
@@ -191,6 +212,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  if (p.hints.isNotEmpty && !_checked) _hintsSection(theme, p),
                   const SizedBox(height: 24),
                   if (p.type == ProblemType.short)
                     _shortInput(theme)
@@ -210,6 +232,58 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
             _bottomBar(),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _hintsSection(ThemeData theme, MathProblem p) {
+    final scheme = theme.colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(top: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var i = 0; i < _revealedHints && i < p.hints.length; i++)
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: scheme.secondary.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(12),
+                border:
+                    Border.all(color: scheme.secondary.withValues(alpha: 0.3)),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('힌트 ${i + 1}  ',
+                      style: theme.textTheme.labelMedium?.copyWith(
+                          color: scheme.secondary, fontWeight: FontWeight.w800)),
+                  Expanded(
+                    child: MathText(p.hints[i],
+                        style: theme.textTheme.bodyMedium?.copyWith(height: 1.5)),
+                  ),
+                ],
+              ),
+            ),
+          if (_revealedHints < p.hints.length)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                onPressed: () => setState(() => _revealedHints++),
+                icon: Icon(Icons.lightbulb_outline_rounded,
+                    size: 18, color: scheme.secondary),
+                label: Text(
+                  _revealedHints == 0
+                      ? '힌트 보기'
+                      : '힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                  style: TextStyle(
+                      color: scheme.secondary, fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
