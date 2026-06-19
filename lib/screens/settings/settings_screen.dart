@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../../l10n/app_localizations.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
+import 'inquiry_screen.dart';
 
 /// 설정 탭: 알림 / 목표 / 테마 / 문의 / 앱 정보.
 class SettingsScreen extends ConsumerWidget {
@@ -84,9 +87,27 @@ class SettingsScreen extends ConsumerWidget {
                   title: const Text('문의하기',
                       style: TextStyle(fontWeight: FontWeight.w600)),
                   trailing: const Icon(Icons.chevron_right_rounded),
-                  onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('kjinyz@naver.com 로 문의해 주세요')),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const InquiryScreen()),
                   ),
+                ),
+                const Divider(height: 1, indent: 16, endIndent: 16),
+                ListTile(
+                  leading: const Icon(Icons.privacy_tip_outlined),
+                  title: const Text('개인정보처리방침',
+                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                  onTap: () => _openUrl(
+                      context, 'https://duo.jiny.shop/mfa/privacy'),
+                ),
+                const Divider(height: 1, indent: 16, endIndent: 16),
+                ListTile(
+                  leading: const Icon(Icons.help_outline_rounded),
+                  title: const Text('지원',
+                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                  onTap: () => _openUrl(
+                      context, 'https://duo.jiny.shop/mfa/support'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
@@ -107,6 +128,17 @@ class SettingsScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _openUrl(BuildContext context, String url) async {
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      final ok = await launchUrl(Uri.parse(url),
+          mode: LaunchMode.externalApplication);
+      if (!ok) throw Exception('open failed');
+    } catch (_) {
+      messenger.showSnackBar(SnackBar(content: Text('페이지를 열 수 없어요: $url')));
+    }
   }
 
   Widget _themeTile(WidgetRef ref, Settings settings, ThemeMode mode,

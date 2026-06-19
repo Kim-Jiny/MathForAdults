@@ -20,8 +20,12 @@ dependencies:
   flutter_riverpod: ^2.6.1
   # LaTeX 수식 렌더링 (수식 문제 대응)
   flutter_math_fork: ^0.7.4
-  # 로컬 저장 (추후 진도 영속화용)
+  # 로컬 저장 (진도 영속화)
   shared_preferences: ^2.3.3
+  # 문의하기 서버 전송
+  http: ^1.2.2
+  # 약관/지원 페이지 열기
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
