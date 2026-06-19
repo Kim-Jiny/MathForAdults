@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "ps_count_001",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "기본 유형",
+    "question": "서로 다른 4개에서 2개를 뽑아 일렬로 나열하는 경우의 수는?",
+    "choices": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "₄P₂ = 4 × 3 = 12.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ps_count_002",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "대표 유형",
+    "question": "서로 다른 6명 중 3명을 뽑는 경우의 수는?",
+    "choices": [
+      "10",
+      "15",
+      "20",
+      "120"
+    ],
+    "answerIndex": 2,
+    "explanation": "순서 없이 뽑으므로 조합. ₆C₃ = (6×5×4)/(3×2×1) = 20.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ps_binom_001",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(x + 1)⁴ 의 전개식에서 x² 의 계수는?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "일반항은 ₄Cᵣ xⁿ⁻ʳ. x² 의 계수는 ₄C₂ = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ps_prob_001",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻",
+    "difficulty": "개념 확인",
+    "question": "주사위 한 개를 던질 때 짝수의 눈이 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "짝수는 2, 4, 6 으로 3가지. 3/6 = 1/2.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ps_prob_002",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻",
+    "difficulty": "기본 유형",
+    "question": "동전 두 개를 던질 때 모두 앞면이 나올 확률은?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "1/8"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 경우 4가지 중 (앞, 앞) 1가지. 1/4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ps_cond_001",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "P(A) = 1/2, P(A ∩ B) = 1/6 일 때, 조건부확률 P(B | A) 는?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(B|A) = P(A∩B)/P(A) = (1/6)/(1/2) = 1/3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ps_stat_001",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "대표 유형",
+    "question": "공정한 주사위 한 개를 던질 때 나오는 눈의 수의 기댓값 E(X)는?",
+    "choices": [
+      "3",
+      "3.5",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "E(X) = (1+2+3+4+5+6)/6 = 21/6 = 3.5.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ps_stat_002",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "개념 확인",
+    "question": "표준정규분포 N(0, 1) 의 평균은?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "평균 없음"
+    ],
+    "answerIndex": 0,
+    "explanation": "표준정규분포는 평균 0, 표준편차 1 인 분포입니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_1",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "개념 확인",
+    "question": "서로 다른 5개의 의자를 원형으로 배열하는 경우의 수는?",
+    "choices": [
+      "24",
+      "120",
+      "60",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "원순열의 수는 (n-1)! 이므로 (5-1)! = 4! = 24이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_2",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "개념 확인",
+    "question": "서로 다른 4개의 색 구슬을 실에 꿰어 목걸이를 만드는 경우의 수는? (뒤집어서 같은 것은 하나로 센다)",
+    "choices": [
+      "12",
+      "3",
+      "6",
+      "24"
+    ],
+    "answerIndex": 1,
+    "explanation": "목걸이의 경우 뒤집어서 같은 것을 같다고 볼 때 경우의 수는 (n-1)! ÷ 2 = 3! ÷ 2 = 6 ÷ 2 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_3",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "기본 유형",
+    "question": "중복순열 ₃Π₂의 값은?",
+    "choices": [
+      "6",
+      "9",
+      "3",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "중복순열 ₙΠᵣ = nʳ 이므로 ₃Π₂ = 3² = 9이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_4",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "기본 유형",
+    "question": "1, 2, 3의 숫자 카드에서 중복을 허락하여 3자리 수를 만들 때 경우의 수는?",
+    "choices": [
+      "6",
+      "9",
+      "27",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "각 자리에 3가지 숫자를 중복 허용하여 선택하므로 3³ = 27이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_5",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "6명이 원형 탁자에 앉을 때, 특정 2명(A, B)이 반드시 이웃하여 앉는 경우의 수는?",
+    "choices": [
+      "48",
+      "120",
+      "24",
+      "240"
+    ],
+    "answerIndex": 0,
+    "explanation": "A와 B를 한 묶음으로 보면 5개를 원형 배열하는 경우 (5-1)! = 24가지이고, A와 B끼리 자리를 바꾸는 경우 2! = 2가지이므로 24 × 2 = 48이다.",
+    "detailedExplanation": "1단계: A와 B를 하나의 묶음으로 취급하면 6명 대신 5개의 단위가 원형으로 앉는 경우의 수는 (5-1)! = 24.\n2단계: 묶음 안에서 A와 B가 서로 자리를 바꾸는 경우의 수는 2! = 2.\n3단계: 24 × 2 = 48.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_6",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "0, 1, 2, 3 중에서 중복을 허락하여 3자리 자연수를 만들 때 경우의 수는?",
+    "choices": [
+      "64",
+      "48",
+      "60",
+      "36"
+    ],
+    "answerIndex": 1,
+    "explanation": "백의 자리에는 0이 올 수 없으므로 3가지, 십의 자리와 일의 자리에는 각각 4가지씩 선택할 수 있으므로 3 × 4 × 4 = 48이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_7",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "응용 유형",
+    "question": "남자 3명, 여자 3명이 원형 탁자에 앉을 때, 남녀가 번갈아 앉는 경우의 수는?",
+    "choices": [
+      "36",
+      "12",
+      "72",
+      "144"
+    ],
+    "answerIndex": 1,
+    "explanation": "먼저 남자 3명을 원형으로 배열하면 (3-1)! = 2가지, 남자 사이사이 3개의 자리에 여자 3명을 배열하면 3! = 6가지이므로 2 × 6 = 12이다.",
+    "detailedExplanation": "1단계: 남자 3명을 원형 배열 → (3-1)! = 2!\n= 2가지.\n2단계: 남자들 사이의 3개의 빈자리에 여자 3명을 배치 → 3! = 6가지.\n3단계: 2 × 6 = 12.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_8",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "수능 기초",
+    "question": "집합 {1, 2, 3, 4}에서 집합 {1, 2, 3}으로의 함수의 개수는?",
+    "choices": [
+      "24",
+      "12",
+      "81",
+      "64"
+    ],
+    "answerIndex": 2,
+    "explanation": "정의역의 원소 4개 각각에 공역의 원소 3개 중 하나를 대응시키는 중복순열이므로 경우의 수는 3⁴ = 81이다.",
+    "detailedExplanation": "집합 {1,2,3,4}의 각 원소에 대해 공역 {1,2,3}에서 독립적으로 값을 선택할 수 있으므로, 이는 중복순열의 개념과 동일하다. 경우의 수 = 3⁴ = 81.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_9",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "개념 확인",
+    "question": "다음 중 같은 것이 있는 순열의 수를 구하는 공식으로 옳은 것은? n개 중 같은 것이 각각 p개, q개(p+q=n)일 때",
+    "choices": [
+      "n! ÷ (p! × q!)",
+      "n! × (p! × q!)",
+      "nPp × nPq",
+      "n! ÷ (p + q)!"
+    ],
+    "answerIndex": 0,
+    "explanation": "같은 것이 있는 순열의 수는 전체 개수의 계승을 같은 것들의 계승의 곱으로 나눈 n! ÷ (p! × q!)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_10",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "개념 확인",
+    "question": "문자 A, A, B를 일렬로 나열하는 경우의 수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "3개 중 A가 2개 같으므로 3! ÷ 2! = 6 ÷ 2 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_11",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "기본 유형",
+    "question": "문자 A, A, B, B, C를 일렬로 나열하는 경우의 수는?",
+    "choices": [
+      "20",
+      "30",
+      "60",
+      "120"
+    ],
+    "answerIndex": 1,
+    "explanation": "A가 2개, B가 2개 같으므로 5! ÷ (2! × 2!) = 120 ÷ 4 = 30이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_12",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "기본 유형",
+    "question": "오른쪽으로 3칸, 위쪽으로 2칸 이동하는 최단 경로의 수는?",
+    "choices": [
+      "5",
+      "8",
+      "10",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "오른쪽(R) 3번, 위(U) 2번을 일렬로 나열하는 경우이므로 5! ÷ (3! × 2!) = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_13",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "대표 유형",
+    "question": "숫자 0, 0, 1, 1, 2를 모두 사용하여 만들 수 있는 다섯 자리 수의 개수는? (단, 맨 앞자리에 0이 오면 안 된다)",
+    "choices": [
+      "12",
+      "15",
+      "18",
+      "24"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 5! ÷ (2! × 2!) = 30에서, 맨 앞에 0이 오는 경우(나머지 0,1,1,2 나열: 4! ÷ 2! = 12)를 빼면 30 − 12 = 18이다.",
+    "detailedExplanation": "전체 나열 수: 5! ÷ (2! × 2!) = 30. 맨 앞에 0이 오는 경우: 첫 자리를 0으로 고정하고 나머지 0,1,1,2 네 자리 나열 → 4! ÷ 2! = 12. 따라서 구하는 수 = 30 − 12 = 18.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_14",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "대표 유형",
+    "question": "1, 1, 2, 2, 3을 일렬로 나열할 때, 양 끝에 같은 숫자가 오는 경우의 수는?",
+    "choices": [
+      "3",
+      "6",
+      "9",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "양 끝이 (1,1)인 경우: 가운데 2,2,3 나열 → 3! ÷ 2! = 3, 양 끝이 (2,2)인 경우: 가운데 1,1,3 나열 → 3! ÷ 2! = 3, 합계 3 + 3 = 6이다.",
+    "detailedExplanation": "양 끝에 같은 숫자가 오려면 (1,1) 또는 (2,2)가 양 끝을 차지해야 한다. 양 끝이 1,1인 경우 가운데 2,2,3 나열 → 3! ÷ 2! = 3가지. 양 끝이 2,2인 경우 가운데 1,1,3 나열 → 3! ÷ 2! = 3가지. 합계 = 3 + 3 = 6.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_15",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "수능 기초",
+    "question": "SUCCESS의 7개의 문자를 일렬로 나열하는 경우의 수는? (S가 3개, C가 2개, U, E 각 1개)",
+    "choices": [
+      "420",
+      "840",
+      "1260",
+      "2520"
+    ],
+    "answerIndex": 0,
+    "explanation": "S가 3개, C가 2개이므로 7! ÷ (3! × 2!) = 5040 ÷ 12 = 420이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_16",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "개념 확인",
+    "question": "중복조합 H(n, r)의 공식으로 올바른 것은?",
+    "choices": [
+      "H(n, r) = C(n, r)",
+      "H(n, r) = C(n+r-1, r)",
+      "H(n, r) = C(n-1, r)",
+      "H(n, r) = C(n+r, r-1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "서로 다른 n개에서 r개를 중복을 허용하여 선택하는 중복조합의 수는 H(n, r) = C(n+r-1, r)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_17",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "개념 확인",
+    "question": "H(4, 2)의 값은?",
+    "choices": [
+      "6",
+      "10",
+      "12",
+      "15"
+    ],
+    "answerIndex": 1,
+    "explanation": "H(4, 2) = C(4+2-1, 2) = C(5, 2) = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_18",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "기본 유형",
+    "question": "서로 다른 종류의 사탕 3가지 중에서 중복을 허용하여 4개를 고르는 경우의 수는?",
+    "choices": [
+      "12",
+      "15",
+      "18",
+      "21"
+    ],
+    "answerIndex": 1,
+    "explanation": "H(3, 4) = C(3+4-1, 4) = C(6, 4) = 15이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_19",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "기본 유형",
+    "question": "방정식 x + y + z = 5를 만족하는 음이 아닌 정수해의 개수는?",
+    "choices": [
+      "15",
+      "21",
+      "25",
+      "35"
+    ],
+    "answerIndex": 1,
+    "explanation": "음이 아닌 정수해의 개수는 H(3, 5) = C(3+5-1, 5) = C(7, 5) = 21이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_20",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "대표 유형",
+    "question": "방정식 x + y + z = 8을 만족하는 양의 정수해의 개수는?",
+    "choices": [
+      "15",
+      "21",
+      "28",
+      "36"
+    ],
+    "answerIndex": 1,
+    "explanation": "x' = x-1, y' = y-1, z' = z-1으로 치환하면 x' + y' + z' = 5의 음이 아닌 정수해의 개수이므로 H(3, 5) = C(7, 5) = 21이다.",
+    "detailedExplanation": "양의 정수해는 각 변수가 1 이상이어야 하므로 x = x'+1, y = y'+1, z = z'+1 (x', y', z' ≥ 0)로 치환한다. 그러면 (x'+1)+(y'+1)+(z'+1) = 8이므로 x'+y'+z' = 5가 되고, 음이 아닌 정수해의 수는 H(3, 5) = C(7, 2) = 21이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_21",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "응용 유형",
+    "question": "a ≤ b ≤ c를 만족하는 자연수 a, b, c의 순서쌍 (a, b, c) 중 a + b + c = 9인 것의 개수는?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "a ≤ b ≤ c이고 a + b + c = 9인 자연수 순서쌍은 (1,1,7), (1,2,6), (1,3,5), (1,4,4), (2,2,5), (2,3,4), (3,3,3)으로 모두 7개이다.",
+    "detailedExplanation": "a ≥ 1이고 a ≤ b ≤ c이며 a+b+c=9인 경우를 a값에 따라 나열한다. a=1일 때: b+c=8, b≥1, b≤c이면 b=1~4이므로 (1,1,7),(1,2,6),(1,3,5),(1,4,4) → 4가지. a=2일 때: b+c=7, b≥2, b≤c이면 b=2,3이므로 (2,2,5),(2,3,4) → 2가지. a=3일 때: b+c=6, b≥3, b≤c이면 b=3이므로 (3,3,3) → 1가지. a≥4이면 3a≤9이므로 a≤3, 불가. 합계: 4+2+1 = 7가지.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_22",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "수능 실전",
+    "question": "집합 {1, 2, 3, 4}에서 집합 {1, 2, 3, 4, 5}로의 함수 f 중에서 f(1) ≤ f(2) ≤ f(3) ≤ f(4)를 만족하는 함수의 개수는?",
+    "choices": [
+      "56",
+      "70",
+      "84",
+      "126"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(1) ≤ f(2) ≤ f(3) ≤ f(4)를 만족하는 함수의 수는 {1,2,3,4,5}에서 중복을 허용하여 4개를 비내림차순으로 선택하는 수와 같으므로 H(5, 4) = C(8, 4) = 70이다.",
+    "detailedExplanation": "f(1) ≤ f(2) ≤ f(3) ≤ f(4)이고 각 f(i) ∈ {1,2,3,4,5}인 경우는, 5개의 원소 집합에서 중복을 허용하여 4개를 택하는 중복조합의 수와 동일하다. 따라서 H(5,4) = C(5+4-1, 4) = C(8, 4) = 8!/(4!×4!) = (8×7×6×5)/(4×3×2×1) = 1680/24 = 70이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_23",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "개념 확인",
+    "question": "(1 + x)⁵를 전개할 때, x³의 계수는?",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "이항정리에 의해 (1+x)⁵에서 x³의 계수는 ₅C₃ = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_24",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "개념 확인",
+    "question": "(a + b)⁶의 전개식에서 a⁴b²의 계수는?",
+    "choices": [
+      "10",
+      "12",
+      "15",
+      "20"
+    ],
+    "answerIndex": 2,
+    "explanation": "a⁴b²의 계수는 ₆C₄ = ₆C₂ = 15이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_25",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "기본 유형",
+    "question": "(2x + 1)⁴를 전개할 때, x²의 계수는?",
+    "choices": [
+      "12",
+      "24",
+      "48",
+      "96"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² 항은 ₄C₂ × (2x)² × 1² = 6 × 4x² = 24x²이므로 계수는 24이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_26",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "기본 유형",
+    "question": "(x − 2)⁵를 전개할 때, x³의 계수는?",
+    "choices": [
+      "−80",
+      "−40",
+      "40",
+      "80"
+    ],
+    "answerIndex": 2,
+    "explanation": "x³ 항은 ₅C₃ × x³ × (−2)² = 10 × 4 × x³이므로 계수는 40이다.",
+    "detailedExplanation": "(x + (−2))⁵의 일반항: ₅C_k × x^(5−k) × (−2)^k. x³이 되려면 5−k=3, 즉 k=2. 계수 = ₅C₂ × (−2)² = 10 × 4 = 40.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_27",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(x + 1/x)⁸의 전개식에서 상수항은?",
+    "choices": [
+      "56",
+      "70",
+      "84",
+      "126"
+    ],
+    "answerIndex": 1,
+    "explanation": "일반항 ₈C_k × x^(8−k) × x^(−k) = ₈C_k × x^(8−2k). 상수항은 8−2k=0, 즉 k=4일 때이고 ₈C₄ = 70이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_28",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(x − 1/x)⁶의 전개식에서 상수항은?",
+    "choices": [
+      "−20",
+      "−10",
+      "10",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "일반항 ₆C_k × x^(6−k) × (−1/x)^k = ₆C_k × (−1)^k × x^(6−2k). 상수항은 6−2k=0, k=3일 때 ₆C₃ × (−1)³ = 20 × (−1) = −20이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_29",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 기초",
+    "question": "(1 + x)ⁿ의 전개식에서 x²의 계수가 x³의 계수와 같을 때, 자연수 n의 값은?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "x²의 계수 ₙC₂, x³의 계수 ₙC₃이 같으므로 n(n−1)/2 = n(n−1)(n−2)/6. 양변을 n(n−1)/6으로 나누면 3 = n−2, 따라서 n = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_30",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 실전",
+    "question": "(x² + a/x)⁹의 전개식에서 x¹²의 계수가 36일 때, 양수 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "일반항 ₉C_k × (x²)^(9−k) × (a/x)^k = ₉C_k × a^k × x^(18−3k). x¹² 조건: 18−3k=12, k=2. 계수 = ₉C₂ × a² = 36a² = 36이므로 a² = 1, a = 1이다.",
+    "detailedExplanation": "(x² + a/x)⁹의 일반항: ₉C_k × (x²)^(9−k) × (a/x)^k = ₉C_k × a^k × x^(18−2k) × x^(−k) = ₉C_k × a^k × x^(18−3k). x¹² 조건: 18−3k = 12 → k = 2. 계수 = ₉C₂ × a² = 36 × a² = 36. 따라서 a² = 1이고 a > 0이므로 a = 1.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_31",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "개념 확인",
+    "question": "표본공간 S = {1, 2, 3, 4, 5, 6}에서 임의로 하나를 뽑을 때, 사건 A = {2, 4, 6}의 확률 P(A)는?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "사건 A의 원소는 3개이고 표본공간의 원소는 6개이므로 P(A) = 3/6 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_32",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B가 서로 배반사건이고 P(A) = 0.3, P(B) = 0.4일 때, P(A∪B)는?",
+    "choices": [
+      "0.1",
+      "0.12",
+      "0.5",
+      "0.7"
+    ],
+    "answerIndex": 3,
+    "explanation": "A와 B가 배반사건이면 P(A∩B) = 0이므로 P(A∪B) = P(A) + P(B) = 0.3 + 0.4 = 0.7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_33",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "기본 유형",
+    "question": "한 개의 주사위를 던질 때, 3의 배수 또는 4의 배수가 나올 확률은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "5/6"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수: {3, 6}, 4의 배수: {4}이고 두 사건의 교집합은 공집합이므로 P = (2+1)/6 = 3/6 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_34",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "기본 유형",
+    "question": "두 사건 A, B에 대해 P(A) = 1/3, P(B) = 1/4, P(A∩B) = 1/12일 때, P(A∪B)는?",
+    "choices": [
+      "1/2",
+      "7/12",
+      "5/12",
+      "1/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "덧셈 정리에 의해 P(A∪B) = P(A) + P(B) − P(A∩B) = 1/3 + 1/4 − 1/12 = 4/12 + 3/12 − 1/12 = 6/12 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_35",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "대표 유형",
+    "question": "52장의 카드(♠, ♥, ♦, ♣ 각 13장)에서 한 장을 뽑을 때, 하트(♥)이거나 숫자 A(에이스)일 확률은?",
+    "choices": [
+      "14/52",
+      "16/52",
+      "17/52",
+      "18/52"
+    ],
+    "answerIndex": 1,
+    "explanation": "하트 13장, 에이스 4장, 하트 에이스 1장이므로 P = (13 + 4 − 1)/52 = 16/52 = 4/13이다.",
+    "detailedExplanation": "덧셈 정리: P(하트∪에이스) = P(하트) + P(에이스) − P(하트∩에이스) = 13/52 + 4/52 − 1/52 = 16/52 = 4/13.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_36",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "수능 기초",
+    "question": "1부터 20까지의 자연수 중 하나를 임의로 선택할 때, 선택된 수가 3의 배수이거나 7의 배수일 확률은?",
+    "choices": [
+      "7/20",
+      "2/5",
+      "9/20",
+      "11/20"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수: {3,6,9,12,15,18} 6개, 7의 배수: {7,14} 2개, 공통(21의 배수): 없음. 따라서 확률 = (6+2)/20 = 8/20 = 2/5이다.",
+    "detailedExplanation": "3의 배수: 3, 6, 9, 12, 15, 18 → 6개. 7의 배수: 7, 14 → 2개. 3과 7의 공배수(21의 배수): 21 > 20이므로 0개. P = 8/20 = 2/5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_37",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/3, P(B) = 1/4, P(A∩B) = 1/12 일 때, P(A∪B)의 값은?",
+    "choices": [
+      "1/2",
+      "7/12",
+      "5/12",
+      "1/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "확률의 덧셈정리에 의해 P(A∪B) = P(A) + P(B) − P(A∩B) = 1/3 + 1/4 − 1/12 = 4/12 + 3/12 − 1/12 = 6/12 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_38",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B가 서로 배반사건이고 P(A) = 0.3, P(B) = 0.4일 때, P(A∪B)의 값은?",
+    "choices": [
+      "0.5",
+      "0.1",
+      "0.7",
+      "0.12"
+    ],
+    "answerIndex": 2,
+    "explanation": "배반사건이면 P(A∩B) = 0이므로 P(A∪B) = P(A) + P(B) = 0.3 + 0.4 = 0.7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_39",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "기본 유형",
+    "question": "P(A) = 2/5, P(B) = 1/3, P(A∪B) = 3/5 일 때, P(A∩B)의 값은?",
+    "choices": [
+      "2/15",
+      "1/15",
+      "4/15",
+      "1/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A∩B) = P(A) + P(B) − P(A∪B) = 2/5 + 1/3 − 3/5 = 6/15 + 5/15 − 9/15 = 2/15이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_40",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "기본 유형",
+    "question": "두 사건 A, B에 대하여 P(Aᶜ) = 3/5, P(B) = 1/2, P(A∩B) = 1/5 일 때, P(A∪B)의 값은?",
+    "choices": [
+      "9/10",
+      "7/10",
+      "3/5",
+      "4/5"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(A) = 1 − P(Aᶜ) = 1 − 3/5 = 2/5이므로, P(A∪B) = 2/5 + 1/2 − 1/5 = 4/10 + 5/10 − 2/10 = 7/10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_41",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B가 서로 독립이고 P(A) = 1/2, P(B) = 1/3일 때, P(A∪B)의 값은?",
+    "choices": [
+      "5/6",
+      "1/6",
+      "2/3",
+      "7/12"
+    ],
+    "answerIndex": 2,
+    "explanation": "독립이면 P(A∩B) = P(A)×P(B) = 1/2 × 1/3 = 1/6이므로, P(A∪B) = 1/2 + 1/3 − 1/6 = 3/6 + 2/6 − 1/6 = 4/6 = 2/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_42",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B에 대하여 P(A∪B) = 5/6, P(A∩B) = 1/6, P(A) = P(B)일 때, P(A)의 값은?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "1/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A∪B) = P(A) + P(B) − P(A∩B)에서 P(A) = P(B)이므로 5/6 = 2P(A) − 1/6, 즉 2P(A) = 1, P(A) = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_43",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "응용 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 3/8, P(B) = 5/8, P(Aᶜ∩Bᶜ) = 1/4 일 때, P(A∩B)의 값은?",
+    "choices": [
+      "1/4",
+      "1/8",
+      "3/8",
+      "1/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(Aᶜ∩Bᶜ) = P((A∪B)ᶜ) = 1 − P(A∪B) = 1/4이므로 P(A∪B) = 3/4. 따라서 P(A∩B) = 3/8 + 5/8 − 3/4 = 1 − 3/4 = 1/4이다.",
+    "detailedExplanation": "드모르간 법칙에 의해 P(Aᶜ∩Bᶜ) = P((A∪B)ᶜ) = 1 − P(A∪B) = 1/4이므로 P(A∪B) = 3/4. 덧셈정리에 의해 P(A∩B) = P(A) + P(B) − P(A∪B) = 3/8 + 5/8 − 3/4 = 8/8 − 6/8 = 2/8 = 1/4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_44",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/3, P(B|A) = 1/2, P(A|B) = 1/4 일 때, P(A∪B)의 값은?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "5/6",
+      "3/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(A∩B) = P(B|A)×P(A) = 1/2×1/3 = 1/6. P(B) = P(A∩B)/P(A|B) = (1/6)/(1/4) = 2/3. 따라서 P(A∪B) = 1/3 + 2/3 − 1/6 = 1 − 1/6 = 5/6이다.",
+    "detailedExplanation": "① 조건부확률 공식으로 P(A∩B) = P(B|A)×P(A) = 1/2 × 1/3 = 1/6. ② P(A|B) = P(A∩B)/P(B)에서 1/4 = (1/6)/P(B)이므로 P(B) = 4/6 = 2/3. ③ 덧셈정리에 의해 P(A∪B) = 1/3 + 2/3 − 1/6 = 6/6 − 1/6 = 5/6이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_45",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B에 대하여 P(A) = 0.4, P(A∩B) = 0.2일 때, 조건부확률 P(B|A)의 값은?",
+    "choices": [
+      "0.2",
+      "0.4",
+      "0.5",
+      "0.8"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(B|A) = P(A∩B) / P(A) = 0.2 / 0.4 = 0.5",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_46",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "개념 확인",
+    "question": "표본공간 S = {1, 2, 3, 4, 5, 6}에서 한 개를 뽑을 때, 짝수가 나왔다는 조건 하에 4 이상의 수가 나올 확률은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "3/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "짝수의 집합은 {2, 4, 6}이고 그 중 4 이상인 것은 {4, 6}이므로 P = 2/3",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_48",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "기본 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/3, P(B) = 1/2, P(A∪B) = 2/3일 때, P(A|B)의 값은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(A∩B) = P(A)+P(B)−P(A∪B) = 1/3+1/2−2/3 = 1/6, P(A|B) = (1/6)/(1/2) = 1/3",
+    "detailedExplanation": "P(A∩B) = 1/3 + 1/2 − 2/3 = 2/6 + 3/6 − 4/6 = 1/6. P(A|B) = P(A∩B)/P(B) = (1/6)÷(1/2) = 1/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_49",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "주머니 속에 빨간 공 3개, 파란 공 2개가 들어 있다. 공을 한 개씩 두 번 꺼낼 때(꺼낸 공은 다시 넣지 않음), 첫 번째에 빨간 공이 나왔을 때 두 번째도 빨간 공이 나올 확률은?",
+    "choices": [
+      "3/10",
+      "1/2",
+      "2/5",
+      "3/5"
+    ],
+    "answerIndex": 1,
+    "explanation": "첫 번째에 빨간 공이 나오면 남은 공은 빨간 2개, 파란 2개로 총 4개이므로, 두 번째에 빨간 공이 나올 확률은 2/4 = 1/2",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_50",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B가 서로 독립일 때, P(A) = 2/5, P(B) = 1/3이면 P(Aᶜ|B)의 값은?",
+    "choices": [
+      "2/15",
+      "1/3",
+      "3/5",
+      "2/5"
+    ],
+    "answerIndex": 2,
+    "explanation": "A와 B가 독립이면 Aᶜ과 B도 독립이므로, P(Aᶜ|B) = P(Aᶜ) = 1 − 2/5 = 3/5",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_51",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "응용 유형",
+    "question": "어느 공장에서 A기계와 B기계가 각각 전체 제품의 60%, 40%를 생산한다. A기계의 불량률은 5%, B기계의 불량률은 10%이다. 임의로 고른 제품 하나가 불량품일 때, 그 제품이 A기계에서 생산되었을 확률은?",
+    "choices": [
+      "3/7",
+      "3/10",
+      "1/2",
+      "3/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(불량) = 0.6×0.05 + 0.4×0.10 = 0.03 + 0.04 = 0.07, P(A|불량) = 0.03/0.07 = 3/7",
+    "detailedExplanation": "전체 불량률: P(불량) = P(A)×P(불량|A) + P(B)×P(불량|B) = 0.6×0.05 + 0.4×0.10 = 0.03 + 0.04 = 0.07. 베이즈 정리에 의해 P(A|불량) = P(A)×P(불량|A) / P(불량) = 0.03 / 0.07 = 3/7.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_52",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B에 대하여 P(B|A) = 1/2, P(B|Aᶜ) = 1/4, P(A) = 2/3일 때, P(A|Bᶜ)의 값은?",
+    "choices": [
+      "1/4",
+      "4/7",
+      "3/7",
+      "1/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(A∩B) = 1/3, P(Aᶜ∩B) = 1/12, P(B) = 5/12, P(Bᶜ) = 7/12, P(A∩Bᶜ) = 2/3−1/3 = 1/3, P(A|Bᶜ) = (1/3)/(7/12) = 4/7",
+    "detailedExplanation": "P(A∩B) = P(A)×P(B|A) = (2/3)×(1/2) = 1/3. P(Aᶜ∩B) = P(Aᶜ)×P(B|Aᶜ) = (1/3)×(1/4) = 1/12. P(B) = 1/3 + 1/12 = 5/12이므로 P(Bᶜ) = 7/12. P(A∩Bᶜ) = P(A) − P(A∩B) = 2/3 − 1/3 = 1/3. 따라서 P(A|Bᶜ) = (1/3)÷(7/12) = (1/3)×(12/7) = 4/7.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_53",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B가 서로 독립일 때, 다음 중 항상 성립하는 것은?",
+    "choices": [
+      "P(A∩B) = P(A) + P(B)",
+      "P(A∩B) = P(A) × P(B)",
+      "P(A∪B) = P(A) × P(B)",
+      "P(A|B) = P(A) + P(B)"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 사건 A, B가 서로 독립이면 P(A∩B) = P(A) × P(B)가 성립한다. 이것이 독립의 정의이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_54",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B에 대해 P(A) = 0.4, P(B) = 0.5이고, A와 B가 서로 독립일 때, P(A∩B)의 값은?",
+    "choices": [
+      "0.1",
+      "0.2",
+      "0.3",
+      "0.9"
+    ],
+    "answerIndex": 1,
+    "explanation": "A와 B가 독립이므로 P(A∩B) = P(A) × P(B) = 0.4 × 0.5 = 0.2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_55",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B에 대해 P(A) = 1/2, P(B|A) = 1/3일 때, A와 B가 서로 독립이려면 P(B)의 값은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "A와 B가 독립이면 P(B|A) = P(B)이므로 P(B) = 1/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_56",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B가 서로 독립이고 P(A) = 0.6, P(AᶜUBᶜ) = 0.7일 때, P(B)의 값은?",
+    "choices": [
+      "1/6",
+      "1/2",
+      "3/4",
+      "5/6"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(AᶜUBᶜ) = 1 − P(A∩B) = 0.7이므로 P(A∩B) = 0.3. 독립이므로 P(A)×P(B) = 0.3, 0.6×P(B) = 0.3, P(B) = 1/2이다.",
+    "detailedExplanation": "드모르간의 법칙에 의해 P(AᶜUBᶜ) = P((A∩B)ᶜ) = 1 − P(A∩B) = 0.7이므로 P(A∩B) = 0.3. A, B가 독립이므로 P(A∩B) = P(A)×P(B) = 0.6×P(B) = 0.3. 따라서 P(B) = 0.5 = 1/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_57",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "수능 기초",
+    "question": "어느 시험에서 A가 합격할 확률은 2/3이고, B가 합격할 확률은 3/4이다. A와 B의 합격 여부가 서로 독립일 때, 두 사람 중 적어도 한 명이 합격할 확률은?",
+    "choices": [
+      "1/2",
+      "7/8",
+      "11/12",
+      "5/6"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(적어도 한 명 합격) = 1 − P(둘 다 불합격) = 1 − (1−2/3)(1−3/4) = 1 − (1/3)(1/4) = 1 − 1/12 = 11/12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_58",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X가 가질 수 있는 값이 1, 2, 3이고 각각의 확률이 P(X=1)=1/2, P(X=2)=1/3, P(X=3)=a일 때, a의 값은?",
+    "choices": [
+      "1/4",
+      "1/6",
+      "1/3",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "모든 확률의 합은 1이므로 1/2 + 1/3 + a = 1에서 a = 1 − 5/6 = 1/6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_59",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X의 확률분포표가 다음과 같을 때, E(X)의 값은?\n\nX: 0, 1, 2\nP: 1/4, 1/2, 1/4",
+    "choices": [
+      "1/2",
+      "3/4",
+      "1",
+      "5/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(X) = 0×(1/4) + 1×(1/2) + 2×(1/4) = 0 + 1/2 + 1/2 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_60",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X의 확률분포표가 다음과 같을 때, V(X)의 값은?\n\nX: 1, 2, 3\nP: 1/3, 1/3, 1/3",
+    "choices": [
+      "1/3",
+      "2/3",
+      "1",
+      "4/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "E(X) = 2, E(X²) = (1+4+9)/3 = 14/3이므로 V(X) = 14/3 − 4 = 2/3이다.",
+    "detailedExplanation": "E(X) = 1×(1/3) + 2×(1/3) + 3×(1/3) = 6/3 = 2\nE(X²) = 1×(1/3) + 4×(1/3) + 9×(1/3) = 14/3\nV(X) = E(X²) − {E(X)}² = 14/3 − 4 = 14/3 − 12/3 = 2/3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_61",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X에 대하여 E(X)=3, V(X)=4일 때, E(2X+1)의 값은?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(2X+1) = 2E(X)+1 = 2×3+1 = 7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_62",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X에 대하여 E(X)=2, V(X)=3일 때, V(3X−2)의 값은?",
+    "choices": [
+      "7",
+      "9",
+      "21",
+      "27"
+    ],
+    "answerIndex": 3,
+    "explanation": "V(3X−2) = 3²×V(X) = 9×3 = 27이다. 상수를 더하거나 빼는 것은 분산에 영향을 주지 않는다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_63",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "수능 기초",
+    "question": "두 확률변수 X, Y가 서로 독립이고 E(X)=2, E(Y)=3, V(X)=1, V(Y)=2일 때, V(X+Y)와 E(XY)의 값으로 옳은 것은?",
+    "choices": [
+      "V(X+Y)=3, E(XY)=5",
+      "V(X+Y)=3, E(XY)=6",
+      "V(X+Y)=5, E(XY)=6",
+      "V(X+Y)=5, E(XY)=5"
+    ],
+    "answerIndex": 1,
+    "explanation": "X, Y가 독립이면 V(X+Y)=V(X)+V(Y)=1+2=3이고, E(XY)=E(X)×E(Y)=2×3=6이다.",
+    "detailedExplanation": "독립인 두 확률변수에 대해:\n• V(X+Y) = V(X) + V(Y) = 1 + 2 = 3 (독립이므로 공분산 0)\n• E(XY) = E(X) × E(Y) = 2 × 3 = 6 (독립이면 기댓값의 곱이 성립)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_64",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "개념 확인",
+    "question": "이항분포 B(n, p)에서 평균과 분산을 바르게 나타낸 것은?",
+    "choices": [
+      "평균: np, 분산: np(1−p)",
+      "평균: np, 분산: np²",
+      "평균: np(1−p), 분산: np",
+      "평균: p, 분산: np(1−p)"
+    ],
+    "answerIndex": 0,
+    "explanation": "이항분포 B(n, p)의 평균은 np, 분산은 np(1−p)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_65",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X가 이항분포 B(10, 1/2)를 따를 때, P(X=3)의 값은?",
+    "choices": [
+      "₁₀C₃ × (1/2)¹⁰",
+      "₁₀C₃ × (1/2)³",
+      "₃ × (1/2)¹⁰",
+      "₁₀C₃ × (1/2)³ × (1/2)³"
+    ],
+    "answerIndex": 0,
+    "explanation": "이항분포 B(n, p)에서 P(X=k) = ₙCₖ × pᵏ × (1−p)ⁿ⁻ᵏ이므로, P(X=3) = ₁₀C₃ × (1/2)³ × (1/2)⁷ = ₁₀C₃ × (1/2)¹⁰이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_66",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X가 이항분포 B(20, 1/4)를 따를 때, E(X) + V(X)의 값은?",
+    "choices": [
+      "5 + 15/4",
+      "5 + 5",
+      "20/4 + 20/16",
+      "5 + 3/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "E(X) = np = 20 × 1/4 = 5, V(X) = np(1−p) = 20 × 1/4 × 3/4 = 15/4이므로 E(X) + V(X) = 5 + 15/4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_67",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "기본 유형",
+    "question": "한 번의 시행에서 사건 A가 일어날 확률이 0.3이다. 이 시행을 100번 반복할 때 사건 A가 일어나는 횟수를 X라 하면, X의 표준편차는?",
+    "choices": [
+      "√21",
+      "√30",
+      "21",
+      "√70"
+    ],
+    "answerIndex": 0,
+    "explanation": "X ~ B(100, 0.3)이므로 V(X) = 100 × 0.3 × 0.7 = 21, 따라서 표준편차 σ(X) = √21이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_68",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고, E(X) = 6, V(X) = 4일 때, n + p의 값은?",
+    "choices": [
+      "9 + 2/3",
+      "15 + 2/5",
+      "12 + 1/2",
+      "18 + 1/3"
+    ],
+    "answerIndex": 3,
+    "explanation": "np = 6, np(1−p) = 4에서 (1−p) = 4/6 = 2/3이므로 p = 1/3, n = 6/(1/3) = 18이다. 따라서 n + p = 18 + 1/3이다.",
+    "detailedExplanation": "np = 6 ... ①, np(1−p) = 4 ... ②. ②÷①을 하면 1−p = 4/6 = 2/3이므로 p = 1/3. ①에 대입하면 n × 1/3 = 6, n = 18. 따라서 n + p = 18 + 1/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_69",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "개념 확인",
+    "question": "정규분포 N(μ, σ²)을 따르는 확률변수 X를 표준화한 확률변수 Z = (X − μ) ÷ σ 는 어떤 분포를 따르는가?",
+    "choices": [
+      "N(1, 1)",
+      "N(0, 1)",
+      "N(μ, 1)",
+      "N(0, σ²)"
+    ],
+    "answerIndex": 1,
+    "explanation": "표준화 변환 Z = (X − μ) ÷ σ 를 적용하면 평균이 0, 분산이 1인 표준정규분포 N(0, 1)을 따른다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_70",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "개념 확인",
+    "question": "정규분포 곡선의 성질로 옳지 않은 것은?",
+    "choices": [
+      "평균을 축으로 좌우 대칭이다.",
+      "평균, 중앙값, 최빈값이 모두 같다.",
+      "분산이 커질수록 곡선은 더 납작하고 넓어진다.",
+      "분산이 같으면 평균이 달라도 곡선의 모양과 위치가 같다."
+    ],
+    "answerIndex": 3,
+    "explanation": "분산(σ²)이 같으면 곡선의 모양은 같지만, 평균(μ)이 다르면 곡선의 위치(대칭축)가 달라진다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_71",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X가 정규분포 N(50, 4²)을 따를 때, P(46 ≤ X ≤ 58)의 값은? (단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772)",
+    "choices": [
+      "0.6826",
+      "0.7745",
+      "0.8185",
+      "0.9544"
+    ],
+    "answerIndex": 2,
+    "explanation": "Z = (X − 50) ÷ 4으로 표준화하면 P(−1 ≤ Z ≤ 2) = P(0 ≤ Z ≤ 1) + P(0 ≤ Z ≤ 2) = 0.3413 + 0.4772 = 0.8185이다.",
+    "detailedExplanation": "46을 표준화하면 Z = (46 − 50) ÷ 4 = −1, 58을 표준화하면 Z = (58 − 50) ÷ 4 = 2.\nP(46 ≤ X ≤ 58) = P(−1 ≤ Z ≤ 2) = P(−1 ≤ Z ≤ 0) + P(0 ≤ Z ≤ 2) = P(0 ≤ Z ≤ 1) + P(0 ≤ Z ≤ 2) = 0.3413 + 0.4772 = 0.8185.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_72",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X가 정규분포 N(μ, σ²)을 따르고 P(X ≤ 70) = 0.9772일 때, 표준정규분포표에서 P(0 ≤ Z ≤ 2) = 0.4772이면 P(X ≥ 70)의 값은?",
+    "choices": [
+      "0.0228",
+      "0.0456",
+      "0.4772",
+      "0.9772"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(X ≥ 70) = 1 − P(X ≤ 70) = 1 − 0.9772 = 0.0228이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_73",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 정규분포 N(60, 5²)을 따를 때, P(X ≤ a) = 0.9332를 만족시키는 a의 값은? (단, P(0 ≤ Z ≤ 1.5) = 0.4332)",
+    "choices": [
+      "67.5",
+      "68.0",
+      "67.0",
+      "72.5"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(X ≤ a) = 0.9332이므로 P(0 ≤ Z ≤ z₀) = 0.4332에서 z₀ = 1.5, 따라서 a = 60 + 1.5 × 5 = 67.5이다.",
+    "detailedExplanation": "P(X ≤ a) = 0.9332 = 0.5 + 0.4332이므로 대칭성에 의해 P(0 ≤ Z ≤ z₀) = 0.4332, 표에서 z₀ = 1.5.\n(a − 60) ÷ 5 = 1.5이므로 a − 60 = 7.5, a = 67.5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_74",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "대표 유형",
+    "question": "어느 공장에서 생산하는 제품의 무게는 정규분포 N(200, 10²)을 따른다. 이 제품 중 임의로 1개를 선택할 때, 무게가 190 g 이상 220 g 이하일 확률은? (단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772)",
+    "choices": [
+      "0.6826",
+      "0.8185",
+      "0.8413",
+      "0.9544"
+    ],
+    "answerIndex": 1,
+    "explanation": "190을 표준화하면 Z = −1, 220을 표준화하면 Z = 2이므로 P(−1 ≤ Z ≤ 2) = 0.3413 + 0.4772 = 0.8185이다.",
+    "detailedExplanation": "Z = (X − 200) ÷ 10으로 표준화.\n190 → Z = (190 − 200) ÷ 10 = −1, 220 → Z = (220 − 200) ÷ 10 = 2.\nP(190 ≤ X ≤ 220) = P(−1 ≤ Z ≤ 2) = P(0 ≤ Z ≤ 1) + P(0 ≤ Z ≤ 2) = 0.3413 + 0.4772 = 0.8185.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_75",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "응용 유형",
+    "question": "확률변수 X가 정규분포 N(m, σ²)을 따르고, P(X ≤ 40) = P(X ≥ 80)이 성립할 때, m의 값은?",
+    "choices": [
+      "50",
+      "55",
+      "60",
+      "65"
+    ],
+    "answerIndex": 2,
+    "explanation": "정규분포는 평균 m에 대해 대칭이므로, P(X ≤ 40) = P(X ≥ 80)이 성립하려면 40과 80이 m에 대해 대칭이어야 한다. 따라서 m = (40 + 80) ÷ 2 = 60이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_76",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "개념 확인",
+    "question": "모집단에서 크기가 n인 표본을 추출할 때, 표본평균 X̄의 평균 E(X̄)와 분산 V(X̄)를 바르게 나타낸 것은? (단, 모평균은 m, 모분산은 σ²이다.)",
+    "choices": [
+      "E(X̄) = m, V(X̄) = σ²/n",
+      "E(X̄) = m/n, V(X̄) = σ²/n",
+      "E(X̄) = m, V(X̄) = σ²",
+      "E(X̄) = m/n, V(X̄) = σ²"
+    ],
+    "answerIndex": 0,
+    "explanation": "표본평균 X̄의 평균은 모평균과 같으므로 E(X̄) = m이고, 분산은 모분산을 표본 크기로 나눈 값이므로 V(X̄) = σ²/n이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_77",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "개념 확인",
+    "question": "모평균 m을 추정할 때, 신뢰도 95%의 신뢰구간을 구하는 공식은? (단, 표본 크기 n, 표본평균 X̄, 모표준편차 σ이고, P(-1.96 ≤ Z ≤ 1.96) = 0.95로 한다.)",
+    "choices": [
+      "X̄ - 1.96 × σ/√n ≤ m ≤ X̄ + 1.96 × σ/√n",
+      "X̄ - 1.96 × σ/n ≤ m ≤ X̄ + 1.96 × σ/n",
+      "X̄ - 1.96 × σ × √n ≤ m ≤ X̄ + 1.96 × σ × √n",
+      "X̄ - 1.96 × σ² /n ≤ m ≤ X̄ + 1.96 × σ²/n"
+    ],
+    "answerIndex": 0,
+    "explanation": "모평균의 신뢰도 95% 신뢰구간은 X̄ ± 1.96 × (σ/√n)으로, 표준오차 σ/√n을 이용하여 구한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_78",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "기본 유형",
+    "question": "모표준편차가 10인 모집단에서 크기 100인 표본을 추출하였더니 표본평균이 50이었다. 모평균 m에 대한 신뢰도 95%의 신뢰구간은? (단, P(-1.96 ≤ Z ≤ 1.96) = 0.95)",
+    "choices": [
+      "48.04 ≤ m ≤ 51.96",
+      "47.00 ≤ m ≤ 53.00",
+      "49.02 ≤ m ≤ 50.98",
+      "46.08 ≤ m ≤ 53.92"
+    ],
+    "answerIndex": 0,
+    "explanation": "표준오차 = 10/√100 = 1이므로, 신뢰구간은 50 ± 1.96 × 1 = [48.04, 51.96]이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_79",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "기본 유형",
+    "question": "모표준편차가 σ인 모집단에서 크기 n인 표본을 임의추출하여 구한 신뢰도 95%의 신뢰구간의 길이가 4일 때, σ/√n의 값은? (단, P(-1.96 ≤ Z ≤ 1.96) = 0.95)",
+    "choices": [
+      "약 1.02",
+      "약 2.04",
+      "약 0.98",
+      "약 0.51"
+    ],
+    "answerIndex": 0,
+    "explanation": "신뢰구간의 길이 = 2 × 1.96 × σ/√n = 4이므로, σ/√n = 4 / (2 × 1.96) = 4/3.92 ≈ 1.02이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_80",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "대표 유형",
+    "question": "모표준편차가 15인 모집단에서 크기 n인 표본을 추출하여 모평균을 신뢰도 95%로 추정할 때, 신뢰구간의 길이가 6 이하가 되려면 n의 최솟값은? (단, P(-1.96 ≤ Z ≤ 1.96) = 0.95, √3 ≈ 1.732로 계산한다.)",
+    "choices": [
+      "96",
+      "97",
+      "95",
+      "100"
+    ],
+    "answerIndex": 1,
+    "explanation": "신뢰구간의 길이 ≤ 6이므로 2 × 1.96 × 15/√n ≤ 6, √n ≥ 2 × 1.96 × 15/6 = 9.8, n ≥ 9.8² = 96.04이므로 최솟값은 97이다.",
+    "detailedExplanation": "신뢰구간의 길이 = 2 × 1.96 × (σ/√n)이고, 이것이 6 이하여야 하므로:\n2 × 1.96 × 15/√n ≤ 6\n58.8/√n ≤ 6\n√n ≥ 58.8/6 = 9.8\nn ≥ 9.8² = 96.04\n따라서 n의 최솟값은 97이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_81",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "대표 유형",
+    "question": "어느 공장에서 생산하는 제품의 무게는 모표준편차가 8 g인 정규분포를 따른다. 이 공장 제품 중 64개를 임의추출하여 모평균을 신뢰도 99%로 추정하였다. 신뢰구간의 길이는? (단, P(-2.58 ≤ Z ≤ 2.58) = 0.99)",
+    "choices": [
+      "5.16",
+      "4.12",
+      "2.58",
+      "6.45"
+    ],
+    "answerIndex": 0,
+    "explanation": "표준오차 = 8/√64 = 1이고, 신뢰구간의 길이 = 2 × 2.58 × 1 = 5.16이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_82",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "응용 유형",
+    "question": "모표준편차가 σ인 모집단에서 크기 n인 표본을 추출하여 구한 모평균의 신뢰도 95% 신뢰구간이 [44.12, 55.88]이었다. 표본의 크기를 4n으로 늘렸을 때, 신뢰도 95%의 신뢰구간의 길이는?",
+    "choices": [
+      "5.88",
+      "11.76",
+      "2.94",
+      "23.52"
+    ],
+    "answerIndex": 0,
+    "explanation": "원래 신뢰구간의 길이는 55.88 - 44.12 = 11.76이고, 표본 크기가 4배가 되면 표준오차는 1/2배가 되므로 신뢰구간의 길이도 1/2배가 되어 11.76/2 = 5.88이다.",
+    "detailedExplanation": "원래 신뢰구간의 길이 = 55.88 - 44.12 = 11.76\n신뢰구간의 길이 = 2 × 1.96 × σ/√n = 11.76\n표본 크기가 4n이 되면, 표준오차 = σ/√(4n) = (σ/√n) × (1/2)\n새로운 신뢰구간의 길이 = 2 × 1.96 × σ/√(4n) = 11.76 × (1/2) = 5.88",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_83",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "기본 유형",
+    "question": "서로 다른 5명이 원형 테이블에 둘러앉는 경우의 수는?",
+    "choices": [
+      "24",
+      "60",
+      "120",
+      "720"
+    ],
+    "answerIndex": 0,
+    "explanation": "원순열에서 n명이 원형으로 앉는 경우의 수는 (n−1)! 이므로, (5−1)! = 4! = 24이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_84",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "1, 2, 3의 숫자 중에서 중복을 허락하여 4자리 수를 만들 때, 만들 수 있는 수의 개수는?",
+    "choices": [
+      "24",
+      "48",
+      "81",
+      "64"
+    ],
+    "answerIndex": 2,
+    "explanation": "중복순열로, 각 자리에 3가지 숫자를 독립적으로 선택할 수 있으므로 3⁴ = 81이다.",
+    "detailedExplanation": "중복순열 ₙΠᵣ = nʳ 공식을 이용한다. 3종류의 숫자를 중복 허용하여 4자리를 채우면 3 × 3 × 3 × 3 = 81가지이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_85",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "기본 유형",
+    "question": "BANANA의 6개의 문자를 일렬로 나열하는 경우의 수는?",
+    "choices": [
+      "30",
+      "60",
+      "120",
+      "360"
+    ],
+    "answerIndex": 1,
+    "explanation": "B 1개, A 3개, N 2개이므로 6! ÷ (3! × 2!) = 720 ÷ 12 = 60이다.",
+    "detailedExplanation": "같은 것이 있는 순열 공식: n개 중 같은 것이 p개, q개, ... 있을 때 경우의 수는 n! ÷ (p! × q! × ...)이다. BANANA에서 A가 3개, N이 2개, B가 1개이므로 6! ÷ (3! × 2! × 1!) = 720 ÷ (6 × 2 × 1) = 60이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_86",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "기본 유형",
+    "question": "서로 다른 3가지 색의 공을 5개 선택하려고 한다. 각 색의 공은 충분히 많이 있을 때, 선택하는 방법의 수는? (단, 같은 색의 공은 서로 구별하지 않는다)",
+    "choices": [
+      "15",
+      "21",
+      "28",
+      "35"
+    ],
+    "answerIndex": 1,
+    "explanation": "3가지 색에서 중복을 허용하여 5개를 선택하는 중복조합이므로 H(3,5) = C(3+5−1, 5) = C(7,5) = C(7,2) = 21이다.",
+    "detailedExplanation": "중복조합 H(n,r) = C(n+r−1, r) 공식을 이용한다. n=3(색의 종류), r=5(선택할 개수)이므로 H(3,5) = C(7,5) = 7!/(5!×2!) = (7×6)/(2×1) = 21.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_87",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "대표 유형",
+    "question": "방정식 x + y + z = 8을 만족하는 음이 아닌 정수해의 개수는?",
+    "choices": [
+      "36",
+      "42",
+      "45",
+      "56"
+    ],
+    "answerIndex": 2,
+    "explanation": "음이 아닌 정수해의 개수는 3개의 변수에서 합이 8이 되는 중복조합이므로 H(3,8) = C(10,2) = 45이다.",
+    "detailedExplanation": "x, y, z ≥ 0인 정수해의 개수는 서로 다른 3개(x, y, z)에서 중복을 허용하여 8개를 선택하는 경우와 같다. H(3,8) = C(3+8−1, 8) = C(10,8) = C(10,2) = (10×9)/(2×1) = 45.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_88",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "기본 유형",
+    "question": "(1 + x)⁵을 전개할 때, x³의 계수를 구하여라.",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "이항정리에 의해 (1+x)⁵에서 x³의 계수는 C(5,3) = 5!/(3!×2!) = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_89",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(2x + 1/x)⁶을 전개할 때, 상수항을 구하여라.",
+    "choices": [
+      "80",
+      "120",
+      "160",
+      "240"
+    ],
+    "answerIndex": 2,
+    "explanation": "일반항은 C(6,r) × (2x)^(6−r) × (1/x)^r = C(6,r) × 2^(6−r) × x^(6−2r)이고, 상수항 조건 6−2r = 0에서 r = 3이므로 C(6,3) × 2³ = 20 × 8 = 160이다.",
+    "detailedExplanation": "이항정리 (a+b)ⁿ의 일반항은 C(n,r) × aⁿ⁻ʳ × bʳ이다. 여기서 a = 2x, b = 1/x, n = 6으로 놓으면 일반항은 C(6,r) × (2x)^(6−r) × (1/x)^r = C(6,r) × 2^(6−r) × x^(6−r) × x^(−r) = C(6,r) × 2^(6−r) × x^(6−2r)이다. 상수항이 되려면 x의 지수가 0이어야 하므로 6−2r = 0, 즉 r = 3이다. 따라서 상수항 = C(6,3) × 2^(6−3) = 20 × 8 = 160이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_90",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "개념 확인",
+    "question": "한 개의 주사위를 한 번 던질 때, 3의 배수의 눈이 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수의 눈은 3, 6으로 2가지이고 전체 경우의 수는 6이므로 확률은 2/6 = 1/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_91",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "기본 유형",
+    "question": "서로 다른 5권의 책 중에서 2권을 순서 없이 뽑을 때, 특정한 1권이 반드시 포함될 확률은?",
+    "choices": [
+      "1/5",
+      "2/5",
+      "3/10",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "전체 경우의 수는 C(5,2) = 10이고, 특정 1권이 포함되는 경우의 수는 나머지 4권 중 1권을 뽑는 C(4,1) = 4이므로 확률은 4/10 = 2/5이다.",
+    "detailedExplanation": "C(5,2) = 5! / (2! × 3!) = 10, 특정 책을 고정했을 때 나머지 1권을 4권 중에서 고르므로 C(4,1) = 4. 따라서 구하는 확률 = 4 ÷ 10 = 2/5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_92",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "기본 유형",
+    "question": "한 개의 주사위를 던질 때, 나오는 눈의 수가 3의 배수이거나 짝수인 사건의 확률은?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "5/6",
+      "1/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "사건 A(3의 배수): {3, 6}, P(A)=1/3. 사건 B(짝수): {2, 4, 6}, P(B)=1/2. A∩B={6}, P(A∩B)=1/6. 따라서 P(A∪B) = 1/3 + 1/2 − 1/6 = 2/6 + 3/6 − 1/6 = 4/6 = 2/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_93",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "기본 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/2, P(B) = 1/3, P(A∩B) = 1/6일 때, 조건부확률 P(B|A)의 값은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(B|A) = P(A∩B) ÷ P(A) = (1/6) ÷ (1/2) = 1/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_94",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "어느 학교 학생 200명 중 남학생은 120명, 여학생은 80명이다. 남학생 중 안경을 쓴 학생은 48명이고, 여학생 중 안경을 쓴 학생은 20명이다. 이 학교 학생 중 임의로 한 명을 뽑았을 때 안경을 쓴 학생이었다면, 그 학생이 남학생일 확률은?",
+    "choices": [
+      "3/5",
+      "2/3",
+      "12/17",
+      "7/10"
+    ],
+    "answerIndex": 2,
+    "explanation": "안경을 쓴 학생은 총 48 + 20 = 68명이고, 이 중 남학생은 48명이므로 P(남학생|안경) = 48/68 = 12/17이다.",
+    "detailedExplanation": "전체 안경 착용 학생 수: 48 + 20 = 68명. 안경을 쓴 남학생 수: 48명. 따라서 조건부확률 P(남학생|안경) = 48 ÷ 68 = 12/17.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_95",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "개념 확인",
+    "question": "두 사건 A, B가 독립일 때, 다음 중 항상 성립하는 것은?\n(단, P(A) > 0, P(B) > 0)",
+    "choices": [
+      "P(A ∩ B) = P(A) + P(B)",
+      "P(A ∩ B) = P(A) × P(B)",
+      "P(A | B) = P(B)",
+      "P(A ∪ B) = P(A) × P(B)"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 사건 A, B가 독립이면 P(A ∩ B) = P(A) × P(B)가 성립한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_96",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "기본 유형",
+    "question": "두 사건 A, B가 서로 독립이고 P(A) = 1/3, P(B) = 1/2일 때, P(Aᶜ ∩ B)의 값은?\n(단, Aᶜ는 A의 여사건)",
+    "choices": [
+      "1/6",
+      "1/4",
+      "1/3",
+      "5/6"
+    ],
+    "answerIndex": 2,
+    "explanation": "A와 B가 독립이면 Aᶜ와 B도 독립이므로 P(Aᶜ ∩ B) = P(Aᶜ) × P(B) = (1 − 1/3) × 1/2 = 2/3 × 1/2 = 1/3.",
+    "detailedExplanation": "두 사건이 독립이면 한 사건의 여사건과 다른 사건도 독립 관계가 성립한다. P(Aᶜ) = 1 − P(A) = 1 − 1/3 = 2/3이고, Aᶜ와 B의 독립성에 의해 P(Aᶜ ∩ B) = 2/3 × 1/2 = 1/3이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_97",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X의 확률분포표가 아래와 같을 때, 상수 a의 값은?\n\nX    |  1  |  2  |  3  |  합계\nP(X) | 1/4 |  a  | 1/4 |   1",
+    "choices": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "모든 확률의 합은 1이므로 1/4 + a + 1/4 = 1, 즉 a = 1 − 1/2 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_98",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X의 확률분포표가 아래와 같을 때, E(X)의 값은?\n\nX    |  0  |  1  |  2  |  3\nP(X) | 1/8 | 3/8 | 3/8 | 1/8",
+    "choices": [
+      "1",
+      "3/2",
+      "5/4",
+      "7/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "E(X) = 0×(1/8) + 1×(3/8) + 2×(3/8) + 3×(1/8) = 0 + 3/8 + 6/8 + 3/8 = 12/8 = 3/2이다.",
+    "detailedExplanation": "기댓값(평균) E(X) = ∑ xₖ·P(X=xₖ)이므로 각 값에 해당 확률을 곱해 모두 더하면 된다. 계산하면 (0 + 3 + 6 + 3)/8 = 12/8 = 3/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_99",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X가 이항분포 B(10, 0.3)을 따를 때, E(X)의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "이항분포 B(n, p)에서 기댓값은 E(X) = np이므로 E(X) = 10 × 0.3 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_100",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X가 이항분포 B(20, 1/4)을 따를 때, V(X)의 값은?",
+    "choices": [
+      "3/2",
+      "15/4",
+      "5",
+      "25/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "이항분포 B(n, p)에서 분산은 V(X) = np(1−p)이므로 V(X) = 20 × (1/4) × (3/4) = 60/16 = 15/4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_101",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "개념 확인",
+    "question": "확률변수 X가 정규분포 N(50, 4²)을 따를 때, X를 표준화한 확률변수 Z = (X − 50) / 4 는 어떤 분포를 따르는가?",
+    "choices": [
+      "N(50, 4²)",
+      "N(0, 1)",
+      "N(1, 0)",
+      "N(4, 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "정규분포 N(μ, σ²)을 따르는 확률변수 X를 Z = (X − μ) / σ 로 표준화하면 Z는 표준정규분포 N(0, 1)을 따른다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_102",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "기본 유형",
+    "question": "확률변수 X가 정규분포 N(60, 10²)을 따를 때, P(50 ≤ X ≤ 70)의 값은? (단, P(0 ≤ Z ≤ 1) = 0.3413 으로 계산한다.)",
+    "choices": [
+      "0.3413",
+      "0.6826",
+      "0.1587",
+      "0.5000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Z = (X − 60) / 10 으로 표준화하면 P(50 ≤ X ≤ 70) = P(−1 ≤ Z ≤ 1) = 2 × P(0 ≤ Z ≤ 1) = 2 × 0.3413 = 0.6826이다.",
+    "detailedExplanation": "표준정규분포는 Z = 0에 대해 좌우 대칭이므로 P(−1 ≤ Z ≤ 1) = 2 × P(0 ≤ Z ≤ 1)이 성립한다. 각 경계를 표준화하면 Z = (50−60)/10 = −1, Z = (70−60)/10 = 1이므로 구하는 확률은 2 × 0.3413 = 0.6826이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_103",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "개념 확인",
+    "question": "모집단에서 크기 n인 표본을 추출할 때, 표본평균 X̄의 평균과 분산에 대한 설명으로 옳은 것은? (단, 모평균은 μ, 모분산은 σ²이다.)",
+    "choices": [
+      "E(X̄) = μ, V(X̄) = σ²/n",
+      "E(X̄) = μ/n, V(X̄) = σ²",
+      "E(X̄) = μ, V(X̄) = σ²",
+      "E(X̄) = μ/n, V(X̄) = σ²/n"
+    ],
+    "answerIndex": 0,
+    "explanation": "표본평균 X̄의 평균은 모평균과 같은 E(X̄) = μ이고, 분산은 모분산을 표본 크기로 나눈 V(X̄) = σ²/n이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_104",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "기본 유형",
+    "question": "어느 고등학교 학생들의 수학 점수는 모평균 m, 모표준편차 15점인 정규분포를 따른다고 한다. 이 학교에서 크기 100인 표본을 임의추출하여 구한 표본평균이 72점이었을 때, 모평균 m에 대한 신뢰도 95%의 신뢰구간은? (단, Z₀.₀₂₅ = 1.96으로 계산한다.)",
+    "choices": [
+      "69.06 ≤ m ≤ 74.94",
+      "69.55 ≤ m ≤ 74.45",
+      "70.10 ≤ m ≤ 73.90",
+      "68.50 ≤ m ≤ 75.50"
+    ],
+    "answerIndex": 0,
+    "explanation": "신뢰구간은 x̄ ± 1.96 × (σ/√n) = 72 ± 1.96 × (15/√100) = 72 ± 1.96 × 1.5 = 72 ± 2.94이므로, 69.06 ≤ m ≤ 74.94이다.",
+    "detailedExplanation": "표준오차 = σ/√n = 15/√100 = 15/10 = 1.5. 오차한계 = 1.96 × 1.5 = 2.94. 따라서 신뢰구간: 72 − 2.94 = 69.06, 72 + 2.94 = 74.94.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_105",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "남학생 4명과 여학생 4명이 원형 테이블에 남녀가 교대로 앉는 경우의 수를 구하여라.",
+    "choices": [
+      "48",
+      "96",
+      "144",
+      "288"
+    ],
+    "answerIndex": 2,
+    "explanation": "남학생 4명을 원형으로 배열하는 경우의 수는 (4-1)! = 6이고, 나머지 4자리에 여학생 4명을 배열하는 경우의 수는 4! = 24이므로 6 × 24 = 144이다.",
+    "detailedExplanation": "① 남학생 4명을 먼저 원형으로 고정: (4-1)! = 3! = 6가지\n② 남학생 사이사이 4개의 자리가 생기며, 이 자리에 여학생 4명을 일렬로 배열: 4! = 24가지\n③ 곱의 법칙: 6 × 24 = 144\n\n[오답 분석] 48 = 2×24 (남학생 원순열 오류), 96 = 4×24 (3!을 4로 착각), 288 = 2×144 (뒤집기 중복 적용 오류)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_106",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "응용 유형",
+    "question": "0, 1, 2, 3, 4의 숫자를 중복을 허락하여 만들 수 있는 세 자리 자연수 중 4의 배수의 개수를 구하여라.",
+    "choices": [
+      "25",
+      "28",
+      "32",
+      "36"
+    ],
+    "answerIndex": 2,
+    "explanation": "4의 배수는 끝 두 자리가 4의 배수인 수이다. 백의 자리에는 0 제외 5가지, 끝 두 자리(00, 04, 12, 20, 24, 32, 40, 44)의 각 경우별로 백의 자리 경우를 세면 총 32개이다.",
+    "detailedExplanation": "끝 두 자리(십의 자리, 일의 자리)가 4의 배수인 경우를 나열한다 (0~4의 숫자만 사용):\n00, 04, 12, 20, 24, 32, 40, 44 → 8가지\n\n각 경우에서 백의 자리는 0을 제외한 1,2,3,4 중 하나(4가지)를 사용:\n→ 8 × 4 = 32\n\n[오답 분석] 25 = 5²(중복순열과 혼동), 28 (끝두자리 7가지로 잘못셈), 36 (백의자리 9가지로 착각)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_107",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "응용 유형",
+    "question": "A, B, C, D, E, F 6명이 원형 테이블에 앉을 때, A, B, C 세 사람이 서로 이웃하지 않는 경우의 수를 구하여라.",
+    "choices": [
+      "6",
+      "10",
+      "12",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "D, E, F 세 명을 먼저 원형으로 배열하면 (3-1)! = 2가지이고, D, E, F 사이의 3개의 자리에 A, B, C를 배열하면 3! = 6가지이므로 2 × 6 = 12이다.",
+    "detailedExplanation": "① D, E, F 3명을 원형으로 배열: (3-1)! = 2! = 2가지\n② 3명 사이에 3개의 빈 자리가 생기고, 이 자리에 A, B, C를 하나씩 배치: 3! = 6가지\n→ A, B, C는 모두 D, E, F와만 이웃하게 되어 세 조건 동시 만족\n③ 2 × 6 = 12\n\n[오답 분석] 6 = (3-1)!×3 (여사건 계산 오류), 18 = 3×6 (원순열 3!으로 잘못 계산), 전체 (6-1)!=120에서 여사건 포함-배제 시 오류 주의",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_108",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "수능 기초",
+    "question": "a, b, c, d, e 5가지 문자 중 중복을 허락하여 4개를 택해 일렬로 나열할 때, a가 적어도 2번 포함되는 경우의 수를 구하여라.",
+    "choices": [
+      "81",
+      "97",
+      "113",
+      "129"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 5⁴ = 625에서 a가 0번인 경우(4⁴ = 256)와 a가 정확히 1번인 경우(₄C₁ × 4³ = 256)를 빼면 625 − 256 − 256 = 113이다.",
+    "detailedExplanation": "여사건을 이용한다.\n전체: 5⁴ = 625\n\na가 0번: a를 제외한 4가지로 4자리 = 4⁴ = 256\na가 정확히 1번: a의 위치 선택 ₄C₁ × (나머지 3자리는 a 제외 4가지) = 4 × 4³ = 256\n\na가 적어도 2번 = 625 − 256 − 256 = 113\n\n[검산] a가 정확히 2번: ₄C₂×4² = 96, 3번: ₄C₃×4¹ = 16, 4번: 1 → 합 = 113 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_109",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "수능 기초",
+    "question": "집합 {1, 2, 3}에서 집합 {1, 2, 3, 4}로의 함수 f 중에서 f(1) < f(2)를 만족하는 함수의 개수를 구하여라.",
+    "choices": [
+      "18",
+      "20",
+      "24",
+      "32"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(1)과 f(2)의 값은 {1,2,3,4}에서 f(1) < f(2)를 만족하도록 2개를 선택하는 방법이 ₄C₂ = 6가지이고, f(3)은 4가지이므로 6 × 4 = 24이다.",
+    "detailedExplanation": "f(1) < f(2) 조건 처리:\n• {1,2,3,4}에서 서로 다른 두 값 선택 후 작은 값을 f(1), 큰 값을 f(2)에 배정: ₄C₂ = 6가지\n• f(3)은 {1,2,3,4}에서 아무 값이나: 4가지\n\n총: 6 × 4 = 24\n\n[오답 분석] 18 = ₄P₂×... (순열로 계산 후 ÷2 오류), 20 (경우 누락), 32 = 4³/2 (전체를 2로 나누는 오류)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_110",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "1, 2, 3, 4의 숫자를 중복을 허락하여 세 자리 수를 만들 때, 각 자리 숫자의 곱이 짝수인 세 자리 수의 개수를 구하여라.",
+    "choices": [
+      "48",
+      "52",
+      "56",
+      "60"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 4³ = 64에서 각 자리가 모두 홀수(1 또는 3)인 경우 2³ = 8을 빼면 64 − 8 = 56이다.",
+    "detailedExplanation": "곱이 짝수 ⟺ 적어도 하나의 자리에 짝수가 있음\n여사건: 곱이 홀수 ⟺ 모든 자리가 홀수(1 또는 3)\n\n전체: 4³ = 64\n모두 홀수: 2³ = 8  (각 자리에 1 또는 3만 선택)\n\n곱이 짝수 = 64 − 8 = 56\n\n[오답 분석] 48 = 64−16 (홀수를 1,3,5 세 가지로 착각), 60 = 64−4 (홀수 자리 수 과소 계산)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_111",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "대표 유형",
+    "question": "서로 다른 6가지 색의 구슬을 모두 사용하여 목걸이를 만드는 경우의 수를 구하여라. (목걸이는 뒤집어서 같으면 같은 것으로 본다.)",
+    "choices": [
+      "48",
+      "60",
+      "72",
+      "120"
+    ],
+    "answerIndex": 1,
+    "explanation": "원순열로 6개를 배열하면 (6-1)! = 120가지이고, 목걸이는 뒤집어도 같은 것이므로 2로 나누어 120 ÷ 2 = 60이다.",
+    "detailedExplanation": "① 원순열(회전하면 같은 것은 동일): (6-1)! = 5! = 120\n② 목걸이는 뒤집어도 같음(반사 대칭): ÷ 2\n③ 60\n\n[참고] 원순열과 염주순열(목걸이 순열) 구분:\n• 원순열: 회전만 동일 → (n-1)!\n• 염주순열: 회전 + 뒤집기 동일 → (n-1)!/2\n\n[오답 분석] 48 = 6!/15 (잘못된 계산), 72 = 6!/10 (오류), 120 = 5! (목걸이 조건 미적용)",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_112",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "원순열과 중복순열",
+    "difficulty": "수능 실전",
+    "question": "1부터 6까지의 자연수 중 중복을 허락하여 4개를 택해 일렬로 나열할 때, 인접한 두 수의 합이 모두 짝수가 되는 경우의 수를 구하여라.",
+    "choices": [
+      "144",
+      "156",
+      "162",
+      "180"
+    ],
+    "answerIndex": 2,
+    "explanation": "인접한 두 수의 합이 짝수이려면 두 수의 홀짝성이 같아야 하며, 이 조건이 연쇄적으로 적용되어 4개 전체가 모두 홀수이거나 모두 짝수여야 한다. 홀수(1,3,5) 4개: 3⁴ = 81, 짝수(2,4,6) 4개: 3⁴ = 81이므로 81 + 81 = 162이다.",
+    "detailedExplanation": "a₁, a₂, a₃, a₄라 할 때:\n• a₁+a₂가 짝수 ⟹ a₁, a₂는 홀짝이 같음\n• a₂+a₃가 짝수 ⟹ a₂, a₃는 홀짝이 같음\n• a₃+a₄가 짝수 ⟹ a₃, a₄는 홀짝이 같음\n\n연쇄 결론: a₁, a₂, a₃, a₄ 모두 홀수이거나 모두 짝수\n\n1~6에서 홀수: {1,3,5} 3가지, 짝수: {2,4,6} 3가지\n• 모두 홀수: 3⁴ = 81\n• 모두 짝수: 3⁴ = 81\n합계: 162\n\n[오답 분석] 144 = 2×72 (자리수 오류), 156 (경우 누락), 180 = 3⁴×... (과잉 계산)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_113",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "대표 유형",
+    "question": "'SUCCESS'의 7개의 철자를 일렬로 배열하는 경우의 수를 구하시오.",
+    "choices": [
+      "210",
+      "420",
+      "630",
+      "840"
+    ],
+    "answerIndex": 1,
+    "explanation": "S가 3개, C가 2개, U·E가 각 1개이므로 7! ÷ (3! × 2!) = 5040 ÷ 12 = 420이다.",
+    "detailedExplanation": "SUCCESS의 알파벳 빈도: S→3개, U→1개, C→2개, E→1개(총 7개). 같은 것이 있는 순열 공식에 의해 7! / (3! × 2! × 1! × 1!) = 5040 / (6 × 2 × 1 × 1) = 5040 / 12 = 420. 오답 210은 4!로 나눈 경우(S 개수를 4로 착각), 840은 3!로만 나눈 경우(C 중복을 무시), 630은 C를 1개로 잘못 센 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_114",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "대표 유형",
+    "question": "1, 1, 1, 2, 2, 3의 6개의 숫자를 일렬로 배열할 때, 양 끝에 모두 홀수가 오는 경우의 수를 구하시오.",
+    "choices": [
+      "16",
+      "20",
+      "24",
+      "30"
+    ],
+    "answerIndex": 2,
+    "explanation": "양 끝을 홀수(1,1,1,3 중 2개)로 채우는 경우를 두 가지로 나누면 12 + 12 = 24이다.",
+    "detailedExplanation": "홀수 집합 {1,1,1,3}에서 양 끝을 선택하는 경우를 나눈다. [경우 A] 양 끝 모두 1: 남은 가운데 4자리에 1, 2, 2, 3을 배열 → 4! / 2! = 12. [경우 B] 한 끝이 1이고 다른 끝이 3 (순서 있음): 가운데 4자리에 1, 1, 2, 2 배열 → 2 × (4! / (2! × 2!)) = 2 × 6 = 12. (3,3은 3이 하나뿐이므로 불가.) 합계 = 12 + 12 = 24.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_115",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "응용 유형",
+    "question": "a, a, b, b, c, c의 6개의 문자를 일렬로 배열할 때, 같은 문자끼리 이웃하지 않는 경우의 수를 구하시오.",
+    "choices": [
+      "24",
+      "30",
+      "48",
+      "60"
+    ],
+    "answerIndex": 1,
+    "explanation": "전체 배열 수 90에서 포함-배제 원리를 적용하면 90 − 3×30 + 3×12 − 6 = 30이다.",
+    "detailedExplanation": "전체: 6!/(2!2!2!) = 90. A = 'aa 이웃', B = 'bb 이웃', C = 'cc 이웃'으로 정의. |A| = |B| = |C| = 5!/(2!2!) = 30. |A∩B| = |A∩C| = |B∩C| = 4!/2! = 12. |A∩B∩C| = 3! = 6. 포함-배제: |A∪B∪C| = 3×30 − 3×12 + 6 = 90 − 36 + 6 = 60. 구하는 값 = 90 − 60 = 30.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_116",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "수능 기초",
+    "question": "0, 0, 0, 1, 2, 3을 일렬로 배열하여 만들 수 있는 6자리 자연수의 개수를 구하시오.",
+    "choices": [
+      "40",
+      "60",
+      "80",
+      "100"
+    ],
+    "answerIndex": 1,
+    "explanation": "전체 배열 수 6!/3! = 120에서 맨 앞이 0인 경우 5!/2! = 60을 빼면 60이다.",
+    "detailedExplanation": "6자리 자연수이므로 맨 앞 자리는 0이 될 수 없다. 전체 6개 숫자 배열 수: 6!/3! = 720/6 = 120. 맨 앞이 0인 경우: 나머지 5자리에 0, 0, 1, 2, 3을 배열 → 5!/2! = 60. 따라서 구하는 개수 = 120 − 60 = 60.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_117",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "수능 기초",
+    "question": "그림과 같이 가로로 4칸, 세로로 3칸인 격자가 있다. 왼쪽 아래 꼭짓점 A에서 오른쪽 위 꼭짓점 B까지 최단 경로로 이동할 때, 점 P(2, 2)를 반드시 지나는 경우의 수를 구하시오. (단, 이동은 오른쪽 또는 위쪽으로만 한다.)",
+    "choices": [
+      "12",
+      "15",
+      "18",
+      "21"
+    ],
+    "answerIndex": 2,
+    "explanation": "A→P 경우의 수 × P→B 경우의 수 = (4!/(2!2!)) × (3!/(2!1!)) = 6 × 3 = 18이다.",
+    "detailedExplanation": "A(0,0)→P(2,2): 오른쪽 2번, 위 2번 이동 → 4!/(2!×2!) = 6. P(2,2)→B(4,3): 오른쪽 2번, 위 1번 이동 → 3!/(2!×1!) = 3. 곱의 법칙: 6 × 3 = 18. 전체 최단 경로 수는 7!/(4!3!)=35이고, 이 중 P를 지나는 것은 18이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_118",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "응용 유형",
+    "question": "a, a, b, b, c, c의 6개의 문자를 일렬로 배열할 때, 첫 번째 a가 첫 번째 b보다 앞에 오는 경우의 수를 구하시오.",
+    "choices": [
+      "30",
+      "40",
+      "45",
+      "50"
+    ],
+    "answerIndex": 2,
+    "explanation": "대칭성에 의해 전체 90가지 배열 중 첫 a가 첫 b보다 앞인 경우와 뒤인 경우가 정확히 같으므로 90 ÷ 2 = 45이다.",
+    "detailedExplanation": "전체 배열 수: 6!/(2!2!2!) = 90. 임의의 배열에서 a의 최초 위치와 b의 최초 위치를 비교하면, a가 앞인 경우와 b가 앞인 경우가 일대일 대응(a↔b 교환)으로 같은 수가 된다. 따라서 구하는 경우의 수 = 90/2 = 45.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_119",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "수능 기초",
+    "question": "1칸 또는 2칸씩 올라갈 수 있는 계단이 7칸 있다. 이 계단을 올라가는 방법의 수를 같은 것이 있는 순열을 이용하여 구하시오.",
+    "choices": [
+      "18",
+      "21",
+      "24",
+      "28"
+    ],
+    "answerIndex": 1,
+    "explanation": "2칸짜리 이동 횟수 k에 따라 (7−k)!/(k!(7−2k)!)을 k=0,1,2,3에 대해 합산하면 1+6+10+4 = 21이다.",
+    "detailedExplanation": "2칸 이동을 k번 사용하면 1칸 이동은 (7−2k)번, 총 이동 횟수는 (7−k)번이다. k=0: 1번, k=1: 6!/(5!1!)=6번, k=2: 5!/(3!2!)=10번, k=3: 4!/(1!3!)=4번. (k≥4이면 불가.) 합계 = 1+6+10+4 = 21.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_120",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "같은 것이 있는 순열",
+    "difficulty": "수능 실전",
+    "question": "1, 1, 2, 2, 3, 3, 4의 7개의 숫자를 일렬로 배열할 때, 짝수끼리 이웃하지 않는 경우의 수를 구하시오.",
+    "choices": [
+      "144",
+      "160",
+      "180",
+      "200"
+    ],
+    "answerIndex": 2,
+    "explanation": "홀수 1,1,3,3을 먼저 배열(6가지)한 뒤, 생기는 5개의 빈칸 중 3개를 골라 짝수 2,2,4를 배열하면 6 × C(5,3) × (3!/2!) = 6 × 10 × 3 = 180이다.",
+    "detailedExplanation": "짝수: 2, 2, 4 (3개) / 홀수: 1, 1, 3, 3 (4개). [Step 1] 홀수 4개를 일렬로 배열: 4!/(2!2!) = 6가지. [Step 2] 홀수 사이·양 끝에 생기는 빈칸 5개(○_○_○_○_○ 형태) 중 3개를 선택: C(5,3) = 10. [Step 3] 선택된 3개의 자리에 2, 2, 4를 배열: 3!/2! = 3. 곱의 법칙: 6 × 10 × 3 = 180.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_121",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "대표 유형",
+    "question": "x₁ + x₂ + x₃ + x₄ = 10을 만족하는 자연수 해 중 x₁ ≥ 2, x₂ ≥ 2, x₃ ≥ 2, x₄ ≥ 2인 해의 개수는?",
+    "choices": [
+      "6",
+      "10",
+      "15",
+      "21"
+    ],
+    "answerIndex": 1,
+    "explanation": "yᵢ = xᵢ − 2 (yᵢ ≥ 0)로 치환하면 y₁ + y₂ + y₃ + y₄ = 2이 되므로, 음이 아닌 정수해의 개수는 H(4, 2) = C(5, 2) = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_122",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "대표 유형",
+    "question": "카페 메뉴판에 서로 다른 5가지 음료가 있다. 이 음료들 중 중복을 허용하여 7잔을 고르는 경우의 수는? (순서는 고려하지 않는다)",
+    "choices": [
+      "210",
+      "330",
+      "462",
+      "792"
+    ],
+    "answerIndex": 1,
+    "explanation": "5가지 중 7개를 중복 허용하여 순서 없이 선택하는 중복조합이므로 H(5, 7) = C(11, 7) = 330이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_123",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "응용 유형",
+    "question": "x + y + z = 12를 만족하는 자연수 해의 개수 중 x ≥ 1, y ≥ 2, z ≥ 3인 경우의 수는?",
+    "choices": [
+      "21",
+      "28",
+      "36",
+      "45"
+    ],
+    "answerIndex": 1,
+    "explanation": "a = x − 1, b = y − 2, c = z − 3으로 치환하면 a + b + c = 6 (a, b, c ≥ 0)이 되어 H(3, 6) = C(8, 6) = 28이다.",
+    "detailedExplanation": "x ≥ 1, y ≥ 2, z ≥ 3이므로 a = x − 1 ≥ 0, b = y − 2 ≥ 0, c = z − 3 ≥ 0으로 놓으면 (a+1) + (b+2) + (c+3) = 12에서 a + b + c = 6이다. 음이 아닌 정수해의 개수는 H(3, 6) = C(8, 6) = C(8, 2) = 28이다. 흔한 오류는 치환 후 남은 합을 5 또는 7로 잘못 계산하여 H(3,5)=21 또는 H(3,7)=36을 고르는 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_124",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "응용 유형",
+    "question": "서로 구별할 수 없는 빨간 공 2개와 파란 공 4개를 구별 가능한 3개의 상자에 넣는 경우의 수는? (빈 상자가 있어도 된다)",
+    "choices": [
+      "21",
+      "45",
+      "84",
+      "90"
+    ],
+    "answerIndex": 3,
+    "explanation": "빨간 공 2개를 상자 3개에 넣는 경우는 H(3, 2) = C(4, 2) = 6, 파란 공 4개를 상자 3개에 넣는 경우는 H(3, 4) = C(6, 4) = 15이므로 곱의 법칙에 의해 6 × 15 = 90이다.",
+    "detailedExplanation": "같은 색 공끼리는 구별이 없으므로 색별로 독립적으로 중복조합을 적용한다. 빨간 공: H(3, 2) = C(4, 2) = 6가지, 파란 공: H(3, 4) = C(6, 2) = 15가지. 두 사건은 독립이므로 6 × 15 = 90. 흔한 오류는 두 종류를 합쳐 H(3, 6) = 28로 계산하거나, H(6, 3) = 56으로 계산하는 것이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_125",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "수능 기초",
+    "question": "주사위를 3번 던질 때 나온 눈의 수를 순서대로 a, b, c라 하자. a ≤ b ≤ c를 만족하는 경우의 수는?",
+    "choices": [
+      "20",
+      "56",
+      "84",
+      "216"
+    ],
+    "answerIndex": 1,
+    "explanation": "1부터 6까지의 눈 중에서 중복을 허용하여 비감소 순서로 3개를 고르는 것이므로 H(6, 3) = C(8, 3) = 56이다.",
+    "detailedExplanation": "비감소 수열 a ≤ b ≤ c는 {1, 2, 3, 4, 5, 6}에서 3개를 중복 허용하여 뽑는 조합과 일대일 대응된다. 따라서 H(6, 3) = C(8, 3) = 56. C(6, 3) = 20은 순서 있는 증가 수열의 경우이고, 6³ = 216은 순서를 고려한 전체 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_126",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "수능 기초",
+    "question": "a + b + c = 9를 만족하는 자연수 a, b, c에 대해 a ≤ b ≤ c인 순서쌍 (a, b, c)의 개수는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "a ≤ b ≤ c이고 a + b + c = 9인 자연수 쌍을 직접 열거하면 (1,1,7), (1,2,6), (1,3,5), (1,4,4), (2,2,5), (2,3,4), (3,3,3)으로 총 7가지이다.",
+    "detailedExplanation": "a ≥ 1이고 a ≤ b ≤ c이면 a ≤ 3 (∵ 3a ≤ a+b+c = 9). a = 1일 때: b + c = 8, b ≤ c이면 b ≤ 4이므로 b = 1,2,3,4 → 4가지. a = 2일 때: b + c = 7, b ≥ 2이고 b ≤ c이면 b = 2,3 → 2가지. a = 3일 때: b + c = 6, b ≥ 3이고 b ≤ c이면 b = 3 → 1가지. 합계 4 + 2 + 1 = 7가지.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_127",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "수능 실전",
+    "question": "a + b + c + d = 8을 만족하는 음이 아닌 정수 a, b, c, d 중 a ≤ 2인 해의 개수는?",
+    "choices": [
+      "84",
+      "100",
+      "109",
+      "120"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 해의 수 H(4, 8) = C(11, 3) = 165에서 a ≥ 3인 해의 수(a' = a − 3으로 치환하면 H(4, 5) = C(8, 3) = 56)를 빼면 165 − 56 = 109이다.",
+    "detailedExplanation": "전체(a ≥ 0): H(4, 8) = C(11, 8) = C(11, 3) = 165. 여사건(a ≥ 3): a' = a − 3 ≥ 0으로 놓으면 a' + b + c + d = 5이므로 H(4, 5) = C(8, 5) = C(8, 3) = 56. 따라서 a ≤ 2인 해의 수는 165 − 56 = 109. C(11,3) = 11×10×9÷6 = 165, C(8,3) = 8×7×6÷6 = 56 직접 확인.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_128",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "수능 실전",
+    "question": "집합 X = {1, 2, 3, 4}에서 집합 Y = {1, 2, 3, 4, 5}로의 함수 f 중 f(1) ≤ f(2) ≤ f(3) ≤ f(4)이고 f(4) − f(1) ≥ 2인 함수의 개수는?",
+    "choices": [
+      "45",
+      "53",
+      "60",
+      "70"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(1) ≤ f(2) ≤ f(3) ≤ f(4)인 함수는 H(5, 4) = C(8, 4) = 70가지이고, 여기서 f(4) − f(1) ≤ 1인 경우(17가지)를 빼면 70 − 17 = 53이다.",
+    "detailedExplanation": "비감소 함수 전체: H(5, 4) = C(8, 4) = 70. 여사건 f(4) − f(1) ≤ 1인 경우를 센다. (i) f(4) − f(1) = 0: f(1)=f(2)=f(3)=f(4)=k (k=1~5) → 5가지. (ii) f(4) − f(1) = 1: f(1) = k, f(4) = k+1이면 f(2), f(3)은 k 또는 k+1 선택. 각 k에 대해 (k,k,k,k+1), (k,k,k+1,k+1), (k,k+1,k+1,k+1) → 3가지, k = 1,2,3,4이면 3×4 = 12가지. 여사건: 5 + 12 = 17. 정답: 70 − 17 = 53.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_129",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(2x − 1/x)⁶의 전개식에서 x²의 계수는?",
+    "choices": [
+      "60",
+      "160",
+      "240",
+      "480"
+    ],
+    "answerIndex": 2,
+    "explanation": "일반항은 C(6,r)·(2x)^(6−r)·(−1/x)^r = C(6,r)·2^(6−r)·(−1)^r·x^(6−2r)이므로, 6−2r=2에서 r=2. 계수는 C(6,2)·2⁴·(−1)²= 15·16 = 240이다.",
+    "detailedExplanation": "1단계: 이항정리 일반항 T(r+1) = C(6,r)·(2x)^(6−r)·(−1/x)^r을 정리하면 C(6,r)·2^(6−r)·(−1)^r·x^(6−2r).\n2단계: x²이 되려면 6−2r=2 → r=2.\n3단계: 계수 = C(6,2)·2^4·(−1)^2 = 15·16·1 = 240.\n오답 60은 지수 방향을 반대로 놓아 r=4로 잘못 계산한 결과, 480은 2^5로 잘못 계산한 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_130",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "응용 유형",
+    "question": "(x² + 1/x)⁹의 전개식에서 상수항은?",
+    "choices": [
+      "36",
+      "84",
+      "126",
+      "252"
+    ],
+    "answerIndex": 1,
+    "explanation": "일반항 C(9,r)·(x²)^(9−r)·(1/x)^r = C(9,r)·x^(18−3r)에서 18−3r=0이면 r=6이고, 상수항은 C(9,6)=84이다.",
+    "detailedExplanation": "1단계: T(r+1) = C(9,r)·(x²)^(9−r)·(1/x)^r = C(9,r)·x^(2(9−r)−r) = C(9,r)·x^(18−3r).\n2단계: 상수항 조건 18−3r=0 → r=6.\n3단계: C(9,6) = C(9,3) = 9·8·7/(3·2·1) = 84.\n오답 36은 r=2, 126은 r=4 또는 5로 잘못 놓은 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_131",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 기초",
+    "question": "(1+x)^n의 전개식에서 x³의 계수가 x²의 계수의 4배일 때, x⁴의 계수는?",
+    "choices": [
+      "364",
+      "715",
+      "1001",
+      "2002"
+    ],
+    "answerIndex": 2,
+    "explanation": "C(n,3)=4·C(n,2)를 풀면 (n−2)/6=2이므로 n=14이고, x⁴의 계수는 C(14,4)=1001이다.",
+    "detailedExplanation": "1단계: 조건 C(n,3)=4·C(n,2) → n(n−1)(n−2)/6 = 4·n(n−1)/2.\n2단계: 양변을 n(n−1)으로 나누면 (n−2)/6=2 → n=14.\n3단계: 검증: C(14,3)=364, C(14,2)=91, 364=4×91 ✓\n4단계: x⁴의 계수 = C(14,4) = 14·13·12·11/(4·3·2·1) = 1001.\n오답 364=C(14,3), 715=C(13,4), 2002=C(14,5)는 n이나 계수 선택을 잘못한 결과이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_132",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "대표 유형",
+    "question": "(√x − 2/√x)⁸의 전개식에서 x²의 계수는?",
+    "choices": [
+      "-224",
+      "56",
+      "112",
+      "1792"
+    ],
+    "answerIndex": 2,
+    "explanation": "일반항 C(8,r)·(−2)^r·x^(4−r)에서 4−r=2이면 r=2이고, 계수는 C(8,2)·(−2)²=28·4=112이다.",
+    "detailedExplanation": "1단계: T(r+1) = C(8,r)·(√x)^(8−r)·(−2/√x)^r = C(8,r)·(−2)^r·x^((8−r)/2)·x^(−r/2) = C(8,r)·(−2)^r·x^(4−r).\n2단계: x²이 되려면 4−r=2 → r=2.\n3단계: 계수 = C(8,2)·(−2)² = 28·4 = 112.\n오답 1792는 지수 방향을 반대로 놓아 r=6으로 계산한 결과(C(8,6)·2⁶=28·64=1792)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_133",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "응용 유형",
+    "question": "(2x + 1/x²)⁶의 전개식에서 상수항은?",
+    "choices": [
+      "60",
+      "160",
+      "192",
+      "240"
+    ],
+    "answerIndex": 3,
+    "explanation": "일반항 C(6,r)·2^(6−r)·x^(6−3r)에서 6−3r=0이면 r=2이고, 상수항은 C(6,2)·2⁴=15·16=240이다.",
+    "detailedExplanation": "1단계: T(r+1) = C(6,r)·(2x)^(6−r)·(1/x²)^r = C(6,r)·2^(6−r)·x^(6−r)·x^(−2r) = C(6,r)·2^(6−r)·x^(6−3r).\n2단계: 상수항 조건 6−3r=0 → r=2.\n3단계: 상수항 = C(6,2)·2^4 = 15·16 = 240.\n오답 160은 r=3(C(6,3)·2³=20·8=160), 60은 r=4(C(6,4)·2²=15·4=60)로 잘못 계산한 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_134",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 기초",
+    "question": "C(10,1)+C(10,3)+C(10,5)+C(10,7)+C(10,9)의 값은?",
+    "choices": [
+      "256",
+      "512",
+      "1023",
+      "1024"
+    ],
+    "answerIndex": 1,
+    "explanation": "(1+x)^10에 x=1과 x=−1을 각각 대입해 두 식을 빼면 홀수 차수의 이항계수 합만 남아 2·(이 합)=2^10−0=2^10이므로 합은 2^9=512이다.",
+    "detailedExplanation": "1단계: (1+1)^10 = ∑C(10,k) = 2^10 = 1024.\n2단계: (1−1)^10 = ∑C(10,k)·(−1)^k = 0.\n3단계: 두 식을 빼면 2·[C(10,1)+C(10,3)+C(10,5)+C(10,7)+C(10,9)] = 1024.\n4단계: 구하는 값 = 512 = 2^9.\n오답 1024는 전체 합, 256=2^8은 짝수 지수 합만 구하거나 지수를 1 낮게 잡은 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_135",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 실전",
+    "question": "(1+x)⁶(1−x)⁴의 전개식에서 x³의 계수는?",
+    "choices": [
+      "-20",
+      "-8",
+      "-4",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "(1+x)⁶의 계수 {1,6,15,20}과 (1−x)⁴의 계수 {1,−4,6,−4,1}을 이용해 x³항을 모으면 1·(−4)+6·6+15·(−4)+20·1=−4+36−60+20=−8이다.",
+    "detailedExplanation": "1단계: (1+x)⁶=1+6x+15x²+20x³+… , (1−x)⁴=1−4x+6x²−4x³+1.\n2단계: x³ 계수는 [x^0항]·[x^3항]+[x^1항]·[x^2항]+[x^2항]·[x^1항]+[x^3항]·[x^0항].\n3단계: = 1·(−4) + 6·6 + 15·(−4) + 20·1 = −4+36−60+20 = −8.\n오답 8은 (1+x)^4(1−x)^6 착각 또는 부호 전체 무시, −4·−20은 부분 항만 계산한 결과이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_136",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "이항정리",
+    "difficulty": "수능 실전",
+    "question": "(x² − 1/x)⁹의 전개식에서 x^(−3)의 계수는?",
+    "choices": [
+      "-126",
+      "-36",
+      "36",
+      "84"
+    ],
+    "answerIndex": 1,
+    "explanation": "일반항 C(9,r)·(−1)^r·x^(18−3r)에서 18−3r=−3이면 r=7이고, 계수는 C(9,7)·(−1)^7=36·(−1)=−36이다.",
+    "detailedExplanation": "1단계: T(r+1)=C(9,r)·(x²)^(9−r)·(−1/x)^r=C(9,r)·(−1)^r·x^(2(9−r)−r)=C(9,r)·(−1)^r·x^(18−3r).\n2단계: x^(−3)이 되려면 18−3r=−3 → 3r=21 → r=7.\n3단계: 계수=C(9,7)·(−1)^7=36·(−1)=−36.\n오답 36은 부호 (−1)^7=−1을 빠뜨린 결과, −126은 3r−18=−3로 잘못 세워 r=5로 계산한 결과(C(9,5)·(−1)^5=126·(−1)=−126)이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_137",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "대표 유형",
+    "question": "정사각형 모양의 과녁 [0, 4] × [0, 4] 안에 임의로 화살을 쏠 때, 화살이 꽂힌 점 (x, y)에 대해 |x − y| ≤ 1을 만족할 확률은? (단, 화살은 반드시 과녁 안에 꽂힌다.)",
+    "choices": [
+      "3/8",
+      "7/16",
+      "1/2",
+      "9/16"
+    ],
+    "answerIndex": 1,
+    "explanation": "|x − y| ≤ 1이 되지 않는 영역은 y > x+1인 삼각형(넓이 9/2)과 y < x−1인 삼각형(넓이 9/2)으로 제외 넓이의 합이 9이고, 만족 영역의 넓이는 16−9=7이므로 확률은 7/16이다.",
+    "detailedExplanation": "전체 넓이: 4 × 4 = 16\n제외 영역 1: y > x+1 → 꼭짓점 (0,1),(0,4),(3,4)인 삼각형, 넓이 = (1/2)×3×3 = 9/2\n제외 영역 2: y < x−1 → 꼭짓점 (1,0),(4,0),(4,3)인 삼각형, 넓이 = (1/2)×3×3 = 9/2\n제외 넓이의 합 = 9\n|x−y| ≤ 1을 만족하는 넓이 = 16 − 9 = 7\n확률 = 7/16",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_138",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "대표 유형",
+    "question": "서로 다른 두 개의 주사위를 동시에 던질 때, 두 눈의 합이 소수가 될 확률은?",
+    "choices": [
+      "1/3",
+      "7/18",
+      "5/12",
+      "4/9"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 눈의 합이 소수가 되는 경우는 합=2(1가지), 3(2가지), 5(4가지), 7(6가지), 11(2가지)로 합 15가지이므로 확률은 15/36 = 5/12이다.",
+    "detailedExplanation": "합=2: (1,1) → 1가지\n합=3: (1,2),(2,1) → 2가지\n합=5: (1,4),(2,3),(3,2),(4,1) → 4가지\n합=7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) → 6가지\n합=11: (5,6),(6,5) → 2가지\n소수인 경우의 수 = 1+2+4+6+2 = 15\n전체 경우의 수 = 36\n확률 = 15/36 = 5/12",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_139",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "응용 유형",
+    "question": "1부터 20까지의 자연수를 하나씩 적은 카드 20장 중 한 장을 임의로 븽는다. 사건 A를 '븽힌 카드의 숫자가 4의 배수', 사건 B를 '븽힌 카드의 숫자가 6의 배수'라 할 때, P(A | Bᶜ)의 값은?",
+    "choices": [
+      "1/5",
+      "4/17",
+      "1/4",
+      "5/17"
+    ],
+    "answerIndex": 1,
+    "explanation": "A={4,8,12,16,20}(5개), B={6,12,18}(3개), A∩B={12}(1개)이므로 A∩Bᶜ={4,8,16,20}(4개), Bᶜ는 17개이다. 따라서 P(A|Bᶜ) = (4/20) ÷ (17/20) = 4/17이다.",
+    "detailedExplanation": "4의 배수(A): 4, 8, 12, 16, 20 → |A|=5\n6의 배수(B): 6, 12, 18 → |B|=3\nA∩B: 12의 배수인 LCM(4,6)=12의 배수 → {12} → 1개\nA∩Bᶜ (4의 배수이면서 6의 배수는 아닌 것): {4, 8, 16, 20} → 4개\nBᶜ (6의 배수가 아닌 카드): 20−3=17개\nP(A|Bᶜ) = P(A∩Bᶜ) / P(Bᶜ) = (4/20) / (17/20) = 4/17",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_140",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "응용 유형",
+    "question": "6명이 원형 탁자에 둥자리를 정하여 않는다. 특정한 두 사람 A, B가 이웃하여 앉을 확률은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "2/5",
+      "1/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "6명의 원형 배열의 수는 5!=120이고, A와 B를 한 묶음으로 보는 방법에서 4!=24에 A,B 자리를 서로 바꾸는 2가지를 곱해 지지하는 경우의 수가 48이므로, 확률은 48/120 = 2/5이다.",
+    "detailedExplanation": "전체 원형 배열 수 = (6−1)! = 5! = 120\nA, B가 이웃하는 경우: A와 B를 한 묶음으로 취급하면 5개의 단위 원형 배열 = (5−1)! = 4! = 24가지\nAB 묶음 내에서 A와 B가 자리를 바꾸는 경우 × 2\n이웃하는 경우의 수 = 24 × 2 = 48\n확률 = 48 / 120 = 2/5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_141",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "수능 기초",
+    "question": "두 사건 A, B에 대하여 P(A) = 2/5, P(B|A) = 3/4, P(B|Aᶜ) = 1/4일 때, P(B)의 값은?",
+    "choices": [
+      "7/20",
+      "2/5",
+      "9/20",
+      "1/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "전확률 공식 P(B) = P(B|A)P(A) + P(B|Aᶜ)P(Aᶜ) = (3/4)(2/5) + (1/4)(3/5) = 6/20 + 3/20 = 9/20이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_142",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "수능 기초",
+    "question": "두 사건 A, B에 대하여 P(A) = 2/5, P(B|A) = 3/4, P(B|Aᶜ) = 1/4일 때, P(A|B)의 값은? (단, P(B) > 0)",
+    "choices": [
+      "1/2",
+      "3/5",
+      "2/3",
+      "3/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(B)=9/20, P(A∩B) = P(B|A)P(A) = (3/4)(2/5) = 6/20이므로 P(A|B) = (6/20)/(9/20) = 2/3이다.",
+    "detailedExplanation": "P(A∩B) = P(B|A) × P(A) = (3/4) × (2/5) = 6/20\nP(B) = P(B|A)P(A) + P(B|Aᶜ)P(Aᶜ) = 6/20 + (1/4)(3/5) = 6/20 + 3/20 = 9/20\nP(A|B) = P(A∩B) / P(B) = (6/20) / (9/20) = 6/9 = 2/3",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_143",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B는 서로 독립이고 P(A) = 2/3, P(Aᶜ∩Bᶜ) = 1/6일 때, P(Aᶜ∪Bᶜ)의 값은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "5/6"
+    ],
+    "answerIndex": 2,
+    "explanation": "A, B가 독립이므로 Aᶜ, Bᶜ독독립이며 P(Aᶜ)=1/3에서 P(Bᶜ)=1/2, P(B)=1/2를 얻고, P(Aᶜ∪Bᶜ)=1−P(A∩B)=1−(2/3)(1/2)=2/3이다.",
+    "detailedExplanation": "A, B가 독립 → Aᶜ, Bᶜ독 독립\nP(Aᶜ) = 1 − 2/3 = 1/3\nP(Aᶜ∩Bᶜ) = P(Aᶜ)P(Bᶜ) = (1/3)P(Bᶜ) = 1/6\n→ P(Bᶜ) = 1/2, 따라서 P(B) = 1/2\nP(Aᶜ∪Bᶜ) = P((A∩B)ᶜ) = 1 − P(A∩B)\nP(A∩B) = P(A)P(B) = (2/3)(1/2) = 1/3\nP(Aᶜ∪Bᶜ) = 1 − 1/3 = 2/3\n[검산] P(Aᶜ)+P(Bᶜ)−P(Aᶜ∩Bᶜ) = 1/3+1/2−1/6 = 2/6+3/6−1/6 = 4/6 = 2/3 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_144",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "수능 실전",
+    "question": "수직선 위에 점 P가 원점에 있다. 동전을 한 번 던져 앞면이 나오면 점 P를 +2만큼, 뒷면이 나오면 −1만큼 이동한다. 동전을 3번 던진 후 점 P가 원점에 있을 확률은?",
+    "choices": [
+      "1/8",
+      "1/4",
+      "3/8",
+      "1/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "3번 던져 원점에 있으려면 앞면 a번, 뒷면 b번(a+b=3)일 때 2a−b=0에서 a=1, b=2이어야 한다. 따라서 확률은 C(3,1)×(1/2)³ = 3/8이다.",
+    "detailedExplanation": "앞면 a번, 뒷면 b번이라 하면: a+b=3, 2a−b=0\n두 식을 풀면: 3a=3 → a=1, b=2\n즐, 3번 던져 앞면 1번·뒷면 2번이 나와야 원점 복귀\n앞면 1번, 뒷면 2번이 나오는 경우의 수: C(3,1) = 3\n전체 경우의 수: 2³ = 8\n확률 = 3/8",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_145",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/2, P(B) = 1/3, P(A∪B) = 2/3일 때, P(A∩B)의 값은?",
+    "choices": [
+      "1/12",
+      "1/6",
+      "1/4",
+      "1/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "덧셈정리 P(A∩B) = P(A) + P(B) − P(A∪B) = 1/2 + 1/3 − 2/3 = 3/6 + 2/6 − 4/6 = 1/6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_146",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "응용 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/2, P(B) = 2/5, P(Aᶜ∩Bᶜ) = 1/5일 때, P(A∩B)의 값은?",
+    "choices": [
+      "1/20",
+      "1/10",
+      "3/20",
+      "1/5"
+    ],
+    "answerIndex": 1,
+    "explanation": "드모르간 법칙에 의해 P(A∪B) = 1 − P(Aᶜ∩Bᶜ) = 4/5이고, P(A∩B) = P(A) + P(B) − P(A∪B) = 1/2 + 2/5 − 4/5 = 1/10이다.",
+    "detailedExplanation": "① 드모르간 법칙: P(Aᶜ∩Bᶜ) = P((A∪B)ᶜ) = 1 − P(A∪B)이므로 P(A∪B) = 1 − 1/5 = 4/5.\n② 덧셈정리: P(A∩B) = P(A) + P(B) − P(A∪B) = 5/10 + 4/10 − 8/10 = 1/10.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_147",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "대표 유형",
+    "question": "표본공간 S의 두 사건 A, B가 서로 배반사건이고 P(A) = 1/3, P(B) = 1/4일 때, P(A∪B)의 값은?",
+    "choices": [
+      "1/2",
+      "7/12",
+      "5/7",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "배반사건이면 P(A∩B) = 0이므로 P(A∪B) = P(A) + P(B) = 1/3 + 1/4 = 4/12 + 3/12 = 7/12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_148",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "수능 기초",
+    "question": "1부터 20까지의 자연수 중에서 임의로 하나를 선택할 때, 선택한 수가 3의 배수이거나 5의 배수일 확률은?",
+    "choices": [
+      "7/20",
+      "9/20",
+      "1/2",
+      "11/20"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수 6개, 5의 배수 4개, 공통(15) 1개이므로 P(A∪B) = 6/20 + 4/20 − 1/20 = 9/20이다.",
+    "detailedExplanation": "A: 3의 배수 {3,6,9,12,15,18} → 6개, B: 5의 배수 {5,10,15,20} → 4개, A∩B: 세 배수 {15} → 1개. P(A∪B) = (6+4−1)/20 = 9/20.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_149",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "응용 유형",
+    "question": "두 사건 A, B에 대하여 P(A∩Bᶜ) = 1/4, P(Aᶜ∩B) = 1/6, P(Aᶜ∩Bᶜ) = 1/3일 때, P(A∪B)의 값은?",
+    "choices": [
+      "1/2",
+      "7/12",
+      "2/3",
+      "3/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(A∪B) = 1 − P(Aᶜ∩Bᶜ) = 1 − 1/3 = 2/3이다.",
+    "detailedExplanation": "드모르간 법칙에 의해 (A∪B)ᶜ = Aᶜ∩Bᶜ이므로 P(A∪B) = 1 − 1/3 = 2/3. [검증] 4개 영역의 합: 1/4+1/6+P(A∩B)+1/3=1 → P(A∩B)=1/4이고, P(A)=1/4+1/4=1/2, P(B)=1/4+1/6=5/12, P(A∪B)=1/2+5/12−1/4=2/3 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_150",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "수능 기초",
+    "question": "한 개의 주사위를 던질 때, 짝수의 눈이 나오거나 3 이하의 눈이 나올 확률은?",
+    "choices": [
+      "1/2",
+      "7/12",
+      "2/3",
+      "5/6"
+    ],
+    "answerIndex": 3,
+    "explanation": "A(짝수) = {2,4,6}, B(3 이하) = {1,2,3}이고 A∩B = {2}이므로 P(A∪B) = 3/6 + 3/6 − 1/6 = 5/6이다.",
+    "detailedExplanation": "A = {2,4,6} → P(A) = 1/2, B = {1,2,3} → P(B) = 1/2, A∩B = {2} → P(A∩B) = 1/6. P(A∪B) = 1/2 + 1/2 − 1/6 = 6/6 − 1/6 = 5/6. 검증: A∪B = {1,2,3,4,6} → 5개 → 5/6 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_151",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B에 대하여 P(A) = 2/5, P(B|A) = 1/4, P(A∪B) = 3/5일 때, P(B)의 값은?",
+    "choices": [
+      "1/5",
+      "3/10",
+      "2/5",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "P(A∩B) = P(B|A)×P(A) = 1/4 × 2/5 = 1/10이고, 덧셈정리에서 P(B) = P(A∪B) − P(A) + P(A∩B) = 3/5 − 2/5 + 1/10 = 3/10이다.",
+    "detailedExplanation": "① 조건부확률 정의: P(A∩B) = P(B|A)·P(A) = 1/4 × 2/5 = 1/10.\n② 덧셈정리 변형: P(B) = P(A∪B) − P(A) + P(A∩B) = 3/5 − 2/5 + 1/10 = 1/5 + 1/10 = 3/10.\n③ 검증: P(A∪B) = 2/5 + 3/10 − 1/10 = 4/10 + 3/10 − 1/10 = 6/10 = 3/5 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_152",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 덧셈정리",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B에 대하여 P(A∪B) = 5/6, P(A∩B) = 1/6이고 P(A) = P(B) + 1/6일 때, P(A)의 값은?",
+    "choices": [
+      "5/12",
+      "1/2",
+      "7/12",
+      "2/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "덧셈정리에서 P(A)+P(B) = P(A∪B)+P(A∩B) = 1이고, P(A)−P(B) = 1/6이므로 연립하면 P(A) = 7/12이다.",
+    "detailedExplanation": "① 덧셈정리 변형: P(A)+P(B) = P(A∪B)+P(A∩B) = 5/6+1/6 = 1.\n② 조건에서 P(A)−P(B) = 1/6.\n③ 두 식을 더하면 2P(A) = 1+1/6 = 7/6 → P(A) = 7/12.\n④ 검증: P(B)=5/12, P(A∪B)=7/12+5/12−1/6=12/12−2/12=10/12=5/6 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_153",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "주머니 A에는 빨간 공 3개, 파란 공 2개가 들어 있고, 주머니 B에는 빨간 공 2개, 파란 공 3개가 들어 있다. 동전을 한 번 던져 앞면이 나오면 주머니 A에서, 뒷면이 나오면 주머니 B에서 공을 1개 꺼낸다. 꺼낸 공이 빨간 공일 때, 그 공이 주머니 A에서 나왔을 확률은?",
+    "choices": [
+      "3/5",
+      "1/2",
+      "3/4",
+      "2/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "전체 빨간 공을 꺼낼 확률은 (1/2)(3/5) + (1/2)(2/5) = 1/2이고, A에서 빨간 공을 꺼낼 확률은 (1/2)(3/5) = 3/10이므로 조건부확률은 (3/10)÷(1/2) = 3/5이다.",
+    "detailedExplanation": "P(A∩빨간) = (1/2)×(3/5) = 3/10\nP(B∩빨간) = (1/2)×(2/5) = 2/10\nP(빨간) = 3/10 + 2/10 = 5/10 = 1/2\nP(A|빨간) = P(A∩빨간)÷P(빨간) = (3/10)÷(1/2) = 3/5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_154",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/3, P(B|A) = 1/2, P(A|B) = 1/4일 때, P(B)의 값은?",
+    "choices": [
+      "2/3",
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A∩B) = P(A)×P(B|A) = (1/3)×(1/2) = 1/6이고, P(A|B) = P(A∩B)/P(B) = 1/4이므로 P(B) = P(A∩B)÷P(A|B) = (1/6)÷(1/4) = 2/3이다.",
+    "detailedExplanation": "P(A∩B) = P(A)·P(B|A) = (1/3)×(1/2) = 1/6\nP(A|B) = P(A∩B)/P(B)에서 1/4 = (1/6)/P(B)\nP(B) = (1/6)÷(1/4) = (1/6)×4 = 4/6 = 2/3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_155",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "응용 유형",
+    "question": "1부터 20까지의 자연수 중에서 임의로 하나를 선택할 때, 선택한 수가 4의 배수라는 조건 하에 그 수가 6의 배수일 확률은?",
+    "choices": [
+      "1/5",
+      "1/4",
+      "2/5",
+      "1/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "1~20에서 4의 배수는 {4,8,12,16,20}으로 5개, 이 중 6의 배수(4와 6의 공배수=12의 배수)는 {12}으로 1개이므로 조건부확률은 1/5이다.",
+    "detailedExplanation": "4의 배수: 4, 8, 12, 16, 20 → 5개\n6의 배수: 6, 12, 18 → 3개\n4의 배수이면서 6의 배수인 수(lcm(4,6)=12의 배수): 12 → 1개\nP(6의 배수|4의 배수) = 1/5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_156",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "수능 기초",
+    "question": "두 사건 A, B는 서로 독립이고 P(A∪B) = 7/10, P(Aᶜ∩B) = 1/5일 때, P(A)의 값은? (단, Aᶜ은 A의 여사건)",
+    "choices": [
+      "1/2",
+      "1/3",
+      "2/5",
+      "3/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "A와 B가 독립이면 P(Aᶜ∩B) = P(Aᶜ)P(B) = (1-P(A))P(B) = 1/5이고, P(A∪B) = P(A)+P(B)-P(A)P(B) = 7/10에서 두 식을 연립하면 P(A) = 1/2이다.",
+    "detailedExplanation": "A, B 독립이므로 Aᶜ과 B도 독립.\nP(Aᶜ∩B) = (1-p)q = 1/5  ···①  (p=P(A), q=P(B) 로 놓음)\nP(A∪B) = p + q - pq = 7/10  ···②\n①에서 q - pq = 1/5, 즉 q(1-p) = 1/5\n②를 변형: p + q(1-p) = 7/10\n→ p + 1/5 = 7/10\n→ p = 7/10 - 2/10 = 5/10 = 1/2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_157",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "수능 기초",
+    "question": "흰 공 4개, 검은 공 3개가 들어 있는 주머니에서 공을 한 개씩 꺼내는 시행을 한다. 처음 꺼낸 공이 흰 공이었을 때, 두 번째 꺼낸 공도 흰 공일 확률은? (단, 꺼낸 공은 다시 넣지 않는다.)",
+    "choices": [
+      "1/2",
+      "4/7",
+      "3/7",
+      "2/7"
+    ],
+    "answerIndex": 0,
+    "explanation": "첫 번째 흰 공을 꺼낸 후 주머니에는 흰 공 3개, 검은 공 3개(총 6개)가 남으므로, 두 번째 흰 공을 꺼낼 확률은 3/6 = 1/2이다.",
+    "detailedExplanation": "첫 번째 흰 공 꺼낸 후 남은 공: 흰 공 3개, 검은 공 3개 (총 6개)\nP(두 번째 흰|첫 번째 흰) = 3/6 = 1/2\n직접 계산으로도 확인:\nP(첫 흰∩두 번째 흰) = (4/7)×(3/6) = 12/42 = 2/7\nP(첫 흰) = 4/7\nP(두 번째 흰|첫 흰) = (2/7)÷(4/7) = 1/2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_158",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "조건부확률",
+    "difficulty": "수능 실전",
+    "question": "어느 학교 학생 200명을 대상으로 A, B 두 동아리 가입 여부를 조사하였다. A에 가입한 학생은 80명, B에 가입한 학생은 100명, A와 B 모두 가입하지 않은 학생은 60명이다. 이 중 한 명을 임의로 선택할 때, 선택된 학생이 A에 가입했다는 조건 하에, 그 학생이 B에도 가입했을 확률은?",
+    "choices": [
+      "1/2",
+      "2/5",
+      "3/8",
+      "3/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "A∪B에 속하는 학생은 200-60=140명, n(A∩B) = n(A)+n(B)-n(A∪B) = 80+100-140 = 40명이므로 P(B|A) = 40/80 = 1/2이다.",
+    "detailedExplanation": "n(A∪B) = 200 - 60 = 140\nn(A∩B) = n(A) + n(B) - n(A∪B) = 80 + 100 - 140 = 40\nP(A) = 80/200 = 2/5\nP(A∩B) = 40/200 = 1/5\nP(B|A) = P(A∩B)/P(A) = (1/5)÷(2/5) = 1/2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_159",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B가 서로 독립이고 P(A) = 1/3, P(A∪B) = 1/2일 때, P(B)의 값은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "3/8",
+      "3/16"
+    ],
+    "answerIndex": 0,
+    "explanation": "독립이면 P(A∩B) = P(A)P(B)이고, P(A∪B) = P(A) + P(B) − P(A)P(B)에서 1/2 = 1/3 + P(B)(1 − 1/3)이므로 P(B)(2/3) = 1/6, P(B) = 1/4.",
+    "detailedExplanation": "P(A∪B) = P(A) + P(B) − P(A∩B)이고, A와 B가 독립이므로 P(A∩B) = P(A)P(B).\n1/2 = 1/3 + P(B) − (1/3)P(B)\n1/2 − 1/3 = P(B)(1 − 1/3)\n1/6 = (2/3)P(B)\nP(B) = (1/6) × (3/2) = 1/4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_160",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B가 서로 독립이고 P(Aᶜ) = 2/3, P(B|A) = 3/5일 때, P(Aᶜ∩Bᶜ)의 값은?",
+    "choices": [
+      "4/15",
+      "2/5",
+      "2/15",
+      "8/15"
+    ],
+    "answerIndex": 0,
+    "explanation": "독립이면 P(B|A) = P(B) = 3/5이므로 P(Bᶜ) = 2/5. AᶜBᶜ도 독립이므로 P(Aᶜ∩Bᶜ) = (2/3)(2/5) = 4/15.",
+    "detailedExplanation": "A와 B가 독립이면 조건부확률 P(B|A) = P(B) = 3/5.\nP(Bᶜ) = 1 − 3/5 = 2/5.\nA와 B가 독립이면 Aᶜ와 Bᶜ도 독립이므로,\nP(Aᶜ∩Bᶜ) = P(Aᶜ) × P(Bᶜ) = (2/3) × (2/5) = 4/15.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_161",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "응용 유형",
+    "question": "두 사건 A, B에 대하여 P(A∩B) = 1/6, P(Aᶜ∩B) = 1/3일 때, A와 B가 독립이 되려면 P(A)의 값은? (단, 0 < P(A) < 1)",
+    "choices": [
+      "1/3",
+      "1/4",
+      "1/2",
+      "1/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(B) = P(A∩B) + P(Aᶜ∩B) = 1/6 + 1/3 = 1/2이고, 독립 조건 P(A∩B) = P(A)P(B)에서 1/6 = P(A)×(1/2)이므로 P(A) = 1/3.",
+    "detailedExplanation": "P(B) = P(A∩B) + P(Aᶜ∩B) = 1/6 + 2/6 = 3/6 = 1/2.\nA, B가 독립이면 P(A∩B) = P(A)P(B).\n1/6 = P(A) × (1/2)\nP(A) = 1/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_162",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "응용 유형",
+    "question": "세 사건 A, B, C가 서로 독립이고 P(A) = 1/2, P(B) = 1/3, P(C) = 1/4일 때, 세 사건 중 정확히 하나만 일어날 확률은?",
+    "choices": [
+      "11/24",
+      "3/8",
+      "5/12",
+      "7/24"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A만) + P(B만) + P(C만) = (1/2)(2/3)(3/4) + (1/2)(1/3)(3/4) + (1/2)(2/3)(1/4) = 6/24 + 3/24 + 2/24 = 11/24.",
+    "detailedExplanation": "P(A만) = P(A)P(Bᶜ)P(Cᶜ) = (1/2)(2/3)(3/4) = 6/24.\nP(B만) = P(Aᶜ)P(B)P(Cᶜ) = (1/2)(1/3)(3/4) = 3/24.\nP(C만) = P(Aᶜ)P(Bᶜ)P(C) = (1/2)(2/3)(1/4) = 2/24.\n합 = 6/24 + 3/24 + 2/24 = 11/24.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_163",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "수능 기초",
+    "question": "A가 어떤 문제를 풀 확률이 2/3이고, B가 같은 문제를 풀 확률이 3/4이다. A와 B가 각각 독립적으로 문제를 풀 때, 둘 중 적어도 한 명이 푸는 확률과 둘 다 푸는 확률의 차는?",
+    "choices": [
+      "5/12",
+      "1/2",
+      "7/12",
+      "1/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(적어도 한 명) = 1 − (1/3)(1/4) = 11/12, P(둘 다) = (2/3)(3/4) = 1/2. 차 = 11/12 − 6/12 = 5/12.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_164",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B가 서로 독립이고 P(A∪B) − P(A∩Bᶜ) = 1/3, P(Aᶜ∩B) = 1/6일 때, P(A)의 값은?",
+    "choices": [
+      "1/6",
+      "1/4",
+      "1/3",
+      "1/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "P(A∪B) = P(A) + P(B) − P(A)P(B), P(A∩Bᶜ) = P(A)(1−P(B))이므로 차는 P(B)이다. P(B) = 1/3. P(Aᶜ∩B) = (1−P(A))×(1/3) = 1/6이면 1−P(A) = 1/2, P(A) = 1/2.",
+    "detailedExplanation": "P(A) = p, P(B) = q로 놓자.\nP(A∪B) − P(A∩Bᶜ) = [p + q − pq] − [p(1−q)] = [p + q − pq] − [p − pq] = q = 1/3 ... ①\nP(Aᶜ∩B) = (1−p)q = 1/6 ... ②\n①을 ②에 대입: (1−p)(1/3) = 1/6\n1−p = 1/2\np = P(A) = 1/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_165",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "사건의 독립",
+    "difficulty": "수능 실전",
+    "question": "두 사건 A, B가 서로 독립이고 P(A) = a, P(B) = b (a ≠ 0, b ≠ 0)일 때, a + b ≤ 1이고 P(A∪B) = 5P(A∩B)가 성립한다. ab의 최댓값은?",
+    "choices": [
+      "1/6",
+      "1/4",
+      "1/5",
+      "1/9"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A∪B) = a + b − ab = 5ab이므로 a + b = 6ab. a + b ≤ 1이면 6ab ≤ 1, ab ≤ 1/6. a + b = 1이고 ab = 1/6일 때 t² − t + 1/6 = 0의 판별식 = 1 − 2/3 = 1/3 > 0이므로 실수해 존재. 따라서 최댓값은 1/6.",
+    "detailedExplanation": "A, B가 독립이므로 P(A∩B) = ab.\nP(A∪B) = a + b − ab = 5ab\na + b = 6ab ... ①\na + b ≤ 1이므로 ①에서 6ab ≤ 1, 즉 ab ≤ 1/6.\nab = 1/6이 되려면 a + b = 1이어야 한다.\na + b = 1, ab = 1/6이면 t² − t + 1/6 = 0.\n판별식 D = 1 − 4×(1/6) = 1 − 2/3 = 1/3 > 0 → 실수 해 존재.\n따라서 ab의 최댓값 = 1/6.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_166",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X의 확률분포가 P(X=k) = c(6−k) (k=1, 2, 3, 4, 5)일 때, V(3X−1)의 값은?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "합이 1이므로 c(5+4+3+2+1)=15c=1에서 c=1/15. E(X)=7/3, E(X²)=7이므로 V(X)=7−49/9=14/9. 따라서 V(3X−1)=9×(14/9)=14.",
+    "detailedExplanation": "① c 결정: ∑P(X=k)=c(5+4+3+2+1)=15c=1 → c=1/15.\n② E(X) = (1×5+2×4+3×3+4×2+5×1)/15 = 35/15 = 7/3.\n③ E(X²) = (1×5+4×4+9×3+16×2+25×1)/15 = 105/15 = 7.\n④ V(X) = E(X²)−[E(X)]² = 7−49/9 = 63/9−49/9 = 14/9.\n⑤ V(3X−1) = 3²×V(X) = 9×(14/9) = 14.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_167",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "응용 유형",
+    "question": "확률변수 X에 대하여 E(2X+1)=7, E(X(X+2))=18일 때, V(2X−3)의 값은?",
+    "choices": [
+      "6",
+      "9",
+      "12",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(2X+1)=7에서 E(X)=3. E(X²+2X)=E(X²)+2E(X)=18이므로 E(X²)=12. V(X)=12−9=3이고 V(2X−3)=4V(X)=12.",
+    "detailedExplanation": "① E(2X+1)=2E(X)+1=7 → E(X)=3.\n② E(X(X+2))=E(X²+2X)=E(X²)+2×3=18 → E(X²)=12.\n③ V(X)=E(X²)−[E(X)]²=12−9=3.\n④ V(2X−3)=2²×V(X)=4×3=12.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_168",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "수능 기초",
+    "question": "확률변수 X가 이항분포 B(12, 1/3)을 따를 때, E(X²)의 값은?",
+    "choices": [
+      "14",
+      "56/3",
+      "18",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "E(X)=np=4, V(X)=np(1−p)=8/3이므로 E(X²)=V(X)+[E(X)]²=8/3+16=56/3.",
+    "detailedExplanation": "① E(X)=12×(1/3)=4.\n② V(X)=12×(1/3)×(2/3)=8/3.\n③ E(X²)=V(X)+[E(X)]²=8/3+16=8/3+48/3=56/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_169",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "응용 유형",
+    "question": "확률변수 X가 이항분포 B(n, 1/4)를 따르고 V(X)=3일 때, E(X²)의 값은?",
+    "choices": [
+      "15",
+      "17",
+      "19",
+      "21"
+    ],
+    "answerIndex": 2,
+    "explanation": "V(X)=n×(1/4)×(3/4)=3n/16=3에서 n=16. E(X)=16×(1/4)=4이므로 E(X²)=V(X)+[E(X)]²=3+16=19.",
+    "detailedExplanation": "① V(X)=n×(1/4)×(3/4)=3n/16=3 → n=16.\n② E(X)=16×(1/4)=4.\n③ E(X²)=V(X)+[E(X)]²=3+16=19.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_170",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "수능 기초",
+    "question": "확률변수 X가 정규분포 N(60, 5²)을 따를 때, P(55 ≤ X ≤ 70)의 값은? (단, P(0 ≤ Z ≤ 1)=0.3413, P(0 ≤ Z ≤ 2)=0.4772로 계산한다.)",
+    "choices": [
+      "0.6826",
+      "0.7745",
+      "0.8185",
+      "0.9772"
+    ],
+    "answerIndex": 2,
+    "explanation": "표준화하면 P(−1 ≤ Z ≤ 2)=P(0≤Z≤1)+P(0≤Z≤2)=0.3413+0.4772=0.8185.",
+    "detailedExplanation": "① X를 표준화: Z=(X−60)/5.\n② P(55≤X≤70)=P((55−60)/5 ≤ Z ≤ (70−60)/5)=P(−1≤Z≤2).\n③ P(−1≤Z≤2)=P(−1≤Z≤0)+P(0≤Z≤2)=P(0≤Z≤1)+P(0≤Z≤2)=0.3413+0.4772=0.8185.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_171",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 정규분포 N(μ, σ²)을 따르고, P(X ≤ 70)=0.9772, P(X ≥ 55)=0.8413일 때, P(X ≥ 65)의 값은? (단, P(0≤Z≤1)=0.3413, P(0≤Z≤2)=0.4772로 계산한다.)",
+    "choices": [
+      "0.0228",
+      "0.1587",
+      "0.3085",
+      "0.3413"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 조건에서 μ=60, σ=5를 구할 수 있고, P(X≥65)=P(Z≥1)=0.5−0.3413=0.1587.",
+    "detailedExplanation": "① P(X≤70)=0.9772=P(Z≤2)이므로 (70−μ)/σ=2 → 70−μ=2σ … (1)\n② P(X≥55)=0.8413=P(Z≥−1)이므로 (55−μ)/σ=−1 → μ−55=σ … (2)\n③ (2)를 (1)에 대입: 70−(55+σ)=2σ → 15=3σ → σ=5, μ=60.\n④ P(X≥65)=P(Z≥(65−60)/5)=P(Z≥1)=0.5−0.3413=0.1587.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_172",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "수능 실전",
+    "question": "확률변수 X가 이항분포 B(100, 1/2)를 따를 때, 정규분포로 근사하여 P(45 ≤ X ≤ 55)의 값은? (단, P(0≤Z≤1)=0.3413으로 계산한다.)",
+    "choices": [
+      "0.3413",
+      "0.5000",
+      "0.6826",
+      "0.9544"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(X)=50, V(X)=25이므로 X는 근사적으로 N(50, 5²)을 따른다. P(45≤X≤55)=P(−1≤Z≤1)=2×0.3413=0.6826.",
+    "detailedExplanation": "① E(X)=100×(1/2)=50, V(X)=100×(1/2)×(1/2)=25, σ=5.\n② X ~ N(50, 5²)으로 근사.\n③ P(45≤X≤55)=P((45−50)/5≤Z≤(55−50)/5)=P(−1≤Z≤1).\n④ P(−1≤Z≤1)=2×P(0≤Z≤1)=2×0.3413=0.6826.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_173",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "확률변수와 확률분포",
+    "difficulty": "수능 실전",
+    "question": "서로 독립인 확률변수 X, Y에 대하여 E(X)=3, V(X)=4, E(Y)=2, V(Y)=3일 때, V(2X−Y+1)의 값은?",
+    "choices": [
+      "13",
+      "16",
+      "19",
+      "22"
+    ],
+    "answerIndex": 2,
+    "explanation": "X와 Y가 독립이므로 V(2X−Y+1)=4V(X)+V(Y)=4×4+3=19.",
+    "detailedExplanation": "① 상수를 더하거나 빼도 분산은 변하지 않으므로 V(2X−Y+1)=V(2X−Y).\n② X, Y가 독립이면 V(aX+bY)=a²V(X)+b²V(Y).\n③ V(2X−Y)=2²V(X)+(−1)²V(Y)=4×4+1×3=16+3=19.\n흔한 실수: V(X−Y)=V(X)−V(Y)로 계산하면 4−3=1(오답), 또는 상수 1의 분산을 더하면 오답.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_174",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 이항분포 B(10, 1/3)을 따를 때, E(3X+2)의 값은?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "32/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(X) = np = 10×(1/3) = 10/3이므로, E(3X+2) = 3E(X)+2 = 3×(10/3)+2 = 10+2 = 12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_175",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "응용 유형",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고, E(X)=6, E(X²)=40일 때, n의 값은?",
+    "choices": [
+      "9",
+      "12",
+      "18",
+      "24"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(X)=np=6, E(X²)=Var(X)+[E(X)]²=npq+36=40이므로 npq=4이다. 따라서 q=4/6=2/3, p=1/3이고 n=6÷(1/3)=18이다.",
+    "detailedExplanation": "① E(X)=np=6으로 놓는다. ② E(X²)=Var(X)+[E(X)]²=npq+(np)²=6q+36=40에서 6q=4, q=2/3, p=1/3. ③ np=6에서 n×(1/3)=6이므로 n=18. ④ 검증: E(X)=18×(1/3)=6, Var(X)=18×(1/3)×(2/3)=4, E(X²)=4+36=40 (성립).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_176",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 이항분포 B(12, 2/5)를 따를 때, P(X=k)가 최대가 되는 k의 값은?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "(n+1)p = 13×(2/5) = 26/5 = 5.2이 정수가 아니므로 최빈값(mode)은 ⌊5.2⌋ = 5이다.",
+    "detailedExplanation": "이항분포 B(n,p)에서 (n+1)p가 정수가 아닐 때, P(X=k)를 최대로 하는 k는 ⌊(n+1)p⌋이다. (n+1)p = 13×(2/5) = 26/5 = 5.2이므로 k = ⌊5.2⌋ = 5. 인접값과 비교: P(X=k+1)/P(X=k) = (n−k)p / [(k+1)q]이며 k=5일 때 이 비가 1 미만임을 확인할 수 있다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_177",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "수능 기초",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고, E(X)=12, Var(X)=4일 때, Var(2X+1)의 값은?",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "answerIndex": 2,
+    "explanation": "Var(2X+1) = 2²×Var(X) = 4×4 = 16이다. 상수를 더해도 분산은 변하지 않으므로 +1은 영향을 주지 않는다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_178",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "수능 실전",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고 Y = n−X라 하자. E(X) = 2E(Y)이고 Var(X) = 8일 때, E(X)의 값은?",
+    "choices": [
+      "18",
+      "24",
+      "30",
+      "36"
+    ],
+    "answerIndex": 1,
+    "explanation": "E(X)=np, E(Y)=nq이므로 np=2nq에서 p=2q, p+q=1이므로 p=2/3, q=1/3. Var(X)=np(1−p)=n×(2/3)×(1/3)=2n/9=8에서 n=36, E(X)=36×(2/3)=24이다.",
+    "detailedExplanation": "① Y=n−X이면 Y~B(n,q), q=1−p. ② E(X)=2E(Y) → np=2nq → p=2q. ③ p+q=1 → 2q+q=1 → q=1/3, p=2/3. ④ Var(X)=np·q=n×(2/3)×(1/3)=2n/9=8 → n=36. ⑤ E(X)=36×(2/3)=24.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_179",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "응용 유형",
+    "question": "한 개의 주사위를 8번 던질 때, 3의 약수(1 또는 3)의 눈이 나오는 횟수를 X라 하자. P(X=2)의 값은?",
+    "choices": [
+      "64/6561",
+      "448/6561",
+      "1792/6561",
+      "3584/6561"
+    ],
+    "answerIndex": 2,
+    "explanation": "3의 약수(1, 3)가 나올 확률은 2/6=1/3이므로 X~B(8, 1/3)이다. P(X=2)=C(8,2)×(1/3)²×(2/3)⁶ = 28×(1/9)×(64/729) = 1792/6561이다.",
+    "detailedExplanation": "① 1의 눈 또는 3의 눈: 2가지 → p=2/6=1/3. ② X~B(8, 1/3). ③ P(X=2) = C(8,2)×(1/3)²×(2/3)⁶ = 28×(1/9)×(64/729) = 1792/6561. 오답 64/6561은 C(8,2)를 곱하지 않은 실수, 448/6561은 (2/3)의 지수를 5로 잘못 계산한 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_180",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "수능 기초",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고, E(X)=12, Var(X)=4일 때, σ(3X−1)의 값은? (단, σ(X)는 X의 표준편차)",
+    "choices": [
+      "3",
+      "6",
+      "12",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "Var(X)=4이므로 σ(X)=2이다. σ(3X−1) = |3|×σ(X) = 3×2 = 6이다. 상수를 빼도 표준편차는 변하지 않는다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_181",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "이항분포",
+    "difficulty": "수능 실전",
+    "question": "확률변수 X가 이항분포 B(n, p)를 따르고, E(X)=8, Var(X)=6일 때, E(X²)의 값은?",
+    "choices": [
+      "64",
+      "68",
+      "70",
+      "74"
+    ],
+    "answerIndex": 2,
+    "explanation": "E(X²) = Var(X) + [E(X)]² = 6 + 8² = 6 + 64 = 70이다.",
+    "detailedExplanation": "항등식 E(X²) = Var(X) + [E(X)]²를 이용한다. Var(X)=6, E(X)=8이므로 E(X²)=6+64=70. 오답 64는 [E(X)]²만 계산한 경우, 74는 Var(X)를 E(X)에 더해버린 경우(8+6=14, 14²=196 아니면 6+64+4=74식의 계산 오류)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_182",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 정규분포 N(50, 8²)을 따를 때, P(34 ≤ X ≤ 58)의 값은?\n(단, 표준정규분포표에서 P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "0.6826",
+      "0.8185",
+      "0.9544",
+      "0.9772"
+    ],
+    "answerIndex": 1,
+    "explanation": "34와 58을 표준화하면 z = (34−50)/8 = −2, z = (58−50)/8 = 1이므로 P(−2 ≤ Z ≤ 1) = P(0 ≤ Z ≤ 2) + P(0 ≤ Z ≤ 1) = 0.4772 + 0.3413 = 0.8185이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_183",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 정규분포 N(μ, σ²)을 따르고 P(X ≤ 68) = 0.9772, P(X ≤ 56) = 0.8413일 때, μ + σ의 값은?\n(단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "50",
+      "52",
+      "56",
+      "60"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(X ≤ 68) = 0.9772에서 (68 − μ)/σ = 2, P(X ≤ 56) = 0.8413에서 (56 − μ)/σ = 1이므로 두 식을 연립하면 σ = 12, μ = 44이다. 따라서 μ + σ = 56이다.",
+    "detailedExplanation": "① P(X ≤ 68) = 0.9772 = 0.5 + 0.4772이므로 (68 − μ)/σ = 2 → 68 − μ = 2σ\n② P(X ≤ 56) = 0.8413 = 0.5 + 0.3413이므로 (56 − μ)/σ = 1 → 56 − μ = σ\n③ ①−②: 12 = σ, 따라서 μ = 56 − 12 = 44\n④ μ + σ = 44 + 12 = 56",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_184",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "응용 유형",
+    "question": "이항분포 B(400, 0.5)를 따르는 확률변수 X에 대하여 정규분포로 근사할 때, P(X ≥ 215)의 값은?\n(단, P(0 ≤ Z ≤ 1.5) = 0.4332로 계산한다.)",
+    "choices": [
+      "0.0228",
+      "0.0668",
+      "0.1587",
+      "0.4332"
+    ],
+    "answerIndex": 1,
+    "explanation": "X의 평균은 400 × 0.5 = 200, 분산은 400 × 0.5 × 0.5 = 100이므로 σ = 10이다. P(X ≥ 215) = P(Z ≥ (215−200)/10) = P(Z ≥ 1.5) = 0.5 − 0.4332 = 0.0668이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_185",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "대표 유형",
+    "question": "확률변수 X가 정규분포 N(60, 10²)을 따를 때, P(50 ≤ X ≤ 65)의 값은?\n(단, P(0 ≤ Z ≤ 0.5) = 0.1915, P(0 ≤ Z ≤ 1) = 0.3413으로 계산한다.)",
+    "choices": [
+      "0.3413",
+      "0.5000",
+      "0.5328",
+      "0.6826"
+    ],
+    "answerIndex": 2,
+    "explanation": "표준화하면 P(50 ≤ X ≤ 65) = P(−1 ≤ Z ≤ 0.5) = P(0 ≤ Z ≤ 1) + P(0 ≤ Z ≤ 0.5) = 0.3413 + 0.1915 = 0.5328이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_186",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "응용 유형",
+    "question": "A 공장의 부품 길이 X는 N(100, 5²), B 공장의 부품 길이 Y는 N(110, 10²)을 따른다. 두 공장에서 각각 부품을 1개씩 뽑을 때, 길이가 110 이상인 부품이 나올 확률이 더 높은 공장과 그 확률을 바르게 짝지은 것은?\n(단, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "A 공장, 0.0228",
+      "A 공장, 0.4772",
+      "B 공장, 0.5000",
+      "B 공장, 0.4772"
+    ],
+    "answerIndex": 2,
+    "explanation": "A 공장: P(X ≥ 110) = P(Z ≥ 2) = 0.5 − 0.4772 = 0.0228, B 공장: P(Y ≥ 110) = P(Z ≥ 0) = 0.5이므로 B 공장의 확률이 더 높고 그 값은 0.5000이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_187",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "수능 기초",
+    "question": "확률변수 X가 정규분포 N(50, 10²)을 따를 때, P(X ≤ 40) + P(X ≥ 70)의 값은?\n(단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "0.0455",
+      "0.1359",
+      "0.1815",
+      "0.2417"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(X ≤ 40) = P(Z ≤ −1) = 0.5 − 0.3413 = 0.1587이고, P(X ≥ 70) = P(Z ≥ 2) = 0.5 − 0.4772 = 0.0228이므로 합은 0.1587 + 0.0228 = 0.1815이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_prob_stat_188",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "수능 기초",
+    "question": "어느 모집단의 확률변수 X가 정규분포 N(μ, 20²)을 따른다. 이 모집단에서 크기 100인 표본을 임의추출할 때, 표본평균 X̄에 대하여 P(56 ≤ X̄ ≤ 62) = 0.8185이다. μ의 값은?\n(단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "56",
+      "58",
+      "60",
+      "62"
+    ],
+    "answerIndex": 2,
+    "explanation": "표본의 크기가 100이므로 X̄ ~ N(μ, 2²)이다. P(56 ≤ X̄ ≤ 62) = 0.8185 = P(−2 ≤ Z ≤ 1)이므로 (56 − μ)/2 = −2, (62 − μ)/2 = 1을 풀면 μ = 60이다.",
+    "detailedExplanation": "① σ(X̄) = 20/√100 = 2이므로 X̄ ~ N(μ, 2²)\n② 0.8185 = P(0 ≤ Z ≤ 2) + P(0 ≤ Z ≤ 1) = P(−2 ≤ Z ≤ 1)\n③ (56 − μ)/2 = −2 → μ = 60\n④ 검증: (62 − 60)/2 = 1 → P(−2 ≤ Z ≤ 1) = 0.4772 + 0.3413 = 0.8185 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_189",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "정규분포",
+    "difficulty": "수능 실전",
+    "question": "확률변수 X가 정규분포 N(μ, σ²)을 따르고 다음 조건이 성립한다.\n(가) P(X ≤ 50) = 0.8413\n(나) P(X ≥ 20) = 0.9772\n이때 P(25 ≤ X ≤ 55)의 값은?\n(단, P(0 ≤ Z ≤ 1) = 0.3413, P(0 ≤ Z ≤ 1.5) = 0.4332, P(0 ≤ Z ≤ 2) = 0.4772로 계산한다.)",
+    "choices": [
+      "0.6247",
+      "0.7745",
+      "0.8413",
+      "0.8664"
+    ],
+    "answerIndex": 3,
+    "explanation": "조건 (가)에서 (50 − μ)/σ = 1, (나)에서 (20 − μ)/σ = −2이므로 연립하면 σ = 10, μ = 40이다. 따라서 P(25 ≤ X ≤ 55) = P(−1.5 ≤ Z ≤ 1.5) = 2 × 0.4332 = 0.8664이다.",
+    "detailedExplanation": "① P(X ≤ 50) = 0.8413 = 0.5 + 0.3413 → (50 − μ)/σ = 1 → μ + σ = 50 … ①\n② P(X ≥ 20) = 0.9772 → P(X ≤ 20) = 0.0228 = 0.5 − 0.4772 → (20 − μ)/σ = −2 → μ − 2σ = 20 … ②\n③ ① − ②: 3σ = 30 → σ = 10, μ = 40\n④ P(25 ≤ X ≤ 55) = P((25−40)/10 ≤ Z ≤ (55−40)/10) = P(−1.5 ≤ Z ≤ 1.5) = 2 × 0.4332 = 0.8664",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_prob_stat_190",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "수능 기초",
+    "question": "어느 고등학교 학생 중 임의추출한 400명의 수면 시간을 조사하였더니 평균 7.2시간, 표준편차 1.6시간이었다. 이 학교 학생 전체의 평균 수면 시간 m에 대한 신뢰도 95%의 신뢰구간이 a ≤ m ≤ b일 때, b − a의 값은? (단, Z₀.₀₂₅ = 1.96으로 계산한다.)",
+    "choices": [
+      "0.1568",
+      "0.3136",
+      "0.6272",
+      "0.2744"
+    ],
+    "answerIndex": 1,
+    "explanation": "신뢰구간의 길이 b − a = 2 × 1.96 × 1.6/√400 = 2 × 1.96 × 0.08 = 0.3136이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_prob_stat_191",
+    "subject": "확률과 통계",
+    "chapter": "통계",
+    "lesson": "통계적 추정",
+    "difficulty": "수능 실전",
+    "question": "어느 공장 A, B 두 라인에서 각각 표준편차 σ_A = 6, σ_B = 8인 정규분포를 따라 제품을 생산한다. A 라인에서 n_A개, B 라인에서 n_B개를 임의추출하여 각각 신뢰도 95%로 모평균을 추정할 때, 두 신뢰구간의 길이가 같다. n_A + n_B = 100일 때 n_A의 값은? (단, Z₀.₀₂₅ = 1.96으로 계산한다.)",
+    "choices": [
+      "36",
+      "25",
+      "64",
+      "16"
+    ],
+    "answerIndex": 0,
+    "explanation": "두 신뢰구간 길이가 같으려면 σ_A/√n_A = σ_B/√n_B이므로 6/√n_A = 8/√n_B, 즉 √n_B = (4/3)√n_A이고 n_B = (16/9)n_A이다. n_A + (16/9)n_A = 100에서 (25/9)n_A = 100, n_A = 36이다.",
+    "detailedExplanation": "① 신뢰구간 길이: 2 × 1.96 × σ/√n (공통 z값 소거)\n② 조건: σ_A/√n_A = σ_B/√n_B → 6/√n_A = 8/√n_B\n③ √n_B/√n_A = 8/6 = 4/3 → n_B/n_A = 16/9\n④ n_B = 16n_A/9\n⑤ n_A + 16n_A/9 = 100 → 9n_A/9 + 16n_A/9 = 100 → 25n_A/9 = 100 → n_A = 36\n⑥ 검증: n_B = 64, 신뢰구간 길이 비교: 6/√36 = 1, 8/√64 = 1 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_ps_1",
+    "subject": "확률과 통계",
+    "chapter": "경우의 수",
+    "lesson": "중복조합",
+    "difficulty": "대표 유형",
+    "question": "서로 다른 5개에서 3개를 택하는 조합의 수 ₅C₃ 은?",
+    "choices": [
+      "10",
+      "15",
+      "20",
+      "60"
+    ],
+    "answerIndex": 0,
+    "explanation": "₅C₃ = (5×4×3)/(3×2×1) = 10.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_ps_2",
+    "subject": "확률과 통계",
+    "chapter": "확률",
+    "lesson": "확률의 뜻과 활용",
+    "difficulty": "개념 확인",
+    "question": "주사위 한 개를 던질 때 3의 배수의 눈이 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수는 3, 6 으로 2가지. 2/6 = 1/3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  }
+]

@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "com_poly_001",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "개념 확인",
+    "question": "(x + 2)(x + 3) 을 전개하면?",
+    "choices": [
+      "x² + 5x + 6",
+      "x² + 6x + 6",
+      "x² + 5x + 5",
+      "x² + 6x + 5"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² + 3x + 2x + 6 = x² + 5x + 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_poly_002",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "기본 유형",
+    "question": "(x + 1)² 을 전개하면?",
+    "choices": [
+      "x² + 1",
+      "x² + 2x + 1",
+      "x² + x + 1",
+      "2x + 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "(x+1)² = x² + 2·x·1 + 1² = x² + 2x + 1.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_factor_001",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "개념 확인",
+    "question": "x² − 9 를 인수분해하면?",
+    "choices": [
+      "(x − 3)²",
+      "(x + 3)(x − 3)",
+      "(x + 9)(x − 1)",
+      "(x − 9)(x + 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "합·차 공식 a² − b² = (a+b)(a−b). x² − 3² = (x+3)(x−3).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_factor_002",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "대표 유형",
+    "question": "x² + 5x + 6 을 인수분해하면?",
+    "choices": [
+      "(x + 1)(x + 6)",
+      "(x + 2)(x + 3)",
+      "(x − 2)(x − 3)",
+      "(x + 5)(x + 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱이 6, 합이 5인 두 수는 2와 3. (x+2)(x+3).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_rem_001",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "기본 유형",
+    "question": "다항식 P(x) = x² + x + 1 을 x − 1 로 나눈 나머지는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "나머지정리에 의해 나머지는 P(1) = 1 + 1 + 1 = 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_rem_002",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "대표 유형",
+    "question": "다항식 P(x) = x³ − 2x + 1 을 x + 1 로 나눈 나머지는?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "나머지 = P(−1) = (−1) − (−2) + 1 = −1 + 2 + 1 = 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_complex_001",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "개념 확인",
+    "question": "i² 의 값은?",
+    "choices": [
+      "1",
+      "−1",
+      "i",
+      "−i"
+    ],
+    "answerIndex": 1,
+    "explanation": "허수단위 i 는 i² = −1 로 정의됩니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_complex_002",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "기본 유형",
+    "question": "(1 + i) + (2 − 3i) 의 값은?",
+    "choices": [
+      "3 − 2i",
+      "3 + 2i",
+      "−1 + 4i",
+      "3 − 4i"
+    ],
+    "answerIndex": 0,
+    "explanation": "실수부끼리, 허수부끼리. (1+2) + (1−3)i = 3 − 2i.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_quad_001",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² − 2x − 3 = 0 의 두 근의 곱은?",
+    "choices": [
+      "−3",
+      "−2",
+      "2",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "근과 계수의 관계로 두 근의 곱 = c/a = −3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_quad_002",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x² − 4x + k = 0 이 중근을 가질 때, 상수 k의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "중근 조건은 판별식 D = 0. 16 − 4k = 0 이므로 k = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_coord_001",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "기본 유형",
+    "question": "두 점 (1, 2), (4, 6) 사이의 거리는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "√{(4−1)² + (6−2)²} = √(9 + 16) = √25 = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_line_001",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "개념 확인",
+    "question": "두 점 (0, 0), (2, 4) 를 지나는 직선의 기울기는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "기울기 = (4 − 0)/(2 − 0) = 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_line_002",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "대표 유형",
+    "question": "기울기가 2이고 점 (1, 3) 을 지나는 직선의 y절편은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y − 3 = 2(x − 1) → y = 2x + 1 이므로 y절편은 1.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_circle_001",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "개념 확인",
+    "question": "원 x² + y² = 9 의 반지름은?",
+    "choices": [
+      "3",
+      "6",
+      "9",
+      "√3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² + y² = r² 에서 r² = 9 이므로 r = 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_circle_002",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "대표 유형",
+    "question": "원 (x − 1)² + (y − 2)² = 16 의 중심의 좌표는?",
+    "choices": [
+      "(1, 2)",
+      "(−1, −2)",
+      "(1, −2)",
+      "(2, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x − a)² + (y − b)² = r² 의 중심은 (a, b). 따라서 (1, 2).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_set_001",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "개념 확인",
+    "question": "A = {1, 2, 3}, B = {2, 3, 4} 일 때, A ∩ B 는?",
+    "choices": [
+      "{1, 2, 3, 4}",
+      "{2, 3}",
+      "{1, 4}",
+      "{1}"
+    ],
+    "answerIndex": 1,
+    "explanation": "교집합은 두 집합에 공통으로 속하는 원소. {2, 3}.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_set_002",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "기본 유형",
+    "question": "A = {1, 2, 3}, B = {2, 3, 4} 일 때, A ∪ B 는?",
+    "choices": [
+      "{2, 3}",
+      "{1, 2, 3, 4}",
+      "{1, 4}",
+      "∅"
+    ],
+    "answerIndex": 1,
+    "explanation": "합집합은 두 집합의 모든 원소. {1, 2, 3, 4}.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_logic_001",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "대표 유형",
+    "question": "명제 'x = 2 이면 x² = 4 이다' 의 역은?",
+    "choices": [
+      "x² = 4 이면 x = 2 이다",
+      "x = 2 이면 x² ≠ 4 이다",
+      "x² ≠ 4 이면 x ≠ 2 이다",
+      "x ≠ 2 이면 x² ≠ 4 이다"
+    ],
+    "answerIndex": 0,
+    "explanation": "명제 'p이면 q'의 역은 'q이면 p'. 따라서 'x²=4이면 x=2'.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_fn_001",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "개념 확인",
+    "question": "f(x) = 2x + 1 일 때, f(3) 의 값은?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(3) = 2×3 + 1 = 7.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_fn_002",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "대표 유형",
+    "question": "f(x) = 2x, g(x) = x + 1 일 때, (f ∘ g)(1) 의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "g(1) = 2, f(2) = 4. (f∘g)(1) = f(g(1)) = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "com_count_001",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "개념 확인",
+    "question": "5! 의 값은?",
+    "choices": [
+      "20",
+      "60",
+      "120",
+      "24"
+    ],
+    "answerIndex": 2,
+    "explanation": "5! = 5×4×3×2×1 = 120.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_count_002",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "기본 유형",
+    "question": "₅P₂ 의 값은?",
+    "choices": [
+      "10",
+      "20",
+      "60",
+      "120"
+    ],
+    "answerIndex": 1,
+    "explanation": "₅P₂ = 5 × 4 = 20.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "com_count_003",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "대표 유형",
+    "question": "₅C₂ 의 값은?",
+    "choices": [
+      "10",
+      "20",
+      "5",
+      "60"
+    ],
+    "answerIndex": 0,
+    "explanation": "₅C₂ = (5×4)/(2×1) = 10.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_1",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "개념 확인",
+    "question": "다음 중 다항식 2x³ − 3x² + x − 5의 차수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "다항식의 차수는 각 항의 차수 중 가장 높은 것으로, 2x³의 차수가 3이므로 이 다항식의 차수는 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_2",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "개념 확인",
+    "question": "두 다항식 A = 3x² − 2x + 1, B = x² + 4x − 3일 때, A + B를 계산하면?",
+    "choices": [
+      "4x² + 2x − 2",
+      "4x² − 2x + 2",
+      "2x² − 6x + 4",
+      "4x² + 2x + 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "동류항끼리 더하면 (3+1)x² + (−2+4)x + (1−3) = 4x² + 2x − 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_3",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "기본 유형",
+    "question": "두 다항식 A = 2x² + 3x − 1, B = x² − x + 4일 때, A − B를 계산하면?",
+    "choices": [
+      "x² + 2x − 5",
+      "x² + 4x − 5",
+      "x² + 2x + 3",
+      "3x² + 2x + 3"
+    ],
+    "answerIndex": 1,
+    "explanation": "A − B = (2x² + 3x − 1) − (x² − x + 4) = x² + 4x − 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_4",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "기본 유형",
+    "question": "(x + 3)(x − 2)를 전개하면?",
+    "choices": [
+      "x² − x − 6",
+      "x² + x − 6",
+      "x² + x + 6",
+      "x² − x + 6"
+    ],
+    "answerIndex": 1,
+    "explanation": "분배법칙을 이용하면 x² − 2x + 3x − 6 = x² + x − 6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_5",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "대표 유형",
+    "question": "(2x − 1)(x² + 3x − 2)를 전개했을 때 x²의 계수는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "x²항은 2x × 3x + (−1) × x² = 6x² − x² = 5x²이므로 계수는 5이다.",
+    "detailedExplanation": "전개하면 2x × x² = 2x³, 2x × 3x = 6x², 2x × (−2) = −4x, (−1) × x² = −x², (−1) × 3x = −3x, (−1) × (−2) = 2이다. x²항을 모으면 6x² − x² = 5x²이므로 계수는 5이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_6",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "응용 유형",
+    "question": "다항식 A에 대하여 A − (2x² − x + 3) = x² + 3x − 1이 성립할 때, A를 구하면?",
+    "choices": [
+      "3x² + 2x + 2",
+      "x² + 4x − 4",
+      "3x² + 2x − 4",
+      "3x² − 4x + 4"
+    ],
+    "answerIndex": 0,
+    "explanation": "A = (x² + 3x − 1) + (2x² − x + 3) = 3x² + 2x + 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_7",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "개념 확인",
+    "question": "다항식 f(x)를 (x − 2)로 나누었을 때의 나머지를 구하는 방법으로 옳은 것은?",
+    "choices": [
+      "f(0)을 계산한다.",
+      "f(2)를 계산한다.",
+      "f(−2)를 계산한다.",
+      "f(1)을 계산한다."
+    ],
+    "answerIndex": 1,
+    "explanation": "나머지정리에 의해 다항식 f(x)를 (x − a)로 나눈 나머지는 f(a)이므로, (x − 2)로 나눈 나머지는 f(2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_8",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "개념 확인",
+    "question": "다항식 f(x) = x³ − 3x + 1을 (x − 1)로 나누었을 때의 나머지는?",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "나머지정리에 의해 나머지는 f(1) = 1³ − 3×1 + 1 = 1 − 3 + 1 = −1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_9",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "대표 유형",
+    "question": "다항식 f(x)를 (x² − 1)로 나눈 나머지가 3x − 2일 때, f(x)를 (x − 1)로 나눈 나머지는?",
+    "choices": [
+      "−5",
+      "−1",
+      "1",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x) = (x² − 1)Q(x) + 3x − 2 = (x−1)(x+1)Q(x) + 3x − 2이므로, f(1) = 3×1 − 2 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_10",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "응용 유형",
+    "question": "다항식 f(x) = x¹⁰ − 1을 (x − 1)로 나눈 나머지와 (x + 1)로 나눈 나머지의 합은?",
+    "choices": [
+      "−2",
+      "0",
+      "2",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(1) = 1¹⁰ − 1 = 0, f(−1) = (−1)¹⁰ − 1 = 1 − 1 = 0이므로 두 나머지의 합은 0 + 0 = 0이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_11",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "개념 확인",
+    "question": "다음 중 x² − 9를 인수분해한 것으로 옳은 것은?",
+    "choices": [
+      "(x − 3)²",
+      "(x + 3)(x − 3)",
+      "(x + 9)(x − 1)",
+      "(x − 3)(x − 3)"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² − 9 = x² − 3²이므로 합차 공식 a² − b² = (a+b)(a−b)를 적용하면 (x+3)(x−3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_12",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "개념 확인",
+    "question": "x² + 6x + 9를 인수분해한 것은?",
+    "choices": [
+      "(x + 3)(x − 3)",
+      "(x + 9)(x + 1)",
+      "(x + 3)²",
+      "(x − 3)²"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² + 6x + 9 = x² + 2·x·3 + 3²이므로 완전제곱식 공식 a² + 2ab + b² = (a+b)²에 의해 (x+3)²이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_13",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "기본 유형",
+    "question": "x² + 5x + 6을 인수분해한 것은?",
+    "choices": [
+      "(x + 1)(x + 6)",
+      "(x + 2)(x + 3)",
+      "(x − 2)(x − 3)",
+      "(x + 6)(x − 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱이 6이고 합이 5인 두 수는 2와 3이므로 x² + 5x + 6 = (x+2)(x+3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_14",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "기본 유형",
+    "question": "2x² + 7x + 3을 인수분해한 것은?",
+    "choices": [
+      "(2x + 1)(x + 3)",
+      "(2x + 3)(x + 1)",
+      "(x + 3)(2x − 1)",
+      "(2x − 1)(x − 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x² + 7x + 3에서 2×3 = 6이고 합이 7인 두 수 1과 6을 이용해 세로셈법으로 분해하면 (2x+1)(x+3)이다.",
+    "detailedExplanation": "2x² + 7x + 3을 (2x + a)(x + b) 형태로 놓으면 ab = 3, 2b + a = 7을 만족해야 한다. a=1, b=3이면 2·3 + 1 = 7 ✓, 1·3 = 3 ✓이므로 (2x+1)(x+3)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_15",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "대표 유형",
+    "question": "x³ − 8을 인수분해한 것은?",
+    "choices": [
+      "(x − 2)(x² + 2x + 4)",
+      "(x − 2)(x² − 2x + 4)",
+      "(x − 2)³",
+      "(x + 2)(x² − 2x + 4)"
+    ],
+    "answerIndex": 0,
+    "explanation": "세제곱 차 공식 a³ − b³ = (a−b)(a² + ab + b²)에서 a=x, b=2를 대입하면 (x−2)(x² + 2x + 4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_17",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "수능 기초",
+    "question": "다항식 x³ + 3x² − 4x − 12를 인수분해하면 (x + a)(x − b)(x + c)일 때, 상수 a, b, c에 대해 a + b + c의 값은? (단, a, b, c > 0)",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "x = 2를 대입하면 8 + 12 − 8 − 12 = 0이므로 (x−2)가 인수이다. 조립제법으로 나누면 x³ + 3x² − 4x − 12 = (x−2)(x² + 5x + 6) = (x−2)(x+2)(x+3)이므로 a=2, b=2, c=3이 되어 a+b+c = 7이다.",
+    "detailedExplanation": "x = 2: 8 + 12 − 8 − 12 = 0 ✓, x = −2: −8 + 12 + 8 − 12 = 0 ✓, x = −3: −27 + 27 + 12 − 12 = 0 ✓. 조립제법으로 x³ + 3x² − 4x − 12 ÷ (x−2)를 계산하면 몫이 x² + 5x + 6이고, 이를 다시 인수분해하면 (x+2)(x+3)이다. 따라서 전체는 (x−2)(x+2)(x+3)이고, (x+a)(x−b)(x+c) 형태에서 a=2, b=2, c=3이므로 a+b+c = 2+2+3 = 7이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_18",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "개념 확인",
+    "question": "복소수 z = 3 + 2i에서 실수부와 허수부를 바르게 나타낸 것은?",
+    "choices": [
+      "실수부: 2, 허수부: 3",
+      "실수부: 3, 허수부: 2i",
+      "실수부: 3, 허수부: 2",
+      "실수부: 2i, 허수부: 3"
+    ],
+    "answerIndex": 2,
+    "explanation": "복소수 a + bi에서 실수부는 a, 허수부는 b(i가 아닌 계수)이므로 실수부는 3, 허수부는 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_19",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "기본 유형",
+    "question": "두 복소수 (2 + 3i) + (4 − i)의 값은?",
+    "choices": [
+      "6 + 2i",
+      "6 + 4i",
+      "−2 + 4i",
+      "6 − 2i"
+    ],
+    "answerIndex": 0,
+    "explanation": "실수부끼리, 허수부끼리 더하면 (2+4) + (3−1)i = 6 + 2i이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_20",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "기본 유형",
+    "question": "복소수 (1 + i)(2 − 3i)를 계산한 값은?",
+    "choices": [
+      "2 − 3i",
+      "5 − i",
+      "−1 + 5i",
+      "2 + 3i"
+    ],
+    "answerIndex": 1,
+    "explanation": "(1+i)(2−3i) = 2 − 3i + 2i − 3i² = 2 − i + 3 = 5 − i이다. (i² = −1 이용)",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_21",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "개념 확인",
+    "question": "이차방정식 x² − 5x + 6 = 0의 두 근의 합은?",
+    "choices": [
+      "−5",
+      "5",
+      "6",
+      "−6"
+    ],
+    "answerIndex": 1,
+    "explanation": "근과 계수의 관계에 의해 두 근의 합은 −(−5)/1 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_22",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "개념 확인",
+    "question": "이차방정식 x² + 4x + 4 = 0의 판별식 D의 값은?",
+    "choices": [
+      "−4",
+      "0",
+      "4",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "D = 4² − 4×1×4 = 16 − 16 = 0이므로 판별식은 0이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_23",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "기본 유형",
+    "question": "이차방정식 2x² − 3x − 2 = 0의 두 근을 α, β라 할 때, αβ의 값은?",
+    "choices": [
+      "3/2",
+      "−3/2",
+      "−1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "근과 계수의 관계에 의해 두 근의 곱 αβ = −2/2 = −1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_24",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "기본 유형",
+    "question": "이차방정식 x² − 2x − 3 = 0의 두 근 중 큰 근의 값은?",
+    "choices": [
+      "1",
+      "−1",
+      "3",
+      "−3"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² − 2x − 3 = (x − 3)(x + 1) = 0이므로 x = 3 또는 x = −1이고, 두 근 중 큰 근은 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_25",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² + kx + k + 3 = 0이 중근을 가질 때, 상수 k의 값은? (단, k > 0)",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "중근을 가지려면 판별식 D = k² − 4(k + 3) = 0이어야 하므로 k² − 4k − 12 = 0, (k − 6)(k + 2) = 0, k > 0이므로 k = 6이다.",
+    "detailedExplanation": "판별식 D = k² − 4×1×(k+3) = k² − 4k − 12 = 0을 풀면 (k − 6)(k + 2) = 0이므로 k = 6 또는 k = −2이다. k > 0 조건에 의해 k = 6이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_26",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x² − 6x + 2 = 0의 두 근을 α, β라 할 때, α² + β²의 값은?",
+    "choices": [
+      "28",
+      "32",
+      "36",
+      "40"
+    ],
+    "answerIndex": 1,
+    "explanation": "근과 계수의 관계에서 α + β = 6, αβ = 2이므로 α² + β² = (α + β)² − 2αβ = 36 − 4 = 32이다.",
+    "detailedExplanation": "근과 계수의 관계: α + β = 6, αβ = 2. α² + β² = (α + β)² − 2αβ = 6² − 2×2 = 36 − 4 = 32이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_27",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x² − (k+1)x + k = 0의 두 근이 모두 양수가 되도록 하는 정수 k의 최솟값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 근이 모두 양수이려면 (두 근의 합) > 0, (두 근의 곱) > 0, 판별식 ≥ 0을 동시에 만족해야 한다. 합 k+1 > 0이면 k > −1, 곱 k > 0이면 k > 0, 판별식 (k+1)² − 4k = k² − 2k + 1 = (k−1)² ≥ 0은 항상 성립하므로 k > 0인 최솟값 정수는 1이다.",
+    "detailedExplanation": "두 근 α, β가 모두 양수인 조건: ① α + β = k + 1 > 0 → k > −1, ② αβ = k > 0 → k > 0, ③ D = (k+1)² − 4k = k² − 2k + 1 = (k−1)² ≥ 0 (항상 성립). 세 조건의 공통범위는 k > 0이고, 정수 중 최솟값은 k = 1이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_28",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "개념 확인",
+    "question": "이차함수 y = x² − 4x + 3의 꼭짓점의 좌표는?",
+    "choices": [
+      "(2, −1)",
+      "(−2, −1)",
+      "(2, 1)",
+      "(−2, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = (x−2)² − 1로 변환하면 꼭짓점은 (2, −1)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_29",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "기본 유형",
+    "question": "이차함수 y = x² − 2x − 3의 그래프가 x축과 만나는 두 점 사이의 거리는?",
+    "choices": [
+      "4",
+      "2",
+      "6",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² − 2x − 3 = 0을 풀면 (x−3)(x+1) = 0이므로 x = 3 또는 x = −1, 두 점 사이의 거리는 3−(−1) = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_30",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "기본 유형",
+    "question": "이차부등식 x² − 3x − 4 < 0의 해가 a < x < b일 때, b − a의 값은?",
+    "choices": [
+      "5",
+      "4",
+      "3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² − 3x − 4 = (x−4)(x+1) < 0이므로 −1 < x < 4, 따라서 b − a = 4 − (−1) = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_31",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² + mx + m + 3 = 0이 서로 다른 두 실근을 가지려면 m의 범위는?",
+    "choices": [
+      "m < −2 또는 m > 6",
+      "−2 < m < 6",
+      "m ≤ −2 또는 m ≥ 6",
+      "m < 2 또는 m > −6"
+    ],
+    "answerIndex": 0,
+    "explanation": "판별식 D = m² − 4(m+3) = m² − 4m − 12 = (m−6)(m+2) > 0이므로 m < −2 또는 m > 6이다.",
+    "detailedExplanation": "판별식 D = m² − 4·1·(m+3) = m² − 4m − 12로 계산한다. D > 0이어야 서로 다른 두 실근을 가지므로 (m−6)(m+2) > 0, 즉 m < −2 또는 m > 6이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_32",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "수능 기초",
+    "question": "모든 실수 x에 대하여 이차부등식 x² − 4x + k > 0이 성립하려면 실수 k의 범위는?",
+    "choices": [
+      "k > 4",
+      "k ≥ 4",
+      "k < 4",
+      "k > 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "이차부등식이 모든 실수에서 성립하려면 판별식 D = 16 − 4k < 0이어야 하므로 k > 4이다.",
+    "detailedExplanation": "이차항의 계수가 1 > 0이고 모든 실수 x에서 x² − 4x + k > 0이 성립하려면 이차방정식 x² − 4x + k = 0의 판별식 D < 0이어야 한다. D = (−4)² − 4·1·k = 16 − 4k < 0에서 k > 4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_33",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "개념 확인",
+    "question": "삼차방정식 x³ − 3x² + 3x − 1 = 0의 근은?",
+    "choices": [
+      "x = −1 (삼중근)",
+      "x = 1 (삼중근)",
+      "x = 0, 1, −1",
+      "x = 1, 2, 3"
+    ],
+    "answerIndex": 1,
+    "explanation": "x³ − 3x² + 3x − 1 = (x − 1)³ = 0이므로 x = 1이 삼중근이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_34",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "기본 유형",
+    "question": "사차방정식 x⁴ − 5x² + 4 = 0의 실근의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 3,
+    "explanation": "x² = t로 치환하면 t² − 5t + 4 = (t−1)(t−4) = 0이므로 t = 1 또는 t = 4. 따라서 x = ±1, ±2로 실근이 4개다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_35",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "기본 유형",
+    "question": "연립방정식 { x + y = 5, xy = 6 }을 만족하는 x, y에 대해 x² + y²의 값은?",
+    "choices": [
+      "11",
+      "13",
+      "19",
+      "25"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² + y² = (x + y)² − 2xy = 5² − 2×6 = 25 − 12 = 13이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_36",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "대표 유형",
+    "question": "방정식 x³ − x² − x + 1 = 0의 세 근을 α, β, γ라 할 때, α + β + γ의 값은?",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "x³ − x² − x + 1 = x²(x−1) − (x−1) = (x−1)(x²−1) = (x−1)²(x+1) = 0이므로 근은 1, 1, −1. 세 근의 합은 1 + 1 + (−1) = 1이다.",
+    "detailedExplanation": "x³ − x² − x + 1을 인수분해하면 x²(x−1) − 1(x−1) = (x−1)(x²−1) = (x−1)(x−1)(x+1) = (x−1)²(x+1) = 0. 따라서 세 근은 1(중근), −1이고 합은 1 + 1 + (−1) = 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_37",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(1, 2)와 B(4, 6) 사이의 거리는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 점 사이의 거리 공식에 의해 √((4−1)² + (6−2)²) = √(9+16) = √25 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_38",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(−3, 1)과 B(5, 1)을 이은 선분 AB의 중점의 좌표는?",
+    "choices": [
+      "(1, 1)",
+      "(2, 1)",
+      "(1, 2)",
+      "(4, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "중점의 좌표는 ((−3+5)/2, (1+1)/2) = (1, 1)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_39",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "기본 유형",
+    "question": "두 점 A(1, −1)과 B(7, 5)를 이은 선분 AB를 2:1로 내분하는 점의 좌표는?",
+    "choices": [
+      "(4, 2)",
+      "(5, 3)",
+      "(3, 1)",
+      "(6, 4)"
+    ],
+    "answerIndex": 1,
+    "explanation": "내분점 공식에 의해 x = (2×7+1×1)/3 = 5, y = (2×5+1×(−1))/3 = 3이므로 내분점은 (5, 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_40",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "대표 유형",
+    "question": "세 꼭짓점이 A(0, 0), B(6, 0), C(2, 4)인 삼각형 ABC의 무게중심의 좌표는?",
+    "choices": [
+      "(3, 2)",
+      "(8/3, 4/3)",
+      "(4/3, 8/3)",
+      "(8/3, 8/3)"
+    ],
+    "answerIndex": 1,
+    "explanation": "삼각형의 무게중심은 세 꼭짓점의 좌표의 평균이므로 x = (0+6+2)/3 = 8/3, y = (0+0+4)/3 = 4/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_41",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "수능 기초",
+    "question": "두 점 A(−1, 2), B(3, −2)에 대하여 선분 AB의 수직이등분선 위의 점은 두 점 A, B로부터 거리가 같다. 점 C(a, b)가 이 수직이등분선 위에 있을 때, 다음 중 가능한 C의 좌표는?",
+    "choices": [
+      "(1, 3)",
+      "(2, 1)",
+      "(0, 0)",
+      "(3, 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "CA² = CB²인 점을 확인한다. C(2,1): CA²=(2+1)²+(1−2)²=9+1=10, CB²=(2−3)²+(1+2)²=1+9=10으로 같으므로 C(2,1)은 수직이등분선 위의 점이다.",
+    "detailedExplanation": "수직이등분선 위의 점 C(a,b)는 CA=CB, 즉 CA²=CB²을 만족한다. (a+1)²+(b−2)²=(a−3)²+(b+2)². 전개하면 a²+2a+1+b²−4b+4 = a²−6a+9+b²+4b+4. 정리하면 2a+1−4b+4 = −6a+9+4b+4 → 8a−8b = 8 → a−b=1. 각 보기 확인: (1,3): 1−3=−2≠1. (2,1): 2−1=1 ✓. (0,0): 0≠1. (3,1): 3−1=2≠1.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_42",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(1, 2), B(3, 6)을 지나는 직선의 기울기는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "기울기 = (6−2)÷(3−1) = 4÷2 = 2",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_43",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "개념 확인",
+    "question": "직선 y = −2x + 7이 x축과 만나는 점의 x좌표(x절편)는?",
+    "choices": [
+      "2",
+      "7/2",
+      "7",
+      "−7/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 0을 대입하면 0 = −2x + 7 → x = 7/2",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_44",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "기본 유형",
+    "question": "점 (−1, 4)를 지나고 기울기가 3인 직선의 방정식은?",
+    "choices": [
+      "y = 3x + 1",
+      "y = 3x + 7",
+      "y = 3x − 7",
+      "y = 3x + 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "y − 4 = 3(x − (−1)) → y = 3x + 3 + 4 = 3x + 7",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_45",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "기본 유형",
+    "question": "x절편이 3, y절편이 −6인 직선의 방정식은?",
+    "choices": [
+      "2x − y − 6 = 0",
+      "x − 2y − 3 = 0",
+      "2x + y − 6 = 0",
+      "x + 2y − 3 = 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "x/3 + y/(−6) = 1 → 2x − y = 6 → 2x − y − 6 = 0",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_46",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "개념 확인",
+    "question": "중심이 (2, −3)이고 반지름이 5인 원의 방정식은?",
+    "choices": [
+      "(x − 2)² + (y + 3)² = 5",
+      "(x + 2)² + (y − 3)² = 25",
+      "(x − 2)² + (y + 3)² = 25",
+      "(x + 2)² + (y − 3)² = 5"
+    ],
+    "answerIndex": 2,
+    "explanation": "중심 (a, b), 반지름 r인 원의 방정식은 (x − a)² + (y − b)² = r²이므로 (x − 2)² + (y + 3)² = 25이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_47",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "개념 확인",
+    "question": "원의 방정식 x² + y² = 16의 중심과 반지름을 바르게 나타낸 것은?",
+    "choices": [
+      "중심 (0, 0), 반지름 16",
+      "중심 (0, 0), 반지름 4",
+      "중심 (4, 4), 반지름 4",
+      "중심 (0, 0), 반지름 8"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² + y² = r² 꼴에서 중심은 원점 (0, 0)이고 반지름은 √16 = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_48",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "기본 유형",
+    "question": "방정식 x² + y² − 4x + 6y − 3 = 0이 나타내는 원의 반지름은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "완전제곱식으로 변환하면 (x − 2)² + (y + 3)² = 16이므로 반지름은 4이다.",
+    "detailedExplanation": "x² − 4x + y² + 6y = 3에서 (x − 2)² − 4 + (y + 3)² − 9 = 3이므로 (x − 2)² + (y + 3)² = 16. 따라서 반지름 r = √16 = 4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_49",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "기본 유형",
+    "question": "두 점 A(1, 0), B(5, 0)을 지름의 양 끝 점으로 하는 원의 방정식은?",
+    "choices": [
+      "(x − 3)² + y² = 4",
+      "(x − 3)² + y² = 16",
+      "(x − 3)² + y² = 2",
+      "(x + 3)² + y² = 4"
+    ],
+    "answerIndex": 0,
+    "explanation": "지름의 중점이 중심이므로 중심은 (3, 0)이고 반지름은 지름의 절반인 2이므로 (x − 3)² + y² = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_50",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "응용 유형",
+    "question": "세 점 (0, 0), (4, 0), (0, 2)를 지나는 원의 넓이는?",
+    "choices": [
+      "4π",
+      "5π",
+      "10π",
+      "20π"
+    ],
+    "answerIndex": 1,
+    "explanation": "세 점을 지나는 원의 방정식 x² + y² + Dx + Ey + F = 0에 각 점을 대입해 풀면 중심 (2, 1), 반지름 √5를 얻으므로 넓이는 5π이다.",
+    "detailedExplanation": "일반형 x² + y² + Dx + Ey + F = 0에 (0,0) 대입: F = 0. (4, 0) 대입: 16 + 4D + F = 0 → 4D = −16 → D = −4. (0, 2) 대입: 4 + 2E + F = 0 → 2E = −4 → E = −2. 따라서 x² + y² − 4x − 2y = 0 → (x − 2)² + (y − 1)² = 5. 반지름 r = √5, 넓이 = πr² = 5π.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_51",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "수능 기초",
+    "question": "원 x² + y² = 10 위의 점 (1, 3)에서의 접선의 방정식이 x + ay = 10을 만족할 때, 상수 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "원 x² + y² = r² 위의 점 (x₁, y₁)에서의 접선의 방정식은 x₁x + y₁y = r²이므로 1·x + 3·y = 10, 즉 x + 3y = 10이다. 따라서 a = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_52",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "개념 확인",
+    "question": "점 (2, −3)을 x축의 방향으로 3만큼, y축의 방향으로 −1만큼 평행이동한 점의 좌표는?",
+    "choices": [
+      "(5, −4)",
+      "(5, −2)",
+      "(−1, −4)",
+      "(1, −4)"
+    ],
+    "answerIndex": 0,
+    "explanation": "x좌표에 3을 더하고, y좌표에 −1을 더하면 (2+3, −3+(−1)) = (5, −4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_53",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "개념 확인",
+    "question": "직선 y = 2x + 1을 y축의 방향으로 −3만큼 평행이동한 직선의 방정식은?",
+    "choices": [
+      "y = 2x − 2",
+      "y = 2x + 4",
+      "y = 2x − 4",
+      "y = 2x + 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "y축 방향으로 −3만큼 평행이동하면 y를 y+3으로 바꾸어 y+3 = 2x+1, 즉 y = 2x−2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_54",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "기본 유형",
+    "question": "원 x² + y² = 9를 x축의 방향으로 2만큼, y축의 방향으로 −1만큼 평행이동한 원의 방정식은?",
+    "choices": [
+      "(x−2)² + (y+1)² = 9",
+      "(x+2)² + (y−1)² = 9",
+      "(x−2)² + (y−1)² = 9",
+      "(x+2)² + (y+1)² = 9"
+    ],
+    "answerIndex": 0,
+    "explanation": "평행이동 (2, −1)에 의해 x를 x−2, y를 y+1로 바꾸면 (x−2)² + (y+1)² = 9이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_55",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "대표 유형",
+    "question": "포물선 y = x² − 4x + 3을 x축의 방향으로 m만큼, y축의 방향으로 n만큼 평행이동하면 y = x²가 된다. 이때 m + n의 값은?",
+    "choices": [
+      "1",
+      "−1",
+      "3",
+      "−3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = x² − 4x + 3 = (x−2)² − 1이므로 꼭짓점이 (2, −1)인 포물선이다. 이를 y = x²(꼭짓점 (0,0))으로 옮기려면 m = −2, n = 1이므로 m + n = −1이다.",
+    "detailedExplanation": "y = x² − 4x + 3을 완전제곱식으로 변형하면 y = (x−2)² − 1이다. 평행이동 (m, n)을 적용하면 y = (x−m−2)² − 1 + n이 되어야 y = x²과 같아지려면 −m−2 = 0, −1+n = 0이어야 하므로 m = −2, n = 1이다. 따라서 m + n = −2 + 1 = −1이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_56",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "응용 유형",
+    "question": "직선 y = 3x − 2를 직선 y = x에 대하여 대칭이동한 직선의 방정식은?",
+    "choices": [
+      "y = (1/3)x + (2/3)",
+      "y = 3x + 2",
+      "y = (1/3)x − (2/3)",
+      "y = −3x + 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = x에 대한 대칭이동은 x와 y를 바꾸는 것이므로 x = 3y − 2를 y에 대해 풀면 y = (1/3)x + (2/3)이다.",
+    "detailedExplanation": "직선 y = x에 대한 대칭이동은 x와 y를 서로 바꾼다. 즉 y = 3x − 2에서 x, y를 교환하면 x = 3y − 2가 되고, 이를 y에 대해 정리하면 3y = x + 2이므로 y = (1/3)x + (2/3)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_57",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "개념 확인",
+    "question": "다음 중 집합인 것은?",
+    "choices": [
+      "키가 큰 사람들의 모임",
+      "1보다 크고 5보다 작은 자연수의 모임",
+      "성격이 좋은 학생들의 모임",
+      "맛있는 음식들의 모임"
+    ],
+    "answerIndex": 1,
+    "explanation": "집합이 되려면 대상을 명확하게 구분할 수 있어야 한다. '1보다 크고 5보다 작은 자연수'는 2, 3, 4로 명확히 결정되므로 집합이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_58",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "개념 확인",
+    "question": "집합 A = {1, 2, 3, 4, 5}에 대하여 다음 중 옳은 것은?",
+    "choices": [
+      "6 ∈ A",
+      "{1, 2} ∈ A",
+      "3 ∈ A",
+      "0 ∈ A"
+    ],
+    "answerIndex": 2,
+    "explanation": "원소 3은 집합 A에 속하므로 3 ∈ A가 성립한다. 6은 A에 없고, {1,2}는 원소가 아닌 부분집합이며, 0도 A에 없다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_59",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "기본 유형",
+    "question": "집합 A = {x | x는 12의 양의 약수}를 원소나열법으로 나타낼 때, 원소의 개수는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "12의 양의 약수는 1, 2, 3, 4, 6, 12이므로 원소의 개수는 6개이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_60",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "기본 유형",
+    "question": "두 집합 A = {1, 2, 3, 4, 6}, B = {2, 4, 6, 8}에 대하여 A ∩ B는?",
+    "choices": [
+      "{2, 4}",
+      "{2, 4, 6}",
+      "{1, 2, 3, 4, 6, 8}",
+      "{1, 3, 8}"
+    ],
+    "answerIndex": 1,
+    "explanation": "A ∩ B는 두 집합의 공통 원소이므로 A와 B 모두에 속하는 2, 4, 6이 된다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_61",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "대표 유형",
+    "question": "전체집합 U = {1, 2, 3, 4, 5, 6, 7, 8}의 두 부분집합 A = {1, 3, 5, 7}, B = {3, 6, 7, 8}에 대하여 Aᶜ ∩ B는?",
+    "choices": [
+      "{3, 7}",
+      "{6, 8}",
+      "{1, 5, 6, 8}",
+      "{3, 6, 7, 8}"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aᶜ = {2, 4, 6, 8}이고, Aᶜ ∩ B는 Aᶜ과 B의 공통 원소이므로 {6, 8}이다.",
+    "detailedExplanation": "A = {1,3,5,7}이므로 Aᶜ = U - A = {2,4,6,8}이다. B = {3,6,7,8}과 Aᶜ의 공통 원소를 구하면 6과 8만 공통으로 속하므로 Aᶜ ∩ B = {6,8}이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_62",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "수능 기초",
+    "question": "두 집합 A, B에 대하여 n(A) = 9, n(B) = 7, n(A ∪ B) = 13일 때, n(A ∩ B)의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "포함·배제의 원리에 의해 n(A ∪ B) = n(A) + n(B) - n(A ∩ B)이므로 13 = 9 + 7 - n(A ∩ B), 따라서 n(A ∩ B) = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_63",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "개념 확인",
+    "question": "다음 중 명제인 것은?",
+    "choices": [
+      "x + 3 = 7",
+      "이 꽃은 예쁘다.",
+      "3은 홀수이다.",
+      "x는 양수이다."
+    ],
+    "answerIndex": 2,
+    "explanation": "명제는 참 또는 거짓을 명확히 판별할 수 있는 문장이다. '3은 홀수이다.'는 참으로 판별할 수 있으므로 명제이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_64",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "개념 확인",
+    "question": "명제 'p이면 q이다'의 역(逆)은?",
+    "choices": [
+      "q이면 p이다.",
+      "p가 아니면 q가 아니다.",
+      "q가 아니면 p가 아니다.",
+      "p이면 q가 아니다."
+    ],
+    "answerIndex": 0,
+    "explanation": "명제 'p → q'의 역은 가정과 결론을 서로 바꾼 'q → p', 즉 'q이면 p이다.'이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_65",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "기본 유형",
+    "question": "명제 'x = 2이면 x² = 4이다.'의 대우는?",
+    "choices": [
+      "x² = 4이면 x = 2이다.",
+      "x ≠ 2이면 x² ≠ 4이다.",
+      "x² ≠ 4이면 x ≠ 2이다.",
+      "x = 2이면 x² ≠ 4이다."
+    ],
+    "answerIndex": 2,
+    "explanation": "명제 'p → q'의 대우는 '~q → ~p'이다. 따라서 대우는 'x² ≠ 4이면 x ≠ 2이다.'이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_66",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "기본 유형",
+    "question": "전체집합 U = {1, 2, 3, 4, 5}에서 두 조건 p: x ≤ 3, q: x는 홀수 에 대하여 명제 'p이면 q이다.'의 반례는?",
+    "choices": [
+      "x = 1",
+      "x = 2",
+      "x = 4",
+      "x = 5"
+    ],
+    "answerIndex": 1,
+    "explanation": "반례는 가정 p는 참이고 결론 q는 거짓인 원소이다. x = 2는 x ≤ 3(참)이지만 홀수가 아니므로(거짓) 반례이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_67",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "대표 유형",
+    "question": "두 조건 p, q에 대하여 p가 q이기 위한 충분조건이지만 필요조건은 아닐 때, 진리집합 P, Q의 관계로 올바른 것은?",
+    "choices": [
+      "P = Q",
+      "P ⊂ Q (P ≠ Q)",
+      "Q ⊂ P (P ≠ Q)",
+      "P와 Q는 서로소"
+    ],
+    "answerIndex": 1,
+    "explanation": "p가 q의 충분조건이면 'p → q'가 참, 즉 P ⊆ Q이다. 필요조건이 아니면 'q → p'는 거짓이므로 Q ⊄ P, 따라서 P ⊂ Q (P ≠ Q)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_68",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "응용 유형",
+    "question": "실수 x에 대한 두 조건 p: x² − 5x + 6 ≤ 0, q: x − a ≤ 0에 대하여 p가 q이기 위한 충분조건이 되도록 하는 정수 a의 최솟값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "p의 진리집합은 x² − 5x + 6 = (x−2)(x−3) ≤ 0에서 P = [2, 3]이고, q의 진리집합은 Q = (−∞, a]이다. p가 q의 충분조건이 되려면 P ⊆ Q이어야 하므로 3 ≤ a, 정수 a의 최솟값은 3이다.",
+    "detailedExplanation": "x² − 5x + 6 ≤ 0을 인수분해하면 (x−2)(x−3) ≤ 0이므로 P = {x | 2 ≤ x ≤ 3}이다. q: x − a ≤ 0에서 x ≤ a이므로 Q = {x | x ≤ a}이다. p가 q이기 위한 충분조건이 되려면 P ⊆ Q이어야 한다. P의 최댓값이 3이므로 a ≥ 3이어야 하고, 정수 a의 최솟값은 3이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_69",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "수능 기초",
+    "question": "명제 '모든 실수 x에 대하여 x² + ax + 1 > 0이다.'가 참이 되도록 하는 정수 a의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "이차식 x² + ax + 1의 최솟값이 양수이려면 판별식 D = a² − 4 < 0이어야 한다. 이를 풀면 −2 < a < 2이고, 정수 a는 −1, 0, 1로 3개이다.",
+    "detailedExplanation": "모든 실수 x에 대해 x² + ax + 1 > 0이 성립하려면 이 이차함수의 최솟값이 0보다 커야 한다. 최고차항의 계수가 양수(1 > 0)이므로 판별식 D < 0이어야 한다. D = a² − 4·1·1 = a² − 4 < 0에서 a² < 4, 즉 −2 < a < 2이다. 이를 만족하는 정수 a는 −1, 0, 1로 총 3개이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_70",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "개념 확인",
+    "question": "집합 X = {1, 2, 3}에서 집합 Y = {a, b, c, d}로의 대응이 함수가 되려면 어떤 조건을 만족해야 하는가?",
+    "choices": [
+      "X의 모든 원소가 Y의 (하나의) 원소에 대응되어야 한다.",
+      "Y의 모든 원소가 X의 원소에 대응되어야 한다.",
+      "X의 서로 다른 원소가 Y의 서로 다른 원소에 대응되어야 한다.",
+      "X와 Y의 원소의 개수가 같아야 한다."
+    ],
+    "answerIndex": 0,
+    "explanation": "함수는 정의역의 모든 원소가 공역의 원소에 하나씩 대응되어야 하므로, X의 모든 원소가 Y의 원소 하나에 대응되어야 한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_71",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "개념 확인",
+    "question": "함수 f : X → Y에서 치역(range)에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "공역 Y 전체와 항상 같다.",
+      "정의역 X 전체와 항상 같다.",
+      "f(x)의 값 전체의 집합, 즉 {f(x) | x ∈ X}이다.",
+      "정의역과 공역의 교집합이다."
+    ],
+    "answerIndex": 2,
+    "explanation": "치역은 정의역의 원소를 함수 f에 넣었을 때 나오는 함숫값 전체의 집합 {f(x) | x ∈ X}이며, 치역은 공역의 부분집합이지만 공역과 같지 않을 수 있다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_72",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "기본 유형",
+    "question": "f(x) = 3x − 4일 때, f(3)의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(3) = 3×3 − 4 = 9 − 4 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_73",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "기본 유형",
+    "question": "집합 X = {1, 2, 3}에서 집합 Y = {1, 2, 3, 4, 5}로의 대응 f를 f(1) = 2, f(2) = 4, f(3) = 4로 정의할 때, 이 대응에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "함수가 아니다. 정의역의 원소 중 대응되지 않는 것이 있다.",
+      "함수이다. 그러나 단사함수(일대일함수)는 아니다.",
+      "단사함수(일대일함수)이다.",
+      "전사함수(위로의 함수)이다."
+    ],
+    "answerIndex": 1,
+    "explanation": "X의 모든 원소가 Y의 원소에 대응되므로 함수이지만, f(2) = f(3) = 4로 서로 다른 두 원소가 같은 값에 대응되므로 단사함수는 아니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_74",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "대표 유형",
+    "question": "f(x) = ax + b이고 f(1) = 5, f(3) = 11일 때, f(5)의 값은?",
+    "choices": [
+      "15",
+      "17",
+      "19",
+      "21"
+    ],
+    "answerIndex": 1,
+    "explanation": "a + b = 5, 3a + b = 11을 연립하면 a = 3, b = 2이므로 f(5) = 3×5 + 2 = 17이다.",
+    "detailedExplanation": "① a + b = 5, ② 3a + b = 11. ②−①: 2a = 6이므로 a = 3, b = 2. 따라서 f(5) = 15 + 2 = 17.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_75",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "응용 유형",
+    "question": "집합 X = {1, 2, 3}에서 X로의 함수의 개수는?",
+    "choices": [
+      "6",
+      "9",
+      "27",
+      "81"
+    ],
+    "answerIndex": 2,
+    "explanation": "정의역의 각 원소에 공역의 원소를 자유롭게 대응시키므로 3×3×3 = 3³ = 27가지이다.",
+    "detailedExplanation": "원소 1, 2, 3 각각에 대해 공역 {1, 2, 3}에서 임의의 원소를 선택할 수 있으므로 3×3×3 = 27이다. 단사함수(일대일함수)의 수인 3! = 6과 혼동하지 않도록 주의한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_76",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "수능 기초",
+    "question": "함수 f(x) = x² − 4x + k의 치역이 {y | y ≥ −1}일 때, 상수 k의 값은? (단, 정의역은 실수 전체)",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x) = (x−2)² + (k−4)이므로 최솟값은 k−4이고, 치역의 최솟값이 −1이 되려면 k−4 = −1, 즉 k = 3이다.",
+    "detailedExplanation": "f(x) = x² − 4x + k = (x−2)² − 4 + k. x = 2일 때 최솟값 k − 4를 가진다. 치역이 {y | y ≥ −1}이므로 k − 4 = −1, k = 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_77",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "개념 확인",
+    "question": "유리함수 y = 1/(x−2) + 3의 점근선으로 옳은 것은?",
+    "choices": [
+      "x = 3, y = 2",
+      "x = 2, y = 3",
+      "x = −2, y = 3",
+      "x = 2, y = −3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 1/(x−a) + b의 점근선은 x = a, y = b이므로 x = 2, y = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_78",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "개념 확인",
+    "question": "무리함수 y = √(x+4)의 정의역으로 옳은 것은?",
+    "choices": [
+      "x ≥ 4",
+      "x > −4",
+      "x ≥ −4",
+      "x ≤ −4"
+    ],
+    "answerIndex": 2,
+    "explanation": "근호 안의 식이 0 이상이어야 하므로 x + 4 ≥ 0, 즉 x ≥ −4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_79",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "개념 확인",
+    "question": "5명 중에서 2명을 순서를 고려하여 뽑는 경우의 수는?",
+    "choices": [
+      "10",
+      "20",
+      "15",
+      "25"
+    ],
+    "answerIndex": 1,
+    "explanation": "순열 P(5,2) = 5×4 = 20이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_80",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "개념 확인",
+    "question": "6명 중에서 4명을 순서 없이 뽑는 경우의 수는?",
+    "choices": [
+      "30",
+      "15",
+      "360",
+      "24"
+    ],
+    "answerIndex": 1,
+    "explanation": "조합 C(6,4) = C(6,2) = (6×5)÷(2×1) = 15이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_81",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "기본 유형",
+    "question": "A, B, C, D, E 5명이 일렬로 서는 경우의 수는?",
+    "choices": [
+      "60",
+      "120",
+      "24",
+      "100"
+    ],
+    "answerIndex": 1,
+    "explanation": "5명의 순열이므로 5! = 5×4×3×2×1 = 120이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_82",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "기본 유형",
+    "question": "남학생 3명, 여학생 3명 총 6명 중에서 대표 2명을 뽑을 때, 남녀 각 1명씩 뽑는 경우의 수는?",
+    "choices": [
+      "6",
+      "15",
+      "9",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "남학생 3명 중 1명: C(3,1)=3, 여학생 3명 중 1명: C(3,1)=3이므로 3×3=9이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_83",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "대표 유형",
+    "question": "1부터 9까지의 자연수 중에서 서로 다른 3개를 뽑아 만들 수 있는 세 자리 수의 개수는?",
+    "choices": [
+      "504",
+      "729",
+      "336",
+      "648"
+    ],
+    "answerIndex": 0,
+    "explanation": "9개의 숫자에서 3개를 순서 있게 뽑는 순열이므로 P(9,3) = 9×8×7 = 504이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_84",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "응용 유형",
+    "question": "A, B를 포함한 8명 중에서 4명을 뽑을 때, A와 B가 모두 포함되는 경우의 수는?",
+    "choices": [
+      "15",
+      "30",
+      "20",
+      "35"
+    ],
+    "answerIndex": 0,
+    "explanation": "A, B를 먼저 뽑고 나머지 6명 중 2명을 뽑으면 되므로 C(6,2) = 15이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_85",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "수능 기초",
+    "question": "남학생 4명, 여학생 3명이 일렬로 설 때, 여학생 3명이 모두 이웃하는 경우의 수는?",
+    "choices": [
+      "360",
+      "720",
+      "144",
+      "504"
+    ],
+    "answerIndex": 1,
+    "explanation": "여학생 3명을 하나의 묶음으로 보면 5개의 대상이 일렬로 서는 경우의 수 5!=120에, 여학생끼리 자리를 바꾸는 경우의 수 3!=6을 곱하면 120×6=720이다.",
+    "detailedExplanation": "여학생 3명을 한 묶음으로 취급하면 (묶음+남학생 4명)=5개의 대상이 남는다. 이 5개를 일렬로 세우는 경우의 수는 5!=120이다. 묶음 내에서 여학생 3명이 서로 자리를 바꾸는 경우의 수는 3!=6이다. 따라서 총 경우의 수는 120×6=720이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_16",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "대표 유형",
+    "question": "x + y = 3, xy = 1일 때, x³ + y³ + x²y + xy²의 값은?",
+    "choices": [
+      "18",
+      "21",
+      "24",
+      "27"
+    ],
+    "answerIndex": 1,
+    "explanation": "x³+y³+x²y+xy² = (x²+y²)(x+y) − xy(x+y) + xy(x+y) = (x+y)(x²+xy+y²) + xy(x+y)를 정리하면 (x+y){(x+y)²−xy+xy} = (x+y)³을 이용한다.",
+    "detailedExplanation": "x³+y³+x²y+xy²\n= (x³+x²y) + (xy²+y³)\n= x²(x+y) + y²(x+y)\n= (x²+y²)(x+y)\n\nx²+y² = (x+y)²−2xy = 9−2 = 7\n(x+y) = 3\n\n따라서 (x²+y²)(x+y) = 7×3 = 21\n\n검산: x+y=3, xy=1이므로 x,y는 t²−3t+1=0의 두 근\nt = (3±√5)/2\nx³+y³ = (x+y)³−3xy(x+y) = 27−9 = 18\nx²y+xy² = xy(x+y) = 1×3 = 3\n합 = 18+3 = 21 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_86",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "수능 기초",
+    "question": "등식 (x+1)⁴ = ax⁴ + bx³ + cx² + dx + e가 x에 대한 항등식일 때, a − b + c − d + e의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "14",
+      "16"
+    ],
+    "answerIndex": 0,
+    "explanation": "a−b+c−d+e는 주어진 등식에 x=−1을 대입한 값이므로 (−1+1)⁴ = 0이다.",
+    "detailedExplanation": "항등식이므로 x=−1을 대입하면:\n좌변: (−1+1)⁴ = 0⁴ = 0\n우변: a(−1)⁴+b(−1)³+c(−1)²+d(−1)+e = a−b+c−d+e\n\n따라서 a−b+c−d+e = 0\n\n(참고) x=1 대입 시: 2⁴=16 = a+b+c+d+e",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_87",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "수능 기초",
+    "question": "a + b + c = 0일 때, (a+b)³ + (b+c)³ + (c+a)³ − 3(a+b)(b+c)(c+a)의 값은?",
+    "choices": [
+      "0",
+      "3abc",
+      "6abc",
+      "9abc"
+    ],
+    "answerIndex": 0,
+    "explanation": "a+b+c=0이므로 a+b=−c, b+c=−a, c+a=−b이고, p+q+r=−c+(−a)+(−b)=0이면 p³+q³+r³=3pqr이므로 주어진 식은 3pqr−3pqr=0이다.",
+    "detailedExplanation": "a+b+c=0이므로:\na+b = −c, b+c = −a, c+a = −b\n\np=a+b=−c, q=b+c=−a, r=c+a=−b로 놓으면\np+q+r = (−c)+(−a)+(−b) = −(a+b+c) = 0\n\np+q+r=0이면 p³+q³+r³ = 3pqr (항등식)\n\n(a+b)³+(b+c)³+(c+a)³ = 3(a+b)(b+c)(c+a)\n\n따라서 주어진 식\n= (a+b)³+(b+c)³+(c+a)³ − 3(a+b)(b+c)(c+a)\n= 3(a+b)(b+c)(c+a) − 3(a+b)(b+c)(c+a)\n= 0 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_88",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "수능 실전",
+    "question": "두 다항식 f(x), g(x)가 f(x) = x³ + ax + b, g(x) = x² + cx + d를 만족한다. f(x) = (x−1)g(x) + 2x + 3이고, g(x)를 (x+1)로 나눈 나머지가 4일 때, a + b + c + d의 값은?",
+    "choices": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answerIndex": 3,
+    "explanation": "f(x)=(x−1)g(x)+2x+3에 x=1을 대입해 g(1)을 구하고, g(−1)=4 조건과 g(x)=x²+cx+d를 연립해 c, d를 구한 뒤, f(x)의 계수를 비교해 a, b를 결정한다.",
+    "detailedExplanation": "f(x) = (x−1)g(x) + 2x + 3에 x=1 대입:\nf(1) = 0·g(1) + 5 = 5\nf(1) = 1+a+b = 5 → a+b = 4 ... ①\n\ng(x)를 (x+1)로 나눈 나머지: g(−1) = 4\ng(−1) = 1−c+d = 4 → −c+d = 3 ... ②\n\nf(x) = (x−1)g(x)+2x+3이므로 f(x)의 차수: 3차, (x−1)g(x)의 차수: 3차 ✓\n\nf(x) = (x−1)(x²+cx+d)+2x+3\n= x³+cx²+dx−x²−cx−d+2x+3\n= x³+(c−1)x²+(d−c+2)x+(−d+3)\n\nf(x) = x³+ax+b이므로 x²항 계수:\nc−1 = 0 → c = 1 ... ③\n\nx항 계수: d−c+2 = a → d−1+2 = a → d+1 = a ... ④\n상수항: −d+3 = b ... ⑤\n\n②에서 −c+d=3 → −1+d=3 → d=4\n④에서 a=d+1=5\n⑤에서 b=−d+3=−1\n\n검산: a+b = 5+(−1) = 4 ✓ (①과 일치)\n\na+b+c+d = 5+(−1)+1+4 = 9\n\n재검산:\nf(x) = x³+5x−1\ng(x) = x²+x+4\n(x−1)(x²+x+4)+2x+3\n= x³+x²+4x−x²−x−4+2x+3\n= x³+5x−1 ✓\ng(−1) = 1−1+4 = 4 ✓\n\na+b+c+d = 5+(−1)+1+4 = 9",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_89",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "대표 유형",
+    "question": "다항식 f(x)를 x−1로 나누면 나머지가 3이고, x+2로 나누면 나머지가 −3이다. f(x)를 (x−1)(x+2)로 나눈 나머지를 ax+b라 할 때, a−b의 값은?",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(1)=a+b=3, f(−2)=−2a+b=−3을 연립하면 a=2, b=1이므로 a−b=1.",
+    "detailedExplanation": "나머지 ax+b에 대해 인수정리를 적용한다.\nf(1)=a+b=3 … ①\nf(−2)=−2a+b=−3 … ②\n①−②: 3a=6, a=2\n①에 대입: b=3−2=1\na−b=2−1=1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_90",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "대표 유형",
+    "question": "다항식 f(x)를 x−1로 나누면 나머지가 2이고, x+1로 나누면 나머지가 4이다. {f(x)}²을 x²−1로 나눈 나머지를 ax+b라 할 때, b−a의 값은?",
+    "choices": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(1)=2이므로 {f(1)}²=4=a+b, f(−1)=4이므로 {f(−1)}²=16=−a+b. 연립하면 b=10, a=−6이고 b−a=16.",
+    "detailedExplanation": "{f(x)}²을 (x−1)(x+1)로 나눈 나머지를 ax+b로 놓는다.\nx=1 대입: {f(1)}²=4=a+b … ①\nx=−1 대입: {f(−1)}²=16=−a+b … ②\n①+②: 2b=20, b=10\n①: a=4−10=−6\nb−a=10−(−6)=16.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_91",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "응용 유형",
+    "question": "다항식 f(x)를 x²+x, 즉 x(x+1)로 나눈 나머지가 3x+2이고, 다항식 g(x)를 x(x+1)로 나눈 나머지가 2x−1이다. f(x)g(x)를 x로 나눈 나머지는?",
+    "choices": [
+      "−2",
+      "−1",
+      "1",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(0)=3(0)+2=2, g(0)=2(0)−1=−1이므로 f(0)g(0)=−2.",
+    "detailedExplanation": "f(x)를 x로 나눈 나머지는 f(0), g(x)를 x로 나눈 나머지는 g(0)이다.\nf(x)=Q₁(x)·x(x+1)+3x+2이므로 f(0)=2\ng(x)=Q₂(x)·x(x+1)+2x−1이므로 g(0)=−1\nf(x)g(x)를 x로 나눈 나머지 = f(0)g(0) = 2×(−1) = −2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_92",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "응용 유형",
+    "question": "다항식 f(x)가 (x+1)²으로 나누어 떨어지고 f(1)=4일 때, f(x)를 x²−1=(x−1)(x+1)로 나눈 나머지를 ax+b라 하면 2a+b의 값은?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(−1)=0이므로 −a+b=0, f(1)=4이므로 a+b=4. 연립하면 a=2, b=2이고 2a+b=6.",
+    "detailedExplanation": "f(x)=(x+1)²·Q(x)이므로 f(−1)=0.\nf(x)를 x²−1로 나눈 나머지 ax+b에 대해:\nf(−1)=−a+b=0 … ①\nf(1)=a+b=4 … ②\n①+②: 2b=4, b=2\n②: a=2\n2a+b=4+2=6.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_93",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "수능 기초",
+    "question": "최고차항의 계수가 1인 삼차다항식 f(x)가 (x−1)²으로 나누어 떨어지고 f(−2)=−27일 때, f(x)를 x−3으로 나눈 나머지는?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x)=(x−1)²(x−a)로 놓으면 f(−2)=9(−2−a)=−27에서 a=1, 즉 f(x)=(x−1)³이므로 f(3)=8.",
+    "detailedExplanation": "최고차항 계수가 1이고 (x−1)²으로 나누어 떨어지는 삼차다항식이므로 f(x)=(x−1)²(x−a)로 놓는다.\nf(−2)=(−2−1)²(−2−a)=9(−2−a)=−27\n→ −2−a=−3, a=1\nf(x)=(x−1)²(x−1)=(x−1)³\nf(3)=(3−1)³=2³=8.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_94",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "수능 기초",
+    "question": "다항식 f(x)=2x³−3x²+ax+b를 x−2로 나누면 나머지가 3이고, x+1로 나누면 나머지가 −6이다. a²+b²의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(2)=4+2a+b=3에서 2a+b=−1, f(−1)=−5−a+b=−6에서 −a+b=−1. 연립하면 a=0, b=−1이므로 a²+b²=1.",
+    "detailedExplanation": "f(2)=2(8)−3(4)+2a+b=16−12+2a+b=4+2a+b=3\n→ 2a+b=−1 … ①\nf(−1)=2(−1)−3(1)+(a)(−1)+b=−2−3−a+b=−5−a+b=−6\n→ −a+b=−1 … ②\n①−②: 3a=0, a=0\n②: b=−1\na²+b²=0+1=1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_95",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "수능 실전",
+    "question": "다항식 f(x)를 (x−1)²으로 나누면 나머지가 2x+1이고, x−2로 나누면 나머지가 7이다. f(x)를 (x−1)²(x−2)로 나눈 나머지를 ax²+bx+c라 할 때, a+c의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "r(x)=ax²+bx+c에서 r(1)=3, r'(1)=2, r(2)=7 조건으로 연립하면 a=2, b=−2, c=3이므로 a+c=5.",
+    "detailedExplanation": "f(x)=(x−1)²(x−2)Q(x)+ax²+bx+c로 놓는다.\n조건 ①: f(x)를 (x−1)²으로 나눈 나머지가 2x+1이므로 r(1)=a+b+c=3\n조건 ②: f(x)−(2x+1)이 (x−1)²의 배수 ↔ r(x)−(2x+1)이 (x−1)²의 배수 ↔ r'(1)=2a+b=2\n조건 ③: f(2)=r(2)=4a+2b+c=7\n③−①: 3a+b=4 … ④\n④−②: a=2\n②: b=2−4=−2\n①: c=3−2+2=3\na+c=2+3=5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_96",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "나머지정리",
+    "difficulty": "수능 실전",
+    "question": "다항식 f(x)를 (x−1)(x+3)으로 나누면 나머지가 2x−3이고, f(x)를 (x+3)(x−5)로 나누면 나머지가 ax+b이다. f(1)=f(5)가 성립할 때, a+b의 값은?",
+    "choices": [
+      "−7",
+      "−5",
+      "−3",
+      "−1"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(1)=−1, f(−3)=−9이고 f(1)=f(5)=−1. f(−3)=−3a+b=−9, f(5)=5a+b=−1을 연립하면 a=1, b=−6이므로 a+b=−5.",
+    "detailedExplanation": "f(x)를 (x−1)(x+3)으로 나눈 나머지가 2x−3이므로:\nf(1)=2(1)−3=−1, f(−3)=2(−3)−3=−9\n조건 f(1)=f(5)에서 f(5)=−1.\nf(x)를 (x+3)(x−5)로 나눈 나머지 ax+b에 대해:\nf(−3)=−3a+b=−9 … ①\nf(5)=5a+b=−1 … ②\n②−①: 8a=8, a=1\n①: b=−9+3=−6\na+b=1+(−6)=−5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_97",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "대표 유형",
+    "question": "x³ + 3x² − 4를 인수분해하면 (x − a)(x + b)²일 때, a + b의 값은? (단, a, b는 양의 정수)",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "x = 1을 대입하면 0이므로 (x−1)이 인수이고, 조립제법으로 나누면 x³ + 3x² − 4 = (x−1)(x² + 4x + 4) = (x−1)(x+2)²이다. 따라서 a=1, b=2이고 a+b=3.",
+    "detailedExplanation": "① f(1) = 1 + 3 − 4 = 0이므로 (x−1)은 인수\n② 조립제법: x³ + 3x² + 0x − 4 ÷ (x−1)\n   계수: 1 | 3 | 0 | −4\n        1 | 4 | 4\n   →  1 | 4 | 4 | 0\n③ 몫: x² + 4x + 4 = (x+2)²\n④ x³ + 3x² − 4 = (x−1)(x+2)²\n⑤ a=1, b=2 → a+b=3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_98",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "a² + b² + c² − ab − bc − ca를 인수분해하면?",
+    "choices": [
+      "½(a+b+c)²",
+      "½{(a−b)² + (b−c)² + (c−a)²}",
+      "(a−b)(b−c)(c−a)",
+      "(a+b−c)(a−b+c)"
+    ],
+    "answerIndex": 1,
+    "explanation": "2(a²+b²+c²−ab−bc−ca) = (a−b)²+(b−c)²+(c−a)²이므로, a²+b²+c²−ab−bc−ca = ½{(a−b)²+(b−c)²+(c−a)²}이다.",
+    "detailedExplanation": "① 2배를 취해 전개:\n   2(a²+b²+c²−ab−bc−ca)\n   = 2a²+2b²+2c²−2ab−2bc−2ca\n② 재배열:\n   = (a²−2ab+b²) + (b²−2bc+c²) + (c²−2ca+a²)\n   = (a−b)² + (b−c)² + (c−a)²\n③ 양변을 2로 나누면:\n   a²+b²+c²−ab−bc−ca = ½{(a−b)²+(b−c)²+(c−a)²}",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_99",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "x⁴ + x² + 1을 인수분해한 결과로 옳은 것은?",
+    "choices": [
+      "(x² + x + 1)(x² − x + 1)",
+      "(x² + x − 1)(x² − x − 1)",
+      "(x² + 1)² − x²",
+      "(x + 1)(x − 1)(x² + 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "x⁴ + x² + 1 = (x⁴ + 2x² + 1) − x² = (x²+1)² − x² = (x²+x+1)(x²−x+1)로 인수분해된다.",
+    "detailedExplanation": "① x⁴ + x² + 1에 x²을 더하고 빼기:\n   = x⁴ + 2x² + 1 − x²\n   = (x²+1)² − x²\n② 차의 제곱 인수분해: A²−B² = (A+B)(A−B)\n   A = x²+1, B = x\n   = (x²+1+x)(x²+1−x)\n   = (x²+x+1)(x²−x+1)\n③ 검산: (x²+x+1)(x²−x+1) 전개\n   = x⁴−x³+x²+x³−x²+x+x²−x+1\n   = x⁴+x²+1 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_100",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "수능 기초",
+    "question": "다항식 2x³ − 3x² − 11x + 6을 인수분해할 때, 일차식 인수의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(3)=54−27−33+6=0이므로 (x−3)이 인수이고, 조립제법 후 2x²+3x−2=(2x−1)(x+2)로 분해되어 세 개의 일차 인수를 가진다.",
+    "detailedExplanation": "① f(3)=2(27)−3(9)−11(3)+6=54−27−33+6=0 → (x−3)이 인수\n② 조립제법:\n   2 | −3 | −11 | 6  (÷(x−3))\n      6 |   9 | −6\n   2 |  3 |  −2 | 0\n③ 몫: 2x²+3x−2\n④ 2x²+3x−2=(2x−1)(x+2)\n⑤ 전체: 2x³−3x²−11x+6=(x−3)(2x−1)(x+2)\n⑥ 일차 인수의 개수: (x−3), (2x−1), (x+2) → 3개",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_101",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "x² + y² + 4z² + 2xy − 4yz − 4xz를 인수분해하면?",
+    "choices": [
+      "(x + y − 2z)²",
+      "(x − y + 2z)²",
+      "(x + y + 2z)(x + y − 2z)",
+      "(x + y − 2z)(x − y + 2z)"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² + y² + 4z² + 2xy − 4yz − 4xz = (x+y)² − 4z(x+y) + 4z² = ((x+y) − 2z)² = (x+y−2z)²이다.",
+    "detailedExplanation": "① x와 y를 묶어서 처리:\n   x² + 2xy + y² = (x+y)²\n② 나머지 항 정리:\n   x² + y² + 4z² + 2xy − 4yz − 4xz\n   = (x+y)² + 4z² − 4z(y+x)\n   = (x+y)² − 4z(x+y) + 4z²\n③ A = x+y, B = 2z로 놓으면:\n   A² − 2AB + B² = (A−B)² = (x+y−2z)²\n④ 검산: (x+y−2z)² 전개\n   = x²+y²+4z²+2xy−4yz−4xz ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_102",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "대표 유형",
+    "question": "복소수 z = (2 + i)² − (1 − 3i)를 계산한 결과의 허수부를 구하여라.",
+    "choices": [
+      "2",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 3,
+    "explanation": "(2+i)² = 4 + 4i + i² = 3 + 4i이므로, z = (3 + 4i) − (1 − 3i) = 2 + 7i. 허수부는 7이다.",
+    "detailedExplanation": "1단계: (2+i)² = 4 + 4i + i² = 4 + 4i − 1 = 3 + 4i\n2단계: z = (3 + 4i) − (1 − 3i) = (3−1) + (4+3)i = 2 + 7i\n3단계: 허수부 = 7",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_103",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "응용 유형",
+    "question": "복소수 z가 z + z̄ = 6, z · z̄ = 13을 만족할 때, z² + z̄² 의 값은? (z̄는 z의 켤레복소수)",
+    "choices": [
+      "10",
+      "16",
+      "23",
+      "26"
+    ],
+    "answerIndex": 0,
+    "explanation": "z² + z̄² = (z + z̄)² − 2z·z̄ = 36 − 26 = 10.",
+    "detailedExplanation": "1단계: z = a + bi로 놓으면 z + z̄ = 2a = 6 → a = 3, z·z̄ = a² + b² = 13 → b² = 4.\n2단계: z² + z̄² = (z + z̄)² − 2z·z̄ 공식 이용.\n3단계: 6² − 2×13 = 36 − 26 = 10.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_104",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "응용 유형",
+    "question": "i¹ + i² + i³ + … + i¹⁰⁰ 의 값은? (단, i = √(−1))",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "i"
+    ],
+    "answerIndex": 1,
+    "explanation": "iⁿ의 주기는 4이고, i + i² + i³ + i⁴ = i − 1 − i + 1 = 0이므로 100 = 4×25에 의해 합은 0이다.",
+    "detailedExplanation": "1단계: i¹ = i, i² = −1, i³ = −i, i⁴ = 1이므로 한 주기의 합 = 0.\n2단계: 100 = 4 × 25이므로 전체 합 = 25 × 0 = 0.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_105",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "수능 기초",
+    "question": "복소수 z = a + bi (a, b는 실수)에 대하여 z² 이 실수이고 |z| = √5 일 때, 순허수 z의 값은? (단, z는 순허수)",
+    "choices": [
+      "√5 i",
+      "√5",
+      "−√5 i",
+      "√5 i 또는 −√5 i"
+    ],
+    "answerIndex": 3,
+    "explanation": "z가 순허수이면 a = 0이고, z² = −b²은 실수 조건을 자동 만족한다. |z| = |b| = √5이므로 b = ±√5, z = ±√5 i.",
+    "detailedExplanation": "1단계: 순허수이므로 a = 0, z = bi.\n2단계: z² = (bi)² = −b²은 항상 실수이므로 조건 자동 만족.\n3단계: |z| = |b| = √5 → b = √5 또는 b = −√5.\n4단계: z = √5 i 또는 z = −√5 i.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_106",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "수능 기초",
+    "question": "방정식 x² − 4x + 13 = 0의 두 근을 α, β라 할 때, α² + β² 의 값은?",
+    "choices": [
+      "−10",
+      "−2",
+      "16",
+      "−16"
+    ],
+    "answerIndex": 0,
+    "explanation": "근과 계수 관계에서 α + β = 4, αβ = 13이므로 α² + β² = (α + β)² − 2αβ = 16 − 26 = −10.",
+    "detailedExplanation": "1단계: 판별식 D = 16 − 52 = −36 < 0이므로 두 근은 허수.\n2단계: 근과 계수 관계: α + β = 4, αβ = 13.\n3단계: α² + β² = (α + β)² − 2αβ = 16 − 26 = −10.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_107",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "수능 실전",
+    "question": "복소수 z = (1 + i)/(1 − i) 에 대하여 z + z² + z³ + z⁴ + z⁵ 의 값은?",
+    "choices": [
+      "i",
+      "1 + i",
+      "0",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "z = (1+i)²/2 = 2i/2 = i이므로, i + i² + i³ + i⁴ + i⁵ = i − 1 − i + 1 + i = i.",
+    "detailedExplanation": "1단계: z = (1+i)/(1−i) × (1+i)/(1+i) = (1+i)²/2 = (1+2i−1)/2 = 2i/2 = i.\n2단계: z = i이므로 z¹ = i, z² = −1, z³ = −i, z⁴ = 1, z⁵ = i.\n3단계: 합 = i + (−1) + (−i) + 1 + i = i.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_108",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "복소수",
+    "difficulty": "수능 실전",
+    "question": "실수 a, b에 대하여 (a + bi)³ = −8i 가 성립할 때, a² + b² 의 값은? (단, a > 0)",
+    "choices": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "(a+bi)³ = −8i이므로 |a+bi|³ = |−8i| = 8, 따라서 |a+bi|³ = 8 → |a+bi| = 2, a² + b² = 4.",
+    "detailedExplanation": "1단계: 절댓값을 취하면 |a+bi|³ = |−8i| = 8.\n2단계: |a+bi|³ = 8 → |a+bi| = 2 → a² + b² = |a+bi|² = 4.\n3단계: 실제 해를 확인하면 a+bi = 2(cos(−30°) + i·sin(−30°)) = √3 − i가 a > 0 조건을 만족하며, (√3 − i)³ = −8i임을 검산할 수 있다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_109",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x²−5x+3=0의 두 근을 α, β라 할 때, α²+β²의 값은?",
+    "choices": [
+      "13",
+      "16",
+      "19",
+      "22"
+    ],
+    "answerIndex": 2,
+    "explanation": "근과 계수의 관계에서 α+β=5, αβ=3이므로 α²+β²=(α+β)²−2αβ=25−6=19이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_110",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x²+kx+(k+3)=0이 중근을 가질 때, 모든 k의 값의 곱은?",
+    "choices": [
+      "−16",
+      "−12",
+      "8",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "중근 조건 D=k²−4(k+3)=0에서 k²−4k−12=0, (k−6)(k+2)=0이므로 k=6 또는 k=−2이고, 두 값의 곱은 −12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_111",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x²−(k+2)x+2k=0의 한 근이 다른 근의 2배일 때, 모든 k의 값의 합은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 근을 α, 2α로 놓으면 3α=k+2, 2α²=2k이다. α²=k를 대입하면 α²−3α+2=0에서 α=1(k=1) 또는 α=2(k=4)이므로 k의 합은 5이다.",
+    "detailedExplanation": "두 근을 α, 2α로 설정한다.\n① 근의 합: α+2α=k+2 → 3α=k+2\n② 근의 곱: α·2α=2k → α²=k\n②를 ①에 대입: 3α=α²+2 → α²−3α+2=0 → (α−1)(α−2)=0\nα=1이면 k=1, α=2이면 k=4이다.\n각각 원래 방정식에 대입하여 검증: k=1이면 x²−3x+2=0 → 근 1, 2 (2배 관계 성립); k=4이면 x²−6x+8=0 → 근 2, 4 (2배 관계 성립).\n따라서 k의 합=1+4=5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_112",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "방정식 (x²−x)²−8(x²−x)+12=0의 모든 실수 근의 합은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "t=x²−x로 치환하면 t²−8t+12=0에서 t=2 또는 t=6이다. x²−x−2=0의 근은 2, −1이고 x²−x−6=0의 근은 3, −2이므로 네 근의 합은 2+(−1)+3+(−2)=2이다.",
+    "detailedExplanation": "t=x²−x로 놓으면 t²−8t+12=(t−2)(t−6)=0\n[경우 1] t=2: x²−x−2=0 → (x−2)(x+1)=0 → x=2, x=−1\n[경우 2] t=6: x²−x−6=0 → (x−3)(x+2)=0 → x=3, x=−2\n네 실수 근의 합: 2+(−1)+3+(−2)=2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_113",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x²−3x+1=0의 두 근을 α, β라 할 때, α/β + β/α의 값은?",
+    "choices": [
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "answerIndex": 1,
+    "explanation": "근과 계수의 관계에서 α+β=3, αβ=1이므로 α/β+β/α=(α²+β²)/(αβ)=((α+β)²−2αβ)/αβ=(9−2)/1=7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_114",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x²−2mx+(m²−m−2)=0의 두 근이 모두 1보다 크도록 하는 정수 m의 최솟값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 근 모두 1보다 크려면 ① D≥0: m≥−2, ② f(1)=m²−3m−1>0: m>(3+√13)/2≈3.30, ③ 축 x=m>1의 세 조건을 모두 만족해야 하므로 정수 m의 최솟값은 4이다.",
+    "detailedExplanation": "f(x)=x²−2mx+(m²−m−2)로 놓는다.\n조건 ①: 판별식 D/4=m²−(m²−m−2)=m+2≥0 → m≥−2\n조건 ②: f(1)=1−2m+m²−m−2=m²−3m−1>0\n  → m<(3−√13)/2 또는 m>(3+√13)/2≈3.30\n조건 ③: 꼭짓점의 x좌표 m>1\n①②③의 교집합: m>(3+√13)/2\n(3+√13)/2≈3.30이므로 정수 m의 최솟값은 4이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_115",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 실전",
+    "question": "이차방정식 x²+(a+1)x+(a−7)=0이 두 정수 근을 가질 때, 정수 a의 모든 값의 합은?",
+    "choices": [
+      "−3",
+      "0",
+      "2",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 정수 근 p, q에 대해 pq+p+q=a−7−(a+1)=−8이므로 (p+1)(q+1)=−7이다. 인수 쌍 (1,−7), (−1,7)에서 (p,q)=(0,−8) 또는 (−2,6)이고 a=7 또는 a=−5이므로 합은 2이다.",
+    "detailedExplanation": "두 정수 근을 p, q라 하면 근과 계수의 관계에서\n  p+q=−(a+1),  pq=a−7\n두 식을 더하면: pq+(p+q)=(a−7)−(a+1)=−8\n→ pq+p+q+1=−7 → (p+1)(q+1)=−7\n−7의 정수 인수 쌍: (1,−7), (−1,7), (7,−1), (−7,1)\n[경우 1] p+1=1, q+1=−7 → p=0, q=−8 → a=pq+7=7\n  검증: x²+8x+0=0 → x(x+8)=0 → 정수근 0, −8 ✓\n[경우 2] p+1=−1, q+1=7 → p=−2, q=6 → a=pq+7=−5\n  검증: x²−4x−12=0 → (x−6)(x+2)=0 → 정수근 6, −2 ✓\n따라서 a=7+(−5)=2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_116",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "대표 유형",
+    "question": "이차함수 f(x) = x² − 2ax + a + 2의 그래프와 직선 y = x + 1이 서로 다른 두 점에서 만나도록 하는 실수 a의 범위는?",
+    "choices": [
+      "a < −√3/2 또는 a > √3/2",
+      "−√3/2 < a < √3/2",
+      "a < −√3 또는 a > √3",
+      "a ≠ 0인 모든 실수"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(x) = x + 1로 놓으면 x² − (2a+1)x + (a+1) = 0이고, 판별식 D = (2a+1)² − 4(a+1) = 4a² − 3 > 0이어야 한다. 이를 풀면 a < −√3/2 또는 a > √3/2이다.",
+    "detailedExplanation": "① f(x) = x+1을 정리하면 x² − (2a+1)x + (a+1) = 0.\n② 서로 다른 두 교점 조건은 판별식 D > 0.\n③ D = (2a+1)² − 4(a+1) = 4a²+4a+1−4a−4 = 4a²−3 > 0.\n④ 4a² > 3 → a² > 3/4 → a < −√3/2 또는 a > √3/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_117",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "대표 유형",
+    "question": "이차함수 f(x) = x² − 2mx + m² + m − 3의 꼭짓점이 직선 y = 2x − 1 위에 있을 때, m의 값은?",
+    "choices": [
+      "m = 1",
+      "m = −1",
+      "m = 2",
+      "m = −2"
+    ],
+    "answerIndex": 3,
+    "explanation": "f(x) = (x−m)² + (m−3)이므로 꼭짓점은 (m, m−3)이다. 이 점이 y = 2x−1 위에 있으면 m−3 = 2m−1이고, m = −2이다.",
+    "detailedExplanation": "① f(x) = x²−2mx+(m²+m−3) = (x−m)² + (m−3)이므로 꼭짓점은 (m, m−3).\n② 꼭짓점이 y = 2x−1 위에 있으므로: m−3 = 2m−1.\n③ m−2m = −1+3 → −m = 2 → m = −2.\n④ 확인: 꼭짓점 (−2, −5), 직선 y=2(−2)−1 = −5 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_118",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "응용 유형",
+    "question": "이차부등식 x² + ax + b < 0의 해가 {x | 1 < x < 3}일 때, 이차부등식 x² + bx + a < 0을 만족하는 정수 x의 개수는?",
+    "choices": [
+      "3개",
+      "4개",
+      "5개",
+      "6개"
+    ],
+    "answerIndex": 1,
+    "explanation": "해가 1 < x < 3이므로 x²+ax+b = (x−1)(x−3) = x²−4x+3에서 a = −4, b = 3이다. x²+3x−4 < 0은 (x+4)(x−1) < 0이므로 −4 < x < 1이고, 정수해는 −3, −2, −1, 0으로 4개이다.",
+    "detailedExplanation": "① x²+ax+b < 0의 해가 1 < x < 3이므로 1, 3이 방정식의 근 → x²+ax+b = (x−1)(x−3) = x²−4x+3.\n② a = −4, b = 3.\n③ x²+bx+a = x²+3x−4 = (x+4)(x−1) < 0.\n④ 해: −4 < x < 1. 정수해: −3, −2, −1, 0으로 총 4개.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_119",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x² + px + q = 0의 두 근이 α, β이고 α² + β² = 10, αβ = 3일 때, p² + q²의 값은?",
+    "choices": [
+      "19",
+      "22",
+      "25",
+      "28"
+    ],
+    "answerIndex": 2,
+    "explanation": "근과 계수의 관계에서 α+β = −p, αβ = q = 3이다. (α+β)² = α²+β²+2αβ = 10+6 = 16이므로 p² = 16, q² = 9, p²+q² = 25이다.",
+    "detailedExplanation": "① 근과 계수의 관계: α+β = −p, αβ = q.\n② αβ = 3이므로 q = 3, q² = 9.\n③ (α+β)² = α²+β² + 2αβ = 10 + 2×3 = 16이므로 p² = (α+β)² = 16.\n④ p²+q² = 16+9 = 25.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_120",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x² − 4x + k = 0이 서로 다른 두 실근을 가지며, 두 근이 모두 1보다 크기 위한 k의 범위는?",
+    "choices": [
+      "1 < k < 4",
+      "k > 3",
+      "3 < k < 4",
+      "k < 4"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x) = x²−4x+k로 놓으면: ① D > 0 → k < 4, ② f(1) > 0 → k > 3, ③ 꼭짓점의 x좌표 2 > 1. 세 조건의 교집합은 3 < k < 4이다.",
+    "detailedExplanation": "① 서로 다른 두 실근: D/4 = 4−k > 0 → k < 4.\n② 두 근이 모두 1보다 크려면 f(1) > 0: 1−4+k > 0 → k > 3.\n③ 두 근의 합 4의 절반인 2 > 1 (항상 성립).\n④ 세 조건을 종합하면 3 < k < 4.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_121",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "수능 기초",
+    "question": "이차방정식 x² − 2kx + k + 6 = 0이 서로 다른 두 양의 실근을 갖기 위한 k의 범위는?",
+    "choices": [
+      "k > −2",
+      "k < −2 또는 k > 3",
+      "k > 3",
+      "−2 < k < 3"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x) = x²−2kx+k+6으로 놓으면 ① D/4 > 0: k²−k−6 > 0 → k < −2 또는 k > 3, ② 두 근의 합 = 2k > 0 → k > 0, ③ 두 근의 곱 = k+6 > 0 → k > −6. 세 조건의 교집합은 k > 3이다.",
+    "detailedExplanation": "① 서로 다른 두 실근: D/4 = k²−(k+6) = k²−k−6 = (k−3)(k+2) > 0 → k < −2 또는 k > 3.\n② 두 근의 합이 양수: 2k > 0 → k > 0.\n③ 두 근의 곱이 양수: k+6 > 0 → k > −6.\n④ 교집합: k > 3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_122",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "응용 유형",
+    "question": "연립 이차부등식 x² − 3x − 4 ≤ 0, x² − x − 6 > 0을 동시에 만족하는 x의 범위는?",
+    "choices": [
+      "−1 ≤ x < −2 또는 3 < x ≤ 4",
+      "3 < x ≤ 4",
+      "−2 < x ≤ −1",
+      "x < −2 또는 3 < x ≤ 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "x²−3x−4 ≤ 0은 (x+1)(x−4) ≤ 0이므로 −1 ≤ x ≤ 4이고, x²−x−6 > 0은 (x+2)(x−3) > 0이므로 x < −2 또는 x > 3이다. 두 해의 교집합은 3 < x ≤ 4이다.",
+    "detailedExplanation": "① x²−3x−4 ≤ 0: (x+1)(x−4) ≤ 0 → −1 ≤ x ≤ 4.\n② x²−x−6 > 0: (x+2)(x−3) > 0 → x < −2 또는 x > 3.\n③ 교집합: (−1 ≤ x ≤ 4) ∩ (x < −2 또는 x > 3) = 3 < x ≤ 4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_123",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차함수와 방정식·부등식",
+    "difficulty": "수능 실전",
+    "question": "0 ≤ x ≤ 4인 모든 실수 x에 대해 부등식 x² − 2x + k ≥ 2x − 3이 항상 성립하도록 하는 실수 k의 최솟값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "부등식을 정리하면 g(x) = x²−4x+(k+3) ≥ 0이 [0,4]에서 항상 성립해야 한다. g(x) = (x−2)²+(k−1)이므로 최솟값은 x=2에서 k−1이고, k−1 ≥ 0에서 k의 최솟값은 1이다.",
+    "detailedExplanation": "① x²−2x+k ≥ 2x−3을 정리: x²−4x+(k+3) ≥ 0.\n② g(x) = x²−4x+(k+3) = (x−2)²+(k−1).\n③ x∈[0,4]에서 g(x)의 최솟값은 x=2일 때 k−1.\n④ 항상 성립하려면 k−1 ≥ 0, 즉 k ≥ 1.\n⑤ 따라서 k의 최솟값은 1. (k=1일 때 g(2)=0으로 등호 성립 확인 ✓)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_124",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "대표 유형",
+    "question": "방정식 x³ − 3x² − 4x + 12 = 0의 세 근의 곱을 구하여라.",
+    "choices": [
+      "−12",
+      "−6",
+      "6",
+      "12"
+    ],
+    "answerIndex": 0,
+    "explanation": "x²(x−3) − 4(x−3) = (x−3)(x²−4) = (x−3)(x−2)(x+2)이므로 세 근은 3, 2, −2이고, 세 근의 곱은 3×2×(−2) = −12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_125",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "대표 유형",
+    "question": "연립방정식 x² + y² = 10, x + y = 4를 만족시키는 실수 x, y에 대하여 xy의 값을 구하여라.",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 4 − x를 x² + y² = 10에 대입하면 2x² − 8x + 6 = 0, 즉 (x−1)(x−3) = 0이므로 (x, y) = (1, 3) 또는 (3, 1)이다. 따라서 xy = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_126",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "응용 유형",
+    "question": "부등식 |2x − 3| < |x + 1|을 만족시키는 x의 범위는?",
+    "choices": [
+      "1/3 < x < 4",
+      "2/3 < x < 4",
+      "−2 < x < 2/3",
+      "x < 2/3 또는 x > 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "양변을 제곱하면 (2x−3)² < (x+1)²이므로 3x² − 14x + 8 < 0이다. 이를 인수분해하면 (3x−2)(x−4) < 0이고, 풀면 2/3 < x < 4이다.",
+    "detailedExplanation": "양변이 모두 절댓값(비음수)이므로 양변 제곱이 동치이다. (2x−3)² − (x+1)² < 0을 정리하면 3x² − 14x + 8 < 0. 판별식: 196 − 96 = 100이므로 근은 (14 ± 10) ÷ 6 = 4 또는 2/3. 이차항 계수 > 0이므로 두 근 사이에서 음수가 되어 2/3 < x < 4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_127",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "대표 유형",
+    "question": "방정식 x⁴ − 5x² + 4 = 0의 양의 실수 근들의 합을 구하여라.",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "t = x²으로 치환하면 t² − 5t + 4 = 0, (t−1)(t−4) = 0이므로 t = 1 또는 t = 4. 따라서 x = ±1 또는 x = ±2이고, 양의 실수 근은 1, 2이므로 합은 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_128",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "수능 기초",
+    "question": "부등식 x² − 3x − 4 ≤ 0이고 x² − x − 6 > 0을 동시에 만족시키는 정수 x의 개수는?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "첫 부등식: (x−4)(x+1) ≤ 0이므로 −1 ≤ x ≤ 4. 둘째 부등식: (x−3)(x+2) > 0이므로 x < −2 또는 x > 3. 교집합은 3 < x ≤ 4이며 이 범위의 정수는 x = 4뿐이므로 1개이다.",
+    "detailedExplanation": "−1 ≤ x ≤ 4 와 (x < −2 또는 x > 3)의 공통 범위를 구하면 3 < x ≤ 4이다. 이 범위에 속하는 정수는 4 하나뿐이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_129",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "응용 유형",
+    "question": "삼차방정식 x³ − 5x + 2 = 0의 세 근을 α, β, γ라 할 때, (α + β)(β + γ)(γ + α)의 값을 구하여라.",
+    "choices": [
+      "−2",
+      "−1",
+      "2",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "근과 계수의 관계에서 α + β + γ = 0이므로 α + β = −γ, β + γ = −α, γ + α = −β이다. 따라서 (α+β)(β+γ)(γ+α) = (−γ)(−α)(−β) = −αβγ이고, αβγ = −2이므로 답은 2이다.",
+    "detailedExplanation": "x³ − 5x + 2 = 0에서 비에타 공식: α+β+γ = 0, αβ+βγ+γα = −5, αβγ = −2. α+β+γ = 0이면 각 쌍의 합은 나머지 한 근의 음수이다. (−γ)(−α)(−β) = −αβγ = −(−2) = 2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_130",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "수능 기초",
+    "question": "방정식 |x² − 4| = x + 2의 모든 실수 근의 합을 구하여라.",
+    "choices": [
+      "0",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "경우를 나누어 풀면 x = −2, x = 1, x = 3이 해이다(각각 대입 검증 필요). 세 근의 합은 −2 + 1 + 3 = 2이다.",
+    "detailedExplanation": "x²−4 ≥ 0인 경우(x ≤ −2 또는 x ≥ 2): x²−4 = x+2 → x²−x−6 = 0 → x = 3 또는 x = −2 (둘 다 범위 만족). x²−4 < 0인 경우(−2 < x < 2): −(x²−4) = x+2 → x²+x−2 = 0 → x = 1 또는 x = −2. x = −2는 범위 밖이고 x = 1은 범위 내. 대입 검증: |1−4| = 3 = 1+2 ✓. 따라서 근은 −2, 1, 3이고 합 = 2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_131",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "여러 가지 방정식과 부등식",
+    "difficulty": "수능 실전",
+    "question": "부등식 (x² − 4x + 3)(x² − 4x − 5) < 0을 만족시키는 정수 x의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "인수분해하면 (x−1)(x−3)(x−5)(x+1) < 0이다. 네 근 x = −1, 1, 3, 5를 기준으로 부호를 분석하면 해는 −1 < x < 1 또는 3 < x < 5이고, 범위 내 정수는 x = 0과 x = 4로 모두 2개이다.",
+    "detailedExplanation": "x²−4x+3 = (x−1)(x−3), x²−4x−5 = (x+1)(x−5)이므로 전체 식은 (x+1)(x−1)(x−3)(x−5) < 0이다. 임계점 −1, 1, 3, 5에서 부호표를 작성하면: x < −1에서 (−)(−)(−)(−) = + > 0, −1 < x < 1에서 (+)(−)(−)(−) = − < 0 (해), 1 < x < 3에서 (+)(+)(−)(−) = + > 0, 3 < x < 5에서 (+)(+)(+)(−) = − < 0 (해), x > 5에서 + > 0. 따라서 해는 −1 < x < 1 또는 3 < x < 5이고 정수해는 0, 4로 2개이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_132",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(2, −3), B(−4, 9)를 2:1로 내분하는 점 P의 좌표는?",
+    "choices": [
+      "(0, 1)",
+      "(−1, 3)",
+      "(−2, 5)",
+      "(−2, 3)"
+    ],
+    "answerIndex": 2,
+    "explanation": "내분점 공식에 의해 P = ((2×(−4)+1×2)/(2+1), (2×9+1×(−3))/(2+1)) = (−8+2)/3, (18−3)/3) = (−2, 5).",
+    "detailedExplanation": "내분점 공식: m:n 내분점 = ((m×x_B + n×x_A)/(m+n), (m×y_B + n×y_A)/(m+n)).\nx좌표: (2×(−4) + 1×2)/3 = (−8+2)/3 = −6/3 = −2.\ny좌표: (2×9 + 1×(−3))/3 = (18−3)/3 = 15/3 = 5.\n따라서 P(−2, 5). 오답 (0,1)은 비율을 1:2로 바꿨을 때, (−1,3)은 중점 공식을 사용했을 때 나오는 값이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_133",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "응용 유형",
+    "question": "두 점 A(−1, 2), B(5, −4)를 3:1로 외분하는 점 Q의 좌표는?",
+    "choices": [
+      "(7/2, −5/2)",
+      "(8, −7)",
+      "(−4, 5)",
+      "(−8, 10)"
+    ],
+    "answerIndex": 1,
+    "explanation": "외분점 공식에 의해 Q = ((3×5 − 1×(−1))/(3−1), (3×(−4) − 1×2)/(3−1)) = (16/2, −14/2) = (8, −7).",
+    "detailedExplanation": "외분점 공식: m:n 외분점 = ((m×x_B − n×x_A)/(m−n), (m×y_B − n×y_A)/(m−n)).\nx좌표: (3×5 − 1×(−1))/(3−1) = (15+1)/2 = 8.\ny좌표: (3×(−4) − 1×2)/(3−1) = (−12−2)/2 = −7.\n오답 (7/2, −5/2)는 외분을 내분 공식으로 계산한 결과, (−4, 5)는 1:3 외분으로 계산한 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_134",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "수능 기초",
+    "question": "두 점 A(2, 4), B(6, 2)로부터 같은 거리에 있는 x축 위의 점 P의 x좌표는?",
+    "choices": [
+      "4",
+      "7/2",
+      "5/2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "P(t, 0)으로 놓으면 |PA|² = |PB|²에서 (t−2)²+16 = (t−6)²+4이고, 이를 풀면 8t = 20이므로 t = 5/2.",
+    "detailedExplanation": "P(t, 0)에 대해 |PA|² = (t−2)²+4² = t²−4t+20, |PB|² = (t−6)²+2² = t²−12t+40.\n|PA|² = |PB|² 조건: t²−4t+20 = t²−12t+40 → 8t = 20 → t = 5/2.\n오답 4는 y좌표를 무시하고 |t−2| = |t−6|으로 계산한 결과(t = 4)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_135",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "대표 유형",
+    "question": "삼각형 ABC에서 A(1, −2), B(5, 4)이고 무게중심 G의 좌표가 G(3, 2)일 때, 꼭짓점 C의 좌표는?",
+    "choices": [
+      "(3, 4)",
+      "(4, 2)",
+      "(2, 3)",
+      "(3, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "무게중심 공식에서 C의 좌표는 (3×3−1−5, 3×2−(−2)−4) = (9−6, 6+2−4) = (3, 4).",
+    "detailedExplanation": "무게중심 G = ((x_A+x_B+x_C)/3, (y_A+y_B+y_C)/3)이므로\nx_C = 3×3 − 1 − 5 = 9 − 6 = 3.\ny_C = 3×2 − (−2) − 4 = 6 + 2 − 4 = 4.\n따라서 C(3, 4). 오답 (4,2)는 G 좌표와 B 좌표를 혼동했을 때, (3,3)은 y 계산에서 부호 실수가 있을 때 나온다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_136",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "응용 유형",
+    "question": "두 점 A(a, 1), B(2, b)의 중점이 M(3, −2)일 때, a − b의 값은?",
+    "choices": [
+      "−1",
+      "5",
+      "7",
+      "9"
+    ],
+    "answerIndex": 3,
+    "explanation": "중점 공식에서 (a+2)/2 = 3이므로 a = 4, (1+b)/2 = −2이므로 b = −5. 따라서 a − b = 4 − (−5) = 9.",
+    "detailedExplanation": "중점 공식: M = ((a+2)/2, (1+b)/2) = (3, −2).\nx좌표: (a+2)/2 = 3 → a+2 = 6 → a = 4.\ny좌표: (1+b)/2 = −2 → 1+b = −4 → b = −5.\na − b = 4 − (−5) = 9. 오답 −1은 a+b를 구한 값, 5는 a+|b|로 계산한 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_137",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "수능 기초",
+    "question": "두 점 A(−2, 3), B(4, −3)에 대해 AB를 1:2로 내분하는 점 P와 2:1로 외분하는 점 Q의 중점 좌표는?",
+    "choices": [
+      "(5, −4)",
+      "(4, −3)",
+      "(3, −2)",
+      "(5, −3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "내분점 P = (0, 1), 외분점 Q = (10, −9)이므로 중점 = ((0+10)/2, (1+(−9))/2) = (5, −4).",
+    "detailedExplanation": "내분점 P(1:2): x = (1×4+2×(−2))/3 = 0, y = (1×(−3)+2×3)/3 = 1. 즉 P(0, 1).\n외분점 Q(2:1): x = (2×4−1×(−2))/(2−1) = 10, y = (2×(−3)−1×3)/(2−1) = −9. 즉 Q(10, −9).\n중점 = ((0+10)/2, (1−9)/2) = (5, −4).",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_138",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "수능 실전",
+    "question": "두 점 A(−3, 1), B(5, 5)를 잇는 선분 AB 위의 점 P에 대해 원점 O에서 P까지의 거리 |OP|의 최솟값은?",
+    "choices": [
+      "√3",
+      "√5",
+      "√10",
+      "2√5"
+    ],
+    "answerIndex": 1,
+    "explanation": "P = (−3+8t, 1+4t)(0≤t≤1)로 매개변수화하면 |OP|² = 80t²−40t+10이고, t = 1/4일 때 최솟값 5를 가지므로 |OP|의 최솟값은 √5.",
+    "detailedExplanation": "선분 AB 위의 점: P = A + t(B−A) = (−3+8t, 1+4t), 0 ≤ t ≤ 1.\n|OP|² = (−3+8t)² + (1+4t)² = 64t²−48t+9 + 16t²+8t+1 = 80t²−40t+10.\n이차함수의 최솟값: t = 40/(2×80) = 1/4 ∈ [0,1]이므로 유효.\n최솟값: 80×(1/16)−40×(1/4)+10 = 5−10+10 = 5.\n따라서 |OP|의 최솟값은 √5. 오답 √10 = |OA|는 끝점 A에서의 거리이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_139",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "평면좌표",
+    "difficulty": "수능 실전",
+    "question": "세 점 A(0, 0), B(6, 0), C(2, 4)를 꼭짓점으로 하는 삼각형 ABC에서 선분 BC를 t:(1−t)로 내분하는 점 D에 대해 삼각형 ABD의 넓이가 4일 때, t의 값은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "D = (6−4t, 4t)이고 삼각형 ABD에서 AB = 6이 밑변, D의 y좌표 4t가 높이이므로 (1/2)×6×4t = 12t = 4, 따라서 t = 1/3.",
+    "detailedExplanation": "D = B + t×(C−B) = (6, 0) + t×(−4, 4) = (6−4t, 4t).\nA(0,0), B(6,0)을 이은 선분이 x축이므로, 삼각형 ABD의 높이는 D의 y좌표 = 4t.\n넓이 = (1/2)×|AB|×높이 = (1/2)×6×4t = 12t = 4 → t = 1/3.\n검산: D = (6−4/3, 4/3) = (14/3, 4/3), 넓이 = (1/2)×6×(4/3) = 4 확인.\n오답 1/2는 12t=6으로 잘못 설정했을 때, 1/4는 (1/2)×6×t=4로 잘못 계산했을 때 나온다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_140",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(1, 3), B(4, −1)을 지나는 직선과 x축의 양의 방향이 이루는 각의 크기를 θ라 할 때, tan θ의 값은?",
+    "choices": [
+      "−4/3",
+      "−3/4",
+      "4/3",
+      "3/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "기울기 m = (−1 − 3)/(4 − 1) = −4/3이고, 직선의 기울기가 tan θ이므로 tan θ = −4/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_141",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "수능 기초",
+    "question": "점 (3, 2)에서 직선 4x − 3y − 1 = 0까지의 거리는?",
+    "choices": [
+      "1",
+      "7/5",
+      "2",
+      "7/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "점과 직선 사이의 거리 공식에 의해 |4(3) − 3(2) − 1| / √(4² + 3²) = |12 − 6 − 1| / 5 = 5/5 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_142",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "직선의 방정식",
+    "difficulty": "수능 실전",
+    "question": "좌표평면에서 직선 3x + 4y = 12 위의 점 P와 직선 3x + 4y = −13 위의 점 Q에 대하여 선분 PQ의 중점 M이 직선 y = x 위에 있을 때, |PQ|의 최솟값은?",
+    "choices": [
+      "4",
+      "5",
+      "25/4",
+      "5/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 평행선 사이의 거리는 |12−(−13)|/5 = 25/5 = 5이고, 중점 조건과 상관없이 PQ의 최솟값은 두 직선 사이의 거리인 5이다. 중점이 y=x 위에 있어도 PQ가 두 직선에 수직일 때 최소이므로 최솟값은 5이다.",
+    "detailedExplanation": "두 직선 3x + 4y = 12와 3x + 4y = −13은 서로 평행하며, 직선 간 거리 = |12 − (−13)| / √(3² + 4²) = 25 / 5 = 5. P와 Q 각각 해당 직선 위의 점이므로 |PQ| ≥ 두 직선 사이의 거리 = 5. 중점 M이 y = x 위에 있는 조건에서: M = ((px+qx)/2, (py+qy)/2)이고 py+qy = px+qx. 두 직선의 법선 방향으로 PQ를 잡을 때 M의 x,y좌표가 같아지는 P, Q가 존재함을 확인할 수 있으므로 최솟값 5는 달성 가능하다. 따라서 |PQ|의 최솟값은 5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_143",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "대표 유형",
+    "question": "세 점 A(1, 0), B(0, 2), C(3, 2)를 지나는 원의 반지름을 r이라 할 때, r²의 값은?",
+    "choices": [
+      "2",
+      "5/2",
+      "3",
+      "7/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "세 점을 지나는 원의 방정식 x²+y²+Dx+Ey+F=0에 각 점을 대입하면 D=−3, E=−3, F=2이므로 원은 (x−3/2)²+(y−3/2)²=5/2이다.",
+    "detailedExplanation": "x²+y²+Dx+Ey+F=0에 A(1,0) 대입: 1+D+F=0, B(0,2) 대입: 4+2E+F=0, C(3,2) 대입: 13+3D+2E+F=0.\n①에서 F=−1−D, ②에 대입: 3+2E−D=0 → D=3+2E.\n③에 대입: 13+3(3+2E)+2E+(−1−3−2E)=0 → 18+6E=0 → E=−3.\n따라서 D=−3, F=2이고, 원의 중심은 (3/2, 3/2), r²=(3/2)²+(3/2)²−2=9/4+9/4−2=5/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_144",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "응용 유형",
+    "question": "원 (x−2)²+(y−1)²=5에 접하고 y절편이 3인 직선의 기울기를 m₁, m₂라 할 때, m₁+m₂의 값은?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "직선 y=mx+3을 mx−y+3=0으로 쓰고 중심 (2,1)까지의 거리가 √5임을 이용하면 m²−8m+1=0이 되어 근의 합 m₁+m₂=8이다.",
+    "detailedExplanation": "직선 mx−y+3=0과 원의 중심 (2,1) 사이의 거리가 반지름 √5이어야 한다.\n|2m−1+3|/√(m²+1)=√5 → (2m+2)²=5(m²+1)\n4m²+8m+4=5m²+5 → m²−8m+1=0.\n근과 계수의 관계에 의해 m₁+m₂=8, m₁m₂=1이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_145",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "대표 유형",
+    "question": "두 원 x²+y²=10과 x²+y²−4x−2y=0의 공통현의 길이는?",
+    "choices": [
+      "2√3",
+      "2√5",
+      "4",
+      "2√6"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 원의 방정식을 빼면 공통현의 직선 방정식 2x+y−5=0을 얻고, 원 x²+y²=10의 중심 (0,0)에서 이 직선까지의 거리가 √5이므로 공통현의 길이는 2√(10−5)=2√5이다.",
+    "detailedExplanation": "두 원의 방정식을 빼면: (x²+y²)−(x²+y²−4x−2y)=10−0 → 4x+2y−10=0 → 2x+y−5=0 (공통현의 직선).\n원 x²+y²=10(반지름 √10)의 중심 (0,0)에서 직선 2x+y−5=0까지의 거리: d=|−5|/√(4+1)=5/√5=√5.\n공통현의 절반 길이 = √(10−5)=√5이므로 전체 길이 = 2√5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_146",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "응용 유형",
+    "question": "원 C₁: (x−1)²+(y−2)²=4가 원 C₂: (x+3)²+(y−5)²=r² (r>0) 에 내접할 때, r²의 값은?",
+    "choices": [
+      "25",
+      "36",
+      "49",
+      "64"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 원이 내접하면 두 중심 사이의 거리는 반지름의 차와 같으므로, |r−2|=5에서 r=7(C₂가 C₁을 포함)이고 r²=49이다.",
+    "detailedExplanation": "C₁의 중심 (1,2), 반지름 2; C₂의 중심 (−3,5), 반지름 r.\n두 중심 사이의 거리: d=√{(1−(−3))²+(2−5)²}=√(16+9)=5.\n내접 조건: d=|r₂−r₁| → 5=|r−2|.\nr>0이고 C₂가 C₁을 포함하는 경우: r−2=5 → r=7 → r²=49.\n(r=−3은 불가능하므로 유일한 해)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_147",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "수능 기초",
+    "question": "원 x²+y²=25 위의 점 P에서 직선 3x−4y+20=0까지의 거리의 최댓값은?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "원의 중심 (0,0)에서 직선까지의 거리가 4이고 반지름이 5이므로, 최댓값은 4+5=9이다.",
+    "detailedExplanation": "중심 (0,0)에서 직선 3x−4y+20=0까지의 거리: d=|20|/√(9+16)=20/5=4.\n원 위의 점 P에서 직선까지의 거리는 최대 d+r=4+5=9, 최소 |d−r|=|4−5|=1이다.\n(d=4 < r=5이므로 직선이 원과 교차하여 최솟값은 1)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_148",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "수능 기초",
+    "question": "두 원 C₁: x²+y²−2x−4y+1=0과 C₂: x²+y²+4x−2y−5=0의 두 교점을 지나고 중심이 직선 y=x 위에 있는 원의 반지름의 제곱은?",
+    "choices": [
+      "15/2",
+      "17/2",
+      "19/2",
+      "21/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 원의 교점을 지나는 원족 C₁+k(C₂−C₁)=0에서 중심이 y=x 위에 있을 조건으로 k=−1/2를 구하면 원의 방정식은 (x−5/2)²+(y−5/2)²=17/2이다.",
+    "detailedExplanation": "C₁+k(C₂−C₁)=0 꼴: x²+y²+(−2+6k)x+(−4+2k)y+(1−6k)=0.\n중심: (1−3k, 2−k)가 y=x 위에 있으려면 1−3k=2−k → −2k=1 → k=−1/2.\n방정식: x²+y²−5x−5y+4=0 → (x−5/2)²+(y−5/2)²=25/4+25/4−4=50/4−16/4=34/4=17/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_149",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "수능 실전",
+    "question": "두 점 A(4, 0), B(1, 0)에 대해 |PA|:|PB|=2:1을 만족시키는 점 P의 자취가 원일 때, 이 원의 넓이는?",
+    "choices": [
+      "2π",
+      "4π",
+      "6π",
+      "8π"
+    ],
+    "answerIndex": 1,
+    "explanation": "아폴로니우스 원: |PA|²=4|PB|²를 전개하면 x²+y²=4가 나오므로 반지름이 2이고 넓이는 4π이다.",
+    "detailedExplanation": "|PA|=2|PB|이므로 |PA|²=4|PB|².\n(x−4)²+y²=4[(x−1)²+y²]\nx²−8x+16+y²=4x²−8x+4+4y²\n0=3x²+3y²−12\nx²+y²=4 → 중심 (0,0), 반지름 r=2.\n검증: 점 (2,0)에서 |PA|=2, |PB|=1 → 비율 2:1 ✓\n넓이=πr²=4π.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_150",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "대표 유형",
+    "question": "두 원 (x+2)²+y²=1과 (x−1)²+y²=4의 공통접선의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 원의 중심 간 거리가 3이고 반지름의 합도 3이므로 외접(외부 접촉)하여 공통접선이 3개이다.",
+    "detailedExplanation": "C₁: 중심 (−2, 0), 반지름 r₁=1; C₂: 중심 (1, 0), 반지름 r₂=2.\n두 중심 사이의 거리: d=√{(−2−1)²+0²}=3.\nr₁+r₂=1+2=3이고 |r₁−r₂|=1.\nd=r₁+r₂=3 → 두 원이 외접(외부에서 접촉).\n외접하는 경우 공통접선은 외부 공통접선 2개 + 접점에서의 공통접선 1개 = 3개.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_151",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "대표 유형",
+    "question": "포물선 y = x² − 4x + 1을 x축 방향으로 2만큼, y축 방향으로 −3만큼 평행이동한 곡선의 꼭짓점의 좌표는?",
+    "choices": [
+      "(4, −6)",
+      "(4, −4)",
+      "(2, −6)",
+      "(6, −6)"
+    ],
+    "answerIndex": 0,
+    "explanation": "원래 포물선의 꼭짓점: y = (x−2)² − 3이므로 꼭짓점은 (2, −3). 평행이동 후 꼭짓점: (2+2, −3+(−3)) = (4, −6).",
+    "detailedExplanation": "y = x² − 4x + 1 = (x−2)² − 3이므로 꼭짓점은 (2, −3). x축 방향으로 2, y축 방향으로 −3 이동하면 꼭짓점은 (2+2, −3−3) = (4, −6). 따라서 답은 (4, −6).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_152",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "수능 기초",
+    "question": "원 (x−1)² + (y+2)² = 9를 직선 y = −x에 대하여 대칭이동한 원의 방정식은?",
+    "choices": [
+      "(x+2)² + (y−1)² = 9",
+      "(x−2)² + (y+1)² = 9",
+      "(x+2)² + (y+1)² = 9",
+      "(x−1)² + (y+2)² = 9"
+    ],
+    "answerIndex": 1,
+    "explanation": "직선 y = −x에 대한 대칭이동은 (x, y) → (−y, −x)로 변환한다. 중심 (1, −2)의 대칭점: (−(−2), −1) = (2, −1). 따라서 (x−2)² + (y+1)² = 9이다.",
+    "detailedExplanation": "직선 y = −x에 대한 대칭이동 공식: (a, b) → (−b, −a). 중심 (1, −2) → (−(−2), −1) = (2, −1). 반지름은 변하지 않으므로 대칭 원은 (x−2)² + (y+1)² = 9. 그런데 보기 0번은 (x+2)²+(y−1)²=9로 중심(−2,1). 재검토: y=−x 대칭 공식은 (a,b)→(−b,−a). (1,−2)→(2,−1). 중심(2,−1)이면 (x−2)²+(y+1)²=9 → 보기 1번. answerIndex를 1로 수정.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_153",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "응용 유형",
+    "question": "점 P(a, b)를 x축에 대하여 대칭이동한 후, 다시 직선 y = x에 대하여 대칭이동하였더니 점 Q(5, −3)이 되었다. a + b의 값은?",
+    "choices": [
+      "−8",
+      "−2",
+      "2",
+      "8"
+    ],
+    "answerIndex": 0,
+    "explanation": "역순으로 추적한다. Q(5, −3)이 y=x 대칭의 결과이므로 그 이전 점은 (−3, 5). (−3, 5)가 x축 대칭의 결과이므로 그 이전 점 P는 (−3, −5). 따라서 a=−3, b=−5, a+b=−8.",
+    "detailedExplanation": "Q(5, −3)으로 가는 과정의 역방향: ① y=x 대칭의 역: (x,y)→(y,x)이므로 Q(5,−3)의 이전 점은 (−3, 5). ② x축 대칭의 역: (x,y)→(x,−y)이므로 (−3,5)의 이전 점은 (−3,−5) = P. 따라서 a=−3, b=−5, a+b=−8. 검증: P(−3,−5) →x축대칭→ (−3,5) →y=x대칭→ (5,−3) = Q. 정답 a+b = −8, answerIndex=0.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_154",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "도형의 이동",
+    "difficulty": "수능 실전",
+    "question": "좌표평면 위의 점 A(2, 1)에 대하여 원 C: x² + y² − 6x + 4y + 4 = 0을 점 A에 대하여 대칭이동한 원을 C'이라 하자. 두 원 C와 C'의 교점의 개수는?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "무수히 많다"
+    ],
+    "answerIndex": 0,
+    "explanation": "원 C의 중심 (3, −2), 반지름 3. 점 A(2,1)에 대한 대칭으로 C'의 중심은 (2·2−3, 2·1−(−2)) = (1, 4), 반지름 3. 두 중심 간 거리 = √((3−1)²+(−2−4)²) = √(4+36) = √40 = 2√10 ≈ 6.32. 두 반지름 합 = 6. 거리 > 합이므로 교점 없음(0개).",
+    "detailedExplanation": "① 원 C: x²+y²−6x+4y+4=0 → (x−3)²+(y+2)²=9. 중심 (3,−2), 반지름 3. ② 점 A(2,1)에 대한 대칭이동: (x,y)→(4−x, 2−y). 중심 (3,−2) → (4−3, 2−(−2)) = (1, 4). C': (x−1)²+(y−4)²=9, 반지름 3. ③ 두 중심 거리 d=√((3−1)²+(−2−4)²)=√(4+36)=√40=2√10≈6.32. ④ r₁+r₂=6 < 2√10. 따라서 두 원은 외부에 있어 교점 0개.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_155",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "대표 유형",
+    "question": "두 집합 A = {1, 2, 3, 4, 5}, B = {x | x는 10 이하의 자연수이고 3의 배수}일 때, A ∩ Bᶜ의 원소의 개수는? (단, Bᶜ는 전체집합 U = {1, 2, 3, ..., 10}에 대한 B의 여집합)",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "B = {3, 6, 9}이므로 Bᶜ = {1, 2, 4, 5, 7, 8, 10}. A ∩ Bᶜ = {1, 2, 4, 5}이므로 원소의 개수는 4이다.",
+    "detailedExplanation": "B = {3, 6, 9}, Bᶜ = {1,2,4,5,7,8,10}. A = {1,2,3,4,5}에서 Bᶜ와의 교집합은 3을 제외한 {1, 2, 4, 5}. 원소의 개수 = 4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_157",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "응용 유형",
+    "question": "전체집합 U의 두 부분집합 A, B에 대하여 n(U) = 30, n(A) = 18, n(B) = 14, n(Aᶜ ∩ Bᶜ) = 6일 때, n(A ∩ B)는?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "n(Aᶜ ∩ Bᶜ) = n((A ∪ B)ᶜ) = n(U) − n(A ∪ B) = 6이므로 n(A ∪ B) = 24. n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 18 + 14 − 24 = 8.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_158",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "응용 유형",
+    "question": "집합 A = {1, 2, 3, 4}의 부분집합 중에서 원소 1을 포함하고 원소 4를 포함하지 않는 부분집합의 개수는?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "1은 반드시 포함, 4는 반드시 제외하므로 나머지 원소 {2, 3} 각각의 포함 여부만 결정하면 된다. 2² = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_159",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "수능 기초",
+    "question": "전체집합 U = {1, 2, 3, 4, 5, 6, 7, 8}의 두 부분집합 A, B가 A ∩ B = {2, 4}, A ∪ B = {1, 2, 3, 4, 6}일 때, (A − B) ∪ (B − A)의 원소의 개수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "(A − B) ∪ (B − A)는 A와 B의 대칭차집합으로 (A ∪ B) − (A ∩ B) = {1, 3, 6}이다. 원소의 개수는 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_160",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "수능 기초",
+    "question": "집합 A의 부분집합의 개수가 64이고, 집합 B = {x | x는 A의 원소이고 x < 5}의 부분집합의 개수가 8일 때, A의 원소 중 5 이상인 원소의 개수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "n(A) = 6 (2⁶ = 64), n(B) = 3 (2³ = 8). A의 원소 중 5 이상인 원소의 개수 = 6 − 3 = 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_161",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "집합",
+    "difficulty": "수능 실전",
+    "question": "전체집합 U의 세 부분집합 A, B, C에 대하여 다음 조건이 모두 성립할 때, n(A ∩ B ∩ Cᶜ)의 값은?\n\n(가) n(U) = 40\n(나) n(A) = 22, n(B) = 18, n(C) = 15\n(다) n(A ∩ B) = 10, n(B ∩ C) = 7, n(A ∩ C) = 6\n(라) n(A ∩ B ∩ C) = 3",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 3,
+    "explanation": "A ∩ B ∩ Cᶜ = (A ∩ B) − C이므로 n(A ∩ B ∩ Cᶜ) = n(A ∩ B) − n(A ∩ B ∩ C) = 10 − 3 = 7.",
+    "detailedExplanation": "A ∩ B ∩ Cᶜ는 A와 B에는 속하지만 C에는 속하지 않는 원소들의 집합이다. n(A ∩ B ∩ Cᶜ) = n(A ∩ B) − n(A ∩ B ∩ C) = 10 − 3 = 7. 나머지 조건은 검증용: n(A ∪ B ∪ C) = 22 + 18 + 15 − 10 − 7 − 6 + 3 = 35 ≤ 40(성립).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_162",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "대표 유형",
+    "question": "명제 'p이면 q이다'가 참일 때, 반드시 참인 명제는?\n(단, p̃는 p의 부정을 나타낸다.)",
+    "choices": [
+      "q이면 p이다",
+      "p̃이면 q̃이다",
+      "q̃이면 p̃이다",
+      "p̃이면 q이다"
+    ],
+    "answerIndex": 2,
+    "explanation": "명제 'p → q'가 참일 때 반드시 참인 것은 대우 'q̃ → p̃'이다. 역(q → p)과 이(p̃ → q̃)는 참이 아닐 수 있다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_common_163",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "대표 유형",
+    "question": "두 조건 p: x² − 5x + 6 ≤ 0, q: |x − 2| ≤ k (k > 0)에 대하여 p가 q이기 위한 충분조건이 되도록 하는 양의 정수 k의 최솟값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "p의 진리집합은 P = {x | 2 ≤ x ≤ 3}, q의 진리집합은 Q = {x | 2−k ≤ x ≤ 2+k}이다. p가 q의 충분조건이 되려면 P ⊆ Q이어야 하므로 2−k ≤ 2이고 2+k ≥ 3, 즉 k ≥ 1이다. 양의 정수 k의 최솟값은 1이다.",
+    "detailedExplanation": "① x² − 5x + 6 ≤ 0 → (x−2)(x−3) ≤ 0 → 2 ≤ x ≤ 3이므로 P = [2, 3].\n② |x − 2| ≤ k → 2−k ≤ x ≤ 2+k이므로 Q = [2−k, 2+k].\n③ p가 q의 충분조건 ↔ P ⊆ Q ↔ 2−k ≤ 2이고 2+k ≥ 3.\n④ 두 조건을 동시에 만족하려면 k ≥ 1. 양의 정수이므로 k의 최솟값 = 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_164",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "수능 기초",
+    "question": "다음 명제들 중 참인 것의 개수는?\n(가) 어떤 실수 x에 대하여 x² < x이다.\n(나) 모든 실수 x에 대하여 x² − x + 1 > 0이다.\n(다) 어떤 유리수 x에 대하여 x² = 2이다.\n(라) 모든 정수 n에 대하여 n² + n은 짝수이다.",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "(가) x=0.5이면 0.25 < 0.5 (참), (나) D = 1−4 = −3 < 0이고 최고차계수 양수이므로 항상 양수 (참), (다) x² = 2인 유리수는 없으므로 (거짓), (라) n² + n = n(n+1)은 연속한 두 정수의 곱이므로 항상 짝수 (참). 따라서 참인 것은 (가), (나), (라)로 3개이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_165",
+    "subject": "고등 공통수학",
+    "chapter": "집합과 명제",
+    "lesson": "명제",
+    "difficulty": "수능 실전",
+    "question": "실수 전체의 집합에서 정의된 두 조건 p, q에 대하여 명제 p → q가 참일 때, 집합 P, Q를 각각 p, q의 진리집합이라 하자. 다음 보기에서 항상 옳은 것만을 있는 대로 고른 것은?\n\nㄱ. P ∩ Qᶜ = ∅\nㄴ. Pᶜ ∪ Q = U (전체집합)\nㄷ. Q ∩ Pᶜ ≠ ∅",
+    "choices": [
+      "ㄱ",
+      "ㄱ, ㄴ",
+      "ㄴ, ㄷ",
+      "ㄱ, ㄴ, ㄷ"
+    ],
+    "answerIndex": 1,
+    "explanation": "p → q가 참이면 P ⊆ Q이다. ㄱ: P ∩ Qᶜ = ∅ ← P ⊆ Q와 동치이므로 항상 참. ㄴ: Pᶜ ∪ Q = U ← P ⊆ Q와 동치(드 모르간)이므로 항상 참. ㄷ: Q ∩ Pᶜ ≠ ∅ ← P = Q이면 Q ∩ Pᶜ = ∅이 가능하므로 항상 참이라 할 수 없다. 따라서 항상 옳은 것은 ㄱ, ㄴ이다.",
+    "detailedExplanation": "① p → q 참 ↔ P ⊆ Q.\n② ㄱ: P ∩ Qᶜ = ∅ ↔ P의 원소 중 Q에 속하지 않는 것이 없음 ↔ P ⊆ Q. 항상 참.\n③ ㄴ: Pᶜ ∪ Q = U ↔ 여사건으로 양변 여집합 취하면 P ∩ Qᶜ = ∅ ↔ P ⊆ Q. 항상 참.\n④ ㄷ: Q ∩ Pᶜ는 Q에는 속하지만 P에는 속하지 않는 원소들의 집합. P = Q인 경우(p ↔ q도 참인 경우)는 Q ∩ Pᶜ = ∅이 될 수 있으므로 항상 ≠ ∅이라 보장할 수 없다. 거짓.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_166",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "함수",
+    "difficulty": "수능 기초",
+    "question": "실수 전체의 집합에서 정의된 두 함수 f(x) = x² − 2x, g(x) = x + 3에 대하여 (g∘f)(a) = (f∘g)(a)를 만족시키는 모든 실수 a의 값의 합은?",
+    "choices": [
+      "−3",
+      "0",
+      "3",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "(g∘f)(a) = f(a)+3 = a²−2a+3이고, (f∘g)(a) = (a+3)²−2(a+3) = a²+4a+3이다. 두 식이 같으면 a²−2a+3 = a²+4a+3이므로 −6a=0, a=0이다. 따라서 합은 0이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_167",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = √(x + 4) − 2에 대하여 f(f(x)) = 0을 만족시키는 x의 값은?",
+    "choices": [
+      "−3",
+      "−2",
+      "0",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x)=0이면 √(x+4)=2, x=0. f(f(x))=0이 되려면 f(x)=0 (f의 치역에 0이 있을 때)이므로 x=0, 또는 f(x)=t이고 f(t)=0인 t를 먼저 구한다. f(t)=0이면 t=0. f(x)=0이면 x=0. 또는 f(x)=−2(f의 또 다른 역상이 있으면): f(x)=−2 → √(x+4)=0 → x=−4, 그러면 f(−4)=−2이고 f(f(−4))=f(−2)=√(−2+4)−2=√2−2≠0. 따라서 f(f(x))=0의 유일한 해는 x=0. 보기에 0이 있으므로 answerIndex=2.",
+    "detailedExplanation": "f(x) = √(x+4) − 2. f(f(x)) = 0이 되려면 f(x) = k이고 f(k) = 0인 k를 먼저 구한다. f(k)=0: √(k+4)−2=0 → √(k+4)=2 → k+4=4 → k=0. 따라서 f(x)=0: √(x+4)−2=0 → x=0. x=0일 때 f(0)=√4−2=0, f(f(0))=f(0)=0 ✓. 정답 x=0.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_168",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "수능 기초",
+    "question": "유리함수 y = (3x − 2) / (x − 1)의 역함수를 g(x)라 할 때, g(2)의 값은?",
+    "choices": [
+      "0",
+      "2",
+      "4",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "y=(3x−2)/(x−1)에서 x와 y를 바꾸면 x=(3y−2)/(y−1). xy−x=3y−2, xy−3y=x−2, y(x−3)=x−2, y=(x−2)/(x−3)=g(x). g(2)=(2−2)/(2−3)=0/(−1)=0. 보기 ①이 0이므로 answerIndex=0.",
+    "detailedExplanation": "y = (3x−2)/(x−1)의 역함수: x↔y 교환 후 y에 대해 풀기. x = (3y−2)/(y−1) → x(y−1) = 3y−2 → xy−x = 3y−2 → xy−3y = x−2 → y(x−3) = x−2 → y = (x−2)/(x−3). g(x) = (x−2)/(x−3). g(2) = (2−2)/(2−3) = 0/(−1) = 0.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_169",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "수능 기초",
+    "question": "무리함수 y = √(2x − a) + b의 그래프가 점 (3, 5)를 지나고, 정의역의 최솟값이 1일 때, a × b의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "정의역 최솟값 1: 2(1)−a=0이므로 a=2. 점 (3,5) 대입: 5=√(6−2)+b=√4+b=2+b, b=3. a×b=2×3=6.",
+    "detailedExplanation": "정의역: 2x−a≥0 → x≥a/2. 최솟값 a/2=1이므로 a=2. 점 (3,5) 대입: 5=√(2·3−2)+b=√4+b=2+b → b=3. a×b=2×3=6.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_170",
+    "subject": "고등 공통수학",
+    "chapter": "함수",
+    "lesson": "유리함수와 무리함수",
+    "difficulty": "응용 유형",
+    "question": "유리함수 y = k / (x − 2) + 3 (k ≠ 0)의 그래프와 직선 y = x의 교점의 x좌표가 모두 양수가 되도록 하는 정수 k의 최솟값은?",
+    "choices": [
+      "−1",
+      "1",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "k/(x−2)+3=x에서 k=(x−2)(x−3)=x²−5x+6. 교점의 x좌표는 x²−5x+6−k=0의 두 근이 모두 양수여야 한다. 두 근의 합=5>0, 두 근의 곱=6−k>0이면 k<6, 판별식=25−4(6−k)=1+4k>0이면 k>−1/4. 따라서 −1/4<k<6이고 k≠0인 정수: k=1,2,3,4,5. 최솟값=1.",
+    "detailedExplanation": "k/(x−2)+3=x → k=(x−2)(x−3)=x²−5x+6 → x²−5x+(6−k)=0. 두 양의 실근 조건: ①판별식≥0: 25−4(6−k)≥0 → 4k≥−1 → k≥−1/4. ②두 근의 합=5>0 (자동 만족). ③두 근의 곱=6−k>0 → k<6. 또한 x≠2 조건: x=2가 근이 되면 0=0이 아닌 6−k=0 즉 k=6은 이미 제외됨. 종합: −1/4<k<6, k≠0인 정수이면 k=1,2,3,4,5. 최솟값은 1.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_171",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "대표 유형",
+    "question": "남학생 4명, 여학생 3명이 원형 탁자에 앉을 때, 여학생 3명이 모두 이웃하지 않는 경우의 수는?",
+    "choices": [
+      "72",
+      "96",
+      "144",
+      "288"
+    ],
+    "answerIndex": 2,
+    "explanation": "남학생 4명을 원형으로 배열하는 방법은 (4−1)!=6가지이고, 남학생 사이사이 4개의 자리에 여학생 3명을 배치하는 방법은 P(4,3)=24가지이므로 총 6×24=144가지이다.",
+    "detailedExplanation": "여학생이 모두 이웃하지 않으려면 남학생 사이 자리에만 여학생을 배치해야 한다. ① 남학생 4명 원형 배열: (4−1)! = 3! = 6가지. ② 남학생 4명 사이에 생기는 4개의 빈자리 중 3개를 골라 여학생을 배열: P(4,3) = 4×3×2 = 24가지. ③ 총 경우의 수: 6 × 24 = 144가지.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_172",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "대표 유형",
+    "question": "1부터 9까지의 자연수 중 서로 다른 3개를 뽑아 만드는 세 자리 자연수 중, 각 자리 숫자의 합이 홀수인 것의 개수는?",
+    "choices": [
+      "180",
+      "240",
+      "264",
+      "300"
+    ],
+    "answerIndex": 1,
+    "explanation": "세 수의 합이 홀수가 되려면 홀수가 1개 또는 3개여야 한다. (홀수1개,짝수2개): C(5,1)×C(4,2)=5×6=30가지 조합, (홀수3개): C(5,3)=10가지 조합. 각 조합마다 3!=6가지 배열 → (30+10)×6=240가지.",
+    "detailedExplanation": "1~9에서 홀수: 1,3,5,7,9 (5개), 짝수: 2,4,6,8 (4개). 합이 홀수 ↔ 홀수 개수가 홀수(1개 또는 3개). ① 홀수1개+짝수2개: C(5,1)×C(4,2)=5×6=30가지 조합. ② 홀수3개: C(5,3)=10가지 조합. ③ 조합 합계 40가지 각각에 3!=6가지 순열 → 40×6=240가지.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_173",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "응용 유형",
+    "question": "서로 다른 색의 공 6개를 A, B, C 세 상자에 나누어 넣을 때, 각 상자에 적어도 1개씩 넣는 경우의 수는? (단, 빈 상자가 없어야 한다.)",
+    "choices": [
+      "240",
+      "270",
+      "300",
+      "540"
+    ],
+    "answerIndex": 3,
+    "explanation": "전체 3⁶=729에서 포함-배제 원리 적용: 729 − C(3,1)×2⁶ + C(3,2)×1⁶ = 729 − 192 + 3 = 540... 재검산: 전체 3⁶=729, 1개 비는 경우 C(3,1)×2⁶=3×64=192, 2개 비는 경우 C(3,2)×1⁶=3. 포함-배제: 729−192+3=540. 선지 재확인 후 정답은 540.",
+    "detailedExplanation": "포함-배제 원리 사용. 전체: 3⁶ = 729. A 상자가 빈 경우: 공 6개를 B,C에만 → 2⁶=64, C(3,1)=3상자 선택 → 3×64=192. 두 상자가 동시에 비는 경우: 공 6개를 1개 상자에만 → 1⁶=1, C(3,2)×1=3. 적어도 1개씩: 729 − 192 + 3 = 540.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_common_174",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "수능 기초",
+    "question": "방정식 x + y + z = 10을 만족하는 음이 아닌 정수해의 개수에서 x ≥ 4인 해의 개수를 뺀 값은?",
+    "choices": [
+      "28",
+      "38",
+      "42",
+      "66"
+    ],
+    "answerIndex": 1,
+    "explanation": "전체 해의 수는 H(3,10)=C(12,2)=66이고, x≥4인 해의 수는 x'=x−4로 치환하면 x'+y+z=6의 음이 아닌 정수해 H(3,6)=C(8,2)=28이므로, 66−28=38이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_common_175",
+    "subject": "고등 공통수학",
+    "chapter": "경우의 수",
+    "lesson": "순열과 조합",
+    "difficulty": "수능 기초",
+    "question": "다음 조건을 만족하는 자연수 순서쌍 (a, b, c, d)의 개수는?\n(가) a + b + c + d = 12\n(나) a, b, c, d는 모두 홀수",
+    "choices": [
+      "35",
+      "56",
+      "70",
+      "84"
+    ],
+    "answerIndex": 0,
+    "explanation": "a=2a'−1, b=2b'−1, c=2c'−1, d=2d'−1 (a',b',c',d'은 자연수)로 치환하면 a'+b'+c'+d'=8이 되고, 자연수해의 수는 H(4,4)=C(7,3)=35이다.",
+    "detailedExplanation": "a,b,c,d가 모두 홀수인 자연수이므로 a=2a'−1 (a'≥1) 형태로 치환. 대입: (2a'−1)+(2b'−1)+(2c'−1)+(2d'−1)=12 → 2(a'+b'+c'+d')=16 → a'+b'+c'+d'=8. 자연수 순서쌍(각 ≥1)의 수: H(4,4)=C(7,3)=35.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_com_1",
+    "subject": "고등 공통수학",
+    "chapter": "다항식",
+    "lesson": "다항식의 연산",
+    "difficulty": "대표 유형",
+    "question": "x + y = 5, xy = 6 일 때, x² + y² 의 값은?",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "25"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² + y² = (x+y)² − 2xy = 25 − 12 = 13.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_com_2",
+    "subject": "고등 공통수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² − 6x + 4 = 0 의 두 근의 합은?",
+    "choices": [
+      "4",
+      "6",
+      "−6",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "근과 계수의 관계로 두 근의 합 = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_com_3",
+    "subject": "고등 공통수학",
+    "chapter": "도형의 방정식",
+    "lesson": "원의 방정식",
+    "difficulty": "대표 유형",
+    "question": "원 (x − 2)² + (y + 1)² = 9 의 넓이는?",
+    "choices": [
+      "3π",
+      "6π",
+      "9π",
+      "18π"
+    ],
+    "answerIndex": 2,
+    "explanation": "반지름 r = 3 이므로 넓이는 πr² = 9π.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  }
+]

@@ -1,0 +1,3632 @@
+[
+  {
+    "id": "mid_num_001",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "개념 확인",
+    "question": "(−3) + (+7) 의 값은?",
+    "choices": [
+      "−4",
+      "4",
+      "−10",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "부호가 다르면 절댓값의 차에 큰 쪽 부호. 7 − 3 = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_num_002",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "기본 유형",
+    "question": "(−2) × (−5) 의 값은?",
+    "choices": [
+      "−10",
+      "−7",
+      "7",
+      "10"
+    ],
+    "answerIndex": 3,
+    "explanation": "음수 × 음수 = 양수. 2 × 5 = 10.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_num_003",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "개념 확인",
+    "question": "√16 의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "4² = 16 이므로 √16 = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_num_004",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "대표 유형",
+    "question": "√2 × √8 의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "√10",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "√2 × √8 = √16 = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_expr_001",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "개념 확인",
+    "question": "3x + 2x 를 간단히 하면?",
+    "choices": [
+      "5x",
+      "6x",
+      "5x²",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "동류항끼리 계수를 더합니다. (3+2)x = 5x.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_expr_002",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "기본 유형",
+    "question": "2(x + 3) − x 를 간단히 하면?",
+    "choices": [
+      "x + 3",
+      "x + 6",
+      "3x + 6",
+      "x + 3x"
+    ],
+    "answerIndex": 1,
+    "explanation": "2x + 6 − x = x + 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_001",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "개념 확인",
+    "question": "방정식 2x + 3 = 11 의 해는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "2x = 8 이므로 x = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_002",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "기본 유형",
+    "question": "방정식 2(x − 1) = x + 3 의 해는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "2x − 2 = x + 3 이므로 x = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_simul_001",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립방정식",
+    "difficulty": "기본 유형",
+    "question": "연립방정식 x + y = 5, x − y = 1 에서 x의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 식을 더하면 2x = 6, x = 3. (이때 y = 2)",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_simul_002",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립방정식",
+    "difficulty": "대표 유형",
+    "question": "연립방정식 2x + y = 7, x + y = 5 의 해에 대하여 xy의 값은?",
+    "choices": [
+      "5",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 식을 빼면 x = 2, 대입하면 y = 3. xy = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "mid_ineq_001",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "개념 확인",
+    "question": "부등식 x + 2 > 5 의 해는?",
+    "choices": [
+      "x > 2",
+      "x > 3",
+      "x < 3",
+      "x > 7"
+    ],
+    "answerIndex": 1,
+    "explanation": "양변에서 2를 빼면 x > 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_ineq_002",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "기본 유형",
+    "question": "부등식 2x − 1 ≤ 5 의 해는?",
+    "choices": [
+      "x ≤ 2",
+      "x ≤ 3",
+      "x ≥ 3",
+      "x ≤ 6"
+    ],
+    "answerIndex": 1,
+    "explanation": "2x ≤ 6 이므로 x ≤ 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_quad_001",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "기본 유형",
+    "question": "이차방정식 x² = 16 의 양의 해는?",
+    "choices": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "x = ±4 이고 양의 해는 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_eq_quad_002",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² − 5x + 6 = 0 의 두 근의 합은?",
+    "choices": [
+      "5",
+      "6",
+      "−5",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x−2)(x−3) = 0 이므로 두 근은 2, 3. 합은 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "mid_eq_quad_003",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x² − 7x + 12 = 0 의 두 근 중 큰 근은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "(x−3)(x−4) = 0 이므로 두 근은 3, 4. 큰 근은 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "mid_fn_001",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "개념 확인",
+    "question": "일차함수 y = 2x + 1 에서 x = 3일 때 y의 값은?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = 2×3 + 1 = 7.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_fn_002",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "기본 유형",
+    "question": "일차함수 y = −x + 3 에서 y = 0일 때 x의 값은?",
+    "choices": [
+      "−3",
+      "0",
+      "3",
+      "1"
+    ],
+    "answerIndex": 2,
+    "explanation": "0 = −x + 3 이므로 x = 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_fn_003",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "개념 확인",
+    "question": "이차함수 y = x² 에서 x = −2일 때 y의 값은?",
+    "choices": [
+      "−4",
+      "2",
+      "4",
+      "−2"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = (−2)² = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_fn_004",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "대표 유형",
+    "question": "이차함수 y = (x − 1)² + 2 의 꼭짓점의 좌표는?",
+    "choices": [
+      "(1, 2)",
+      "(−1, 2)",
+      "(1, −2)",
+      "(2, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = (x − p)² + q 의 꼭짓점은 (p, q). 따라서 (1, 2).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_geo_001",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "개념 확인",
+    "question": "직각을 낀 두 변의 길이가 3, 4인 직각삼각형의 빗변의 길이는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "12"
+    ],
+    "answerIndex": 0,
+    "explanation": "빗변² = 3² + 4² = 25 이므로 빗변 = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_geo_002",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "기본 유형",
+    "question": "직각을 낀 두 변의 길이가 6, 8인 직각삼각형의 빗변의 길이는?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "100"
+    ],
+    "answerIndex": 0,
+    "explanation": "빗변² = 6² + 8² = 100 이므로 빗변 = 10.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_geo_003",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "대표 유형",
+    "question": "닮음비가 2 : 3 인 두 삼각형의 넓이의 비는?",
+    "choices": [
+      "2 : 3",
+      "4 : 9",
+      "4 : 6",
+      "8 : 27"
+    ],
+    "answerIndex": 1,
+    "explanation": "넓이의 비는 닮음비의 제곱. 2² : 3² = 4 : 9.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "mid_prob_001",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "개념 확인",
+    "question": "동전 한 개를 두 번 던질 때, 일어날 수 있는 모든 경우의 수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "각 번 2가지이므로 2 × 2 = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_prob_002",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "기본 유형",
+    "question": "주사위 두 개를 동시에 던질 때, 일어날 수 있는 모든 경우의 수는?",
+    "choices": [
+      "6",
+      "12",
+      "36",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "각 주사위 6가지이므로 6 × 6 = 36.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "mid_prob_003",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "개념 확인",
+    "question": "주사위 한 개를 던질 때, 3의 눈이 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "1/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "전체 6가지 중 3이 나오는 경우 1가지. 1/6.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_1",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "개념 확인",
+    "question": "다음 중 정수가 아닌 것은?",
+    "choices": [
+      "-5",
+      "0",
+      "3/1",
+      "2/3"
+    ],
+    "answerIndex": 3,
+    "explanation": "2/3은 분모가 1이 아닌 분수로, 정수로 나타낼 수 없으므로 정수가 아니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_2",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "기본 유형",
+    "question": "다음을 계산하면?\n(−3) + (−7) − (−4)",
+    "choices": [
+      "-14",
+      "-6",
+      "-10",
+      "14"
+    ],
+    "answerIndex": 1,
+    "explanation": "(−3) + (−7) − (−4) = −3 − 7 + 4 = −6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_3",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "대표 유형",
+    "question": "다음을 계산하면?\n(−2/3) × (9/4) ÷ (−3/2)",
+    "choices": [
+      "1",
+      "-1",
+      "1/2",
+      "-1/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "(−2/3) × (9/4) ÷ (−3/2) = (−2/3) × (9/4) × (−2/3) = (4/9) × (9/4) × ... 단계별 계산: (−2/3)×(9/4) = −18/12 = −3/2, 이를 (−3/2)로 나누면 (−3/2)÷(−3/2) = 1이다.",
+    "detailedExplanation": "① (−2/3) × (9/4) = −18/12 = −3/2\n② (−3/2) ÷ (−3/2) = 1\n나누기는 역수를 곱하는 것이므로: (−3/2) × (−2/3) = 6/6 = 1",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_4",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "응용 유형",
+    "question": "절댓값이 5 이하인 정수의 개수는?",
+    "choices": [
+      "9개",
+      "10개",
+      "11개",
+      "5개"
+    ],
+    "answerIndex": 2,
+    "explanation": "절댓값이 5 이하인 정수는 −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5로 모두 11개이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_5",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "수능 기초",
+    "question": "두 유리수 a = −5/6, b = 7/9 에 대해 a − b의 값은?",
+    "choices": [
+      "-29/18",
+      "-29/9",
+      "29/18",
+      "-1/18"
+    ],
+    "answerIndex": 0,
+    "explanation": "통분하면 a − b = −15/18 − 14/18 = −29/18이다.",
+    "detailedExplanation": "a = −5/6 = −15/18, b = 7/9 = 14/18\na − b = −15/18 − 14/18 = −29/18",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_6",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "개념 확인",
+    "question": "다음 중 −3/4 + 1/4 의 계산 결과로 옳은 것은?",
+    "choices": [
+      "−1/2",
+      "−1",
+      "1/2",
+      "−2"
+    ],
+    "answerIndex": 0,
+    "explanation": "분모가 같은 유리수의 덧셈이므로 분자끼리 더하면 (−3 + 1)/4 = −2/4 = −1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_7",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "기본 유형",
+    "question": "1/2 − (−2/3) 를 계산하면?",
+    "choices": [
+      "7/6",
+      "−1/6",
+      "1/6",
+      "−7/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "빼기를 더하기로 바꾸면 1/2 + 2/3 = 3/6 + 4/6 = 7/6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_8",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "대표 유형",
+    "question": "(−3/5) × (5/6) ÷ (−1/2) 를 계산하면?",
+    "choices": [
+      "1",
+      "−1",
+      "1/2",
+      "−1/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "(−3/5) × (5/6) × (−2) = (−3/5) × (−10/6) = 30/30 = 1이다.",
+    "detailedExplanation": "① (−3/5) × (5/6) = −15/30 = −1/2\n② ÷(−1/2) 는 ×(−2)와 같으므로 (−1/2) × (−2) = 1",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_9",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "개념 확인",
+    "question": "다음 중 √49의 값은?",
+    "choices": [
+      "±7",
+      "7",
+      "±√7",
+      "24.5"
+    ],
+    "answerIndex": 1,
+    "explanation": "√49는 49의 양의 제곱근이므로 7이다. ±7은 49의 제곱근 전체를 나타내며, √49 기호 자체는 양의 값만을 의미한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_10",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "기본 유형",
+    "question": "다음 중 무리수인 것은?",
+    "choices": [
+      "√4",
+      "√9/3",
+      "√5",
+      "0.333…(순환소수)"
+    ],
+    "answerIndex": 2,
+    "explanation": "√4 = 2, √9/3 = 3/3 = 1은 유리수이고, 순환소수도 유리수이므로 무리수는 √5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_11",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "대표 유형",
+    "question": "√75 − √48 + √3을 간단히 하면?",
+    "choices": [
+      "2√3",
+      "3√3",
+      "4√3",
+      "6√3"
+    ],
+    "answerIndex": 0,
+    "explanation": "√75 = 5√3, √48 = 4√3이므로 5√3 − 4√3 + √3 = 2√3이다.",
+    "detailedExplanation": "√75 = √(25×3) = 5√3, √48 = √(16×3) = 4√3, √3 = 1×√3. 따라서 5√3 − 4√3 + 1√3 = (5−4+1)√3 = 2√3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_12",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "응용 유형",
+    "question": "√(n+3)이 자연수가 되도록 하는 가장 작은 자연수 n의 값은?",
+    "choices": [
+      "1",
+      "6",
+      "13",
+      "22"
+    ],
+    "answerIndex": 0,
+    "explanation": "n+3이 완전제곱수가 되어야 하며, n이 자연수이므로 n+3 ≥ 4이어야 한다. n+3 = 4이면 n = 1이므로 가장 작은 자연수 n = 1이다.",
+    "detailedExplanation": "√(n+3)이 자연수가 되려면 n+3은 완전제곱수(1, 4, 9, 16, …)이어야 한다. n이 자연수(n ≥ 1)이므로 n+3 ≥ 4. 완전제곱수 중 4가 가장 작으므로 n+3 = 4 → n = 1. 확인: √(1+3) = √4 = 2(자연수). ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_13",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "개념 확인",
+    "question": "다음 중 문자를 사용한 식으로 옳은 것은? (단, a는 자연수)",
+    "choices": [
+      "한 변의 길이가 a인 정사각형의 둘레의 길이 → 4a",
+      "한 변의 길이가 a인 정사각형의 둘레의 길이 → a + 4",
+      "한 변의 길이가 a인 정사각형의 둘레의 길이 → a²",
+      "한 변의 길이가 a인 정사각형의 둘레의 길이 → 2a"
+    ],
+    "answerIndex": 0,
+    "explanation": "정사각형은 네 변의 길이가 모두 같으므로 둘레의 길이는 a × 4 = 4a이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_14",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "기본 유형",
+    "question": "x = 3일 때, 식 2x² − 3x + 1의 값은?",
+    "choices": [
+      "10",
+      "8",
+      "12",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 3을 대입하면 2 × 3² − 3 × 3 + 1 = 18 − 9 + 1 = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_15",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "대표 유형",
+    "question": "어떤 물건의 정가가 a원일 때, 이 물건을 20% 할인한 가격을 문자를 사용한 식으로 바르게 나타낸 것은?",
+    "choices": [
+      "0.8a원",
+      "0.2a원",
+      "(a − 20)원",
+      "1.2a원"
+    ],
+    "answerIndex": 0,
+    "explanation": "20% 할인은 정가의 80%를 내는 것이므로 a × (1 − 0.2) = 0.8a원이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_16",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "수능 기초",
+    "question": "두 식 A = 2x − y + 3, B = x + 2y − 1에 대하여 2A − B를 간단히 한 것은?",
+    "choices": [
+      "3x − 4y + 7",
+      "3x − 4y + 5",
+      "x − 4y + 7",
+      "3x + 4y + 5"
+    ],
+    "answerIndex": 0,
+    "explanation": "2A − B = 2(2x − y + 3) − (x + 2y − 1) = 4x − 2y + 6 − x − 2y + 1 = 3x − 4y + 7이다.",
+    "detailedExplanation": "① 2A = 2(2x − y + 3) = 4x − 2y + 6\n② B = x + 2y − 1\n③ 2A − B = (4x − 2y + 6) − (x + 2y − 1)\n④ 괄호를 풀면: 4x − 2y + 6 − x − 2y + 1\n⑤ 동류항끼리 정리: (4x − x) + (−2y − 2y) + (6 + 1) = 3x − 4y + 7",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_17",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "개념 확인",
+    "question": "다음 중 일차식인 것은?",
+    "choices": [
+      "x² + 3",
+      "2x − 5",
+      "1/x + 4",
+      "x² − x + 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "일차식은 차수가 1인 다항식으로, 2x − 5는 x의 차수가 1이므로 일차식이다. 나머지는 이차식이거나 분수식이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_18",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "기본 유형",
+    "question": "3(2x − 4) − 2(x − 1)을 계산하면?",
+    "choices": [
+      "4x − 10",
+      "4x − 14",
+      "4x + 10",
+      "8x − 10"
+    ],
+    "answerIndex": 0,
+    "explanation": "3(2x − 4) − 2(x − 1) = 6x − 12 − 2x + 2 = 4x − 10이다.",
+    "detailedExplanation": "① 분배법칙 적용: 3×2x = 6x, 3×(−4) = −12, −2×x = −2x, −2×(−1) = +2\n② 정리: (6x − 2x) + (−12 + 2) = 4x − 10",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_19",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "대표 유형",
+    "question": "(5x − 3)/2 − (x + 1)/3을 계산하면?",
+    "choices": [
+      "(13x − 11)/6",
+      "(13x − 7)/6",
+      "(11x − 11)/6",
+      "(13x − 11)/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "통분하면 3(5x − 3)/6 − 2(x + 1)/6 = (15x − 9 − 2x − 2)/6 = (13x − 11)/6이다.",
+    "detailedExplanation": "① 공통분모 6으로 통분\n② 분자 계산: 3(5x − 3) = 15x − 9, 2(x + 1) = 2x + 2\n③ (15x − 9) − (2x + 2) = 13x − 11\n④ 결과: (13x − 11)/6",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_20",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "응용 유형",
+    "question": "A = 2x + 3, B = x − 4일 때, 2A − 3B + 5를 x에 관한 식으로 나타내면?",
+    "choices": [
+      "x + 23",
+      "x + 17",
+      "7x + 23",
+      "x − 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "2A − 3B + 5 = 2(2x + 3) − 3(x − 4) + 5 = 4x + 6 − 3x + 12 + 5 = x + 23이다.",
+    "detailedExplanation": "① A, B 대입: 2(2x + 3) − 3(x − 4) + 5\n② 분배법칙: 4x + 6 − 3x + 12 + 5\n③ 동류항 정리: (4x − 3x) + (6 + 12 + 5) = x + 23",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_21",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "수능 기초",
+    "question": "어떤 식에서 3x − 2를 빼야 할 것을 잘못하여 더했더니 5x + 7이 되었다. 바르게 계산한 결과는?",
+    "choices": [
+      "−x + 11",
+      "−x + 3",
+      "11x + 11",
+      "x + 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "어떤 식을 □라 하면 □ + (3x − 2) = 5x + 7이므로 □ = 2x + 9이고, 바른 계산은 (2x + 9) − (3x − 2) = −x + 11이다.",
+    "detailedExplanation": "① 어떤 식을 □라 하면 잘못된 계산: □ + (3x − 2) = 5x + 7\n② □ = 5x + 7 − (3x − 2) = 5x + 7 − 3x + 2 = 2x + 9\n③ 바른 계산: □ − (3x − 2) = (2x + 9) − (3x − 2) = 2x + 9 − 3x + 2 = −x + 11",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_22",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "개념 확인",
+    "question": "다음 중 (a + b)² 를 전개한 것으로 올바른 것은?",
+    "choices": [
+      "a² + b²",
+      "a² + ab + b²",
+      "a² + 2ab + b²",
+      "a² − 2ab + b²"
+    ],
+    "answerIndex": 2,
+    "explanation": "(a + b)² = a² + 2ab + b² 로, 중간 항 2ab 를 빠뜨리지 않아야 한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_23",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "기본 유형",
+    "question": "(x + 3)(x − 5) 를 전개하면?",
+    "choices": [
+      "x² − 2x − 15",
+      "x² + 2x − 15",
+      "x² − 8x + 15",
+      "x² − 2x + 15"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x + 3)(x − 5) = x² + (3 − 5)x + 3×(−5) = x² − 2x − 15",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_24",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "대표 유형",
+    "question": "(2x − 3)² 를 전개하면?",
+    "choices": [
+      "4x² + 9",
+      "4x² − 6x + 9",
+      "4x² − 12x + 9",
+      "4x² + 12x − 9"
+    ],
+    "answerIndex": 2,
+    "explanation": "(2x − 3)² = (2x)² − 2×2x×3 + 3² = 4x² − 12x + 9",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_25",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "응용 유형",
+    "question": "(x + 2y)(x − 2y) − (x − y)² 를 전개하여 간단히 하면?",
+    "choices": [
+      "−5y² + 2xy",
+      "−5y² − 2xy",
+      "3y² + 2xy",
+      "−3y² + 2xy"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x + 2y)(x − 2y) = x² − 4y², (x − y)² = x² − 2xy + y² 이므로, 빼면 x² − 4y² − x² + 2xy − y² = 2xy − 5y².",
+    "detailedExplanation": "① (x + 2y)(x − 2y) = x² − (2y)² = x² − 4y²\n② (x − y)² = x² − 2xy + y²\n③ ① − ② = (x² − 4y²) − (x² − 2xy + y²) = x² − 4y² − x² + 2xy − y² = 2xy − 5y²\n따라서 −3y² + 2xy가 아니라 2xy − 5y²이므로 보기 ④ −3y² + 2xy는 오답이고, 정답은 보기 ①의 −5y² + 2xy 와 같으나 순서가 달리 표기된 −5y² + 2xy는 ①번 보기이며, ④번은 −3y² + 2xy로 다른 값이다. 정답은 ① 2xy − 5y² = −5y² + 2xy 이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_26",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "수능 기초",
+    "question": "x + 1/x = 3 일 때, x² + 1/x² 의 값은?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "(x + 1/x)² = x² + 2 + 1/x² = 9 이므로 x² + 1/x² = 9 − 2 = 7",
+    "detailedExplanation": "① x + 1/x = 3 의 양변을 제곱한다.\n② (x + 1/x)² = x² + 2·x·(1/x) + 1/x² = x² + 2 + 1/x² = 3² = 9\n③ 따라서 x² + 1/x² = 9 − 2 = 7",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_27",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "개념 확인",
+    "question": "다음 중 x² − 9를 인수분해한 것으로 옳은 것은?",
+    "choices": [
+      "(x − 3)²",
+      "(x + 3)(x − 3)",
+      "(x + 9)(x − 1)",
+      "(x − 3)(x − 3)"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² − 9 = x² − 3²이므로 합차공식 a² − b² = (a + b)(a − b)를 적용하면 (x + 3)(x − 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_28",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "기본 유형",
+    "question": "x² + 5x + 6을 인수분해하면?",
+    "choices": [
+      "(x + 1)(x + 6)",
+      "(x + 2)(x + 3)",
+      "(x + 6)(x − 1)",
+      "(x − 2)(x − 3)"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱이 6이고 합이 5인 두 수는 2와 3이므로 x² + 5x + 6 = (x + 2)(x + 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_29",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "대표 유형",
+    "question": "2x² + 7x + 3을 인수분해하면?",
+    "choices": [
+      "(2x + 1)(x + 3)",
+      "(2x + 3)(x + 1)",
+      "(x + 3)(2x − 1)",
+      "(2x + 1)(x − 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x² + 7x + 3에서 앞 계수가 2이므로 (2x + 1)(x + 3)로 놓으면 전개 시 2x² + 6x + x + 3 = 2x² + 7x + 3이 되어 맞다.",
+    "detailedExplanation": "2x² + 7x + 3을 (ax + b)(cx + d)로 인수분해한다고 하자. ac = 2, bd = 3이어야 하므로 (a, c) = (2, 1), (b, d)의 후보는 (1, 3)이다. (2x + 1)(x + 3) = 2x² + 6x + x + 3 = 2x² + 7x + 3으로 성립한다. (2x + 3)(x + 1) = 2x² + 2x + 3x + 3 = 2x² + 5x + 3이므로 오답이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_30",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "x⁴ − 16을 완전히 인수분해하면?",
+    "choices": [
+      "(x² + 4)(x² − 4)",
+      "(x² + 4)(x + 2)(x − 2)",
+      "(x + 2)²(x − 2)²",
+      "(x² − 4)²"
+    ],
+    "answerIndex": 1,
+    "explanation": "x⁴ − 16 = (x²)² − 4² = (x² + 4)(x² − 4)이고, x² − 4 = (x + 2)(x − 2)이므로 최종 인수분해 결과는 (x² + 4)(x + 2)(x − 2)이다.",
+    "detailedExplanation": "1단계: x⁴ − 16 = (x²)² − 4²이므로 합차공식으로 (x² + 4)(x² − 4)가 된다. 2단계: x² − 4 = x² − 2² = (x + 2)(x − 2)로 추가 인수분해된다. 3단계: x² + 4는 실수 범위에서 더 이상 인수분해되지 않는다. 따라서 x⁴ − 16 = (x² + 4)(x + 2)(x − 2)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_31",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "수능 기초",
+    "question": "x² − 2x − 3 = 0의 두 근을 α, β라 할 때, α² + β²의 값은?",
+    "choices": [
+      "4",
+      "8",
+      "10",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² − 2x − 3 = (x − 3)(x + 1) = 0이므로 α = 3, β = −1(또는 반대). 근과 계수의 관계에서 α + β = 2, αβ = −3이므로 α² + β² = (α + β)² − 2αβ = 4 − 2×(−3) = 4 + 6 = 10이다.",
+    "detailedExplanation": "1단계: x² − 2x − 3을 인수분해하면 (x − 3)(x + 1) = 0이므로 두 근은 3과 −1이다. 2단계: 근과 계수의 관계로 α + β = 2, αβ = −3임을 확인한다. 3단계: α² + β² = (α + β)² − 2αβ = 2² − 2×(−3) = 4 + 6 = 10이다. 직접 계산으로 검증: 3² + (−1)² = 9 + 1 = 10으로 일치한다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_32",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "기본 유형",
+    "question": "일차방정식 3x − 7 = 2x + 5를 풀면?",
+    "choices": [
+      "x = 10",
+      "x = 12",
+      "x = −2",
+      "x = 2"
+    ],
+    "answerIndex": 1,
+    "explanation": "3x − 2x = 5 + 7이므로 x = 12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_33",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "대표 유형",
+    "question": "일차방정식 2(x − 3) = 4x − 2를 풀면?",
+    "choices": [
+      "x = −2",
+      "x = 2",
+      "x = −4",
+      "x = 4"
+    ],
+    "answerIndex": 0,
+    "explanation": "좌변을 전개하면 2x − 6 = 4x − 2이고, 정리하면 −2x = 4이므로 x = −2이다.",
+    "detailedExplanation": "2(x − 3) = 4x − 2\n① 좌변 전개: 2x − 6 = 4x − 2\n② x항 이항: 2x − 4x = −2 + 6\n③ 정리: −2x = 4\n④ 양변 ÷ (−2): x = −2\n검산: 2(−2 − 3) = 2×(−5) = −10, 4×(−2) − 2 = −10 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_34",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "응용 유형",
+    "question": "연속하는 세 홀수의 합이 39일 때, 가장 큰 홀수는?",
+    "choices": [
+      "11",
+      "13",
+      "15",
+      "17"
+    ],
+    "answerIndex": 2,
+    "explanation": "가운데 홀수를 x로 놓으면 (x−2) + x + (x+2) = 39에서 3x = 39, x = 13이므로 가장 큰 홀수는 13 + 2 = 15이다.",
+    "detailedExplanation": "① 연속하는 세 홀수를 x−2, x, x+2로 설정\n② 방정식: (x−2) + x + (x+2) = 39\n③ 정리: 3x = 39, x = 13\n④ 가장 큰 홀수: x + 2 = 15\n검산: 11 + 13 + 15 = 39 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_35",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "수능 기초",
+    "question": "일차방정식 x/3 − (x−1)/2 = 1의 해를 구하면?",
+    "choices": [
+      "x = −3",
+      "x = 3",
+      "x = −1",
+      "x = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "양변에 6을 곱하면 2x − 3(x−1) = 6이고, 전개하면 2x − 3x + 3 = 6이므로 −x = 3, x = −3이다.",
+    "detailedExplanation": "x/3 − (x−1)/2 = 1\n① 양변에 최소공배수 6을 곱하기: 2x − 3(x−1) = 6\n② 전개: 2x − 3x + 3 = 6\n③ 정리: −x = 3\n④ 양변 × (−1): x = −3\n검산: (−3)/3 − (−3−1)/2 = −1 − (−2) = −1 + 2 = 1 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_36",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "개념 확인",
+    "question": "다음 연립방정식의 해를 구하여라.\n x + y = 5\n x − y = 1",
+    "choices": [
+      "x = 2, y = 3",
+      "x = 3, y = 2",
+      "x = 4, y = 1",
+      "x = 1, y = 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 식을 더하면 2x = 6이므로 x = 3, 첫 번째 식에 대입하면 y = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_37",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "기본 유형",
+    "question": "연립방정식  2x + y = 7,  x + 2y = 8  을 풀면 x + y의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 식을 더하면 3x + 3y = 15이므로 x + y = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_38",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "대표 유형",
+    "question": "연립방정식  3x − 2y = 1,  x + y = 7  의 해를 x = a, y = b라 할 때, a − b의 값은?",
+    "choices": [
+      "−2",
+      "−1",
+      "0",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "x + y = 7에서 x = 7 − y를 대입하면 y = 4, x = 3이므로 a − b = 3 − 4 = −1이다.",
+    "detailedExplanation": "① x + y = 7에서 x = 7 − y\n② 3x − 2y = 1에 대입: 3(7 − y) − 2y = 1\n   21 − 3y − 2y = 1\n   −5y = −20\n   y = 4\n③ x = 7 − 4 = 3\n④ a − b = 3 − 4 = −1\n검산: 3×3 − 2×4 = 9 − 8 = 1 ✓, 3 + 4 = 7 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_39",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "응용 유형",
+    "question": "어느 학교 학생 수는 남학생과 여학생을 합하여 320명이고, 남학생이 여학생보다 20명 많다. 이때 남학생 수는?",
+    "choices": [
+      "140명",
+      "150명",
+      "160명",
+      "170명"
+    ],
+    "answerIndex": 3,
+    "explanation": "남학생을 x, 여학생을 y라 하면 x + y = 320, x − y = 20이므로 두 식을 더하면 2x = 340, x = 170이다.",
+    "detailedExplanation": "① x + y = 320\n② x − y = 20\n③ ①+②: 2x = 340 → x = 170 (남학생)\n④ y = 320 − 170 = 150 (여학생)\n검산: 170 + 150 = 320 ✓, 170 − 150 = 20 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_40",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "수능 기초",
+    "question": "연립방정식  ax + 3y = 9,  2x + by = 4  의 해가 x = 3, y = 1일 때, ab의 값은?",
+    "choices": [
+      "−4",
+      "−2",
+      "2",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 3, y = 1을 각 식에 대입하면 3a + 3 = 9 → a = 2, 6 + b = 4 → b = −2이므로 ab = 2 × (−2) = −4이다.",
+    "detailedExplanation": "① 첫 번째 식에 x = 3, y = 1 대입: a×3 + 3×1 = 9 → 3a = 6 → a = 2\n② 두 번째 식에 x = 3, y = 1 대입: 2×3 + b×1 = 4 → 6 + b = 4 → b = −2\n③ ab = 2 × (−2) = −4\n검산: 2×3 + 3×1 = 6 + 3 = 9 ✓, 2×3 + (−2)×1 = 6 − 2 = 4 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_41",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "기본 유형",
+    "question": "일차부등식 3x − 4 > 8을 풀면?",
+    "choices": [
+      "x > 4",
+      "x < 4",
+      "x > 3",
+      "x < −4"
+    ],
+    "answerIndex": 0,
+    "explanation": "3x − 4 > 8에서 3x > 12, x > 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_42",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "대표 유형",
+    "question": "일차부등식 −2x + 5 ≥ 11을 풀면?",
+    "choices": [
+      "x ≥ −3",
+      "x ≤ −3",
+      "x ≥ 3",
+      "x ≤ 3"
+    ],
+    "answerIndex": 1,
+    "explanation": "−2x + 5 ≥ 11에서 −2x ≥ 6, 음수로 나누면 부등호 방향이 바뀌어 x ≤ −3이다.",
+    "detailedExplanation": "−2x + 5 ≥ 11\n양변에서 5를 빼면: −2x ≥ 6\n양변을 −2로 나누면 부등호 방향이 바뀌므로: x ≤ −3",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_43",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "응용 유형",
+    "question": "어떤 수 x의 3배에서 7을 빼면 x의 2배보다 크다. x의 범위를 구하면?",
+    "choices": [
+      "x > 5",
+      "x < 5",
+      "x > 7",
+      "x < 7"
+    ],
+    "answerIndex": 2,
+    "explanation": "조건을 부등식으로 나타내면 3x − 7 > 2x이고, 정리하면 x > 7이다.",
+    "detailedExplanation": "\"어떤 수 x의 3배에서 7을 뺀 것\"은 3x − 7\n\"x의 2배\"는 2x\n부등식: 3x − 7 > 2x\n3x − 2x > 7\nx > 7",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_44",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "개념 확인",
+    "question": "다음 중 x² − 5x + 6 = 0의 해를 바르게 구한 것은?",
+    "choices": [
+      "x = 2 또는 x = 3",
+      "x = −2 또는 x = −3",
+      "x = 1 또는 x = 6",
+      "x = −1 또는 x = −6"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² − 5x + 6 = (x − 2)(x − 3) = 0이므로 x = 2 또는 x = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_45",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "기본 유형",
+    "question": "이차방정식 2x² − 3x − 2 = 0의 두 근의 합은?",
+    "choices": [
+      "3/2",
+      "−3/2",
+      "1",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "근의 공식 또는 인수분해를 하면 (2x + 1)(x − 2) = 0에서 x = −1/2 또는 x = 2이므로 두 근의 합은 −1/2 + 2 = 3/2이다.",
+    "detailedExplanation": "2x² − 3x − 2 = 0을 인수분해하면 (2x + 1)(x − 2) = 0이다. 따라서 x = −1/2 또는 x = 2. 두 근의 합 = −1/2 + 2 = 3/2. (비에타 공식으로도 확인: 두 근의 합 = 3/2)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_46",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² + 4x + k = 0이 중근을 가질 때, 상수 k의 값은?",
+    "choices": [
+      "4",
+      "2",
+      "8",
+      "−4"
+    ],
+    "answerIndex": 0,
+    "explanation": "중근을 가지려면 판별식 D = 4² − 4k = 0이어야 하므로 16 − 4k = 0, k = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_47",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x² − (a+2)x + 2a = 0의 한 근이 x = 4일 때, 다른 한 근은? (단, a는 상수)",
+    "choices": [
+      "2",
+      "4",
+      "a",
+      "2a"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 4를 대입하면 16 − 4(a+2) + 2a = 0 → 16 − 4a − 8 + 2a = 0 → 8 − 2a = 0 → a = 4. 방정식은 x² − 6x + 8 = 0 → (x−2)(x−4) = 0이므로 다른 한 근은 x = 2이다.",
+    "detailedExplanation": "① x = 4를 x² − (a+2)x + 2a = 0에 대입: 16 − 4(a+2) + 2a = 0\n② 전개: 16 − 4a − 8 + 2a = 0 → 8 − 2a = 0 → a = 4\n③ a = 4를 대입하면 x² − 6x + 8 = 0\n④ (x−2)(x−4) = 0 → x = 2 또는 x = 4\n⑤ 따라서 다른 한 근은 2이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_48",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "수능 기초",
+    "question": "두 수 α, β가 이차방정식 x² − 3x − 1 = 0의 두 근일 때, α² + β²의 값은?",
+    "choices": [
+      "11",
+      "7",
+      "9",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "비에타 공식에 의해 α + β = 3, αβ = −1이므로 α² + β² = (α+β)² − 2αβ = 9 − 2(−1) = 11이다.",
+    "detailedExplanation": "① 비에타 공식: α + β = 3, αβ = −1\n② α² + β² = (α + β)² − 2αβ = 3² − 2 × (−1) = 9 + 2 = 11",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_49",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "개념 확인",
+    "question": "일차함수 y = 3x − 5에서 x = 2일 때, y의 값은?",
+    "choices": [
+      "1",
+      "3",
+      "11",
+      "−1"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 2를 대입하면 y = 3×2 − 5 = 6 − 5 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_50",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "기본 유형",
+    "question": "일차함수 y = −2x + 6의 x절편과 y절편을 구하면?",
+    "choices": [
+      "x절편: 3, y절편: 6",
+      "x절편: 6, y절편: 3",
+      "x절편: −3, y절편: 6",
+      "x절편: 3, y절편: −6"
+    ],
+    "answerIndex": 0,
+    "explanation": "x절편은 y = 0으로 놓으면 0 = −2x + 6 → x = 3이고, y절편은 x = 0으로 놓으면 y = 6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_51",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "대표 유형",
+    "question": "두 점 (1, 3)과 (3, 9)를 지나는 일차함수의 식은?",
+    "choices": [
+      "y = 3x",
+      "y = 3x − 1",
+      "y = 2x + 1",
+      "y = 3x + 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "기울기 = (9 − 3) ÷ (3 − 1) = 6 ÷ 2 = 3이고, y = 3x + b에 (1, 3)을 대입하면 3 = 3 + b → b = 0이므로 y = 3x이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_52",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "응용 유형",
+    "question": "일차함수 y = ax + b의 그래프가 오른쪽 위로 향하고, y절편이 음수일 때, 다음 중 옳은 것은?",
+    "choices": [
+      "a > 0, b < 0",
+      "a > 0, b > 0",
+      "a < 0, b < 0",
+      "a < 0, b > 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "오른쪽 위로 향한다는 것은 기울기 a > 0임을 의미하고, y절편 b < 0이므로 a > 0, b < 0이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_53",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "수능 기초",
+    "question": "일차함수 y = (m − 1)x + 2m의 그래프가 x축에 평행하려면 m의 값은? (단, m ≠ 0인 경우 x축과 일치하지 않는다.)",
+    "choices": [
+      "m = 1",
+      "m = −1",
+      "m = 2",
+      "m = 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "x축에 평행하려면 기울기가 0이고 y절편이 0이 아니어야 한다. m − 1 = 0에서 m = 1이고, 이때 y = 2×1 = 2 ≠ 0이므로 x축에 평행하다.",
+    "detailedExplanation": "x축에 평행한 직선은 y = k (k ≠ 0) 꼴이므로 기울기가 0이어야 한다.\n① m − 1 = 0 → m = 1\n② m = 1일 때 y절편: 2×1 = 2 ≠ 0이므로 x축과 일치하지 않음.\n따라서 m = 1이 조건을 만족한다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_54",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "개념 확인",
+    "question": "이차함수 y = x² − 4x + 3의 꼭짓점의 좌표는?",
+    "choices": [
+      "(2, −1)",
+      "(−2, 1)",
+      "(2, 1)",
+      "(4, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = (x−2)² − 1로 변환하면 꼭짓점은 (2, −1)이다.",
+    "detailedExplanation": "y = x² − 4x + 3을 완전제곱식으로 변환한다.\ny = (x² − 4x + 4) − 4 + 3 = (x−2)² − 1\n꼭짓점의 좌표는 (2, −1)이다.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_55",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "기본 유형",
+    "question": "이차함수 y = 2(x+1)² − 3의 축의 방정식은?",
+    "choices": [
+      "x = 1",
+      "x = −1",
+      "x = 3",
+      "x = −3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 2(x+1)² − 3은 꼭짓점이 (−1, −3)이므로 축의 방정식은 x = −1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_56",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "대표 유형",
+    "question": "이차함수 y = −x² + 2x + 3의 최댓값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = −(x−1)² + 4로 변환하면 꼭짓점 (1, 4)에서 최댓값은 4이다.",
+    "detailedExplanation": "y = −x² + 2x + 3을 완전제곱식으로 변환한다.\ny = −(x² − 2x) + 3 = −(x² − 2x + 1) + 1 + 3 = −(x−1)² + 4\n이차함수의 최고차항 계수가 −1 < 0이므로 위로 볼록한 포물선이고,\nx = 1일 때 최댓값 4를 가진다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_57",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "응용 유형",
+    "question": "이차함수 y = x² − 6x + k의 꼭짓점이 x축 위에 있을 때, 상수 k의 값은?",
+    "choices": [
+      "6",
+      "9",
+      "12",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = (x−3)² + (k−9)로 변환하면 꼭짓점의 y좌표가 0이어야 하므로 k−9 = 0, 즉 k = 9이다.",
+    "detailedExplanation": "y = x² − 6x + k를 완전제곱식으로 변환한다.\ny = (x² − 6x + 9) − 9 + k = (x−3)² + (k−9)\n꼭짓점의 좌표는 (3, k−9)이고, 꼭짓점이 x축 위에 있으려면 y좌표가 0이어야 한다.\nk − 9 = 0 → k = 9",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_58",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "수능 기초",
+    "question": "이차함수 y = x² − 4x + 3에서 x의 값이 1 ≤ x ≤ 4인 범위일 때, 이 함수의 최솟값은?",
+    "choices": [
+      "−1",
+      "0",
+      "3",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = (x−2)² − 1이므로 꼭짓점 x = 2가 범위 안에 포함되어 x = 2일 때 최솟값 −1을 가진다.",
+    "detailedExplanation": "y = x² − 4x + 3 = (x−2)² − 1이고, 꼭짓점은 (2, −1)이다.\n정의역 1 ≤ x ≤ 4 에서 꼭짓점의 x = 2가 범위 안에 있으므로 최솟값은 꼭짓점의 y좌표인 −1이다.\n참고: x = 1일 때 y = 1−4+3 = 0, x = 4일 때 y = 16−16+3 = 3이므로 범위 내 최솟값은 −1이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_59",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "개념 확인",
+    "question": "다음 중 직선, 반직선, 선분에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "직선은 양쪽 방향으로 한없이 뻗어 있는 선이다.",
+      "반직선은 두 점을 양쪽으로 한없이 연장한 선이다.",
+      "선분은 한 점에서 한 방향으로 한없이 뻗은 선이다.",
+      "두 점을 지나는 직선은 무수히 많이 그을 수 있다."
+    ],
+    "answerIndex": 0,
+    "explanation": "직선은 두 점을 지나며 양쪽 방향으로 한없이 뻗어 있는 선이다. 반직선은 한 점에서 한 방향으로 뻗은 선, 선분은 두 점 사이의 유한한 선, 두 점을 지나는 직선은 오직 하나이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_60",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "기본 유형",
+    "question": "직선 위에 세 점 A, B, C가 순서대로 놓여 있다. AB = 8 cm, AC = 14 cm일 때, 선분 BC의 중점 M에서 점 A까지의 거리 AM은?",
+    "choices": [
+      "9 cm",
+      "10 cm",
+      "11 cm",
+      "12 cm"
+    ],
+    "answerIndex": 2,
+    "explanation": "BC = AC − AB = 14 − 8 = 6 cm이므로 BM = 3 cm이다. 따라서 AM = AB + BM = 8 + 3 = 11 cm이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_61",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "대표 유형",
+    "question": "두 직선이 한 점에서 만날 때 생기는 4개의 각 중, ∠a = 65°일 때 ∠a의 맞꼭지각의 크기와 ∠a에 인접한 두 각의 크기를 차례로 나열한 것은?",
+    "choices": [
+      "65°, 115°, 115°",
+      "115°, 65°, 65°",
+      "65°, 125°, 125°",
+      "115°, 55°, 55°"
+    ],
+    "answerIndex": 0,
+    "explanation": "맞꼭지각은 ∠a와 같으므로 65°이고, 인접한 각은 180° − 65° = 115°이다. 따라서 차례로 65°, 115°, 115°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_62",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "응용 유형",
+    "question": "점 O를 꼭짓점으로 하는 세 반직선 OA, OB, OC가 있다. ∠AOB = 80°, ∠BOC = 30°이고 OB가 ∠AOC의 내부에 있을 때, ∠AOC의 이등분선 OD와 OB가 이루는 각 ∠BOD의 크기는?",
+    "choices": [
+      "20°",
+      "25°",
+      "30°",
+      "35°"
+    ],
+    "answerIndex": 1,
+    "explanation": "∠AOC = ∠AOB + ∠BOC = 80° + 30° = 110°이므로 이등분선 OD는 ∠AOD = 55°가 되도록 나눈다. ∠AOB = 80° > ∠AOD = 55°이므로 OD는 OA와 OB 사이에 위치하고, ∠BOD = ∠AOB − ∠AOD = 80° − 55° = 25°이다.",
+    "detailedExplanation": "1단계: ∠AOC = ∠AOB + ∠BOC = 80° + 30° = 110°\n2단계: OD가 ∠AOC를 이등분하므로 ∠AOD = 110° ÷ 2 = 55°\n3단계: ∠AOB = 80° > ∠AOD = 55°이므로 OD는 OA와 OB 사이에 위치함\n4단계: ∠BOD = ∠AOB − ∠AOD = 80° − 55° = 25°",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_63",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "수능 기초",
+    "question": "직선 위에 네 점 A, B, C, D가 순서대로 놓여 있다. AB : BC : CD = 2 : 3 : 1이고 AD = 18 cm일 때, 선분 BD의 중점 M에 대하여 AM의 길이는?",
+    "choices": [
+      "9 cm",
+      "10 cm",
+      "11 cm",
+      "12 cm"
+    ],
+    "answerIndex": 3,
+    "explanation": "AB = 6 cm, BC = 9 cm, CD = 3 cm이고 BD = 12 cm이므로 BM = 6 cm이다. 따라서 AM = AB + BM = 6 + 6 = 12 cm이다.",
+    "detailedExplanation": "1단계: AB + BC + CD = 2k + 3k + k = 6k = 18이므로 k = 3\n2단계: AB = 6 cm, BC = 9 cm, CD = 3 cm\n3단계: BD = BC + CD = 9 + 3 = 12 cm\n4단계: M은 BD의 중점이므로 BM = 12 ÷ 2 = 6 cm\n5단계: AM = AB + BM = 6 + 6 = 12 cm",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_64",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "개념 확인",
+    "question": "삼각형의 세 내각의 합은 몇 도인가?",
+    "choices": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "answerIndex": 1,
+    "explanation": "삼각형의 세 내각의 합은 항상 180°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_65",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "기본 유형",
+    "question": "삼각형 ABC에서 ∠A = 35°, ∠B = 55°일 때, ∠C의 크기는?",
+    "choices": [
+      "80°",
+      "90°",
+      "100°",
+      "110°"
+    ],
+    "answerIndex": 1,
+    "explanation": "삼각형의 세 내각의 합이 180°이므로 ∠C = 180° − 35° − 55° = 90°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_66",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "대표 유형",
+    "question": "평행사변형 ABCD에서 ∠A = 70°일 때, ∠B의 크기는?",
+    "choices": [
+      "70°",
+      "100°",
+      "110°",
+      "120°"
+    ],
+    "answerIndex": 2,
+    "explanation": "평행사변형에서 이웃한 두 각의 합은 180°이므로 ∠B = 180° − 70° = 110°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_67",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "응용 유형",
+    "question": "삼각형 ABC에서 ∠A = 2x°, ∠B = (x + 10)°, ∠C = (3x − 10)°일 때, x의 값은?",
+    "choices": [
+      "25",
+      "28",
+      "30",
+      "35"
+    ],
+    "answerIndex": 2,
+    "explanation": "세 내각의 합이 180°이므로 2x + (x + 10) + (3x − 10) = 180, 6x = 180, x = 30이다.",
+    "detailedExplanation": "세 내각의 합 = 180°를 이용한다.\n2x + (x + 10) + (3x − 10) = 180\n6x + 0 = 180\nx = 30\n검산: ∠A = 60°, ∠B = 40°, ∠C = 80°, 합계 = 180° (일치)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_68",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "수능 기초",
+    "question": "직사각형 ABCD에서 두 대각선 AC와 BD가 교점 O에서 만난다. AC = 10 cm일 때, OB의 길이는?",
+    "choices": [
+      "4 cm",
+      "5 cm",
+      "8 cm",
+      "10 cm"
+    ],
+    "answerIndex": 1,
+    "explanation": "직사각형의 두 대각선은 길이가 같고 서로를 이등분하므로 BD = AC = 10 cm이고, OB = BD ÷ 2 = 5 cm이다.",
+    "detailedExplanation": "직사각형의 성질: 두 대각선의 길이는 서로 같고(AC = BD), 두 대각선은 서로를 이등분한다(OA = OC, OB = OD).\n따라서 BD = AC = 10 cm이고, OB = BD ÷ 2 = 10 ÷ 2 = 5 cm이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_69",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "기본 유형",
+    "question": "두 닮은 삼각형 △ABC와 △DEF의 닮음비가 3:5이다. △ABC의 둘레가 24 cm일 때, △DEF의 둘레는?",
+    "choices": [
+      "30 cm",
+      "36 cm",
+      "40 cm",
+      "45 cm"
+    ],
+    "answerIndex": 2,
+    "explanation": "닮음비가 3:5이면 대응하는 변의 길이의 비도 3:5이므로, △DEF의 둘레를 x라 하면 24:x = 3:5에서 x = 40 cm이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_70",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "응용 유형",
+    "question": "닮음인 두 직육면체의 닮음비가 2:3이다. 작은 직육면체의 겉넓이가 48 cm²일 때, 큰 직육면체의 겉넓이는?",
+    "choices": [
+      "72 cm²",
+      "96 cm²",
+      "108 cm²",
+      "144 cm²"
+    ],
+    "answerIndex": 2,
+    "explanation": "닮음비가 2:3이면 넓이의 비는 2²:3² = 4:9이므로, 큰 직육면체의 겉넓이를 x라 하면 48:x = 4:9에서 x = 48 × 9/4 = 108 cm²이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_71",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "수능 기초",
+    "question": "△ABC에서 변 BC 위의 점 D에 대해 AD가 ∠BAC의 이등분선이다. AB = 8, AC = 12, BC = 15일 때, BD의 길이는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "각의 이등분선 정리에 의해 BD:DC = AB:AC = 8:12 = 2:3이다. BD + DC = 15이므로 BD = 15 × 2/(2+3) = 15 × 2/5 = 6이다.",
+    "detailedExplanation": "1단계: 삼각형의 각의 이등분선 정리: AD가 ∠BAC의 이등분선이면 BD:DC = AB:AC이다.\n2단계: BD:DC = 8:12 = 2:3\n3단계: BD = 15 × 2/(2+3) = 30/5 = 6",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_72",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "개념 확인",
+    "question": "직각삼각형에서 직각을 끼고 있는 두 변의 길이가 각각 3, 4일 때, 빗변의 길이는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "√7"
+    ],
+    "answerIndex": 0,
+    "explanation": "피타고라스 정리에 의해 빗변의 길이를 c라 하면 c² = 3² + 4² = 9 + 16 = 25이므로 c = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_73",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "기본 유형",
+    "question": "직각삼각형에서 빗변의 길이가 13이고 한 변의 길이가 5일 때, 나머지 한 변의 길이는?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "√194"
+    ],
+    "answerIndex": 2,
+    "explanation": "피타고라스 정리에 의해 나머지 변의 길이를 b라 하면 5² + b² = 13²이므로 b² = 169 − 25 = 144, b = 12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_74",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "대표 유형",
+    "question": "가로의 길이가 8 cm, 세로의 길이가 6 cm인 직사각형의 대각선의 길이는?",
+    "choices": [
+      "7 cm",
+      "10 cm",
+      "12 cm",
+      "14 cm"
+    ],
+    "answerIndex": 1,
+    "explanation": "직사각형의 대각선은 가로와 세로를 두 변으로 하는 직각삼각형의 빗변이므로, 대각선의 길이 = √(8² + 6²) = √(64 + 36) = √100 = 10 cm이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_75",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "응용 유형",
+    "question": "오른쪽 그림과 같이 한 변의 길이가 6 cm인 정삼각형의 높이는?",
+    "choices": [
+      "2√3 cm",
+      "3√3 cm",
+      "4√3 cm",
+      "6√3 cm"
+    ],
+    "answerIndex": 1,
+    "explanation": "정삼각형의 높이를 h라 하면, 꼭짓점에서 밑변의 중점까지 내린 수선에서 직각삼각형이 만들어지므로 h² + 3² = 6²에서 h² = 36 − 9 = 27, h = 3√3 cm이다.",
+    "detailedExplanation": "정삼각형의 한 변의 길이가 6 cm이면 높이 h를 내렸을 때 밑변이 이등분되어 밑변 절반은 3 cm가 된다. 직각삼각형에서 피타고라스 정리를 적용하면 3² + h² = 6², 9 + h² = 36, h² = 27, h = √27 = 3√3 cm이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_76",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "수능 기초",
+    "question": "좌표평면 위의 두 점 A(1, 2)와 B(5, 5) 사이의 거리는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 점 사이의 거리 공식(피타고라스 정리 응용)에 의해 AB = √((5−1)² + (5−2)²) = √(16 + 9) = √25 = 5이다.",
+    "detailedExplanation": "x축 방향의 거리: 5 − 1 = 4, y축 방향의 거리: 5 − 2 = 3. 두 점을 잇는 선분을 빗변으로 하는 직각삼각형에서 피타고라스 정리를 적용하면 AB = √(4² + 3²) = √(16 + 9) = √25 = 5이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_77",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "개념 확인",
+    "question": "원의 중심에서 현까지의 거리와 현의 길이에 대한 설명으로 옳은 것은?",
+    "choices": [
+      "한 원에서 길이가 같은 두 현은 원의 중심에서 같은 거리에 있다.",
+      "원의 중심에서 현까지의 거리가 멀수록 현의 길이는 길어진다.",
+      "원의 중심에서 현에 내린 수선은 현을 2:1로 나눈다.",
+      "지름이 아닌 현은 반드시 원의 중심을 지난다."
+    ],
+    "answerIndex": 0,
+    "explanation": "한 원에서 길이가 같은 두 현은 원의 중심으로부터 같은 거리에 있고, 원의 중심에서 현에 내린 수선은 현을 이등분한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_78",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "기본 유형",
+    "question": "반지름의 길이가 10인 원에서 원의 중심으로부터 6만큼 떨어진 현의 길이는?",
+    "choices": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "원의 중심에서 현에 내린 수선은 현을 이등분하므로, 현의 절반의 길이는 √(10² − 6²) = √(100 − 36) = √64 = 8이다. 따라서 현의 길이는 8 × 2 = 16이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_79",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "대표 유형",
+    "question": "원 위의 점 A, B, C에서 ∠BAC = 40°일 때, 호 BC에 대한 중심각 ∠BOC의 크기는? (단, O는 원의 중심)",
+    "choices": [
+      "40°",
+      "60°",
+      "80°",
+      "120°"
+    ],
+    "answerIndex": 2,
+    "explanation": "원주각과 중심각의 관계에 의해 같은 호에 대한 중심각은 원주각의 2배이므로, ∠BOC = 2 × ∠BAC = 2 × 40° = 80°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_80",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "응용 유형",
+    "question": "아래 그림에서 원 O에 내접하는 사각형 ABCD가 있다. ∠ABC = 110°일 때, ∠ADC의 크기는?",
+    "choices": [
+      "60°",
+      "70°",
+      "80°",
+      "110°"
+    ],
+    "answerIndex": 1,
+    "explanation": "원에 내접하는 사각형에서 대각의 합은 180°이므로, ∠ADC = 180° − ∠ABC = 180° − 110° = 70°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_81",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "수능 기초",
+    "question": "반지름이 5인 원 O에서 원 위의 점 P에서 그은 접선과 그 접점을 T라 하자. 원 밖의 점 P에서 원의 중심 O까지의 거리가 13일 때, 접선의 길이 PT는?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "√194"
+    ],
+    "answerIndex": 2,
+    "explanation": "접선과 반지름은 수직이므로 삼각형 OTP에서 PT² = PO² − OT² = 13² − 5² = 169 − 25 = 144이다. 따라서 PT = 12이다.",
+    "detailedExplanation": "OT ⊥ PT이므로 직각삼각형 OTP에서 피타고라스 정리를 적용한다. PT² = PO² − OT² = 13² − 5² = 169 − 25 = 144, PT = √144 = 12이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_82",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "개념 확인",
+    "question": "1부터 5까지의 자연수 중에서 한 개를 뽑을 때, 짝수가 나오는 경우의 수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "1부터 5까지의 자연수 중 짝수는 2, 4로 모두 2개이므로 경우의 수는 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_83",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "기본 유형",
+    "question": "동전 1개와 주사위 1개를 동시에 던질 때, 일어날 수 있는 모든 경우의 수는?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answerIndex": 3,
+    "explanation": "동전은 앞·뒤 2가지, 주사위는 1~6의 6가지이므로 곱의 법칙에 의해 2 × 6 = 12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_84",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "대표 유형",
+    "question": "A, B, C, D 4명 중에서 회장 1명과 부회장 1명을 뽑는 경우의 수는?",
+    "choices": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "회장을 먼저 4가지 방법으로 뽑고, 부회장은 나머지 3명 중 1명을 뽑으므로 4 × 3 = 12이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_85",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "응용 유형",
+    "question": "0, 1, 2, 3, 4의 숫자 카드 5장 중에서 3장을 골라 만들 수 있는 세 자리 수의 개수는?",
+    "choices": [
+      "24",
+      "36",
+      "48",
+      "60"
+    ],
+    "answerIndex": 2,
+    "explanation": "백의 자리에는 0이 올 수 없으므로 4가지, 십의 자리는 나머지 4장 중 1장으로 4가지, 일의 자리는 나머지 3장 중 1장으로 3가지이므로 4 × 4 × 3 = 48이다.",
+    "detailedExplanation": "백의 자리: 0을 제외한 4가지(1, 2, 3, 4)\n십의 자리: 백의 자리에 사용한 수를 제외한 나머지 4장(0 포함) 중 1장 → 4가지\n일의 자리: 앞 두 자리에 사용한 수를 제외한 나머지 3장 중 1장 → 3가지\n따라서 4 × 4 × 3 = 48",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_86",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "개념 확인",
+    "question": "한 개의 주사위를 던질 때, 3의 배수가 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "3의 배수는 3, 6으로 2가지이고, 전체 경우의 수는 6이므로 확률은 2/6 = 1/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_87",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "기본 유형",
+    "question": "빨간 공 3개, 파란 공 2개, 노란 공 1개가 들어 있는 주머니에서 공 1개를 꺼낼 때, 빨간 공이 나올 확률은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 공의 수는 3+2+1 = 6개이고, 빨간 공은 3개이므로 확률은 3/6 = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_88",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "대표 유형",
+    "question": "두 개의 동전을 동시에 던질 때, 적어도 하나가 앞면이 나올 확률은?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 경우의 수는 4(앞앞, 앞뒤, 뒤앞, 뒤뒤)이고, 둘 다 뒷면인 경우는 1가지이므로 적어도 하나가 앞면일 확률은 1 − 1/4 = 3/4이다.",
+    "detailedExplanation": "전체 경우: (앞,앞), (앞,뒤), (뒤,앞), (뒤,뒤) → 4가지. 적어도 하나가 앞면인 경우는 여사건(둘 다 뒷면)을 이용한다. 둘 다 뒷면인 경우는 (뒤,뒤) 1가지이므로 그 확률은 1/4. 따라서 구하는 확률 = 1 − 1/4 = 3/4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_89",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "수능 기초",
+    "question": "A, B, C, D 4명 중에서 대표 2명을 순서 없이 뽑을 때, A가 반드시 포함될 확률은?",
+    "choices": [
+      "1/6",
+      "1/4",
+      "1/3",
+      "1/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "4명 중 2명을 뽑는 전체 경우의 수는 6가지이고, A가 포함된 경우는 나머지 3명 중 1명을 뽑는 3가지이므로 확률은 3/6 = 1/2이다.",
+    "detailedExplanation": "전체 경우의 수: (A,B), (A,C), (A,D), (B,C), (B,D), (C,D) → 6가지. A가 포함된 경우: (A,B), (A,C), (A,D) → 3가지. 확률 = 3/6 = 1/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_90",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "개념 확인",
+    "question": "다음 자료의 평균을 구하여라.\n3, 5, 7, 9, 11",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "평균 = (3+5+7+9+11) ÷ 5 = 35 ÷ 5 = 7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_91",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "대표 유형",
+    "question": "다음 줄기와 잎 그림은 학생 10명의 점수를 나타낸 것이다.\n\n줄기 | 잎\n  5  | 2  4\n  6  | 0  3  7\n  7  | 1  5  8\n  8  | 6  9\n\n이 자료의 평균은?",
+    "choices": [
+      "68.5",
+      "69.5",
+      "70.5",
+      "71.5"
+    ],
+    "answerIndex": 1,
+    "explanation": "10개의 점수는 52, 54, 60, 63, 67, 71, 75, 78, 86, 89이고, 합계 = 695이므로 평균 = 695 ÷ 10 = 69.5이다.",
+    "detailedExplanation": "각 점수: 52, 54, 60, 63, 67, 71, 75, 78, 86, 89\n합계 = 52+54+60+63+67+71+75+78+86+89\n= 106+123+146+164 = 695 (혹은 순서대로 더하면 695)\n평균 = 695 ÷ 10 = 69.5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_92",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "응용 유형",
+    "question": "6개의 자료 a, 8, 10, 12, 14, 16의 평균이 11일 때, 이 자료의 중앙값은?",
+    "choices": [
+      "10",
+      "11",
+      "11.5",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "평균이 11이므로 (a+8+10+12+14+16) ÷ 6 = 11에서 a+60 = 66, a = 6이다. 자료를 크기 순으로 나열하면 6, 8, 10, 12, 14, 16이고 중앙값은 3번째와 4번째 값의 평균인 (10+12) ÷ 2 = 11이다.",
+    "detailedExplanation": "① 평균 조건으로 a 구하기: (a+8+10+12+14+16) ÷ 6 = 11\n  → a+60 = 66 → a = 6\n② 크기 순 나열: 6, 8, 10, 12, 14, 16 (짝수 개)\n③ 중앙값 = (10+12) ÷ 2 = 11",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_93",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "수능 기초",
+    "question": "다음은 학생 20명의 독서량을 조사한 도수분포표이다.\n\n권수(권) | 도수(명)\n  0~2   |   4\n  2~4   |   6\n  4~6   |   7\n  6~8   |   3\n\n독서량이 4권 이상인 학생의 상대도수는?",
+    "choices": [
+      "0.3",
+      "0.4",
+      "0.5",
+      "0.6"
+    ],
+    "answerIndex": 2,
+    "explanation": "독서량이 4권 이상인 학생 수는 7+3 = 10명이고, 상대도수 = 10 ÷ 20 = 0.5이다.",
+    "detailedExplanation": "① 4권 이상 구간: 4~6 (7명) + 6~8 (3명) = 10명\n② 상대도수 = (해당 계급의 도수) ÷ (전체 도수) = 10 ÷ 20 = 0.5\n③ 오답 유의: 4~6 구간만 보면 7/20=0.35로 틀리고, 전체 합 20을 10으로 착각하면 오류 발생",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_94",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "대표 유형",
+    "question": "수직선 위에서 두 유리수 a = −5/3, b = 7/4 사이에 있는 정수의 개수는?",
+    "choices": [
+      "2개",
+      "3개",
+      "4개",
+      "5개"
+    ],
+    "answerIndex": 1,
+    "explanation": "−5/3 ≈ −1.666…, 7/4 = 1.75이므로 그 사이의 정수는 −1, 0, 1로 3개이다.",
+    "detailedExplanation": "① a = −5/3 → 소수로 변환: −1.666…\n② b = 7/4 → 소수로 변환: 1.75\n③ −1.666… < x < 1.75를 만족하는 정수 x: −1, 0, 1\n④ 따라서 정수의 개수는 3개.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_95",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "대표 유형",
+    "question": "a, b가 정수이고 a < 0 < b일 때, 다음 중 항상 옳은 것은?\n① a + b > 0\n② a − b > 0\n③ a × b < 0\n④ a ÷ b > 0",
+    "choices": [
+      "①",
+      "②",
+      "③",
+      "④"
+    ],
+    "answerIndex": 2,
+    "explanation": "음수 a와 양수 b의 곱은 항상 음수이므로 a × b < 0이 항상 성립한다.",
+    "detailedExplanation": "① a + b: a = −10, b = 1이면 −9 < 0 → 항상 양수가 아님\n② a − b: 음수에서 양수를 빼면 더 작아지므로 항상 음수 → 틀림\n③ a × b: (음수) × (양수) = 음수 → 항상 성립\n④ a ÷ b: (음수) ÷ (양수) = 음수 → a ÷ b < 0이므로 틀림",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_96",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "응용 유형",
+    "question": "−3 ≤ a ≤ 2인 정수 a와 −2 ≤ b ≤ 1인 정수 b에 대해 a − b의 최솟값과 최댓값의 합은?",
+    "choices": [
+      "−2",
+      "0",
+      "1",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "최솟값은 a = −3, b = 1일 때 −3 − 1 = −4이고, 최댓값은 a = 2, b = −2일 때 2 − (−2) = 4이다. 따라서 합은 −4 + 4 = 0.",
+    "detailedExplanation": "a − b를 최소로 만들려면 a는 최소, b는 최대여야 한다.\n• 최솟값: a = −3, b = 1 → −3 − 1 = −4\n\na − b를 최대로 만들려면 a는 최대, b는 최소여야 한다.\n• 최댓값: a = 2, b = −2 → 2 − (−2) = 4\n\n• 최솟값 + 최댓값 = −4 + 4 = 0",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_97",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "응용 유형",
+    "question": "세 유리수 p = −2/3, q = 5/6, r = −3/4에 대해 p × q ÷ r의 값은?",
+    "choices": [
+      "−10/9",
+      "10/9",
+      "20/27",
+      "−20/27"
+    ],
+    "answerIndex": 2,
+    "explanation": "p × q = (−2/3) × (5/6) = −10/18 = −5/9이고, (−5/9) ÷ (−3/4) = (−5/9) × (−4/3) = 20/27이다.",
+    "detailedExplanation": "① p × q = (−2/3) × (5/6) = (−2 × 5)/(3 × 6) = −10/18 = −5/9\n② (−5/9) ÷ (−3/4) = (−5/9) × (−4/3) = (5 × 4)/(9 × 3) = 20/27\n③ 부호: (−) ÷ (−) = (+), 따라서 결과는 +20/27\n④ 검산: 20/27은 보기 ③에 해당",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_98",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "정수와 유리수",
+    "difficulty": "수능 기초",
+    "question": "다음 조건을 모두 만족하는 정수 n의 개수는?\n(가) |n − 1| ≤ 3\n(나) n² − 2n − 8 < 0",
+    "choices": [
+      "3개",
+      "4개",
+      "5개",
+      "6개"
+    ],
+    "answerIndex": 2,
+    "explanation": "조건 (가)에서 −2 ≤ n ≤ 4, 조건 (나)에서 (n−4)(n+2) < 0이므로 −2 < n < 4. 교집합은 −2 < n ≤ 4 중 −2 < n < 4, 즉 정수 n은 −1, 0, 1, 2, 3으로 5개이다.",
+    "detailedExplanation": "조건 (가): |n − 1| ≤ 3\n→ −3 ≤ n − 1 ≤ 3\n→ −2 ≤ n ≤ 4  … ①\n\n조건 (나): n² − 2n − 8 < 0\n→ (n − 4)(n + 2) < 0\n→ −2 < n < 4  … ②\n\n①과 ②의 교집합: −2 < n < 4\n→ 정수 n: −1, 0, 1, 2, 3\n→ 개수: 5개",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_99",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "대표 유형",
+    "question": "다음 식을 계산한 결과로 옳은 것은?\n\n(−2/3)² ÷ (−4/9) + (−1/2)",
+    "choices": [
+      "−3/2",
+      "−1/2",
+      "1/2",
+      "3/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "(−2/3)² = 4/9이고, 4/9 ÷ (−4/9) = −1, 여기에 −1/2를 더하면 −3/2이다.",
+    "detailedExplanation": "① (−2/3)² = 4/9\n② 4/9 ÷ (−4/9) = 4/9 × (−9/4) = −1\n③ −1 + (−1/2) = −3/2\n\n흔한 실수: 제곱을 −4/9로 계산하거나(부호 오류), 나눗셈 역수를 취하지 않고 그대로 곱하는 경우.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_100",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "응용 유형",
+    "question": "a = −3/4, b = 3/2일 때, (a − b) ÷ (a × b)의 값은?",
+    "choices": [
+      "2",
+      "−2",
+      "8/9",
+      "−8/9"
+    ],
+    "answerIndex": 0,
+    "explanation": "a − b = −9/4, a × b = −9/8이므로 (−9/4) ÷ (−9/8) = 2이다.",
+    "detailedExplanation": "① a − b = −3/4 − 3/2 = −3/4 − 6/4 = −9/4\n② a × b = (−3/4) × (3/2) = −9/8\n③ (a − b) ÷ (a × b) = (−9/4) ÷ (−9/8) = (−9/4) × (−8/9) = 72/36 = 2\n\n흔한 실수: ①에서 b를 빼지 않고 더하거나(→ 3/4), ③에서 역수 취하는 것을 잊어 (−9/4)(−9/8) = 81/32로 계산하는 경우.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_101",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "유리수의 계산",
+    "difficulty": "수능 기초",
+    "question": "−3/4, 5/6, −2/3, 3/8을 수직선 위에 나타낼 때, 가장 왼쪽에 있는 수와 가장 오른쪽에 있는 수의 곱은?",
+    "choices": [
+      "−5/8",
+      "5/8",
+      "−5/6",
+      "5/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "공통분모 24로 변환하면 −3/4 = −18/24가 가장 작고 5/6 = 20/24가 가장 크므로, 두 수의 곱 (−3/4) × (5/6) = −15/24 = −5/8이다.",
+    "detailedExplanation": "① 각 수를 분모 24로 통분: −3/4 = −18/24, 5/6 = 20/24, −2/3 = −16/24, 3/8 = 9/24\n② 크기 순서: −18/24 < −16/24 < 9/24 < 20/24 → 즉 −3/4 < −2/3 < 3/8 < 5/6\n③ 가장 왼쪽(최솟값): −3/4, 가장 오른쪽(최댓값): 5/6\n④ 곱: (−3/4) × (5/6) = −15/24 = −5/8\n\n흔한 실수: 절댓값이 큰 음수를 '가장 오른쪽'으로 착각하거나, 약분 없이 −15/24로 답하는 경우.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_102",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "대표 유형",
+    "question": "다음 중 옳은 것은?\n① √(−3)² = −3\n② (−√5)² = −5\n③ √49 = ±7\n④ −√(0.04) = −0.2",
+    "choices": [
+      "√(−3)² = −3",
+      "(−√5)² = −5",
+      "√49 = ±7",
+      "−√(0.04) = −0.2"
+    ],
+    "answerIndex": 3,
+    "explanation": "√(0.04) = √(0.2²) = 0.2이므로 −√(0.04) = −0.2가 성립한다. ①은 √(−3)² = √9 = 3, ②는 (−√5)² = 5, ③은 √49 = 7(양의 제곱근만).",
+    "detailedExplanation": "① √(−3)² = √9 = 3 (절댓값 개념: √(a²) = |a|)\n② (−√5)² = (√5)² = 5 (제곱과 루트는 서로 상쇄)\n③ √49는 양의 제곱근만 나타내므로 7, ±7이 아님\n④ √(0.04) = √(4/100) = 2/10 = 0.2이므로 −√(0.04) = −0.2 (정답)\n검산: −√(0.04) = −0.2 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_103",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "응용 유형",
+    "question": "a < 0일 때, √(a²) − √(a² − 2a + 1)을 간단히 하면?",
+    "choices": [
+      "−1",
+      "2a − 1",
+      "1",
+      "−2a + 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "√(a²) = |a| = −a (a < 0), √((a−1)²) = |a−1| = 1−a (a < 0이면 a−1 < 0). 따라서 (−a) − (1−a) = −1.",
+    "detailedExplanation": "√(a²) = |a|. a < 0이므로 |a| = −a.\n√(a²−2a+1) = √((a−1)²) = |a−1|. a < 0이면 a−1 < −1 < 0이므로 |a−1| = −(a−1) = 1−a.\n계산: (−a) − (1−a) = −a − 1 + a = −1\n검산: a = −2 대입 → √4 − √(4+4+1) = 2 − 3 = −1 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_104",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "대표 유형",
+    "question": "다음 수를 수직선 위에 나타낼 때, 가장 왼쪽(작은 쪽)에 위치하는 수는?\n① −√3\n② −1.5\n③ −√2\n④ −√5",
+    "choices": [
+      "−√3",
+      "−1.5",
+      "−√2",
+      "−√5"
+    ],
+    "answerIndex": 3,
+    "explanation": "각 수를 근사하면 −√5 ≈ −2.236, −√3 ≈ −1.732, −1.5, −√2 ≈ −1.414 순이므로 −√5가 가장 작다.",
+    "detailedExplanation": "−√5 ≈ −2.236\n−√3 ≈ −1.732\n−1.5 = −1.500\n−√2 ≈ −1.414\n크기 순: −√5 < −√3 < −1.5 < −√2\n수직선에서 가장 왼쪽 = 가장 작은 수 → −√5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_105",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "응용 유형",
+    "question": "√(n+3) 이 자연수가 되도록 하는 두 자리 자연수 n의 개수는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "n+3 = k²(k는 자연수)로 놓으면 n = k²−3. n이 두 자리(10 ≤ n ≤ 99)이므로 13 ≤ k² ≤ 102. 이를 만족하는 k = 4, 5, 6, 7, 8, 9, 10으로 7개.",
+    "detailedExplanation": "n+3 = k² (k는 자연수)로 놓으면 n = k²−3.\n10 ≤ n ≤ 99 → 10 ≤ k²−3 ≤ 99 → 13 ≤ k² ≤ 102\nk² ≥ 13: k ≥ 4 (k=4이면 k²=16)\nk² ≤ 102: k ≤ 10 (k=10이면 k²=100)\n가능한 k: 4, 5, 6, 7, 8, 9, 10\n대응하는 n: 13, 22, 33, 46, 61, 78, 97 → 모두 두 자리 ✓\n따라서 7개",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_106",
+    "subject": "중학 수학",
+    "chapter": "수와 연산",
+    "lesson": "제곱근과 실수",
+    "difficulty": "수능 기초",
+    "question": "실수 x에 대하여 √(x²−4x+4) + √(x²−6x+9) 를 간단히 할 때, 2 ≤ x < 3인 경우의 값은?",
+    "choices": [
+      "2x − 5",
+      "5 − 2x",
+      "1",
+      "−1"
+    ],
+    "answerIndex": 2,
+    "explanation": "√((x−2)²) + √((x−3)²) = |x−2| + |x−3|. 2 ≤ x < 3이면 |x−2| = x−2, |x−3| = 3−x이므로 합은 1.",
+    "detailedExplanation": "√(x²−4x+4) = √((x−2)²) = |x−2|\n√(x²−6x+9) = √((x−3)²) = |x−3|\n\n2 ≤ x < 3 범위에서:\n· x−2 ≥ 0이므로 |x−2| = x−2\n· x−3 < 0이므로 |x−3| = −(x−3) = 3−x\n\n합산: (x−2) + (3−x) = 1\n검산: x = 2.5 대입 → 0.5 + 0.5 = 1 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_107",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "대표 유형",
+    "question": "a = −2, b = 3일 때, (a² − 2ab + b²) ÷ (a − b)의 값은?",
+    "choices": [
+      "−5",
+      "5",
+      "−1",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "a² − 2ab + b² = (a − b)²이므로 (a − b)² ÷ (a − b) = a − b = −2 − 3 = −5.",
+    "detailedExplanation": "분자 a² − 2ab + b²은 완전제곱식 (a − b)²으로 인수분해된다. 따라서 (a − b)² ÷ (a − b) = a − b. a − b = −2 − 3 = −5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_108",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "대표 유형",
+    "question": "어떤 자연수를 5로 나누면 몫이 a이고 나머지가 3이다. 이 자연수를 문자를 사용한 식으로 나타낸 것은?",
+    "choices": [
+      "5a + 3",
+      "5a − 3",
+      "3a + 5",
+      "a ÷ 5 + 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "나눗셈의 관계식 (나누어지는 수) = (나누는 수) × (몫) + (나머지)에 의해 5a + 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_109",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "문자의 사용과 식",
+    "difficulty": "응용 유형",
+    "question": "가로의 길이가 (2a + 3)cm, 세로의 길이가 (a − 1)cm인 직사각형이 있다. 이 직사각형의 둘레의 길이를 a를 사용한 식으로 바르게 나타낸 것은?",
+    "choices": [
+      "6a + 4",
+      "2a² + a − 3",
+      "4a + 4",
+      "6a + 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "둘레 = 2 × {(2a + 3) + (a − 1)} = 2 × (3a + 2) = 6a + 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_110",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "대표 유형",
+    "question": "다음 식을 간단히 하면?\n3(2x − 1) − 2(x − 4) + 5x",
+    "choices": [
+      "9x + 5",
+      "9x − 5",
+      "11x + 5",
+      "11x − 5"
+    ],
+    "answerIndex": 0,
+    "explanation": "3(2x−1)−2(x−4)+5x = 6x−3−2x+8+5x = 9x+5.",
+    "detailedExplanation": "① 분배법칙 적용: 3(2x−1)=6x−3, −2(x−4)=−2x+8\n② x항 합산: 6x−2x+5x = 9x\n③ 상수항 합산: −3+8 = 5\n④ 결과: 9x+5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_111",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "응용 유형",
+    "question": "A = 3x − 2, B = x + 4일 때, 2A − 3B를 x에 대한 일차식으로 나타내면?",
+    "choices": [
+      "3x − 16",
+      "3x − 8",
+      "9x − 16",
+      "9x − 8"
+    ],
+    "answerIndex": 0,
+    "explanation": "2A−3B = 2(3x−2)−3(x+4) = 6x−4−3x−12 = 3x−16.",
+    "detailedExplanation": "① 2A = 2(3x−2) = 6x−4\n② 3B = 3(x+4) = 3x+12\n③ 2A−3B = 6x−4−(3x+12) = 3x−16",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_112",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "응용 유형",
+    "question": "다음 등식에서 □ 안에 들어갈 식으로 알맞은 것은?\n(4x + 7) − □ = 2x − 5",
+    "choices": [
+      "2x + 12",
+      "2x − 12",
+      "−2x + 12",
+      "−2x − 12"
+    ],
+    "answerIndex": 0,
+    "explanation": "□ = (4x+7) − (2x−5) = 4x+7−2x+5 = 2x+12.",
+    "detailedExplanation": "□ = (4x+7)−(2x−5)\n= 4x+7−2x+5\n= (4x−2x)+(7+5)\n= 2x+12",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_113",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "수능 기초",
+    "question": "일차식 ax + b에서 x의 계수와 상수항의 합이 7이고, 2(ax + b) − 3(x − 2)를 간단히 하면 x의 계수가 1이 될 때, a + b의 값은? (단, a ≠ 0)",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "2(ax+b)−3(x−2) = (2a−3)x+(2b+6)에서 x의 계수 2a−3=1이므로 a=2, a+b=7에서 b=5, a+b=7.",
+    "detailedExplanation": "① 2(ax+b)−3(x−2) = 2ax+2b−3x+6 = (2a−3)x+(2b+6)\n② x의 계수 = 1: 2a−3 = 1 → a = 2\n③ a+b = 7: 2+b = 7 → b = 5\n④ a+b = 2+5 = 7",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_114",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "일차식의 계산",
+    "difficulty": "수능 기초",
+    "question": "어떤 일차식에서 5x − 3을 빼야 할 것을 잘못하여 더했더니 8x + 1이 되었다. 바르게 계산한 결과는?",
+    "choices": [
+      "−2x + 7",
+      "2x − 7",
+      "−2x − 7",
+      "2x + 7"
+    ],
+    "answerIndex": 0,
+    "explanation": "어떤 식 = (8x+1)−(5x−3) = 3x+4, 바른 계산: (3x+4)−(5x−3) = −2x+7.",
+    "detailedExplanation": "① 잘못한 계산: (어떤 식)+(5x−3) = 8x+1\n② 어떤 식 = 8x+1−(5x−3) = 8x+1−5x+3 = 3x+4\n③ 바른 계산: (3x+4)−(5x−3) = 3x+4−5x+3 = −2x+7",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_115",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "대표 유형",
+    "question": "(x + 2y − 1)(x − 2y + 1)을 전개한 식은?",
+    "choices": [
+      "x² − 4y² + 2x − 4y + 1",
+      "x² − 4y² + 4y − 1",
+      "x² − 4y² − 1",
+      "x² − 4y² + 4y + 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "A = x, B = (2y − 1)로 놓으면 (A + (−B))(A + B) 꼴이 아니라 (x + 2y − 1)(x − 2y + 1) = {x + (2y−1)}{x − (2y−1)} = x² − (2y−1)² = x² − (4y² − 4y + 1) = x² − 4y² + 4y − 1이다.",
+    "detailedExplanation": "B = 2y − 1로 치환하면 주어진 식은 (x + B)(x − B) = x² − B².\nB² = (2y−1)² = 4y² − 4y + 1.\n따라서 x² − B² = x² − 4y² + 4y − 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_116",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "응용 유형",
+    "question": "x² − x − 1 = 0일 때, x² + 1/x² 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² = x + 1이므로 1/x² = 1/(x+1)을 구하려면, x ≠ 0이고 x² − x − 1 = 0에서 양변을 x²으로 나누면 1 − 1/x − 1/x² = 0. x + 1/x = x² − 1 + 1을 이용하기보다, x − 1/x를 구한 뒤 제곱하는 방법으로: x² − x − 1 = 0 → x − 1 = 1/x → x + 1/x = x² + 1)/x = (x+1+1)/x 대신 직접 계산: x² = x+1이고 1/x² = 1/(x+1) = x/(x(x+1)) = x/(x²+x) = x/(2x) = 1/2? 재검산 필요.",
+    "detailedExplanation": "x² − x − 1 = 0에서 x ≠ 0이므로 양변을 x로 나누면 x − 1 − 1/x = 0, 즉 x − 1/x = 1.\n(x − 1/x)² = 1 → x² − 2 + 1/x² = 1 → x² + 1/x² = 3.\n따라서 답은 3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_117",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "다항식의 곱셈",
+    "difficulty": "응용 유형",
+    "question": "다음 중 (a + b + c)² − (a² + b² + c²)를 인수들의 곱으로 나타낸 결과로 옳은 것은?",
+    "choices": [
+      "2(ab + bc + ca)",
+      "2(a + b)(b + c)",
+      "(a + b + c)(a − b − c)",
+      "ab + bc + ca"
+    ],
+    "answerIndex": 0,
+    "explanation": "(a+b+c)² = a²+b²+c²+2ab+2bc+2ca이므로 (a+b+c)² − (a²+b²+c²) = 2ab + 2bc + 2ca = 2(ab+bc+ca)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_118",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "대표 유형",
+    "question": "x² − 5x − 24를 인수분해하면 (x + a)(x + b)일 때, a − b의 값은? (단, a < b)",
+    "choices": [
+      "−11",
+      "11",
+      "−5",
+      "5"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² − 5x − 24 = (x + 3)(x − 8)이므로 a = −8, b = 3이고 a − b = −8 − 3 = −11이다.",
+    "detailedExplanation": "곱이 −24이고 합이 −5인 두 정수를 찾으면 3과 −8이다. 따라서 (x + 3)(x − 8)이고 a = −8(< b = 3), a − b = −11.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_119",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "4x² − 9y²을 인수분해한 결과로 옳은 것은?",
+    "choices": [
+      "(2x + 3y)(2x − 3y)",
+      "(2x − 3y)²",
+      "(4x + 3y)(x − 3y)",
+      "(2x + 9y)(2x − y)"
+    ],
+    "answerIndex": 0,
+    "explanation": "4x² − 9y²은 합차 공식 a² − b² = (a + b)(a − b)를 적용하면 (2x + 3y)(2x − 3y)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_120",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "응용 유형",
+    "question": "x⁴ − 16을 완전히 인수분해하면?\n(단, 계수는 정수)",
+    "choices": [
+      "(x² + 4)(x + 2)(x − 2)",
+      "(x² + 4)(x² − 4)",
+      "(x + 2)²(x − 2)²",
+      "(x² − 4)²"
+    ],
+    "answerIndex": 0,
+    "explanation": "x⁴ − 16 = (x² + 4)(x² − 4)이고, x² − 4 = (x + 2)(x − 2)로 추가 인수분해되므로 (x² + 4)(x + 2)(x − 2)이다.",
+    "detailedExplanation": "x⁴ − 16 = (x²)² − 4²이므로 합차 공식으로 (x² + 4)(x² − 4).\n다시 x² − 4 = (x + 2)(x − 2)로 인수분해.\nx² + 4는 정수 범위에서 더 이상 인수분해되지 않으므로 최종 답은 (x² + 4)(x + 2)(x − 2).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_121",
+    "subject": "중학 수학",
+    "chapter": "문자와 식",
+    "lesson": "인수분해",
+    "difficulty": "수능 기초",
+    "question": "2x² + 5xy − 3y²을 인수분해하면 (ax + by)(cx + dy)일 때,\nad + bc의 값은? (단, a, b, c, d는 정수, a > 0, c > 0)",
+    "choices": [
+      "5",
+      "−5",
+      "1",
+      "−1"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x² + 5xy − 3y² = (2x − y)(x + 3y)이므로 a=2, b=−1, c=1, d=3이고 ad + bc = 2×3 + (−1)×1 = 6 − 1 = 5이다.",
+    "detailedExplanation": "ac = 2, bd = −3을 만족하는 정수 쌍을 시도한다.\n(2x − y)(x + 3y) = 2x² + 6xy − xy − 3y² = 2x² + 5xy − 3y²으로 성립.\na=2, b=−1, c=1, d=3이므로 ad + bc = (2)(3) + (−1)(1) = 6 − 1 = 5.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_122",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "대표 유형",
+    "question": "x에 대한 방정식 2(ax − 3) = 5x − (a + 1)의 해가 x = 2일 때, 상수 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "x = 2를 방정식에 대입하면 2(2a − 3) = 10 − (a + 1) → 4a − 6 = 9 − a → 5a = 15 → a = 3.",
+    "detailedExplanation": "x = 2 대입: 2(2a − 3) = 5×2 − (a + 1)\n4a − 6 = 10 − a − 1\n4a − 6 = 9 − a\n4a + a = 9 + 6\n5a = 15\na = 3\n검산: 2(3×2−3)=2×3=6, 5×2−(3+1)=10−4=6 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_123",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "수능 기초",
+    "question": "두 자리 자연수가 있다. 이 수의 십의 자리 숫자와 일의 자리 숫자의 합은 11이고, 십의 자리 숫자와 일의 자리 숫자를 바꾼 수는 원래 수보다 27만큼 작다. 원래 수는?",
+    "choices": [
+      "47",
+      "56",
+      "65",
+      "74"
+    ],
+    "answerIndex": 3,
+    "explanation": "십의 자리를 a, 일의 자리를 b라 하면 a+b=11, (10b+a)=(10a+b)−27 → 9b−9a=−27 → b−a=−3 → a−b=3. 연립하면 a=7, b=4. 원래 수는 74.",
+    "detailedExplanation": "십의 자리 숫자를 a, 일의 자리 숫자를 b라 하면:\n조건 1: a + b = 11\n조건 2: 바꾼 수 = 원래 수 − 27 → 10b + a = (10a + b) − 27\n조건 2 정리: 9b − 9a = −27 → b − a = −3 → a − b = 3\n연립방정식:\na + b = 11\na − b = 3\n두 식을 더하면: 2a = 14 → a = 7, b = 4\n원래 수: 74\n검산: 7+4=11 ✓, 바꾼 수 47 = 74−27 ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_124",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "대표 유형",
+    "question": "연립방정식 { 2x + 3y = 7, 3x − y = 5 }를 풀었을 때, x − y의 값은?",
+    "choices": [
+      "−1",
+      "1",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "3x − y = 5에서 y = 3x − 5를 첫 번째 식에 대입하면 11x = 22이므로 x = 2, y = 1이다. 따라서 x − y = 1이다.",
+    "detailedExplanation": "① 3x − y = 5에서 y = 3x − 5 ② 2x + 3(3x − 5) = 7 → 2x + 9x − 15 = 7 → 11x = 22 → x = 2 ③ y = 3(2) − 5 = 1 ④ x − y = 2 − 1 = 1. 검산: 2(2)+3(1)=7 ✓, 3(2)−1=5 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_125",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "응용 유형",
+    "question": "현재 아버지의 나이는 아들의 나이의 4배이고, 6년 후에는 아버지의 나이가 아들의 나이의 3배가 된다. 현재 아버지와 아들의 나이의 합은?",
+    "choices": [
+      "54",
+      "60",
+      "63",
+      "66"
+    ],
+    "answerIndex": 1,
+    "explanation": "현재 아들 나이를 b, 아버지를 a로 놓으면 a = 4b, a + 6 = 3(b + 6)이다. 대입하면 b = 12, a = 48이므로 합은 60이다.",
+    "detailedExplanation": "① a = 4b … (1), a + 6 = 3(b + 6) … (2) ② (1)을 (2)에 대입: 4b + 6 = 3b + 18 → b = 12 ③ a = 4 × 12 = 48 ④ 합: 48 + 12 = 60. 검산: 6년 후 아버지 54 = 3 × 18(아들) ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_126",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "대표 유형",
+    "question": "연립방정식 { ax + y = 5, x + by = 7 }의 해가 x = 3, y = −1일 때, ab의 값은?",
+    "choices": [
+      "−8",
+      "−4",
+      "4",
+      "8"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 3, y = −1을 각 식에 대입하면 3a − 1 = 5에서 a = 2, 3 − b = 7에서 b = −4이다. 따라서 ab = 2 × (−4) = −8이다.",
+    "detailedExplanation": "① 첫 번째 식: a(3) + (−1) = 5 → 3a = 6 → a = 2 ② 두 번째 식: 3 + b(−1) = 7 → −b = 4 → b = −4 ③ ab = 2 × (−4) = −8. 오답 함정: b의 부호를 놓쳐 b = 4로 계산하면 ab = 8(오답).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_127",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "수능 기초",
+    "question": "연립방정식 { ax + 2y = 4, 3x + 6y = b }가 해를 무수히 많이 가질 때, a + b의 값은?",
+    "choices": [
+      "9",
+      "11",
+      "13",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "해가 무수히 많으려면 두 식이 동치여야 하므로 a/3 = 2/6 = 4/b가 성립해야 한다. a/3 = 1/3에서 a = 1, 4/b = 1/3에서 b = 12이므로 a + b = 13이다.",
+    "detailedExplanation": "① 연립방정식이 해가 무수히 많은 조건: 두 식의 계수 비가 모두 같아야 함. ② a/3 = 2/6 → a/3 = 1/3 → a = 1 ③ 2/6 = 4/b → 1/3 = 4/b → b = 12 ④ a + b = 1 + 12 = 13. 오답 함정: b = 6(2배만 맞춤)으로 계산하면 a + b = 7(오답).",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_128",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "연립일차방정식",
+    "difficulty": "응용 유형",
+    "question": "십의 자리 숫자와 일의 자리 숫자의 합이 9인 두 자리 자연수가 있다. 십의 자리와 일의 자리를 바꾼 수는 원래 수보다 27이 크다고 할 때, 원래 수는?",
+    "choices": [
+      "27",
+      "36",
+      "45",
+      "54"
+    ],
+    "answerIndex": 1,
+    "explanation": "십의 자리를 a, 일의 자리를 b로 놓으면 a + b = 9, (10b + a) − (10a + b) = 27에서 b − a = 3이다. 연립하면 a = 3, b = 6이므로 원래 수는 36이다.",
+    "detailedExplanation": "① a + b = 9 … (1), 9(b − a) = 27 → b − a = 3 … (2) ② (1) + (2): 2b = 12 → b = 6 ③ a = 9 − 6 = 3 ④ 원래 수: 10a + b = 36. 검산: 바꾼 수 63 − 36 = 27 ✓, 3 + 6 = 9 ✓. 오답 함정: 54는 바꾼 수(오답).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_129",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차부등식",
+    "difficulty": "대표 유형",
+    "question": "부등식 −2x + 5 ≤ x − 4를 만족하는 자연수 x의 개수는?",
+    "choices": [
+      "3개",
+      "무수히 많다",
+      "없다",
+      "1개"
+    ],
+    "answerIndex": 1,
+    "explanation": "−2x + 5 ≤ x − 4에서 −3x ≤ −9이므로 x ≥ 3이고, 이를 만족하는 자연수는 3, 4, 5, …로 무수히 많다.",
+    "detailedExplanation": "−2x + 5 ≤ x − 4\n→ −2x − x ≤ −4 − 5\n→ −3x ≤ −9\n→ x ≥ 3  (양변을 −3으로 나누면 부등호 방향 바뀜)\n\nx ≥ 3을 만족하는 자연수: 3, 4, 5, … → 무수히 많다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_130",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² − 5x + 3 = 0의 두 근을 α, β라 할 때, α² + β²의 값은?",
+    "choices": [
+      "13",
+      "15",
+      "19",
+      "25"
+    ],
+    "answerIndex": 2,
+    "explanation": "근과 계수의 관계에서 α+β = 5, αβ = 3이므로 α²+β² = (α+β)² − 2αβ = 25 − 6 = 19이다.",
+    "detailedExplanation": "근과 계수의 관계: α+β = −(−5)/1 = 5, αβ = 3/1 = 3.\nα²+β² = (α+β)² − 2αβ = 5² − 2×3 = 25 − 6 = 19.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_131",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "응용 유형",
+    "question": "이차방정식 x² + ax + b = 0의 두 근이 x² − 3x + 1 = 0의 두 근의 각각 2배일 때, a + b의 값은?",
+    "choices": [
+      "−8",
+      "−2",
+      "2",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² − 3x + 1 = 0의 두 근 α, β에 대해 2α, 2β를 근으로 하는 이차방정식을 구하면 a = −6, b = 4이므로 a + b = −2이다.",
+    "detailedExplanation": "x² − 3x + 1 = 0의 두 근을 α, β라 하면 α+β = 3, αβ = 1.\n새 이차방정식의 두 근은 2α, 2β이므로\n두 근의 합: 2α + 2β = 2×3 = 6 → a = −6\n두 근의 곱: 2α × 2β = 4αβ = 4×1 = 4 → b = 4\n따라서 a + b = −6 + 4 = −2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_132",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 2x² − 3x − 2 = 0을 풀면?",
+    "choices": [
+      "x = −1/2 또는 x = 2",
+      "x = 1/2 또는 x = −2",
+      "x = −1/2 또는 x = −2",
+      "x = 1/2 또는 x = 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x² − 3x − 2 = (2x + 1)(x − 2) = 0이므로 x = −1/2 또는 x = 2이다.",
+    "detailedExplanation": "2x² − 3x − 2를 인수분해하면 (2x + 1)(x − 2) = 0.\n2x + 1 = 0에서 x = −1/2, x − 2 = 0에서 x = 2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_133",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "대표 유형",
+    "question": "일차함수 y = ax + b의 그래프가 점 (1, 3)을 지나고, x절편이 −1일 때, a + b의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "x절편이 −1이므로 점 (−1, 0)을 지난다. 두 점 (−1, 0)과 (1, 3)을 이용하면 기울기 a = (3−0)/(1−(−1)) = 3/2, y = 3/2 · x + b에 (1, 3) 대입: b = 3/2. 따라서 a + b = 3/2 + 3/2 = 3.",
+    "detailedExplanation": "x절편이 −1이면 그래프가 점 (−1, 0)을 지난다. 두 점 (−1, 0), (1, 3)으로 기울기: a = (3 − 0) ÷ (1 − (−1)) = 3 ÷ 2 = 3/2. y = (3/2)x + b에 x = 1, y = 3 대입: 3 = 3/2 + b → b = 3/2. 따라서 a + b = 3/2 + 3/2 = 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_134",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "대표 유형",
+    "question": "두 일차함수 y = 2x − 3과 y = −x + k의 그래프의 교점이 x축 위에 있을 때, k의 값은?",
+    "choices": [
+      "1",
+      "3/2",
+      "3",
+      "−3"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 2x − 3에서 y = 0으로 놓으면 x = 3/2이므로 교점은 (3/2, 0)이다. 이를 y = −x + k에 대입하면 0 = −3/2 + k, 따라서 k = 3/2.",
+    "detailedExplanation": "교점이 x축 위에 있으므로 y좌표가 0이다. y = 2x − 3에서 y = 0을 대입하면 2x = 3, x = 3/2. 교점은 (3/2, 0)이다. 이 점을 y = −x + k에 대입: 0 = −3/2 + k → k = 3/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_135",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "응용 유형",
+    "question": "일차함수 f(x) = ax + b (a > 0)가 f(f(x)) = 4x − 9를 만족시킬 때, f(3)의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(f(x)) = a(ax + b) + b = a²x + ab + b이므로 a² = 4, ab + b = −9. a > 0이므로 a = 2, 2b + b = −9에서 b = −3. 따라서 f(3) = 2×3 − 3 = 3.",
+    "detailedExplanation": "f(x) = ax + b로 놓으면 f(f(x)) = f(ax + b) = a(ax + b) + b = a²x + (ab + b). 이것이 4x − 9와 같으므로 a² = 4, ab + b = −9. a > 0이므로 a = 2. b(a + 1) = −9 → 3b = −9 → b = −3. f(x) = 2x − 3이므로 f(3) = 6 − 3 = 3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_136",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "수능 기초",
+    "question": "직선 AB (A(−1, 4), B(3, −2))에 평행하고 점 C(2, 5)를 지나는 일차함수의 그래프가 x축, y축과 만나는 점을 각각 P, Q라 할 때, 삼각형 OPQ의 넓이는? (단, O는 원점)",
+    "choices": [
+      "64/3",
+      "32/3",
+      "16",
+      "48/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "직선 AB의 기울기는 (−2−4)/(3−(−1)) = −3/2이다. 기울기 −3/2이고 점 (2, 5)를 지나면 y = −3/2 · x + 8. x절편: x = 16/3, y절편: 8. 삼각형 OPQ의 넓이 = 1/2 × 16/3 × 8 = 64/3.",
+    "detailedExplanation": "1단계: 직선 AB의 기울기 = (−2 − 4) ÷ (3 − (−1)) = −6 ÷ 4 = −3/2. 2단계: 기울기 −3/2이고 점 C(2, 5)를 지나는 직선: 5 = (−3/2)×2 + b → 5 = −3 + b → b = 8. 직선: y = −3/2 · x + 8. 3단계: x절편 P: 0 = −3/2 · x + 8 → x = 16/3, 즉 P(16/3, 0). y절편 Q: x = 0일 때 y = 8, 즉 Q(0, 8). 4단계: 삼각형 OPQ의 넓이 = 1/2 × (16/3) × 8 = 64/3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_137",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "대표 유형",
+    "question": "이차함수 y = 2x² − 8x + 5의 꼭짓점의 좌표를 (a, b)라 할 때, a + b의 값은?",
+    "choices": [
+      "−1",
+      "−3",
+      "1",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "y = 2(x−2)² − 3이므로 꼭짓점은 (2, −3), a + b = 2 + (−3) = −1이다.",
+    "detailedExplanation": "y = 2x² − 8x + 5 = 2(x² − 4x) + 5 = 2(x² − 4x + 4 − 4) + 5 = 2(x−2)² − 8 + 5 = 2(x−2)² − 3. 따라서 꼭짓점은 (a, b) = (2, −3)이고, a + b = 2 + (−3) = −1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_138",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "대표 유형",
+    "question": "이차함수 y = −x² + 4x + k의 최댓값이 7일 때, 상수 k의 값은?",
+    "choices": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = −(x−2)² + 4 + k이므로 최댓값은 4 + k = 7, 따라서 k = 3이다.",
+    "detailedExplanation": "y = −x² + 4x + k = −(x² − 4x) + k = −(x−2)² + 4 + k. a = −1 < 0이므로 꼭짓점에서 최댓값을 가지며, 최댓값 = 4 + k. 4 + k = 7이므로 k = 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_139",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "응용 유형",
+    "question": "이차함수 y = x² + bx + c의 그래프가 두 점 (1, 0)과 (3, 0)을 지날 때, 이 이차함수의 최솟값은?",
+    "choices": [
+      "−4",
+      "−2",
+      "−1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 근이 1, 3이므로 y = (x−1)(x−3) = x² − 4x + 3이고, y = (x−2)² − 1이므로 최솟값은 −1이다.",
+    "detailedExplanation": "x = 1, x = 3에서 y = 0이므로 y = (x−1)(x−3) = x² − 4x + 3. 표준형으로 변환: y = (x−2)² − 4 + 3 = (x−2)² − 1. a = 1 > 0이므로 꼭짓점에서 최솟값을 가지고, 최솟값 = −1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_140",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "이차함수",
+    "difficulty": "수능 기초",
+    "question": "이차함수 y = x² − 4x + 3에 대해 −1 ≤ x ≤ 4에서의 최댓값과 최솟값의 합은?",
+    "choices": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = (x−2)² − 1이고, x = −1일 때 y = 8, x = 2일 때 y = −1이므로 최댓값 8 + 최솟값 (−1) = 7이다.",
+    "detailedExplanation": "y = x² − 4x + 3 = (x−2)² − 1. 꼭짓점 x = 2는 구간 [−1, 4] 안에 있으므로 최솟값은 x = 2일 때 y = −1. 끝점에서의 값: x = −1 → y = 1 + 4 + 3 = 8, x = 4 → y = 16 − 16 + 3 = 3. 최댓값은 x = −1일 때 8. 따라서 최댓값 + 최솟값 = 8 + (−1) = 7.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_141",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "대표 유형",
+    "question": "다음 중 옳은 것을 모두 고른 것은?\n\nㄱ. 두 점을 지나는 직선은 오직 하나이다.\nㄴ. 서로 다른 두 반직선은 반드시 서로 다른 직선 위에 있다.\nㄷ. 한 점을 지나는 직선은 무수히 많다.\nㄹ. 선분 AB와 선분 BA는 서로 다른 선분이다.",
+    "choices": [
+      "ㄱ, ㄷ",
+      "ㄱ, ㄴ, ㄷ",
+      "ㄴ, ㄷ, ㄹ",
+      "ㄱ, ㄴ, ㄷ, ㄹ"
+    ],
+    "answerIndex": 0,
+    "explanation": "ㄱ과 ㄷ은 옳다. ㄴ은 틀렸다(같은 직선 위의 다른 방향 반직선이 가능하다). ㄹ은 틀렸다(선분 AB와 선분 BA는 양 끝점이 같으므로 같은 선분이다).",
+    "detailedExplanation": "ㄱ. 서로 다른 두 점을 지나는 직선은 단 하나뿐이므로 옳다.\nㄴ. 직선 위의 점 A에서 오른쪽 방향 반직선과 왼쪽 방향 반직선은 같은 직선 위에 있지만 서로 다른 반직선이므로 ㄴ은 틀렸다.\nㄷ. 한 점을 지나는 직선은 방향을 달리하여 무수히 많이 그을 수 있으므로 옳다.\nㄹ. 선분은 두 끝점 사이의 부분으로 방향이 없어 AB와 BA는 같은 선분이다. 따라서 ㄹ은 틀렸다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_143",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "대표 유형",
+    "question": "∠AOB = 124°이고 OC가 ∠AOB의 이등분선일 때, ∠AOC의 크기와 ∠BOC의 크기의 차는?",
+    "choices": [
+      "0°",
+      "62°",
+      "31°",
+      "124°"
+    ],
+    "answerIndex": 0,
+    "explanation": "OC가 ∠AOB의 이등분선이므로 ∠AOC = ∠BOC = 62°이다. 따라서 두 각의 차는 0°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_144",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "응용 유형",
+    "question": "서로 다른 세 직선이 한 평면 위에 있을 때, 세 직선의 교점의 개수로 가능하지 않은 것은?",
+    "choices": [
+      "0개",
+      "1개",
+      "2개",
+      "4개"
+    ],
+    "answerIndex": 3,
+    "explanation": "세 직선의 교점 수는 0개(모두 평행), 1개(세 직선이 한 점에서 만남), 2개(두 직선이 평행하고 나머지 하나가 교차), 3개(세 직선이 각각 다른 점에서 만남)가 가능하다. 4개는 불가능하다.",
+    "detailedExplanation": "세 직선 l, m, n에 대해 경우를 분류한다.\n① 세 직선 모두 평행: 교점 0개\n② 세 직선이 한 점에서 만남: 교점 1개\n③ 두 직선만 평행하고 나머지 하나가 그 두 직선과 교차: 교점 2개 (l∥m, n이 l, m 각각 교차)\n④ 세 직선이 쌍마다 다른 점에서 교차 (삼각형 형성): 교점 3개\n두 직선의 교점은 최대 1개이므로 세 직선 쌍의 수는 3이고, 최대 교점은 3개이다. 따라서 4개는 절대 나올 수 없다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_145",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "기본 도형",
+    "difficulty": "수능 기초",
+    "question": "그림과 같이 점 O에서 네 개의 반직선 OA, OB, OC, OD가 나온다. ∠AOB = 2∠BOC이고 ∠COD = 40°, ∠AOD = 160°일 때, ∠AOB의 크기는?",
+    "choices": [
+      "60°",
+      "80°",
+      "90°",
+      "100°"
+    ],
+    "answerIndex": 1,
+    "explanation": "∠AOD = ∠AOB + ∠BOC + ∠COD이므로 ∠BOC = x로 놓으면 2x + x + 40° = 160°, 3x = 120°, x = 40°. 따라서 ∠AOB = 2x = 80°이다.",
+    "detailedExplanation": "∠BOC = x로 놓으면 ∠AOB = 2x이다.\n∠AOD = ∠AOB + ∠BOC + ∠COD\n160° = 2x + x + 40°\n160° − 40° = 3x\n120° = 3x\nx = 40°\n따라서 ∠AOB = 2 × 40° = 80°",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_146",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "응용 유형",
+    "question": "평행사변형 ABCD에서 ∠A = 60°, AB = 5, AD = 8이다. 대각선 AC와 BD의 교점을 O라 할 때, 삼각형 AOB의 넓이는?",
+    "choices": [
+      "10√3",
+      "5√3",
+      "20√3",
+      "15√3"
+    ],
+    "answerIndex": 1,
+    "explanation": "평행사변형의 넓이 = AB × AD × sin(∠A) = 5 × 8 × sin60° = 40 × (√3/2) = 20√3. 대각선은 평행사변형을 넓이가 같은 4개의 삼각형으로 나누므로 삼각형 AOB의 넓이 = 20√3 ÷ 4 = 5√3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_147",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "대표 유형",
+    "question": "이등변삼각형 ABC에서 AB = AC = 10, BC = 12이다. 꼭짓점 A에서 BC에 내린 수선의 발을 H라 하고, 점 P가 AH 위에 있을 때 PB + PC의 최솟값은?",
+    "choices": [
+      "12",
+      "16",
+      "14",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "이등변삼각형에서 AH ⊥ BC이므로 대칭축 AH 위의 점 P에 대해 PB = PC. AH = √(10²−6²) = 8. P가 AH 위에 있으면 PB = PC이므로 PB+PC = 2PB. PB의 최솟값은 P=H일 때 PB = BH = 6이므로 2×6 = 12.",
+    "detailedExplanation": "H는 BC의 중점이므로 BH = 6. AH = √(AB²−BH²) = √(100−36) = 8. P가 AH 위에 있을 때 대칭성에 의해 PB = PC이므로 PB+PC = 2PB. PB는 P가 H에 있을 때 최소이고 PB = BH = 6. 따라서 최솟값 = 2×6 = 12.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_148",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "응용 유형",
+    "question": "사다리꼴 ABCD에서 AD∥BC, AD = 4, BC = 10, 높이 h = 6이다. 두 대각선 AC와 BD의 교점을 P라 할 때, 삼각형 ABP의 넓이는?",
+    "choices": [
+      "840/49",
+      "60/7",
+      "120/7",
+      "30/7"
+    ],
+    "answerIndex": 1,
+    "explanation": "삼각형 ABP의 넓이를 S라 하면, △APD와 △CPB는 닮음이고 닮음비 = AD:BC = 4:10 = 2:5. △ABP와 △CDP의 넓이비 = 2×5 = 10(대각선 교점). 사다리꼴 넓이 = (4+10)×6÷2 = 42. △APD:△CPB = 4:25이고 △ABP = △CDP. S + S + (4k + 25k) = 42에서 k를 구하면: 2S = BC/AD × S이므로 S(BC):S(AD) = 5:2. 전체에서 S(ABP) = S(CDP), S(ADP) = (4/25)S(BCP). 42 = 2S + (4/25)x + x. 재계산: S(ABP)=S(CDP)=S, S(ADP)/S(BCP)=16/25. 합: 2S+S(ADP)+S(BCP)=42, S(ADP)=(4/10)S(ABP)×(4/10)... 정확히: S(ABP)=60/7.",
+    "detailedExplanation": "AD∥BC이므로 △APD∽△CPB (AA닮음), 닮음비 = 2:5. S(APD):S(CPB) = 4:25. △ABP와 △ADP는 밑변 BP, DP이고 높이 같으므로 S(ABP):S(ADP) = BP:DP = 5:2. 마찬가지로 S(CBP):S(CDP) = BP:DP = 5:2. S(ABP) = S(CDP) = S라 하면 S(ADP) = (2/5)S, S(CBP) = (5/2)S. 전체 = S + S + (2/5)S + (5/2)S = 2S + 29S/10 = 49S/10 = 42. S = 420/49 = 60/7.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_149",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "삼각형과 사각형",
+    "difficulty": "수능 기초",
+    "question": "삼각형 ABC에서 AB = c, BC = a, CA = b이고 a : b : c = 5 : 7 : 8이다. cos A의 값은?",
+    "choices": [
+      "1/2",
+      "11/14",
+      "5/7",
+      "3/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "코사인 법칙: cos A = (b² + c² − a²) / (2bc) = (49 + 64 − 25) / (2×7×8) = 88/112 = 11/14.",
+    "detailedExplanation": "a=5k, b=7k, c=8k로 놓으면 코사인 법칙에서 cos A = (b²+c²−a²)/(2bc) = (49k²+64k²−25k²)/(2×7k×8k) = 88k²/112k² = 88/112 = 11/14.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_150",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "대표 유형",
+    "question": "두 삼각형 △ABC와 △DEF가 닮음이고 닮음비가 3:5이다. △ABC의 넓이가 27cm²일 때, △DEF의 넓이는?",
+    "choices": [
+      "45cm²",
+      "75cm²",
+      "81cm²",
+      "135cm²"
+    ],
+    "answerIndex": 1,
+    "explanation": "닮음비가 3:5이면 넓이비는 3²:5² = 9:25이므로, △DEF의 넓이 = 27 × (25/9) = 75cm²이다.",
+    "detailedExplanation": "닮음비가 m:n이면 넓이비는 m²:n²이다. 여기서 닮음비 3:5 → 넓이비 9:25. △ABC의 넓이가 27cm²이므로 27:x = 9:25, 9x = 675, x = 75cm².",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_151",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "대표 유형",
+    "question": "닮음비가 2:3인 두 닮음 입체도형이 있다. 작은 도형의 부피가 16cm³일 때, 큰 도형의 부피는?",
+    "choices": [
+      "24cm³",
+      "36cm³",
+      "48cm³",
+      "54cm³"
+    ],
+    "answerIndex": 3,
+    "explanation": "닮음비가 2:3이면 부피비는 2³:3³ = 8:27이므로, 큰 도형의 부피 = 16 × (27/8) = 54cm³이다.",
+    "detailedExplanation": "닮음비 m:n → 부피비 m³:n³. 닮음비 2:3 → 부피비 8:27. 작은 도형 부피 16cm³라 하면 16:x = 8:27 → 8x = 432 → x = 54cm³.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_152",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "도형의 닮음",
+    "difficulty": "수능 기초",
+    "question": "△ABC에서 변 AB 위의 점 D와 변 AC 위의 점 E에 대해 DE∥BC이다. AD = 4, DB = 2, BC = 9일 때, DE의 길이는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "DE∥BC이면 △ADE∽△ABC(AA닮음)이고 닮음비는 AD:AB = 4:6 = 2:3이므로 DE = BC × (2/3) = 9 × (2/3) = 6이다.",
+    "detailedExplanation": "DE∥BC이면 ∠ADE = ∠ABC, ∠AED = ∠ACB(동위각)이므로 △ADE∽△ABC(AA닮음). AB = AD + DB = 4 + 2 = 6. 닮음비 = AD:AB = 4:6 = 2:3. DE/BC = 2/3 → DE = 9 × 2/3 = 6.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_153",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "대표 유형",
+    "question": "대각선의 길이가 13이고 넓이가 60인 직사각형의 가로와 세로의 합은?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answerIndex": 3,
+    "explanation": "가로 a, 세로 b라 하면 a²+b²=169, ab=60이므로 (a+b)²=a²+2ab+b²=169+120=289에서 a+b=17이다.",
+    "detailedExplanation": "① 피타고라스 정리에서 a²+b²=13²=169\n② 넓이 조건에서 ab=60\n③ (a+b)²=a²+2ab+b²=169+2×60=289\n④ a+b=√289=17\n⑤ 실제 값 확인: (a−b)²=169−120=49이므로 a−b=7, 따라서 a=12, b=5 (또는 그 반대)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_154",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "대표 유형",
+    "question": "한 변의 길이가 6인 정삼각형의 넓이는?",
+    "choices": [
+      "6√3",
+      "8√3",
+      "9√3",
+      "12√3"
+    ],
+    "answerIndex": 2,
+    "explanation": "높이 h에 대해 h²+3²=6²이므로 h=3√3, 넓이=(1/2)×6×3√3=9√3이다.",
+    "detailedExplanation": "① 정삼각형의 높이는 꼭짓점에서 밑변에 수선을 내리면 밑변이 이등분되어 3이 됨\n② h²+3²=6² → h²=27 → h=3√3\n③ 넓이=(1/2)×(밑변)×(높이)=(1/2)×6×3√3=9√3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_155",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "응용 유형",
+    "question": "한 변의 길이가 10이고 한 대각선의 길이가 12인 마름모의 넓이는?",
+    "choices": [
+      "72",
+      "80",
+      "96",
+      "108"
+    ],
+    "answerIndex": 2,
+    "explanation": "마름모의 두 대각선은 수직이등분하므로 짧은 대각선의 절반을 x라 하면 6²+x²=10²에서 x=8, 긴 대각선=16, 넓이=(12×16)÷2=96이다.",
+    "detailedExplanation": "① 마름모의 대각선은 서로 수직이등분함\n② 짧은 대각선 12의 절반=6, 긴 대각선의 절반=x로 놓으면\n③ 6²+x²=10² → 36+x²=100 → x²=64 → x=8\n④ 긴 대각선=2×8=16\n⑤ 넓이=(d₁×d₂)÷2=(12×16)÷2=96",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_156",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "응용 유형",
+    "question": "세 변의 길이가 5, 12, 13인 직각삼각형에서 빗변에 대한 높이는?",
+    "choices": [
+      "48/13",
+      "56/13",
+      "60/13",
+      "65/13"
+    ],
+    "answerIndex": 2,
+    "explanation": "직각삼각형의 넓이를 두 가지 방법으로 구하면 (5×12)÷2=(13×h)÷2이므로 h=60/13이다.",
+    "detailedExplanation": "① 5²+12²=25+144=169=13²이므로 빗변은 13\n② 직각을 낀 두 변으로 넓이 계산: S=(5×12)÷2=30\n③ 빗변을 밑변으로 놓으면: S=(13×h)÷2=30\n④ h=60÷13=60/13",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_157",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "피타고라스 정리",
+    "difficulty": "수능 기초",
+    "question": "직사각형 ABCD의 내부에 점 P가 있다. PA=3, PB=4, PC=5일 때 PD의 길이는?",
+    "choices": [
+      "√17",
+      "3√2",
+      "√19",
+      "2√5"
+    ],
+    "answerIndex": 1,
+    "explanation": "직사각형 내부 임의의 점 P에 대해 PA²+PC²=PB²+PD²이 성립하므로 9+25=16+PD², PD²=18, PD=3√2이다.",
+    "detailedExplanation": "① 직사각형 ABCD의 꼭짓점 A(0,b), B(a,b), C(a,0), D(0,0), P(x,y)로 설정\n② PA²+PC²=(x²+(y−b)²)+((x−a)²+y²)=x²+y²+(x−a)²+(y−b)²\n③ PB²+PD²=((x−a)²+(y−b)²+x²+y²)와 동일하게 전개되므로 PA²+PC²=PB²+PD² 성립\n④ 3²+5²=4²+PD² → 34=16+PD² → PD²=18 → PD=√18=3√2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_158",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "대표 유형",
+    "question": "원에 내접하는 사각형 ABCD에서 ∠A = (3x+10)°, ∠B = (2x+20)°, ∠C = (x+50)°일 때, ∠D의 크기는?",
+    "choices": [
+      "85°",
+      "95°",
+      "100°",
+      "110°"
+    ],
+    "answerIndex": 2,
+    "explanation": "원에 내접하는 사각형의 대각의 합은 180°이므로 ∠A+∠C = 180°에서 x=30, ∠B=80°, ∠D = 180°-80° = 100°이다.",
+    "detailedExplanation": "① 대각의 합 조건: ∠A+∠C = (3x+10)+(x+50) = 4x+60 = 180 → x = 30\n② ∠B = 2(30)+20 = 80°\n③ ∠B와 ∠D도 대각이므로 ∠D = 180°-80° = 100°\n오답 분석: 95°는 x=25로 잘못 계산한 경우, 110°는 ∠B=70°로 잘못 계산한 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_159",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "응용 유형",
+    "question": "원 위의 점 T에서 그은 접선과 현 TA가 이루는 각이 65°이다. 호 TA의 장호 위에 점 B가 있을 때, ∠TBA의 크기는?",
+    "choices": [
+      "25°",
+      "55°",
+      "65°",
+      "130°"
+    ],
+    "answerIndex": 2,
+    "explanation": "접선-현의 각의 원리에 의해 접선과 현 TA가 이루는 각은 그 호에 대한 원주각과 같으므로 ∠TBA = 65°이다.",
+    "detailedExplanation": "접선-현의 각의 정리: 원의 접선과 그 접점을 지나는 현이 이루는 각은, 현이 가르는 두 호 중 그 각 안에 포함된 호에 대한 원주각과 같다.\n접선과 현 TA가 이루는 65°는 단호(단호 TA) 안쪽 각이므로, 장호 위의 점 B에서 본 ∠TBA = 65°.\n오답 분석: 130° = 2×65°는 접선-현의 각을 중심각처럼 2배로 계산한 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_160",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "응용 유형",
+    "question": "원 밖의 점 P에서 두 할선 PAB, PCD를 그었다. PA=3, AB=9, PC=4일 때, 현 CD의 길이는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "할선의 거듭제곱 정리 PA×PB = PC×PD에서 3×12 = 4×PD이므로 PD=9, CD = PD-PC = 9-4 = 5이다.",
+    "detailedExplanation": "① PB = PA+AB = 3+9 = 12\n② 할선-할선 정리: PA × PB = PC × PD → 3×12 = 4×PD → PD = 9\n③ CD = PD - PC = 9 - 4 = 5\n오답 분석: 9는 PD를 CD로 착각한 오류, 4는 CD=PC로 혼동한 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_161",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "대표 유형",
+    "question": "원 안에서 두 현 AB와 CD가 점 P에서 만날 때, PA=3, PB=8, PC=4이면 PD의 길이는?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "원 내부에서 교차하는 두 현에 대해 PA×PB = PC×PD가 성립하므로 3×8 = 4×PD, PD = 6이다.",
+    "detailedExplanation": "교차하는 두 현의 정리: 두 현이 원 내부의 점 P에서 만날 때 PA×PB = PC×PD\n3×8 = 4×PD → 24 = 4×PD → PD = 6\n오답 분석: 9는 PA×PB를 PB로만 나누거나 PB=12로 잘못 읽은 오류, 5는 PA+PB-PC-PD 방식으로 잘못 접근한 오류이다.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_162",
+    "subject": "중학 수학",
+    "chapter": "도형",
+    "lesson": "원의 성질",
+    "difficulty": "수능 기초",
+    "question": "원에 내접하는 삼각형 ABC에서 호 AB(점 C를 포함하지 않는 쪽)의 크기가 120°, 호 BC(점 A를 포함하지 않는 쪽)의 크기가 80°이다. 이때 ∠BAC의 크기는?",
+    "choices": [
+      "40°",
+      "60°",
+      "80°",
+      "100°"
+    ],
+    "answerIndex": 0,
+    "explanation": "원주각은 자신이 대하는 호(자신을 포함하지 않는 쪽)의 크기의 절반이므로, ∠BAC = (호 BC)/2 = 80°÷2 = 40°이다.",
+    "detailedExplanation": "① ∠BAC는 꼭짓점 A가 호 BC(A를 포함하지 않는 쪽, 크기 80°)에 대한 원주각이다.\n② 원주각 = (대응하는 호의 크기) ÷ 2 → ∠BAC = 80÷2 = 40°\n③ 검증: 호 CA = 360-120-80 = 160°, ∠ABC = 60°, ∠BCA = 80°, 합 = 40+60+80 = 180° ✓\n오답 분석: 80°는 호의 크기를 반으로 나누지 않은 오류, 60°는 호 AB의 절반으로 잘못 대응한 오류이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_163",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "응용 유형",
+    "question": "A, B, C, D, E 5명이 원형 탁자에 앉을 때, A와 B가 서로 이웃하지 않는 경우의 수는?",
+    "choices": [
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
+    "answerIndex": 0,
+    "explanation": "5명의 원형 배열 전체 경우의 수는 (5−1)!=24이고, A와 B가 이웃하는 경우는 A·B를 한 묶음으로 보아 4개 묶음의 원형 배열 (4−1)!=6에 A·B 내부 배열 2를 곱한 12이므로, 이웃하지 않는 경우는 24−12=12이다.",
+    "detailedExplanation": "원형 배열에서 전체=(5−1)!=4!=24.\nA와 B 이웃: [AB]로 묶으면 4개 원소의 원형 배열=(4−1)!=6, A·B 자리 바꿈 ×2 → 12.\n이웃하지 않는 경우=24−12=12.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_164",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "응용 유형",
+    "question": "방정식 x + y + z = 8을 만족하는 음이 아닌 정수 해 (x, y, z)의 개수는?",
+    "choices": [
+      "36",
+      "45",
+      "55",
+      "66"
+    ],
+    "answerIndex": 1,
+    "explanation": "음이 아닌 정수 해의 개수는 중복조합 공식 H(3,8)=C(8+3−1, 3−1)=C(10,2)=45이다.",
+    "detailedExplanation": "x+y+z=8, x,y,z≥0인 정수 해의 개수는 '같은 종류 3개에서 합이 8이 되게 중복 선택'하는 중복조합.\nH(3,8)=C(10,2)=10×9÷2=45.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_165",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "수능 기초",
+    "question": "집합 A={1, 2, 3, 4, 5}에서 집합 B={1, 2, 3}으로의 함수 f: A→B 중에서, f(1)+f(2)+f(3)+f(4)+f(5)=9를 만족하는 함수의 개수는?",
+    "choices": [
+      "40",
+      "45",
+      "50",
+      "55"
+    ],
+    "answerIndex": 1,
+    "explanation": "f의 치역이 B⊆{1,2,3}이므로 각 원소의 함숫값을 aᵢ∈{1,2,3}으로 놓고, a₁+a₂+a₃+a₄+a₅=9인 경우를 구한다. bᵢ=aᵢ−1로 치환하면 b₁+…+b₅=4 (bᵢ∈{0,1,2})이며 이를 만족하는 경우를 포함-배제로 계산하면 45이다.",
+    "detailedExplanation": "각 bᵢ=aᵢ−1 ∈ {0,1,2}, b₁+b₂+b₃+b₄+b₅=4.\n제약 없는 음이 아닌 정수 해: C(8,4)=70.\nbᵢ≥3인 경우 제외: 어느 한 bᵢ=3+cᵢ로 놓으면 나머지 합=1, C(5,1)×C(5,4)=5×5=25.\nbᵢ,bⱼ≥3이면 합≥6>4로 불가.\n포함-배제: 70−25=45.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_166",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "경우의 수",
+    "difficulty": "수능 기초",
+    "question": "남학생 3명, 여학생 3명 총 6명을 일렬로 세울 때, 여학생끼리는 서로 이웃하지 않도록 세우는 경우의 수는?",
+    "choices": [
+      "72",
+      "108",
+      "144",
+      "216"
+    ],
+    "answerIndex": 2,
+    "explanation": "남학생 3명을 먼저 일렬로 배열(3!=6)한 뒤, 남학생 사이와 양 끝의 4자리 중 3자리에 여학생 3명을 배열(P(4,3)=24)하므로 6×24=144이다.",
+    "detailedExplanation": "남학생 3명 배열: 3!=6가지.\n_남_남_남_ 형태에서 빈 자리(_) 4곳 중 3곳 선택 후 여학생 3명 배열: 4×3×2=24.\n전체=6×24=144.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_167",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "대표 유형",
+    "question": "두 사건 A, B에 대하여 P(A) = 1/3, P(B) = 1/2, P(A∩B) = 1/6일 때, P(Aᶜ∩B)의 값은?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "B = (A∩B) ∪ (Aᶜ∩B)의 분할을 이용하면 P(Aᶜ∩B) = P(B) − P(A∩B) = 1/2 − 1/6 = 1/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_middle_168",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "대표 유형",
+    "question": "1부터 30까지의 자연수 중 하나를 임의로 선택할 때, 선택한 수가 4의 배수이거나 6의 배수일 확률은?",
+    "choices": [
+      "1/3",
+      "7/15",
+      "8/15",
+      "2/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "4의 배수 7개, 6의 배수 5개, 공통(12의 배수) 2개이므로 (7+5−2)/30 = 10/30 = 1/3이다.",
+    "detailedExplanation": "4의 배수: {4,8,12,16,20,24,28} → 7개. 6의 배수: {6,12,18,24,30} → 5개. 4와 6의 공동 배수는 12의 배수인 {12,24} → 2개. 포함-배제: (7+5−2)/30 = 10/30 = 1/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_169",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "응용 유형",
+    "question": "어떤 시험에서 A가 합격할 확률은 2/5, B가 합격할 확률은 1/3이다. A와 B의 합격 여부가 서로 독립일 때, 적어돈 한 명이 합격할 확률은?",
+    "choices": [
+      "3/5",
+      "11/15",
+      "7/10",
+      "3/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "여사건 이용: P(둘 다 불합격) = (1−2/5)×(1−1/3) = 3/5×2/3 = 2/5이므로, P(적어돈 한 명) = 1 − 2/5 = 3/5이다.",
+    "detailedExplanation": "P(Aᶜ) = 3/5, P(Bᶜ) = 2/3. 독립이므로 P(둘 다 불합격) = 3/5 × 2/3 = 6/15 = 2/5. 따라서 P(적어돈 한 명 합격) = 1 − 2/5 = 3/5. 직접 확인: P(A∪B) = 2/5 + 1/3 − 2/5×1/3 = 6/15 + 5/15 − 2/15 = 9/15 = 3/5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_170",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "응용 유형",
+    "question": "주머니 속에 빨간 구슬 3개, 파란 구슬 4개, 노란 구슬 3개가 들어 있다. 임의로 2개를 동시에 꺼낼 때, 두 구슬이 서로 다른 색일 확률은?",
+    "choices": [
+      "11/15",
+      "7/15",
+      "4/5",
+      "2/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "전체 C(10,2)=45, 같은 색 2개: C(3,2)+C(4,2)+C(3,2)=3+6+3=12이므로 서로 다른 색일 확률=1−12/45=33/45=11/15이다.",
+    "detailedExplanation": "역사건 이용. 전체 경우: C(10,2) = 10×9/2 = 45. 서로 같은 색 2개를 뒤는 경우: 빨강 C(3,2)=3, 파랑 C(4,2)=6, 노랑 C(3,2)=3, 합계 12. 서로 다른 색 확률 = 1 − 12/45 = 33/45 = 11/15.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_171",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "확률",
+    "difficulty": "수능 기초",
+    "question": "한 개의 주사위를 두 번 던질 때, 두 눈의 수의 합이 소수(prime number)가 될 확률은?",
+    "choices": [
+      "5/18",
+      "5/12",
+      "13/36",
+      "7/18"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 눈의 합이 소수(2,3,5,7,11)인 경우가 1+2+4+6+2=15가지이므로 확률=15/36=5/12이다.",
+    "detailedExplanation": "전체: 6×6=36가지. 합=2: (1,1) → 1. 합=3: (1,2),(2,1) → 2. 합=5: (1,4),(4,1),(2,3),(3,2) → 4. 합=7: (1,6),(6,1),(2,5),(5,2),(3,4),(4,3) → 6. 합=11: (5,6),(6,5) → 2. 합이 소수인 경우의 합: 1+2+4+6+2=15가지. 확률=15/36=5/12.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_middle_172",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "응용 유형",
+    "question": "어느 반 학생 20명의 수학 점수의 평균이 72점이었다. 이후 성적 정정으로 한 학생의 점수가 54점에서 74점으로 변경되었다. 변경 후 평균은?",
+    "choices": [
+      "72점",
+      "73점",
+      "74점",
+      "75점"
+    ],
+    "answerIndex": 1,
+    "explanation": "점수가 74−54=20점 증가하므로, 새 평균 = (72×20+20)÷20 = 73점이다.",
+    "detailedExplanation": "① 기존 총점 = 72 × 20 = 1440점\n② 점수 변경으로 증가분 = 74 − 54 = 20점\n③ 변경 후 총점 = 1440 + 20 = 1460점\n④ 변경 후 평균 = 1460 ÷ 20 = 73점",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_173",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "대표 유형",
+    "question": "5개의 자료 3, 7, a, 9, 6의 평균이 6일 때, 편차의 제곱의 합(분산 × 자료 수)은?",
+    "choices": [
+      "20",
+      "24",
+      "28",
+      "30"
+    ],
+    "answerIndex": 0,
+    "explanation": "평균 6이면 3+7+a+9+6=30이므로 a=5. 각 편차: −3, 1, −1, 3, 0. 편차² 합 = 9+1+1+9+0 = 20이다.",
+    "detailedExplanation": "① 평균 = (3+7+a+9+6)÷5 = 6 → 합 = 30 → a = 5\n② 자료: 3, 7, 5, 9, 6\n③ 편차: 3−6=−3, 7−6=1, 5−6=−1, 9−6=3, 6−6=0\n④ 편차²: 9, 1, 1, 9, 0\n⑤ 편차² 합 = 9+1+1+9+0 = 20",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_middle_174",
+    "subject": "중학 수학",
+    "chapter": "확률과 통계",
+    "lesson": "통계",
+    "difficulty": "수능 기초",
+    "question": "자료 a, b, c, d, e의 평균이 10이고 분산이 4일 때, 2a+1, 2b+1, 2c+1, 2d+1, 2e+1로 이루어진 자료의 평균과 표준편차를 순서대로 바르게 나열한 것은?",
+    "choices": [
+      "21, 4",
+      "21, 2",
+      "20, 4",
+      "20, 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "각 값에 2를 곱하고 1을 더하면 평균은 2×10+1=21, 분산은 2²×4=16, 표준편차는 √16=4이다.",
+    "detailedExplanation": "① 원래 평균 = 10, 분산 = 4, 표준편차 = √4 = 2\n② 변환: 각 xᵢ → 2xᵢ+1\n③ 새 평균 = 2×10+1 = 21\n④ 상수를 더해도 분산은 불변, 상수 배는 분산을 그 제곱배로 변환: 새 분산 = 2²×4 = 16\n⑤ 새 표준편차 = √16 = 4\n⑥ 따라서 평균 21, 표준편차 4",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "hand_mid_1",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "대표 유형",
+    "question": "이차방정식 x² − x − 6 = 0 의 두 근의 곱은?",
+    "choices": [
+      "−6",
+      "−1",
+      "1",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x−3)(x+2) = 0 이므로 두 근은 3, −2. 곱은 −6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_mid_2",
+    "subject": "중학 수학",
+    "chapter": "함수",
+    "lesson": "일차함수",
+    "difficulty": "대표 유형",
+    "question": "일차함수 y = −2x + 4 의 x절편은?",
+    "choices": [
+      "−2",
+      "2",
+      "4",
+      "−4"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 0 일 때 0 = −2x + 4, x = 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_short_mid_1",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "일차방정식",
+    "difficulty": "개념 확인",
+    "type": "short",
+    "question": "방정식 3x − 5 = 7 의 해를 구하시오.",
+    "choices": [],
+    "answerIndex": 0,
+    "answer": "4",
+    "explanation": "3x=12 이므로 x=4.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "hand_short_mid_2",
+    "subject": "중학 수학",
+    "chapter": "방정식과 부등식",
+    "lesson": "이차방정식",
+    "difficulty": "기본 유형",
+    "type": "short",
+    "question": "이차방정식 x² − 9 = 0 의 양의 해를 구하시오.",
+    "choices": [],
+    "answerIndex": 0,
+    "answer": "3",
+    "explanation": "x=±3 이고 양의 해는 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  }
+]

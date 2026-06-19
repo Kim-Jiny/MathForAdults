@@ -1,0 +1,3800 @@
+[
+  {
+    "id": "ca_seqlim_001",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "lim(n→∞) 1/n 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "∞",
+      "1/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "n이 커질수록 1/n 은 0에 한없이 가까워집니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_seqlim_002",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "lim(n→∞) (2n + 1)/n 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "∞"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 n으로 나누면 (2 + 1/n) → 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_seqlim_003",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "lim(n→∞) (3n² + 1)/(n² + n) 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "∞"
+    ],
+    "answerIndex": 2,
+    "explanation": "최고차항 계수의 비. (3 + 1/n²)/(1 + 1/n) → 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ca_series_001",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "대표 유형",
+    "question": "첫째항이 1, 공비가 1/2 인 무한등비급수의 합은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "∞"
+    ],
+    "answerIndex": 1,
+    "explanation": "|r|<1 일 때 합은 a/(1−r) = 1/(1 − 1/2) = 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ca_series_002",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "수능 기초",
+    "question": "무한등비급수 1/3 + (1/3)² + (1/3)³ + ⋯ 의 합은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "첫째항 1/3, 공비 1/3. 합 = (1/3)/(1 − 1/3) = (1/3)/(2/3) = 1/2.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ca_diff_001",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "여러 가지 함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "y = eˣ 의 도함수는?",
+    "choices": [
+      "eˣ",
+      "x·eˣ",
+      "e",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "지수함수 eˣ 의 도함수는 자기 자신 eˣ 입니다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_diff_002",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "여러 가지 함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "y = ln x 의 도함수는?",
+    "choices": [
+      "x",
+      "1/x",
+      "ln x",
+      "eˣ"
+    ],
+    "answerIndex": 1,
+    "explanation": "자연로그 ln x 의 도함수는 1/x.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_diff_003",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "여러 가지 함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "y = sin x 의 도함수는?",
+    "choices": [
+      "cos x",
+      "−cos x",
+      "−sin x",
+      "sin x"
+    ],
+    "answerIndex": 0,
+    "explanation": "sin x 의 도함수는 cos x.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_diff_004",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "여러 가지 미분법",
+    "difficulty": "수능 기초",
+    "question": "y = x·eˣ 의 도함수는?",
+    "choices": [
+      "eˣ",
+      "(1 + x)eˣ",
+      "x·eˣ",
+      "(x − 1)eˣ"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱의 미분: (uv)′ = u′v + uv′ = 1·eˣ + x·eˣ = (1 + x)eˣ.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ca_int_001",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "여러 가지 적분법",
+    "difficulty": "대표 유형",
+    "question": "∫ eˣ dx 는?",
+    "choices": [
+      "eˣ + C",
+      "x·eˣ + C",
+      "eˣ",
+      "1/x + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "eˣ 의 부정적분은 eˣ + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ca_int_002",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "여러 가지 적분법",
+    "difficulty": "대표 유형",
+    "question": "∫ (1/x) dx (x > 0) 는?",
+    "choices": [
+      "ln x + C",
+      "1/x² + C",
+      "−1/x² + C",
+      "x + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "1/x 의 부정적분은 ln x + C (x > 0).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_1",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "다음 중 수렴하는 수열은?",
+    "choices": [
+      "aₙ = (-1)ⁿ",
+      "aₙ = n²",
+      "aₙ = 1/n",
+      "aₙ = n·(-1)ⁿ"
+    ],
+    "answerIndex": 2,
+    "explanation": "aₙ = 1/n은 n→∞일 때 0으로 수렴한다. 나머지는 진동하거나 양의 무한대로 발산한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_2",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "lim(n→∞) (3n + 1)/(n + 2) 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "∞"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 n으로 나누면 (3 + 1/n)/(1 + 2/n) → 3/1 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_3",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "lim(n→∞) (2n² − 3n + 1)/(n² + n − 2) 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 n²으로 나누면 (2 − 3/n + 1/n²)/(1 + 1/n − 2/n²) → 2/1 = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_4",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "lim(n→∞) (√(n² + 4n) − n) 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모에 √(n² + 4n) + n을 곱하면 4n/(√(n² + 4n) + n) = 4/(√(1 + 4/n) + 1) → 4/2 = 2이다.",
+    "detailedExplanation": "√(n² + 4n) − n에 켤레식 √(n² + 4n) + n을 분자·분모에 곱한다.\n= (n² + 4n − n²)/(√(n² + 4n) + n)\n= 4n/(√(n² + 4n) + n)\n분자·분모를 n으로 나누면\n= 4/(√(1 + 4/n) + 1) → 4/(1 + 1) = 2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_5",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "등비수열 {aₙ}의 공비가 r일 때, lim(n→∞) aₙ = 0이 되기 위한 조건으로 옳은 것은?",
+    "choices": [
+      "|r| > 1",
+      "|r| = 1",
+      "|r| < 1",
+      "r > 0"
+    ],
+    "answerIndex": 2,
+    "explanation": "등비수열 aₙ = a·rⁿ에서 |r| < 1이면 rⁿ → 0이므로 aₙ → 0으로 수렴한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_6",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "lim(n→∞) (3ⁿ⁺² + 2ⁿ)/(3ⁿ⁺¹ + 5·2ⁿ) 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "1/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 (9 + (2/3)ⁿ)/(3 + 5·(2/3)ⁿ) → 9/3 = 3이다.",
+    "detailedExplanation": "분자 3ⁿ⁺² + 2ⁿ = 3ⁿ·9 + 2ⁿ, 분모 3ⁿ⁺¹ + 5·2ⁿ = 3ⁿ·3 + 5·2ⁿ\n3ⁿ으로 나누면\n= (9 + (2/3)ⁿ)/(3 + 5·(2/3)ⁿ)\n|2/3| < 1이므로 (2/3)ⁿ → 0\n따라서 극한값 = 9/3 = 3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_7",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "수능 기초",
+    "question": "모든 자연수 n에 대해 n/(n+1) ≤ aₙ ≤ (n+2)/(n+1) 이 성립할 때, lim(n→∞) aₙ의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "극한값이 존재하지 않는다"
+    ],
+    "answerIndex": 1,
+    "explanation": "lim(n→∞) n/(n+1) = 1이고 lim(n→∞) (n+2)/(n+1) = 1이므로, 수열의 극한의 대소관계(샌드위치 정리)에 의해 lim(n→∞) aₙ = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_8",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "등비수열 {rⁿ}에서 |r| < 1일 때, lim(n→∞) rⁿ의 값은?",
+    "choices": [
+      "1",
+      "0",
+      "∞",
+      "r"
+    ],
+    "answerIndex": 1,
+    "explanation": "|r| < 1이면 n이 커질수록 rⁿ은 0에 수렴하므로 lim(n→∞) rⁿ = 0이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_9",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "다음 중 lim(n→∞) rⁿ = 0이 되는 r의 값은?",
+    "choices": [
+      "r = 1",
+      "r = −1",
+      "r = 3/2",
+      "r = −1/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "|r| < 1인 경우에만 rⁿ → 0이므로, |−1/2| = 1/2 < 1인 r = −1/2이 정답이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_10",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "lim(n→∞) (3ⁿ + 2ⁿ) / 3ⁿ 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 1 + (2/3)ⁿ → 1 + 0 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_11",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "lim(n→∞) (4ⁿ − 2·3ⁿ) / (4ⁿ + 3ⁿ) 의 값은?",
+    "choices": [
+      "−2",
+      "0",
+      "1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 4ⁿ으로 나누면 (1 − 2·(3/4)ⁿ) / (1 + (3/4)ⁿ) → (1 − 0) / (1 + 0) = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_12",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "수능 기초",
+    "question": "lim(n→∞) (3ⁿ⁺² + 2ⁿ⁺¹) / (3ⁿ⁺¹ + 2ⁿ) 의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 (9 + 2·(2/3)ⁿ) / (3 + (2/3)ⁿ) → 9/3 = 3이다.",
+    "detailedExplanation": "분자 = 3ⁿ⁺² + 2ⁿ⁺¹ = 9·3ⁿ + 2·2ⁿ, 분모 = 3ⁿ⁺¹ + 2ⁿ = 3·3ⁿ + 2ⁿ.\n3ⁿ > 2ⁿ이므로 3ⁿ으로 나누면: (9 + 2·(2/3)ⁿ) / (3 + (2/3)ⁿ).\n|2/3| < 1이므로 (2/3)ⁿ → 0, 따라서 극한 = 9/3 = 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_13",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "수능 실전",
+    "question": "수열 {aₙ}이 aₙ = (3ⁿ − (−2)ⁿ) / (3ⁿ + (−2)ⁿ) 으로 정의될 때, lim(n→∞) aₙ의 값은?",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "발산한다"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 (1 − (−2/3)ⁿ) / (1 + (−2/3)ⁿ)이 되고, |−2/3| < 1이므로 (−2/3)ⁿ → 0, 따라서 극한은 1/1 = 1이다.",
+    "detailedExplanation": "aₙ = (3ⁿ − (−2)ⁿ) / (3ⁿ + (−2)ⁿ). 분자·분모를 3ⁿ으로 나누면:\n(1 − (−2/3)ⁿ) / (1 + (−2/3)ⁿ).\n|−2/3| = 2/3 < 1이므로 (−2/3)ⁿ → 0 (부호가 교대하지만 절댓값이 0으로 수렴).\n따라서 극한 = (1 − 0)/(1 + 0) = 1.\n※ 흔한 오답: (−2)ⁿ의 부호가 교대함을 보고 '발산'으로 착각하거나, 분자·분모를 (−2)ⁿ으로 나눠 (3/2)ⁿ → ∞가 됨을 보고 발산으로 오판하는 경우가 많다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_14",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "개념 확인",
+    "question": "급수 ∑(n=1 to ∞) (1/3)ⁿ 의 합을 구하여라.",
+    "choices": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "3/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "첫째항 a = 1/3, 공비 r = 1/3인 등비급수이므로 합은 (1/3) ÷ (1 − 1/3) = (1/3) ÷ (2/3) = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_15",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "개념 확인",
+    "question": "급수 ∑(n=1 to ∞) aₙ 이 수렴하면 반드시 성립하는 것은?",
+    "choices": [
+      "lim(n→∞) aₙ = 0",
+      "∑aₙ = 0",
+      "aₙ > 0",
+      "aₙ 은 단조감소"
+    ],
+    "answerIndex": 0,
+    "explanation": "급수 ∑aₙ이 수렴하면 일반항 aₙ → 0 이어야 한다(수렴의 필요조건).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_16",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "기본 유형",
+    "question": "첫째항이 4, 공비가 1/2인 등비급수의 합은?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "|r| = 1/2 < 1이므로 등비급수 합은 a/(1−r) = 4 ÷ (1 − 1/2) = 4 ÷ (1/2) = 8이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_17",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "기본 유형",
+    "question": "급수 ∑(n=1 to ∞) (3/4)ⁿ⁻¹ × (1/4) 의 합은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "1"
+    ],
+    "answerIndex": 3,
+    "explanation": "첫째항 a = 1/4 (n=1일 때 (3/4)⁰ × (1/4) = 1/4), 공비 r = 3/4이므로 합은 (1/4) ÷ (1 − 3/4) = (1/4) ÷ (1/4) = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_18",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "대표 유형",
+    "question": "급수 ∑(n=1 to ∞) 1/(n(n+2)) 의 합은?",
+    "choices": [
+      "1/2",
+      "3/4",
+      "1",
+      "5/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "부분분수로 1/(n(n+2)) = (1/2)(1/n − 1/(n+2))로 분해하면 부분합이 텔레스코핑되어 합은 (1/2)(1/1 + 1/2) = 3/4이다.",
+    "detailedExplanation": "1/(n(n+2)) = (1/2)(1/n − 1/(n+2)) 로 분해한다. 부분합 Sₙ = (1/2)[(1 − 1/3) + (1/2 − 1/4) + (1/3 − 1/5) + …]에서 소거되면 Sₙ = (1/2)(1 + 1/2 − 1/(n+1) − 1/(n+2)) 이다. n → ∞ 이면 S = (1/2)(3/2) = 3/4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_19",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "수능 실전",
+    "question": "그림과 같이 한 변의 길이가 1인 정사각형 S₁이 있다. S₁의 각 변의 중점을 이어 만든 정사각형을 S₂, 같은 방법으로 S₃, S₄, …를 만들 때, 모든 정사각형의 넓이의 합은?",
+    "choices": [
+      "1",
+      "3/2",
+      "2",
+      "5/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "S₁의 넓이는 1이고, 각 변의 중점을 이어 만든 정사각형의 넓이는 이전의 1/2배이므로 공비 1/2인 등비급수의 합은 1 ÷ (1 − 1/2) = 2이다.",
+    "detailedExplanation": "정사각형 S₁의 넓이 = 1² = 1이다. 한 변의 길이가 a인 정사각형의 각 변의 중점을 이으면 새 정사각형의 한 변 길이는 a/√2이므로 넓이는 a²/2 = 이전 넓이의 1/2배이다. 따라서 Sₙ의 넓이 = (1/2)ⁿ⁻¹이고, 전체 합은 ∑(n=1 to ∞)(1/2)ⁿ⁻¹ = 1 ÷ (1−1/2) = 2이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_20",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "개념 확인",
+    "question": "첫째항이 2이고 공비가 1/3인 등비급수의 합을 구하여라.",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "등비급수의 합 S = a/(1−r) = 2/(1−1/3) = 2/(2/3) = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_21",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "개념 확인",
+    "question": "등비급수 1 + 1/2 + 1/4 + 1/8 + ⋯ 의 합은?",
+    "choices": [
+      "1",
+      "3/2",
+      "2",
+      "5/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "첫째항 a=1, 공비 r=1/2이므로 합 S = 1/(1−1/2) = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_22",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "기본 유형",
+    "question": "등비급수 ∑(n=1~∞) 3×(2/3)ⁿ의 합을 구하여라.",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "첫째항(n=1) = 3×(2/3) = 2, 공비 r = 2/3이므로 S = 2/(1−2/3) = 2/(1/3) = 6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_23",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "기본 유형",
+    "question": "등비급수 ∑(n=1~∞) (−1/2)ⁿ⁻¹ × 4의 합을 구하여라.",
+    "choices": [
+      "4/3",
+      "8/3",
+      "4",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "첫째항 a=4, 공비 r=−1/2이므로 S = 4/(1−(−1/2)) = 4/(3/2) = 8/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_24",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "대표 유형",
+    "question": "0.999… (순환소수)을 등비급수를 이용하여 분수로 나타내면?",
+    "choices": [
+      "9/10",
+      "99/100",
+      "1",
+      "10/9"
+    ],
+    "answerIndex": 2,
+    "explanation": "0.999… = 9/10 + 9/100 + ⋯ 이므로 첫째항 9/10, 공비 1/10인 등비급수의 합 = (9/10)/(1−1/10) = (9/10)/(9/10) = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_25",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "대표 유형",
+    "question": "등비급수 ∑(n=1~∞) (x−1)ⁿ이 수렴할 때, x의 범위는?",
+    "choices": [
+      "0 < x < 2",
+      "0 ≤ x ≤ 2",
+      "−1 < x < 1",
+      "−2 < x < 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "등비급수가 수렴하려면 공비 r = x−1에 대해 |x−1| < 1이어야 하므로 0 < x < 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_26",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = eˣ의 도함수 f'(x)는?",
+    "choices": [
+      "xeˣ⁻¹",
+      "eˣ",
+      "eˣ + 1",
+      "1/eˣ"
+    ],
+    "answerIndex": 1,
+    "explanation": "지수함수 f(x) = eˣ의 도함수는 f'(x) = eˣ이다. 이는 자연 상수 e의 정의에서 비롯된 기본 공식이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_27",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = ln x (x > 0)의 도함수 f'(x)는?",
+    "choices": [
+      "ln x",
+      "1/x",
+      "x · ln x",
+      "eˣ"
+    ],
+    "answerIndex": 1,
+    "explanation": "자연로그함수 f(x) = ln x의 도함수는 f'(x) = 1/x이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_28",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = e³ˣ의 도함수 f'(x)는?",
+    "choices": [
+      "e³ˣ",
+      "3e³ˣ",
+      "3xeˣ",
+      "e³ˣ/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = e³ˣ × (3x)' = 3e³ˣ이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_29",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = log₂x (x > 0)의 도함수 f'(x)는?",
+    "choices": [
+      "1/(x ln 2)",
+      "ln 2 / x",
+      "1/(2x)",
+      "log₂(1/x)"
+    ],
+    "answerIndex": 0,
+    "explanation": "로그함수 f(x) = logₐx의 도함수 공식 f'(x) = 1/(x ln a)에 a = 2를 대입하면 f'(x) = 1/(x ln 2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_30",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = x²eˣ의 도함수 f'(x)는?",
+    "choices": [
+      "2xeˣ",
+      "x²eˣ",
+      "eˣ(x² + 2x)",
+      "eˣ(x² − 2x)"
+    ],
+    "answerIndex": 2,
+    "explanation": "곱의 미분법에 의해 f'(x) = (x²)'eˣ + x²(eˣ)' = 2xeˣ + x²eˣ = eˣ(x² + 2x)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_31",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = ln(x² + 1)의 도함수 f'(x)는?",
+    "choices": [
+      "1/(x² + 1)",
+      "2x/(x² + 1)",
+      "2/(x² + 1)",
+      "2x · ln(x² + 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = 1/(x² + 1) × (x² + 1)' = 2x/(x² + 1)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_32",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = eˣ/(x + 1)에 대해 f'(0)의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "−1"
+    ],
+    "answerIndex": 0,
+    "explanation": "몫의 미분법으로 f'(x) = [eˣ(x + 1) − eˣ] / (x + 1)² = eˣ · x / (x + 1)²이고, f'(0) = e⁰ × 0 / 1² = 0이다.",
+    "detailedExplanation": "몫의 미분법: f'(x) = [(eˣ)'(x+1) − eˣ(x+1)'] / (x+1)² = [eˣ(x+1) − eˣ·1] / (x+1)² = eˣ(x+1−1)/(x+1)² = xeˣ/(x+1)². x = 0 대입: 0 × e⁰ / (0+1)² = 0/1 = 0.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_33",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "수능 실전",
+    "question": "함수 f(x) = (ln x)² (x > 0)에 대해 f'(e²)의 값은?",
+    "choices": [
+      "2/e",
+      "4/e²",
+      "2",
+      "4/e"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = 2 ln x × (1/x)이고, x = e²를 대입하면 f'(e²) = 2 ln(e²) × 1/e² = 2 × 2 × 1/e² = 4/e²이 아니라 4/e²이다.",
+    "detailedExplanation": "f(x) = (ln x)²로 놓으면 합성함수 미분법에 의해 f'(x) = 2(ln x) × (ln x)' = 2 ln x × 1/x. x = e²를 대입하면: ln(e²) = 2이므로 f'(e²) = 2 × 2 × 1/e² = 4/e². 따라서 답은 4/e²이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_34",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = sin x 의 도함수 f'(x) 는?",
+    "choices": [
+      "cos x",
+      "−cos x",
+      "−sin x",
+      "tan x"
+    ],
+    "answerIndex": 0,
+    "explanation": "sin x 를 미분하면 cos x 이다. 이는 삼각함수 미분의 가장 기본 공식이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_35",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = cos x 의 도함수 f'(x) 는?",
+    "choices": [
+      "sin x",
+      "−sin x",
+      "cos x",
+      "−cos x"
+    ],
+    "answerIndex": 1,
+    "explanation": "cos x 를 미분하면 −sin x 이다. 부호에 주의해야 한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_36",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = sin 3x 의 도함수 f'(x) 는?",
+    "choices": [
+      "cos 3x",
+      "3cos 3x",
+      "−3cos 3x",
+      "sin 3x"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수 미분법에 의해 (sin 3x)' = cos 3x × 3 = 3cos 3x 이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_37",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = x sin x 의 도함수 f'(x) 는?",
+    "choices": [
+      "cos x",
+      "sin x + x cos x",
+      "x cos x − sin x",
+      "sin x − x cos x"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱의 미분법에 의해 f'(x) = (x)' sin x + x (sin x)' = sin x + x cos x 이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_38",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = sin²x 의 도함수 f'(x) 는?",
+    "choices": [
+      "2sin x",
+      "2cos x",
+      "2sin x cos x",
+      "−2sin x cos x"
+    ],
+    "answerIndex": 2,
+    "explanation": "합성함수 미분법에 의해 f'(x) = 2sin x × (sin x)' = 2sin x cos x 이다. 이는 sin 2x 와도 같다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_39",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = tan x 에 대하여 f'(π/4) 의 값은?",
+    "choices": [
+      "1",
+      "√2",
+      "2",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "tan x 의 도함수는 1/cos²x = sec²x 이고, f'(π/4) = 1/cos²(π/4) = 1/(1/√2)² = 2 이다.",
+    "detailedExplanation": "tan x 를 미분하면 sec²x = 1/cos²x 이다. x = π/4 에서 cos(π/4) = √2/2 이므로 cos²(π/4) = 1/2 이다. 따라서 f'(π/4) = 1/(1/2) = 2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_40",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = sin x / (1 + cos x) 의 도함수 f'(x) 를 간단히 하면?",
+    "choices": [
+      "1 / (1 + cos x)",
+      "sin x / (1 + cos x)²",
+      "cos x / (1 + cos x)",
+      "1 / (1 − cos x)"
+    ],
+    "answerIndex": 0,
+    "explanation": "몫의 미분법을 적용하면 f'(x) = [cos x(1+cos x) + sin²x] / (1+cos x)² = (cos x + cos²x + sin²x)/(1+cos x)² = (1+cos x)/(1+cos x)² = 1/(1+cos x) 이다.",
+    "detailedExplanation": "분자: (sin x)' × (1+cos x) − sin x × (1+cos x)' = cos x(1+cos x) − sin x × (−sin x) = cos x + cos²x + sin²x = cos x + 1. 분모: (1+cos x)². 따라서 f'(x) = (1+cos x)/(1+cos x)² = 1/(1+cos x).",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_41",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = (3x + 1)⁵ 를 미분하면 f'(x) 는?",
+    "choices": [
+      "5(3x + 1)⁴",
+      "15(3x + 1)⁴",
+      "5(3x + 1)⁴ · 3x",
+      "15(3x + 1)⁵"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = 5(3x + 1)⁴ × (3x + 1)' = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_42",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = sin(2x) 를 미분하면 f'(x) 는?",
+    "choices": [
+      "cos(2x)",
+      "2cos(2x)",
+      "−2cos(2x)",
+      "sin(2x) · 2"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = cos(2x) × (2x)' = cos(2x) × 2 = 2cos(2x).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_43",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = e^(x² + 1) 를 미분하면 f'(x) 는?",
+    "choices": [
+      "e^(x² + 1)",
+      "2x · e^(x²)",
+      "2x · e^(x² + 1)",
+      "(x² + 1) · e^(x² + 1)"
+    ],
+    "answerIndex": 2,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = e^(x² + 1) × (x² + 1)' = e^(x² + 1) × 2x = 2x · e^(x² + 1).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_44",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = ln(x² + 3x) 를 미분하면 f'(x) 는?",
+    "choices": [
+      "1 / (x² + 3x)",
+      "(2x + 3) / (x² + 3x)",
+      "ln(2x + 3)",
+      "(x² + 3x) / (2x + 3)"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f'(x) = (x² + 3x)' / (x² + 3x) = (2x + 3) / (x² + 3x).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_45",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = cos³(x) 를 미분하면 f'(x) 는?",
+    "choices": [
+      "3cos²(x)",
+      "−3cos²(x)",
+      "3cos²(x) · sin(x)",
+      "−3cos²(x) · sin(x)"
+    ],
+    "answerIndex": 3,
+    "explanation": "f(x) = {cos(x)}³ 으로 보면 f'(x) = 3cos²(x) × (cos(x))' = 3cos²(x) × (−sin(x)) = −3cos²(x) · sin(x).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_46",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "f(x) = √(4x² − 1) 일 때 f'(1) 의 값은?",
+    "choices": [
+      "4/√3",
+      "√3",
+      "4√3/3",
+      "8/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(x) = (4x² − 1)' / (2√(4x² − 1)) = 8x / (2√(4x² − 1)) = 4x / √(4x² − 1). x = 1 대입 시 f'(1) = 4 / √3 = 4√3/3.",
+    "detailedExplanation": "f(x) = (4x² − 1)^(1/2) 에 합성함수 미분을 적용하면 f'(x) = (1/2)(4x² − 1)^(−1/2) × 8x = 4x / √(4x² − 1). x = 1을 대입하면 f'(1) = 4 / √(4 − 1) = 4 / √3 = 4√3 / 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_47",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "f(x) = e^(sin x) 일 때 f''(0) 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "−1",
+      "e"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = e^(sin x) · cos x 이므로 f''(x) = e^(sin x) · cos²x − e^(sin x) · sin x. x = 0 대입 시 f''(0) = e⁰ · 1 − e⁰ · 0 = 1.",
+    "detailedExplanation": "f'(x) = e^(sin x) · cos x. 이를 다시 미분하면 f''(x) = (e^(sin x) · cos x)' = e^(sin x) · cos x · cos x + e^(sin x) · (−sin x) = e^(sin x)(cos²x − sin x). x = 0 대입: f''(0) = e^0(cos²0 − sin 0) = 1 × (1 − 0) = 1.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_48",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "수능 실전",
+    "question": "미분가능한 함수 g(x) 에 대해 f(x) = g(x²) 이다. g'(4) = 3 일 때, 곡선 y = f(x) 위의 점 x = 2 에서의 접선의 기울기는?",
+    "choices": [
+      "3",
+      "6",
+      "12",
+      "4g(2)"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(x) = g'(x²) × 2x 이므로 f'(2) = g'(4) × 4 = 3 × 4 = 12.",
+    "detailedExplanation": "합성함수의 미분법에 의해 f'(x) = g'(x²) · (x²)' = g'(x²) · 2x. x = 2를 대입하면 f'(2) = g'(2²) · 2 × 2 = g'(4) × 4. 주어진 조건 g'(4) = 3을 대입하면 f'(2) = 3 × 4 = 12.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_49",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = x²/(x+1) 을 미분하면 f'(x) 는?",
+    "choices": [
+      "f'(x) = (x²+2x)/(x+1)²",
+      "f'(x) = 2x/(x+1)²",
+      "f'(x) = (x²+2x+1)/(x+1)²",
+      "f'(x) = 2x(x+1)/(x+1)²"
+    ],
+    "answerIndex": 0,
+    "explanation": "몫의 미분법 (u/v)' = (u'v − uv')/v² 를 적용하면, u = x², v = x+1 이므로 f'(x) = (2x(x+1) − x²·1)/(x+1)² = (2x²+2x−x²)/(x+1)² = (x²+2x)/(x+1)².",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_50",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = 3/(x²) 을 몫의 미분법으로 미분하면 f'(x) 는?",
+    "choices": [
+      "f'(x) = 6/x³",
+      "f'(x) = −6/x³",
+      "f'(x) = 6/x²",
+      "f'(x) = −3/x³"
+    ],
+    "answerIndex": 1,
+    "explanation": "u = 3, v = x² 으로 놓으면 f'(x) = (0·x² − 3·2x)/x⁴ = −6x/x⁴ = −6/x³.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_51",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "기본 유형",
+    "question": "f(x) = (2x−1)/(x²+1) 일 때, f'(1) 의 값은?",
+    "choices": [
+      "1/2",
+      "0",
+      "−1/2",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "f'(x) = (2(x²+1) − (2x−1)·2x)/(x²+1)² = (2x²+2−4x²+2x)/(x²+1)² = (−2x²+2x+2)/(x²+1)² 이므로, f'(1) = (−2+2+2)/(1+1)² = 2/4 = 1/2.",
+    "detailedExplanation": "f'(1) = (−2·1+2·1+2)/(1+1)² = (−2+2+2)/4 = 2/4 = 1/2. 그런데 선택지를 다시 확인하면 정답은 1/2이 아닌 −1/2. f'(x) = (2(x²+1)−(2x−1)·2x)/(x²+1)²를 x=1에서 계산: 분자 = 2(2) − (1)(2) = 4−2 = 2, 분모 = 4, f'(1) = 2/4 = 1/2. 따라서 정답은 1/2(answerIndex=0).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_52",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "응용 유형",
+    "question": "f(x) = x/(x²+1) 일 때, f'(x) = 0 이 되는 x 의 값은?",
+    "choices": [
+      "x = 0",
+      "x = ±1",
+      "x = ±√2",
+      "x = 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = (1·(x²+1) − x·2x)/(x²+1)² = (1−x²)/(x²+1)². f'(x) = 0 이 되려면 1−x² = 0, 즉 x = ±1.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_53",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "수능 기초",
+    "question": "f(x) = (x³+1)/(x+1) (x ≠ −1) 일 때, f'(x) 를 구하면? (단, x ≠ −1)",
+    "choices": [
+      "f'(x) = x²−x+1",
+      "f'(x) = (2x³+3x²−1)/(x+1)²",
+      "f'(x) = x²",
+      "f'(x) = (x³+3x²+1)/(x+1)²"
+    ],
+    "answerIndex": 1,
+    "explanation": "x³+1 = (x+1)(x²−x+1) 로 인수분해되므로, x ≠ −1 에서 f(x) = x²−x+1. 따라서 f'(x) = 2x−1. 단, 이를 직접 몫의 미분으로 계산하면 f'(x) = (3x²(x+1)−(x³+1))/(x+1)² = (2x³+3x²−1)/(x+1)². x ≠ −1 에서 이를 약분하면 2x−1 과 동치. 하지만 선택지 중 가장 적절한 형태는 x²−x+1 을 미분한 2x−1이 아닌, f(x) = x²−x+1 자체를 묻는다면 answerIndex=0.",
+    "detailedExplanation": "x³+1 = (x+1)(x²−x+1) 이므로 f(x) = x²−x+1 (x ≠ −1). 따라서 f'(x) = 2x−1. 몫의 미분법으로 직접 구하면 f'(x) = (3x²(x+1)−(x³+1)·1)/(x+1)² = (3x³+3x²−x³−1)/(x+1)² = (2x³+3x²−1)/(x+1)². (x+1)으로 약분하면 (2x²+x−1)/(x+1) = (2x−1)(x+1)/(x+1) = 2x−1. 선택지에서 2x−1은 없으므로, 약분 전 형태인 (2x³+3x²−1)/(x+1)²이 정답.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_54",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "수능 실전",
+    "question": "함수 f(x) = (x²+px+q)/(x²+1) 이 x = 1 에서 극값을 가지고 f(1) = 2 일 때, p+q 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(1) = (1+p+q)/2 = 2 이므로 1+p+q = 4, p+q = 3. f'(x) = ((2x+p)(x²+1)−(x²+px+q)·2x)/(x²+1)². f'(1) = 0 조건: (2+p)·2−(1+p+q)·2 = 0, 즉 2(2+p) = 2(1+p+q) → 2+p = 1+p+q → q = 1. 그러면 p = 2, q = 1, p+q = 3.",
+    "detailedExplanation": "f(1) = (1+p+q)/(1+1) = (1+p+q)/2 = 2 이므로 1+p+q = 4, p+q = 3. f'(x) = ((2x+p)(x²+1)−(x²+px+q)·2x)/(x²+1)². x=1 에서 f'(1) = 0: 분자 = (2+p)(2)−(1+p+q)·2 = 2(2+p)−2(1+p+q). 1+p+q = 4 를 대입: = 2(2+p)−2·4 = 4+2p−8 = 2p−4 = 0 → p = 2. 따라서 q = 4−1−p = 4−1−2 = 1, p+q = 3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_55",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = x³ − 3x² + 4에서 f'(x) = 0을 만족하는 x의 값은?",
+    "choices": [
+      "x = 0 또는 x = 2",
+      "x = 1 또는 x = 3",
+      "x = −1 또는 x = 2",
+      "x = 0 또는 x = 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "f'(x) = 3x² − 6x = 3x(x − 2) = 0이므로 x = 0 또는 x = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_56",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = 2x³ − 3x² − 12x + 1이 감소하는 구간은?",
+    "choices": [
+      "x < −1 또는 x > 2",
+      "−1 < x < 2",
+      "x < 0 또는 x > 3",
+      "0 < x < 3"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = 6x² − 6x − 12 = 6(x + 1)(x − 2) ≤ 0이므로 −1 ≤ x ≤ 2에서 감소한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_57",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = x³ − 6x² + 9x + 2의 극댓값과 극솟값의 합은?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(x) = 3(x−1)(x−3) = 0에서 x=1일 때 극댓값 f(1) = 1−6+9+2 = 6, x=3일 때 극솟값 f(3) = 27−54+27+2 = 2이므로 합은 6+2 = 8이다.",
+    "detailedExplanation": "f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3). x < 1에서 f' > 0, 1 < x < 3에서 f' < 0, x > 3에서 f' > 0. 따라서 x=1에서 극대, x=3에서 극소. f(1) = 1 − 6 + 9 + 2 = 6, f(3) = 27 − 54 + 27 + 2 = 2. 극댓값 + 극솟값 = 6 + 2 = 8.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_58",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x³ − 3x + 2 위의 점 (2, 4)에서의 접선의 방정식은?",
+    "choices": [
+      "y = 9x − 14",
+      "y = 9x + 14",
+      "y = 3x − 2",
+      "y = 6x − 8"
+    ],
+    "answerIndex": 0,
+    "explanation": "y' = 3x² − 3이므로 x = 2에서 기울기는 3(4) − 3 = 9. 접선: y − 4 = 9(x − 2) → y = 9x − 14.",
+    "detailedExplanation": "y = x³ − 3x + 2, y' = 3x² − 3. x = 2일 때 y'(2) = 12 − 3 = 9. 점 (2, 4)를 지나고 기울기 9인 직선: y − 4 = 9(x − 2) → y = 9x − 18 + 4 = 9x − 14.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_59",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = x³ + ax² + bx가 x = 2에서 극솟값 −4를 가질 때, 상수 a + b의 값은?",
+    "choices": [
+      "−5",
+      "−3",
+      "1",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(2) = 0에서 12 + 4a + b = 0, f(2) = −4에서 8 + 4a + 2b = −4를 연립하면 a = −3, b = 0이므로 a + b = −3이다.",
+    "detailedExplanation": "f'(x) = 3x² + 2ax + b. 조건: ① f'(2) = 0 → 12 + 4a + b = 0, ② f(2) = −4 → 8 + 4a + 2b = −4 → 4a + 2b = −12 → 2a + b = −6. ①에서 4a + b = −12, ②에서 2a + b = −6. ① − ②: 2a = −6 → a = −3. b = −6 − 2(−3) = 0. 검증: f(x) = x³ − 3x², f'(x) = 3x² − 6x = 3x(x−2). x=2에서 극소(좌: f' < 0, 우: f' > 0). f(2) = 8 − 12 = −4. ✓ a + b = −3 + 0 = −3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_60",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "수능 기초",
+    "question": "방정식 x³ − 3x + k = 0이 서로 다른 세 실근을 가지도록 하는 정수 k의 개수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = x³ − 3x로 놓으면 f'(x) = 3(x−1)(x+1)에서 극댓값 f(−1) = 2, 극솟값 f(1) = −2. 세 실근 조건은 −2 < −k < 2, 즉 −2 < k < 2. 정수 k는 −1, 0, 1로 3개이다.",
+    "detailedExplanation": "f(x) = x³ − 3x + k의 서로 다른 세 실근 조건은 극댓값 > 0이고 극솟값 < 0인 경우이다. f'(x) = 3x² − 3 = 3(x+1)(x−1). x = −1에서 극대: f(−1) = −1 + 3 + k = k + 2 > 0 → k > −2. x = 1에서 극소: f(1) = 1 − 3 + k = k − 2 < 0 → k < 2. 따라서 −2 < k < 2. 정수 k: −1, 0, 1 → 3개.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_61",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "수능 실전",
+    "question": "함수 f(x) = x³ − 3x² + a에 대해 x ≥ 0에서 f(x) ≥ 0이 성립하도록 하는 실수 a의 최솟값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(x) = 3x(x − 2)에서 x ≥ 0에서의 극솟값은 f(2) = 8 − 12 + a = a − 4. f(x) ≥ 0이 되려면 a − 4 ≥ 0이므로 a ≥ 4. 따라서 a의 최솟값은 4이다.",
+    "detailedExplanation": "f'(x) = 3x² − 6x = 3x(x − 2). x ≥ 0에서 f'(x) = 0의 해: x = 0, x = 2. 증감표: 0 < x < 2에서 f' < 0(감소), x > 2에서 f' > 0(증가). x = 0에서 f(0) = a, x = 2에서 f(2) = 8 − 12 + a = a − 4(극소). x → ∞이면 f → ∞. x ≥ 0에서 최솟값은 f(2) = a − 4. f(x) ≥ 0이 되려면 a − 4 ≥ 0, 즉 a ≥ 4. 최솟값은 4.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_62",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "개념 확인",
+    "question": "∫2x·(x²+1)⁴ dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "(x²+1)⁵/5 + C",
+      "2(x²+1)⁵ + C",
+      "(x²+1)⁵ + C",
+      "8x(x²+1)³ + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "t = x²+1로 치환하면 dt = 2x dx이므로 ∫t⁴ dt = t⁵/5 + C = (x²+1)⁵/5 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_63",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "개념 확인",
+    "question": "∫cos(3x) dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "−3sin(3x) + C",
+      "sin(3x)/3 + C",
+      "3sin(3x) + C",
+      "−sin(3x)/3 + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "t = 3x으로 치환하면 dt = 3dx이므로 ∫cos(t)·(dt/3) = sin(t)/3 + C = sin(3x)/3 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_64",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "기본 유형",
+    "question": "∫x·√(x²+3) dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "(x²+3)^(3/2)/3 + C",
+      "2(x²+3)^(3/2)/3 + C",
+      "(x²+3)^(3/2)/2 + C",
+      "(x²+3)^(1/2) + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "t = x²+3으로 치환하면 dt = 2x dx이므로 ∫√t·(dt/2) = (1/2)·(2t^(3/2)/3) + C = t^(3/2)/3 + C = (x²+3)^(3/2)/3 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_65",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "기본 유형",
+    "question": "∫e^(2x+1) dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "2e^(2x+1) + C",
+      "e^(2x+1)/2 + C",
+      "e^(2x+1) + C",
+      "(2x+1)e^(2x+1) + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "t = 2x+1로 치환하면 dt = 2dx이므로 ∫e^t·(dt/2) = e^t/2 + C = e^(2x+1)/2 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_66",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "대표 유형",
+    "question": "∫x²·e^(x³) dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "3x²·e^(x³) + C",
+      "x³·e^(x³)/3 + C",
+      "e^(x³)/3 + C",
+      "e^(x³) + C"
+    ],
+    "answerIndex": 2,
+    "explanation": "t = x³으로 치환하면 dt = 3x² dx이므로 ∫e^t·(dt/3) = e^t/3 + C = e^(x³)/3 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_67",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "대표 유형",
+    "question": "∫(ln x)/x dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "1/x² + C",
+      "(ln x)² + C",
+      "(ln x)²/2 + C",
+      "ln(ln x) + C"
+    ],
+    "answerIndex": 2,
+    "explanation": "t = ln x로 치환하면 dt = (1/x)dx이므로 ∫t dt = t²/2 + C = (ln x)²/2 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_68",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "응용 유형",
+    "question": "∫sin³x dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "−cos x + cos³x/3 + C",
+      "cos x − cos³x/3 + C",
+      "−cos³x/3 + C",
+      "3sin²x·cos x + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "sin³x = sin x·(1−cos²x)로 변형 후 t = cos x (dt = −sin x dx)로 치환하면 ∫−(1−t²)dt = −t + t³/3 + C = −cos x + cos³x/3 + C.",
+    "detailedExplanation": "sin³x = sin x·sin²x = sin x·(1−cos²x)로 쓴다. t = cos x로 놓으면 dt = −sin x dx, 즉 sin x dx = −dt. 따라서 ∫sin x·(1−cos²x) dx = ∫(1−t²)(−dt) = ∫(t²−1) dt = t³/3 − t + C = cos³x/3 − cos x + C = −cos x + cos³x/3 + C.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_69",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "수능 실전",
+    "question": "정적분 ∫₀¹ x·√(1−x) dx 의 값은?",
+    "choices": [
+      "4/15",
+      "2/15",
+      "8/15",
+      "1/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "t = 1−x로 치환하면 x = 1−t, dx = −dt이고 구간은 [1, 0]→[0, 1]이 됨. ∫₀¹(1−t)·√t dt = ∫₀¹(t^(1/2) − t^(3/2)) dt = [2t^(3/2)/3 − 2t^(5/2)/5]₀¹ = 2/3 − 2/5 = 4/15.",
+    "detailedExplanation": "t = 1−x (x = 1−t, dx = −dt)로 치환한다. x=0일 때 t=1, x=1일 때 t=0이므로 ∫₀¹ x√(1−x) dx = ∫₁⁰ (1−t)·√t·(−dt) = ∫₀¹ (1−t)√t dt = ∫₀¹ (t^(1/2) − t^(3/2)) dt. 이를 계산하면 [2t^(3/2)/3 − 2t^(5/2)/5]₀¹ = 2/3 − 2/5 = 10/15 − 6/15 = 4/15.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_70",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "개념 확인",
+    "question": "부분적분법의 공식으로 옳은 것은?",
+    "choices": [
+      "∫f(x)g'(x)dx = f(x)g(x) + ∫f'(x)g(x)dx",
+      "∫f(x)g'(x)dx = f(x)g(x) − ∫f'(x)g(x)dx",
+      "∫f(x)g'(x)dx = f'(x)g(x) − ∫f(x)g(x)dx",
+      "∫f(x)g'(x)dx = f(x)g'(x) − ∫f'(x)g(x)dx"
+    ],
+    "answerIndex": 1,
+    "explanation": "{f(x)g(x)}' = f'(x)g(x) + f(x)g'(x)를 적분하면 f(x)g(x) = ∫f'(x)g(x)dx + ∫f(x)g'(x)dx이므로 ∫f(x)g'(x)dx = f(x)g(x) − ∫f'(x)g(x)dx이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_71",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "개념 확인",
+    "question": "∫xe^x dx 를 계산한 결과로 옳은 것은? (단, C는 적분상수)",
+    "choices": [
+      "xe^x + e^x + C",
+      "xe^x − e^x + C",
+      "e^x − xe^x + C",
+      "x²e^x/2 + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = x, g'(x) = e^x 로 놓으면 f'(x) = 1, g(x) = e^x 이므로 ∫xe^x dx = xe^x − ∫e^x dx = xe^x − e^x + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_72",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "기본 유형",
+    "question": "∫x cos x dx 를 계산한 결과로 옳은 것은? (단, C는 적분상수)",
+    "choices": [
+      "x sin x + cos x + C",
+      "x sin x − cos x + C",
+      "−x sin x + cos x + C",
+      "x cos x + sin x + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(x) = x, g'(x) = cos x 로 놓으면 f'(x) = 1, g(x) = sin x 이므로 ∫x cos x dx = x sin x − ∫sin x dx = x sin x + cos x + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_73",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "기본 유형",
+    "question": "∫ln x dx 를 계산한 결과로 옳은 것은? (단, C는 적분상수, x > 0)",
+    "choices": [
+      "x ln x + x + C",
+      "x ln x − x + C",
+      "ln x − x + C",
+      "x/(ln x) + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = ln x, g'(x) = 1 로 놓으면 f'(x) = 1/x, g(x) = x 이므로 ∫ln x dx = x ln x − ∫x·(1/x) dx = x ln x − x + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_74",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "대표 유형",
+    "question": "∫x² e^x dx 를 계산한 결과로 옳은 것은? (단, C는 적분상수)",
+    "choices": [
+      "x²e^x − 2xe^x + 2e^x + C",
+      "x²e^x + 2xe^x − 2e^x + C",
+      "x²e^x − 2xe^x − 2e^x + C",
+      "2xe^x − x²e^x + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "부분적분을 두 번 적용하면 ∫x²e^x dx = x²e^x − 2∫xe^x dx = x²e^x − 2(xe^x − e^x) + C = x²e^x − 2xe^x + 2e^x + C.",
+    "detailedExplanation": "1단계: f = x², g' = e^x 로 놓으면 ∫x²e^x dx = x²e^x − ∫2xe^x dx.\n2단계: ∫2xe^x dx에 다시 부분적분. f = 2x, g' = e^x 이면 ∫2xe^x dx = 2xe^x − ∫2e^x dx = 2xe^x − 2e^x.\n3단계: 종합하면 x²e^x − (2xe^x − 2e^x) + C = x²e^x − 2xe^x + 2e^x + C.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_75",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀^(π/2) x sin x dx 의 값은?",
+    "choices": [
+      "0",
+      "π/2 − 1",
+      "1",
+      "π/2 + 1"
+    ],
+    "answerIndex": 2,
+    "explanation": "∫x sin x dx = −x cos x + sin x + C 이고, [−x cos x + sin x]₀^(π/2) = (0 + 1) − (0 + 0) = 1.",
+    "detailedExplanation": "f = x, g' = sin x 로 놓으면 f' = 1, g = −cos x.\n∫₀^(π/2) x sin x dx = [−x cos x]₀^(π/2) + ∫₀^(π/2) cos x dx = [−x cos x + sin x]₀^(π/2).\nx = π/2 대입: −(π/2)·cos(π/2) + sin(π/2) = 0 + 1 = 1.\nx = 0 대입: 0 + 0 = 0.\n따라서 정답은 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_76",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "응용 유형",
+    "question": "I = ∫e^x sin x dx 라 할 때, I 의 값은? (단, C는 적분상수)",
+    "choices": [
+      "(e^x sin x + e^x cos x)/2 + C",
+      "(e^x sin x − e^x cos x)/2 + C",
+      "e^x sin x − e^x cos x + C",
+      "(e^x cos x − e^x sin x)/2 + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "부분적분을 두 번 적용하면 I = e^x sin x − e^x cos x − I 이므로 2I = e^x(sin x − cos x), 따라서 I = e^x(sin x − cos x)/2 + C.",
+    "detailedExplanation": "1단계: f = sin x, g' = e^x 로 놓으면 I = e^x sin x − ∫e^x cos x dx.\n2단계: J = ∫e^x cos x dx 에 다시 부분적분. f = cos x, g' = e^x 이면 J = e^x cos x + ∫e^x sin x dx = e^x cos x + I.\n3단계: I = e^x sin x − J = e^x sin x − e^x cos x − I.\n4단계: 2I = e^x(sin x − cos x), I = e^x(sin x − cos x)/2 + C.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_77",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "수능 기초",
+    "question": "∫₁^e x² ln x dx 의 값은?",
+    "choices": [
+      "(2e³ + 1)/9",
+      "(2e³ − 1)/9",
+      "(e³ + 2)/9",
+      "(e³ − 2)/9"
+    ],
+    "answerIndex": 0,
+    "explanation": "f = ln x, g' = x² 로 놓으면 ∫x² ln x dx = (x³/3)ln x − ∫(x³/3)·(1/x)dx = (x³/3)ln x − x³/9 + C. 대입하면 [(x³/3)ln x − x³/9]₁^e = (e³/3 − e³/9) − (0 − 1/9) = 2e³/9 + 1/9 = (2e³ + 1)/9.",
+    "detailedExplanation": "1단계: f = ln x, g' = x² 로 놓으면 f' = 1/x, g = x³/3.\n2단계: ∫₁^e x² ln x dx = [(x³/3)ln x]₁^e − ∫₁^e (x³/3)·(1/x) dx = [(x³/3)ln x]₁^e − (1/3)∫₁^e x² dx.\n3단계: [(x³/3)ln x]₁^e = e³/3·1 − 1/3·0 = e³/3.\n4단계: (1/3)∫₁^e x² dx = (1/3)·[x³/3]₁^e = (1/3)·(e³/3 − 1/3) = (e³ − 1)/9.\n5단계: e³/3 − (e³ − 1)/9 = 3e³/9 − (e³ − 1)/9 = (3e³ − e³ + 1)/9 = (2e³ + 1)/9.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_78",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = x − 1에 대하여 x축과 직선 x = 0, x = 3으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "3/2",
+      "5/2",
+      "1/2",
+      "7/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = x − 1은 x = 1에서 x축과 만나므로, 넓이 = ∫₀¹(1−x)dx + ∫₁³(x−1)dx = 1/2 + 2 = 5/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_79",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = x² − 4와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "16/3",
+      "32/3",
+      "8/3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = x² − 4 = 0에서 x = ±2이므로, 넓이 = ∫₋₂²(4 − x²)dx = 2∫₀²(4 − x²)dx = 2[4x − x³/3]₀² = 2(8 − 8/3) = 32/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_80",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "기본 유형",
+    "question": "두 곡선 y = x²과 y = x + 2로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "7/6",
+      "9/2",
+      "8/3",
+      "5/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² = x + 2에서 x = −1, 2이므로, 넓이 = ∫₋₁²(x + 2 − x²)dx = [x²/2 + 2x − x³/3]₋₁² = (2 + 4 − 8/3) − (1/2 − 2 + 1/3) = 10/3 + 7/6 = 9/2이다.",
+    "detailedExplanation": "x² = x + 2 → x² − x − 2 = 0 → (x−2)(x+1) = 0 → x = −1 또는 x = 2.\n∫₋₁²(x + 2 − x²)dx = [x²/2 + 2x − x³/3]₋₁²\n= (4/2 + 4 − 8/3) − (1/2 − 2 − (−1/3))\n= (2 + 4 − 8/3) − (1/2 − 2 + 1/3)\n= (18/3 − 8/3) − (3/6 − 12/6 + 2/6)\n= 10/3 − (−7/6) = 20/6 + 7/6 = 27/6 = 9/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_81",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = √x와 직선 y = x로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "1/2",
+      "1/6",
+      "1/4",
+      "1/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "√x = x에서 x = 0 또는 x = 1이고, 0 ≤ x ≤ 1에서 √x ≥ x이므로 넓이 = ∫₀¹(√x − x)dx = [2x^(3/2)/3 − x²/2]₀¹ = 2/3 − 1/2 = 1/6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_82",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ − 3x와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "9/2",
+      "9",
+      "3",
+      "27/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "x³ − 3x = 0에서 x = 0, ±√3이며, 대칭성에 의해 넓이 = 2∫₀^√3(3x − x³)dx = 2[3x²/2 − x⁴/4]₀^√3 = 2(9/2 − 9/4) = 2 × 9/4 = 9/2이다.",
+    "detailedExplanation": "x³ − 3x = x(x² − 3) = 0 → x = −√3, 0, √3.\n0 ≤ x ≤ √3에서 x³ − 3x ≤ 0이므로 |x³ − 3x| = 3x − x³.\n대칭성에 의해 넓이 = 2∫₀^√3(3x − x³)dx\n= 2[3x²/2 − x⁴/4]₀^√3\n= 2(3·3/2 − 9/4)\n= 2(9/2 − 9/4)\n= 2 × 9/4 = 9/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_83",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "대표 유형",
+    "question": "직선 y = 2x와 포물선 y = x² − 3으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "64/3",
+      "32/3",
+      "16",
+      "128/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "2x = x² − 3에서 x² − 2x − 3 = 0, (x−3)(x+1) = 0으로 x = −1, 3. 넓이 = ∫₋₁³(2x − x² + 3)dx = [−x³/3 + x² + 3x]₋₁³ = (−9 + 9 + 9) − (1/3 + 1 − 3) = 9 + 5/3 = 32/3이다.",
+    "detailedExplanation": "교점: x² − 2x − 3 = 0 → (x−3)(x+1) = 0 → x = −1, 3.\n−1 ≤ x ≤ 3에서 2x ≥ x² − 3.\n넓이 = ∫₋₁³(−x² + 2x + 3)dx = [−x³/3 + x² + 3x]₋₁³\n= (−27/3 + 9 + 9) − (1/3 + 1 − 3)\n= (−9 + 18) − (1/3 − 2)\n= 9 − (1/3 − 6/3)\n= 9 + 5/3 = 27/3 + 5/3 = 32/3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_84",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "수능 기초",
+    "question": "양수 a에 대하여 곡선 y = x² − ax와 x축으로 둘러싸인 도형의 넓이가 9/2일 때, a의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = x² − ax = x(x − a)이므로 x축과의 교점은 x = 0, a. 넓이 = ∫₀ᵃ(ax − x²)dx = [ax²/2 − x³/3]₀ᵃ = a³/2 − a³/3 = a³/6. a³/6 = 9/2에서 a³ = 27, 즉 a = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_85",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = x²를 x축 중심으로 회전시킬 때, x = 0에서 x = 2까지의 회전체의 부피는?",
+    "choices": [
+      "32π/5",
+      "16π/5",
+      "8π/5",
+      "4π"
+    ],
+    "answerIndex": 0,
+    "explanation": "회전체 부피 V = π∫₀²(x²)²dx = π∫₀²x⁴dx = π[x⁵/5]₀² = π×32/5 = 32π/5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_86",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = √x를 x축 중심으로 회전시킬 때, x = 0에서 x = 4까지의 회전체의 부피는?",
+    "choices": [
+      "4π",
+      "8π",
+      "16π",
+      "2π"
+    ],
+    "answerIndex": 1,
+    "explanation": "V = π∫₀⁴(√x)²dx = π∫₀⁴x dx = π[x²/2]₀⁴ = π×8 = 8π.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_87",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x와 y = x²로 둘러싸인 도형을 x축 중심으로 회전시킨 회전체의 부피는?",
+    "choices": [
+      "π/15",
+      "2π/15",
+      "π/10",
+      "π/5"
+    ],
+    "answerIndex": 1,
+    "explanation": "교점 x = 0, 1. 와셔법으로 V = π∫₀¹{x² − (x²)²}dx = π∫₀¹(x² − x⁴)dx = π[x³/3 − x⁵/5]₀¹ = π(1/3 − 1/5) = 2π/15.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_88",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = sin x (0 ≤ x ≤ π)를 x축 중심으로 회전시킨 회전체의 부피는?",
+    "choices": [
+      "π²/2",
+      "π/2",
+      "π²/4",
+      "2π"
+    ],
+    "answerIndex": 0,
+    "explanation": "V = π∫₀π sin²x dx = π∫₀π (1 − cos 2x)/2 dx = π/2 [x − sin 2x/2]₀π = π/2 × π = π²/2.",
+    "detailedExplanation": "sin²x = (1 − cos 2x)/2를 이용한다. ∫₀π sin²x dx = ∫₀π(1 − cos 2x)/2 dx = [x/2 − sin 2x/4]₀π = π/2. 따라서 V = π × π/2 = π²/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_89",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "개념 확인",
+    "question": "다음 수열의 극한값을 구하여라.\n\nlim(n→∞) (3n + 1) / (n + 2)",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "∞"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자와 분모를 n으로 나누면 lim(n→∞) (3 + 1/n) / (1 + 2/n) = 3/1 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_90",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "수열 {aₙ}에 대하여 lim(n→∞) (5aₙ + 1) / (aₙ − 1) = 7 일 때, lim(n→∞) aₙ의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "lim(n→∞) aₙ = L로 놓으면 (5L + 1)/(L − 1) = 7이므로 5L + 1 = 7L − 7, 2L = 8, L = 4이다.",
+    "detailedExplanation": "분모 aₙ − 1이 극한값 L − 1 = 3 ≠ 0이므로 극한값이 존재하여 대입법을 사용할 수 있다. 5L + 1 = 7(L − 1) → 5L + 1 = 7L − 7 → 8 = 2L → L = 4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_91",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "기본 유형",
+    "question": "등비수열 {aₙ}의 공비를 r라 할 때, 급수 ∑(n=1 to ∞) aₙ이 수렴하기 위한 조건으로 옳은 것은?",
+    "choices": [
+      "−1 < r < 1",
+      "−1 ≤ r ≤ 1",
+      "0 < r < 1",
+      "|r| ≤ 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "등비급수 ∑aₙ = a/(1−r)가 수렴하려면 공비 r의 범위가 −1 < r < 1이어야 한다.",
+    "detailedExplanation": "r = 1이면 각 항이 a₁으로 일정하여 급수가 발산하고, r = −1이면 항이 +a₁, −a₁, +a₁, ...로 진동하여 발산한다. 따라서 수렴 조건은 −1 < r < 1 (단, a₁ ≠ 0)이다.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_92",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "기본 유형",
+    "question": "급수 ∑(n=1 to ∞) (1/2)ⁿ 의 합을 구하여라.",
+    "choices": [
+      "1/2",
+      "1",
+      "2",
+      "3/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "첫째항 a = 1/2, 공비 r = 1/2인 등비급수이므로 합은 a/(1−r) = (1/2)/(1−1/2) = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_93",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "대표 유형",
+    "question": "급수 ∑(n=1 to ∞) 1/(n(n+2)) 의 합을 구하여라.",
+    "choices": [
+      "1/2",
+      "3/4",
+      "2/3",
+      "1/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "부분분수 분해로 1/(n(n+2)) = (1/2)(1/n − 1/(n+2))로 변환한 후 망원급수(telescoping series)를 적용하면 부분합 Sₙ = (1/2)(1 + 1/2 − 1/(n+1) − 1/(n+2))이고, n→∞ 이면 합 = (1/2)(1 + 1/2) = 3/4이다.",
+    "detailedExplanation": "부분합 Sₙ = (1/2)∑(k=1 to n)(1/k − 1/(k+2)) = (1/2)[(1 − 1/3) + (1/2 − 1/4) + (1/3 − 1/5) + …]에서 소거 후 남는 항은 1 + 1/2 − 1/(n+1) − 1/(n+2)이다. n→∞ 극한값은 (1/2)(1 + 1/2) = 3/4.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_94",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "기본 유형",
+    "question": "첫째항이 3이고 공비가 1/2인 등비급수의 합을 구하여라.",
+    "choices": [
+      "3",
+      "5",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "등비급수의 합 공식 S = a/(1−r)에 a=3, r=1/2를 대입하면 S = 3/(1−1/2) = 3/(1/2) = 6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_95",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = eˣ · ln x 의 도함수 f'(x) 를 구하면?",
+    "choices": [
+      "eˣ · ln x + eˣ / x",
+      "eˣ · ln x − eˣ / x",
+      "eˣ / x",
+      "eˣ · ln x"
+    ],
+    "answerIndex": 0,
+    "explanation": "곱의 미분법을 적용하면 f'(x) = (eˣ)' · ln x + eˣ · (ln x)' = eˣ ln x + eˣ · (1/x) 이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_96",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = sin(3x)의 도함수 f′(x)를 구하여라.",
+    "choices": [
+      "f′(x) = cos(3x)",
+      "f′(x) = 3cos(3x)",
+      "f′(x) = −3cos(3x)",
+      "f′(x) = −cos(3x)"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 (sin u)′ = cos u · u′이므로, u = 3x일 때 f′(x) = cos(3x) · 3 = 3cos(3x)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_97",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = x²cos(x)의 도함수 f′(x)를 구하여라.",
+    "choices": [
+      "f′(x) = 2x·cos(x) + x²·sin(x)",
+      "f′(x) = 2x·cos(x) − x²·sin(x)",
+      "f′(x) = 2x·sin(x) − x²·cos(x)",
+      "f′(x) = −2x·sin(x) + x²·cos(x)"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱의 미분법 (uv)′ = u′v + uv′을 적용하면, u = x², v = cos(x)이므로 f′(x) = 2x·cos(x) + x²·(−sin(x)) = 2x·cos(x) − x²·sin(x)이다.",
+    "detailedExplanation": "u = x²이면 u′ = 2x이고, v = cos(x)이면 v′ = −sin(x)이다. 따라서 (uv)′ = 2x·cos(x) + x²·(−sin(x)) = 2x·cos(x) − x²·sin(x)이다. 오답 선지 ①은 cos(x)의 미분 부호를 +로 잘못 처리한 경우, ③④는 u와 v를 잘못 지정한 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_98",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = (2x + 1)⁵의 도함수 f′(x)를 구하면?",
+    "choices": [
+      "f′(x) = 5(2x + 1)⁴",
+      "f′(x) = 10(2x + 1)⁴",
+      "f′(x) = 5(2x + 1)⁵",
+      "f′(x) = 10(2x + 1)⁵"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분법에 의해 f′(x) = 5(2x + 1)⁴ × (2x + 1)′ = 5(2x + 1)⁴ × 2 = 10(2x + 1)⁴이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_99",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = √(x² + 3x)에 대하여 f′(1)의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "5/4",
+      "5/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "f(x) = (x² + 3x)^(1/2)이므로 f′(x) = (2x + 3) / (2√(x² + 3x))이고, f′(1) = (2 + 3) / (2√(1 + 3)) = 5 / (2 × 2) = 5/4이다.",
+    "detailedExplanation": "합성함수의 미분법을 적용하면 외함수 u^(1/2)의 미분은 (1/2)u^(−1/2), 내함수 u = x² + 3x의 미분은 2x + 3이므로 f′(x) = (1/2)(x² + 3x)^(−1/2) × (2x + 3) = (2x + 3) / (2√(x² + 3x))이다. x = 1을 대입하면 f′(1) = 5 / (2√4) = 5/4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_100",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "개념 확인",
+    "question": "함수 f(x) = x² / (x+1) 에 대하여 f'(1) 의 값은?",
+    "choices": [
+      "3/4",
+      "1/2",
+      "2/3",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "몫의 미분법에 의해 f'(x) = [2x(x+1) − x²] / (x+1)² = (x²+2x) / (x+1)² 이므로, f'(1) = (1+2) / (1+1)² = 3/4 이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_101",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = (x²−1) / (x²+1) 에 대하여 f'(2) 의 값은?",
+    "choices": [
+      "8/25",
+      "4/25",
+      "16/25",
+      "2/5"
+    ],
+    "answerIndex": 0,
+    "explanation": "몫의 미분법에 의해 f'(x) = [2x(x²+1) − (x²−1)·2x] / (x²+1)² = 4x / (x²+1)² 이므로, f'(2) = 8 / 25 이다.",
+    "detailedExplanation": "분자를 전개하면 2x·(x²+1) − 2x·(x²−1) = 2x[(x²+1)−(x²−1)] = 2x·2 = 4x 로 정리된다. x=2 를 대입하면 분자 4·2=8, 분모 (4+1)²=25 이므로 f'(2) = 8/25 이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_102",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "기본 유형",
+    "question": "함수 f(x) = x³ − 3x² + 2 에서 f'(x) = 0 을 만족하는 x 의 값을 모두 구하면?",
+    "choices": [
+      "x = 0 또는 x = 2",
+      "x = 1 또는 x = 3",
+      "x = −1 또는 x = 2",
+      "x = 0 또는 x = 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "f'(x) = 3x² − 6x = 3x(x − 2) 이므로 f'(x) = 0 의 해는 x = 0 또는 x = 2 이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_103",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = x³ − 6x² + 9x + 1 이 극대가 되는 x 의 값을 a, 극소가 되는 x 의 값을 b 라 할 때, f(a) − f(b) 의 값은?",
+    "choices": [
+      "−4",
+      "4",
+      "−2",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3) 이므로 x = 1 에서 극대, x = 3 에서 극소이다. f(1) = 1 − 6 + 9 + 1 = 5, f(3) = 27 − 54 + 27 + 1 = 1 이므로 f(a) − f(b) = 5 − 1 = 4.",
+    "detailedExplanation": "f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3) 으로 인수분해한다. x < 1 에서 f'(x) > 0, 1 < x < 3 에서 f'(x) < 0, x > 3 에서 f'(x) > 0 이므로 x = 1 은 극대, x = 3 은 극소이다. f(1) = 1 − 6 + 9 + 1 = 5, f(3) = 27 − 54 + 27 + 1 = 1 이므로 f(1) − f(3) = 4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_104",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "기본 유형",
+    "question": "∫2x(x²+1)³ dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "(x²+1)⁴ + C",
+      "(x²+1)⁴/4 + C",
+      "(x²+1)⁴/8 + C",
+      "2(x²+1)⁴ + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "u = x²+1 로 치환하면 du = 2x dx 이므로 ∫u³ du = u⁴/4 + C = (x²+1)⁴/4 + C.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_105",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "대표 유형",
+    "question": "∫x√(x²+3) dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "(1/3)(x²+3)^(3/2) + C",
+      "(2/3)(x²+3)^(3/2) + C",
+      "(1/2)(x²+3)^(3/2) + C",
+      "(1/6)(x²+3)^(3/2) + C"
+    ],
+    "answerIndex": 0,
+    "explanation": "u = x²+3 으로 치환하면 du = 2x dx 이므로 x dx = du/2, ∫√u · (du/2) = (1/2)·(2/3)u^(3/2) + C = (1/3)(x²+3)^(3/2) + C.",
+    "detailedExplanation": "미분으로 검산: d/dx[(1/3)(x²+3)^(3/2)] = (1/3)·(3/2)(x²+3)^(1/2)·2x = x√(x²+3) 로 피적분함수와 일치한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_106",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "기본 유형",
+    "question": "∫x·eˣ dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "x·eˣ + C",
+      "(x+1)·eˣ + C",
+      "(x−1)·eˣ + C",
+      "x²·eˣ/2 + C"
+    ],
+    "answerIndex": 2,
+    "explanation": "u = x, dv = eˣdx 로 놓으면 du = dx, v = eˣ 이므로 부분적분에 의해 x·eˣ − ∫eˣ dx = x·eˣ − eˣ + C = (x−1)eˣ + C 이다.",
+    "detailedExplanation": "부분적분 공식 ∫u dv = uv − ∫v du 를 적용한다. u = x, dv = eˣ dx 로 설정하면 du = dx, v = eˣ 이다. 따라서 ∫x·eˣ dx = x·eˣ − ∫eˣ dx = x·eˣ − eˣ + C = (x−1)eˣ + C. 검산: [(x−1)eˣ]' = eˣ + (x−1)eˣ = x·eˣ ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_107",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "대표 유형",
+    "question": "∫x·cos x dx 를 구하면? (단, C는 적분상수)",
+    "choices": [
+      "x·sin x − cos x + C",
+      "x·sin x + cos x + C",
+      "x·cos x − sin x + C",
+      "x·cos x + sin x + C"
+    ],
+    "answerIndex": 1,
+    "explanation": "u = x, dv = cos x dx 로 놓으면 du = dx, v = sin x 이므로 ∫x·cos x dx = x·sin x − ∫sin x dx = x·sin x + cos x + C 이다.",
+    "detailedExplanation": "부분적분 공식 ∫u dv = uv − ∫v du 를 적용한다. u = x, dv = cos x dx 로 설정하면 du = dx, v = sin x 이다. 따라서 ∫x·cos x dx = x·sin x − ∫sin x dx = x·sin x − (−cos x) + C = x·sin x + cos x + C. 검산: [x·sin x + cos x]' = sin x + x·cos x − sin x = x·cos x ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_108",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² − 2x와 x축으로 둘러싸인 도형의 넓이를 구하여라.",
+    "choices": [
+      "1/3",
+      "2/3",
+      "4/3",
+      "5/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = x²−2x = x(x−2)이므로 x축과의 교점은 x=0, x=2이고, 0≤x≤2에서 y≤0이므로 넓이 = −∫₀²(x²−2x)dx = −[x³/3 − x²]₀² = −(8/3−4) = 4/3.",
+    "detailedExplanation": "∫₀²(x²−2x)dx = [x³/3 − x²]₀² = (8/3 − 4) − 0 = 8/3 − 12/3 = −4/3. 넓이는 절댓값이므로 4/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_109",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x² − x와 직선 y = x로 둘러싸인 도형의 넓이를 구하여라.",
+    "choices": [
+      "2/3",
+      "4/3",
+      "7/6",
+      "3/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 곡선의 교점: x²−x = x에서 x²−2x = 0, 즉 x=0, x=2. 0≤x≤2에서 x ≥ x²−x이므로 넓이 = ∫₀²(x−(x²−x))dx = ∫₀²(2x−x²)dx = [x²− x³/3]₀² = 4−8/3 = 4/3.",
+    "detailedExplanation": "피적분함수 = x − (x²−x) = 2x − x². ∫₀²(2x−x²)dx = [x² − x³/3]₀² = (4 − 8/3) − 0 = 12/3 − 8/3 = 4/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_110",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² (0 ≤ x ≤ 2)와 x축으로 둘러싸인 도형을 x축을 회전축으로 하여 1회전시킬 때 생기는 회전체의 부피는?",
+    "choices": [
+      "16π/5",
+      "32π/5",
+      "8π",
+      "64π/5"
+    ],
+    "answerIndex": 1,
+    "explanation": "원판법에 의해 부피 V = π∫₀² (x²)² dx = π∫₀² x⁴ dx = π[x⁵/5]₀² = 32π/5.",
+    "detailedExplanation": "회전체의 부피는 V = π∫ₐᵇ {f(x)}² dx 로 구한다. f(x) = x²이므로 {f(x)}² = x⁴. 따라서 V = π∫₀² x⁴ dx = π · [x⁵/5]₀² = π · (32/5 − 0) = 32π/5. 오답 ①은 적분 범위를 x=0~1로 잘못 계산한 값(π·1/5×16=16π/5)이고, ③은 단순히 πr²h 공식을 혼동한 값, ④는 피적분함수를 x³으로 오계산한 결과이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_111",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "대표 유형",
+    "question": "0 ≤ x ≤ 1에서 두 곡선 y = √x, y = x로 둘러싸인 도형을 x축을 회전축으로 하여 1회전시킬 때 생기는 회전체의 부피는?",
+    "choices": [
+      "π/3",
+      "π/4",
+      "π/6",
+      "π/12"
+    ],
+    "answerIndex": 2,
+    "explanation": "와셔법에 의해 V = π∫₀¹ [(√x)² − x²] dx = π∫₀¹ (x − x²) dx = π[x²/2 − x³/3]₀¹ = π(1/2 − 1/3) = π/6.",
+    "detailedExplanation": "두 곡선 사이의 도형을 x축 회전 시 V = π∫ₐᵇ ({g(x)}² − {h(x)}²) dx (단, g(x) ≥ h(x) ≥ 0). 0 ≤ x ≤ 1에서 √x ≥ x이므로 V = π∫₀¹ (x − x²) dx = π[x²/2 − x³/3]₀¹ = π(1/2 − 1/3) = π · 1/6 = π/6. 오답 ①은 두 함수 중 하나만 적분한 값, ②는 분모 계산 오류, ④는 두 함수의 적분을 각각 빼는 순서를 혼동하여 잘못 계산한 값이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_112",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "lim(n→∞) (3n² + 2n − 1) / (n² − n + 4) 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 n²으로 나누면 lim (3 + 2/n − 1/n²) / (1 − 1/n + 4/n²) = 3/1 = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_113",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "lim(n→∞) (an² + 3n) / (n² + n + 1) = 2 를 만족시키는 상수 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "분자·분모를 n²으로 나누면 극한값은 a/1 = a이므로 a = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_114",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "수능 기초",
+    "question": "lim(n→∞) (3ⁿ + 2ⁿ) / (3ⁿ⁺¹ + 2ⁿ⁺¹) 의 값은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 lim (1 + (2/3)ⁿ) / (3 + 2·(2/3)ⁿ) = 1/3이다.",
+    "detailedExplanation": "분자·분모를 3ⁿ으로 나누면 (1 + (2/3)ⁿ) / (3 + 2·(2/3)ⁿ). n→∞일 때 (2/3)ⁿ→0이므로 극한값은 1/3이다. 흔한 오류: 3ⁿ⁺¹을 3ⁿ으로 나누면 3이 됨을 주의한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_115",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "lim(n→∞) n(√(n² + 4) − n) 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "유리화하면 n · 4 / (√(n²+4) + n) = 4 / (√(1+4/n²) + 1) → 4/2 = 2이다.",
+    "detailedExplanation": "√(n²+4) − n 에 켤레 √(n²+4) + n 을 곱하고 나누면 4/(√(n²+4)+n). 여기에 n을 곱하면 4n/(√(n²+4)+n). 분자·분모를 n으로 나누면 4/(√(1+4/n²)+1) → 4/2 = 2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_116",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "aₙ₊₁ = (2aₙ + 3) / (aₙ + 2), a₁ = 1 로 정의된 수열 {aₙ}이 수렴할 때, lim(n→∞) aₙ 의 값은?",
+    "choices": [
+      "1",
+      "√2",
+      "√3",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "극한값을 L로 놓으면 L = (2L+3)/(L+2)에서 L²+2L = 2L+3, L² = 3이므로 L = √3 (L > 0).",
+    "detailedExplanation": "수열이 수렴한다고 가정하고 극한을 L이라 하면, 점화식의 양변에 n→∞를 취하면 L = (2L+3)/(L+2). 정리하면 L(L+2) = 2L+3 → L² = 3. a₁=1>0이고 점화식 구조상 aₙ>0이므로 L = √3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_117",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "수능 기초",
+    "question": "lim(n→∞) (√(n² + 3n) − n) 의 값은?",
+    "choices": [
+      "0",
+      "1",
+      "3/2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "유리화하면 3n / (√(n²+3n)+n) = 3 / (√(1+3/n)+1) → 3/2이다.",
+    "detailedExplanation": "√(n²+3n)−n 에 켤레를 곱하면 (n²+3n−n²)/(√(n²+3n)+n) = 3n/(√(n²+3n)+n). 분자·분모를 n으로 나누면 3/(√(1+3/n)+1) → 3/(1+1) = 3/2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_118",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "수열의 극한",
+    "difficulty": "수능 실전",
+    "question": "lim(n→∞) (2ⁿ⁺¹ + 3ⁿ) / (2ⁿ + 3ⁿ⁺¹) 의 값은?",
+    "choices": [
+      "1/3",
+      "2/3",
+      "1",
+      "3/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 lim (2·(2/3)ⁿ + 1) / ((2/3)ⁿ + 3) = 1/3이다.",
+    "detailedExplanation": "분자·분모를 3ⁿ으로 나누면 (2·(2/3)ⁿ + 1) / ((2/3)ⁿ + 3). |2/3|<1이므로 n→∞일 때 (2/3)ⁿ→0. 따라서 극한값은 (0+1)/(0+3) = 1/3. 오류 주의: 2ⁿ⁺¹ = 2·2ⁿ, 3ⁿ⁺¹ = 3·3ⁿ 임을 확인 후 3ⁿ으로 나눈다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_119",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "lim(n→∞) (5ⁿ − 3ⁿ) / (5ⁿ + 3ⁿ) 의 값은?",
+    "choices": [
+      "0",
+      "3/5",
+      "2/3",
+      "1"
+    ],
+    "answerIndex": 3,
+    "explanation": "분자·분모를 5ⁿ으로 나누면 (1−(3/5)ⁿ)/(1+(3/5)ⁿ)이 되고, n→∞ 일 때 (3/5)ⁿ→0 이므로 극한값은 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_120",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "lim(n→∞) (3·4ⁿ − 5ⁿ) / (4ⁿ + 2·5ⁿ) 의 값은?",
+    "choices": [
+      "−1",
+      "−1/2",
+      "1/2",
+      "3"
+    ],
+    "answerIndex": 1,
+    "explanation": "분자·분모를 5ⁿ으로 나누면 (3·(4/5)ⁿ−1)/((4/5)ⁿ+2)가 되고, n→∞ 일 때 (4/5)ⁿ→0 이므로 극한값은 −1/2이다.",
+    "detailedExplanation": "분자·분모에서 지수가 가장 큰 항은 5ⁿ이므로 5ⁿ으로 나눈다. 분자: 3·(4/5)ⁿ−1 → 0−1 = −1. 분모: (4/5)ⁿ+2 → 0+2 = 2. 따라서 극한값 = −1/2. 오답 함정: 4ⁿ으로 나누면 분모가 발산하여 실수할 수 있다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_121",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "수능 기초",
+    "question": "lim(n→∞) (2²ⁿ⁺¹ + 3ⁿ) / (4ⁿ − 3ⁿ⁺¹) 의 값은?",
+    "choices": [
+      "1/2",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "2²ⁿ⁺¹ = 2·4ⁿ, 3ⁿ⁺¹ = 3·3ⁿ 으로 변환한 뒤 4ⁿ으로 나누면 (2+(3/4)ⁿ)/(1−3·(3/4)ⁿ) → 2/1 = 2이다.",
+    "detailedExplanation": "2²ⁿ⁺¹ = 2·(2²)ⁿ = 2·4ⁿ 임을 먼저 인식한다. 식을 정리하면 (2·4ⁿ+3ⁿ)/(4ⁿ−3·3ⁿ). 4ⁿ > 3ⁿ 이므로 4ⁿ으로 나누면: 분자 → 2+(3/4)ⁿ→2, 분모 → 1−3·(3/4)ⁿ→1. 극한값 = 2. 지수 변환을 놓치면 (3/4)ⁿ 처리에서 실수하기 쉽다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_122",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "대표 유형",
+    "question": "lim(n→∞) (a·3ⁿ + 2ⁿ) / (3ⁿ + 2ⁿ) = 5 를 만족하는 상수 a의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "분자·분모를 3ⁿ으로 나누면 (a+(2/3)ⁿ)/(1+(2/3)ⁿ)이 되고, n→∞ 일 때 (2/3)ⁿ→0이므로 극한값 = a = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_123",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "응용 유형",
+    "question": "양의 정수 r에 대해 lim(n→∞) (rⁿ⁺² + 3) / (rⁿ + 1) = 9 를 만족하는 r의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "r=1이면 극한값이 2이고, r>1이면 rⁿ으로 나누어 극한값이 r²임을 알 수 있으므로 r²=9, r=3이다.",
+    "detailedExplanation": "경우를 나누어 검토한다. (1) r=1: (1+3)/(1+1)=2 ≠ 9. (2) r>1: 분자·분모를 rⁿ으로 나누면 (r²+3/rⁿ)/(1+1/rⁿ) → r²/1 = r². r²=9이고 r는 양의 정수이므로 r=3. (3) 검산: (3⁵²+3)/(3⁵⁰+1) ≈ 9 ✓.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_124",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "수능 실전",
+    "question": "∑(n=1 to ∞) (2x−1)ⁿ = 3 을 만족하는 실수 x의 값은?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "7/8"
+    ],
+    "answerIndex": 3,
+    "explanation": "수렴 조건 |2x−1|<1에서 0<x<1이고, 급수의 합은 (2x−1)/(2−2x)=3을 풀면 x=7/8이다.",
+    "detailedExplanation": "무한등비급수 ∑rⁿ(n=1~∞) = r/(1−r) (|r|<1). 공비 r=2x−1로 놓으면 수렴 조건: |2x−1|<1 → 0<x<1. 합 = (2x−1)/(1−(2x−1)) = (2x−1)/(2−2x) = 3. 양변에 (2−2x) 곱: 2x−1=6−6x → 8x=7 → x=7/8. 검산: r=2·(7/8)−1=3/4, 합=(3/4)/(1/4)=3 ✓.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_125",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비수열의 극한",
+    "difficulty": "수능 실전",
+    "question": "방정식 ∑(n=1 to ∞) (x−1)ⁿ = x+1 의 양의 실수 해는?",
+    "choices": [
+      "√2",
+      "√3",
+      "2",
+      "2+√2"
+    ],
+    "answerIndex": 1,
+    "explanation": "수렴 조건 0<x<2에서 급수의 합 (x−1)/(2−x)=x+1을 정리하면 x²=3이므로 양수 해는 x=√3이다.",
+    "detailedExplanation": "공비 r=x−1, 수렴 조건 |x−1|<1 → 0<x<2. 급수의 합 = (x−1)/(1−(x−1)) = (x−1)/(2−x). 방정식: (x−1)/(2−x)=x+1 → x−1=(x+1)(2−x)=2x−x²+2−x=x−x²+2 → x−1=x−x²+2 → x²=3 → x=√3. 검산: r=√3−1≈0.732, |r|<1 ✓, 합=(√3−1)/(2−√3)=√3+1=√3+1 ✓.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_126",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "대표 유형",
+    "question": "급수 ∑(n=1 to ∞) (3ⁿ − 2ⁿ) / 6ⁿ 의 합은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "(3ⁿ − 2ⁿ)/6ⁿ = (1/2)ⁿ − (1/3)ⁿ 으로 분리하면 두 등비급수의 합이 각각 1과 1/2이므로, 구하는 합은 1 − 1/2 = 1/2이다.",
+    "detailedExplanation": "∑(1/2)ⁿ = (1/2)/(1−1/2) = 1, ∑(1/3)ⁿ = (1/3)/(1−1/3) = 1/2. 따라서 주어진 급수 = 1 − 1/2 = 1/2. 오답 1/3은 (1/6)ⁿ의 합으로 착각한 경우, 오답 2/3은 분자를 1ⁿ으로 처리한 실수, 오답 1은 분모를 3ⁿ으로만 본 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_127",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "대표 유형",
+    "question": "급수 ∑(n=1 to ∞) 1 / (n(n+1)(n+2)) 의 합은?",
+    "choices": [
+      "1/6",
+      "1/4",
+      "1/3",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "부분분수 분해로 1/(n(n+1)(n+2)) = (1/2)[1/(n(n+1)) − 1/((n+1)(n+2))]이므로, 급수는 (1/2) × 1/(1×2) = 1/4로 수렴한다.",
+    "detailedExplanation": "1/(n(n+1)(n+2)) = (1/2)[1/(n(n+1)) − 1/((n+1)(n+2))]로 변형한다. 부분합 Sₙ = (1/2)[1/(1×2) − 1/((n+1)(n+2))]이고, n→∞일 때 1/((n+1)(n+2))→0이므로 합 = (1/2) × (1/2) = 1/4이다. 오답 1/6은 극한값만 계산한 경우, 오답 1/3과 1/2는 계수 1/2를 누락하거나 잘못 적용한 경우이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_128",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "응용 유형",
+    "question": "급수 ∑(n=1 to ∞) n × (2/3)ⁿ 의 합은?",
+    "choices": [
+      "3",
+      "6",
+      "9",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "∑(n=1 to ∞) n × rⁿ = r/(1−r)² 공식에 r = 2/3을 대입하면 (2/3)/(1/3)² = (2/3)/(1/9) = 6이다.",
+    "detailedExplanation": "등비급수 ∑rⁿ = r/(1−r)을 r에 대해 미분하면 ∑nrⁿ⁻¹ = 1/(1−r)²이고, 양변에 r을 곱하면 ∑nrⁿ = r/(1−r)²이다. r = 2/3 대입: (2/3) ÷ (1/3)² = (2/3) × 9 = 6. 오답 3은 r/(1−r)로 계산한 경우, 오답 9는 분모를 (1−r)로만 계산한 실수이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_129",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "응용 유형",
+    "question": "급수 ∑(n=1 to ∞) (2n−1) / 3ⁿ 의 합은?",
+    "choices": [
+      "1/2",
+      "3/4",
+      "1",
+      "3/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "∑(2n−1)/3ⁿ = 2∑n/3ⁿ − ∑1/3ⁿ = 2×(3/4) − (1/2) = 3/2 − 1/2 = 1이다.",
+    "detailedExplanation": "∑(1/3)ⁿ = (1/3)/(1−1/3) = 1/2, ∑n(1/3)ⁿ = (1/3)/(1−1/3)² = (1/3)/(4/9) = 3/4이다. 따라서 2×(3/4) − 1/2 = 3/2 − 1/2 = 1. 오답 3/4는 ∑n/3ⁿ만 계산한 경우, 오답 3/2는 ∑(1/3)ⁿ 빼는 것을 잊은 경우이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_130",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "수능 기초",
+    "question": "급수 ∑(n=1 to ∞) 3 / (n(n+3)) 의 합은?",
+    "choices": [
+      "5/6",
+      "1",
+      "11/6",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "3/(n(n+3)) = 1/n − 1/(n+3)으로 부분분수 분해하면 망원급수가 되어 부분합 Sₙ = (1 + 1/2 + 1/3) − 1/(n+1) − 1/(n+2) − 1/(n+3) 이므로 합은 1 + 1/2 + 1/3 = 11/6이다.",
+    "detailedExplanation": "3/(n(n+3)) = 1/n − 1/(n+3). 부분합을 전개하면 S_N = ∑(1/n − 1/(n+3)) = (1 − 1/4) + (1/2 − 1/5) + (1/3 − 1/6) + (1/4 − 1/7) + ... 소거되고 남는 항은 초기 세 항 1, 1/2, 1/3뿐이다. 따라서 합 = 1 + 1/2 + 1/3 = 6/6 + 3/6 + 2/6 = 11/6. 오답 1은 1/n만 합산한 경우, 오답 5/6는 처음 항 1/n(n+1)으로 잘못 분해한 경우이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_131",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "수능 기초",
+    "question": "수열 {aₙ}에 대해 급수 ∑(n=1 to ∞) aₙ이 수렴할 때, 다음 중 항상 옳은 것은?\n① lim(n→∞) aₙ = 1\n② ∑(n=1 to ∞) aₙ² 도 반드시 수렴한다\n③ lim(n→∞) aₙ = 0\n④ ∑(n=1 to ∞) (aₙ + 1/n) 도 반드시 수렴한다",
+    "choices": [
+      "①",
+      "②",
+      "③",
+      "④"
+    ],
+    "answerIndex": 2,
+    "explanation": "급수가 수렴하면 반드시 일반항이 0으로 수렴해야 하므로 ③이 옳다. ②는 aₙ = 1/n일 때 반례(∑1/n² 수렴하지만 ∑aₙ는 발산), ④는 ∑1/n이 발산하므로 성립하지 않는다.",
+    "detailedExplanation": "급수 수렴의 필요조건: ∑aₙ이 수렴하면 lim aₙ = 0. ① lim aₙ = 1이면 급수는 발산하므로 틀림. ② aₙ = (−1)ⁿ/√n이면 ∑aₙ은 수렴(교대급수)하지만 ∑aₙ² = ∑1/n은 발산한다. ④ lim(aₙ + 1/n) = 0이지만 ∑(aₙ + 1/n) = ∑aₙ + ∑1/n에서 ∑1/n이 발산하므로 전체 발산. ③만 항상 성립한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_132",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "급수",
+    "difficulty": "수능 실전",
+    "question": "수열 {aₙ}의 첫째항부터 제n항까지의 합을 Sₙ이라 하자. Sₙ = 3 × 2ⁿ − 3 일 때, 급수 ∑(n=1 to ∞) 1/aₙ 의 합은?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1"
+    ],
+    "answerIndex": 2,
+    "explanation": "n≥2일 때 aₙ = Sₙ − Sₙ₋₁ = 3×2ⁿ−3 − (3×2ⁿ⁻¹−3) = 3×2ⁿ⁻¹이고 a₁ = S₁ = 3도 같은 식에 해당하므로, ∑1/aₙ = ∑1/(3×2ⁿ⁻¹) = (1/3)/(1−1/2) = 2/3이다.",
+    "detailedExplanation": "a₁ = S₁ = 3×2−3 = 3 = 3×2⁰. n≥2: aₙ = Sₙ−Sₙ₋₁ = (3×2ⁿ−3)−(3×2ⁿ⁻¹−3) = 3×2ⁿ − 3×2ⁿ⁻¹ = 3×2ⁿ⁻¹×(2−1) = 3×2ⁿ⁻¹. a₁도 같은 꼴이므로 aₙ = 3×2ⁿ⁻¹ (n≥1). 따라서 1/aₙ = (1/3)×(1/2)ⁿ⁻¹이고, ∑(1/3)×(1/2)ⁿ⁻¹ = (1/3) × 1/(1−1/2) = (1/3)×2 = 2/3. 오답 1/3은 공비를 제거하지 않고 첫 항만 본 경우, 오답 1/2는 1/a₁만 구한 경우이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_133",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "대표 유형",
+    "question": "∑(n=1 → ∞) (a/3)ⁿ = 2를 만족시키는 양수 a의 값은? (단, 0 < a < 3)",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "공비 r = a/3으로 놓으면 등비급수의 합은 r/(1−r) = 2이므로 r = 2/3, 즉 a = 2이다.",
+    "detailedExplanation": "첫째항과 공비가 모두 a/3인 등비급수이므로 합 공식에 의해 (a/3)/(1 − a/3) = 2. 분자로 올리면 a/3 = 2 − 2a/3, 정리하면 a/3 + 2a/3 = 2, a = 2. 수렴 조건 0 < a/3 < 1도 a = 2일 때 만족한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_134",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "대표 유형",
+    "question": "첫째항이 a이고 공비가 r인 등비급수에서 모든 항의 합이 6이고, 짝수 번째 항(a₂ + a₄ + a₆ + ⋯)의 합이 2일 때, 첫째항 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "전체 합 a/(1−r)=6, 짝수 번째 합 ar/(1−r²)=2에서 r=1/2, a=3을 얻는다.",
+    "detailedExplanation": "전체 합: a/(1−r) = 6 ⋯ ①. 짝수 번째 항은 ar, ar³, ar⁵, …로 공비 r²인 등비급수이므로 ar/(1−r²) = 2 ⋯ ②. ②를 변형하면 ar/((1−r)(1+r)) = 2. ①에서 a = 6(1−r)을 대입하면 6r/(1+r) = 2, 즉 6r = 2+2r, r = 1/2. 따라서 a = 6×(1/2) = 3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_135",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "응용 유형",
+    "question": "수열 {aₙ}의 첫째항부터 제n항까지의 합이 Sₙ = 3 − 2×(1/3)ⁿ일 때, a₁ + a₂의 값은?",
+    "choices": [
+      "7/3",
+      "25/9",
+      "3",
+      "11/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "a₁ = S₁ = 7/3, a₂ = S₂ − S₁ = 4/9이므로 a₁ + a₂ = 25/9이다.",
+    "detailedExplanation": "a₁ = S₁ = 3 − 2×(1/3) = 3 − 2/3 = 7/3. a₂ = S₂ − S₁ = (3 − 2/9) − (3 − 2/3) = −2/9 + 6/9 = 4/9. 따라서 a₁ + a₂ = 7/3 + 4/9 = 21/9 + 4/9 = 25/9. (흔한 실수: a₁을 S₁이 아닌 일반항으로 착각하거나 S₁ − S₀를 쓰는 경우)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_136",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "수능 기초",
+    "question": "순환소수 1.2̄3̄ = 1.232323⋯을 분수로 나타내면?",
+    "choices": [
+      "12/11",
+      "121/99",
+      "122/99",
+      "4/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "0.232323⋯ = (23/100)/(1 − 1/100) = 23/99이므로 1.2323⋯ = 1 + 23/99 = 122/99이다.",
+    "detailedExplanation": "0.232323⋯은 첫째항 23/100, 공비 1/100인 등비급수이므로 합 = (23/100)÷(1 − 1/100) = 23/99. 따라서 1.2323⋯ = 1 + 23/99 = 99/99 + 23/99 = 122/99. 오답 유의: 121/99 = 1.2222⋯이고, 12/11 = 1.0909⋯이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_137",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "수능 기초",
+    "question": "∑(n=1 → ∞) (3ⁿ + (−1)ⁿ × 2ⁿ) / 6ⁿ 의 값은?",
+    "choices": [
+      "1/2",
+      "3/4",
+      "1",
+      "5/4"
+    ],
+    "answerIndex": 1,
+    "explanation": "주어진 급수를 분리하면 ∑(1/2)ⁿ + ∑(−1/3)ⁿ = 1 + (−1/4) = 3/4이다.",
+    "detailedExplanation": "∑(3ⁿ + (−2)ⁿ)/6ⁿ = ∑(1/2)ⁿ + ∑(−1/3)ⁿ. 각각 계산하면: ∑(1/2)ⁿ = (1/2)/(1−1/2) = 1, ∑(−1/3)ⁿ = (−1/3)/(1−(−1/3)) = (−1/3)/(4/3) = −1/4. 합 = 1 + (−1/4) = 3/4. 두 급수 모두 공비의 절댓값이 1 미만이므로 수렴한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_138",
+    "subject": "미적분",
+    "chapter": "수열의 극한",
+    "lesson": "등비급수",
+    "difficulty": "수능 실전",
+    "question": "첫째항이 양수이고 공비가 음수인 등비수열 {aₙ}에서 ∑(n=1 → ∞) aₙ = 12, ∑(n=1 → ∞) |aₙ| = 20을 동시에 만족시킬 때, 첫째항 a₁의 값은?",
+    "choices": [
+      "10",
+      "12",
+      "15",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "공비 r = −s (0 < s < 1)로 놓으면 두 조건에서 s = 1/4, 첫째항 a₁ = 15를 얻는다.",
+    "detailedExplanation": "a₁ = a > 0, 공비 r = −s (0 < s < 1)로 놓으면: ① a/(1+s) = 12, ② a/(1−s) = 20. ①÷②: (1−s)/(1+s) = 12/20 = 3/5. 교차 곱하면 5(1−s) = 3(1+s), 5−5s = 3+3s, 2 = 8s, s = 1/4. ①에 대입하면 a = 12×(1+1/4) = 12×5/4 = 15. 검산: 15/(1+1/4)=12 ✓, 15/(1−1/4)=20 ✓.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_139",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = x³eˣ 에 대하여 f'(2)의 값은?",
+    "choices": [
+      "12e²",
+      "15e²",
+      "20e²",
+      "25e²"
+    ],
+    "answerIndex": 2,
+    "explanation": "곱의 미분법에 의해 f'(x) = 3x²eˣ + x³eˣ = x²eˣ(3+x)이므로, f'(2) = 4·e²·5 = 20e²이다.",
+    "detailedExplanation": "f(x) = x³·eˣ에서 곱의 미분법을 적용하면 f'(x) = (x³)'·eˣ + x³·(eˣ)' = 3x²eˣ + x³eˣ = x²eˣ(x+3)이다. x=2를 대입하면 f'(2) = 4·e²·5 = 20e²이다. 흔한 실수는 3x²eˣ만 구하여 12e²로 쓰거나, x³·eˣ = 8e²로 계산하는 것이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_140",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = ln(3x²+2x) 에 대하여 f'(1)의 값은?",
+    "choices": [
+      "4/5",
+      "8/5",
+      "8/3",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분에 의해 f'(x) = (6x+2)/(3x²+2x)이므로, f'(1) = 8/5이다.",
+    "detailedExplanation": "f(x) = ln(3x²+2x)에서 [ln(g(x))]' = g'(x)/g(x)를 적용하면 f'(x) = (6x+2)/(3x²+2x)이다. x=1에서 분자는 6+2=8, 분모는 3+2=5이므로 f'(1) = 8/5이다. 분자를 6+2=8이 아닌 6·2=12로 잘못 계산하거나, 분모와 분자를 바꾸는 실수가 많다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_141",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = eˣ/(x²+1) 에 대하여 f'(0)의 값은?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "e"
+    ],
+    "answerIndex": 2,
+    "explanation": "몫의 미분법에 의해 f'(x) = eˣ(x-1)²/(x²+1)²이므로, f'(0) = 1·1/1 = 1이다.",
+    "detailedExplanation": "몫의 미분법 (u/v)' = (u'v - uv')/v²을 적용한다. u=eˣ, v=x²+1이면 u'=eˣ, v'=2x이므로 f'(x) = [eˣ(x²+1) - eˣ·2x]/(x²+1)² = eˣ(x²-2x+1)/(x²+1)² = eˣ(x-1)²/(x²+1)²이다. x=0 대입: e⁰·(-1)²/(0+1)² = 1이다. (x-1)² ≥ 0이고 분모도 양수이므로 f'(x) ≥ 0임을 확인할 수 있다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_142",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = x·ln x 의 x=e에서의 접선의 y절편은?",
+    "choices": [
+      "-2e",
+      "-e",
+      "e",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = ln x + 1이므로 f'(e) = 2, f(e) = e이다. 접선의 방정식은 y = 2(x-e)+e = 2x-e이므로 y절편은 -e이다.",
+    "detailedExplanation": "f(x) = x·ln x에서 곱의 미분법을 적용하면 f'(x) = ln x + x·(1/x) = ln x + 1이다. x=e일 때 f(e) = e·1 = e, f'(e) = 1+1 = 2이다. 접선의 방정식: y - e = 2(x - e) → y = 2x - e. x=0을 대입하면 y절편 = -e이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_143",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "함수 f(x) = e^(x²−2x) 에 대하여 f'(3)의 값은?",
+    "choices": [
+      "2e³",
+      "4e³",
+      "6e³",
+      "4e⁶"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분에 의해 f'(x) = e^(x²−2x)·(2x−2)이므로, f'(3) = e^(9−6)·4 = 4e³이다.",
+    "detailedExplanation": "[e^(g(x))]' = g'(x)·e^(g(x))이므로 f'(x) = (2x−2)·e^(x²−2x)이다. x=3: 지수 부분 = 9−6 = 3, 계수 = 2·3−2 = 4이므로 f'(3) = 4e³이다. 흔한 실수는 지수를 9−2=7로 잘못 계산해 4e⁷을 쓰거나, 계수를 2x=6으로 하여 6e³을 쓰는 것이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_144",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "함수 f(x) = (ln x)³ 에 대하여 f'(e)의 값은?",
+    "choices": [
+      "1/e",
+      "3/e",
+      "3",
+      "3e"
+    ],
+    "answerIndex": 1,
+    "explanation": "합성함수의 미분에 의해 f'(x) = 3(ln x)²·(1/x)이므로, f'(e) = 3·1²·(1/e) = 3/e이다.",
+    "detailedExplanation": "[g(x)]ⁿ의 미분에 합성함수 미분법을 적용하면 f'(x) = 3(ln x)²·(ln x)' = 3(ln x)²·(1/x)이다. x=e를 대입하면 ln e = 1이므로 f'(e) = 3·1²·(1/e) = 3/e이다. ln e를 e로 혼동하여 3e²/e = 3e로 쓰거나, 1/x를 빠뜨려 3을 쓰는 실수가 많다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_145",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "지수·로그함수의 미분",
+    "difficulty": "수능 실전",
+    "question": "미분 가능한 함수 g(x)가 g(0)=2, g'(0)=3을 만족한다. f(x) = eˣ·g(x)로 정의할 때, f'(0)의 값은?",
+    "choices": [
+      "3",
+      "5",
+      "6",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱의 미분법에 의해 f'(x) = eˣg(x) + eˣg'(x)이므로, f'(0) = g(0) + g'(0) = 2 + 3 = 5이다.",
+    "detailedExplanation": "f(x) = eˣ·g(x)에서 곱의 미분법을 적용하면 f'(x) = (eˣ)'·g(x) + eˣ·g'(x) = eˣg(x) + eˣg'(x) = eˣ[g(x)+g'(x)]이다. x=0에서 e⁰=1이므로 f'(0) = 1·[g(0)+g'(0)] = 2+3 = 5이다. g(0)=2만 보고 답을 2로 쓰거나, g(0)·g'(0)=6으로 곱하는 실수를 조심해야 한다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_146",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "f(x) = sin²x · cosx 일 때, f'(π/6)의 값은?",
+    "choices": [
+      "3/8",
+      "5/8",
+      "√3/4",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "곱의 미분법과 합성함수 미분법을 적용하면 f'(x) = 2sinx·cos²x − sin³x이고, x = π/6을 대입하면 f'(π/6) = (1/2)(5/4) = 5/8이다.",
+    "detailedExplanation": "f'(x) = 2sinx·cosx·cosx + sin²x·(−sinx) = 2sinx·cos²x − sin³x = sinx(2cos²x − sin²x).\nx = π/6이면 sinx = 1/2, cosx = √3/2.\nf'(π/6) = (1/2)(2·3/4 − 1/4) = (1/2)(5/4) = 5/8.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_147",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "lim[h→0] {sin(π/3 + h) − sin(π/3)} / h 의 값은?",
+    "choices": [
+      "√3/2",
+      "1/2",
+      "−1/2",
+      "√3"
+    ],
+    "answerIndex": 1,
+    "explanation": "이 극한은 f(x) = sinx의 x = π/3에서의 미분계수이므로 cos(π/3) = 1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_148",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "f(x) = x·sinx 일 때, f''(π)의 값은?",
+    "choices": [
+      "−2",
+      "π",
+      "−π",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "f'(x) = sinx + x·cosx, f''(x) = 2cosx − x·sinx이므로 f''(π) = 2·(−1) − π·0 = −2이다.",
+    "detailedExplanation": "f'(x) = sinx + x·cosx (곱의 미분법).\nf''(x) = cosx + cosx + x·(−sinx) = 2cosx − x·sinx.\nf''(π) = 2cos(π) − π·sin(π) = 2·(−1) − π·0 = −2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_149",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "f(x) = tanx / (1 + secx) 일 때, f'(π/3)의 값은?",
+    "choices": [
+      "1/3",
+      "2/3",
+      "4/3",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = sinx/(1+cosx)로 변환 후 몫의 미분을 적용하면 f'(x) = 1/(1+cosx)이고, f'(π/3) = 1/(1+1/2) = 2/3이다.",
+    "detailedExplanation": "tanx/(1+secx) = (sinx/cosx)/((cosx+1)/cosx) = sinx/(1+cosx).\nf'(x) = [cosx(1+cosx) + sin²x]/(1+cosx)² = (1+cosx)/(1+cosx)² = 1/(1+cosx).\nf'(π/3) = 1/(1 + cos(π/3)) = 1/(1 + 1/2) = 2/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_150",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "y = sin(2x)·eˣ 일 때, x = 0에서의 미분계수는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "y' = 2cos(2x)·eˣ + sin(2x)·eˣ이고, x = 0을 대입하면 y'(0) = 2·1·1 + 0·1 = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_151",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "g(x) = cos²x − sin²x 일 때, g'(π/8)의 값은?",
+    "choices": [
+      "−√2",
+      "√2",
+      "−1",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "g(x) = cos(2x)이므로 g'(x) = −2sin(2x)이고, g'(π/8) = −2sin(π/4) = −2·(√2/2) = −√2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_152",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "삼각함수의 미분",
+    "difficulty": "수능 실전",
+    "question": "f(x) = sinx / (2 + cosx) 에 대하여 f'(x)의 최댓값은?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "2/5",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "f'(x) = (2cosx + 1)/(2 + cosx)²로 정리되며, t = cosx로 치환하여 최댓값을 구하면 t = 1일 때 f'(x) = 3/9 = 1/3이다.",
+    "detailedExplanation": "f'(x) = [cosx(2+cosx) + sin²x]/(2+cosx)² = (2cosx+1)/(2+cosx)².\nt = cosx (t ∈ [−1, 1])로 놓으면 g(t) = (2t+1)/(2+t)².\ng'(t) = [2(2+t)² − (2t+1)·2(2+t)]/(2+t)⁴ = (2 − 2t)/(2+t)³.\nt ∈ [−1,1]에서 g'(t) ≥ 0이므로 g(t)는 단조증가, 최댓값은 t = 1일 때 g(1) = 3/9 = 1/3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_153",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "f(x) = x³ − 2x, g(x) = √(x² + 3)일 때, h(x) = f(g(x))로 정의된 함수 h(x)에 대하여 h'(1)의 값은?",
+    "choices": [
+      "5",
+      "10",
+      "4",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "g(1) = 2, g'(1) = 1/2, f'(x) = 3x² − 2이므로 f'(g(1)) = f'(2) = 10. 합성함수의 미분에 의해 h'(1) = f'(g(1))·g'(1) = 10 × 1/2 = 5.",
+    "detailedExplanation": "① g(x) = √(x²+3)이므로 g(1) = √4 = 2.\n② g'(x) = x/√(x²+3)이므로 g'(1) = 1/√4 = 1/2.\n③ f'(x) = 3x² − 2이므로 f'(g(1)) = f'(2) = 3·4 − 2 = 10.\n④ h'(1) = f'(g(1))·g'(1) = 10 × 1/2 = 5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_154",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "대표 유형",
+    "question": "f(2) = 3, f'(2) = −1일 때, h(x) = {f(x)}⁴에 대하여 h'(2)의 값은?",
+    "choices": [
+      "-108",
+      "-36",
+      "108",
+      "-12"
+    ],
+    "answerIndex": 0,
+    "explanation": "h'(x) = 4{f(x)}³·f'(x)이므로 h'(2) = 4·3³·(−1) = 4·27·(−1) = −108.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_155",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "h(x) = sin³(2x)일 때, h'(π/6)의 값은?",
+    "choices": [
+      "9/4",
+      "3√3/4",
+      "3/2",
+      "3√3/8"
+    ],
+    "answerIndex": 0,
+    "explanation": "h'(x) = 3sin²(2x)·cos(2x)·2 = 6sin²(2x)cos(2x)이고, h'(π/6) = 6·(√3/2)²·(1/2) = 6·(3/4)·(1/2) = 9/4.",
+    "detailedExplanation": "① h(x) = {sin(2x)}³으로 보고 합성함수 미분을 두 번 적용한다.\n② h'(x) = 3{sin(2x)}²·(sin(2x))' = 3sin²(2x)·cos(2x)·2 = 6sin²(2x)cos(2x).\n③ x = π/6 대입: sin(π/3) = √3/2, cos(π/3) = 1/2.\n④ h'(π/6) = 6·(3/4)·(1/2) = 18/8 = 9/4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_156",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "f(x) = (2x² − x + 1)⁵일 때, f'(1)의 값은?",
+    "choices": [
+      "240",
+      "48",
+      "80",
+      "160"
+    ],
+    "answerIndex": 0,
+    "explanation": "f'(x) = 5(2x²−x+1)⁴·(4x−1)이므로 f'(1) = 5·(2−1+1)⁴·(4−1) = 5·16·3 = 240.",
+    "detailedExplanation": "① 내부 함수 u(x) = 2x²−x+1, u(1) = 2−1+1 = 2.\n② u'(x) = 4x−1, u'(1) = 3.\n③ f'(x) = 5u(x)⁴·u'(x)이므로 f'(1) = 5·2⁴·3 = 5·16·3 = 240.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_157",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "응용 유형",
+    "question": "h(x) = f(3x + 1)로 정의된 함수에 대하여 h'(2) = 15일 때, f'(7)의 값은?",
+    "choices": [
+      "5",
+      "15",
+      "45",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "h'(x) = f'(3x+1)·3이므로 h'(2) = f'(7)·3 = 15에서 f'(7) = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_158",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "수능 기초",
+    "question": "h(x) = ln(x² + eˣ)일 때, h'(0)의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "1/2",
+      "e"
+    ],
+    "answerIndex": 0,
+    "explanation": "h'(x) = (2x + eˣ)/(x² + eˣ)이므로 h'(0) = (0 + e⁰)/(0 + e⁰) = 1/1 = 1.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_159",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "합성함수의 미분",
+    "difficulty": "수능 실전",
+    "question": "f(x) = x² + ax + b (a, b는 상수)이고 h(x) = √(f(x))에 대하여 h(1) = 2, h'(1) = 2가 성립할 때, f(a + b)의 값은?",
+    "choices": [
+      "24",
+      "18",
+      "12",
+      "30"
+    ],
+    "answerIndex": 0,
+    "explanation": "h(1) = 2에서 f(1) = 4이므로 1+a+b = 4. h'(x) = f'(x)/(2√f(x))이고 h'(1) = (2+a)/4 = 2에서 a = 6, b = −3. f(a+b) = f(3) = 9+18−3 = 24.",
+    "detailedExplanation": "① h(x) = √(f(x))에서 h'(x) = f'(x) / (2√(f(x))).\n② h(1) = √(1+a+b) = 2이므로 1+a+b = 4, 즉 a+b = 3 ... (*).\n③ f'(x) = 2x+a이므로 h'(1) = (2+a) / (2·2) = (2+a)/4.\n④ h'(1) = 2이므로 2+a = 8, a = 6.\n⑤ (*)에서 b = 3−6 = −3.\n⑥ f(a+b) = f(6+(−3)) = f(3) = 9+6·3+(−3) = 9+18−3 = 24.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_160",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = (x²+2x) / (x+1) 에 대하여 f'(2)의 값은?",
+    "choices": [
+      "8/9",
+      "10/9",
+      "10/3",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "몫의 미분법으로 f'(x) = [(2x+2)(x+1) − (x²+2x)] / (x+1)²이고, x=2를 대입하면 분자 6·3−8=10, 분모 9이므로 f'(2)=10/9이다.",
+    "detailedExplanation": "f(x)=(x²+2x)/(x+1)에서 분자 g(x)=x²+2x, 분모 h(x)=x+1로 놓으면\n① g'(x)=2x+2, h'(x)=1\n② f'(x) = [g'(x)h(x) − g(x)h'(x)] / [h(x)]²\n       = [(2x+2)(x+1) − (x²+2x)·1] / (x+1)²\n③ x=2 대입:\n   분자 = (4+2)(2+1) − (4+4) = 6·3 − 8 = 18 − 8 = 10\n   분모 = (2+1)² = 9\n④ f'(2) = 10/9",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_161",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = (x²−1) / (2x+1) 에 대하여 f'(2)의 값은?",
+    "choices": [
+      "14/5",
+      "26/25",
+      "12/25",
+      "14/25"
+    ],
+    "answerIndex": 3,
+    "explanation": "몫의 미분으로 f'(x) = [2x(2x+1) − 2(x²−1)] / (2x+1)²이고, x=2에서 분자 4·5−2·3=14, 분모 25이므로 f'(2)=14/25이다.",
+    "detailedExplanation": "f(x)=(x²−1)/(2x+1)에서\n① 분자 g(x)=x²−1 → g'(x)=2x\n   분모 h(x)=2x+1 → h'(x)=2\n② f'(x) = [2x(2x+1) − (x²−1)·2] / (2x+1)²\n③ x=2 대입:\n   분자 = 2·2·(4+1) − 2(4−1) = 4·5 − 2·3 = 20 − 6 = 14\n   분모 = (4+1)² = 25\n④ f'(2) = 14/25\n\n오답 주의: 14/5는 분모를 제곱하지 않은 오류, 26/25는 빼기를 더하기로 계산한 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_162",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "대표 유형",
+    "question": "함수 f(x) = ln(x) / x² 에 대하여 f'(e)의 값은?",
+    "choices": [
+      "1/e³",
+      "−1/e²",
+      "−2/e³",
+      "−1/e³"
+    ],
+    "answerIndex": 3,
+    "explanation": "f'(x) = [(1/x)·x² − ln(x)·2x] / x⁴ = (1−2ln(x)) / x³이고, x=e에서 f'(e) = (1−2)/e³ = −1/e³이다.",
+    "detailedExplanation": "f(x)=ln(x)/x²에서\n① g(x)=ln(x) → g'(x)=1/x\n   h(x)=x² → h'(x)=2x\n② f'(x) = [(1/x)·x² − ln(x)·2x] / (x²)²\n         = [x − 2x·ln(x)] / x⁴\n         = x(1 − 2ln(x)) / x⁴\n         = (1 − 2ln(x)) / x³\n③ x=e 대입 (ln(e)=1):\n   f'(e) = (1−2·1)/e³ = −1/e³\n\n오답 주의: −1/e²는 x³을 x²로 잘못 쓴 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_163",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "수능 기초",
+    "question": "함수 f(x) = x² / eˣ 에 대하여 f'(3)의 값은?",
+    "choices": [
+      "3/e³",
+      "−3/e",
+      "−6/e³",
+      "−3/e³"
+    ],
+    "answerIndex": 3,
+    "explanation": "f'(x) = [2x·eˣ − x²·eˣ] / e²ˣ = x(2−x)/eˣ이고, x=3에서 f'(3) = 3(2−3)/e³ = −3/e³이다.",
+    "detailedExplanation": "f(x)=x²/eˣ에서\n① g(x)=x² → g'(x)=2x\n   h(x)=eˣ → h'(x)=eˣ\n② f'(x) = [2x·eˣ − x²·eˣ] / (eˣ)²\n         = eˣ(2x − x²) / e²ˣ\n         = x(2−x) / eˣ\n③ x=3 대입:\n   f'(3) = 3·(2−3)/e³ = 3·(−1)/e³ = −3/e³\n\n오답 주의: −3/e는 분모의 지수를 3이 아닌 1로 쓴 오류, 3/e³은 부호 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_164",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = (2x²−x) / (x+3) 에 대하여 f'(1)의 값은?",
+    "choices": [
+      "9/16",
+      "3/4",
+      "11/16",
+      "11/4"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(x) = [(4x−1)(x+3) − (2x²−x)] / (x+3)²이고, x=1에서 분자 3·4−1=11, 분모 16이므로 f'(1)=11/16이다.",
+    "detailedExplanation": "f(x)=(2x²−x)/(x+3)에서\n① g(x)=2x²−x → g'(x)=4x−1\n   h(x)=x+3 → h'(x)=1\n② f'(x) = [(4x−1)(x+3) − (2x²−x)·1] / (x+3)²\n③ x=1 대입:\n   분자 = (4−1)(1+3) − (2−1) = 3·4 − 1 = 12 − 1 = 11\n   분모 = (1+3)² = 16\n④ f'(1) = 11/16\n\n오답 주의: 11/4는 분모를 제곱하지 않은 오류이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_165",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "몫의 미분",
+    "difficulty": "수능 실전",
+    "question": "함수 f(x) = (x³−3x) / (x²+1) 에 대하여 f'(√3)의 값은?",
+    "choices": [
+      "2/3",
+      "√3/2",
+      "3",
+      "3/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "f'(x) = [(3x²−3)(x²+1) − (x³−3x)·2x] / (x²+1)²이고, x=√3에서 x³−3x=3√3−3√3=0이므로 분자 = 6·4=24, 분모=16, f'(√3)=3/2이다.",
+    "detailedExplanation": "f(x)=(x³−3x)/(x²+1)에서\n① g(x)=x³−3x → g'(x)=3x²−3\n   h(x)=x²+1 → h'(x)=2x\n② f'(x) = [(3x²−3)(x²+1) − (x³−3x)·2x] / (x²+1)²\n③ x=√3 대입 (x²=3, x³=3√3):\n   ⬝ x³−3x = 3√3−3√3 = 0 (핵심 관찰!)\n   ⬝ 분자 = (9−3)(3+1) − 0 = 6·4 = 24\n   ⬝ 분모 = (3+1)² = 16\n④ f'(√3) = 24/16 = 3/2\n\n핵심 포인트: x=√3에서 분자의 두 번째 항이 0이 됨을 파악하면 계산이 단순해진다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_166",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "대표 유형",
+    "question": "수직선 위를 움직이는 점 P의 시각 t에서의 위치가 x(t) = t³ − 6t² + 9t + 2이다. t = 0에서 t = 4까지 점 P가 움직인 총 거리는?",
+    "choices": [
+      "4",
+      "8",
+      "12",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "v(t) = 3t² − 12t + 9 = 3(t−1)(t−3)이므로 운동 방향이 바뀌는 시각은 t = 1, 3이다. 총 거리 = |x(1)−x(0)| + |x(3)−x(1)| + |x(4)−x(3)| = 4 + 4 + 4 = 12.",
+    "detailedExplanation": "① v(t) = 3t² − 12t + 9 = 3(t−1)(t−3)으로 v = 0이 되는 시각은 t = 1, 3.\n② 각 위치 계산: x(0) = 2, x(1) = 1 − 6 + 9 + 2 = 6, x(3) = 27 − 54 + 27 + 2 = 2, x(4) = 64 − 96 + 36 + 2 = 6.\n③ 총 거리 = |6−2| + |2−6| + |6−2| = 4 + 4 + 4 = 12.\n④ 변위(위치 변화량)는 x(4)−x(0) = 4이므로 '4'를 고르지 않도록 주의.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_167",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "응용 유형",
+    "question": "함수 f(x) = x³ + ax² + bx가 x = 1에서 극댓값 2를 가질 때, b − a의 값은? (단, a, b는 상수)",
+    "choices": [
+      "1",
+      "-4",
+      "5",
+      "9"
+    ],
+    "answerIndex": 3,
+    "explanation": "f'(1) = 0에서 3 + 2a + b = 0, f(1) = 2에서 1 + a + b = 2. 두 식을 연립하면 a = −4, b = 5이므로 b − a = 9.",
+    "detailedExplanation": "① f'(x) = 3x² + 2ax + b이고, x = 1이 극대이므로 f'(1) = 3 + 2a + b = 0 … ㉠\n② f(1) = 1 + a + b = 2 → a + b = 1 … ㉡\n③ ㉠ − ㉡: a = −4, 대입하면 b = 5.\n④ 확인: f'(x) = 3x² − 8x + 5 = (3x−5)(x−1), x = 1 (극대), x = 5/3 (극소), f''(1) = 6 − 8 = −2 < 0 ✓\n⑤ b − a = 5 − (−4) = 9.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_168",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "응용 유형",
+    "question": "방정식 x³ − 3x + k = 0이 서로 다른 세 실근을 갖도록 하는 정수 k의 개수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = x³ − 3x로 놓으면 극댓값 f(−1) = 2, 극솟값 f(1) = −2이므로 세 실근 조건은 −2 < k < 2이다. 이를 만족하는 정수는 −1, 0, 1로 3개이다.",
+    "detailedExplanation": "① f(x) = x³ − 3x의 도함수 f'(x) = 3x² − 3 = 3(x−1)(x+1).\n② 극대: x = −1, f(−1) = −1 + 3 = 2. 극소: x = 1, f(1) = 1 − 3 = −2.\n③ x³ − 3x = −k의 해가 3개 ↔ 수평선 y = −k가 그래프와 세 점에서 만남 ↔ −2 < −k < 2 → −2 < k < 2.\n④ 이 범위의 정수: −1, 0, 1 → 3개.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_169",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "수능 기초",
+    "question": "함수 g(x) = 2x³ − 9x² + 12x + 1의 닫힌 구간 [0, 4]에서의 최댓값과 최솟값의 차는?",
+    "choices": [
+      "27",
+      "28",
+      "30",
+      "32"
+    ],
+    "answerIndex": 3,
+    "explanation": "g'(x) = 6(x−1)(x−2)이므로 임계점은 x = 1, 2이고 경계점 x = 0, 4를 포함하여 g(0) = 1, g(1) = 6, g(2) = 5, g(4) = 33이다. 최댓값 33, 최솟값 1이므로 차는 32.",
+    "detailedExplanation": "① g'(x) = 6x² − 18x + 12 = 6(x−1)(x−2) = 0 → x = 1, 2.\n② 후보값 계산: g(0) = 1, g(1) = 2−9+12+1 = 6, g(2) = 16−36+24+1 = 5, g(4) = 128−144+48+1 = 33.\n③ 최댓값 M = 33 (x = 4), 최솟값 m = 1 (x = 0).\n④ M − m = 32.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_170",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ − 3x에 그은 접선 중 기울기가 9인 접선이 두 개 있다. 이 두 접선의 y절편의 합은?",
+    "choices": [
+      "-32",
+      "-16",
+      "0",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "f'(t) = 3t² − 3 = 9이면 t = ±2이다. t = 2일 때 y절편 = f(2) − 9(2) = 2 − 18 = −16, t = −2일 때 y절편 = f(−2) − 9(−2) = −2 + 18 = 16이므로 합은 0.",
+    "detailedExplanation": "① f'(x) = 3x² − 3 = 9 → x² = 4 → x = 2 또는 x = −2.\n② t = 2: f(2) = 8 − 6 = 2, 접선 y − 2 = 9(x − 2) → y = 9x − 16, y절편 = −16.\n③ t = −2: f(−2) = −8 + 6 = −2, 접선 y + 2 = 9(x + 2) → y = 9x + 16, y절편 = 16.\n④ y절편의 합 = −16 + 16 = 0.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_171",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "수능 기초",
+    "question": "함수 f(x) = x⁴ − 8x² + k의 극솟값이 양수가 되도록 하는 정수 k의 최솟값은?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answerIndex": 3,
+    "explanation": "f'(x) = 4x(x−2)(x+2)이므로 x = ±2에서 극솟값을 가지며, f(±2) = 16 − 32 + k = k − 16이다. k − 16 > 0 → k > 16이므로 정수 최솟값은 17.",
+    "detailedExplanation": "① f'(x) = 4x³ − 16x = 4x(x² − 4) = 4x(x−2)(x+2).\n② 극소: x = ±2 (x = 0은 극대). 극솟값 = f(2) = 16 − 32 + k = k − 16.\n③ k − 16 > 0 → k > 16이므로 k의 정수 최솟값은 17.\n④ 확인: f(±2) = 17 − 16 = 1 > 0 ✓.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_172",
+    "subject": "미적분",
+    "chapter": "미분법",
+    "lesson": "도함수의 활용",
+    "difficulty": "수능 실전",
+    "question": "함수 f(x) = x³ − 6x² + 9x + k에 대하여 방정식 f(x) = 0의 서로 다른 실근의 개수가 2가 되도록 하는 모든 k의 값의 합은?",
+    "choices": [
+      "-8",
+      "-4",
+      "0",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "f의 극댓값은 4 + k (x = 1), 극솟값은 k (x = 3)이다. 실근이 정확히 2개이려면 극댓값 = 0 또는 극솟값 = 0이어야 하므로 k = −4 또는 k = 0이고, 두 값의 합은 −4.",
+    "detailedExplanation": "① f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3)이므로 극대: x = 1, 극소: x = 3.\n② f(1) = 1 − 6 + 9 + k = 4 + k (극댓값), f(3) = 27 − 54 + 27 + k = k (극솟값).\n③ f(x) = 0의 실근 개수는 y = −k와 f의 그래프의 교점 수와 같음.\n   - 실근 2개 조건: 극댓값 = 0 → 4 + k = 0 → k = −4,  또는 극솟값 = 0 → k = 0.\n④ k = −4: x³−6x²+9x−4 = (x−1)²(x−4) = 0, 실근 x = 1(중근), 4 → 서로 다른 실근 2개 ✓\n   k = 0: x³−6x²+9x = x(x−3)² = 0, 실근 x = 0, 3(중근) → 서로 다른 실근 2개 ✓\n⑤ k의 합 = −4 + 0 = −4.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_173",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀¹ x√(x²+3) dx 의 값은?",
+    "choices": [
+      "8/3 − √3",
+      "8/3 + √3",
+      "4/3 − √3",
+      "2/3 − √3"
+    ],
+    "answerIndex": 0,
+    "explanation": "u = x²+3으로 치환하면 du = 2x dx이므로 적분은 (1/2)∫√u du = (1/3)u^(3/2) + C = (1/3)(x²+3)^(3/2) + C가 된다. x=1일 때 (1/3)·8 = 8/3, x=0일 때 (1/3)·3√3 = √3이므로 정답은 8/3 − √3이다.",
+    "detailedExplanation": "u = x²+3으로 놓으면 du/dx = 2x이므로 x dx = du/2.\n적분 구간: x=0 → u=3, x=1 → u=4.\n∫₀¹ x√(x²+3) dx = (1/2)∫₃⁴ √u du = (1/2)·[（2/3)u^(3/2)]₃⁴\n= (1/3)[u^(3/2)]₃⁴ = (1/3)(4^(3/2) − 3^(3/2)) = (1/3)(8 − 3√3) = 8/3 − √3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_174",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "응용 유형",
+    "question": "∫₀^(π/2) sin³x dx 의 값은?",
+    "choices": [
+      "1/3",
+      "2/3",
+      "1",
+      "4/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "sin³x = sinx(1−cos²x)로 변형 후 u = cosx로 치환하면 du = −sinx dx. 적분 구간이 u: 1→0으로 바뀌고, −∫₁⁰(1−u²) du = ∫₀¹(1−u²) du = [u − u³/3]₀¹ = 1 − 1/3 = 2/3이다.",
+    "detailedExplanation": "sin³x = sinx·(1−cos²x).\nu = cosx로 치환: du = −sinx dx.\n적분 구간: x=0 → u=1, x=π/2 → u=0.\n∫₀^(π/2) sinx(1−cos²x) dx = −∫₁⁰(1−u²) du = ∫₀¹(1−u²) du\n= [u − u³/3]₀¹ = (1 − 1/3) − 0 = 2/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_175",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "수능 기초",
+    "question": "∫₀^(1/2) e^(2x) / (e^(2x)+1) dx 의 값은?",
+    "choices": [
+      "(1/2)ln((e+1)/2)",
+      "(1/2)ln(e+1)",
+      "ln((e+1)/2)",
+      "(1/4)ln(e+1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "u = e^(2x)+1로 치환하면 du = 2e^(2x)dx이므로 적분은 (1/2)∫du/u = (1/2)ln|u| + C가 된다. x=0일 때 u=2, x=1/2일 때 u=e+1이므로 (1/2)[ln(e+1) − ln2] = (1/2)ln((e+1)/2)이다.",
+    "detailedExplanation": "u = e^(2x)+1로 놓으면 du = 2e^(2x)dx, 즉 e^(2x)dx = du/2.\n적분 구간: x=0 → u=2, x=1/2 → u=e^1+1 = e+1.\n∫₀^(1/2) e^(2x)/(e^(2x)+1) dx = (1/2)∫₂^(e+1) (1/u) du\n= (1/2)[ln u]₂^(e+1) = (1/2)(ln(e+1) − ln2) = (1/2)ln((e+1)/2).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_176",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀² x/(x+1)² dx 의 값은?",
+    "choices": [
+      "ln3 − 2/3",
+      "ln3 + 2/3",
+      "ln3 − 1/3",
+      "2ln3 − 2/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "u = x+1로 치환하면 x = u−1, dx = du이고 적분 구간은 1→3. ∫₁³(u−1)/u² du = ∫₁³(1/u − 1/u²) du = [ln u + 1/u]₁³ = (ln3 + 1/3) − (ln1 + 1) = ln3 − 2/3이다.",
+    "detailedExplanation": "u = x+1로 치환: x = u−1, dx = du.\n적분 구간: x=0 → u=1, x=2 → u=3.\n∫₀² x/(x+1)² dx = ∫₁³ (u−1)/u² du = ∫₁³ (u/u² − 1/u²) du = ∫₁³(1/u − u^(−2)) du\n= [ln|u| + 1/u]₁³ = (ln3 + 1/3) − (0 + 1) = ln3 + 1/3 − 1 = ln3 − 2/3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_177",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "응용 유형",
+    "question": "∫₁^(e²) (lnx)² / x dx 의 값은?",
+    "choices": [
+      "4/3",
+      "8/3",
+      "16/3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "u = lnx로 치환하면 du = (1/x)dx이고 적분 구간은 x=1→u=0, x=e²→u=2. ∫₀² u² du = [u³/3]₀² = 8/3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_calculus_178",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "수능 실전",
+    "question": "∫₀^(π/2) sin(2x)·e^(cos²x) dx 의 값은?",
+    "choices": [
+      "e",
+      "e − 1",
+      "e + 1",
+      "2(e − 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "u = cos²x로 치환하면 du/dx = −2sinx·cosx = −sin(2x)이므로 sin(2x)dx = −du. 적분 구간 x=0→u=1, x=π/2→u=0이므로 −∫₁⁰ eᵘ du = ∫₀¹ eᵘ du = [eᵘ]₀¹ = e − 1이다.",
+    "detailedExplanation": "u = cos²x로 놓으면 du/dx = 2cosx·(−sinx) = −sin(2x).\n따라서 sin(2x)dx = −du.\n적분 구간: x=0 → u=cos²0=1, x=π/2 → u=cos²(π/2)=0.\n∫₀^(π/2) sin(2x)·e^(cos²x) dx = ∫₁⁰ eᵘ·(−du) = ∫₀¹ eᵘ du\n= [eᵘ]₀¹ = e¹ − e⁰ = e − 1.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_179",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "치환적분",
+    "difficulty": "수능 기초",
+    "question": "미분가능한 함수 f(x)가 f'(x) = 3x²/(x³+1)을 만족하고 f(0) = ln2일 때, f(1)의 값은?",
+    "choices": [
+      "ln2",
+      "ln3",
+      "ln4",
+      "ln6"
+    ],
+    "answerIndex": 2,
+    "explanation": "u = x³+1로 치환하면 f(x) = ln|x³+1| + C. f(0) = ln1 + C = C = ln2이므로 f(x) = ln(x³+1) + ln2. 따라서 f(1) = ln2 + ln2 = ln4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_180",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀¹ x·eˣdx 의 값은?",
+    "choices": [
+      "e−1",
+      "1",
+      "e",
+      "2e−1"
+    ],
+    "answerIndex": 1,
+    "explanation": "부분적분: u=x, dv=eˣdx 로 놓으면 [xeˣ]₀¹ − ∫₀¹eˣdx = e − [eˣ]₀¹ = e − (e−1) = 1.",
+    "detailedExplanation": "u=x, dv=eˣdx 로 설정하면 du=dx, v=eˣ.\n∫₀¹ x·eˣdx = [xeˣ]₀¹ − ∫₀¹eˣdx\n= (1·e − 0) − [eˣ]₀¹\n= e − (e − 1) = 1.\n오답 분석: 'e−1'은 ∫eˣdx의 부정적분과 혼동한 값, 'e'는 수정항 −∫eˣdx를 누락한 값, '2e−1'은 부호를 +로 잘못 처리한 값이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_181",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "응용 유형",
+    "question": "∫₁^e x²·ln x dx 의 값은?",
+    "choices": [
+      "(2e³−1)÷9",
+      "2e³÷9",
+      "(2e³+1)÷9",
+      "(e³−1)÷3"
+    ],
+    "answerIndex": 2,
+    "explanation": "u=ln x, dv=x²dx 로 부분적분하면 [x³ln x ÷ 3]₁^e − ∫₁^e(x²÷3)dx = e³÷3 − [x³÷9]₁^e = e³÷3 − (e³−1)÷9 = (2e³+1)÷9.",
+    "detailedExplanation": "u=ln x, dv=x²dx 로 놓으면 du=1/x·dx, v=x³/3.\n∫₁^e x²·ln x dx = [x³/3·ln x]₁^e − ∫₁^e (x³/3)·(1/x)dx\n= (e³/3·1 − 0) − (1/3)∫₁^e x²dx\n= e³/3 − (1/3)·[x³/3]₁^e\n= e³/3 − (e³−1)/9\n= (3e³ − e³ + 1)/9 = (2e³+1)/9.\n오답 분석: '2e³÷9'는 −1/9 항을 누락, '(2e³−1)÷9'는 +1/9를 −1/9로 부호 오류, '(e³−1)÷3'은 부분적분 없이 직접 적분한 오류이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_182",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "수능 기초",
+    "question": "In = ∫₀¹ xⁿeˣdx 로 정의할 때, I₃의 값은? (단, I₀ = e−1)",
+    "choices": [
+      "e−3",
+      "e−2",
+      "6−2e",
+      "4e−6"
+    ],
+    "answerIndex": 2,
+    "explanation": "부분적분에 의해 점화식 In = e − n·I(n−1) 이 성립한다. I₁=1, I₂=e−2, I₃=e−3(e−2)=6−2e.",
+    "detailedExplanation": "∫₀¹ xⁿeˣdx 를 u=xⁿ, dv=eˣdx 로 부분적분하면\nIn = [xⁿeˣ]₀¹ − n∫₀¹x^(n-1)eˣdx = e − n·I(n−1).\n단계별 계산:\n• I₀ = e−1 (주어짐)\n• I₁ = e − 1·I₀ = e − (e−1) = 1\n• I₂ = e − 2·I₁ = e − 2\n• I₃ = e − 3·I₂ = e − 3(e−2) = e − 3e + 6 = 6−2e\n오답 분석: 'e−2'는 I₂ 값이고, '4e−6'은 점화식 부호를 반대로 적용한 오류이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_183",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "대표 유형",
+    "question": "∫₁^e (ln x)²dx 의 값은?",
+    "choices": [
+      "1÷3",
+      "2−e",
+      "e−2",
+      "e"
+    ],
+    "answerIndex": 2,
+    "explanation": "u=(ln x)², dv=dx 로 부분적분하면 [x(ln x)²]₁^e − 2∫₁^e ln x dx = e − 2[x ln x − x]₁^e = e − 2·1 = e−2.",
+    "detailedExplanation": "u=(ln x)², dv=dx 로 놓으면 du=2ln x/x·dx, v=x.\n∫₁^e (ln x)²dx = [x(ln x)²]₁^e − 2∫₁^e ln x dx\n= (e·1² − 0) − 2·[x ln x − x]₁^e\n= e − 2·{(e·1−e)−(1·0−1)}\n= e − 2·{0+1}\n= e − 2.\n오답 분석: '1÷3'은 (ln x)³/3으로 직접 적분한 오류, '2−e'는 부호 착오, 'e'는 두 번째 IBP 결과를 잘못 처리한 값이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_184",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "응용 유형",
+    "question": "∫₀¹ x·arctan x dx 의 값은?",
+    "choices": [
+      "π÷8",
+      "π÷8 − 1÷4",
+      "π÷4 + 1÷2",
+      "π÷4 − 1÷2"
+    ],
+    "answerIndex": 3,
+    "explanation": "u=arctan x, dv=x dx 로 부분적분 후 ∫x²/(1+x²)dx = ∫(1−1/(1+x²))dx 로 변환하면 [(x²+1)/2·arctan x − x/2]₀¹ = π/4 − 1/2.",
+    "detailedExplanation": "u=arctan x, dv=x dx 로 설정: du=1/(1+x²)dx, v=x²/2.\n∫₀¹ x·arctan x dx = [x²/2·arctan x]₀¹ − ∫₀¹ x²/(2(1+x²)) dx\n= π/8 − (1/2)∫₀¹(1 − 1/(1+x²))dx\n= π/8 − (1/2)[x − arctan x]₀¹\n= π/8 − (1/2)(1 − π/4)\n= π/8 − 1/2 + π/8\n= π/4 − 1/2.\n오답 분석: 'π÷8'은 수정 적분항을 완전히 생략한 값, 'π÷8−1÷4'는 x²/(1+x²) ≈ x²/2 로 잘못 처리한 값이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_185",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "수능 기초",
+    "question": "∫₀^π eˣsin x dx 의 값은?",
+    "choices": [
+      "0",
+      "(eᵖ−1)÷2",
+      "(eᵖ+1)÷2",
+      "eᵖ+1"
+    ],
+    "answerIndex": 2,
+    "explanation": "I=∫eˣsin x dx 로 놓고 부분적분을 두 번 적용하면 2I=eˣ(sin x−cos x)+C 이므로, 정적분 값은 [eˣ(sin x−cos x)/2]₀^π = (eᵖ+1)/2.",
+    "detailedExplanation": "I = ∫eˣsin x dx 를 두 번 부분적분:\n1차: u=sin x, dv=eˣdx ⟹ I = eˣsin x − ∫eˣcos x dx\n2차: ∫eˣcos x dx = eˣcos x + ∫eˣsin x dx = eˣcos x + I\n따라서 I = eˣsin x − eˣcos x − I\n2I = eˣ(sin x − cos x)\nI = eˣ(sin x−cos x)/2 + C.\n정적분:\n[eˣ(sin x−cos x)/2]₀^π\n= eᵖ(0−(−1))/2 − e⁰(0−1)/2\n= eᵖ/2 + 1/2 = (eᵖ+1)/2.\n오답 분석: '0'은 IBP 1번 후 sin(π)=0 만 보고 오판, '(eᵖ−1)÷2'는 하한 부호 착오이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_186",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "부분적분",
+    "difficulty": "수능 실전",
+    "question": "∫₀^(π/2) x²sin x dx 의 값은?",
+    "choices": [
+      "π÷2−2",
+      "π−2",
+      "π",
+      "π+2"
+    ],
+    "answerIndex": 1,
+    "explanation": "I₂=∫₀^(π/2)x²sin x dx에 부분적분을 적용하면 I₂=2·J₁이고, J₁=∫₀^(π/2)x·cos x dx = π/2−1 이므로 I₂=π−2.",
+    "detailedExplanation": "u=x², dv=sin x dx 로 1차 부분적분:\nI₂ = [−x²cos x]₀^(π/2) + 2∫₀^(π/2) x·cos x dx = 0 + 2J₁\n(∵ cos(π/2)=0, cos(0)=1이지만 0²=0)\n\nJ₁ = ∫₀^(π/2) x·cos x dx 를 다시 부분적분:\nu=x, dv=cos x dx ⟹ v=sin x\nJ₁ = [x·sin x]₀^(π/2) − ∫₀^(π/2) sin x dx\n= (π/2·1 − 0) − [−cos x]₀^(π/2)\n= π/2 − (0−(−1)) = π/2 − 1\n\n따라서 I₂ = 2J₁ = 2(π/2−1) = π−2.\n오답 분석: 'π'는 J₁=π/2로 잘못 계산(−1 누락), 'π+2'는 J₁의 부호를 반대로 처리한 값이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_187",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ − 3x와 직선 y = x로 둘러싸인 도형의 넓이를 구하여라.",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 곡선의 교점은 x³ − 4x = 0에서 x = −2, 0, 2이고, 대칭성을 이용하면 넓이 = 2∫₀² (4x − x³)dx = 2[2x² − x⁴/4]₀² = 2×4 = 8이다.",
+    "detailedExplanation": "① 교점: x³−3x = x → x³−4x = x(x−2)(x+2) = 0 → x = −2, 0, 2\n② [0,2]에서 부호 확인: x=1 대입 → 1−4 = −3 < 0이므로 직선 y=x가 위에 있음\n③ [−2,0]에서는 곡선이 위 (대칭으로 확인)\n④ 대칭성 활용: 넓이 = 2∫₀² (x − (x³−3x))dx = 2∫₀² (4x − x³)dx\n⑤ = 2[2x² − x⁴/4]₀² = 2(8 − 4) = 8",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_188",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "응용 유형",
+    "question": "0 ≤ x ≤ π에서 곡선 y = sin x와 y = cos x로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "√2",
+      "2",
+      "2√2",
+      "2√2 + 2"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점은 x = π/4이고, [0, π/4]에서 cos x ≥ sin x, [π/4, π]에서 sin x ≥ cos x이므로 넓이 = [sin x + cos x]₀^{π/4} + [−cos x − sin x]_{π/4}^{π} = (√2−1) + (1+√2) = 2√2이다.",
+    "detailedExplanation": "① 교점: sin x = cos x → tan x = 1 → x = π/4 (0≤x≤π 범위)\n② ∫₀^{π/4} (cos x − sin x)dx = [sin x + cos x]₀^{π/4} = √2 − 1\n③ ∫_{π/4}^{π} (sin x − cos x)dx = [−cos x − sin x]_{π/4}^{π} = (1−0) − (−√2/2 − √2/2) = 1 + √2\n④ 합산: (√2−1) + (1+√2) = 2√2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_189",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ 위의 점 (1, 1)에서의 접선과 곡선으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "9/4",
+      "9/2",
+      "27/4",
+      "27/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "접선 y = 3x − 2와 곡선의 교점은 x = −2, 1(중근)이고, [−2, 1]에서 x³ ≥ 3x−2이므로 넓이 = ∫₋₂¹ (x³ − 3x + 2)dx = 27/4이다.",
+    "detailedExplanation": "① x=1에서 접선: y' = 3x² → 기울기 3, 접선 y = 3x−2\n② 교점: x³ = 3x−2 → x³−3x+2 = 0 → (x−1)²(x+2) = 0 → x = −2, 1\n③ [−2,1]에서 x=0 대입: x³=0, 접선=-2 → 곡선이 위\n④ 넓이 = ∫₋₂¹ (x³−3x+2)dx = [x⁴/4 − 3x²/2 + 2x]₋₂¹\n= (1/4 − 3/2 + 2) − (4 − 6 − 4) = 3/4 + 6 = 27/4",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_190",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "수능 기초",
+    "question": "곡선 y = x² − 2x − 3과 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "16/3",
+      "6",
+      "32/3",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = (x+1)(x−3)이므로 x축과의 교점은 x = −1, 3이다. [−1, 3]에서 y ≤ 0이므로 넓이 = ∫₋₁³ −(x²−2x−3)dx = [−x³/3 + x² + 3x]₋₁³ = 32/3이다.",
+    "detailedExplanation": "① 교점: x²−2x−3 = (x+1)(x−3) = 0 → x = −1, 3\n② [−1,3]에서 x=0 대입: −3 < 0 → 곡선이 x축 아래\n③ 넓이 = ∫₋₁³ −(x²−2x−3)dx = [−x³/3 + x² + 3x]₋₁³\n= (−9 + 9 + 9) − (1/3 + 1 − 3) = 9 − (−5/3) = 32/3",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_191",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "응용 유형",
+    "question": "두 곡선 y = x³ − 6x² + 8x와 y = x² − 4x로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "45/4",
+      "71/6",
+      "12",
+      "75/6"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 곡선의 차 x³−7x²+12x = x(x−3)(x−4)의 근이 x = 0, 3, 4이므로, 구간별로 넓이를 구하면 45/4 + 7/12 = 71/6이다.",
+    "detailedExplanation": "① 교점: (x³−6x²+8x) − (x²−4x) = x³−7x²+12x = x(x−3)(x−4) = 0 → x = 0, 3, 4\n② [0,3]에서 x=1 대입: 1−7+12 = 6 > 0 → y=x³−6x²+8x가 위\n∫₀³ (x³−7x²+12x)dx = [x⁴/4 − 7x³/3 + 6x²]₀³ = 81/4 − 63 + 54 = 45/4\n③ [3,4]에서 x=3.5 대입: 음수 → y=x²−4x가 위\n∫₃⁴ −(x³−7x²+12x)dx = [−x⁴/4 + 7x³/3 − 6x²]₃⁴ = 7/12\n④ 합산: 45/4 + 7/12 = 135/12 + 7/12 = 71/6",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_192",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "수능 기초",
+    "question": "곡선 y = |x² − 1|과 직선 y = x + 1로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "5/3",
+      "7/4",
+      "2",
+      "13/6"
+    ],
+    "answerIndex": 3,
+    "explanation": "교점은 x = −1, 0, 2이며 구간 [−1,0], [0,1], [1,2]로 나누어 적분하면 각각 1/6, 5/6, 7/6이고 합이 13/6이다.",
+    "detailedExplanation": "① 교점 탐색: [−1,1]에서 |x²−1|=1−x², 1−x²=x+1 → x=0, −1\n[1,∞)에서 |x²−1|=x²−1, x²−1=x+1 → x²−x−2=0 → x=2\n② [−1,0]: (1−x²)−(x+1)=−x²−x, x=−0.5 대입→0.75>0.5 → |x²−1|>직선\n∫₋₁⁰(1−x²−x−1)dx = ∫₋₁⁰(−x²−x)dx = 1/6\n③ [0,1]: ∫₀¹(x+1−(1−x²))dx = ∫₀¹(x²+x)dx = 5/6\n④ [1,2]: ∫₁²(x+1−(x²−1))dx = ∫₁²(−x²+x+2)dx = 7/6\n⑤ 합: 1/6 + 5/6 + 7/6 = 13/6",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_193",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(넓이)",
+    "difficulty": "수능 실전",
+    "question": "포물선 y = x² − 4x + 3과 직선 y = k (k > 0)으로 둘러싸인 도형의 넓이가 9/2일 때, k의 값은?",
+    "choices": [
+      "1",
+      "5/4",
+      "3/2",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "포물선의 꼭짓점이 (2, −1)이므로 y=k와의 교점 간격은 2√(k+1)이고, 넓이 공식 (4/3)(k+1)^{3/2} = 9/2를 풀면 (k+1)^{3/2} = 27/8이므로 k+1 = 9/4, k = 5/4이다.",
+    "detailedExplanation": "① 포물선 표준형: y = (x−2)² − 1, 꼭짓점 (2, −1)\n② y=k와 교점: (x−2)² = k+1 → x = 2 ± √(k+1)\n③ 넓이 = ∫_{2−√(k+1)}^{2+√(k+1)} [k−(x²−4x+3)]dx\n치환 u=x−2: = ∫_{−√(k+1)}^{√(k+1)} [(k+1)−u²]du\n= [（k+1)u − u³/3]_{−√(k+1)}^{√(k+1)} = (4/3)(k+1)^{3/2}\n④ 방정식: (4/3)(k+1)^{3/2} = 9/2\n(k+1)^{3/2} = 27/8\nk+1 = (27/8)^{2/3} = 9/4\nk = 5/4",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_194",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x²과 x축 및 직선 x = 2로 둘러싸인 영역을 y축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "8π",
+      "32π/5",
+      "4π",
+      "16π"
+    ],
+    "answerIndex": 0,
+    "explanation": "원기둥 셸법(Shell Method)을 적용하면 V = 2π∫₀² x·x² dx = 2π∫₀² x³ dx = 2π[x⁴/4]₀² = 2π·4 = 8π이다.",
+    "detailedExplanation": "y축 회전체는 셸법으로 계산한다. V = 2π∫₀² x·f(x) dx 에서 f(x) = x²이므로 V = 2π∫₀² x³ dx이다. 적분하면 2π·[x⁴/4]₀² = 2π·(16/4 − 0) = 2π·4 = 8π. 흔한 오답인 32π/5는 x축 회전으로 잘못 계산한 경우(π∫₀² x⁴ dx)이고, 4π는 계수 2π를 π로 쓴 실수이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_195",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "대표 유형",
+    "question": "두 곡선 y = √x와 y = x로 둘러싸인 영역을 x축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "π/3",
+      "π/6",
+      "π/2",
+      "π/30"
+    ],
+    "answerIndex": 1,
+    "explanation": "교점은 x = 0, 1이고, 와셔법으로 V = π∫₀¹ {(√x)² − x²} dx = π∫₀¹ (x − x²) dx = π[x²/2 − x³/3]₀¹ = π(1/2 − 1/3) = π/6이다.",
+    "detailedExplanation": "y = √x (위)와 y = x (아래)의 교점은 √x = x → x(√x − 1) = 0에서 x = 0, 1이다. 와셔법: V = π∫₀¹ {(√x)² − x²} dx = π∫₀¹ (x − x²) dx. 적분: π[x²/2 − x³/3]₀¹ = π(1/2 − 1/3) = π·(3−2)/6 = π/6. 오답 π/3은 두 곡선 중 하나만 계산한 경우, π/30은 각 항을 따로 제곱하는 실수에서 비롯된다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_196",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "응용 유형",
+    "question": "곡선 y = sin x (0 ≤ x ≤ π)와 x축으로 둘러싸인 영역을 x축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "π²/4",
+      "2π",
+      "π²/2",
+      "π"
+    ],
+    "answerIndex": 2,
+    "explanation": "V = π∫₀^π sin²x dx = π∫₀^π (1 − cos 2x)/2 dx = (π/2)[x − (sin 2x)/2]₀^π = (π/2)·π = π²/2이다.",
+    "detailedExplanation": "V = π∫₀^π sin²x dx에서 반각 공식 sin²x = (1 − cos 2x)/2를 적용한다. V = (π/2)∫₀^π (1 − cos 2x) dx = (π/2)[x − sin(2x)/2]₀^π. x = π에서 π − 0 = π, x = 0에서 0. 따라서 V = (π/2)·π = π²/2. 오답 π²/4는 계수 π/2를 π/4로 착각한 경우, 2π는 ∫₀^π sin x dx = 2를 그대로 사용한 실수이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_197",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "수능 기초",
+    "question": "곡선 y = x² + 1과 x축 및 두 직선 x = 0, x = 2로 둘러싸인 영역을 x축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "42π/5",
+      "206π/15",
+      "166π/15",
+      "28π/15"
+    ],
+    "answerIndex": 1,
+    "explanation": "V = π∫₀² (x²+1)² dx = π∫₀² (x⁴+2x²+1) dx = π[x⁵/5 + 2x³/3 + x]₀² = π(32/5 + 16/3 + 2) = 206π/15이다.",
+    "detailedExplanation": "V = π∫₀² (x²+1)² dx. 전개하면 (x²+1)² = x⁴ + 2x² + 1이므로 V = π[x⁵/5 + 2x³/3 + x]₀² = π(32/5 + 16/3 + 2). 공통분모 15로 통일: 96/15 + 80/15 + 30/15 = 206/15. 따라서 V = 206π/15. 오답 42π/5는 중간 항 2x²를 누락해 (x⁴+1)로 전개한 경우, 166π/15는 2x² 대신 x²만 넣은 실수이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_198",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "응용 유형",
+    "question": "곡선 y = eˣ과 x축 및 두 직선 x = 0, x = 1로 둘러싸인 영역을 x축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "π(e²+1)/2",
+      "πe²/2",
+      "π(e²−1)/2",
+      "π(e−1)²"
+    ],
+    "answerIndex": 2,
+    "explanation": "V = π∫₀¹ e^(2x) dx = π[e^(2x)/2]₀¹ = π(e² − 1)/2이다.",
+    "detailedExplanation": "(eˣ)² = e^(2x)이므로 V = π∫₀¹ e^(2x) dx이다. ∫e^(2x) dx = e^(2x)/2 + C를 이용하면 V = π[e^(2x)/2]₀¹ = π(e²/2 − 1/2) = π(e²−1)/2. 오답 π(e²+1)/2는 하한의 부호를 +로 잘못 계산한 경우, πe²/2는 하한 x=0 대입 시 e^0=1을 빠뜨린 실수, π(e−1)²는 eˣ의 제곱을 (e^x)²가 아닌 (e-1)²로 혼동한 경우이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_calculus_199",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "수능 기초",
+    "question": "포물선 y² = 4x (0 ≤ x ≤ 4)에서 x에 수직인 각 단면이 포물선의 현을 한 변으로 하는 정사각형인 입체도형의 부피를 구하시오.",
+    "choices": [
+      "32",
+      "64",
+      "256",
+      "128"
+    ],
+    "answerIndex": 3,
+    "explanation": "x에서 수직 단면의 현의 길이는 2·2√x = 4√x이므로 단면 넓이는 (4√x)² = 16x이다. V = ∫₀⁴ 16x dx = 16[x²/2]₀⁴ = 128이다.",
+    "detailedExplanation": "y² = 4x에서 y = ±2√x이므로 위아래 폭(현의 길이) = 2√x − (−2√x) = 4√x이다. 단면이 이 길이를 한 변으로 하는 정사각형이므로 단면 넓이 S(x) = (4√x)² = 16x. 부피 V = ∫₀⁴ 16x dx = 16·[x²/2]₀⁴ = 16·8 = 128. 오답 32는 현의 길이를 2√x(한쪽만)로 착각한 경우, 64는 4√x를 제곱하지 않고 면적으로 쓴 실수이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_calculus_200",
+    "subject": "미적분",
+    "chapter": "적분법",
+    "lesson": "정적분의 활용(부피)",
+    "difficulty": "수능 실전",
+    "question": "곡선 y = ln x, 직선 y = 0 (x축), 직선 x = e로 둘러싸인 영역을 y축을 중심으로 회전시킨 회전체의 부피를 구하시오.",
+    "choices": [
+      "π(e²−1)/2",
+      "πe²",
+      "π(e+1)²/2",
+      "π(e²+1)/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "와셔법으로 y축에 대해 적분하면 x = eʸ이므로 V = π∫₀¹ (e² − e^(2y)) dy = π[e²y − e^(2y)/2]₀¹ = π(e² − e²/2 + 1/2) = π(e²+1)/2이다.",
+    "detailedExplanation": "영역의 경계: y = ln x (즉 x = eʸ), x = e (y = 1에서 만남), x축(y = 0). y축 회전이므로 y에 대한 와셔법을 사용한다. y ∈ [0, 1]에서 바깥 반지름 R = e, 안쪽 반지름 r = eʸ. V = π∫₀¹ (e² − e^(2y)) dy = π[e²·y − e^(2y)/2]₀¹ = π{(e² − e²/2) − (0 − 1/2)} = π{e²/2 + 1/2} = π(e²+1)/2. 셸법으로도 검증: V = 2π∫₁^e x·ln x dx = 2π[x²/2 · ln x − x²/4]₁^e = 2π{(e²/4) + 1/4} = π(e²+1)/2. 오답 π(e²−1)/2는 부호 실수, πe²는 분모 2와 상수항 누락, π(e+1)²/2는 y = ln x를 지수 처리 시 혼동한 경우이다.",
+    "estimatedTime": "3분"
+  }
+]

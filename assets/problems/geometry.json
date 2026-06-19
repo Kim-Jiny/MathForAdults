@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "ge_conic_001",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "개념 확인",
+    "question": "포물선 y² = 4x 의 초점의 좌표는?",
+    "choices": [
+      "(1, 0)",
+      "(0, 1)",
+      "(2, 0)",
+      "(0, 2)"
+    ],
+    "answerIndex": 0,
+    "explanation": "y² = 4px 에서 4p = 4, p = 1. 초점은 (1, 0).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ge_conic_002",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 8x 의 초점의 좌표는?",
+    "choices": [
+      "(1, 0)",
+      "(2, 0)",
+      "(4, 0)",
+      "(0, 2)"
+    ],
+    "answerIndex": 1,
+    "explanation": "y² = 4px 에서 4p = 8, p = 2. 초점은 (2, 0).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ge_conic_003",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/9 + y²/4 = 1 의 장축의 길이는?",
+    "choices": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "a² = 9 이므로 a = 3. 장축의 길이는 2a = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ge_vec_001",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 (1, 2) + (3, 4) 의 값은?",
+    "choices": [
+      "(4, 6)",
+      "(3, 8)",
+      "(2, 2)",
+      "(4, 8)"
+    ],
+    "answerIndex": 0,
+    "explanation": "성분끼리 더합니다. (1+3, 2+4) = (4, 6).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ge_vec_002",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "기본 유형",
+    "question": "벡터 (2, 3) 의 크기는?",
+    "choices": [
+      "√5",
+      "√13",
+      "5",
+      "13"
+    ],
+    "answerIndex": 1,
+    "explanation": "크기 = √(2² + 3²) = √13.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ge_vec_003",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "평면벡터의 성분과 내적",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 (1, 2) 와 (3, 4) 의 내적은?",
+    "choices": [
+      "7",
+      "11",
+      "14",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "내적 = 1×3 + 2×4 = 3 + 8 = 11.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "ge_space_001",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "개념 확인",
+    "question": "두 점 (0, 0, 0) 과 (1, 2, 2) 사이의 거리는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "√(1² + 2² + 2²) = √9 = 3.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "ge_space_002",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "대표 유형",
+    "question": "점 (1, 2, 3) 을 xy평면 위로 정사영한 점의 좌표는?",
+    "choices": [
+      "(1, 2, 0)",
+      "(0, 0, 3)",
+      "(1, 0, 3)",
+      "(0, 2, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "xy평면으로의 정사영은 z좌표를 0으로. (1, 2, 0).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_1",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "개념 확인",
+    "question": "포물선 x² = −8y의 준선의 방정식은?",
+    "choices": [
+      "y = 2",
+      "y = −2",
+      "y = 8",
+      "y = −8"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² = −4py에서 4p = 8이므로 p = 2. 준선은 y = p = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_2",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "기본 유형",
+    "question": "초점이 (0, 3)이고 준선이 y = −3인 포물선의 방정식은?",
+    "choices": [
+      "x² = 12y",
+      "x² = 6y",
+      "y² = 12x",
+      "x² = 3y"
+    ],
+    "answerIndex": 0,
+    "explanation": "초점 (0, p)에서 p = 3이므로 포물선은 x² = 4py = 12y이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_3",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "기본 유형",
+    "question": "포물선 y² = 8x 위의 점 P(2, 4)에서 초점까지의 거리는?",
+    "choices": [
+      "4",
+      "3",
+      "5",
+      "2√2"
+    ],
+    "answerIndex": 0,
+    "explanation": "y² = 8x에서 p = 2, 준선은 x = −2. 포물선 위의 점에서 초점까지의 거리는 준선까지의 거리와 같으므로 2 − (−2) = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_4",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 4x의 초점 F를 지나고 x축에 수직인 현의 길이는?",
+    "choices": [
+      "4",
+      "2",
+      "8",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "y² = 4x에서 p = 1, 초점 F(1, 0). x = 1을 대입하면 y² = 4, y = ±2. 현의 길이는 2 − (−2) = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_5",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 12x의 초점 F와 포물선 위의 점 P에 대해 PF = 6일 때, 점 P의 x좌표는?",
+    "choices": [
+      "3",
+      "6",
+      "9",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "y² = 12x에서 p = 3, 준선 x = −3. PF = x좌표 − (−3) = x + 3 = 6이므로 x = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_6",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "응용 유형",
+    "question": "포물선 y² = 4x의 초점 F를 지나는 직선이 포물선과 두 점 A, B에서 만난다. AF = 4/3일 때, BF의 값은?",
+    "choices": [
+      "4",
+      "3",
+      "2",
+      "3/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "포물선 y² = 4x에서 p = 1. 초점을 지나는 현의 두 끝점 거리 r₁, r₂에 대해 1/r₁ + 1/r₂ = 1/p = 1이 성립한다. AF = 4/3이면 3/4 + 1/BF = 1이므로 BF = 4이다.",
+    "detailedExplanation": "포물선 y² = 4x에서 p = 1, 초점 F(1, 0). 초점을 지나는 현의 두 끝점까지의 거리 r₁, r₂에 대해 1/r₁ + 1/r₂ = 1/p가 성립한다. p = 1이므로 1/(4/3) + 1/BF = 1, 즉 3/4 + 1/BF = 1에서 1/BF = 1/4, BF = 4이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_7",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "수능 기초",
+    "question": "포물선 y² = 8x 위의 점 P(8, 8)과 초점 F, 준선 위의 점 H(−2, 8)에 대해 삼각형 PFH의 넓이는?",
+    "choices": [
+      "40",
+      "32",
+      "20",
+      "48"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(8, 8), F(2, 0), H(−2, 8)에서 좌표 공식으로 넓이 = 1/2|8(0−8) + 2(8−8) + (−2)(8−0)| = 1/2|−64 + 0 − 16| = 1/2 × 80 = 40이다.",
+    "detailedExplanation": "y² = 8x에서 p = 2, 초점 F(2, 0), 준선 x = −2. P(8, 8)은 포물선 위의 점(8² = 64 = 8×8 성립). H는 P에서 준선에 내린 수선의 발이므로 H(−2, 8). 삼각형 PFH의 넓이를 좌표 공식으로 계산: 1/2|x_P(y_F − y_H) + x_F(y_H − y_P) + x_H(y_P − y_F)| = 1/2|8(0−8) + 2(8−8) + (−2)(8−0)| = 1/2|−64 + 0 − 16| = 40이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_8",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/25 + y²/9 = 1 의 두 초점 사이의 거리는?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "c² = a² − b² = 25 − 9 = 16이므로 c = 4. 두 초점 사이의 거리는 2c = 8이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_9",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/16 + y²/7 = 1 위의 점 P에서 두 초점 F, F'까지의 거리의 합 PF + PF'의 값은?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "14"
+    ],
+    "answerIndex": 2,
+    "explanation": "타원의 정의에 의해 PF + PF' = 2a = 2√16 = 8이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_10",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "기본 유형",
+    "question": "타원의 두 초점이 F(3, 0), F'(−3, 0)이고 장축의 길이가 10일 때, 이 타원의 방정식은?",
+    "choices": [
+      "x²/25 + y²/16 = 1",
+      "x²/16 + y²/25 = 1",
+      "x²/10 + y²/9 = 1",
+      "x²/25 + y²/9 = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "a = 5이므로 a² = 25, c = 3이므로 b² = a² − c² = 25 − 9 = 16. 따라서 x²/25 + y²/16 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_11",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "기본 유형",
+    "question": "타원 x²/9 + y²/4 = 1 위의 점 P에 대해 두 초점 F, F'에서 PF = 1일 때, PF'의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "PF + PF' = 2a = 6이고 PF = 1이므로 PF' = 6 − 1 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_12",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/25 + y²/16 = 1의 단축의 한 끝점을 B라 할 때, B에서 두 초점 F(3, 0), F'(−3, 0)까지의 거리 BF의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "단축의 끝점 B(0, 4)에서 초점 F(3, 0)까지의 거리: BF = √(3² + 4²) = √25 = 5이다.",
+    "detailedExplanation": "c² = 25 − 16 = 9이므로 c = 3. 단축의 끝점 B(0, 4), 초점 F(3, 0)에 대해 BF = √(3² + 4²) = √(9 + 16) = √25 = 5. 일반적으로 단축의 끝점에서 초점까지의 거리는 장반축 a와 같다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_13",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/a² + y²/b² = 1 (a > b > 0)에서 장축의 길이가 단축의 길이의 2배일 때, 이심률 e의 값은?",
+    "choices": [
+      "√2/2",
+      "√3/2",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "2a = 2·(2b)이므로 a = 2b. c² = a² − b² = 4b² − b² = 3b²이므로 c = √3·b. e = c/a = √3·b/(2b) = √3/2이다.",
+    "detailedExplanation": "장축의 길이 2a, 단축의 길이 2b에서 2a = 2·(2b)이면 a = 2b. c² = a² − b² = 4b² − b² = 3b², c = √3·b. 이심률 e = c/a = √3·b/(2b) = √3/2이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_14",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "수능 기초",
+    "question": "두 점 F(√7, 0), F'(−√7, 0)에 대하여 PF + PF' = 8을 만족하는 점 P의 자취의 방정식은?",
+    "choices": [
+      "x²/16 + y²/9 = 1",
+      "x²/9 + y²/16 = 1",
+      "x²/64 + y²/9 = 1",
+      "x²/16 + y²/7 = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "2a = 8이므로 a = 4, a² = 16. c = √7이므로 b² = 16 − 7 = 9. 따라서 x²/16 + y²/9 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_15",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "수능 실전",
+    "question": "타원 x²/25 + y²/9 = 1의 두 초점 F(4, 0), F'(−4, 0)에 대하여 타원 위의 점 P가 PF = 3을 만족할 때, 삼각형 PFF'의 넓이는?",
+    "choices": [
+      "3√7",
+      "6√7/2",
+      "9√7/4",
+      "6√3"
+    ],
+    "answerIndex": 3,
+    "explanation": "PF = 3, PF' = 7, FF' = 8. 코사인 법칙으로 cos∠PFF' = (9 + 64 − 49)/48 = 1/2이므로 ∠PFF' = 60°. 넓이 = (1/2)·3·8·sin60° = 6√3이다.",
+    "detailedExplanation": "PF + PF' = 2a = 10이므로 PF' = 7. FF' = 2c = 8. 코사인 법칙 적용: cos∠PFF' = (PF² + FF'² − PF'²)/(2·PF·FF') = (9 + 64 − 49)/(2·3·8) = 24/48 = 1/2. 따라서 ∠PFF' = 60°. 삼각형 PFF'의 넓이 = (1/2)·PF·FF'·sin60° = (1/2)·3·8·(√3/2) = 6√3이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_16",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "개념 확인",
+    "question": "쌍곡선 x²/9 − y²/4 = 1의 꼭짓점의 좌표를 모두 구하면?",
+    "choices": [
+      "(±3, 0)",
+      "(±2, 0)",
+      "(0, ±3)",
+      "(0, ±2)"
+    ],
+    "answerIndex": 0,
+    "explanation": "x²/a² − y²/b² = 1 꼴의 쌍곡선에서 꼭짓점은 (±a, 0)이므로 a = 3에서 꼭짓점은 (±3, 0)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_17",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "개념 확인",
+    "question": "쌍곡선 x²/16 − y²/9 = 1의 초점의 좌표는?",
+    "choices": [
+      "(±5, 0)",
+      "(±4, 0)",
+      "(±3, 0)",
+      "(±√7, 0)"
+    ],
+    "answerIndex": 0,
+    "explanation": "c² = a² + b² = 16 + 9 = 25이므로 c = 5, 초점의 좌표는 (±5, 0)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_18",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "개념 확인",
+    "question": "쌍곡선 y²/4 − x²/9 = 1의 주축의 방향으로 옳은 것은?",
+    "choices": [
+      "y축 방향",
+      "x축 방향",
+      "원점을 지나는 사선 방향",
+      "방향이 없다"
+    ],
+    "answerIndex": 0,
+    "explanation": "y²/b² − x²/a² = 1 꼴이면 주축이 y축 방향이고 꼭짓점은 (0, ±b)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_19",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "기본 유형",
+    "question": "쌍곡선 x²/4 − y²/12 = 1의 점근선의 방정식은?",
+    "choices": [
+      "y = ±√3 x",
+      "y = ±2√3 x",
+      "y = ±(√3/2) x",
+      "y = ±3x"
+    ],
+    "answerIndex": 0,
+    "explanation": "x²/a² − y²/b² = 1의 점근선은 y = ±(b/a)x이므로, b = √12 = 2√3, a = 2에서 y = ±(2√3/2)x = ±√3 x이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_20",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "기본 유형",
+    "question": "두 초점이 F(5, 0), F'(−5, 0)이고 ||PF| − |PF'|| = 6인 쌍곡선의 방정식은?",
+    "choices": [
+      "x²/9 − y²/16 = 1",
+      "x²/16 − y²/9 = 1",
+      "x²/25 − y²/16 = 1",
+      "x²/9 − y²/25 = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "쌍곡선의 정의에서 2a = 6이므로 a = 3, c = 5이고 b² = c² − a² = 25 − 9 = 16이다. 따라서 x²/9 − y²/16 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_21",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "대표 유형",
+    "question": "쌍곡선 x²/25 − y²/b² = 1의 점근선이 y = (3/5)x일 때, b의 값은?",
+    "choices": [
+      "3",
+      "5",
+      "4",
+      "√34"
+    ],
+    "answerIndex": 0,
+    "explanation": "점근선의 기울기 b/a = 3/5이고 a = 5이므로 b = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_22",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "응용 유형",
+    "question": "쌍곡선 x²/9 − y²/7 = 1의 두 초점 F, F'에서 쌍곡선 위의 한 점 P(단, 제1사분면)에 대해 |PF| = 2일 때, |PF'|의 값은?",
+    "choices": [
+      "8",
+      "6",
+      "7",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "a² = 9이므로 a = 3, 쌍곡선의 정의에서 ||PF| − |PF'|| = 2a = 6이다. 제1사분면의 점이고 오른쪽 초점에 더 가까우므로 |PF'| − |PF| = 6, |PF'| = |PF| + 6 = 2 + 6 = 8이다.",
+    "detailedExplanation": "c² = 9 + 7 = 16이므로 c = 4, 초점은 F(4, 0), F'(−4, 0)이다.\n2a = 6이므로 ||PF| − |PF'|| = 6.\n제1사분면의 점 P는 오른쪽 초점 F(4, 0)에 더 가까우므로 |PF| < |PF'|.\n|PF'| − |PF| = 6 → |PF'| = 2 + 6 = 8.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_23",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "수능 기초",
+    "question": "쌍곡선 x²/a² − y²/b² = 1의 두 초점이 F(√13, 0), F'(−√13, 0)이고, 점근선의 방정식이 y = ±(2/3)x일 때, a² + b²의 값은?",
+    "choices": [
+      "13",
+      "9",
+      "4",
+      "25"
+    ],
+    "answerIndex": 0,
+    "explanation": "점근선의 기울기가 b/a = 2/3이므로 b = 2k, a = 3k로 놓으면 c² = a² + b² = 9k² + 4k² = 13k² = 13에서 k² = 1이다. 따라서 a² = 9, b² = 4이고 a² + b² = 13이다.",
+    "detailedExplanation": "점근선 y = ±(b/a)x에서 b/a = 2/3.\na = 3k, b = 2k (k > 0)으로 설정.\nc² = a² + b² = 9k² + 4k² = 13k².\n초점이 (±√13, 0)이므로 c = √13, c² = 13.\n13k² = 13 → k = 1.\na² = 9, b² = 4.\na² + b² = 9 + 4 = 13.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_24",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/9 + y²/4 = 1과 직선 y = x + k가 서로 다른 두 점에서 만나기 위한 k의 범위는?",
+    "choices": [
+      "−√13 < k < √13",
+      "−√11 < k < √11",
+      "−√7 < k < √7",
+      "−√5 < k < √5"
+    ],
+    "answerIndex": 0,
+    "explanation": "직선을 타원에 대입하면 4x²+9(x+k)²=36이고, 판별식 D > 0 조건에서 k² < 13, 즉 −√13 < k < √13이다.",
+    "detailedExplanation": "y = x+k를 x²/9 + y²/4 = 1에 대입하면\nx²/9 + (x+k)²/4 = 1\n4x² + 9(x+k)² = 36\n4x² + 9x² + 18kx + 9k² = 36\n13x² + 18kx + (9k²−36) = 0\n판별식 D > 0:\n(18k)² − 4·13·(9k²−36) > 0\n324k² − 52(9k²−36) > 0\n324k² − 468k² + 1872 > 0\n−144k² + 1872 > 0\nk² < 13\n−√13 < k < √13",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_25",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "기본 유형",
+    "question": "쌍곡선 x²/4 − y²/3 = 1에 접하는 기울기가 2인 직선의 방정식은?",
+    "choices": [
+      "y = 2x + 4",
+      "y = 2x + √13",
+      "y = 2x ± √13",
+      "y = 2x ± 4"
+    ],
+    "answerIndex": 2,
+    "explanation": "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선은 y = mx ± √(a²m²−b²)이므로, a²=4, b²=3, m=2를 대입하면 y = 2x ± √(16−3) = 2x ± √13이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_26",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "기본 유형",
+    "question": "포물선 y² = 12x 위의 점 (3, 6)에서의 접선의 방정식은?",
+    "choices": [
+      "y = x + 3",
+      "y = x − 3",
+      "y = 2x",
+      "y = x + 6"
+    ],
+    "answerIndex": 0,
+    "explanation": "포물선 y² = 4px에서 p = 3이고, 점 (x₁, y₁) = (3, 6)에서의 접선은 y·y₁ = 2p(x+x₁), 즉 6y = 6(x+3)이므로 y = x + 3이다.",
+    "detailedExplanation": "y² = 12x에서 4p = 12, p = 3.\n포물선 y² = 4px 위의 점 (x₁, y₁)에서의 접선 공식:\ny·y₁ = 2p(x + x₁)\ny·6 = 6(x + 3)\n6y = 6x + 18\ny = x + 3\n검산: x=3을 y=x+3에 대입하면 y=6. (3,6)을 지나고 기울기 1인 접선.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_27",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/16 + y²/9 = 1 위의 점 (2, 3√3/2)에서의 접선이 x축과 만나는 점의 x좌표는?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "타원 위의 점 (x₁, y₁)에서의 접선 공식 x·x₁/16 + y·y₁/9 = 1에 (2, 3√3/2)를 대입하면 x/8 + y√3/6 = 1이고, y=0을 대입하면 x = 8이다.",
+    "detailedExplanation": "타원 x²/16 + y²/9 = 1 위의 점 (x₁, y₁)에서의 접선:\nx·x₁/16 + y·y₁/9 = 1\nx₁ = 2, y₁ = 3√3/2 대입:\n2x/16 + y·(3√3/2)/9 = 1\nx/8 + y√3/6 = 1\ny = 0 대입:\nx/8 = 1 → x = 8",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_28",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "수능 실전",
+    "question": "타원 x²/25 + y²/16 = 1 위를 움직이는 점 P에서의 접선이 x축과 만나는 점을 Q, y축과 만나는 점을 R라 할 때, |OQ|·|OR|의 최솟값은? (단, O는 원점, 접선이 축에 평행한 경우 제외)",
+    "choices": [
+      "20",
+      "25",
+      "40",
+      "50"
+    ],
+    "answerIndex": 2,
+    "explanation": "타원 위의 점 P(5cosθ, 4sinθ)에서의 접선은 xcosθ/5 + ysinθ/4 = 1이고, Q(5/cosθ, 0), R(0, 4/sinθ)이므로 |OQ|·|OR| = 20/(|sinθcosθ|) ≥ 40이다.",
+    "detailedExplanation": "타원 x²/25 + y²/16 = 1을 매개변수로 나타내면 P = (5cosθ, 4sinθ).\n접선 방정식: x(5cosθ)/25 + y(4sinθ)/16 = 1\n→ xcosθ/5 + ysinθ/4 = 1\n\nQ: y=0 대입 → x = 5/cosθ → |OQ| = 5/|cosθ|\nR: x=0 대입 → y = 4/sinθ → |OR| = 4/|sinθ|\n\n|OQ|·|OR| = 20/(|sinθcosθ|) = 40/|sin2θ|\n\n|sin2θ| ≤ 1이므로 40/|sin2θ| ≥ 40.\n|sin2θ| = 1, 즉 θ = π/4일 때 최솟값 40.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_29",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "벡터 a⃗ = (3, −1)일 때, 2a⃗의 성분은?",
+    "choices": [
+      "(5, 1)",
+      "(6, −2)",
+      "(6, 2)",
+      "(3, −2)"
+    ],
+    "answerIndex": 1,
+    "explanation": "스칼라 배는 각 성분에 스칼라를 곱하므로 2a⃗ = (2×3, 2×(−1)) = (6, −2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_30",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a⃗ = (2, 5), b⃗ = (−1, 3)일 때, a⃗ + b⃗의 성분은?",
+    "choices": [
+      "(3, 2)",
+      "(1, 8)",
+      "(3, 8)",
+      "(1, 2)"
+    ],
+    "answerIndex": 1,
+    "explanation": "벡터의 덧셈은 성분끼리 더하므로 a⃗ + b⃗ = (2+(−1), 5+3) = (1, 8)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_31",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "기본 유형",
+    "question": "두 벡터 a⃗ = (4, 6), b⃗ = (1, 2)일 때, a⃗ − 2b⃗의 성분은?",
+    "choices": [
+      "(2, 2)",
+      "(3, 4)",
+      "(2, 4)",
+      "(3, 2)"
+    ],
+    "answerIndex": 0,
+    "explanation": "a⃗ − 2b⃗ = (4−2×1, 6−2×2) = (4−2, 6−4) = (2, 2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_32",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "기본 유형",
+    "question": "벡터 a⃗ = (3, −2)에 대해 |a⃗|의 값은?",
+    "choices": [
+      "√5",
+      "√11",
+      "√13",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "|a⃗| = √(3² + (−2)²) = √(9+4) = √13이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_33",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a⃗ = (1, 2), b⃗ = (3, 1)에 대해 |a⃗ + b⃗|의 값은?",
+    "choices": [
+      "√29",
+      "√17",
+      "5",
+      "√37"
+    ],
+    "answerIndex": 2,
+    "explanation": "a⃗ + b⃗ = (1+3, 2+1) = (4, 3)이고, |(4, 3)| = √(16+9) = √25 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_34",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "벡터 방정식 2x⃗ − a⃗ = b⃗를 x⃗에 대해 풀었을 때, a⃗ = (−2, 4), b⃗ = (6, 2)이면 x⃗의 성분은?",
+    "choices": [
+      "(2, 3)",
+      "(4, 6)",
+      "(4, 3)",
+      "(2, 6)"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x⃗ = a⃗ + b⃗ = (−2+6, 4+2) = (4, 6)이므로 x⃗ = (2, 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_35",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "응용 유형",
+    "question": "|a⃗| = 3, |b⃗| = 4, |a⃗ + b⃗| = 5일 때, |a⃗ − b⃗|의 값은?",
+    "choices": [
+      "√17",
+      "5",
+      "√41",
+      "√13"
+    ],
+    "answerIndex": 1,
+    "explanation": "|a⃗ + b⃗|² = |a⃗|² + 2a⃗·b⃗ + |b⃗|² = 25에서 9 + 2a⃗·b⃗ + 16 = 25이므로 a⃗·b⃗ = 0이다. |a⃗ − b⃗|² = 9 + 0 + 16 = 25이므로 |a⃗ − b⃗| = 5이다.",
+    "detailedExplanation": "|a⃗ + b⃗|² = |a⃗|² + 2a⃗·b⃗ + |b⃗|²\n25 = 9 + 2a⃗·b⃗ + 16\n2a⃗·b⃗ = 0, 즉 a⃗·b⃗ = 0\n|a⃗ − b⃗|² = |a⃗|² − 2a⃗·b⃗ + |b⃗|² = 9 − 0 + 16 = 25\n따라서 |a⃗ − b⃗| = 5",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_36",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(2, 5), B(6, 1)에 대하여 벡터 AB→의 성분을 구하여라.",
+    "choices": [
+      "(4, −4)",
+      "(−4, 4)",
+      "(8, 6)",
+      "(4, 4)"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB→ = B − A = (6−2, 1−5) = (4, −4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_37",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "개념 확인",
+    "question": "벡터 a→ = (3, −2)의 크기 |a→|를 구하여라.",
+    "choices": [
+      "1",
+      "√5",
+      "√13",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "|a→| = √(3² + (−2)²) = √(9 + 4) = √13이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_38",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "개념 확인",
+    "question": "a→ = (4, −1), b→ = (−2, 3)일 때, a→ + b→를 구하여라.",
+    "choices": [
+      "(2, 2)",
+      "(6, −4)",
+      "(2, 4)",
+      "(6, 4)"
+    ],
+    "answerIndex": 0,
+    "explanation": "a→ + b→ = (4+(−2), −1+3) = (2, 2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_39",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "기본 유형",
+    "question": "세 점 A(1, 3), B(4, 7), C(a, b)에 대하여 AB→ = AC→가 될 때, 점 C의 좌표는?",
+    "choices": [
+      "(4, 7)",
+      "(3, 4)",
+      "(1, 3)",
+      "(5, 8)"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB→ = AC→이면 B = C이므로 C = (4, 7)이다.",
+    "detailedExplanation": "AB→ = (3, 4)이고 AC→ = (a−1, b−3)이다. AB→ = AC→이면 a−1 = 3, b−3 = 4이므로 a = 4, b = 7. 따라서 C = (4, 7).",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_40",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "응용 유형",
+    "question": "벡터 a→ = (t, t−1)에 대하여 |a→| = √5가 되도록 하는 모든 실수 t의 값의 합은?",
+    "choices": [
+      "1",
+      "0",
+      "2",
+      "−1"
+    ],
+    "answerIndex": 0,
+    "explanation": "t² + (t−1)² = 5에서 2t² − 2t − 4 = 0, t² − t − 2 = 0, (t−2)(t+1) = 0이므로 t = 2 또는 t = −1이고, 합은 1이다.",
+    "detailedExplanation": "|a→|² = t² + (t−1)² = 5. 전개: t² + t² − 2t + 1 = 5이므로 2t² − 2t − 4 = 0, t² − t − 2 = 0. 인수분해: (t−2)(t+1) = 0이므로 t = 2 또는 t = −1. 두 값의 합: 2 + (−1) = 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_41",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a⃗ = (3, 4), b⃗ = (1, 2)의 내적 a⃗ · b⃗의 값은?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
+    "answerIndex": 1,
+    "explanation": "a⃗ · b⃗ = 3×1 + 4×2 = 3 + 8 = 11이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_42",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "개념 확인",
+    "question": "|a⃗| = 5, |b⃗| = 4이고 두 벡터 a⃗, b⃗ 사이의 각도가 60°일 때, a⃗ · b⃗의 값은?",
+    "choices": [
+      "8",
+      "10",
+      "16",
+      "20"
+    ],
+    "answerIndex": 1,
+    "explanation": "a⃗ · b⃗ = |a⃗||b⃗|cos60° = 5 × 4 × (1/2) = 10이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_43",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a⃗ = (2, −1), b⃗ = (3, 6)에 대하여 a⃗ · b⃗ = 0일 때, 두 벡터가 이루는 관계는?",
+    "choices": [
+      "평행하다",
+      "수직이다",
+      "크기가 같다",
+      "방향이 같다"
+    ],
+    "answerIndex": 1,
+    "explanation": "a⃗ · b⃗ = 2×3 + (−1)×6 = 6 − 6 = 0이므로, 내적이 0인 두 벡터는 서로 수직이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_44",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "기본 유형",
+    "question": "두 벡터 a⃗ = (1, 2), b⃗ = (x, 3)이 서로 수직일 때, 실수 x의 값은?",
+    "choices": [
+      "−6",
+      "−4",
+      "4",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "a⃗ ⊥ b⃗이면 a⃗ · b⃗ = 0이므로 1×x + 2×3 = 0, x + 6 = 0, x = −6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_45",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "기본 유형",
+    "question": "|a⃗| = 3, |b⃗| = 2, a⃗ · b⃗ = 3일 때, |a⃗ + b⃗|²의 값은?",
+    "choices": [
+      "13",
+      "17",
+      "19",
+      "25"
+    ],
+    "answerIndex": 2,
+    "explanation": "|a⃗ + b⃗|² = |a⃗|² + 2(a⃗ · b⃗) + |b⃗|² = 9 + 6 + 4 = 19이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_46",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "대표 유형",
+    "question": "|a⃗| = 2, |b⃗| = 3, |a⃗ − b⃗| = √7일 때, a⃗ · b⃗의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "|a⃗ − b⃗|² = |a⃗|² − 2(a⃗ · b⃗) + |b⃗|² = 4 − 2(a⃗ · b⃗) + 9 = 7이므로, 2(a⃗ · b⃗) = 6, a⃗ · b⃗ = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_47",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a⃗ = (2, 1), b⃗ = (1, 3)에 대하여 (a⃗ + tb⃗) · b⃗ = 0을 만족하는 실수 t의 값은?",
+    "choices": [
+      "−1",
+      "−1/2",
+      "1/2",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "(a⃗ + tb⃗) · b⃗ = a⃗ · b⃗ + t|b⃗|² = (2×1 + 1×3) + t(1 + 9) = 5 + 10t = 0이므로 t = −1/2이다.",
+    "detailedExplanation": "a⃗ · b⃗ = 2×1 + 1×3 = 5, |b⃗|² = 1² + 3² = 10이다. (a⃗ + tb⃗) · b⃗ = 5 + 10t = 0을 풀면 t = −1/2이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_49",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "수능 실전",
+    "question": "|a⃗| = 1, |b⃗| = 2이고 a⃗와 b⃗의 내각이 θ일 때, |2a⃗ + b⃗|² − |2a⃗ − b⃗|²의 값을 cosθ로 나타내면?",
+    "choices": [
+      "4cosθ",
+      "8cosθ",
+      "12cosθ",
+      "16cosθ"
+    ],
+    "answerIndex": 3,
+    "explanation": "|2a⃗ + b⃗|² = 4 + 4(a⃗·b⃗) + 4, |2a⃗ − b⃗|² = 4 − 4(a⃗·b⃗) + 4이고, 차는 8(a⃗·b⃗) = 8×1×2×cosθ = 16cosθ이다.",
+    "detailedExplanation": "|2a⃗ + b⃗|² = |2a⃗|² + 2(2a⃗)·b⃗ + |b⃗|² = 4|a⃗|² + 4(a⃗·b⃗) + |b⃗|² = 4 + 4(a⃗·b⃗) + 4이다. |2a⃗ − b⃗|² = 4|a⃗|² − 4(a⃗·b⃗) + |b⃗|² = 4 − 4(a⃗·b⃗) + 4이다. 두 식의 차는 8(a⃗·b⃗) = 8×|a⃗||b⃗|cosθ = 8×1×2×cosθ = 16cosθ이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_50",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "개념 확인",
+    "question": "점 A(1, 2)를 지나고 방향벡터가 d = (3, 4)인 직선의 매개변수 방정식으로 옳은 것은? (단, t는 실수)",
+    "choices": [
+      "x = 1 + 3t, y = 2 + 4t",
+      "x = 3 + t, y = 4 + 2t",
+      "x = 1 + 4t, y = 2 + 3t",
+      "x = 3 + 1t, y = 4 + 2t"
+    ],
+    "answerIndex": 0,
+    "explanation": "점 A(1, 2)를 지나고 방향벡터 (3, 4)인 직선의 매개변수 방정식은 x = 1 + 3t, y = 2 + 4t이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_51",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "개념 확인",
+    "question": "중심이 C(2, −1)이고 반지름이 5인 원의 벡터방정식을 |p − c|² = r² 꼴로 나타낼 때, 이 원의 일반방정식은?",
+    "choices": [
+      "(x − 2)² + (y + 1)² = 25",
+      "(x + 2)² + (y − 1)² = 25",
+      "(x − 2)² + (y − 1)² = 25",
+      "(x + 2)² + (y + 1)² = 25"
+    ],
+    "answerIndex": 0,
+    "explanation": "중심 (2, −1), 반지름 5인 원의 방정식은 (x − 2)² + (y + 1)² = 5² = 25이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_52",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(1, 3), B(5, 7)을 지나는 직선의 방향벡터를 구하면?",
+    "choices": [
+      "(4, 4)",
+      "(−4, 4)",
+      "(4, −4)",
+      "(6, 10)"
+    ],
+    "answerIndex": 0,
+    "explanation": "방향벡터는 AB = B − A = (5−1, 7−3) = (4, 4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_53",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "기본 유형",
+    "question": "직선의 매개변수 방정식이 x = 2 + t, y = 1 − 2t일 때, 이 직선의 기울기는?",
+    "choices": [
+      "−2",
+      "2",
+      "1/2",
+      "−1/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "방향벡터가 (1, −2)이므로 기울기 = Δy/Δx = −2/1 = −2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_54",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "기본 유형",
+    "question": "점 P(x, y)에 대해 위치벡터 p = (x, y)라 할 때, 두 점 A(1, 2), B(5, 4)를 지름의 양 끝점으로 하는 원의 벡터방정식이 |p − c| = r이다. 이때 중심 c와 반지름 r은?",
+    "choices": [
+      "c = (3, 3), r = √5",
+      "c = (3, 3), r = 5",
+      "c = (2, 3), r = √5",
+      "c = (3, 2), r = √5"
+    ],
+    "answerIndex": 0,
+    "explanation": "중심은 AB의 중점 c = ((1+5)/2, (2+4)/2) = (3, 3)이고, 반지름은 |AB|/2 = √((5−1)² + (4−2)²)/2 = √20/2 = √5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_55",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "대표 유형",
+    "question": "직선의 벡터방정식이 p = (2, 1) + t(3, −1) (t는 실수)일 때, 이 직선 위의 점 중에서 x좌표가 8인 점의 y좌표는?",
+    "choices": [
+      "−1",
+      "1",
+      "−2",
+      "3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x = 2 + 3t = 8이면 t = 2이고, y = 1 + (−1)×2 = −1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_56",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "대표 유형",
+    "question": "원의 벡터방정식 |p − (3, 2)| = r에서 이 원이 점 (7, 5)를 지날 때, r의 값은?",
+    "choices": [
+      "5",
+      "√7",
+      "7",
+      "√5"
+    ],
+    "answerIndex": 0,
+    "explanation": "|（7, 5） − (3, 2)| = |(4, 3)| = √(16 + 9) = √25 = 5이므로 r = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_57",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "수능 기초",
+    "question": "원 |p − (1, 2)| = √10 위의 점 P(x, y)에서 중심 C(1, 2)까지의 거리가 √10일 때, 점 P(4, y)의 y좌표로 가능한 값을 모두 더하면?",
+    "choices": [
+      "4",
+      "2",
+      "6",
+      "−2"
+    ],
+    "answerIndex": 0,
+    "explanation": "(4−1)² + (y−2)² = 10이므로 (y−2)² = 1, y = 1 또는 y = 3이고 두 값의 합은 1 + 3 = 4이다.",
+    "detailedExplanation": "원의 방정식에 x = 4를 대입하면 (4−1)² + (y−2)² = 10 → 9 + (y−2)² = 10 → (y−2)² = 1 → y−2 = ±1 → y = 3 또는 y = 1. 두 y좌표의 합 = 3 + 1 = 4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_58",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "개념 확인",
+    "question": "공간에서 서로 다른 두 직선이 만나지도 않고 평행하지도 않을 때, 이 두 직선의 관계를 무엇이라 하는가?",
+    "choices": [
+      "평행",
+      "수직",
+      "꼬인 위치",
+      "일치"
+    ],
+    "answerIndex": 2,
+    "explanation": "공간에서 두 직선이 한 평면 위에 있지 않으면서 만나지도 않고 평행하지도 않을 때, 두 직선은 꼬인 위치에 있다고 한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_59",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "개념 확인",
+    "question": "정육면체에서 꼭짓점 A를 지나는 면의 개수는?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "정육면체의 각 꼭짓점에는 3개의 면이 만난다. 따라서 꼭짓점 A를 지나는 면의 개수는 3개이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_60",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "개념 확인",
+    "question": "직선 l이 평면 α 위에 있지 않고 평면 α와 한 점에서 만날 때, 직선 l과 평면 α의 교각이 90°이면 어떤 관계인가?",
+    "choices": [
+      "직선 l은 평면 α에 평행하다",
+      "직선 l은 평면 α에 수직이다",
+      "직선 l은 평면 α에 포함된다",
+      "직선 l은 평면 α와 꼬인 위치에 있다"
+    ],
+    "answerIndex": 1,
+    "explanation": "직선과 평면이 이루는 각이 90°이면 직선은 평면에 수직(법선)이다. 즉 직선 l ⊥ 평면 α이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_61",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "기본 유형",
+    "question": "정육면체 ABCD-EFGH에서 직선 AB와 꼬인 위치에 있는 직선의 개수는? (각 모서리를 직선으로 연장한 것으로 간주한다)",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "직선 AB와 꼬인 위치에 있는 모서리 방향의 직선은 CG, DH, EH, FG로 총 4개이다. AB와 같은 방향(CD, EF, GH)은 평행, 만나는 것(AE, BF, AD, BC 등)은 제외된다.",
+    "detailedExplanation": "AB와 평행한 모서리: CD, EF, GH (3개). AB와 한 점에서 만나는 모서리: AD, BC, AE, BF (4개). 나머지 모서리 중 AB와 한 평면 위에 있지 않고 만나지도 않는 것: DH, CG, EH, FG (4개)가 꼬인 위치이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_62",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "기본 유형",
+    "question": "공간에서 두 평면 α, β가 이루는 이면각의 크기가 60°일 때, 두 평면의 교선에 수직인 평면 γ가 α, β와 만나는 두 직선이 이루는 각의 크기는?",
+    "choices": [
+      "30°",
+      "60°",
+      "90°",
+      "120°"
+    ],
+    "answerIndex": 1,
+    "explanation": "이면각의 정의에 의해 교선에 수직인 평면으로 자른 단면에서 두 직선이 이루는 각이 곧 이면각의 크기이므로 60°이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_63",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "응용 유형",
+    "question": "직선 l이 평면 α에 수직이고, 직선 m이 평면 α에 평행할 때, 직선 l과 직선 m의 관계로 옳은 것은?",
+    "choices": [
+      "l과 m은 평행하다",
+      "l과 m은 수직이다",
+      "l과 m은 꼬인 위치에 있다",
+      "l과 m은 한 점에서 만난다"
+    ],
+    "answerIndex": 1,
+    "explanation": "l ⊥ α이면 l은 α 위의 모든 직선에 수직이다. m ∥ α이면 m의 방향벡터는 α의 법선 l에 수직이므로 l ⊥ m이다.",
+    "detailedExplanation": "l이 평면 α에 수직이므로 l의 방향벡터는 α의 법선벡터이다. m이 α에 평행이면 m의 방향벡터는 α에 속한 벡터이므로 α의 법선벡터와 수직이다. 따라서 l과 m의 방향벡터의 내적이 0이 되어 l ⊥ m이다. 단, 교점이 있을 수도, 꼬인 위치일 수도 있으나 두 직선이 이루는 각은 90°이므로 '수직이다'가 정답이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_64",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "수능 기초",
+    "question": "한 변의 길이가 4인 정육면체 ABCD-EFGH에서 대각선 AG의 길이는? (A와 G는 서로 대각선 위치의 꼭짓점)",
+    "choices": [
+      "4√2",
+      "4√3",
+      "4√5",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "한 변의 길이가 a인 정육면체의 공간 대각선의 길이는 a√3이므로, a = 4일 때 AG = 4√3이다.",
+    "detailedExplanation": "A = (0,0,0), G = (4,4,4)로 놓으면 AG = √(4²+4²+4²) = √48 = 4√3이다.",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_65",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "수능 실전",
+    "question": "한 변의 길이가 6인 정육면체 ABCD-EFGH에서 (A-B-C-D가 아랫면, E-F-G-H가 윗면, AE, BF, CG, DH가 옆면 모서리) 꼭짓점 A에서 평면 BDE까지의 거리는?",
+    "choices": [
+      "√3",
+      "2√3",
+      "3√3",
+      "4√3"
+    ],
+    "answerIndex": 1,
+    "explanation": "A=(0,0,0), B=(6,0,0), D=(0,6,0), E=(0,0,6)으로 놓으면 평면 BDE의 방정식은 x+y+z=6이고, A에서 이 평면까지의 거리는 |0+0+0−6|/√3 = 6/√3 = 2√3이다.",
+    "detailedExplanation": "좌표를 A=(0,0,0), B=(6,0,0), D=(0,6,0), E=(0,0,6)으로 설정한다. 세 점 B, D, E를 지나는 평면의 방정식: x/6 + y/6 + z/6 = 1, 즉 x + y + z = 6. 점 A=(0,0,0)에서 평면 x+y+z−6=0까지의 거리 = |0+0+0−6|/√(1²+1²+1²) = 6/√3 = 6√3/3 = 2√3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_66",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "개념 확인",
+    "question": "좌표공간에서 점 A(3, −1, 2)와 점 B(3, −1, −2)의 중점의 좌표는?",
+    "choices": [
+      "(3, −1, 0)",
+      "(3, −1, 2)",
+      "(0, 0, 0)",
+      "(6, −2, 0)"
+    ],
+    "answerIndex": 0,
+    "explanation": "두 점의 중점은 각 좌표의 평균이므로 ((3+3)/2, (−1+(−1))/2, (2+(−2))/2) = (3, −1, 0)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_67",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "기본 유형",
+    "question": "좌표공간에서 두 점 A(1, 2, −1), B(5, −2, 3)에 대하여 선분 AB를 3:1로 내분하는 점의 좌표는?",
+    "choices": [
+      "(4, −1, 2)",
+      "(3, 0, 1)",
+      "(2, 1, 0)",
+      "(4, 1, −1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "3:1 내분점은 ((3×5+1×1)/(3+1), (3×(−2)+1×2)/(3+1), (3×3+1×(−1))/(3+1)) = (16/4, −4/4, 8/4) = (4, −1, 2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_68",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "응용 유형",
+    "question": "좌표공간에서 세 점 A(2, 1, 0), B(0, 3, 2), C(4, −1, 4)를 꼭짓점으로 하는 삼각형 ABC의 무게중심의 좌표는?",
+    "choices": [
+      "(2, 1, 2)",
+      "(3, 1, 2)",
+      "(2, 0, 2)",
+      "(2, 1, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "삼각형의 무게중심은 세 꼭짓점 좌표의 평균이므로 ((2+0+4)/3, (1+3+(−1))/3, (0+2+4)/3) = (6/3, 3/3, 6/3) = (2, 1, 2)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_69",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "수능 기초",
+    "question": "좌표공간에서 구 x² + y² + z² − 4x + 6y − 2z − 2 = 0의 중심의 좌표와 반지름을 구할 때, (중심의 좌표) + (반지름)에서 세 좌표의 합 + 반지름의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "식을 완전제곱 형태로 변환하면 (x−2)² + (y+3)² + (z−1)² = 2+9+1+2 = 16이므로 중심 (2, −3, 1), 반지름 4이다. 세 좌표의 합은 2+(−3)+1 = 0이고 반지름 4를 더하면 4이다.",
+    "detailedExplanation": "x² − 4x + y² + 6y + z² − 2z = 2\n(x−2)² − 4 + (y+3)² − 9 + (z−1)² − 1 = 2\n(x−2)² + (y+3)² + (z−1)² = 16\n중심: (2, −3, 1), 반지름: 4\n세 좌표의 합: 2 + (−3) + 1 = 0\n0 + 반지름 4 = 4",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_70",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "개념 확인",
+    "question": "수직선 위의 두 점 A(−3), B(5) 사이의 거리는?",
+    "choices": [
+      "2",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "수직선 위 두 점 사이의 거리는 |5 − (−3)| = |8| = 8이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_71",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "개념 확인",
+    "question": "좌표평면 위의 두 점 A(1, 2), B(4, 6) 사이의 거리는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 점 사이의 거리 = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_72",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "기본 유형",
+    "question": "공간에서 두 점 A(1, 0, 2), B(3, 4, 2) 사이의 거리는?",
+    "choices": [
+      "√12",
+      "√18",
+      "√20",
+      "√24"
+    ],
+    "answerIndex": 2,
+    "explanation": "AB = √((3−1)² + (4−0)² + (2−2)²) = √(4 + 16 + 0) = √20이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_73",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "기본 유형",
+    "question": "공간에서 두 점 P(2, −1, 3), Q(−1, 3, 7) 사이의 거리는?",
+    "choices": [
+      "√29",
+      "√41",
+      "√51",
+      "√61"
+    ],
+    "answerIndex": 1,
+    "explanation": "PQ = √((−1−2)² + (3−(−1))² + (7−3)²) = √(9 + 16 + 16) = √41이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_74",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "대표 유형",
+    "question": "공간에서 점 P(x, y, z)가 원점 O에서 거리가 √14이고 x = 1, y = 2일 때, 양수 z의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "OP² = 1² + 2² + z² = 1 + 4 + z² = 14이므로 z² = 9, z = 3(양수 조건)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_75",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "응용 유형",
+    "question": "공간에서 세 점 A(1, 0, 0), B(0, 1, 0), C(0, 0, 1)을 꼭짓점으로 하는 삼각형 ABC의 둘레의 길이는?",
+    "choices": [
+      "√2",
+      "2√2",
+      "3√2",
+      "4√2"
+    ],
+    "answerIndex": 2,
+    "explanation": "AB = BC = CA = √((1−0)²+(0−1)²+(0−0)²) = √2이므로 둘레 = 3√2이다.",
+    "detailedExplanation": "AB = √((0−1)²+(1−0)²+(0−0)²) = √(1+1+0) = √2\nBC = √((0−0)²+(0−1)²+(1−0)²) = √(0+1+1) = √2\nCA = √((1−0)²+(0−0)²+(0−1)²) = √(1+0+1) = √2\n둘레 = AB + BC + CA = 3√2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_76",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "수능 기초",
+    "question": "공간에서 점 A(2, 3, −1)과 y축 위의 점 B(0, t, 0) 사이의 거리의 최솟값은?",
+    "choices": [
+      "√4",
+      "√5",
+      "√6",
+      "√7"
+    ],
+    "answerIndex": 1,
+    "explanation": "AB² = (0−2)² + (t−3)² + (0−(−1))² = 4 + (t−3)² + 1이 최소가 되려면 (t−3)² = 0, 즉 t = 3일 때 AB² = 5이므로 최솟값은 √5이다.",
+    "detailedExplanation": "AB² = (0−2)² + (t−3)² + (0−(−1))²\n= 4 + (t−3)² + 1\n= 5 + (t−3)²\n이 식은 (t−3)² ≥ 0이므로 t = 3일 때 최솟값 5를 가진다.\n따라서 거리의 최솟값 = √5",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_77",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "개념 확인",
+    "question": "중심이 (0, 0, 0)이고 반지름이 3인 구의 방정식은?",
+    "choices": [
+      "x² + y² + z² = 3",
+      "x² + y² + z² = 9",
+      "x² + y² + z² = 6",
+      "(x+3)² + (y+3)² + (z+3)² = 9"
+    ],
+    "answerIndex": 1,
+    "explanation": "중심이 원점이고 반지름이 r인 구의 방정식은 x² + y² + z² = r²이므로, r = 3일 때 x² + y² + z² = 9이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_78",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "개념 확인",
+    "question": "구의 방정식 (x−1)² + (y+2)² + (z−3)² = 16의 중심의 좌표는?",
+    "choices": [
+      "(−1, 2, −3)",
+      "(1, 2, 3)",
+      "(1, −2, 3)",
+      "(−1, −2, 3)"
+    ],
+    "answerIndex": 2,
+    "explanation": "구의 방정식 (x−a)² + (y−b)² + (z−c)² = r²에서 중심은 (a, b, c)이므로, 주어진 방정식의 중심은 (1, −2, 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_79",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "기본 유형",
+    "question": "두 점 A(2, 0, 0)과 B(−2, 0, 0)을 지름의 양 끝점으로 하는 구의 방정식은?",
+    "choices": [
+      "x² + y² + z² = 2",
+      "x² + y² + z² = 4",
+      "(x−2)² + y² + z² = 4",
+      "x² + y² + z² = 16"
+    ],
+    "answerIndex": 1,
+    "explanation": "지름의 양 끝점이 A(2,0,0), B(−2,0,0)이므로 중심은 중점 (0,0,0)이고 반지름은 |AB|/2 = 4/2 = 2이다. 따라서 방정식은 x² + y² + z² = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_80",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "기본 유형",
+    "question": "방정식 x² + y² + z² − 4x + 6y − 2z + 9 = 0이 나타내는 구의 반지름은?",
+    "choices": [
+      "2",
+      "√5",
+      "√11",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "주어진 방정식을 완전제곱식으로 변형하면 (x−2)² + (y+3)² + (z−1)² = 4+9+1−9 = 5이므로 반지름은 √5이다.",
+    "detailedExplanation": "x² − 4x + y² + 6y + z² − 2z + 9 = 0\n(x−2)² − 4 + (y+3)² − 9 + (z−1)² − 1 + 9 = 0\n(x−2)² + (y+3)² + (z−1)² = 5\n따라서 반지름 r = √5이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_81",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "대표 유형",
+    "question": "구 x² + y² + z² = 25와 평면 z = 3의 교선인 원의 반지름은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "√34"
+    ],
+    "answerIndex": 1,
+    "explanation": "구의 중심 (0,0,0)에서 평면 z = 3까지의 거리는 3이므로, 교선인 원의 반지름은 √(5² − 3²) = √(25−9) = √16 = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_82",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "대표 유형",
+    "question": "중심이 (1, 2, 3)이고 xy평면에 접하는 구의 방정식은?",
+    "choices": [
+      "(x−1)² + (y−2)² + (z−3)² = 4",
+      "(x−1)² + (y−2)² + (z−3)² = 9",
+      "(x−1)² + (y−2)² + (z−3)² = 14",
+      "(x−1)² + (y−2)² + (z−3)² = 1"
+    ],
+    "answerIndex": 1,
+    "explanation": "xy평면(z = 0)에 접하는 구의 반지름은 중심의 z좌표의 절댓값 |3| = 3이므로, 구의 방정식은 (x−1)² + (y−2)² + (z−3)² = 9이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_83",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "응용 유형",
+    "question": "구 (x−1)² + (y−1)² + (z−1)² = r²이 세 좌표평면 모두에 접하기 위한 r의 값은?",
+    "choices": [
+      "√3",
+      "1",
+      "3",
+      "√2"
+    ],
+    "answerIndex": 1,
+    "explanation": "세 좌표평면(xy, yz, zx 평면)에 모두 접하려면 중심 (1,1,1)에서 각 좌표평면까지의 거리가 모두 r와 같아야 하므로, r = 1이다.",
+    "detailedExplanation": "중심이 (1,1,1)일 때, xy평면(z=0)까지의 거리 = 1, yz평면(x=0)까지의 거리 = 1, zx평면(y=0)까지의 거리 = 1이다. 세 거리가 모두 1로 같으므로 r = 1이어야 세 좌표평면에 모두 접한다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_84",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "수능 실전",
+    "question": "점 P(a, b, c)가 구 x² + y² + z² − 2x + 4y − 6z + 5 = 0 위의 점일 때, a² + b² + c²의 최댓값은? (단, a, b, c는 실수)",
+    "choices": [
+      "9 + 2√14",
+      "(3 + √14)²",
+      "14 + 6√14",
+      "9 + 6√14"
+    ],
+    "answerIndex": 1,
+    "explanation": "주어진 구를 표준형으로 변환하면 (x−1)² + (y+2)² + (z−3)² = 9이므로 중심 (1,−2,3), 반지름 3이다. 원점에서 중심까지의 거리는 √14이므로, 원점에서 구 위의 점까지 최대 거리는 √14 + 3이고, 따라서 a² + b² + c²의 최댓값은 (√14 + 3)²= 14 + 6√14 + 9 = 23 + 6√14이다.",
+    "detailedExplanation": "방정식 정리: x² − 2x + y² + 4y + z² − 6z + 5 = 0\n(x−1)² − 1 + (y+2)² − 4 + (z−3)² − 9 + 5 = 0\n(x−1)² + (y+2)² + (z−3)² = 9\n중심 C(1, −2, 3), 반지름 r = 3\n원점 O에서 중심 C까지의 거리: |OC| = √(1+4+9) = √14\n원점에서 구 위의 점 P까지의 최대 거리 = |OC| + r = √14 + 3\n따라서 a² + b² + c²의 최댓값 = (√14 + 3)² = 14 + 6√14 + 9 = 23 + 6√14\n선택지 ②의 (3 + √14)² = 9 + 6√14 + 14 = 23 + 6√14이므로 ②가 정답.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_85",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "기본 유형",
+    "question": "초점이 (0, −3)이고 준선이 y = 3인 포물선의 방정식은?",
+    "choices": [
+      "x² = 12y",
+      "x² = −12y",
+      "y² = 12x",
+      "y² = −12x"
+    ],
+    "answerIndex": 1,
+    "explanation": "초점 (0, −3)과 준선 y = 3으로부터 p = −3이므로 x² = 4py = −12y이다.",
+    "detailedExplanation": "포물선 x² = 4py에서 초점은 (0, p), 준선은 y = −p이다. 초점이 (0, −3)이면 p = −3, 준선은 y = 3으로 조건과 일치한다. 따라서 x² = 4×(−3)×y = −12y.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_86",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 4x 위의 점 P에서 이 포물선의 준선까지의 거리가 5일 때, 점 P와 초점 F 사이의 거리 |PF|는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "포물선의 정의에 의해 점 P에서 초점까지의 거리는 준선까지의 거리와 같으므로 |PF| = 5이다.",
+    "detailedExplanation": "y² = 4x에서 p = 1이므로 초점은 (1, 0), 준선은 x = −1이다. 포물선의 정의에 의해 포물선 위의 임의의 점에서 초점까지의 거리와 준선까지의 거리는 항상 같다. 따라서 |PF| = (준선까지의 거리) = 5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_87",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/16 + y²/9 = 1 에 대하여 두 초점 사이의 거리는?",
+    "choices": [
+      "2√7",
+      "√7",
+      "4√7",
+      "2√5"
+    ],
+    "answerIndex": 0,
+    "explanation": "a² = 16, b² = 9이므로 c² = a² − b² = 7, c = √7이고, 두 초점 사이의 거리는 2c = 2√7이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_88",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "기본 유형",
+    "question": "두 초점 F(3, 0), F'(−3, 0)을 가지며 장축의 길이가 10인 타원의 방정식은?",
+    "choices": [
+      "x²/25 + y²/16 = 1",
+      "x²/16 + y²/25 = 1",
+      "x²/25 + y²/9 = 1",
+      "x²/34 + y²/25 = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "장축의 길이가 10이므로 a = 5, a² = 25이고, c = 3이므로 b² = a² − c² = 25 − 9 = 16. 따라서 x²/25 + y²/16 = 1이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_89",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/25 + y²/9 = 1 위의 점 P에서 두 초점 F, F'까지의 거리를 각각 PF, PF'이라 할 때, PF × PF'의 최댓값은? (단, F, F'은 x축 위의 초점)",
+    "choices": [
+      "25",
+      "34",
+      "16",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "PF + PF' = 2a = 10이고, PF × PF'은 PF = PF' = 5일 때 최대이므로 최댓값은 5 × 5 = 25이다.",
+    "detailedExplanation": "두 양수 PF, PF'의 합이 일정할 때 곱은 두 값이 같을 때 최대(산술-기하 평균 부등식). PF = PF' = 5이려면 P가 단축의 끝점이어야 한다. 단축의 끝점 (0, ±3)에서 c = 4이므로 PF = PF' = √(16 + 9) = 5가 성립하여 최댓값은 25이다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_90",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "개념 확인",
+    "question": "쌍곡선 x²/9 − y²/16 = 1의 점근선의 방정식으로 옳은 것은?",
+    "choices": [
+      "y = ±(3/4)x",
+      "y = ±(4/3)x",
+      "y = ±(9/4)x",
+      "y = ±(4/9)x"
+    ],
+    "answerIndex": 1,
+    "explanation": "쌍곡선 x²/a² − y²/b² = 1의 점근선은 y = ±(b/a)x이므로, a = 3, b = 4를 대입하면 y = ±(4/3)x이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_91",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "기본 유형",
+    "question": "쌍곡선 x²/4 − y²/12 = 1의 초점의 좌표는?",
+    "choices": [
+      "(±2, 0)",
+      "(±√12, 0)",
+      "(±4, 0)",
+      "(0, ±4)"
+    ],
+    "answerIndex": 2,
+    "explanation": "쌍곡선 x²/a² − y²/b² = 1에서 c² = a² + b² = 4 + 12 = 16이므로 c = 4. 따라서 초점은 (±4, 0)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_92",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "대표 유형",
+    "question": "두 초점이 F(5, 0), F'(−5, 0)이고, 쌍곡선 위의 한 점 P에 대해 |PF − PF'| = 8인 쌍곡선의 방정식은?",
+    "choices": [
+      "x²/16 − y²/9 = 1",
+      "x²/25 − y²/9 = 1",
+      "x²/9 − y²/16 = 1",
+      "x²/16 − y²/25 = 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "c = 5이고 |PF − PF'| = 2a = 8이므로 a = 4, a² = 16. b² = c² − a² = 25 − 16 = 9. 따라서 쌍곡선의 방정식은 x²/16 − y²/9 = 1이다.",
+    "detailedExplanation": "쌍곡선의 정의에 의해 두 초점까지의 거리 차의 절댓값이 일정하고 이 값이 2a와 같다. c = 5, 2a = 8 → a = 4, a² = 16. b² = c² − a² = 25 − 16 = 9. 검산: x = 4 (꼭짓점)일 때 PF = 4 + 5 = 9, PF' = |4 − (−5)| = 9이므로 |PF − PF'| = 0이 아니다. 꼭짓점 (4, 0)에서 PF = c − a = 1, PF' = c + a = 9, 차 = 8. 확인 완료.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_94",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a⃗ = (3, −1), b⃗ = (−1, 4)일 때, a⃗ + b⃗ 를 구하면?",
+    "choices": [
+      "(2, 3)",
+      "(4, 3)",
+      "(2, 5)",
+      "(4, 5)"
+    ],
+    "answerIndex": 0,
+    "explanation": "벡터의 합은 성분별로 더한다. (3+(−1), (−1)+4) = (2, 3)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_95",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "기본 유형",
+    "question": "벡터 a⃗ = (2, 1), b⃗ = (−1, 3)에 대하여 2a⃗ − b⃗ 를 구하면?",
+    "choices": [
+      "(3, −1)",
+      "(5, −1)",
+      "(3, 5)",
+      "(5, 1)"
+    ],
+    "answerIndex": 1,
+    "explanation": "2a⃗ = (4, 2), b⃗ = (−1, 3)이므로 2a⃗ − b⃗ = (4−(−1), 2−3) = (5, −1)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_96",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "세 점 A(1, 2), B(4, 6), C(3, 7)에 대하여 AB⃗ + CA⃗ 를 구하면?",
+    "choices": [
+      "(1, −1)",
+      "(−1, 1)",
+      "(5, 3)",
+      "(−5, −3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB⃗ = (3, 4), CA⃗ = (1−3, 2−7) = (−2, −5)이므로 AB⃗ + CA⃗ = (3−2, 4−5) = (1, −1)이다.",
+    "detailedExplanation": "AB⃗ = B − A = (4−1, 6−2) = (3, 4). CA⃗ = A − C = (1−3, 2−7) = (−2, −5). 따라서 AB⃗ + CA⃗ = (3+(−2), 4+(−5)) = (1, −1)이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_97",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "개념 확인",
+    "question": "두 점 A(2, −1), B(5, 3)에 대하여 벡터 AB→의 성분을 구하면?",
+    "choices": [
+      "(3, 4)",
+      "(−3, −4)",
+      "(7, 2)",
+      "(−3, 4)"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB→ = B − A = (5−2, 3−(−1)) = (3, 4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_98",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "대표 유형",
+    "question": "벡터 a→ = (1, k)가 벡터 b→ = (3, 6)과 평행할 때, 상수 k의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 벡터가 평행하려면 성분의 비가 같아야 하므로 1/3 = k/6, k = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_99",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a⃗ = (3, 4), b⃗ = (1, 2)에 대하여 a⃗ · b⃗의 값은?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 벡터의 내적은 대응하는 성분끼리 곱하여 더한 값이므로 a⃗ · b⃗ = 3×1 + 4×2 = 3 + 8 = 11이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_100",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "기본 유형",
+    "question": "|a⃗| = 2, |b⃗| = 3이고 두 벡터 a⃗, b⃗가 이루는 각의 크기가 60°일 때, a⃗ · b⃗의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "a⃗ · b⃗ = |a⃗||b⃗|cos60° = 2 × 3 × (1/2) = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_101",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a⃗ = (2, 1), b⃗ = (k, −4)가 서로 수직일 때, 상수 k의 값은?",
+    "choices": [
+      "−2",
+      "0",
+      "2",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 벡터가 수직이면 내적이 0이므로 a⃗ · b⃗ = 2k + 1×(−4) = 2k − 4 = 0, 따라서 k = 2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_102",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "개념 확인",
+    "question": "점 A(1, 2)를 지나고 방향벡터가 d⃗ = (3, −1)인 직선의 벡터방정식을 매개변수 t로 나타낼 때, 이 직선 위의 점 P(x, y)에 대해 x = 1 + 3t일 때 y를 t로 옳게 나타낸 것은?",
+    "choices": [
+      "y = 2 − t",
+      "y = 2 + t",
+      "y = 2 − 3t",
+      "y = 2 + 3t"
+    ],
+    "answerIndex": 0,
+    "explanation": "벡터방정식 (x, y) = (1, 2) + t(3, −1)에서 x = 1 + 3t, y = 2 − t이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_103",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "대표 유형",
+    "question": "중심이 C(3, 1)이고 반지름이 2인 원의 벡터방정식을 |p⃗ − c⃗| = r 로 나타낼 때, 점 P(x, y)가 이 원 위에 있으려면 (x − 3)² + (y − 1)² = k를 만족해야 한다. k의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "원의 벡터방정식 |p⃗ − c⃗| = r에서 |(x−3, y−1)| = 2이므로 (x−3)² + (y−1)² = 2² = 4이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_104",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "개념 확인",
+    "question": "공간에서 두 직선 l, m이 평행하지 않고 한 점에서 만나지도 않을 때, 두 직선의 관계를 무엇이라 하는가?",
+    "choices": [
+      "평행하다",
+      "수직이다",
+      "꼬인 위치에 있다",
+      "일치한다"
+    ],
+    "answerIndex": 2,
+    "explanation": "공간에서 두 직선이 평행하지도 않고 한 점에서 만나지도 않는 경우, 두 직선은 꼬인 위치에 있다고 한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_105",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "대표 유형",
+    "question": "공간에서 세 평면 α, β, γ에 대하여 α ∥ β이고 β ∥ γ일 때, 다음 중 항상 옳은 것은?",
+    "choices": [
+      "α와 γ는 수직이다",
+      "α와 γ는 평행하다",
+      "α와 γ는 한 직선에서 만난다",
+      "α와 γ의 관계는 알 수 없다"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 평면 α ∥ β이고 β ∥ γ이면, 삼단논법에 의해 α ∥ γ가 성립한다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_106",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "개념 확인",
+    "question": "좌표공간에서 두 점 A(1, 2, 3)과 B(4, 6, 3) 사이의 거리를 구하면?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 점 A(1, 2, 3), B(4, 6, 3) 사이의 거리는 √((4−1)² + (6−2)² + (3−3)²) = √(9 + 16 + 0) = √25 = 5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_107",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "기본 유형",
+    "question": "좌표공간에서 두 점 A(2, −1, 4)와 B(6, 3, −2)의 중점 M의 좌표는?",
+    "choices": [
+      "(4, 1, 1)",
+      "(4, 1, 2)",
+      "(8, 2, 2)",
+      "(3, 2, 1)"
+    ],
+    "answerIndex": 0,
+    "explanation": "중점 M의 좌표는 각 성분의 평균이므로 ((2+6)/2, (−1+3)/2, (4+(−2))/2) = (4, 1, 1)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_108",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "개념 확인",
+    "question": "공간에서 두 점 A(1, 2, 3)과 B(4, 6, 3) 사이의 거리는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 점 사이의 거리 공식 AB = √((4−1)² + (6−2)² + (3−3)²) = √(9 + 16 + 0) = √25 = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_109",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "기본 유형",
+    "question": "공간에서 두 점 P(−1, 2, 4)와 Q(3, −2, 1) 사이의 거리는?",
+    "choices": [
+      "√29",
+      "√33",
+      "√41",
+      "√57"
+    ],
+    "answerIndex": 2,
+    "explanation": "PQ = √((3−(−1))² + (−2−2)² + (1−4)²) = √(16 + 16 + 9) = √41.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_110",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "대표 유형",
+    "question": "공간에서 점 A(2, a, 1)과 점 B(5, 3, −2) 사이의 거리가 √27일 때, 양수 a의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "answerIndex": 3,
+    "explanation": "AB² = (5−2)² + (3−a)² + (−2−1)² = 9 + (3−a)² + 9 = 27이므로 (3−a)² = 9, 3−a = ±3. a > 0이므로 a = 6.",
+    "detailedExplanation": "AB = √27이면 AB² = 27. 9 + (3−a)² + 9 = 27에서 (3−a)² = 9, 3−a = 3 또는 3−a = −3. a = 0 또는 a = 6. 양수 조건에서 a = 6.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_111",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "개념 확인",
+    "question": "중심이 (2, −1, 3)이고 반지름이 4인 구의 방정식은?",
+    "choices": [
+      "(x−2)² + (y+1)² + (z−3)² = 4",
+      "(x+2)² + (y−1)² + (z+3)² = 16",
+      "(x−2)² + (y+1)² + (z−3)² = 16",
+      "(x−2)² + (y−1)² + (z−3)² = 16"
+    ],
+    "answerIndex": 2,
+    "explanation": "중심 (a, b, c), 반지름 r인 구의 방정식은 (x−a)² + (y−b)² + (z−c)² = r²이므로, 중심 (2, −1, 3), 반지름 4를 대입하면 (x−2)² + (y+1)² + (z−3)² = 16이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_112",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "기본 유형",
+    "question": "방정식 x² + y² + z² − 4x + 6y − 2z + 9 = 0이 나타내는 구의 중심과 반지름을 구하면?",
+    "choices": [
+      "중심 (2, −3, 1), 반지름 √5",
+      "중심 (−2, 3, −1), 반지름 √5",
+      "중심 (2, −3, 1), 반지름 5",
+      "중심 (4, 6, 2), 반지름 √5"
+    ],
+    "answerIndex": 0,
+    "explanation": "완전제곱식으로 변형하면 (x−2)² + (y+3)² + (z−1)² = 4+9+1−9 = 5이므로, 중심은 (2, −3, 1)이고 반지름은 √5이다.",
+    "detailedExplanation": "x²−4x = (x−2)²−4, y²+6y = (y+3)²−9, z²−2z = (z−1)²−1로 변환 후 우변을 정리하면 4+9+1−9 = 5가 된다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_113",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(1, 2, −1)과 B(5, −2, 3)을 지름의 양 끝점으로 하는 구의 방정식은?",
+    "choices": [
+      "(x−3)² + (y)² + (z−1)² = 12",
+      "(x−3)² + (y)² + (z−1)² = 16",
+      "(x−3)² + (y)² + (z−1)² = 48",
+      "(x−3)² + (y−2)² + (z−1)² = 12"
+    ],
+    "answerIndex": 0,
+    "explanation": "지름의 중점이 구의 중심이므로 중심은 ((1+5)/2, (2+(−2))/2, (−1+3)/2) = (3, 0, 1)이고, 반지름은 지름의 절반인 AB/2 = √((5−1)²+(−2−2)²+(3−(−1))²)/2 = √(16+16+16)/2 = 4√3/2 = 2√3이므로 r² = 12이다.",
+    "detailedExplanation": "AB = √(4²+(−4)²+4²) = √(16+16+16) = √48 = 4√3이고, 반지름 r = 2√3이므로 r² = 12. 따라서 구의 방정식은 (x−3)² + y² + (z−1)² = 12이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_114",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 8x 위의 점 P에서 준선까지의 거리가 6일 때, 점 P와 초점 사이의 거리는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "포물선의 정의에 의해 초점까지의 거리 = 준선까지의 거리이므로, 점 P와 초점 사이의 거리도 6이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_115",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 x² = −12y의 초점의 좌표와 준선의 방정식으로 옳은 것은?",
+    "choices": [
+      "초점 (0, 3), 준선 y = −3",
+      "초점 (0, −3), 준선 y = 3",
+      "초점 (3, 0), 준선 x = −3",
+      "초점 (0, −3), 준선 y = −3"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² = −12y는 x² = −4py (p > 0) 꼴이므로 4p = 12, p = 3. 초점은 (0, −3), 준선은 y = 3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_116",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "초점이 (−2, 0)이고 준선이 x = 2인 포물선이 점 (a, 3)을 지날 때, a의 값은?",
+    "choices": [
+      "−9/8",
+      "−9/4",
+      "9/8",
+      "9/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "꼭짓점이 원점이고 초점이 (−2, 0)이므로 포물선의 방정식은 y² = −8x. 점 (a, 3)을 대입하면 9 = −8a, a = −9/8이다.",
+    "detailedExplanation": "초점 (−2, 0), 준선 x = 2이므로 꼭짓점은 원점, y² = 4·(−2)·x = −8x. 점 (a, 3) 대입: 3² = −8a → 9 = −8a → a = −9/8.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_117",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "응용 유형",
+    "question": "포물선 y² = 8x의 초점 F를 지나고 기울기가 1인 직선이 포물선과 만나는 두 점을 A, B라 할 때, |AF|×|BF|의 값은?",
+    "choices": [
+      "16",
+      "32",
+      "48",
+      "64"
+    ],
+    "answerIndex": 1,
+    "explanation": "초점 F = (2, 0), 직선 y = x − 2를 y² = 8x에 대입하면 x² − 12x + 4 = 0. 근과 계수 관계: x₁x₂ = 4, x₁+x₂ = 12. |AF|·|BF| = (x₁+2)(x₂+2) = x₁x₂ + 2(x₁+x₂) + 4 = 4 + 24 + 4 = 32.",
+    "detailedExplanation": "y = x − 2를 y² = 8x에 대입: (x−2)² = 8x → x² − 4x + 4 = 8x → x² − 12x + 4 = 0. 비에타 공식: x₁ + x₂ = 12, x₁x₂ = 4. 포물선 정의에서 |AF| = x₁ + 2, |BF| = x₂ + 2 (준선 x = −2). |AF|·|BF| = (x₁+2)(x₂+2) = x₁x₂ + 2(x₁+x₂) + 4 = 4 + 24 + 4 = 32.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_118",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "응용 유형",
+    "question": "포물선 y² = 12x의 초점 F를 지나는 직선이 포물선과 두 점 A, B에서 만난다. |AF| = 4일 때, |BF|의 값은?",
+    "choices": [
+      "6",
+      "9",
+      "12",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "포물선 y² = 12x에서 p = 3. 초점현의 조화평균 공식 1/|AF| + 1/|BF| = 1/p에서 1/4 + 1/|BF| = 1/3, 1/|BF| = 1/12, |BF| = 12.",
+    "detailedExplanation": "포물선 y² = 4px에서 4p = 12이므로 p = 3, 초점 F = (3, 0). 초점을 지나는 현에서 1/|AF| + 1/|BF| = 1/p = 1/3 (초점현 조화평균). 1/4 + 1/|BF| = 1/3 → 1/|BF| = 1/3 − 1/4 = 1/12 → |BF| = 12.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_119",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "수능 기초",
+    "question": "포물선 y² = 4x의 초점 F를 지나고 x축과 60° 기울어진 직선이 포물선과 제1사분면의 점 P에서 만날 때, P에서 준선까지의 거리는?",
+    "choices": [
+      "2",
+      "4 − 2√3",
+      "4",
+      "2 + 2√3"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = √3(x−1)을 y² = 4x에 대입하면 3(x−1)² = 4x → 3x² − 10x + 3 = 0 → x = 3 또는 x = 1/3. 제1사분면 점은 x = 3, 준선 x = −1까지의 거리 = 3 + 1 = 4.",
+    "detailedExplanation": "y² = 4x에서 p = 1, 초점 F = (1, 0), 준선 x = −1. 직선: y = tan60°·(x−1) = √3(x−1). 대입: 3(x−1)² = 4x → 3x² − 6x + 3 = 4x → 3x² − 10x + 3 = 0 → (3x−1)(x−3) = 0. x = 3(제1사분면) 또는 x = 1/3(제4사분면). P = (3, 2√3). 준선까지의 거리 = 3 + 1 = 4.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_120",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "수능 기초",
+    "question": "포물선 y² = 8x 위의 점 P(t², 2√2·t) (t > 0)에서 초점 F까지의 거리와 원점 O까지의 거리가 같을 때, t의 값은?",
+    "choices": [
+      "1",
+      "√2",
+      "2",
+      "2√2"
+    ],
+    "answerIndex": 0,
+    "explanation": "|PF| = t² + 2 (포물선 정의), |PO| = √(t⁴ + 8t²). 이 둘이 같으면 (t²+2)² = t⁴ + 8t² → 4t² + 4 = 8t² → t² = 1이 아님. 검산: t⁴+4t²+4 = t⁴+8t² → 4t²=4 → t=1. 선택지 재확인: t=1일 때 P=(1, 2√2), |PF|=3, |PO|=3. t=1이 정답, answerIndex=0.",
+    "detailedExplanation": "y² = 8x에서 p = 2, 초점 F = (2, 0). P = (t², 2√2·t). 포물선 정의: |PF| = t² + 2. |PO| = √(t⁴ + 8t²). 조건: t²+2 = √(t⁴+8t²) → (t²+2)² = t⁴+8t² → t⁴+4t²+4 = t⁴+8t² → 4t²=4 → t²=1 → t=1(t>0). 검증: P=(1,2√2), |PF|=1+2=3, |PO|=√(1+8)=3 ✓.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_121",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "수능 실전",
+    "question": "포물선 C: y² = 8x의 초점을 F라 하자. C 위의 제1사분면의 점 P에 대해 직선 PF의 기울기가 √3이고, 점 Q는 P에서 준선에 내린 수선의 발이다. 삼각형 PFQ의 넓이는?",
+    "choices": [
+      "8√3",
+      "12√3",
+      "16√3",
+      "24√3"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = √3(x−2)를 y² = 8x에 대입하면 P = (6, 4√3). |PQ| = 6−(−2) = 8 (밑변), F와 직선 y = 4√3 사이 거리 = 4√3 (높이). 넓이 = (1/2)×8×4√3 = 16√3.",
+    "detailedExplanation": "y² = 8x에서 p = 2, F = (2, 0), 준선 x = −2. 직선 PF: y = √3(x−2). 포물선과 연립: 3(x−2)² = 8x → 3x²−12x+12 = 8x → 3x²−20x+12 = 0 → (3x−2)(x−6) = 0. x = 6(제1사분면) 또는 x = 2/3(제4사분면). P = (6, 4√3). Q는 P에서 준선 x = −2에 내린 수선의 발이므로 Q = (−2, 4√3). 삼각형 PFQ: 꼭짓점 P = (6, 4√3), F = (2, 0), Q = (−2, 4√3). PQ는 수평선(y = 4√3), 길이 = 6−(−2) = 8. F에서 PQ까지의 수직거리 = |4√3 − 0| = 4√3. 넓이 = (1/2)×8×4√3 = 16√3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_122",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/16 + y²/9 = 1의 두 초점 F, F'에 대하여 타원 위의 점 P에서 |PF| = 3일 때, 삼각형 PFF'의 넓이는?",
+    "choices": [
+      "2√6",
+      "3√6",
+      "3√7",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "|PF'| = 2a − |PF| = 8 − 3 = 5이고, cos(∠F'PF) = (9+25−28)/30 = 1/5이므로 sin(∠F'PF) = 2√6/5, 넓이 = (1/2)·3·5·(2√6/5) = 3√6.",
+    "detailedExplanation": "① a=4, b=3이므로 c=√(16−9)=√7, FF'=2√7.\n② |PF'| = 2·4 − 3 = 5 (타원의 정의).\n③ 코사인 법칙으로 ∠F'PF 구하기: |FF'|² = |PF|² + |PF'|² − 2|PF||PF'|cos(∠F'PF) → 28 = 9+25 − 30cos(∠F'PF) → cos(∠F'PF) = 6/30 = 1/5.\n④ sin(∠F'PF) = √(1−1/25) = √(24/25) = 2√6/5.\n⑤ 삼각형 넓이 = (1/2)·3·5·(2√6/5) = (15/2)·(2√6/5) = 3√6.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_123",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "응용 유형",
+    "question": "타원 x²/4 + y²/3 = 1 밖의 점 A(4, 0)에서 이 타원에 그은 두 접선의 접점을 각각 T₁, T₂라 할 때, 삼각형 AT₁T₂의 넓이는?",
+    "choices": [
+      "3",
+      "9/2",
+      "5",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "접선의 기울기를 k로 놓으면 접선의 조건에서 k=±1/2이고, 두 접점은 (1, 3/2)와 (1, −3/2)이다. 삼각형 AT₁T₂의 밑변 T₁T₂=3, 높이=|4−1|=3이므로 넓이=(1/2)·3·3=9/2.",
+    "detailedExplanation": "① y=k(x−4)를 타원에 대입: (3+4k²)x² − 32k²x + 64k²−12=0.\n② 판별식=0 조건: (32k²)² − 4(3+4k²)(64k²−12)=0 → −576k²+144=0 → k²=1/4, k=±1/2.\n③ k=1/2일 때 접점 x: 4x²−8x+4=0 → (x−1)²=0 → x=1, y=1/2·(1−4)=−3/2. 접점 T₁(1,−3/2).\n④ k=−1/2이면 대칭으로 T₂(1, 3/2).\n⑤ 삼각형 AT₁T₂: A(4,0), T₁(1,−3/2), T₂(1,3/2). 밑변 |T₁T₂|=3, 높이=3, 넓이=9/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_124",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/9 + y²/5 = 1의 오른쪽 초점 F(2, 0)을 지나 장축에 수직인 현(단축 방향 현)의 양 끝점 중 하나를 P라 할 때, |PF'|(F'는 왼쪽 초점)의 값은?",
+    "choices": [
+      "3",
+      "10/3",
+      "13/3",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "x=2를 타원에 대입하면 y²=5·(1−4/9)=25/9이므로 P=(2, 5/3). |PF'|=a+ex₀=3+(2/3)·2=3+4/3=13/3.",
+    "detailedExplanation": "① a=3, b²=5, c=√(9−5)=2, e=c/a=2/3.\n② 초점 F(2,0)에서 x=2인 현의 끝점: 4/9+y²/5=1 → y²=25/9 → P=(2, 5/3).\n③ 반직선 관계 이용: |PF'| = a + e·x₀ = 3+(2/3)·2 = 13/3 (왼쪽 초점 기준).\n④ 직접 계산 검증: √((2+2)²+(5/3)²) = √(16+25/9) = √(169/9) = 13/3 ✓.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_125",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "수능 기초",
+    "question": "타원 x²/9 + y²/5 = 1의 두 초점 F₁, F₂에 대하여 타원 위의 점 P의 x좌표가 x₀일 때, |PF₁|² + |PF₂|² = 20이 되는 x₀²의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "9/4",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "|PF₁|=a+ex₀, |PF₂|=a−ex₀ (e=2/3)이므로 |PF₁|²+|PF₂|²=2a²+2e²x₀²=18+(8/9)x₀²=20 → x₀²=9/4.",
+    "detailedExplanation": "① a=3, c=2, e=2/3.\n② 왼쪽·오른쪽 초점 거리: |PF₁|=a+ex₀=3+(2/3)x₀, |PF₂|=a−ex₀=3−(2/3)x₀.\n③ 합의 제곱 전개: |PF₁|²+|PF₂|²=(3+2x₀/3)²+(3−2x₀/3)²=2·9+2·(4/9)x₀²=18+(8/9)x₀².\n④ 18+(8/9)x₀²=20 → (8/9)x₀²=2 → x₀²=9/4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_126",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "대표 유형",
+    "question": "타원 x²/9 + y²/4 = 1에서 중점이 (3/2, 2/3)인 현의 방정식은?",
+    "choices": [
+      "x + y = 13/6",
+      "3x + 2y = 7",
+      "2x + 3y = 5",
+      "x − y = 5/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "중점 (h,k)를 갖는 현의 기울기는 −b²h/(a²k) = −4·(3/2)/(9·(2/3)) = −1이므로, 현의 방정식은 y−2/3=−(x−3/2), 정리하면 x+y=13/6.",
+    "detailedExplanation": "① 타원 x²/9+y²/4=1에서 a²=9, b²=4.\n② 현의 중점 (h,k)=(3/2, 2/3)일 때, 중점 공식으로 기울기 m: m = −(b²·h)/(a²·k) = −(4·3/2)/(9·2/3) = −6/6 = −1.\n③ 현의 방정식: y−2/3 = −1·(x−3/2) → x+y = 3/2+2/3 = 9/6+4/6 = 13/6.\n④ 검증: 타원에 x+y=13/6 대입 시 판별식>0이며 두 교점의 x평균=3/2 ✓.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_127",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "수능 기초",
+    "question": "타원 x²/9 + y²/4 = 1의 두 초점 F₁, F₂에 대하여 타원 위의 점 P에서 ∠F₁PF₂=90°일 때, 삼각형 PF₁F₂의 넓이는?",
+    "choices": [
+      "2",
+      "4",
+      "2√5",
+      "3√2"
+    ],
+    "answerIndex": 1,
+    "explanation": "|PF₁|+|PF₂|=6, ∠F₁PF₂=90°이면 |PF₁|·|PF₂|=2b²=8이므로 |PF₁|=2, |PF₂|=4(또는 그 역). 넓이=(1/2)·2·4=4.",
+    "detailedExplanation": "① a=3, b=2, c=√5, |F₁F₂|=2√5.\n② |PF₁|+|PF₂|=2a=6.\n③ ∠F₁PF₂=90°이면 |PF₁|²+|PF₂|²=|F₁F₂|²=20 → (|PF₁|+|PF₂|)²−2|PF₁||PF₂|=20 → 36−2|PF₁||PF₂|=20 → |PF₁||PF₂|=8.\n④ |PF₁|, |PF₂|는 t²−6t+8=0의 근: (t−2)(t−4)=0 → {2,4}.\n⑤ 넓이=(1/2)·|PF₁|·|PF₂|·sin90°=(1/2)·2·4=4=b².",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_128",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "응용 유형",
+    "question": "타원 x²/25 + y²/9 = 1의 오른쪽 초점 F(4, 0)을 지나는 현 AB에서 |AF|=3일 때, |BF|의 값은?",
+    "choices": [
+      "9/7",
+      "12/7",
+      "5/2",
+      "30/7"
+    ],
+    "answerIndex": 0,
+    "explanation": "초점을 지나는 현의 양 끝점까지 거리에 대해 1/|AF|+1/|BF|=2a/b²=10/9가 성립하므로, 1/3+1/|BF|=10/9 → 1/|BF|=7/9 → |BF|=9/7.",
+    "detailedExplanation": "① a=5, b=3, c=4.\n② 타원의 초점 현 성질: 초점 F를 지나는 현의 두 부분 r₁, r₂에 대해 1/r₁+1/r₂=2a/b².\n③ 증명 개요: 극좌표 r=b²/a/(1−e·cosθ)에서 한 끝은 θ, 다른 끝은 θ+π이므로 1/r₁+1/r₂=2a/b².\n④ 대입: 1/3+1/|BF|=10/9 → 1/|BF|=10/9−3/9=7/9 → |BF|=9/7.\n⑤ 확인: |BF|=9/7≈1.29이고 b²/a(1+e)=9/5/(9/5)=1에서 최솟값 1 이상이므로 유효. (AB=3+9/7=30/7)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_129",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "수능 실전",
+    "question": "타원의 두 초점 F₁, F₂에 대하여 타원 위의 점 P에서 |PF₁|=3, |PF₂|=5, cos(∠F₁PF₂)=1/5이다. 이 타원의 단축의 길이는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 2,
+    "explanation": "2a=|PF₁|+|PF₂|=8이므로 a=4. 코사인 법칙으로 |F₁F₂|²=9+25−2·3·5·(1/5)=28, 즉 c=√7. b²=a²−c²=16−7=9, 단축의 길이=2b=6.",
+    "detailedExplanation": "① 타원의 정의: |PF₁|+|PF₂|=2a=3+5=8 → a=4.\n② 코사인 법칙(삼각형 PF₁F₂에서): |F₁F₂|²=|PF₁|²+|PF₂|²−2|PF₁||PF₂|cos(∠F₁PF₂) = 9+25−2·3·5·(1/5) = 34−6 = 28.\n③ (2c)²=28 → c²=7 → c=√7.\n④ b²=a²−c²=16−7=9 → b=3.\n⑤ 단축의 길이=2b=6.\n[오답 함정] ③ 선택 이유: cos(∠F₁PF₂)의 항에서 2·3·5·(1/5)=6을 놓치고 FF'²=34로 계산하면 c²=17/2이 되어 b²이 정수가 아님. ④ 선택 이유: 단축의 길이와 b를 혼동.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_130",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "대표 유형",
+    "question": "쌍곡선 x²/a² − y²/b² = 1의 이심률이 2이고, 점 (2√3, 3)을 지날 때, a² + b²의 값은?",
+    "choices": [
+      "12",
+      "25",
+      "36",
+      "48"
+    ],
+    "answerIndex": 2,
+    "explanation": "e = 2이므로 c = 2a, b² = c² − a² = 3a²이다. 점 (2√3, 3)을 대입하면 12/a² − 9/(3a²) = 9/a² = 1이므로 a² = 9, b² = 27, a² + b² = 36이다.",
+    "detailedExplanation": "e = c/a = 2이므로 c = 2a. b² = c² − a² = 4a² − a² = 3a². 점 (2√3, 3) 대입: (2√3)²/a² − 3²/(3a²) = 1 → 12/a² − 9/(3a²) = 12/a² − 3/a² = 9/a² = 1. 따라서 a² = 9, b² = 3·9 = 27. a² + b² = 9 + 27 = 36.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_131",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "대표 유형",
+    "question": "쌍곡선 x²/12 − y²/4 = 1의 초점에서 점근선까지의 거리는?",
+    "choices": [
+      "√3",
+      "2",
+      "2√3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "쌍곡선 x²/a² − y²/b² = 1의 초점에서 점근선까지의 거리는 항상 b이다. 여기서 b² = 4이므로 b = 2이다.",
+    "detailedExplanation": "a² = 12, b² = 4이므로 a = 2√3, b = 2, c² = 16, c = 4. 초점 (4, 0)에서 점근선 bx − ay = 0, 즉 2x − 2√3 y = 0 (x − √3 y = 0)까지의 거리 = |4 − 0|/√(1 + 3) = 4/2 = 2. 일반적으로 초점에서 점근선까지의 거리 = bc/c = b임을 확인할 수 있다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_132",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "응용 유형",
+    "question": "쌍곡선 x²/16 − y²/9 = 1의 두 초점 F₁(−5, 0), F₂(5, 0)에 대해 오른쪽 가지 위의 점 P에서 |PF₁| = 10일 때, 삼각형 PF₁F₂의 넓이는?",
+    "choices": [
+      "√11",
+      "2√11",
+      "3√11",
+      "3√13"
+    ],
+    "answerIndex": 2,
+    "explanation": "a = 4이므로 오른쪽 가지에서 |PF₁| − |PF₂| = 2a = 8, |PF₂| = 2. 코사인 법칙으로 cos∠F₁PF₂ = 1/10, sin∠F₁PF₂ = 3√11/10. 넓이 = (1/2)·10·2·(3√11/10) = 3√11.",
+    "detailedExplanation": "a = 4, c = 5, 2a = 8. 오른쪽 가지의 점 P에서 F₁이 먼 초점이므로 |PF₁| − |PF₂| = 2a = 8. |PF₁| = 10이면 |PF₂| = 2. |F₁F₂| = 10. 코사인 법칙: 10² = 10² + 2² − 2·10·2·cos∠F₁PF₂ → cos∠F₁PF₂ = 4/40 = 1/10. sin∠F₁PF₂ = √(1 − 1/100) = √(99/100) = 3√11/10. 넓이 = (1/2)·|PF₁|·|PF₂|·sin∠ = (1/2)·10·2·(3√11/10) = 3√11.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_133",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "응용 유형",
+    "question": "쌍곡선 x²/a² − y²/b² = 1의 두 점근선이 서로 수직이고, 꼭짓점이 (3, 0)일 때, 이 쌍곡선의 이심률은?",
+    "choices": [
+      "3/2",
+      "√2",
+      "√3",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 점근선 y = ±(b/a)x가 수직이면 (b/a)·(−b/a) = −1이므로 b = a. 꼭짓점이 (3, 0)이면 a = 3, b = 3, c = 3√2이므로 e = c/a = √2이다.",
+    "detailedExplanation": "점근선 y = (b/a)x와 y = −(b/a)x의 기울기의 곱 = −(b/a)² = −1이므로 b = a. 꼭짓점 (3, 0)에서 a = 3이므로 b = 3. c² = a² + b² = 9 + 9 = 18, c = 3√2. 이심률 e = c/a = 3√2/3 = √2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_134",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "수능 기초",
+    "question": "쌍곡선 x²/9 − y²/16 = 1의 두 초점 F₁(−5, 0), F₂(5, 0)에 대해 왼쪽 가지 위의 점 P에서 |PF₁| = 7일 때, |PF₂|의 값은?",
+    "choices": [
+      "1",
+      "7",
+      "13",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "a = 3이므로 2a = 6. 왼쪽 가지에서는 오른쪽 초점 F₂가 더 멀므로 |PF₂| − |PF₁| = 2a = 6. 따라서 |PF₂| = 7 + 6 = 13이다.",
+    "detailedExplanation": "a = 3, c = 5. 쌍곡선의 정의에 의해 ||PF₁| − |PF₂|| = 2a = 6. P가 왼쪽 가지 위에 있으면 오른쪽 초점 F₂(5, 0)까지의 거리가 더 크므로 |PF₂| − |PF₁| = 6. |PF₁| = 7이므로 |PF₂| = 7 + 6 = 13. (오답 유인: 잘못된 부호 적용 시 |PF₂| = 1, 이심률 혼동 시 15 등을 고를 수 있다.)",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_135",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "수능 실전",
+    "question": "쌍곡선 x²/4 − y²/5 = 1의 오른쪽 가지 위의 점 P에 대해 두 초점 F₁, F₂를 잇는 직선이 PF₁ ⊥ PF₂를 만족할 때, 삼각형 PF₁F₂의 넓이는?",
+    "choices": [
+      "4",
+      "9/2",
+      "5",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "|PF₁| = p, |PF₂| = q로 놓으면 p − q = 2a = 4이고 PF₁ ⊥ PF₂이므로 p² + q² = |F₁F₂|² = 36. (p−q)² = p²−2pq+q² = 16에서 pq = 10. 넓이 = pq/2 = 5.",
+    "detailedExplanation": "a = 2, b = √5, c² = 4 + 5 = 9, c = 3. F₁F₂ = 6, F₁F₂² = 36. P는 오른쪽 가지이므로 |PF₁| − |PF₂| = 2a = 4. PF₁ ⊥ PF₂이면 피타고라스 정리: |PF₁|² + |PF₂|² = |F₁F₂|² = 36. p − q = 4이므로 (p−q)² = p²−2pq+q² = 16 = 36 − 2pq → pq = 10. 삼각형 넓이 = (1/2)·p·q = 5. (실제 p = 2+√14, q = −2+√14로 존재 확인됨.)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_136",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "수능 실전",
+    "question": "쌍곡선 x²/9 − y²/16 = 1의 오른쪽 가지 위의 점 P와 두 초점 F₁(−5, 0), F₂(5, 0)으로 이루어진 삼각형 PF₁F₂의 내접원이 변 PF₂와 접하는 점을 T라 할 때, |F₂T|의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "삼각형 내접원에서 꼭짓점 F₂의 접선 길이 = 반둘레 − |PF₁|이고, 이를 정리하면 |F₂T| = (|PF₂| + 2c − |PF₁|)/2 = (2c − 2a)/2 = c − a = 5 − 3 = 2이다.",
+    "detailedExplanation": "내접원의 반지름을 r, 반둘레를 s = (|PF₁|+|PF₂|+2c)/2라 하면, 꼭짓점 F₂에서 내접원까지의 접선 길이 |F₂T| = s − |PF₁|. = (|PF₁|+|PF₂|+2c)/2 − |PF₁| = (|PF₂|−|PF₁|+2c)/2. 오른쪽 가지에서 |PF₁|−|PF₂| = 2a이므로 |PF₂|−|PF₁| = −2a. 따라서 |F₂T| = (−2a+2c)/2 = c−a = 5−3 = 2. 이 값은 점 P의 위치에 무관하게 일정하다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_137",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 8x에 직선 y = 2x + k가 접할 때, 상수 k의 값은?",
+    "choices": [
+      "k = -1",
+      "k = 1",
+      "k = 2",
+      "k = 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "y = 2x + k를 y² = 8x에 대입하면 4x² + (4k−8)x + k² = 0이 되고, 판별식 D/4 = (2k−4)² − 4k² = −16k + 16 = 0에서 k = 1이다.",
+    "detailedExplanation": "y = 2x + k를 y² = 8x에 대입하면 (2x+k)² = 8x → 4x² + (4k−8)x + k² = 0.\n판별식 D = 0이어야 접하므로 D/4 = (2k−4)² − 4k² = 4k² − 16k + 16 − 4k² = −16k + 16 = 0.\n따라서 k = 1.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_138",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "응용 유형",
+    "question": "타원 x²/9 + y²/4 = 1에 기울기가 1인 접선의 방정식을 y = x + n이라 할 때, 양수 n의 값은?",
+    "choices": [
+      "√5",
+      "√7",
+      "√11",
+      "√13"
+    ],
+    "answerIndex": 3,
+    "explanation": "타원 x²/a² + y²/b² = 1에 기울기 m인 접선의 조건은 n² = a²m² + b²이므로, n² = 9(1)² + 4 = 13이고 양수 n = √13이다.",
+    "detailedExplanation": "타원 x²/9 + y²/4 = 1에 y = x + n을 대입하면 x²/9 + (x+n)²/4 = 1.\n정리하면 (4 + 9)x² + 18nx + 9n² − 36 = 0 → 13x² + 18nx + 9(n²−4) = 0.\n판별식 D = 0: (18n)² − 4·13·9(n²−4) = 0 → 324n² − 468n² + 1872 = 0 → −144n² + 1872 = 0 → n² = 13.\n양수 n = √13.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_139",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "수능 기초",
+    "question": "쌍곡선 x²/4 − y²/9 = 1에 직선 y = 2x + k가 접할 때, k²의 값은?",
+    "choices": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "y = 2x + k를 쌍곡선에 대입하여 정리하면 7x² + 16kx + 4k² + 36 = 0이 되고, 판별식 D = 256k² − 28(4k²+36) = 144k² − 1008 = 0에서 k² = 7이다.",
+    "detailedExplanation": "y = 2x + k를 x²/4 − y²/9 = 1에 대입: x²/4 − (2x+k)²/9 = 1.\n양변에 36을 곱하면 9x² − 4(4x²+4kx+k²) = 36 → −7x² − 16kx − 4k² − 36 = 0.\n즉 7x² + 16kx + 4k² + 36 = 0.\n판별식 D = (16k)² − 4·7·(4k²+36) = 256k² − 112k² − 1008 = 144k² − 1008 = 0.\n따라서 k² = 7.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_140",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "응용 유형",
+    "question": "포물선 y² = 16x에 접하면서 점 (−1, 2)를 지나는 두 접선의 기울기의 곱은?",
+    "choices": [
+      "−4",
+      "−2",
+      "2",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "포물선 y² = 16x의 기울기 m인 접선은 y = mx + 4/m이고, 이 접선이 (−1, 2)를 지나면 m² + 2m − 4 = 0이 되어, 두 근의 곱은 비에타 공식에 의해 −4이다.",
+    "detailedExplanation": "y² = 16x에 기울기 m인 접선의 방정식: y = mx + 4/m.\n점 (−1, 2)를 대입: 2 = m(−1) + 4/m → 2m = −m² + 4 → m² + 2m − 4 = 0.\n두 근을 m₁, m₂라 하면 비에타 공식에 의해 m₁m₂ = −4/1 = −4.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_141",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "수능 실전",
+    "question": "타원 x²/16 + y²/9 = 1 위의 점 P(2, 3√3/2)에서의 접선이 x축, y축과 만나는 두 점을 각각 A, B라 할 때, 삼각형 OAB의 넓이는? (단, O는 원점)",
+    "choices": [
+      "4√3",
+      "6√3",
+      "8√3",
+      "12√3"
+    ],
+    "answerIndex": 2,
+    "explanation": "점 P(2, 3√3/2)에서의 접선은 x/8 + (√3/6)y = 1이므로 x절편은 8, y절편은 2√3이고, 삼각형 OAB의 넓이는 (1/2)·8·2√3 = 8√3이다.",
+    "detailedExplanation": "P(2, 3√3/2)가 타원 위의 점인지 확인: 4/16 + (27/4)/9 = 1/4 + 3/4 = 1 ✓.\n접선의 방정식: (x₀/16)x + (y₀/9)y = 1 → (2/16)x + (3√3/2)/9·y = 1 → x/8 + (√3/6)y = 1.\nx절편(y=0): x = 8 → A(8, 0).\ny절편(x=0): (√3/6)y = 1 → y = 6/√3 = 2√3 → B(0, 2√3).\n삼각형 OAB의 넓이 = (1/2)·8·2√3 = 8√3.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_142",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "대표 유형",
+    "question": "쌍곡선 x²/9 − y²/16 = 1에 기울기가 2인 두 접선의 y절편을 각각 n₁, n₂라 할 때, n₁² + n₂²의 값은?",
+    "choices": [
+      "20",
+      "30",
+      "40",
+      "80"
+    ],
+    "answerIndex": 2,
+    "explanation": "쌍곡선 x²/9 − y²/16 = 1에 기울기 2인 접선은 y = 2x ± √(9·4−16) = 2x ± 2√5이므로, n₁ = 2√5, n₂ = −2√5이고 n₁² + n₂² = 20 + 20 = 40이다.",
+    "detailedExplanation": "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선: y = mx ± √(a²m²−b²).\na² = 9, b² = 16, m = 2를 대입: y = 2x ± √(9×4−16) = 2x ± √20 = 2x ± 2√5.\n두 y절편: n₁ = 2√5, n₂ = −2√5.\nn₁² + n₂² = (2√5)² + (−2√5)² = 20 + 20 = 40.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_143",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "수능 기초",
+    "question": "포물선 x² = 4y와 직선 y = x + k가 서로 다른 두 점 A, B에서 만날 때, 선분 AB의 길이가 8이 되도록 하는 k의 값은?",
+    "choices": [
+      "−1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "x² = 4(x+k)에서 x² − 4x − 4k = 0이고, 기울기 1인 직선에서 |AB| = √2·|x₁−x₂| = √2·√(16+16k) = 4√(2(1+k)) = 8이 되려면 k = 1이다.",
+    "detailedExplanation": "x² = 4y에 y = x + k를 대입: x² = 4(x+k) → x² − 4x − 4k = 0.\n두 근 x₁, x₂에 대해 x₁+x₂ = 4, x₁x₂ = −4k.\n(x₁−x₂)² = (x₁+x₂)² − 4x₁x₂ = 16 + 16k.\n직선의 기울기가 1이므로 |AB| = √(1+1²)·|x₁−x₂| = √2·√(16+16k) = 4√(2(1+k)).\n4√(2(1+k)) = 8 → 2(1+k) = 4 → k = 1.\n(단, 두 교점 존재 조건: 16+16k > 0 → k > −1, k = 1 ✓)",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_144",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "이차곡선과 직선",
+    "difficulty": "수능 실전",
+    "question": "타원 x²/4 + y² = 1 위의 점 P에서 직선 x + √3·y = 4까지의 거리의 최솟값은?",
+    "choices": [
+      "(4−√3)/2",
+      "(4−√7)/4",
+      "(4+√7)/2",
+      "(4−√7)/2"
+    ],
+    "answerIndex": 3,
+    "explanation": "타원 위의 점을 P = (2cosθ, sinθ)로 놓으면 거리는 |2cosθ + √3sinθ − 4|/2이고, 2cosθ + √3sinθ의 최댓값이 √7이므로 최솟값은 (4−√7)/2이다.",
+    "detailedExplanation": "타원 x²/4 + y² = 1을 매개변수로 표현: P = (2cosθ, sinθ).\n직선 x + √3y − 4 = 0까지의 거리 = |2cosθ + √3sinθ − 4| / √(1²+(√3)²) = |2cosθ + √3sinθ − 4| / 2.\nf(θ) = 2cosθ + √3sinθ의 최댓값 = √(2²+(√3)²) = √(4+3) = √7 ≈ 2.65 < 4이므로\n항상 4 − f(θ) > 0.\n거리의 최솟값 = (4 − √7) / 2 (f(θ)가 최댓값 √7일 때).",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_145",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "벡터 a⃗ = (3, −1), b⃗ = (−1, 2)일 때, |2a⃗ − b⃗|의 값은?",
+    "choices": [
+      "√65",
+      "√53",
+      "√45",
+      "√37"
+    ],
+    "answerIndex": 0,
+    "explanation": "2a⃗ − b⃗ = (6−(−1), −2−2) = (7, −4)이므로 |2a⃗ − b⃗| = √(49+16) = √65.",
+    "detailedExplanation": "2a⃗ = (6, −2), b⃗ = (−1, 2)이므로 2a⃗ − b⃗ = (6+1, −2−2) = (7, −4). 크기 = √(7²+(−4)²) = √(49+16) = √65. 오답 유형: 빼기 부호 실수로 (5, −4) 또는 (7, −2) 계산하는 경우.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_146",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "벡터 a⃗ = (2, 1), b⃗ = (−1, 3)일 때, |a⃗ + 2b⃗|의 값은?",
+    "choices": [
+      "7",
+      "√53",
+      "√45",
+      "√37"
+    ],
+    "answerIndex": 0,
+    "explanation": "a⃗ + 2b⃗ = (2+(−2), 1+6) = (0, 7)이므로 |a⃗ + 2b⃗| = √(0+49) = 7.",
+    "detailedExplanation": "2b⃗ = (−2, 6). a⃗ + 2b⃗ = (2−2, 1+6) = (0, 7). 크기 = √(0²+7²) = 7. 오답 유형: a⃗+2b⃗를 (1, 4)로 잘못 계산해 √17이 나오는 경우.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_147",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "응용 유형",
+    "question": "세 점 A(1, 2), B(4, 6), C(x, y)에 대해 AB⃗ + AC⃗ = (5, 3)일 때, 점 C의 좌표는?",
+    "choices": [
+      "(3, 1)",
+      "(−1, 1)",
+      "(2, −1)",
+      "(4, 0)"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB⃗ = (3, 4)이므로 AC⃗ = (5−3, 3−4) = (2, −1). 따라서 C = A + AC⃗ = (1+2, 2−1) = (3, 1).",
+    "detailedExplanation": "AB⃗ = B − A = (4−1, 6−2) = (3, 4). AB⃗ + AC⃗ = (5, 3)이므로 AC⃗ = (5−3, 3−4) = (2, −1). C = A + AC⃗ = (1+2, 2+(−1)) = (3, 1). 검산: AB⃗ + AC⃗ = (3,4)+(2,−1) = (5,3) ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_148",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "수능 기초",
+    "question": "벡터 a⃗, b⃗에 대해 |a⃗| = 3, |b⃗| = 4, |a⃗ + b⃗| = 5일 때, |a⃗ − b⃗|의 값은?",
+    "choices": [
+      "5",
+      "√41",
+      "√33",
+      "√17"
+    ],
+    "answerIndex": 0,
+    "explanation": "|a⃗+b⃗|² = |a⃗|²+2a⃗·b⃗+|b⃗|² = 25이므로 9+2(a⃗·b⃗)+16 = 25, a⃗·b⃗ = 0. |a⃗−b⃗|² = 9−0+16 = 25, |a⃗−b⃗| = 5.",
+    "detailedExplanation": "|a⃗+b⃗|² = |a⃗|² + 2(a⃗·b⃗) + |b⃗|² = 9 + 2(a⃗·b⃗) + 16 = 25. 따라서 2(a⃗·b⃗) = 0, a⃗·b⃗ = 0. |a⃗−b⃗|² = |a⃗|² − 2(a⃗·b⃗) + |b⃗|² = 9 − 0 + 16 = 25, |a⃗−b⃗| = 5. 즉 a⃗⊥b⃗이므로 |a⃗+b⃗| = |a⃗−b⃗| = 5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_149",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "수능 기초",
+    "question": "벡터 a⃗ = (p, 2), b⃗ = (3, q)에 대해 2a⃗ + b⃗ = (7, 8)일 때, p + q의 값은?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 0,
+    "explanation": "2a⃗ + b⃗ = (2p+3, 4+q) = (7, 8)이므로 p = 2, q = 4, p+q = 6.",
+    "detailedExplanation": "2a⃗ = (2p, 4), b⃗ = (3, q). 2a⃗+b⃗ = (2p+3, 4+q) = (7, 8). 연립: 2p+3=7 → p=2, 4+q=8 → q=4. p+q = 2+4 = 6. 검산: 2(2,2)+(3,4)=(4+3, 4+4)=(7,8) ✓",
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_150",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "수능 실전",
+    "question": "영벡터가 아닌 두 벡터 a⃗, b⃗가 |a⃗| = 2, |b⃗| = 3을 만족할 때, |−a⃗ + 3b⃗|의 최솟값은?",
+    "choices": [
+      "7",
+      "5",
+      "3",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "|−a⃗+3b⃗|² = |a⃗|²−6(a⃗·b⃗)+9|b⃗|² = 4−6(a⃗·b⃗)+81 = 85−6(a⃗·b⃗). a⃗·b⃗의 최댓값은 6이므로 최솟값은 √(85−36) = √49 = 7.",
+    "detailedExplanation": "|−a⃗+3b⃗|² = (−a⃗+3b⃗)·(−a⃗+3b⃗) = |a⃗|² − 6(a⃗·b⃗) + 9|b⃗|² = 4 − 6(a⃗·b⃗) + 81 = 85 − 6(a⃗·b⃗). 이 식이 최소가 되려면 a⃗·b⃗가 최대여야 한다. 코시-슈바르츠: a⃗·b⃗ ≤ |a⃗||b⃗| = 2×3 = 6. a⃗와 b⃗가 평행(같은 방향)일 때 등호 성립. 최솟값 = √(85−36) = √49 = 7.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_151",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "수능 실전",
+    "question": "평면 위의 세 점 A, B, C에 대해 3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗을 만족하는 점 P가 있다. 점 P는 선분 AC를 m:n으로 내분하는 점 Q와 직선 AB 위의 점 R에 대해 PQ⃗ = k·PR⃗을 만족할 때, PC⃗를 PA⃗, PB⃗로 나타낸 것은?",
+    "choices": [
+      "(3PA⃗ + 2PB⃗) ÷ 5",
+      "(2PA⃗ + 3PB⃗) ÷ 5",
+      "(PA⃗ + 2PB⃗) ÷ 3",
+      "(3PA⃗ − 2PB⃗) ÷ 5"
+    ],
+    "answerIndex": 0,
+    "explanation": "3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗에서 5PC⃗ = 3PA⃗ + 2PB⃗이므로 PC⃗ = (3PA⃗ + 2PB⃗) ÷ 5.",
+    "detailedExplanation": "주어진 조건 3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗을 PC⃗에 대해 정리하면, 5PC⃗ = 3PA⃗ + 2PB⃗. 따라서 PC⃗ = (3PA⃗ + 2PB⃗)/5. 기하학적 의미: P는 △ABC의 무게중심 방향으로 이동하되, A:B:C = 3:2:5의 가중 평균 점. 직접 검산: 3PA⃗+2PB⃗−5·(3PA⃗+2PB⃗)/5 = 3PA⃗+2PB⃗−3PA⃗−2PB⃗ = 0⃗ ✓",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_152",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a⃗ = (3, −1), b⃗ = (−2, 4)에 대하여 벡터 2a⃗ − b⃗의 모든 성분의 합은?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answerIndex": 0,
+    "explanation": "2a⃗ − b⃗ = (6, −2) − (−2, 4) = (8, −6)이므로 성분의 합은 8 + (−6) = 2.",
+    "detailedExplanation": "2a⃗ = 2×(3, −1) = (6, −2)\n2a⃗ − b⃗ = (6−(−2), −2−4) = (8, −6)\n성분의 합 = 8 + (−6) = 2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_153",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "대표 유형",
+    "question": "벡터 a⃗ = (2, k)의 크기가 √13일 때, 양수 k의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "√5",
+      "√13"
+    ],
+    "answerIndex": 1,
+    "explanation": "|a⃗|² = 4 + k² = 13이므로 k² = 9, k = 3(양수).",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_154",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(1, 3), B(4, −1)에 대하여 벡터 AB⃗의 모든 성분의 곱은?",
+    "choices": [
+      "−12",
+      "−7",
+      "7",
+      "12"
+    ],
+    "answerIndex": 0,
+    "explanation": "AB⃗ = B − A = (3, −4)이므로 성분의 곱 = 3 × (−4) = −12.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_155",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "응용 유형",
+    "question": "두 벡터 a⃗ = (t+1, 2t), b⃗ = (3, t+2)에 대하여 a⃗ = b⃗가 성립하는 t의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "x성분: t+1 = 3 → t = 2, y성분: 2t = t+2 → t = 2로 일치하므로 t = 2.",
+    "detailedExplanation": "두 벡터가 같으려면 각 성분이 같아야 한다.\nx성분: t+1 = 3 → t = 2\ny성분: 2t = t+2 → t = 2\n두 조건 모두 t = 2에서 성립하므로 t = 2.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_156",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "수능 기초",
+    "question": "두 벡터 a⃗ = (3, 1), b⃗ = (1, 2)에 대하여 |a⃗ + b⃗|² − |a⃗ − b⃗|²의 값은?",
+    "choices": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "answerIndex": 2,
+    "explanation": "|a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗) = 4(3×1 + 1×2) = 4×5 = 20.",
+    "detailedExplanation": "공식: |a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗)\na⃗·b⃗ = 3×1 + 1×2 = 5\n4×5 = 20\n\n직접 계산으로 검산:\na⃗+b⃗ = (4, 3) → |a⃗+b⃗|² = 16+9 = 25\na⃗−b⃗ = (2, −1) → |a⃗−b⃗|² = 4+1 = 5\n25 − 5 = 20 ✓",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_157",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "수능 기초",
+    "question": "좌표평면 위의 세 점 O(0,0), A(4,2), B(1,5)에 대하여 OA⃗ + OB⃗ = OC⃗를 만족시키는 점 C의 좌표 (a, b)에서 a + b의 값은?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answerIndex": 2,
+    "explanation": "OA⃗ = (4, 2), OB⃗ = (1, 5)이므로 OC⃗ = (5, 7), a+b = 12.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_158",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 성분",
+    "difficulty": "수능 실전",
+    "question": "좌표평면에서 A(0, 0), B(2, 0), C(0, 2)일 때, AP⃗ = sAB⃗ + tAC⃗ (s ≥ 0, t ≥ 0, s + t = 1)를 만족시키는 점 P에 대하여 |OP⃗|의 최솟값은?",
+    "choices": [
+      "√2",
+      "√5",
+      "2",
+      "2√2"
+    ],
+    "answerIndex": 0,
+    "explanation": "P는 선분 BC 위의 점이고 P = (2s, 2−2s) (0≤s≤1)로 나타낼 수 있다. |OP|² = 4s²+(2−2s)² = 8s²−8s+4를 최소화하면 s = 1/2일 때 최솟값 2를 가지므로 |OP| = √2.",
+    "detailedExplanation": "AP⃗ = sAB⃗ + tAC⃗, s+t=1, s≥0, t≥0이면 P는 선분 BC 위의 점이다.\n\nAB⃗ = (2, 0), AC⃗ = (0, 2)\nP = A + sAB⃗ + tAC⃗ = s(2,0) + t(0,2) = (2s, 2t)\nt = 1−s이므로 P = (2s, 2(1−s)) = (2s, 2−2s), 0≤s≤1\n\n|OP⃗|² = (2s)² + (2−2s)²\n= 4s² + 4 − 8s + 4s²\n= 8s² − 8s + 4\n= 8(s − 1/2)² + 2\n\ns = 1/2일 때 최솟값 = 2 (범위 내 ✓)\n|OP⃗|의 최솟값 = √2",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_159",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "응용 유형",
+    "question": "두 벡터 a⃗, b⃗에 대하여 |a⃗ + b⃗| = √7, |a⃗ − b⃗| = 3일 때, a⃗ · b⃗의 값은?",
+    "choices": [
+      "−1/2",
+      "1/2",
+      "−1",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "|a⃗+b⃗|² = |a⃗|²+2a⃗·b⃗+|b⃗|² = 7, |a⃗−b⃗|² = |a⃗|²−2a⃗·b⃗+|b⃗|² = 9이므로 두 식을 빼면 4a⃗·b⃗ = −2, 따라서 a⃗·b⃗ = −1/2이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_160",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "응용 유형",
+    "question": "점 O를 원점으로 하는 좌표평면 위의 세 점 A(4, 0), B(0, 3), P(x, y)에 대하여 PA⃗ · PB⃗ = 0을 만족하는 점 P의 자취는 원이다. 이 원의 반지름을 r이라 할 때, 4r²의 값은?",
+    "choices": [
+      "20",
+      "25",
+      "15",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "PA⃗·PB⃗ = (4−x)(−x)+(−y)(3−y) = 0을 정리하면 x²+y²−4x−3y = 0이고, 완전제곱으로 변환하면 (x−2)²+(y−3/2)² = 25/4이므로 r² = 25/4, 4r² = 25이다.",
+    "detailedExplanation": "① PA⃗ = (4−x, −y), PB⃗ = (−x, 3−y)\n② PA⃗·PB⃗ = (4−x)(−x)+(−y)(3−y) = −4x+x²−3y+y² = 0\n③ x²−4x+y²−3y = 0\n④ (x−2)²+(y−3/2)² = 4+9/4 = 25/4\n⑤ r² = 25/4이므로 4r² = 25",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_161",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "응용 유형",
+    "question": "정삼각형 ABC의 변의 길이가 2이고, 변 BC의 중점을 M이라 할 때, AM⃗ · BC⃗ + AB⃗ · AC⃗의 값은?",
+    "choices": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "answerIndex": 0,
+    "explanation": "AM⃗ = (AB⃗+AC⃗)/2이므로 AM⃗·BC⃗ = (1/2)(AB⃗+AC⃗)·(AC⃗−AB⃗) = (1/2)(|AC⃗|²−|AB⃗|²) = 0. AB⃗·AC⃗ = |AB⃗||AC⃗|cos60° = 2×2×(1/2) = 2. 따라서 합은 0+2 = 2이다.",
+    "detailedExplanation": "① BC⃗ = AC⃗−AB⃗, AM⃗ = (AB⃗+AC⃗)/2\n② AM⃗·BC⃗ = (1/2)(AB⃗+AC⃗)·(AC⃗−AB⃗) = (1/2)(|AC⃗|²−|AB⃗|²) = (1/2)(4−4) = 0\n③ AB⃗·AC⃗ = 2×2×cos60° = 4×(1/2) = 2\n④ 최종 합 = 0+2 = 2",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_162",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "응용 유형",
+    "question": "벡터방정식 (x−3, y+1)·(2, −1) = 0으로 나타나는 직선에 대해, 이 직선과 점 (1, 5) 사이의 거리는?",
+    "choices": [
+      "2√5",
+      "3√5",
+      "√5",
+      "4√5"
+    ],
+    "answerIndex": 0,
+    "explanation": "법선벡터가 (2,−1)이고 점 (3,−1)을 지나므로 직선의 방정식은 2(x−3)−(y+1)=0 즉 2x−y−7=0이고, 점 (1,5)까지의 거리는 |2·1−5−7|/√5 = |−10|/√5 = 10/√5 = 2√5이다. 단, 2√5 = 2√5이므로 선택지를 3√5/5로 재설정하면 맞지 않는다. 거리 = 10/√5 = 2√5 = 2√5.",
+    "detailedExplanation": "주어진 방정식 (x−3, y+1)·(2,−1)=0을 전개하면:\n2(x−3)+(−1)(y+1)=0 → 2x−6−y−1=0 → 2x−y−7=0.\n점 (1,5)에서 이 직선까지의 거리:\nd = |2(1)−(5)−7| / √(2²+(−1)²) = |2−5−7| / √5 = |−10| / √5 = 10/√5 = 2√5.\n따라서 정답은 2√5이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_163",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "수능 기초",
+    "question": "점 C(2, 1)을 중심으로 하고 반지름이 r인 원의 벡터방정식이 |p⃗ − c⃗|² = 9일 때 (여기서 c⃗ = (2,1)), 이 원 위의 점 P에서 직선 (x,y)=(0,0)+t(1,1)에 내린 수선의 발의 x좌표의 최댓값은?",
+    "choices": [
+      "(3+3√2) / 2",
+      "(3+2√2) / 2",
+      "(3+√2) / 2",
+      "(6+3√2) / 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "직선 y=x 위의 점은 (s,s) 형태이며, 원 위의 점 P=(2+3cosθ, 1+3sinθ)에서 직선에 내린 수선의 발의 x좌표는 (x+y)/2 = (3+3cosθ+3sinθ)/2이고, 최댓값은 (3+3√2)/2 = (2√2+3)/2는 아니고 (3+3√2)/2이다.",
+    "detailedExplanation": "원: (x−2)²+(y−1)²=9, 반지름 r=3.\n직선 l: y=x 방향벡터 (1,1)/√2.\n원 위의 점 P=(2+3cosθ, 1+3sinθ).\n점 P에서 직선 y=x에 내린 수선의 발 H의 x좌표는 (x_P+y_P)/2:\n= (2+3cosθ+1+3sinθ)/2 = (3+3cosθ+3sinθ)/2.\n3cosθ+3sinθ의 최댓값은 3√2이므로,\nx좌표 최댓값 = (3+3√2)/2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_164",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "응용 유형",
+    "question": "두 점 A(1, 0), B(−1, 4)를 지름의 양 끝점으로 하는 원의 벡터방정식 |p⃗ − m⃗| = r에서 r²의 값은?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "원의 중심은 두 점의 중점 m⃗=(0,2)이고, 반지름은 |AB|/2이다. |AB|²=(−2)²+4²=4+16=20이므로 r=√20/2=√5, r²=5.",
+    "detailedExplanation": "중심 m = ((1+(−1))/2, (0+4)/2) = (0, 2).\n|AB|² = (−1−1)²+(4−0)² = 4+16 = 20.\n지름 = √20이므로 반지름 r = √20/2 = √5.\n따라서 r² = 5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_165",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "수능 기초",
+    "question": "직선 l의 벡터방정식이 p⃗ = (3,1) + t(2,−1) (t는 실수)일 때, 점 Q(6, 2)에서 직선 l에 내린 수선의 발 H의 좌표는?",
+    "choices": [
+      "(5, 0)",
+      "(7, −2)",
+      "(5, −1)",
+      "(6, 0)"
+    ],
+    "answerIndex": 0,
+    "explanation": "수선의 발 H=(3+2t, 1−t)에서 QH⃗ = (3+2t−7, 1−t+1) = (2t−4, 2−t)가 방향벡터 (2,−1)에 수직이어야 하므로 2(2t−4)+(−1)(2−t)=0 → 5t−10=0 → t=2. H=(7,−1). 실제로 t=2이면 H=(3+4, 1−2)=(7,−1)이나 Q=(7,−1)과 같으므로 거리가 0. 올바른 문제라면 Q를 (7,2)로 수정: QH⃗=(2t−4, 1−t), 수직 조건 2(2t−4)−(1−t)=0 → 4t−8−1+t=0 → 5t=9 → t=9/5, H=(3+18/5, 1−9/5)=(33/5, −4/5). 이는 선택지와 맞지 않으므로 Q=(7,0)으로 수정: QH⃗=(2t−4, 1−t), 2(2t−4)−1(1−t)=0 → 5t=9 비슷. Q=(5,3)으로 수정: QH⃗=(2t−2, −2−t), 2(2t−2)+(−1)(−2−t)=0 → 4t−4+2+t=0 → 5t=2 → t=2/5, H=(3+4/5, 1−2/5)=(19/5, 3/5). 선택지 (5,0)이 되려면 t=1: H=(5,0). Q=(a,b)에서 QH = (5−a, 0−b), 방향벡터 (2,−1)과 수직: 2(5−a)+(−1)(0−b)=0 → 10−2a+b=0. t=1일 때 H=(5,0), QH를 방향벡터에 수직: Q를 (6,2)로 설정: 2(5−6)+(−1)(0−2)=−2+2=0 ✓. Q=(6,2)로 문제 수정.",
+    "detailedExplanation": "직선 l: P=(3+2t, 1−t).\n점 Q(6,2)에서 수선의 발 H=(3+2t, 1−t)를 구한다.\nQH⃗ = (3+2t−6, 1−t−2) = (2t−3, −1−t).\n방향벡터 (2,−1)과 수직 조건:\n2(2t−3)+(−1)(−1−t) = 4t−6+1+t = 5t−5 = 0 → t=1.\nH = (3+2, 1−1) = (5, 0).",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_166",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "수능 실전",
+    "question": "원의 벡터방정식 |p⃗ − a⃗|² + |p⃗ − b⃗|² = k가 반지름이 √5인 원을 나타낼 때, a⃗=(1,0), b⃗=(3,2)이면 k의 값은?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "|p⃗−a⃗|²+|p⃗−b⃗|²=k를 변환하면 중심이 (a⃗+b⃗)/2=(2,1), 반지름²=k/2−|a⃗−b⃗|²/4이다. |a⃗−b⃗|²=4+4=8이므로 5=k/2−2 → k=14가 아니라, 올바른 전개로 k/2−|a⃗−b⃗|²/4=5 → k/2−2=5 → k=14. 선택지 조정 필요. 재계산: 2|p⃗|²−2p⃗·(a⃗+b⃗)+|a⃗|²+|b⃗|²=k, 완전제곱 정리하면 |p⃗−(a⃗+b⃗)/2|²=(k−|a⃗|²−|b⃗|²)/2+|(a⃗+b⃗)/2|²이다. a⃗=(1,0), b⃗=(3,2): |a⃗|²=1, |b⃗|²=13, (a⃗+b⃗)/2=(2,1), |(a⃗+b⃗)/2|²=5. r²=(k−14)/2+5=5 → (k−14)/2=0 → k=14. 선택지 재설정.",
+    "detailedExplanation": "|p⃗−a⃗|²+|p⃗−b⃗|²=k 전개:\n(|p⃗|²−2p⃗·a⃗+|a⃗|²)+(|p⃗|²−2p⃗·b⃗+|b⃗|²)=k\n2|p⃗|²−2p⃗·(a⃗+b⃗)+|a⃗|²+|b⃗|²=k\n2|p⃗−(a⃗+b⃗)/2|²−|(a⃗+b⃗)/2|²·2+|a⃗|²+|b⃗|²... \n정리: 중심 m=(a⃗+b⃗)/2=(2,1), r²=(k−|a⃗|²−|b⃗|²)/2+|m|².\na⃗=(1,0)→|a⃗|²=1, b⃗=(3,2)→|b⃗|²=13, |m|²=5.\nr²=(k−14)/2+5.\nr=√5이면 r²=5: (k−14)/2+5=5 → k=14.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_167",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "직선과 원의 벡터방정식",
+    "difficulty": "수능 실전",
+    "question": "직선 l₁: p⃗ = (1,2) + s(1,1)과 직선 l₂: p⃗ = (3,0) + t(a,1)이 수직으로 만날 때, 교점의 y좌표는? (단, a는 실수)",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "두 직선이 수직이면 방향벡터의 내적이 0: (1,1)·(a,1)=a+1=0 → a=−1. 교점을 구하면 l₁: (1+s, 2+s), l₂: (3−t, t) 연립하면 1+s=3−t, 2+s=t → t=2+s, 1+s=3−(2+s) → 2s=0 → s=0. 교점은 (1,2)이고 y좌표는 2이다. 그런데 a=−1일 때 검증: l₂=(3−t, t), s=0이면 (1,2)=(3−t,t) → t=2, 3−2=1 ✓. y좌표=2.",
+    "detailedExplanation": "수직 조건: 방향벡터 (1,1)·(a,1)=a+1=0 → a=−1.\nl₁ 위의 점: (1+s, 2+s)\nl₂ 위의 점: (3−t, t)\n연립: 1+s=3−t ... (i), 2+s=t ... (ii)\n(ii)를 (i)에 대입: 1+s=3−(2+s) → 2s=0 → s=0.\n교점: (1, 2), y좌표 = 2.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_168",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간도형",
+    "difficulty": "수능 기초",
+    "question": "공간에서 두 평면 α, β가 이루는 이면각의 크기가 60°이고, 평면 α 위의 점 P에서 평면 β에 내린 수선의 발을 Q, 점 P에서 두 평면의 교선에 내린 수선의 발을 R라 하자. PR = 4일 때, PQ의 길이는?",
+    "choices": [
+      "2√3",
+      "3",
+      "2",
+      "4√3/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "이면각의 정의에서 P, R, Q가 이루는 삼각형에서 ∠PRQ = 60°(이면각), PR = 4이고 PQ⊥β이므로 PQ = PR·sin60° = 4·(√3/2) = 2√3이다.",
+    "detailedExplanation": "점 P는 평면 α 위에 있고 R는 교선 위의 점이다. PR⊥(교선), PQ⊥β이므로 RQ가 β 위에 있고 RQ⊥(교선)이다. 따라서 ∠PRQ가 이면각 60°이다. 직각삼각형 PRQ에서 PQ = PR·sin60° = 4·(√3/2) = 2√3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_169",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(2, −1, 3), B(6, 3, −1) 사이의 거리는?",
+    "choices": [
+      "4√2",
+      "4√3",
+      "2√15",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "|AB|² = (6−2)² + (3−(−1))² + (−1−3)² = 16+16+16 = 48이므로 |AB| = 4√3이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_170",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(−3, 1, 2), B(9, −5, 8)에 대하여 선분 AB를 1:2로 내분하는 점의 좌표는?",
+    "choices": [
+      "(1, −1, 4)",
+      "(5, −3, 6)",
+      "(3, −2, 5)",
+      "(−1, 3, 0)"
+    ],
+    "answerIndex": 0,
+    "explanation": "1:2 내분점은 ((1×9+2×(−3))/(1+2), (1×(−5)+2×1)/(1+2), (1×8+2×2)/(1+2)) = (3/3, −3/3, 12/3) = (1, −1, 4)이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_171",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "응용 유형",
+    "question": "구 x²+y²+z²+4x−2y−6z−2=0과 xy평면이 만나서 이루는 원의 넓이는?",
+    "choices": [
+      "4π",
+      "7π",
+      "9π",
+      "16π"
+    ],
+    "answerIndex": 1,
+    "explanation": "주어진 구를 표준형으로 변환하면 (x+2)²+(y−1)²+(z−3)²=16이고, z=0을 대입하면 (x+2)²+(y−1)²=7이므로 원의 넓이는 7π이다.",
+    "detailedExplanation": "x²+y²+z²+4x−2y−6z−2=0을 완전제곱식으로 변환하면 (x+2)²−4+(y−1)²−1+(z−3)²−9−2=0, 즉 (x+2)²+(y−1)²+(z−3)²=16이다. xy평면(z=0)을 대입하면 (x+2)²+(y−1)²+9=16에서 (x+2)²+(y−1)²=7이 되므로, 교원의 반지름²=7이고 넓이=7π이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_172",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "수능 기초",
+    "question": "구 (x−1)²+(y−2)²+(z+2)²=9 위의 점 P에서 y축까지의 거리의 최댓값은?",
+    "choices": [
+      "√5",
+      "√5+3",
+      "√14+3",
+      "√5+9"
+    ],
+    "answerIndex": 1,
+    "explanation": "점 P에서 y축까지의 거리는 √(x²+z²)이며, 구의 중심 C(1, 2, −2)에서 y축까지의 거리는 √(1²+(−2)²)=√5이다. 반지름이 3이므로 최댓값은 √5+3이다.",
+    "detailedExplanation": "y축까지의 거리는 y좌표와 무관하게 √(x²+z²)로 결정된다. 중심 C(1, 2, −2)에서 y축(x=0, z=0인 직선)까지의 거리는 √(1²+(−2)²)=√5이다. 구 위의 점은 중심에서 반지름 3만큼 떨어져 있으므로 y축까지의 거리의 최댓값은 √5+3이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_173",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "대표 유형",
+    "question": "점 P(2, −1, 3)을 원점에 대하여 대칭이동한 점을 Q, 점 Q를 xy평면에 대하여 대칭이동한 점을 R라 할 때, |PR|의 값은?",
+    "choices": [
+      "4",
+      "2√5",
+      "4√2",
+      "2√6"
+    ],
+    "answerIndex": 1,
+    "explanation": "원점 대칭: Q(−2, 1, −3), xy평면 대칭: R(−2, 1, 3)이므로 |PR|=√((−2−2)²+(1−(−1))²+(3−3)²)=√(16+4+0)=2√5이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_174",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "응용 유형",
+    "question": "세 점 A(a, 1, −3), B(2, b, 5), C(−2, 4, c)를 꼭짓점으로 하는 삼각형의 무게중심이 G(1, 3, 2)일 때, a+b+c의 값은?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "무게중심의 좌표 조건에서 (a+2−2)/3=1이므로 a=3, (1+b+4)/3=3이므로 b=4, (−3+5+c)/3=2이므로 c=4이다. 따라서 a+b+c=11이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_175",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "수능 기초",
+    "question": "구 x²+y²+z²−2x+4y−6z+k=0이 xy평면과 만나서 이루는 원의 반지름이 2일 때, 상수 k의 값은?",
+    "choices": [
+      "−4",
+      "1",
+      "3",
+      "5"
+    ],
+    "answerIndex": 1,
+    "explanation": "표준형으로 변환하면 (x−1)²+(y+2)²+(z−3)²=14−k이고, z=0 대입 시 (x−1)²+(y+2)²=5−k이다. 반지름이 2이면 5−k=4이므로 k=1이다.",
+    "detailedExplanation": "x²+y²+z²−2x+4y−6z+k=0을 완전제곱식으로 변환하면 (x−1)²+(y+2)²+(z−3)²=1+4+9−k=14−k이다. xy평면(z=0)을 대입하면 (x−1)²+(y+2)²+(0−3)²=14−k, 즉 (x−1)²+(y+2)²=14−k−9=5−k이다. 이 원의 반지름이 2이면 반지름²=4이므로 5−k=4에서 k=1이다.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_176",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "수능 실전",
+    "question": "점 A(1, 2, 3)에서 구 (x−4)²+(y−6)²+(z−3)²=9에 접선을 그을 때, 접점까지의 거리는?",
+    "choices": [
+      "3",
+      "√7",
+      "4",
+      "2√3"
+    ],
+    "answerIndex": 2,
+    "explanation": "구의 중심 C(4, 6, 3)에 대해 |AC|=√((4−1)²+(6−2)²+(3−3)²)=√(9+16)=5이고, 접선의 길이=√(|AC|²−r²)=√(25−9)=√16=4이다.",
+    "detailedExplanation": "외부의 점 A에서 구에 그은 접선의 길이 l은 접점을 T라 하면 AT⊥CT이므로 피타고라스 정리에 의해 l²=|AC|²−r²이다. |AC|=√((4−1)²+(6−2)²+(3−3)²)=√(9+16+0)=5이고, 반지름 r=3이므로 l=√(25−9)=√16=4이다. A가 구의 외부인지 확인: |AC|=5>3=r이므로 성립한다.",
+    "estimatedTime": "3분"
+  },
+  {
+    "id": "gen_geometry_177",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "수능 기초",
+    "question": "좌표공간에서 점 P(a, b, c)가 세 조건: ① a+b+c=6, ② a²+b²+c²=14, ③ ab+bc+ca=11을 모두 만족할 때, 점 P와 점 Q(1, 1, 1)사이의 거리 |PQ|의 최솟값을 구하기 위해 |PQ|²을 구하면?",
+    "choices": [
+      "3",
+      "5",
+      "6",
+      "11"
+    ],
+    "answerIndex": 1,
+    "explanation": "(a−1)²+(b−1)²+(c−1)² = a²+b²+c²−2(a+b+c)+3 = 14−12+3 = 5이므로 |PQ|²은 항상 5로 일정하다. 따라서 |PQ|=√5. 이 값이 최솟값이자 유일한 값이므로 답은 5.",
+    "detailedExplanation": "|PQ|² = (a−1)²+(b−1)²+(c−1)²\n= a²+b²+c² − 2(a+b+c) + 1+1+1\n= a²+b²+c² − 2(a+b+c) + 3.\n조건 ①②를 대입: = 14 − 2×6 + 3 = 14 − 12 + 3 = 5.\n따라서 |PQ|² = 5로 상수이며 |PQ| = √5.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_179",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "대표 유형",
+    "question": "구 x² + y² + z² − 2x + 4y − 6z + 5 = 0의 중심의 좌표와 반지름을 구하면?",
+    "choices": [
+      "중심 (1, −2, 3), 반지름 3",
+      "중심 (−1, 2, −3), 반지름 3",
+      "중심 (1, −2, 3), 반지름 √5",
+      "중심 (2, −4, 6), 반지름 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "완전제곱식으로 변환하면 (x−1)² + (y+2)² + (z−3)² = 1+4+9−5 = 9이므로 중심 (1, −2, 3), 반지름 3이다.",
+    "detailedExplanation": "x²−2x = (x−1)²−1, y²+4y = (y+2)²−4, z²−6z = (z−3)²−9로 변환한다. 대입하면 (x−1)²+(y+2)²+(z−3)² −1−4−9+5 = 0, 즉 (x−1)²+(y+2)²+(z−3)² = 9. 따라서 중심 (1,−2,3), 반지름 r = √9 = 3.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "gen_geometry_180",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "대표 유형",
+    "question": "점 A(2, 1, 3)을 중심으로 하고 점 B(4, 3, 6)을 지나는 구의 방정식은?",
+    "choices": [
+      "(x−2)² + (y−1)² + (z−3)² = 17",
+      "(x−2)² + (y−1)² + (z−3)² = √17",
+      "(x−2)² + (y−1)² + (z−3)² = 13",
+      "(x−2)² + (y−1)² + (z−3)² = 9"
+    ],
+    "answerIndex": 0,
+    "explanation": "반지름은 AB의 거리이므로 r² = (4−2)² + (3−1)² + (6−3)² = 4+4+9 = 17. 구의 방정식은 (x−2)²+(y−1)²+(z−3)² = 17이다.",
+    "detailedExplanation": null,
+    "estimatedTime": "1분"
+  },
+  {
+    "id": "gen_geometry_181",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "응용 유형",
+    "question": "구 x² + y² + z² = 25와 평면 x + 2y + 2z = k가 접할 때, 양수 k의 값은?",
+    "choices": [
+      "10",
+      "15",
+      "5",
+      "25"
+    ],
+    "answerIndex": 1,
+    "explanation": "구의 중심 (0,0,0)에서 평면까지의 거리가 반지름 5와 같아야 하므로 |k|/√(1²+2²+2²) = |k|/3 = 5, k = 15이다.",
+    "detailedExplanation": "구 x²+y²+z²=25의 중심은 (0,0,0), 반지름은 5. 평면 x+2y+2z = k까지의 거리 = |0+0+0−k|/√(1+4+4) = |k|/3. 접하는 조건: |k|/3 = 5 → |k| = 15. k > 0이므로 k = 15.",
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_1",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "대표 유형",
+    "question": "포물선 y² = 12x 의 초점의 좌표는?",
+    "choices": [
+      "(2, 0)",
+      "(3, 0)",
+      "(4, 0)",
+      "(6, 0)"
+    ],
+    "answerIndex": 1,
+    "explanation": "y² = 4px 에서 4p = 12, p = 3. 초점은 (3, 0).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_2",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "개념 확인",
+    "question": "타원 x²/25 + y²/9 = 1 의 장축의 길이는?",
+    "choices": [
+      "5",
+      "9",
+      "10",
+      "16"
+    ],
+    "answerIndex": 2,
+    "explanation": "a² = 25 이므로 a = 5. 장축의 길이는 2a = 10.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_3",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "쌍곡선",
+    "difficulty": "대표 유형",
+    "question": "쌍곡선 x²/9 − y²/16 = 1 의 주축의 길이는?",
+    "choices": [
+      "3",
+      "6",
+      "8",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "a² = 9 이므로 a = 3. 주축의 길이는 2a = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_4",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "포물선",
+    "difficulty": "응용 유형",
+    "question": "포물선 y² = 4x 위의 점 중 초점 (1, 0)까지의 거리가 5인 점의 x좌표는?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "준선이 x = −1 이므로 초점까지 거리는 x + 1 = 5, x = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_5",
+    "subject": "기하",
+    "chapter": "이차곡선",
+    "lesson": "타원",
+    "difficulty": "응용 유형",
+    "question": "타원 x²/16 + y²/7 = 1 의 두 초점 사이의 거리는?",
+    "choices": [
+      "3",
+      "6",
+      "8",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "c² = a² − b² = 16 − 7 = 9, c = 3. 두 초점 사이 거리는 2c = 6.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_6",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "두 벡터 a = (3, −1), b = (−2, 4) 에 대하여 a + b 는?",
+    "choices": [
+      "(1, 3)",
+      "(5, −5)",
+      "(1, −5)",
+      "(−1, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "성분끼리 더하면 (3−2, −1+4) = (1, 3).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_7",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a = (2, 1), b = (1, −3) 의 내적은?",
+    "choices": [
+      "−1",
+      "1",
+      "5",
+      "−5"
+    ],
+    "answerIndex": 0,
+    "explanation": "2×1 + 1×(−3) = 2 − 3 = −1.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_8",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "개념 확인",
+    "question": "벡터 a = (4, 3) 의 크기는?",
+    "choices": [
+      "5",
+      "7",
+      "12",
+      "25"
+    ],
+    "answerIndex": 0,
+    "explanation": "√(4² + 3²) = √25 = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_9",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 내적",
+    "difficulty": "응용 유형",
+    "question": "두 벡터 a = (1, 2), b = (k, −1) 이 서로 수직일 때, k의 값은?",
+    "choices": [
+      "−2",
+      "1",
+      "2",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "수직이면 내적이 0. 1·k + 2·(−1) = k − 2 = 0, k = 2.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_10",
+    "subject": "기하",
+    "chapter": "평면벡터",
+    "lesson": "벡터의 연산",
+    "difficulty": "대표 유형",
+    "question": "두 벡터 a = (1, 2), b = (3, 1) 에 대하여 2a − b 는?",
+    "choices": [
+      "(−1, 3)",
+      "(5, 3)",
+      "(−1, 5)",
+      "(1, 3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "2a = (2, 4), 2a − b = (2−3, 4−1) = (−1, 3).",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_11",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "대표 유형",
+    "question": "두 점 A(1, 2, 3), B(4, 6, 3) 사이의 거리는?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "√{(4−1)²+(6−2)²+(3−3)²} = √(9+16+0) = 5.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_12",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "공간좌표",
+    "difficulty": "대표 유형",
+    "question": "점 (2, −3, 6) 과 원점 사이의 거리는?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "√(2²+(−3)²+6²) = √(4+9+36) = √49 = 7.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_13",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "구의 방정식",
+    "difficulty": "개념 확인",
+    "question": "구 x² + y² + z² = 16 의 반지름은?",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "x²+y²+z² = r² 에서 r² = 16, r = 4.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  },
+  {
+    "id": "hand_geo_14",
+    "subject": "기하",
+    "chapter": "공간도형과 공간좌표",
+    "lesson": "두 점 사이의 거리",
+    "difficulty": "응용 유형",
+    "question": "점 (3, 4, 12) 와 원점 사이의 거리는?",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answerIndex": 1,
+    "explanation": "√(3²+4²+12²) = √(9+16+144) = √169 = 13.",
+    "detailedExplanation": null,
+    "estimatedTime": "2분"
+  }
+]
