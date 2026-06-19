@@ -10,8 +10,10 @@ import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_backdrop.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
+import '../../l10n/app_localizations.dart';
 import '../exam/mock_exam_setup_screen.dart';
 import '../quiz/quiz_launcher.dart';
+import 'attendance.dart';
 
 /// 오늘의 학습 대상 (인덱스에서 해석).
 typedef Target = ({
@@ -80,17 +82,15 @@ class HomeScreen extends ConsumerWidget {
               children: [
                 Row(
                   children: [
-                    Text('성인의 수학',
+                    Text(AppLocalizations.of(context).appName,
                         style: theme.textTheme.headlineSmall
                             ?.copyWith(fontWeight: FontWeight.w900)),
                     const Spacer(),
-                    Text(_dateLabel(),
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant)),
+                    const AttendanceButton(),
                   ],
                 ),
                 const SizedBox(height: 4),
-                Text('오늘 한 문제, 가볍게 풀어볼까요?',
+                Text(AppLocalizations.of(context).homeGreeting,
                     style: theme.textTheme.bodyLarge
                         ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
                 const SizedBox(height: 20),
@@ -113,12 +113,6 @@ class HomeScreen extends ConsumerWidget {
         ),
       ),
     );
-  }
-
-  String _dateLabel() {
-    final now = DateTime.now();
-    const w = ['월', '화', '수', '목', '금', '토', '일'];
-    return '${now.month}월 ${now.day}일 (${w[now.weekday - 1]})';
   }
 }
 

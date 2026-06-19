@@ -84,12 +84,38 @@ class StatsNotifier extends StateNotifier<UserStats> {
       totalSolved: state.totalSolved + 1,
       totalCorrect: state.totalCorrect + (correct ? 1 : 0),
       weeklySolved: state.weeklySolved + 1,
-      streakDays: state.streakDays == 0 ? 1 : state.streakDays,
       wrongProblems: wrong,
       subjectProgress: progress,
       recent: recent,
     );
     _persist();
+  }
+
+  /// 'yyyy-MM-dd' 키
+  static String dateKey(DateTime d) =>
+      '${d.year.toString().padLeft(4, '0')}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+
+  /// 오늘 출석 체크. 연속 출석일(streak) 재계산 후 저장.
+  void checkIn(DateTime day) {
+    final key = dateKey(day);
+    if (state.attendance.contains(key)) return; // 이미 출석
+    final att = {...state.attendance, key};
+    state = state.copyWith(attendance: att, streakDays: _streak(att, day));
+    _persist();
+  }
+
+  /// today(또는 attended면 today, 아니면 yesterday)에서 거슬러 연속 출석일 계산.
+  static int _streak(Set<String> att, DateTime today) {
+    var cursor = today;
+    if (!att.contains(dateKey(cursor))) {
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    var n = 0;
+    while (att.contains(dateKey(cursor))) {
+      n++;
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    return n;
   }
 
   /// 이어서 풀 위치 갱신

@@ -46,6 +46,18 @@ void main() {
       n.toggleReview(_p);
       expect(n.state.wrongProblems.containsKey('test_01'), isFalse);
     });
+
+    test('출석 체크인 + 연속일수', () {
+      final n = StatsNotifier();
+      final today = DateTime(2026, 6, 19);
+      n.checkIn(today.subtract(const Duration(days: 1))); // 어제
+      n.checkIn(today); // 오늘 → 연속 2일
+      expect(n.state.attendance.contains(StatsNotifier.dateKey(today)), isTrue);
+      expect(n.state.streakDays, 2);
+      // 같은 날 재출석은 무시
+      n.checkIn(today);
+      expect(n.state.attendance.length, 2);
+    });
   });
 
   test('수능 점수대 매핑', () {

@@ -72,6 +72,7 @@ class UserStats {
   final Map<String, double> subjectProgress; // 과목명 → 0..1
   final ContinueInfo? continueFrom;
   final List<RecentRecord> recent;
+  final Set<String> attendance; // 출석한 날짜 'yyyy-MM-dd'
 
   const UserStats({
     required this.totalSolved,
@@ -82,6 +83,7 @@ class UserStats {
     required this.subjectProgress,
     required this.continueFrom,
     required this.recent,
+    this.attendance = const {},
   });
 
   /// 첫 실행/초기화 상태 (전부 0).
@@ -94,6 +96,7 @@ class UserStats {
         subjectProgress: {},
         continueFrom: null,
         recent: [],
+        attendance: {},
       );
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
@@ -115,6 +118,7 @@ class UserStats {
     Map<String, double>? subjectProgress,
     ContinueInfo? continueFrom,
     List<RecentRecord>? recent,
+    Set<String>? attendance,
   }) {
     return UserStats(
       totalSolved: totalSolved ?? this.totalSolved,
@@ -125,6 +129,7 @@ class UserStats {
       subjectProgress: subjectProgress ?? this.subjectProgress,
       continueFrom: continueFrom ?? this.continueFrom,
       recent: recent ?? this.recent,
+      attendance: attendance ?? this.attendance,
     );
   }
 
@@ -150,6 +155,8 @@ class UserStats {
       recent: (j['recent'] as List<dynamic>? ?? [])
           .map((e) => RecentRecord.fromJson(e as Map<String, dynamic>))
           .toList(),
+      attendance:
+          (j['attendance'] as List<dynamic>? ?? []).map((e) => e.toString()).toSet(),
     );
   }
 
@@ -164,5 +171,6 @@ class UserStats {
         'subjectProgress': subjectProgress,
         'continueFrom': continueFrom?.toJson(),
         'recent': recent.map((r) => r.toJson()).toList(),
+        'attendance': attendance.toList(),
       };
 }

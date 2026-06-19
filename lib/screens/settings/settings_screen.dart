@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../l10n/app_localizations.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
@@ -95,7 +96,7 @@ class SettingsScreen extends ConsumerWidget {
                   trailing: const Icon(Icons.chevron_right_rounded),
                   onTap: () => showAboutDialog(
                     context: context,
-                    applicationName: '성인의 수학',
+                    applicationName: AppLocalizations.of(context).appName,
                     applicationVersion: '1.0.0',
                     applicationLegalese: '어른이 다시 시작하는 수학 루틴',
                   ),

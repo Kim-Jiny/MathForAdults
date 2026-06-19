@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appName": "Math for Adults",
+  "@appName": {
+    "description": "App display name / title"
+  },
+  "homeGreeting": "Today, one problem — take it easy.",
+  "@homeGreeting": {
+    "description": "Home subtitle greeting"
+  }
+}
