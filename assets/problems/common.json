@@ -15,7 +15,11 @@
     "answerIndex": 0,
     "explanation": "x² + 3x + 2x + 6 = x² + 5x + 6.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 일차식의 곱을 전개할 때는 분배법칙(FOIL 방법)을 떠올려 보세요.",
+      "(x + 2)(x + 3)에서 각 항을 하나씩 곱해 나열하면 x·x, x·3, 2·x, 2·3 네 가지 항이 생깁니다. 동류항끼리 모아 정리해 보세요."
+    ]
   },
   {
     "id": "com_poly_002",
@@ -33,7 +37,11 @@
     "answerIndex": 1,
     "explanation": "(x+1)² = x² + 2·x·1 + 1² = x² + 2x + 1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "완전제곱식 공식 (a + b)² = a² + 2ab + b²을 기억해 보세요.",
+      "(x + 1)²에서 a = x, b = 1로 놓고 공식에 대입하면 x², 2·x·1, 1² 세 항이 나옵니다. 각각 계산해 더해 보세요."
+    ]
   },
   {
     "id": "com_factor_001",
@@ -51,7 +59,11 @@
     "answerIndex": 1,
     "explanation": "합·차 공식 a² − b² = (a+b)(a−b). x² − 3² = (x+3)(x−3).",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 완전제곱수의 차 형태 a² − b²이 보이면 합·차 공식을 떠올려 보세요.",
+      "x² − 9 = x² − 3² 꼴임을 확인한 뒤, a² − b² = (a + b)(a − b) 공식에 a = x, b = 3을 대입해 보세요."
+    ]
   },
   {
     "id": "com_factor_002",
@@ -69,7 +81,11 @@
     "answerIndex": 1,
     "explanation": "곱이 6, 합이 5인 두 수는 2와 3. (x+2)(x+3).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x² + px + q 꼴의 인수분해는 '곱이 q이고 합이 p인 두 정수'를 찾는 것이 핵심입니다.",
+      "곱이 6이고 합이 5인 두 양의 정수를 찾아보세요. 그 두 수를 m, n이라 하면 (x + m)(x + n)으로 인수분해됩니다."
+    ]
   },
   {
     "id": "com_rem_001",
@@ -87,7 +103,11 @@
     "answerIndex": 2,
     "explanation": "나머지정리에 의해 나머지는 P(1) = 1 + 1 + 1 = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "나머지정리: 다항식 P(x)를 (x − a)로 나눈 나머지는 P(a)와 같습니다.",
+      "제수가 x − 1이므로 a = 1입니다. P(1) = 1² + 1 + 1을 직접 계산해 보세요."
+    ]
   },
   {
     "id": "com_rem_002",
@@ -105,7 +125,11 @@
     "answerIndex": 2,
     "explanation": "나머지 = P(−1) = (−1) − (−2) + 1 = −1 + 2 + 1 = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "나머지정리를 활용하되, 제수가 x + 1일 때 어떤 값을 대입해야 하는지 생각해 보세요.",
+      "x + 1 = x − (−1)이므로 나머지는 P(−1)입니다. (−1)³ − 2·(−1) + 1을 계산해 부호에 주의하며 정리해 보세요."
+    ]
   },
   {
     "id": "com_complex_001",
@@ -123,7 +147,11 @@
     "answerIndex": 1,
     "explanation": "허수단위 i 는 i² = −1 로 정의됩니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "허수단위 i 의 정의를 떠올려 보세요.",
+      "i 는 어떤 수의 제곱근으로 정의되는지, 그 정의식을 직접 써보세요."
+    ]
   },
   {
     "id": "com_complex_002",
@@ -141,7 +169,11 @@
     "answerIndex": 0,
     "explanation": "실수부끼리, 허수부끼리. (1+2) + (1−3)i = 3 − 2i.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "복소수의 덧셈에서는 실수부끼리, 허수부끼리 따로 계산한다는 규칙을 기억하세요.",
+      "(1+i)+(2−3i)에서 실수부는 1과 2, 허수부 계수는 1과 −3이에요. 각각 더해서 a+bi 꼴로 나타내 보세요."
+    ]
   },
   {
     "id": "com_quad_001",
@@ -159,7 +191,11 @@
     "answerIndex": 0,
     "explanation": "근과 계수의 관계로 두 근의 곱 = c/a = −3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차방정식 ax²+bx+c=0 에서 두 근의 곱을 구하는 '근과 계수의 관계' 공식을 떠올리세요.",
+      "x²−2x−3=0 에서 a=1, b=−2, c=−3이에요. 두 근의 곱 = c/a 공식에 직접 대입해 보세요."
+    ]
   },
   {
     "id": "com_quad_002",
@@ -177,7 +213,11 @@
     "answerIndex": 2,
     "explanation": "중근 조건은 판별식 D = 0. 16 − 4k = 0 이므로 k = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차방정식이 중근을 가지는 조건은 판별식 D와 관련이 있어요.",
+      "D = b²−4ac 를 계산한 뒤, 중근 조건 D=0 으로 등식을 세워 k 를 구해 보세요."
+    ]
   },
   {
     "id": "com_coord_001",
@@ -195,7 +235,11 @@
     "answerIndex": 2,
     "explanation": "√{(4−1)² + (6−2)²} = √(9 + 16) = √25 = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점 사이의 거리 공식을 떠올려 보세요. 좌표 차이를 이용해 거리를 구할 수 있습니다.",
+      "두 점 (x₁, y₁), (x₂, y₂)의 거리는 √((x₂−x₁)² + (y₂−y₁)²)입니다. 각 좌표의 차를 먼저 계산해 보세요."
+    ]
   },
   {
     "id": "com_line_001",
@@ -213,7 +257,11 @@
     "answerIndex": 1,
     "explanation": "기울기 = (4 − 0)/(2 − 0) = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점을 지나는 직선의 기울기를 어떻게 구하는지 떠올려 보세요.",
+      "기울기 = (y 증가량) ÷ (x 증가량), 즉 (y₂−y₁) ÷ (x₂−x₁)을 계산해 보세요."
+    ]
   },
   {
     "id": "com_line_002",
@@ -231,7 +279,11 @@
     "answerIndex": 1,
     "explanation": "y − 3 = 2(x − 1) → y = 2x + 1 이므로 y절편은 1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "기울기와 한 점을 알 때 직선의 방정식을 세우는 공식을 떠올려 보세요.",
+      "점-기울기 형식 y − y₁ = m(x − x₁)을 이용해 식을 세운 뒤, y절편(x=0일 때의 y값)을 구해 보세요."
+    ]
   },
   {
     "id": "com_circle_001",
@@ -249,7 +301,11 @@
     "answerIndex": 0,
     "explanation": "x² + y² = r² 에서 r² = 9 이므로 r = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원의 표준방정식 x² + y² = r²에서 r²과 r의 관계를 생각해 보세요.",
+      "x² + y² = r² 꼴에서 오른쪽 상수가 r²임을 이용해 r을 직접 구해 보세요."
+    ]
   },
   {
     "id": "com_circle_002",
@@ -267,7 +323,11 @@
     "answerIndex": 0,
     "explanation": "(x − a)² + (y − b)² = r² 의 중심은 (a, b). 따라서 (1, 2).",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원의 표준방정식 (x−a)² + (y−b)² = r²에서 중심이 어디인지 공식을 떠올려 보세요.",
+      "(x−a)² + (y−b)² = r² 꼴에서 중심은 (a, b)입니다. 주어진 식에서 a와 b를 직접 읽어 보세요."
+    ]
   },
   {
     "id": "com_set_001",
@@ -285,7 +345,11 @@
     "answerIndex": 1,
     "explanation": "교집합은 두 집합에 공통으로 속하는 원소. {2, 3}.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "교집합(∩)의 의미를 떠올려 보세요. 두 집합 A와 B 모두에 동시에 속하는 원소를 찾는 연산입니다.",
+      "A의 원소 {1, 2, 3}과 B의 원소 {2, 3, 4}를 하나씩 비교해 공통으로 등장하는 원소만 골라내 보세요."
+    ]
   },
   {
     "id": "com_set_002",
@@ -303,7 +367,11 @@
     "answerIndex": 1,
     "explanation": "합집합은 두 집합의 모든 원소. {1, 2, 3, 4}.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "합집합(∪)은 두 집합 중 어느 한쪽이라도 속하면 포함시키는 연산입니다.",
+      "A = {1, 2, 3}, B = {2, 3, 4}의 원소를 모두 모아 중복 없이 나열해 보세요."
+    ]
   },
   {
     "id": "com_logic_001",
@@ -321,7 +389,11 @@
     "answerIndex": 0,
     "explanation": "명제 'p이면 q'의 역은 'q이면 p'. 따라서 'x²=4이면 x=2'.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "명제 'p이면 q이다'의 역(逆)은 가정과 결론의 위치를 서로 바꾸는 것입니다.",
+      "'x = 2 → x² = 4'에서 p(가정)와 q(결론)를 확인한 뒤, 역은 'q → p' 형태로 적어 보세요."
+    ]
   },
   {
     "id": "com_fn_001",
@@ -339,7 +411,11 @@
     "answerIndex": 2,
     "explanation": "f(3) = 2×3 + 1 = 7.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수식에 특정 값을 직접 대입하면 함숫값을 구할 수 있다는 개념을 떠올려 보세요.",
+      "f(x) = 2x + 1에서 x 자리에 3을 넣어 2 × 3 + 1을 계산해 보세요."
+    ]
   },
   {
     "id": "com_fn_002",
@@ -357,7 +433,11 @@
     "answerIndex": 2,
     "explanation": "g(1) = 2, f(2) = 4. (f∘g)(1) = f(g(1)) = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "합성함수 (f∘g)(x)는 'g를 먼저, f를 나중에' 적용한다는 순서를 떠올려 보세요.",
+      "먼저 g(1)의 값을 구하고, 그 결과를 다시 f에 대입해 f(g(1))을 계산해 보세요."
+    ]
   },
   {
     "id": "com_count_001",
@@ -375,7 +455,11 @@
     "answerIndex": 2,
     "explanation": "5! = 5×4×3×2×1 = 120.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "팩토리얼(!)은 1부터 그 수까지의 자연수를 모두 곱한 것임을 떠올려 보세요.",
+      "5! = 5 × 4 × 3 × 2 × 1 처럼 순서대로 곱셈 식을 세워 계산해 보세요."
+    ]
   },
   {
     "id": "com_count_002",
@@ -393,7 +477,11 @@
     "answerIndex": 1,
     "explanation": "₅P₂ = 5 × 4 = 20.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "nPr은 n명 중 r명을 순서를 고려해 뽑는 순열 공식임을 떠올려 보세요.",
+      "₅P₂ = 5 × (5−1) 처럼, 첫 번째 자리에 고를 수 있는 수에서 시작해 자리마다 1씩 줄여 r개를 곱하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "com_count_003",
@@ -411,7 +499,11 @@
     "answerIndex": 0,
     "explanation": "₅C₂ = (5×4)/(2×1) = 10.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "nCr은 순서 없이 r개를 뽑는 조합 공식으로, nPr을 r!으로 나눈 값임을 떠올려 보세요.",
+      "₅C₂ = (5 × 4) ÷ (2 × 1) 처럼, 순열 ₅P₂를 구한 뒤 중복 순서 수 2!로 나누는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_1",
@@ -429,7 +521,11 @@
     "answerIndex": 2,
     "explanation": "다항식의 차수는 각 항의 차수 중 가장 높은 것으로, 2x³의 차수가 3이므로 이 다항식의 차수는 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "다항식의 차수는 각 항의 차수 중 가장 높은 것임을 떠올려 보세요.",
+      "2x³ − 3x² + x − 5의 각 항의 차수를 하나씩 확인해 보세요. x³항의 차수, x²항의 차수 등을 비교하면 가장 높은 차수를 찾을 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_2",
@@ -447,7 +543,11 @@
     "answerIndex": 0,
     "explanation": "동류항끼리 더하면 (3+1)x² + (−2+4)x + (1−3) = 4x² + 2x − 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "다항식의 덧셈은 동류항(같은 차수의 항)끼리 모아 더하는 것이 핵심입니다.",
+      "A + B를 구할 때, x²의 계수끼리(3 + 1), x의 계수끼리(−2 + 4), 상수항끼리(1 + (−3))를 각각 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_3",
@@ -465,7 +565,11 @@
     "answerIndex": 1,
     "explanation": "A − B = (2x² + 3x − 1) − (x² − x + 4) = x² + 4x − 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "다항식의 뺄셈 A − B는 B의 각 항의 부호를 바꾼 뒤 A에 더하는 방법을 쓰면 실수를 줄일 수 있습니다.",
+      "A − B = (2x² + 3x − 1) − (x² − x + 4)에서 괄호를 풀 때 B 앞의 '−' 부호가 각 항 전체에 적용됨을 주의하고, 동류항끼리 모아 보세요."
+    ]
   },
   {
     "id": "gen_common_4",
@@ -483,7 +587,11 @@
     "answerIndex": 1,
     "explanation": "분배법칙을 이용하면 x² − 2x + 3x − 6 = x² + x − 6이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 일차식의 곱 (x + a)(x + b)를 전개할 때는 분배법칙으로 각 항을 곱한 뒤 동류항을 모읍니다.",
+      "(x + 3)(x − 2)에서 x·x, x·(−2), 3·x, 3·(−2)를 각각 계산한 뒤, x항끼리 더해 최종 식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_common_5",
@@ -501,7 +609,11 @@
     "answerIndex": 2,
     "explanation": "x²항은 2x × 3x + (−1) × x² = 6x² − x² = 5x²이므로 계수는 5이다.",
     "detailedExplanation": "전개하면 2x × x² = 2x³, 2x × 3x = 6x², 2x × (−2) = −4x, (−1) × x² = −x², (−1) × 3x = −3x, (−1) × (−2) = 2이다. x²항을 모으면 6x² − x² = 5x²이므로 계수는 5이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "(2x − 1)(x² + 3x − 2)를 전개할 때, x²항이 만들어지는 경우가 몇 가지인지 찾는 것이 핵심입니다.",
+      "전체를 전개하지 않아도 됩니다. 2x × 3x에서 나오는 x²항과 (−1) × x²에서 나오는 x²항만 모아 계수를 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_6",
@@ -519,7 +631,11 @@
     "answerIndex": 0,
     "explanation": "A = (x² + 3x − 1) + (2x² − x + 3) = 3x² + 2x + 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "A에 대한 방정식으로 생각하고, 등식의 양변에 빠진 식을 이항해 A를 구해 보세요.",
+      "A − (2x² − x + 3) = x² + 3x − 1이므로 A = (우변) + (2x² − x + 3)입니다. 동류항끼리 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_7",
@@ -537,7 +653,11 @@
     "answerIndex": 1,
     "explanation": "나머지정리에 의해 다항식 f(x)를 (x − a)로 나눈 나머지는 f(a)이므로, (x − 2)로 나눈 나머지는 f(2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "나머지정리는 f(x)를 (x − a)로 나눈 나머지가 f(a)와 같다는 정리입니다.",
+      "(x − 2)로 나누는 경우, x − 2 = 0을 만족하는 x 값을 f에 대입하면 됩니다. 즉 x = 2를 대입해야 합니다."
+    ]
   },
   {
     "id": "gen_common_8",
@@ -555,7 +675,11 @@
     "answerIndex": 0,
     "explanation": "나머지정리에 의해 나머지는 f(1) = 1³ − 3×1 + 1 = 1 − 3 + 1 = −1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "나머지정리를 사용하면 직접 나눗셈 없이 나머지를 구할 수 있습니다.",
+      "f(x)를 (x − 1)로 나눈 나머지는 f(1)입니다. f(1) = 1³ − 3×1 + 1을 부호에 주의해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_9",
@@ -573,7 +697,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = (x² − 1)Q(x) + 3x − 2 = (x−1)(x+1)Q(x) + 3x − 2이므로, f(1) = 3×1 − 2 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x)를 (x² − 1)로 나눈 나머지가 3x − 2이면, 이 관계식에서 특정 x 값을 대입해 원하는 나머지를 바로 구할 수 있습니다.",
+      "x² − 1 = (x − 1)(x + 1)이므로 f(x) = (x−1)(x+1)Q(x) + 3x − 2 꼴입니다. (x − 1)로 나눈 나머지는 f(1)이므로 3x − 2에 x = 1을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_10",
@@ -591,7 +719,11 @@
     "answerIndex": 1,
     "explanation": "f(1) = 1¹⁰ − 1 = 0, f(−1) = (−1)¹⁰ − 1 = 1 − 1 = 0이므로 두 나머지의 합은 0 + 0 = 0이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "나머지정리를 적용해 각 경우의 나머지를 f(1), f(−1)로 구할 수 있습니다.",
+      "f(x) = x¹⁰ − 1에서 f(1) = 1¹⁰ − 1, f(−1) = (−1)¹⁰ − 1을 각각 계산한 뒤 두 값을 더해 보세요. (−1)의 짝수 거듭제곱의 부호에 주의하세요."
+    ]
   },
   {
     "id": "gen_common_11",
@@ -609,7 +741,11 @@
     "answerIndex": 1,
     "explanation": "x² − 9 = x² − 3²이므로 합차 공식 a² − b² = (a+b)(a−b)를 적용하면 (x+3)(x−3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 완전제곱수의 차 a² − b² 형태가 보이면 합·차 공식을 떠올려 보세요.",
+      "x² − 9 = x² − 3²임을 확인하고, a² − b² = (a + b)(a − b) 공식에 a = x, b = 3을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_12",
@@ -627,7 +763,11 @@
     "answerIndex": 2,
     "explanation": "x² + 6x + 9 = x² + 2·x·3 + 3²이므로 완전제곱식 공식 a² + 2ab + b² = (a+b)²에 의해 (x+3)²이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x² + 6x + 9의 형태를 보고 완전제곱식 공식 (a + b)² = a² + 2ab + b²과 일치하는지 확인해 보세요.",
+      "6x = 2·x·3, 9 = 3²임을 인식하면, a = x, b = 3으로 놓고 (x + 3)² 형태로 인수분해할 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_13",
@@ -645,7 +785,11 @@
     "answerIndex": 1,
     "explanation": "곱이 6이고 합이 5인 두 수는 2와 3이므로 x² + 5x + 6 = (x+2)(x+3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x² + px + q 형태의 인수분해는 곱이 q, 합이 p인 두 정수를 찾는 데서 시작합니다.",
+      "곱이 6이고 합이 5인 두 양의 정수를 찾아보세요. 그 두 수를 m, n이라 하면 (x + m)(x + n)으로 인수분해됩니다."
+    ]
   },
   {
     "id": "gen_common_14",
@@ -663,7 +807,11 @@
     "answerIndex": 0,
     "explanation": "2x² + 7x + 3에서 2×3 = 6이고 합이 7인 두 수 1과 6을 이용해 세로셈법으로 분해하면 (2x+1)(x+3)이다.",
     "detailedExplanation": "2x² + 7x + 3을 (2x + a)(x + b) 형태로 놓으면 ab = 3, 2b + a = 7을 만족해야 한다. a=1, b=3이면 2·3 + 1 = 7 ✓, 1·3 = 3 ✓이므로 (2x+1)(x+3)이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "최고차항의 계수가 2인 이차식 2x² + 7x + 3의 인수분해는 (2x + a)(x + b) 형태로 시도해 보세요.",
+      "(2x + a)(x + b)에서 상수항 ab = 3, x의 계수 2b + a = 7을 만족하는 정수 a, b를 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_15",
@@ -681,7 +829,11 @@
     "answerIndex": 0,
     "explanation": "세제곱 차 공식 a³ − b³ = (a−b)(a² + ab + b²)에서 a=x, b=2를 대입하면 (x−2)(x² + 2x + 4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세제곱의 차 a³ − b³에 대한 인수분해 공식을 떠올려 보세요.",
+      "x³ − 8 = x³ − 2³ 꼴임을 확인한 뒤, a³ − b³ = (a − b)(a² + ab + b²) 공식에 a = x, b = 2를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_17",
@@ -699,7 +851,11 @@
     "answerIndex": 2,
     "explanation": "x = 2를 대입하면 8 + 12 − 8 − 12 = 0이므로 (x−2)가 인수이다. 조립제법으로 나누면 x³ + 3x² − 4x − 12 = (x−2)(x² + 5x + 6) = (x−2)(x+2)(x+3)이므로 a=2, b=2, c=3이 되어 a+b+c = 7이다.",
     "detailedExplanation": "x = 2: 8 + 12 − 8 − 12 = 0 ✓, x = −2: −8 + 12 + 8 − 12 = 0 ✓, x = −3: −27 + 27 + 12 − 12 = 0 ✓. 조립제법으로 x³ + 3x² − 4x − 12 ÷ (x−2)를 계산하면 몫이 x² + 5x + 6이고, 이를 다시 인수분해하면 (x+2)(x+3)이다. 따라서 전체는 (x−2)(x+2)(x+3)이고, (x+a)(x−b)(x+c) 형태에서 a=2, b=2, c=3이므로 a+b+c = 2+2+3 = 7이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "삼차다항식을 인수분해할 때는 먼저 정수 중에서 대입했을 때 0이 되는 값(유리근)을 찾아 보세요.",
+      "x = 2를 대입해 f(2)가 0인지 확인하고, 인수 (x − 2)를 조립제법으로 나눈 뒤 나머지 이차식을 다시 인수분해해 보세요. 최종 형태 (x + a)(x − b)(x + c)의 a, b, c를 확인해 합을 구하세요."
+    ]
   },
   {
     "id": "gen_common_18",
@@ -717,7 +873,11 @@
     "answerIndex": 2,
     "explanation": "복소수 a + bi에서 실수부는 a, 허수부는 b(i가 아닌 계수)이므로 실수부는 3, 허수부는 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "복소수 a+bi 에서 실수부와 허수부가 각각 무엇인지 정의를 확인하세요.",
+      "허수부는 i 앞의 계수(숫자 자체)이지, bi 전체가 아니에요. z=3+2i 에서 어떤 수가 a이고 어떤 수가 b인지 구별해 보세요."
+    ]
   },
   {
     "id": "gen_common_19",
@@ -735,7 +895,11 @@
     "answerIndex": 0,
     "explanation": "실수부끼리, 허수부끼리 더하면 (2+4) + (3−1)i = 6 + 2i이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "복소수 덧셈은 실수부는 실수부끼리, 허수부 계수는 허수부 계수끼리 더해요.",
+      "(2+3i)+(4−i) 에서 실수부 합은 2+4, 허수부 계수 합은 3+(−1)이에요. 계산해서 a+bi 꼴로 써보세요."
+    ]
   },
   {
     "id": "gen_common_20",
@@ -753,7 +917,11 @@
     "answerIndex": 1,
     "explanation": "(1+i)(2−3i) = 2 − 3i + 2i − 3i² = 2 − i + 3 = 5 − i이다. (i² = −1 이용)",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "복소수 곱셈은 분배법칙을 쓰고, 마지막에 i²=−1 을 대입해 정리해요.",
+      "(1+i)(2−3i)를 분배법칙으로 전개한 뒤, i² 항을 −1로 바꿔 실수부와 허수부를 모아 보세요."
+    ]
   },
   {
     "id": "gen_common_21",
@@ -771,7 +939,11 @@
     "answerIndex": 1,
     "explanation": "근과 계수의 관계에 의해 두 근의 합은 −(−5)/1 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차방정식 ax²+bx+c=0 에서 두 근의 합은 −b/a 라는 '근과 계수의 관계'를 이용하세요.",
+      "x²−5x+6=0 에서 a=1, b=−5에요. 두 근의 합 = −(−5)/1 을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_22",
@@ -789,7 +961,11 @@
     "answerIndex": 1,
     "explanation": "D = 4² − 4×1×4 = 16 − 16 = 0이므로 판별식은 0이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차방정식 ax²+bx+c=0 의 판별식은 D=b²−4ac 예요.",
+      "x²+4x+4=0 에서 a=1, b=4, c=4를 D=b²−4ac 에 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_23",
@@ -807,7 +983,11 @@
     "answerIndex": 2,
     "explanation": "근과 계수의 관계에 의해 두 근의 곱 αβ = −2/2 = −1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차방정식 ax²+bx+c=0 에서 두 근의 곱 αβ = c/a 라는 공식을 떠올리세요.",
+      "2x²−3x−2=0 에서 a=2, c=−2이에요. αβ = c/a 에 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_24",
@@ -825,7 +1005,11 @@
     "answerIndex": 2,
     "explanation": "x² − 2x − 3 = (x − 3)(x + 1) = 0이므로 x = 3 또는 x = −1이고, 두 근 중 큰 근은 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차방정식을 인수분해해서 두 근을 직접 구해 보세요.",
+      "x²−2x−3=0 을 (x−?)(x+?) 꼴로 인수분해하면 두 근이 나와요. 곱이 −3, 합이 −2인 두 수를 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_25",
@@ -843,7 +1027,11 @@
     "answerIndex": 2,
     "explanation": "중근을 가지려면 판별식 D = k² − 4(k + 3) = 0이어야 하므로 k² − 4k − 12 = 0, (k − 6)(k + 2) = 0, k > 0이므로 k = 6이다.",
     "detailedExplanation": "판별식 D = k² − 4×1×(k+3) = k² − 4k − 12 = 0을 풀면 (k − 6)(k + 2) = 0이므로 k = 6 또는 k = −2이다. k > 0 조건에 의해 k = 6이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "중근을 가지는 조건은 판별식 D=b²−4ac=0 이에요.",
+      "x²+kx+(k+3)=0 에서 D=k²−4(k+3)=0 으로 식을 세우고, 이차방정식을 풀어 k>0 인 값을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_26",
@@ -861,7 +1049,11 @@
     "answerIndex": 1,
     "explanation": "근과 계수의 관계에서 α + β = 6, αβ = 2이므로 α² + β² = (α + β)² − 2αβ = 36 − 4 = 32이다.",
     "detailedExplanation": "근과 계수의 관계: α + β = 6, αβ = 2. α² + β² = (α + β)² − 2αβ = 6² − 2×2 = 36 − 4 = 32이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "α²+β² 은 (α+β)²−2αβ 로 변환할 수 있어요. 근과 계수의 관계를 먼저 적용하세요.",
+      "x²−6x+2=0 에서 α+β=6, αβ=2 임을 확인한 뒤, α²+β²=(α+β)²−2αβ 에 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_27",
@@ -879,7 +1071,11 @@
     "answerIndex": 1,
     "explanation": "두 근이 모두 양수이려면 (두 근의 합) > 0, (두 근의 곱) > 0, 판별식 ≥ 0을 동시에 만족해야 한다. 합 k+1 > 0이면 k > −1, 곱 k > 0이면 k > 0, 판별식 (k+1)² − 4k = k² − 2k + 1 = (k−1)² ≥ 0은 항상 성립하므로 k > 0인 최솟값 정수는 1이다.",
     "detailedExplanation": "두 근 α, β가 모두 양수인 조건: ① α + β = k + 1 > 0 → k > −1, ② αβ = k > 0 → k > 0, ③ D = (k+1)² − 4k = k² − 2k + 1 = (k−1)² ≥ 0 (항상 성립). 세 조건의 공통범위는 k > 0이고, 정수 중 최솟값은 k = 1이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 근이 모두 양수이려면 '두 근의 합>0', '두 근의 곱>0', '판별식≥0' 세 조건을 동시에 만족해야 해요.",
+      "x²−(k+1)x+k=0 에서 근과 계수의 관계로 합=k+1, 곱=k 를 세운 뒤, 각 조건을 부등식으로 쓰고 공통 범위를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_28",
@@ -897,7 +1093,11 @@
     "answerIndex": 0,
     "explanation": "y = (x−2)² − 1로 변환하면 꼭짓점은 (2, −1)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차함수 y=ax²+bx+c 의 꼭짓점을 찾으려면 완전제곱식 꼴 y=a(x−h)²+k 로 변환하세요.",
+      "y=x²−4x+3 을 (x−□)²+□ 꼴로 변환할 때, −4x를 처리하려면 ±□ 를 어떻게 넣어야 하는지 생각해 보세요."
+    ]
   },
   {
     "id": "gen_common_29",
@@ -915,7 +1115,11 @@
     "answerIndex": 0,
     "explanation": "x² − 2x − 3 = 0을 풀면 (x−3)(x+1) = 0이므로 x = 3 또는 x = −1, 두 점 사이의 거리는 3−(−1) = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차함수가 x축과 만나는 점은 y=0 으로 놓고 이차방정식을 풀어 구해요.",
+      "x²−2x−3=0 을 인수분해해서 두 x값을 찾은 뒤, 두 점 사이의 거리 = (큰 근)−(작은 근) 을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_30",
@@ -933,7 +1137,11 @@
     "answerIndex": 0,
     "explanation": "x² − 3x − 4 = (x−4)(x+1) < 0이므로 −1 < x < 4, 따라서 b − a = 4 − (−1) = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이차부등식을 풀려면 먼저 이차식을 인수분해해서 근을 구하세요.",
+      "x²−3x−4=(x−4)(x+1)<0 의 해는 두 근 사이의 구간이에요. a와 b를 찾아 b−a 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_31",
@@ -951,7 +1159,11 @@
     "answerIndex": 0,
     "explanation": "판별식 D = m² − 4(m+3) = m² − 4m − 12 = (m−6)(m+2) > 0이므로 m < −2 또는 m > 6이다.",
     "detailedExplanation": "판별식 D = m² − 4·1·(m+3) = m² − 4m − 12로 계산한다. D > 0이어야 서로 다른 두 실근을 가지므로 (m−6)(m+2) > 0, 즉 m < −2 또는 m > 6이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "서로 다른 두 실근을 가지려면 판별식 D>0 이어야 해요.",
+      "x²+mx+(m+3)=0 에서 D=m²−4(m+3)>0 으로 부등식을 세운 뒤 인수분해하여 m의 범위를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_32",
@@ -969,7 +1181,11 @@
     "answerIndex": 0,
     "explanation": "이차부등식이 모든 실수에서 성립하려면 판별식 D = 16 − 4k < 0이어야 하므로 k > 4이다.",
     "detailedExplanation": "이차항의 계수가 1 > 0이고 모든 실수 x에서 x² − 4x + k > 0이 성립하려면 이차방정식 x² − 4x + k = 0의 판별식 D < 0이어야 한다. D = (−4)² − 4·1·k = 16 − 4k < 0에서 k > 4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차부등식이 모든 실수 x에서 항상 성립하려면 이차항 계수가 양수일 때 판별식 D<0 이어야 해요.",
+      "x²−4x+k>0 에서 D=(−4)²−4k<0 으로 부등식을 세운 뒤 k에 대해 풀어 보세요."
+    ]
   },
   {
     "id": "gen_common_33",
@@ -987,7 +1203,11 @@
     "answerIndex": 1,
     "explanation": "x³ − 3x² + 3x − 1 = (x − 1)³ = 0이므로 x = 1이 삼중근이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x³−3x²+3x−1 이 어떤 완전세제곱식과 같은지 생각해 보세요. (a−b)³ 전개 공식을 떠올려 보세요.",
+      "a=x, b=1 로 놓으면 (x−1)³ 을 전개한 결과와 비교해 보세요. 그러면 삼중근을 바로 알 수 있어요."
+    ]
   },
   {
     "id": "gen_common_34",
@@ -1005,7 +1225,11 @@
     "answerIndex": 3,
     "explanation": "x² = t로 치환하면 t² − 5t + 4 = (t−1)(t−4) = 0이므로 t = 1 또는 t = 4. 따라서 x = ±1, ±2로 실근이 4개다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x⁴ 항이 있는 방정식은 t=x² 로 치환해 이차방정식으로 바꿔 풀 수 있어요.",
+      "t=x² 로 놓으면 t²−5t+4=0 이 돼요. 이 이차방정식의 근 t를 구한 뒤, 각 t에 대해 x²=t 를 풀어 실수 근의 개수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_35",
@@ -1023,7 +1247,11 @@
     "answerIndex": 1,
     "explanation": "x² + y² = (x + y)² − 2xy = 5² − 2×6 = 25 − 12 = 13이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x²+y² 은 (x+y)²−2xy 로 나타낼 수 있어요. 주어진 x+y=5, xy=6 을 활용하세요.",
+      "(x+y)²−2xy 에 x+y=5, xy=6 을 대입하면 바로 답을 구할 수 있어요."
+    ]
   },
   {
     "id": "gen_common_36",
@@ -1041,7 +1269,11 @@
     "answerIndex": 2,
     "explanation": "x³ − x² − x + 1 = x²(x−1) − (x−1) = (x−1)(x²−1) = (x−1)²(x+1) = 0이므로 근은 1, 1, −1. 세 근의 합은 1 + 1 + (−1) = 1이다.",
     "detailedExplanation": "x³ − x² − x + 1을 인수분해하면 x²(x−1) − 1(x−1) = (x−1)(x²−1) = (x−1)(x−1)(x+1) = (x−1)²(x+1) = 0. 따라서 세 근은 1(중근), −1이고 합은 1 + 1 + (−1) = 1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x³−x²−x+1 을 인수분해해서 세 근을 먼저 구해 보세요. 공통인수로 묶어 볼 수 있어요.",
+      "x²(x−1)−1(x−1) = (x−1)(x²−1) 로 변환한 뒤, x²−1 을 다시 인수분해해 보세요. 그러면 세 근을 직접 읽어낼 수 있어요."
+    ]
   },
   {
     "id": "gen_common_37",
@@ -1059,7 +1291,11 @@
     "answerIndex": 2,
     "explanation": "두 점 사이의 거리 공식에 의해 √((4−1)² + (6−2)²) = √(9+16) = √25 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점 사이의 거리 공식을 떠올려 보세요.",
+      "√((4−1)² + (6−2)²)을 단계적으로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_38",
@@ -1077,7 +1313,11 @@
     "answerIndex": 0,
     "explanation": "중점의 좌표는 ((−3+5)/2, (1+1)/2) = (1, 1)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "선분의 중점 공식을 떠올려 보세요. 각 좌표의 평균값이 중점이 됩니다.",
+      "중점의 x좌표는 (x₁+x₂)/2, y좌표는 (y₁+y₂)/2입니다. 두 점의 좌표를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_39",
@@ -1095,7 +1335,11 @@
     "answerIndex": 1,
     "explanation": "내분점 공식에 의해 x = (2×7+1×1)/3 = 5, y = (2×5+1×(−1))/3 = 3이므로 내분점은 (5, 3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "선분을 m:n으로 내분하는 점의 좌표 공식을 떠올려 보세요.",
+      "내분점 공식: x = (m·x₂ + n·x₁)/(m+n), y = (m·y₂ + n·y₁)/(m+n). 여기서 m=2, n=1을 넣어 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_40",
@@ -1113,7 +1357,11 @@
     "answerIndex": 1,
     "explanation": "삼각형의 무게중심은 세 꼭짓점의 좌표의 평균이므로 x = (0+6+2)/3 = 8/3, y = (0+0+4)/3 = 4/3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "삼각형의 무게중심 좌표 공식을 떠올려 보세요.",
+      "무게중심 = (세 꼭짓점 x좌표의 합/3, 세 꼭짓점 y좌표의 합/3). 주어진 세 점의 좌표를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_41",
@@ -1131,7 +1379,11 @@
     "answerIndex": 1,
     "explanation": "CA² = CB²인 점을 확인한다. C(2,1): CA²=(2+1)²+(1−2)²=9+1=10, CB²=(2−3)²+(1+2)²=1+9=10으로 같으므로 C(2,1)은 수직이등분선 위의 점이다.",
     "detailedExplanation": "수직이등분선 위의 점 C(a,b)는 CA=CB, 즉 CA²=CB²을 만족한다. (a+1)²+(b−2)²=(a−3)²+(b+2)². 전개하면 a²+2a+1+b²−4b+4 = a²−6a+9+b²+4b+4. 정리하면 2a+1−4b+4 = −6a+9+4b+4 → 8a−8b = 8 → a−b=1. 각 보기 확인: (1,3): 1−3=−2≠1. (2,1): 2−1=1 ✓. (0,0): 0≠1. (3,1): 3−1=2≠1.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "수직이등분선 위의 점은 두 점 A, B로부터 같은 거리에 있다는 성질을 떠올려 보세요.",
+      "C(a, b)에 대해 CA² = CB² 조건을 세워 a, b 사이의 관계식을 구한 뒤, 보기 좌표를 대입해 확인해 보세요."
+    ]
   },
   {
     "id": "gen_common_42",
@@ -1149,7 +1401,11 @@
     "answerIndex": 1,
     "explanation": "기울기 = (6−2)÷(3−1) = 4÷2 = 2",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점을 지나는 직선의 기울기 공식을 떠올려 보세요.",
+      "기울기 = (y₂−y₁)/(x₂−x₁). 두 점 A(1,2), B(3,6)의 좌표를 공식에 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_43",
@@ -1167,7 +1423,11 @@
     "answerIndex": 1,
     "explanation": "y = 0을 대입하면 0 = −2x + 7 → x = 7/2",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x절편은 직선이 x축과 만나는 점의 x좌표임을 떠올려 보세요.",
+      "y = 0을 직선 방정식에 대입한 뒤 x에 대해 풀어 보세요."
+    ]
   },
   {
     "id": "gen_common_44",
@@ -1185,7 +1445,11 @@
     "answerIndex": 1,
     "explanation": "y − 4 = 3(x − (−1)) → y = 3x + 3 + 4 = 3x + 7",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "기울기와 한 점이 주어졌을 때 직선의 방정식을 세우는 공식을 떠올려 보세요.",
+      "y − y₁ = m(x − x₁) 공식에 m=3, (x₁, y₁)=(−1, 4)를 대입해 y절편을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_45",
@@ -1203,7 +1467,11 @@
     "answerIndex": 0,
     "explanation": "x/3 + y/(−6) = 1 → 2x − y = 6 → 2x − y − 6 = 0",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x절편과 y절편을 이용한 직선의 방정식 형태를 떠올려 보세요.",
+      "절편형 x/a + y/b = 1에 x절편 a=3, y절편 b=−6을 대입하고 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_46",
@@ -1221,7 +1489,11 @@
     "answerIndex": 2,
     "explanation": "중심 (a, b), 반지름 r인 원의 방정식은 (x − a)² + (y − b)² = r²이므로 (x − 2)² + (y + 3)² = 25이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원의 표준방정식 (x−a)² + (y−b)² = r²을 떠올려 보세요.",
+      "중심 (2, −3)이면 (x−2)² + (y−(−3))² 꼴이 됩니다. 반지름 5를 r²으로 바꾸어 식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_common_47",
@@ -1239,7 +1511,11 @@
     "answerIndex": 1,
     "explanation": "x² + y² = r² 꼴에서 중심은 원점 (0, 0)이고 반지름은 √16 = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x² + y² = r² 꼴의 원에서 중심과 반지름을 어떻게 읽는지 떠올려 보세요.",
+      "x² + y² = r²에서 중심은 원점 (0, 0), 반지름은 r입니다. 주어진 식에서 r²을 먼저 확인해 r을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_48",
@@ -1257,7 +1533,11 @@
     "answerIndex": 2,
     "explanation": "완전제곱식으로 변환하면 (x − 2)² + (y + 3)² = 16이므로 반지름은 4이다.",
     "detailedExplanation": "x² − 4x + y² + 6y = 3에서 (x − 2)² − 4 + (y + 3)² − 9 = 3이므로 (x − 2)² + (y + 3)² = 16. 따라서 반지름 r = √16 = 4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "일반형 방정식을 완전제곱식으로 변환해 표준형으로 만드는 방법을 떠올려 보세요.",
+      "x² − 4x를 (x−2)² − 4로, y² + 6y를 (y+3)² − 9로 변환한 뒤 우변을 정리해 반지름 r을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_49",
@@ -1275,7 +1555,11 @@
     "answerIndex": 0,
     "explanation": "지름의 중점이 중심이므로 중심은 (3, 0)이고 반지름은 지름의 절반인 2이므로 (x − 3)² + y² = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "지름의 양 끝 점이 주어지면, 중심은 두 점의 중점이고 반지름은 지름의 절반임을 떠올려 보세요.",
+      "중심 = A와 B의 중점, 반지름 = 중심에서 A(또는 B)까지의 거리로 원의 방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_50",
@@ -1293,7 +1577,11 @@
     "answerIndex": 1,
     "explanation": "세 점을 지나는 원의 방정식 x² + y² + Dx + Ey + F = 0에 각 점을 대입해 풀면 중심 (2, 1), 반지름 √5를 얻으므로 넓이는 5π이다.",
     "detailedExplanation": "일반형 x² + y² + Dx + Ey + F = 0에 (0,0) 대입: F = 0. (4, 0) 대입: 16 + 4D + F = 0 → 4D = −16 → D = −4. (0, 2) 대입: 4 + 2E + F = 0 → 2E = −4 → E = −2. 따라서 x² + y² − 4x − 2y = 0 → (x − 2)² + (y − 1)² = 5. 반지름 r = √5, 넓이 = πr² = 5π.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "세 점을 지나는 원의 방정식을 구하려면 일반형 x² + y² + Dx + Ey + F = 0에 세 점을 각각 대입해 연립방정식을 세울 수 있습니다.",
+      "세 점 대입 후 D, E, F를 구한 뒤 표준형으로 변환하면 반지름 r이 나옵니다. 넓이는 πr²임을 기억하세요."
+    ]
   },
   {
     "id": "gen_common_51",
@@ -1311,7 +1599,11 @@
     "answerIndex": 2,
     "explanation": "원 x² + y² = r² 위의 점 (x₁, y₁)에서의 접선의 방정식은 x₁x + y₁y = r²이므로 1·x + 3·y = 10, 즉 x + 3y = 10이다. 따라서 a = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원 위의 점에서의 접선 방정식 공식을 떠올려 보세요. 원 x² + y² = r² 위의 점 (x₁, y₁)에서의 접선 공식이 있습니다.",
+      "접선의 방정식은 x₁·x + y₁·y = r²입니다. 점 (1, 3)과 r² = 10을 대입해 접선 방정식을 쓴 뒤 a의 값을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_52",
@@ -1329,7 +1621,11 @@
     "answerIndex": 0,
     "explanation": "x좌표에 3을 더하고, y좌표에 −1을 더하면 (2+3, −3+(−1)) = (5, −4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "평행이동의 개념을 떠올려 보세요. x축 방향으로 p, y축 방향으로 q만큼 이동하면 좌표가 어떻게 바뀌는지 생각해 보세요.",
+      "이동 후 x좌표 = 원래 x + p, y좌표 = 원래 y + q입니다. (2, −3)에 (p, q) = (3, −1)을 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_53",
@@ -1347,7 +1643,11 @@
     "answerIndex": 0,
     "explanation": "y축 방향으로 −3만큼 평행이동하면 y를 y+3으로 바꾸어 y+3 = 2x+1, 즉 y = 2x−2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y축 방향으로 평행이동할 때 방정식이 어떻게 바뀌는지 떠올려 보세요.",
+      "y축 방향으로 k만큼 이동하면 방정식의 y를 y−k로 바꿉니다. k=−3이면 y를 y+3으로 바꾸어 새 방정식을 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_54",
@@ -1365,7 +1665,11 @@
     "answerIndex": 0,
     "explanation": "평행이동 (2, −1)에 의해 x를 x−2, y를 y+1로 바꾸면 (x−2)² + (y+1)² = 9이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "도형의 평행이동 규칙을 떠올려 보세요. (p, q)만큼 이동하면 방정식에서 x를 x−p, y를 y−q로 바꿉니다.",
+      "이동량이 (2, −1)이므로 원래 식의 x를 x−2로, y를 y+1로 바꾸어 새 원의 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_common_55",
@@ -1383,7 +1687,11 @@
     "answerIndex": 1,
     "explanation": "y = x² − 4x + 3 = (x−2)² − 1이므로 꼭짓점이 (2, −1)인 포물선이다. 이를 y = x²(꼭짓점 (0,0))으로 옮기려면 m = −2, n = 1이므로 m + n = −1이다.",
     "detailedExplanation": "y = x² − 4x + 3을 완전제곱식으로 변형하면 y = (x−2)² − 1이다. 평행이동 (m, n)을 적용하면 y = (x−m−2)² − 1 + n이 되어야 y = x²과 같아지려면 −m−2 = 0, −1+n = 0이어야 하므로 m = −2, n = 1이다. 따라서 m + n = −2 + 1 = −1이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "주어진 이차함수를 완전제곱식으로 변환해 꼭짓점을 먼저 구해 보세요.",
+      "꼭짓점 (α, β)인 포물선을 y=x²(꼭짓점 (0,0))으로 옮기려면 m=−α, n=−β가 됩니다. 그 값으로 m+n을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_56",
@@ -1401,7 +1709,11 @@
     "answerIndex": 0,
     "explanation": "y = x에 대한 대칭이동은 x와 y를 바꾸는 것이므로 x = 3y − 2를 y에 대해 풀면 y = (1/3)x + (2/3)이다.",
     "detailedExplanation": "직선 y = x에 대한 대칭이동은 x와 y를 서로 바꾼다. 즉 y = 3x − 2에서 x, y를 교환하면 x = 3y − 2가 되고, 이를 y에 대해 정리하면 3y = x + 2이므로 y = (1/3)x + (2/3)이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "직선 y = x에 대한 대칭이동 규칙을 떠올려 보세요. x와 y의 역할이 서로 바뀝니다.",
+      "y = x에 대한 대칭이동은 방정식에서 x와 y를 서로 교환하는 것입니다. 교환 후 y에 대해 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_57",
@@ -1419,7 +1731,11 @@
     "answerIndex": 1,
     "explanation": "집합이 되려면 대상을 명확하게 구분할 수 있어야 한다. '1보다 크고 5보다 작은 자연수'는 2, 3, 4로 명확히 결정되므로 집합이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "집합이 되려면 어떤 대상이 집합에 속하는지 여부를 명확히 판별할 수 있어야 합니다(조건 명확성).",
+      "각 보기의 기준이 '주관적 판단'인지 '객관적·수학적 조건'인지 구별해 보세요. 숫자 범위로 원소를 딱 정할 수 있는 것을 찾으세요."
+    ]
   },
   {
     "id": "gen_common_58",
@@ -1437,7 +1753,11 @@
     "answerIndex": 2,
     "explanation": "원소 3은 집합 A에 속하므로 3 ∈ A가 성립한다. 6은 A에 없고, {1,2}는 원소가 아닌 부분집합이며, 0도 A에 없다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원소 기호 ∈은 '어떤 값이 집합의 원소로 직접 속한다'는 뜻이고, 부분집합 기호 ⊆와 구별해야 합니다.",
+      "A = {1, 2, 3, 4, 5}의 원소 목록을 보면서 각 보기의 값·집합이 집합의 원소로서 직접 들어 있는지 확인해 보세요."
+    ]
   },
   {
     "id": "gen_common_59",
@@ -1455,7 +1775,11 @@
     "answerIndex": 2,
     "explanation": "12의 양의 약수는 1, 2, 3, 4, 6, 12이므로 원소의 개수는 6개이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "12의 양의 약수를 구하려면, 1부터 12까지 중 12를 나누어 떨어지게 하는 수를 모두 찾으면 됩니다.",
+      "12 = 2² × 3을 소인수분해한 뒤, 약수의 개수 공식 (지수+1)의 곱을 적용해 원소의 개수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_60",
@@ -1473,7 +1797,11 @@
     "answerIndex": 1,
     "explanation": "A ∩ B는 두 집합의 공통 원소이므로 A와 B 모두에 속하는 2, 4, 6이 된다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "교집합 A ∩ B는 두 집합 모두에 공통으로 속하는 원소들의 집합입니다.",
+      "A = {1, 2, 3, 4, 6}과 B = {2, 4, 6, 8}의 원소를 하나씩 대조해 양쪽 모두에 있는 수를 골라내 보세요."
+    ]
   },
   {
     "id": "gen_common_61",
@@ -1491,7 +1819,11 @@
     "answerIndex": 1,
     "explanation": "Aᶜ = {2, 4, 6, 8}이고, Aᶜ ∩ B는 Aᶜ과 B의 공통 원소이므로 {6, 8}이다.",
     "detailedExplanation": "A = {1,3,5,7}이므로 Aᶜ = U - A = {2,4,6,8}이다. B = {3,6,7,8}과 Aᶜ의 공통 원소를 구하면 6과 8만 공통으로 속하므로 Aᶜ ∩ B = {6,8}이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "Aᶜ(여집합)은 전체집합 U에서 A의 원소를 제외한 집합입니다. 먼저 Aᶜ를 구한 뒤 B와의 교집합을 구하세요.",
+      "U = {1,2,3,4,5,6,7,8}에서 A = {1,3,5,7}을 빼서 Aᶜ를 구하고, 그 결과와 B = {3,6,7,8}의 공통 원소를 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_62",
@@ -1509,7 +1841,11 @@
     "answerIndex": 1,
     "explanation": "포함·배제의 원리에 의해 n(A ∪ B) = n(A) + n(B) - n(A ∩ B)이므로 13 = 9 + 7 - n(A ∩ B), 따라서 n(A ∩ B) = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포함·배제의 원리를 떠올리세요: n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+      "주어진 값 n(A) = 9, n(B) = 7, n(A ∪ B) = 13을 위 공식에 대입해 n(A ∩ B)를 풀어 보세요."
+    ]
   },
   {
     "id": "gen_common_63",
@@ -1527,7 +1863,11 @@
     "answerIndex": 2,
     "explanation": "명제는 참 또는 거짓을 명확히 판별할 수 있는 문장이다. '3은 홀수이다.'는 참으로 판별할 수 있으므로 명제이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "명제란 참 또는 거짓을 객관적으로 판별할 수 있는 문장입니다. 변수가 포함되거나 주관적인 표현은 명제가 아닙니다.",
+      "각 보기가 '반드시 참이거나 반드시 거짓'으로 확정되는지 살펴보세요. 특히 구체적인 수에 대한 서술인지 확인해 보세요."
+    ]
   },
   {
     "id": "gen_common_64",
@@ -1545,7 +1885,11 @@
     "answerIndex": 0,
     "explanation": "명제 'p → q'의 역은 가정과 결론을 서로 바꾼 'q → p', 즉 'q이면 p이다.'이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "명제 'p이면 q이다(p → q)'의 역·이·대우 중 역(逆)은 가정과 결론을 맞바꾼 것입니다.",
+      "'p이면 q'에서 p를 가정, q를 결론으로 놓았을 때, 역은 'q이면 p이다' 형태로 쓰면 됩니다."
+    ]
   },
   {
     "id": "gen_common_65",
@@ -1563,7 +1907,11 @@
     "answerIndex": 2,
     "explanation": "명제 'p → q'의 대우는 '~q → ~p'이다. 따라서 대우는 'x² ≠ 4이면 x ≠ 2이다.'이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "명제 'p → q'의 대우는 '~q → ~p'입니다. 즉 결론을 부정해 새로운 가정으로, 가정을 부정해 새로운 결론으로 삼습니다.",
+      "'x = 2 → x² = 4'에서 결론 x² = 4를 부정하면 x² ≠ 4, 가정 x = 2를 부정하면 x ≠ 2가 됩니다. 이 둘을 연결해 보세요."
+    ]
   },
   {
     "id": "gen_common_66",
@@ -1581,7 +1929,11 @@
     "answerIndex": 1,
     "explanation": "반례는 가정 p는 참이고 결론 q는 거짓인 원소이다. x = 2는 x ≤ 3(참)이지만 홀수가 아니므로(거짓) 반례이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "명제 'p이면 q이다'의 반례는 가정 p는 참이고 결론 q는 거짓인 원소를 찾는 것입니다.",
+      "p: x ≤ 3을 만족하는 원소를 U = {1,2,3,4,5}에서 먼저 추린 뒤, 그 중 q(홀수)가 거짓인 원소를 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_67",
@@ -1599,7 +1951,11 @@
     "answerIndex": 1,
     "explanation": "p가 q의 충분조건이면 'p → q'가 참, 즉 P ⊆ Q이다. 필요조건이 아니면 'q → p'는 거짓이므로 Q ⊄ P, 따라서 P ⊂ Q (P ≠ Q)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "p가 q이기 위한 충분조건이라는 것은 'p → q'가 참임을 의미하고, 진리집합으로 표현하면 P ⊆ Q입니다.",
+      "충분조건이지만 필요조건이 아니라면 'q → p'는 거짓, 즉 Q가 P를 포함하지 않습니다. P와 Q의 포함 관계를 부등호로 나타내 보세요."
+    ]
   },
   {
     "id": "gen_common_68",
@@ -1617,7 +1973,11 @@
     "answerIndex": 1,
     "explanation": "p의 진리집합은 x² − 5x + 6 = (x−2)(x−3) ≤ 0에서 P = [2, 3]이고, q의 진리집합은 Q = (−∞, a]이다. p가 q의 충분조건이 되려면 P ⊆ Q이어야 하므로 3 ≤ a, 정수 a의 최솟값은 3이다.",
     "detailedExplanation": "x² − 5x + 6 ≤ 0을 인수분해하면 (x−2)(x−3) ≤ 0이므로 P = {x | 2 ≤ x ≤ 3}이다. q: x − a ≤ 0에서 x ≤ a이므로 Q = {x | x ≤ a}이다. p가 q이기 위한 충분조건이 되려면 P ⊆ Q이어야 한다. P의 최댓값이 3이므로 a ≥ 3이어야 하고, 정수 a의 최솟값은 3이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "p: x² − 5x + 6 ≤ 0을 인수분해해 진리집합 P를 먼저 구하고, q: x ≤ a의 진리집합 Q = (−∞, a]를 설정하세요.",
+      "p가 q의 충분조건이 되려면 P ⊆ Q이어야 합니다. P의 원소 중 가장 큰 값이 a 이하가 되도록 부등식을 세워 정수 a의 최솟값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_69",
@@ -1635,7 +1995,11 @@
     "answerIndex": 2,
     "explanation": "이차식 x² + ax + 1의 최솟값이 양수이려면 판별식 D = a² − 4 < 0이어야 한다. 이를 풀면 −2 < a < 2이고, 정수 a는 −1, 0, 1로 3개이다.",
     "detailedExplanation": "모든 실수 x에 대해 x² + ax + 1 > 0이 성립하려면 이 이차함수의 최솟값이 0보다 커야 한다. 최고차항의 계수가 양수(1 > 0)이므로 판별식 D < 0이어야 한다. D = a² − 4·1·1 = a² − 4 < 0에서 a² < 4, 즉 −2 < a < 2이다. 이를 만족하는 정수 a는 −1, 0, 1로 총 3개이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "이차식 x² + ax + 1이 모든 실수 x에 대해 양수이려면, 이차방정식 x² + ax + 1 = 0의 판별식 D가 0보다 작아야 합니다.",
+      "D = a² − 4 < 0 부등식을 풀어 a의 범위를 구한 뒤, 그 범위 안에 있는 정수를 모두 나열해 개수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_70",
@@ -1653,7 +2017,11 @@
     "answerIndex": 0,
     "explanation": "함수는 정의역의 모든 원소가 공역의 원소에 하나씩 대응되어야 하므로, X의 모든 원소가 Y의 원소 하나에 대응되어야 한다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수가 되려면 정의역의 각 원소가 공역 원소에 '빠짐없이, 하나씩' 대응되어야 한다는 정의를 떠올려 보세요.",
+      "X = {1, 2, 3}의 원소 1, 2, 3 각각이 Y의 원소에 정확히 하나씩 대응되는지 확인하는 것이 핵심입니다."
+    ]
   },
   {
     "id": "gen_common_71",
@@ -1671,7 +2039,11 @@
     "answerIndex": 2,
     "explanation": "치역은 정의역의 원소를 함수 f에 넣었을 때 나오는 함숫값 전체의 집합 {f(x) | x ∈ X}이며, 치역은 공역의 부분집합이지만 공역과 같지 않을 수 있다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정의역·공역·치역 세 개념의 차이를 구분해 보세요. 특히 치역은 공역 전체가 아닐 수 있다는 점에 주목하세요.",
+      "치역은 f(x)가 실제로 취하는 값들의 집합, 즉 {f(x) | x ∈ X}임을 기억하고 각 보기를 점검해 보세요."
+    ]
   },
   {
     "id": "gen_common_72",
@@ -1689,7 +2061,11 @@
     "answerIndex": 2,
     "explanation": "f(3) = 3×3 − 4 = 9 − 4 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "일차함수 f(x) = 3x − 4에서 x에 주어진 수를 대입해 계산하는 방법을 떠올려 보세요.",
+      "x = 3을 대입하면 3 × 3 − 4를 계산하면 됩니다."
+    ]
   },
   {
     "id": "gen_common_73",
@@ -1707,7 +2083,11 @@
     "answerIndex": 1,
     "explanation": "X의 모든 원소가 Y의 원소에 대응되므로 함수이지만, f(2) = f(3) = 4로 서로 다른 두 원소가 같은 값에 대응되므로 단사함수는 아니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "대응이 함수인지 확인하려면 정의역의 모든 원소가 공역에 대응되는지를 먼저 살펴보세요. 그 다음 단사함수(일대일함수) 여부는 '서로 다른 정의역 원소가 서로 다른 함숫값을 갖는지'로 판단합니다.",
+      "f(2) = 4이고 f(3) = 4이므로 서로 다른 두 원소가 같은 값에 대응되는지 확인해 보세요. 이 경우 단사함수 조건이 만족되는지 판단할 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_74",
@@ -1725,7 +2105,11 @@
     "answerIndex": 1,
     "explanation": "a + b = 5, 3a + b = 11을 연립하면 a = 3, b = 2이므로 f(5) = 3×5 + 2 = 17이다.",
     "detailedExplanation": "① a + b = 5, ② 3a + b = 11. ②−①: 2a = 6이므로 a = 3, b = 2. 따라서 f(5) = 15 + 2 = 17.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x) = ax + b에서 a, b를 모르므로 주어진 두 조건 f(1) = 5, f(3) = 11을 이용해 연립방정식을 세워 보세요.",
+      "a + b = 5와 3a + b = 11을 연립하면 a와 b를 구할 수 있고, 그 값으로 f(5)를 계산할 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_75",
@@ -1743,7 +2127,11 @@
     "answerIndex": 2,
     "explanation": "정의역의 각 원소에 공역의 원소를 자유롭게 대응시키므로 3×3×3 = 3³ = 27가지이다.",
     "detailedExplanation": "원소 1, 2, 3 각각에 대해 공역 {1, 2, 3}에서 임의의 원소를 선택할 수 있으므로 3×3×3 = 27이다. 단사함수(일대일함수)의 수인 3! = 6과 혼동하지 않도록 주의한다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "함수에서 정의역의 각 원소는 공역의 원소에 '하나씩 독립적으로' 대응됩니다. 곱의 법칙을 활용해 보세요.",
+      "원소 1, 2, 3 각각에 대해 공역 {1, 2, 3}의 3가지 선택이 독립적으로 가능하므로, 총 경우의 수는 3을 세 번 곱한 값입니다."
+    ]
   },
   {
     "id": "gen_common_76",
@@ -1761,7 +2149,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = (x−2)² + (k−4)이므로 최솟값은 k−4이고, 치역의 최솟값이 −1이 되려면 k−4 = −1, 즉 k = 3이다.",
     "detailedExplanation": "f(x) = x² − 4x + k = (x−2)² − 4 + k. x = 2일 때 최솟값 k − 4를 가진다. 치역이 {y | y ≥ −1}이므로 k − 4 = −1, k = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차함수를 완전제곱식으로 변환하면 최솟값이 어떻게 결정되는지 떠올려 보세요. 치역의 최솟값이 최솟값과 같아야 합니다.",
+      "f(x) = (x − 2)² + (k − 4) 로 변환하면 최솟값이 k − 4임을 알 수 있습니다. 이 값이 −1이 되도록 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_77",
@@ -1779,7 +2171,11 @@
     "answerIndex": 1,
     "explanation": "y = 1/(x−a) + b의 점근선은 x = a, y = b이므로 x = 2, y = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "유리함수 y = 1/(x − a) + b의 점근선은 분모를 0으로 만드는 x값과 b값으로 결정된다는 개념을 떠올려 보세요.",
+      "y = 1/(x − 2) + 3에서 분모 x − 2 = 0이 되는 x와, x → ∞일 때 y가 수렴하는 값을 각각 찾아보세요."
+    ]
   },
   {
     "id": "gen_common_78",
@@ -1797,7 +2193,11 @@
     "answerIndex": 2,
     "explanation": "근호 안의 식이 0 이상이어야 하므로 x + 4 ≥ 0, 즉 x ≥ −4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "무리함수에서 근호(√) 안의 식은 0 이상이어야 한다는 정의역 조건을 떠올려 보세요.",
+      "√(x + 4)가 정의되려면 x + 4 ≥ 0이어야 하므로, 이 부등식을 x에 대해 풀어 보세요."
+    ]
   },
   {
     "id": "gen_common_79",
@@ -1815,7 +2215,11 @@
     "answerIndex": 1,
     "explanation": "순열 P(5,2) = 5×4 = 20이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "순서가 중요한 뽑기이므로 순열(nPr) 공식을 떠올려 보세요.",
+      "5명 중 첫 번째 자리에 올 수 있는 경우, 두 번째 자리에 올 수 있는 경우를 각각 세어 곱하는 식을 세워 보세요: 5 × 4 = ?"
+    ]
   },
   {
     "id": "gen_common_80",
@@ -1833,7 +2237,11 @@
     "answerIndex": 1,
     "explanation": "조합 C(6,4) = C(6,2) = (6×5)÷(2×1) = 15이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "순서를 고려하지 않는 뽑기이므로 조합(nCr) 공식을 떠올려 보세요.",
+      "C(6,4) = C(6,2)로 바꾸면 계산이 편리해집니다. (6 × 5) ÷ (2 × 1)을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_81",
@@ -1851,7 +2259,11 @@
     "answerIndex": 1,
     "explanation": "5명의 순열이므로 5! = 5×4×3×2×1 = 120이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "5명을 일렬로 세우는 것은 5명 전체를 순서 있게 배열하는 순열 문제입니다. n!을 떠올려 보세요.",
+      "첫 번째 자리 5가지, 두 번째 자리 4가지, …처럼 자리마다 줄어드는 선택지를 곱하는 식 5 × 4 × 3 × 2 × 1을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_82",
@@ -1869,7 +2281,11 @@
     "answerIndex": 2,
     "explanation": "남학생 3명 중 1명: C(3,1)=3, 여학생 3명 중 1명: C(3,1)=3이므로 3×3=9이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "남학생 중에서 뽑는 경우와 여학생 중에서 뽑는 경우가 독립적이므로, 두 경우의 수를 각각 구한 뒤 곱의 법칙을 적용해 보세요.",
+      "남학생 3명 중 1명을 뽑는 경우의 수 C(3,1)과 여학생 3명 중 1명을 뽑는 경우의 수 C(3,1)을 구해 곱하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_83",
@@ -1887,7 +2303,11 @@
     "answerIndex": 0,
     "explanation": "9개의 숫자에서 3개를 순서 있게 뽑는 순열이므로 P(9,3) = 9×8×7 = 504이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "서로 다른 숫자로 세 자리 수를 만드는 것은, 9개 중 3개를 순서 있게 뽑는 순열 문제임을 떠올려 보세요.",
+      "백의 자리, 십의 자리, 일의 자리 순서로 고를 수 있는 숫자의 수를 각각 세어 P(9,3) = 9 × 8 × 7 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_84",
@@ -1905,7 +2325,11 @@
     "answerIndex": 0,
     "explanation": "A, B를 먼저 뽑고 나머지 6명 중 2명을 뽑으면 되므로 C(6,2) = 15이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "A와 B가 반드시 포함되어야 하므로, 두 사람을 먼저 확정한 뒤 나머지 자리만 채우는 방식으로 생각해 보세요.",
+      "A, B를 제외한 나머지 6명 중에서 2명을 추가로 뽑으면 됩니다. C(6,2)를 계산하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_85",
@@ -1923,7 +2347,11 @@
     "answerIndex": 1,
     "explanation": "여학생 3명을 하나의 묶음으로 보면 5개의 대상이 일렬로 서는 경우의 수 5!=120에, 여학생끼리 자리를 바꾸는 경우의 수 3!=6을 곱하면 120×6=720이다.",
     "detailedExplanation": "여학생 3명을 한 묶음으로 취급하면 (묶음+남학생 4명)=5개의 대상이 남는다. 이 5개를 일렬로 세우는 경우의 수는 5!=120이다. 묶음 내에서 여학생 3명이 서로 자리를 바꾸는 경우의 수는 3!=6이다. 따라서 총 경우의 수는 120×6=720이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "특정 조건이 있는 배열 문제는 조건에 해당하는 대상을 하나의 묶음으로 묶어 생각하는 '묶음 전략'이 유용합니다.",
+      "여학생 3명을 한 묶음으로 보면 총 5개의 대상이 일렬로 서게 됩니다. 5개의 배열 수와 묶음 내 여학생끼리의 배열 수를 각각 구해 곱하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_16",
@@ -1941,7 +2369,11 @@
     "answerIndex": 1,
     "explanation": "x³+y³+x²y+xy² = (x²+y²)(x+y) − xy(x+y) + xy(x+y) = (x+y)(x²+xy+y²) + xy(x+y)를 정리하면 (x+y){(x+y)²−xy+xy} = (x+y)³을 이용한다.",
     "detailedExplanation": "x³+y³+x²y+xy²\n= (x³+x²y) + (xy²+y³)\n= x²(x+y) + y²(x+y)\n= (x²+y²)(x+y)\n\nx²+y² = (x+y)²−2xy = 9−2 = 7\n(x+y) = 3\n\n따라서 (x²+y²)(x+y) = 7×3 = 21\n\n검산: x+y=3, xy=1이므로 x,y는 t²−3t+1=0의 두 근\nt = (3±√5)/2\nx³+y³ = (x+y)³−3xy(x+y) = 27−9 = 18\nx²y+xy² = xy(x+y) = 1×3 = 3\n합 = 18+3 = 21 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x³ + y³ + x²y + xy²을 인수분해 방식으로 묶어보면 (x² + y²)을 공통으로 뽑아낼 수 있습니다.",
+      "x² + y² = (x + y)² − 2xy임을 이용해 값을 먼저 구하고, (x² + y²)(x + y) 형태로 식을 변환한 뒤 x + y = 3, xy = 1을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_86",
@@ -1959,7 +2391,11 @@
     "answerIndex": 0,
     "explanation": "a−b+c−d+e는 주어진 등식에 x=−1을 대입한 값이므로 (−1+1)⁴ = 0이다.",
     "detailedExplanation": "항등식이므로 x=−1을 대입하면:\n좌변: (−1+1)⁴ = 0⁴ = 0\n우변: a(−1)⁴+b(−1)³+c(−1)²+d(−1)+e = a−b+c−d+e\n\n따라서 a−b+c−d+e = 0\n\n(참고) x=1 대입 시: 2⁴=16 = a+b+c+d+e",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "항등식은 모든 x에 대해 성립하므로 특정 x 값을 자유롭게 대입해 계수의 합 관계를 구할 수 있습니다.",
+      "a − b + c − d + e 형태는 x = −1을 대입했을 때 우변의 값과 같습니다. (−1 + 1)⁴를 직접 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_87",
@@ -1977,7 +2413,11 @@
     "answerIndex": 0,
     "explanation": "a+b+c=0이므로 a+b=−c, b+c=−a, c+a=−b이고, p+q+r=−c+(−a)+(−b)=0이면 p³+q³+r³=3pqr이므로 주어진 식은 3pqr−3pqr=0이다.",
     "detailedExplanation": "a+b+c=0이므로:\na+b = −c, b+c = −a, c+a = −b\n\np=a+b=−c, q=b+c=−a, r=c+a=−b로 놓으면\np+q+r = (−c)+(−a)+(−b) = −(a+b+c) = 0\n\np+q+r=0이면 p³+q³+r³ = 3pqr (항등식)\n\n(a+b)³+(b+c)³+(c+a)³ = 3(a+b)(b+c)(c+a)\n\n따라서 주어진 식\n= (a+b)³+(b+c)³+(c+a)³ − 3(a+b)(b+c)(c+a)\n= 3(a+b)(b+c)(c+a) − 3(a+b)(b+c)(c+a)\n= 0 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a + b + c = 0이라는 조건이 주어지면, 각 괄호 합 a+b, b+c, c+a를 −c, −a, −b로 바꿀 수 있습니다.",
+      "p = a+b, q = b+c, r = c+a로 놓으면 p + q + r = 0이 됩니다. p + q + r = 0일 때 p³ + q³ + r³ = 3pqr 항등식을 이용해 주어진 식을 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_88",
@@ -1995,7 +2435,11 @@
     "answerIndex": 3,
     "explanation": "f(x)=(x−1)g(x)+2x+3에 x=1을 대입해 g(1)을 구하고, g(−1)=4 조건과 g(x)=x²+cx+d를 연립해 c, d를 구한 뒤, f(x)의 계수를 비교해 a, b를 결정한다.",
     "detailedExplanation": "f(x) = (x−1)g(x) + 2x + 3에 x=1 대입:\nf(1) = 0·g(1) + 5 = 5\nf(1) = 1+a+b = 5 → a+b = 4 ... ①\n\ng(x)를 (x+1)로 나눈 나머지: g(−1) = 4\ng(−1) = 1−c+d = 4 → −c+d = 3 ... ②\n\nf(x) = (x−1)g(x)+2x+3이므로 f(x)의 차수: 3차, (x−1)g(x)의 차수: 3차 ✓\n\nf(x) = (x−1)(x²+cx+d)+2x+3\n= x³+cx²+dx−x²−cx−d+2x+3\n= x³+(c−1)x²+(d−c+2)x+(−d+3)\n\nf(x) = x³+ax+b이므로 x²항 계수:\nc−1 = 0 → c = 1 ... ③\n\nx항 계수: d−c+2 = a → d−1+2 = a → d+1 = a ... ④\n상수항: −d+3 = b ... ⑤\n\n②에서 −c+d=3 → −1+d=3 → d=4\n④에서 a=d+1=5\n⑤에서 b=−d+3=−1\n\n검산: a+b = 5+(−1) = 4 ✓ (①과 일치)\n\na+b+c+d = 5+(−1)+1+4 = 9\n\n재검산:\nf(x) = x³+5x−1\ng(x) = x²+x+4\n(x−1)(x²+x+4)+2x+3\n= x³+x²+4x−x²−x−4+2x+3\n= x³+5x−1 ✓\ng(−1) = 1−1+4 = 4 ✓\n\na+b+c+d = 5+(−1)+1+4 = 9",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "나머지정리를 적용해 f(x) = (x−1)g(x) + 2x + 3에 특정 값을 대입하면 g(1)과 연결되는 조건을 얻을 수 있습니다.",
+      "x = 1을 대입해 f(1)을 구하고, g(−1) = 4 조건과 g(x) = x² + cx + d를 연립해 c, d를 결정한 뒤 f(x)의 계수를 비교해 a, b를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_89",
@@ -2013,7 +2457,11 @@
     "answerIndex": 2,
     "explanation": "f(1)=a+b=3, f(−2)=−2a+b=−3을 연립하면 a=2, b=1이므로 a−b=1.",
     "detailedExplanation": "나머지 ax+b에 대해 인수정리를 적용한다.\nf(1)=a+b=3 … ①\nf(−2)=−2a+b=−3 … ②\n①−②: 3a=6, a=2\n①에 대입: b=3−2=1\na−b=2−1=1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "나머지 ax + b를 구하려면 나머지정리를 두 번 적용해 f(1)과 f(−2) 값을 이용한 연립방정식을 세워야 합니다.",
+      "f(1) = a + b = 3, f(−2) = −2a + b = −3 두 식을 연립해 a와 b를 구하고, a − b를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_90",
@@ -2031,7 +2479,11 @@
     "answerIndex": 1,
     "explanation": "f(1)=2이므로 {f(1)}²=4=a+b, f(−1)=4이므로 {f(−1)}²=16=−a+b. 연립하면 b=10, a=−6이고 b−a=16.",
     "detailedExplanation": "{f(x)}²을 (x−1)(x+1)로 나눈 나머지를 ax+b로 놓는다.\nx=1 대입: {f(1)}²=4=a+b … ①\nx=−1 대입: {f(−1)}²=16=−a+b … ②\n①+②: 2b=20, b=10\n①: a=4−10=−6\nb−a=10−(−6)=16.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "{f(x)}²을 x² − 1로 나눈 나머지도 나머지정리로 접근할 수 있습니다. x = 1과 x = −1을 각각 대입해 나머지를 확인해 보세요.",
+      "나머지를 ax + b로 놓고 x = 1 대입 시 {f(1)}² = a + b, x = −1 대입 시 {f(−1)}² = −a + b 두 방정식을 연립해 b − a를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_91",
@@ -2049,7 +2501,11 @@
     "answerIndex": 0,
     "explanation": "f(0)=3(0)+2=2, g(0)=2(0)−1=−1이므로 f(0)g(0)=−2.",
     "detailedExplanation": "f(x)를 x로 나눈 나머지는 f(0), g(x)를 x로 나눈 나머지는 g(0)이다.\nf(x)=Q₁(x)·x(x+1)+3x+2이므로 f(0)=2\ng(x)=Q₂(x)·x(x+1)+2x−1이므로 g(0)=−1\nf(x)g(x)를 x로 나눈 나머지 = f(0)g(0) = 2×(−1) = −2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x)g(x)를 x로 나눈 나머지는 나머지정리로 f(0)·g(0)과 같습니다.",
+      "f(x)를 x(x+1)로 나눈 나머지가 3x + 2이므로 x = 0을 대입하면 f(0)을 바로 구할 수 있습니다. 같은 방법으로 g(0)도 구해 두 값의 곱을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_92",
@@ -2067,7 +2523,11 @@
     "answerIndex": 2,
     "explanation": "f(−1)=0이므로 −a+b=0, f(1)=4이므로 a+b=4. 연립하면 a=2, b=2이고 2a+b=6.",
     "detailedExplanation": "f(x)=(x+1)²·Q(x)이므로 f(−1)=0.\nf(x)를 x²−1로 나눈 나머지 ax+b에 대해:\nf(−1)=−a+b=0 … ①\nf(1)=a+b=4 … ②\n①+②: 2b=4, b=2\n②: a=2\n2a+b=4+2=6.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x)가 (x+1)²으로 나누어 떨어지면 f(−1) = 0입니다. 이 조건과 f(1) = 4를 나머지 ax + b에 적용해 보세요.",
+      "나머지 ax + b에 x = −1과 x = 1을 각각 대입한 −a + b = 0과 a + b = 4 두 방정식을 연립해 a, b를 구하고, 2a + b를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_93",
@@ -2085,7 +2545,11 @@
     "answerIndex": 2,
     "explanation": "f(x)=(x−1)²(x−a)로 놓으면 f(−2)=9(−2−a)=−27에서 a=1, 즉 f(x)=(x−1)³이므로 f(3)=8.",
     "detailedExplanation": "최고차항 계수가 1이고 (x−1)²으로 나누어 떨어지는 삼차다항식이므로 f(x)=(x−1)²(x−a)로 놓는다.\nf(−2)=(−2−1)²(−2−a)=9(−2−a)=−27\n→ −2−a=−3, a=1\nf(x)=(x−1)²(x−1)=(x−1)³\nf(3)=(3−1)³=2³=8.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "최고차항의 계수가 1인 삼차다항식이 (x−1)²으로 나누어 떨어지면 f(x) = (x−1)²(x − k) 꼴로 쓸 수 있습니다.",
+      "f(x) = (x−1)²(x − k)로 놓고 f(−2) = −27 조건을 대입해 k를 구한 뒤, f(x)를 x − 3으로 나눈 나머지, 즉 f(3)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_94",
@@ -2103,7 +2567,11 @@
     "answerIndex": 1,
     "explanation": "f(2)=4+2a+b=3에서 2a+b=−1, f(−1)=−5−a+b=−6에서 −a+b=−1. 연립하면 a=0, b=−1이므로 a²+b²=1.",
     "detailedExplanation": "f(2)=2(8)−3(4)+2a+b=16−12+2a+b=4+2a+b=3\n→ 2a+b=−1 … ①\nf(−1)=2(−1)−3(1)+(a)(−1)+b=−2−3−a+b=−5−a+b=−6\n→ −a+b=−1 … ②\n①−②: 3a=0, a=0\n②: b=−1\na²+b²=0+1=1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "나머지정리로 f(2)와 f(−1)의 값을 각각 조건으로 삼아 a, b에 관한 연립방정식을 세워 보세요.",
+      "f(2) = 4 + 2a + b = 3에서 2a + b = −1, f(−1) = −5 − a + b = −6에서 −a + b = −1 두 식을 연립해 a, b를 구하고 a² + b²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_95",
@@ -2121,7 +2589,11 @@
     "answerIndex": 2,
     "explanation": "r(x)=ax²+bx+c에서 r(1)=3, r'(1)=2, r(2)=7 조건으로 연립하면 a=2, b=−2, c=3이므로 a+c=5.",
     "detailedExplanation": "f(x)=(x−1)²(x−2)Q(x)+ax²+bx+c로 놓는다.\n조건 ①: f(x)를 (x−1)²으로 나눈 나머지가 2x+1이므로 r(1)=a+b+c=3\n조건 ②: f(x)−(2x+1)이 (x−1)²의 배수 ↔ r(x)−(2x+1)이 (x−1)²의 배수 ↔ r'(1)=2a+b=2\n조건 ③: f(2)=r(2)=4a+2b+c=7\n③−①: 3a+b=4 … ④\n④−②: a=2\n②: b=2−4=−2\n①: c=3−2+2=3\na+c=2+3=5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x)를 (x−1)²으로 나눈 나머지가 2x + 1이라는 조건은 r(1) = 3뿐 아니라 r'(1) = 2 (나머지의 미분값 조건)도 포함합니다.",
+      "나머지 ax² + bx + c에 대해 r(1) = a + b + c = 3, 2a + b = 2 (x = 1에서 미분계수 조건), r(2) = 4a + 2b + c = 7 세 방정식을 연립해 a, b, c를 구하고 a + c를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_96",
@@ -2139,7 +2611,11 @@
     "answerIndex": 1,
     "explanation": "f(1)=−1, f(−3)=−9이고 f(1)=f(5)=−1. f(−3)=−3a+b=−9, f(5)=5a+b=−1을 연립하면 a=1, b=−6이므로 a+b=−5.",
     "detailedExplanation": "f(x)를 (x−1)(x+3)으로 나눈 나머지가 2x−3이므로:\nf(1)=2(1)−3=−1, f(−3)=2(−3)−3=−9\n조건 f(1)=f(5)에서 f(5)=−1.\nf(x)를 (x+3)(x−5)로 나눈 나머지 ax+b에 대해:\nf(−3)=−3a+b=−9 … ①\nf(5)=5a+b=−1 … ②\n②−①: 8a=8, a=1\n①: b=−9+3=−6\na+b=1+(−6)=−5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x)를 (x−1)(x+3)으로 나눈 나머지가 2x − 3이므로 나머지정리로 f(1)과 f(−3)을 바로 구할 수 있습니다.",
+      "f(1)과 f(5)가 같다는 조건을 이용해 f(5)의 값을 확인한 뒤, (x+3)(x−5)로 나눈 나머지 ax + b에 대해 f(−3)과 f(5)의 값으로 연립방정식을 세워 a + b를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_97",
@@ -2157,7 +2633,11 @@
     "answerIndex": 1,
     "explanation": "x = 1을 대입하면 0이므로 (x−1)이 인수이고, 조립제법으로 나누면 x³ + 3x² − 4 = (x−1)(x² + 4x + 4) = (x−1)(x+2)²이다. 따라서 a=1, b=2이고 a+b=3.",
     "detailedExplanation": "① f(1) = 1 + 3 − 4 = 0이므로 (x−1)은 인수\n② 조립제법: x³ + 3x² + 0x − 4 ÷ (x−1)\n   계수: 1 | 3 | 0 | −4\n        1 | 4 | 4\n   →  1 | 4 | 4 | 0\n③ 몫: x² + 4x + 4 = (x+2)²\n④ x³ + 3x² − 4 = (x−1)(x+2)²\n⑤ a=1, b=2 → a+b=3",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼차다항식의 인수분해는 먼저 유리근을 찾아 일차 인수를 하나 뽑는 것에서 시작합니다.",
+      "x = 1을 대입해 f(1)이 0인지 확인하세요. (x − 1)이 인수라면 조립제법으로 나눈 뒤 나오는 이차식을 완전제곱식으로 인수분해해 a + b를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_98",
@@ -2175,7 +2655,11 @@
     "answerIndex": 1,
     "explanation": "2(a²+b²+c²−ab−bc−ca) = (a−b)²+(b−c)²+(c−a)²이므로, a²+b²+c²−ab−bc−ca = ½{(a−b)²+(b−c)²+(c−a)²}이다.",
     "detailedExplanation": "① 2배를 취해 전개:\n   2(a²+b²+c²−ab−bc−ca)\n   = 2a²+2b²+2c²−2ab−2bc−2ca\n② 재배열:\n   = (a²−2ab+b²) + (b²−2bc+c²) + (c²−2ca+a²)\n   = (a−b)² + (b−c)² + (c−a)²\n③ 양변을 2로 나누면:\n   a²+b²+c²−ab−bc−ca = ½{(a−b)²+(b−c)²+(c−a)²}",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "a² + b² + c² − ab − bc − ca에 2를 곱하면 각각 차의 완전제곱 형태로 묶인다는 아이디어를 떠올려 보세요.",
+      "2(a² + b² + c² − ab − bc − ca)를 전개하면 (a−b)² + (b−c)² + (c−a)²이 됩니다. 양변을 2로 나눠 원래 식의 인수분해 결과를 확인해 보세요."
+    ]
   },
   {
     "id": "gen_common_99",
@@ -2193,7 +2677,11 @@
     "answerIndex": 0,
     "explanation": "x⁴ + x² + 1 = (x⁴ + 2x² + 1) − x² = (x²+1)² − x² = (x²+x+1)(x²−x+1)로 인수분해된다.",
     "detailedExplanation": "① x⁴ + x² + 1에 x²을 더하고 빼기:\n   = x⁴ + 2x² + 1 − x²\n   = (x²+1)² − x²\n② 차의 제곱 인수분해: A²−B² = (A+B)(A−B)\n   A = x²+1, B = x\n   = (x²+1+x)(x²+1−x)\n   = (x²+x+1)(x²−x+1)\n③ 검산: (x²+x+1)(x²−x+1) 전개\n   = x⁴−x³+x²+x³−x²+x+x²−x+1\n   = x⁴+x²+1 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x⁴ + x² + 1이 바로 인수분해되지 않으면, x²항을 조작해 완전제곱 뺄셈 A² − B² 형태를 만드는 방법을 생각해 보세요.",
+      "x⁴ + x² + 1 = x⁴ + 2x² + 1 − x² = (x² + 1)² − x²으로 변형한 뒤, 합·차 공식 A² − B² = (A + B)(A − B)에 A = x² + 1, B = x를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_100",
@@ -2211,7 +2699,11 @@
     "answerIndex": 2,
     "explanation": "f(3)=54−27−33+6=0이므로 (x−3)이 인수이고, 조립제법 후 2x²+3x−2=(2x−1)(x+2)로 분해되어 세 개의 일차 인수를 가진다.",
     "detailedExplanation": "① f(3)=2(27)−3(9)−11(3)+6=54−27−33+6=0 → (x−3)이 인수\n② 조립제법:\n   2 | −3 | −11 | 6  (÷(x−3))\n      6 |   9 | −6\n   2 |  3 |  −2 | 0\n③ 몫: 2x²+3x−2\n④ 2x²+3x−2=(2x−1)(x+2)\n⑤ 전체: 2x³−3x²−11x+6=(x−3)(2x−1)(x+2)\n⑥ 일차 인수의 개수: (x−3), (2x−1), (x+2) → 3개",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "삼차다항식 2x³ − 3x² − 11x + 6의 인수분해는 먼저 f(k) = 0이 되는 정수 k를 찾는 데서 시작합니다.",
+      "x = 3을 대입해 f(3)을 확인하고, (x − 3)이 인수라면 조립제법으로 이차식을 구한 뒤 다시 인수분해해 일차 인수가 총 몇 개인지 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_101",
@@ -2229,7 +2721,11 @@
     "answerIndex": 0,
     "explanation": "x² + y² + 4z² + 2xy − 4yz − 4xz = (x+y)² − 4z(x+y) + 4z² = ((x+y) − 2z)² = (x+y−2z)²이다.",
     "detailedExplanation": "① x와 y를 묶어서 처리:\n   x² + 2xy + y² = (x+y)²\n② 나머지 항 정리:\n   x² + y² + 4z² + 2xy − 4yz − 4xz\n   = (x+y)² + 4z² − 4z(y+x)\n   = (x+y)² − 4z(x+y) + 4z²\n③ A = x+y, B = 2z로 놓으면:\n   A² − 2AB + B² = (A−B)² = (x+y−2z)²\n④ 검산: (x+y−2z)² 전개\n   = x²+y²+4z²+2xy−4yz−4xz ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "여러 변수가 섞인 다항식은 특정 변수끼리 묶어 공통인수를 찾거나, 완전제곱식 형태를 만들어 인수분해합니다.",
+      "x² + 2xy + y² = (x + y)²임을 이용해 x² + y² + 4z² + 2xy − 4yz − 4xz를 (x + y)²과 나머지 항으로 분리한 뒤, (x + y) − 2z를 하나의 단위로 묶어 완전제곱식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_common_102",
@@ -2247,7 +2743,11 @@
     "answerIndex": 3,
     "explanation": "(2+i)² = 4 + 4i + i² = 3 + 4i이므로, z = (3 + 4i) − (1 − 3i) = 2 + 7i. 허수부는 7이다.",
     "detailedExplanation": "1단계: (2+i)² = 4 + 4i + i² = 4 + 4i − 1 = 3 + 4i\n2단계: z = (3 + 4i) − (1 − 3i) = (3−1) + (4+3)i = 2 + 7i\n3단계: 허수부 = 7",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "복소수 제곱을 전개할 때 i²=−1 을 적극 활용하세요. (2+i)² 부터 먼저 계산해 보세요.",
+      "(2+i)²=4+4i+i²=3+4i 로 정리한 뒤, z=(3+4i)−(1−3i) 를 실수부끼리, 허수부 계수끼리 정리해 보세요."
+    ]
   },
   {
     "id": "gen_common_103",
@@ -2265,7 +2765,11 @@
     "answerIndex": 0,
     "explanation": "z² + z̄² = (z + z̄)² − 2z·z̄ = 36 − 26 = 10.",
     "detailedExplanation": "1단계: z = a + bi로 놓으면 z + z̄ = 2a = 6 → a = 3, z·z̄ = a² + b² = 13 → b² = 4.\n2단계: z² + z̄² = (z + z̄)² − 2z·z̄ 공식 이용.\n3단계: 6² − 2×13 = 36 − 26 = 10.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "z²+z̄² 은 (z+z̄)²−2z·z̄ 로 변환할 수 있어요. 켤레복소수의 성질을 활용하세요.",
+      "z+z̄=6, z·z̄=13 을 (z+z̄)²−2z·z̄ 에 바로 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_104",
@@ -2283,7 +2787,11 @@
     "answerIndex": 1,
     "explanation": "iⁿ의 주기는 4이고, i + i² + i³ + i⁴ = i − 1 − i + 1 = 0이므로 100 = 4×25에 의해 합은 0이다.",
     "detailedExplanation": "1단계: i¹ = i, i² = −1, i³ = −i, i⁴ = 1이므로 한 주기의 합 = 0.\n2단계: 100 = 4 × 25이므로 전체 합 = 25 × 0 = 0.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "i 의 거듭제곱은 4를 주기로 반복돼요. i¹, i², i³, i⁴ 를 먼저 나열해 보세요.",
+      "4개씩 묶었을 때 한 묶음의 합이 얼마인지 구하고, 100=4×25 임을 이용해 전체 합을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_105",
@@ -2301,7 +2809,11 @@
     "answerIndex": 3,
     "explanation": "z가 순허수이면 a = 0이고, z² = −b²은 실수 조건을 자동 만족한다. |z| = |b| = √5이므로 b = ±√5, z = ±√5 i.",
     "detailedExplanation": "1단계: 순허수이므로 a = 0, z = bi.\n2단계: z² = (bi)² = −b²은 항상 실수이므로 조건 자동 만족.\n3단계: |z| = |b| = √5 → b = √5 또는 b = −√5.\n4단계: z = √5 i 또는 z = −√5 i.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "순허수는 실수부가 0인 복소수, 즉 z=bi (b≠0) 꼴이에요. 이 조건을 먼저 적용하세요.",
+      "z=bi 로 놓으면 |z|=|b|=√5 가 되어 b의 값을 구할 수 있어요. b가 양수와 음수 둘 다 가능한지 확인해 보세요."
+    ]
   },
   {
     "id": "gen_common_106",
@@ -2319,7 +2831,11 @@
     "answerIndex": 0,
     "explanation": "근과 계수 관계에서 α + β = 4, αβ = 13이므로 α² + β² = (α + β)² − 2αβ = 16 − 26 = −10.",
     "detailedExplanation": "1단계: 판별식 D = 16 − 52 = −36 < 0이므로 두 근은 허수.\n2단계: 근과 계수 관계: α + β = 4, αβ = 13.\n3단계: α² + β² = (α + β)² − 2αβ = 16 − 26 = −10.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 근 α, β 를 직접 구하지 않아도 근과 계수의 관계로 α+β 와 αβ 를 먼저 구할 수 있어요.",
+      "α²+β² = (α+β)²−2αβ 공식에 근과 계수의 관계로 구한 값을 대입해 보세요. (허수 근이어도 이 공식은 그대로 성립해요.)"
+    ]
   },
   {
     "id": "gen_common_107",
@@ -2337,7 +2853,11 @@
     "answerIndex": 0,
     "explanation": "z = (1+i)²/2 = 2i/2 = i이므로, i + i² + i³ + i⁴ + i⁵ = i − 1 − i + 1 + i = i.",
     "detailedExplanation": "1단계: z = (1+i)/(1−i) × (1+i)/(1+i) = (1+i)²/2 = (1+2i−1)/2 = 2i/2 = i.\n2단계: z = i이므로 z¹ = i, z² = −1, z³ = −i, z⁴ = 1, z⁵ = i.\n3단계: 합 = i + (−1) + (−i) + 1 + i = i.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분수 형태의 복소수는 분모의 켤레복소수를 분자·분모에 곱해 유리화하세요.",
+      "(1+i)/(1−i) 를 유리화하면 z 의 실제 값이 나와요. 그 값을 바탕으로 z, z², z³, … 의 패턴을 파악해 합을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_108",
@@ -2355,7 +2875,11 @@
     "answerIndex": 1,
     "explanation": "(a+bi)³ = −8i이므로 |a+bi|³ = |−8i| = 8, 따라서 |a+bi|³ = 8 → |a+bi| = 2, a² + b² = 4.",
     "detailedExplanation": "1단계: 절댓값을 취하면 |a+bi|³ = |−8i| = 8.\n2단계: |a+bi|³ = 8 → |a+bi| = 2 → a² + b² = |a+bi|² = 4.\n3단계: 실제 해를 확인하면 a+bi = 2(cos(−30°) + i·sin(−30°)) = √3 − i가 a > 0 조건을 만족하며, (√3 − i)³ = −8i임을 검산할 수 있다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "양변의 절댓값을 취하면 |a+bi|³=|−8i| 가 돼요. 절댓값의 성질을 이용하세요.",
+      "|a+bi|³=8 에서 |a+bi|=2 를 구하면, a²+b²=|a+bi|² 임을 이용해 답을 구할 수 있어요."
+    ]
   },
   {
     "id": "gen_common_109",
@@ -2373,7 +2897,11 @@
     "answerIndex": 2,
     "explanation": "근과 계수의 관계에서 α+β=5, αβ=3이므로 α²+β²=(α+β)²−2αβ=25−6=19이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 근 α, β 를 직접 구하지 않고 근과 계수의 관계로 α+β 와 αβ 를 먼저 파악하세요.",
+      "α²+β² = (α+β)²−2αβ 에 x²−5x+3=0 의 계수 관계로 구한 값을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_110",
@@ -2391,7 +2919,11 @@
     "answerIndex": 1,
     "explanation": "중근 조건 D=k²−4(k+3)=0에서 k²−4k−12=0, (k−6)(k+2)=0이므로 k=6 또는 k=−2이고, 두 값의 곱은 −12이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "중근 조건은 판별식 D=b²−4ac=0 이에요. x²+kx+(k+3)=0 에 적용해 보세요.",
+      "D=k²−4(k+3)=0 으로 이차방정식을 세운 뒤 인수분해해서 k의 값을 모두 구하고, 두 값의 곱을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_111",
@@ -2409,7 +2941,11 @@
     "answerIndex": 2,
     "explanation": "두 근을 α, 2α로 놓으면 3α=k+2, 2α²=2k이다. α²=k를 대입하면 α²−3α+2=0에서 α=1(k=1) 또는 α=2(k=4)이므로 k의 합은 5이다.",
     "detailedExplanation": "두 근을 α, 2α로 설정한다.\n① 근의 합: α+2α=k+2 → 3α=k+2\n② 근의 곱: α·2α=2k → α²=k\n②를 ①에 대입: 3α=α²+2 → α²−3α+2=0 → (α−1)(α−2)=0\nα=1이면 k=1, α=2이면 k=4이다.\n각각 원래 방정식에 대입하여 검증: k=1이면 x²−3x+2=0 → 근 1, 2 (2배 관계 성립); k=4이면 x²−6x+8=0 → 근 2, 4 (2배 관계 성립).\n따라서 k의 합=1+4=5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "한 근이 다른 근의 2배이면 두 근을 α, 2α 로 놓고 근과 계수의 관계 두 식을 세워 보세요.",
+      "합: α+2α=k+2, 곱: 2α²=2k 의 두 식에서 α² 를 k 로 표현해 대입하면 α 에 대한 이차방정식이 나와요. 이를 풀어 각 α 에 해당하는 k 를 구해 모두 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_112",
@@ -2427,7 +2963,11 @@
     "answerIndex": 2,
     "explanation": "t=x²−x로 치환하면 t²−8t+12=0에서 t=2 또는 t=6이다. x²−x−2=0의 근은 2, −1이고 x²−x−6=0의 근은 3, −2이므로 네 근의 합은 2+(−1)+3+(−2)=2이다.",
     "detailedExplanation": "t=x²−x로 놓으면 t²−8t+12=(t−2)(t−6)=0\n[경우 1] t=2: x²−x−2=0 → (x−2)(x+1)=0 → x=2, x=−1\n[경우 2] t=6: x²−x−6=0 → (x−3)(x+2)=0 → x=3, x=−2\n네 실수 근의 합: 2+(−1)+3+(−2)=2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x²−x 를 t 로 치환하면 이차방정식 t²−8t+12=0 으로 단순해져요.",
+      "t 에 대한 이차방정식을 먼저 풀고, 각 t 값에 대해 x²−x=t 를 다시 풀어 실수 근을 모두 찾아 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_113",
@@ -2445,7 +2985,11 @@
     "answerIndex": 1,
     "explanation": "근과 계수의 관계에서 α+β=3, αβ=1이므로 α/β+β/α=(α²+β²)/(αβ)=((α+β)²−2αβ)/αβ=(9−2)/1=7이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "α/β + β/α = (α²+β²)/(αβ) 로 변환한 뒤, 근과 계수의 관계를 활용하세요.",
+      "x²−3x+1=0 에서 α+β=3, αβ=1 을 구한 뒤, α²+β²=(α+β)²−2αβ 를 계산하고 αβ 로 나누어 보세요."
+    ]
   },
   {
     "id": "gen_common_114",
@@ -2463,7 +3007,11 @@
     "answerIndex": 2,
     "explanation": "두 근 모두 1보다 크려면 ① D≥0: m≥−2, ② f(1)=m²−3m−1>0: m>(3+√13)/2≈3.30, ③ 축 x=m>1의 세 조건을 모두 만족해야 하므로 정수 m의 최솟값은 4이다.",
     "detailedExplanation": "f(x)=x²−2mx+(m²−m−2)로 놓는다.\n조건 ①: 판별식 D/4=m²−(m²−m−2)=m+2≥0 → m≥−2\n조건 ②: f(1)=1−2m+m²−m−2=m²−3m−1>0\n  → m<(3−√13)/2 또는 m>(3+√13)/2≈3.30\n조건 ③: 꼭짓점의 x좌표 m>1\n①②③의 교집합: m>(3+√13)/2\n(3+√13)/2≈3.30이므로 정수 m의 최솟값은 4이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 근이 모두 1보다 크려면 ① 판별식≥0, ② f(1)>0, ③ 꼭짓점의 x좌표>1 세 조건을 동시에 만족해야 해요.",
+      "f(x)=x²−2mx+(m²−m−2) 에 대해 세 조건을 각각 부등식으로 세우고, 공통 범위를 구한 뒤 가장 작은 정수 m을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_115",
@@ -2481,7 +3029,11 @@
     "answerIndex": 2,
     "explanation": "두 정수 근 p, q에 대해 pq+p+q=a−7−(a+1)=−8이므로 (p+1)(q+1)=−7이다. 인수 쌍 (1,−7), (−1,7)에서 (p,q)=(0,−8) 또는 (−2,6)이고 a=7 또는 a=−5이므로 합은 2이다.",
     "detailedExplanation": "두 정수 근을 p, q라 하면 근과 계수의 관계에서\n  p+q=−(a+1),  pq=a−7\n두 식을 더하면: pq+(p+q)=(a−7)−(a+1)=−8\n→ pq+p+q+1=−7 → (p+1)(q+1)=−7\n−7의 정수 인수 쌍: (1,−7), (−1,7), (7,−1), (−7,1)\n[경우 1] p+1=1, q+1=−7 → p=0, q=−8 → a=pq+7=7\n  검증: x²+8x+0=0 → x(x+8)=0 → 정수근 0, −8 ✓\n[경우 2] p+1=−1, q+1=7 → p=−2, q=6 → a=pq+7=−5\n  검증: x²−4x−12=0 → (x−6)(x+2)=0 → 정수근 6, −2 ✓\n따라서 a=7+(−5)=2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 정수 근 p, q 에 대해 근과 계수의 관계로 p+q 와 pq 를 a 로 나타낸 뒤, 두 식을 적절히 조합해 보세요.",
+      "pq+(p+q)+1=(p+1)(q+1) 을 이용하면 (p+1)(q+1)=−7 이에요. −7의 정수 인수 쌍을 모두 나열해 가능한 a를 구하고 합산해 보세요."
+    ]
   },
   {
     "id": "gen_common_116",
@@ -2499,7 +3051,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = x + 1로 놓으면 x² − (2a+1)x + (a+1) = 0이고, 판별식 D = (2a+1)² − 4(a+1) = 4a² − 3 > 0이어야 한다. 이를 풀면 a < −√3/2 또는 a > √3/2이다.",
     "detailedExplanation": "① f(x) = x+1을 정리하면 x² − (2a+1)x + (a+1) = 0.\n② 서로 다른 두 교점 조건은 판별식 D > 0.\n③ D = (2a+1)² − 4(a+1) = 4a²+4a+1−4a−4 = 4a²−3 > 0.\n④ 4a² > 3 → a² > 3/4 → a < −√3/2 또는 a > √3/2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차함수와 직선이 서로 다른 두 점에서 만나려면 교점 방정식의 판별식 D>0 이어야 해요.",
+      "f(x)=x+1 에서 정리되는 이차방정식의 판별식 D=4a²−3>0 으로 부등식을 세워 a의 범위를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_117",
@@ -2517,7 +3073,11 @@
     "answerIndex": 3,
     "explanation": "f(x) = (x−m)² + (m−3)이므로 꼭짓점은 (m, m−3)이다. 이 점이 y = 2x−1 위에 있으면 m−3 = 2m−1이고, m = −2이다.",
     "detailedExplanation": "① f(x) = x²−2mx+(m²+m−3) = (x−m)² + (m−3)이므로 꼭짓점은 (m, m−3).\n② 꼭짓점이 y = 2x−1 위에 있으므로: m−3 = 2m−1.\n③ m−2m = −1+3 → −m = 2 → m = −2.\n④ 확인: 꼭짓점 (−2, −5), 직선 y=2(−2)−1 = −5 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차함수를 완전제곱식으로 변환해 꼭짓점 좌표를 m 으로 표현하세요.",
+      "꼭짓점 (m, m−3) 이 직선 y=2x−1 위에 있다는 조건을 등식으로 세워 m 을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_118",
@@ -2535,7 +3095,11 @@
     "answerIndex": 1,
     "explanation": "해가 1 < x < 3이므로 x²+ax+b = (x−1)(x−3) = x²−4x+3에서 a = −4, b = 3이다. x²+3x−4 < 0은 (x+4)(x−1) < 0이므로 −4 < x < 1이고, 정수해는 −3, −2, −1, 0으로 4개이다.",
     "detailedExplanation": "① x²+ax+b < 0의 해가 1 < x < 3이므로 1, 3이 방정식의 근 → x²+ax+b = (x−1)(x−3) = x²−4x+3.\n② a = −4, b = 3.\n③ x²+bx+a = x²+3x−4 = (x+4)(x−1) < 0.\n④ 해: −4 < x < 1. 정수해: −3, −2, −1, 0으로 총 4개.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x²+ax+b<0 의 해가 1<x<3 이면, 1과 3이 이 이차방정식의 근이에요. 이를 이용해 a, b 를 구하세요.",
+      "x²+ax+b=(x−1)(x−3) 을 전개해 a, b 값을 파악한 뒤, x²+bx+a<0 을 인수분해해서 해와 정수 개수를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_119",
@@ -2553,7 +3117,11 @@
     "answerIndex": 2,
     "explanation": "근과 계수의 관계에서 α+β = −p, αβ = q = 3이다. (α+β)² = α²+β²+2αβ = 10+6 = 16이므로 p² = 16, q² = 9, p²+q² = 25이다.",
     "detailedExplanation": "① 근과 계수의 관계: α+β = −p, αβ = q.\n② αβ = 3이므로 q = 3, q² = 9.\n③ (α+β)² = α²+β² + 2αβ = 10 + 2×3 = 16이므로 p² = (α+β)² = 16.\n④ p²+q² = 16+9 = 25.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "근과 계수의 관계에서 α+β=−p, αβ=q 예요. 주어진 조건 α²+β²=10, αβ=3 과 연결해 보세요.",
+      "αβ=q=3 으로 q 를 구하고, (α+β)²=α²+β²+2αβ 로 p² 를 구한 뒤 p²+q² 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_120",
@@ -2571,7 +3139,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = x²−4x+k로 놓으면: ① D > 0 → k < 4, ② f(1) > 0 → k > 3, ③ 꼭짓점의 x좌표 2 > 1. 세 조건의 교집합은 3 < k < 4이다.",
     "detailedExplanation": "① 서로 다른 두 실근: D/4 = 4−k > 0 → k < 4.\n② 두 근이 모두 1보다 크려면 f(1) > 0: 1−4+k > 0 → k > 3.\n③ 두 근의 합 4의 절반인 2 > 1 (항상 성립).\n④ 세 조건을 종합하면 3 < k < 4.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "서로 다른 두 실근이 모두 1보다 크려면 ① D>0, ② f(1)>0, ③ 꼭짓점의 x좌표>1 을 동시에 만족해야 해요.",
+      "f(x)=x²−4x+k 에 각 조건을 부등식으로 세우면 세 조건의 교집합이 k의 범위가 돼요."
+    ]
   },
   {
     "id": "gen_common_121",
@@ -2589,7 +3161,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = x²−2kx+k+6으로 놓으면 ① D/4 > 0: k²−k−6 > 0 → k < −2 또는 k > 3, ② 두 근의 합 = 2k > 0 → k > 0, ③ 두 근의 곱 = k+6 > 0 → k > −6. 세 조건의 교집합은 k > 3이다.",
     "detailedExplanation": "① 서로 다른 두 실근: D/4 = k²−(k+6) = k²−k−6 = (k−3)(k+2) > 0 → k < −2 또는 k > 3.\n② 두 근의 합이 양수: 2k > 0 → k > 0.\n③ 두 근의 곱이 양수: k+6 > 0 → k > −6.\n④ 교집합: k > 3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "서로 다른 두 양의 실근을 가지려면 ① D>0, ② 두 근의 합>0, ③ 두 근의 곱>0 을 모두 만족해야 해요.",
+      "x²−2kx+(k+6)=0 에서 각 조건을 부등식으로 쓰면 ①k<−2 또는 k>3, ②k>0, ③k>−6 이에요. 세 조건의 공통 범위를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_122",
@@ -2607,7 +3183,11 @@
     "answerIndex": 1,
     "explanation": "x²−3x−4 ≤ 0은 (x+1)(x−4) ≤ 0이므로 −1 ≤ x ≤ 4이고, x²−x−6 > 0은 (x+2)(x−3) > 0이므로 x < −2 또는 x > 3이다. 두 해의 교집합은 3 < x ≤ 4이다.",
     "detailedExplanation": "① x²−3x−4 ≤ 0: (x+1)(x−4) ≤ 0 → −1 ≤ x ≤ 4.\n② x²−x−6 > 0: (x+2)(x−3) > 0 → x < −2 또는 x > 3.\n③ 교집합: (−1 ≤ x ≤ 4) ∩ (x < −2 또는 x > 3) = 3 < x ≤ 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "각 부등식을 따로 인수분해해 해를 구한 뒤, 두 해의 교집합을 취하세요.",
+      "첫 번째는 (x+1)(x−4)≤0, 두 번째는 (x+2)(x−3)>0 이에요. 각 해를 수직선에 나타내고 겹치는 구간을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_123",
@@ -2625,7 +3205,11 @@
     "answerIndex": 1,
     "explanation": "부등식을 정리하면 g(x) = x²−4x+(k+3) ≥ 0이 [0,4]에서 항상 성립해야 한다. g(x) = (x−2)²+(k−1)이므로 최솟값은 x=2에서 k−1이고, k−1 ≥ 0에서 k의 최솟값은 1이다.",
     "detailedExplanation": "① x²−2x+k ≥ 2x−3을 정리: x²−4x+(k+3) ≥ 0.\n② g(x) = x²−4x+(k+3) = (x−2)²+(k−1).\n③ x∈[0,4]에서 g(x)의 최솟값은 x=2일 때 k−1.\n④ 항상 성립하려면 k−1 ≥ 0, 즉 k ≥ 1.\n⑤ 따라서 k의 최솟값은 1. (k=1일 때 g(2)=0으로 등호 성립 확인 ✓)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "부등식을 정리해 g(x)=x²−4x+(k+3)≥0 꼴로 만든 뒤, g(x) 의 최솟값이 0 이상이어야 한다는 조건을 세우세요.",
+      "g(x)=(x−2)²+(k−1) 이므로 [0,4] 에서 최솟값은 x=2 일 때 k−1 이에요. k−1≥0 으로 k의 최솟값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_124",
@@ -2643,7 +3227,11 @@
     "answerIndex": 0,
     "explanation": "x²(x−3) − 4(x−3) = (x−3)(x²−4) = (x−3)(x−2)(x+2)이므로 세 근은 3, 2, −2이고, 세 근의 곱은 3×2×(−2) = −12이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼차방정식을 인수분해해서 세 근을 직접 구해 보세요. 공통인수로 묶어 볼 수 있어요.",
+      "x²(x−3)−4(x−3)=(x−3)(x²−4) 로 변환하고, x²−4 를 다시 인수분해해 세 근을 구한 뒤 곱을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_125",
@@ -2661,7 +3249,11 @@
     "answerIndex": 1,
     "explanation": "y = 4 − x를 x² + y² = 10에 대입하면 2x² − 8x + 6 = 0, 즉 (x−1)(x−3) = 0이므로 (x, y) = (1, 3) 또는 (3, 1)이다. 따라서 xy = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "연립방정식에서 한 변수를 x+y=4 로 나타내 다른 식에 대입하는 방법을 써 보세요.",
+      "y=4−x 를 x²+y²=10 에 대입하면 x 에 대한 이차방정식이 돼요. 이를 풀어 (x,y) 쌍을 구하면 xy 도 바로 알 수 있어요."
+    ]
   },
   {
     "id": "gen_common_126",
@@ -2679,7 +3271,11 @@
     "answerIndex": 1,
     "explanation": "양변을 제곱하면 (2x−3)² < (x+1)²이므로 3x² − 14x + 8 < 0이다. 이를 인수분해하면 (3x−2)(x−4) < 0이고, 풀면 2/3 < x < 4이다.",
     "detailedExplanation": "양변이 모두 절댓값(비음수)이므로 양변 제곱이 동치이다. (2x−3)² − (x+1)² < 0을 정리하면 3x² − 14x + 8 < 0. 판별식: 196 − 96 = 100이므로 근은 (14 ± 10) ÷ 6 = 4 또는 2/3. 이차항 계수 > 0이므로 두 근 사이에서 음수가 되어 2/3 < x < 4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "절댓값이 양쪽에 있는 부등식은 양변을 제곱해서 풀 수 있어요. (양변이 모두 비음수일 때 동치예요.)",
+      "|2x−3|²<|x+1|² 로 바꾸면 (2x−3)²<(x+1)² 이 돼요. 전개 후 이차부등식으로 정리해 인수분해하세요."
+    ]
   },
   {
     "id": "gen_common_127",
@@ -2697,7 +3293,11 @@
     "answerIndex": 2,
     "explanation": "t = x²으로 치환하면 t² − 5t + 4 = 0, (t−1)(t−4) = 0이므로 t = 1 또는 t = 4. 따라서 x = ±1 또는 x = ±2이고, 양의 실수 근은 1, 2이므로 합은 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x⁴ 이 포함된 방정식은 t=x² 로 치환해 이차방정식으로 바꾸세요.",
+      "t²−5t+4=0 을 풀어 t 값을 구한 뒤, x²=t 에서 양의 실수 근만 골라 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_128",
@@ -2715,7 +3315,11 @@
     "answerIndex": 1,
     "explanation": "첫 부등식: (x−4)(x+1) ≤ 0이므로 −1 ≤ x ≤ 4. 둘째 부등식: (x−3)(x+2) > 0이므로 x < −2 또는 x > 3. 교집합은 3 < x ≤ 4이며 이 범위의 정수는 x = 4뿐이므로 1개이다.",
     "detailedExplanation": "−1 ≤ x ≤ 4 와 (x < −2 또는 x > 3)의 공통 범위를 구하면 3 < x ≤ 4이다. 이 범위에 속하는 정수는 4 하나뿐이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 부등식을 각각 인수분해해 해를 구한 뒤, 두 해의 교집합을 구하세요.",
+      "(x−4)(x+1)≤0 의 해는 −1≤x≤4, (x−3)(x+2)>0 의 해는 x<−2 또는 x>3 이에요. 교집합에서 정수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_129",
@@ -2733,7 +3337,11 @@
     "answerIndex": 2,
     "explanation": "근과 계수의 관계에서 α + β + γ = 0이므로 α + β = −γ, β + γ = −α, γ + α = −β이다. 따라서 (α+β)(β+γ)(γ+α) = (−γ)(−α)(−β) = −αβγ이고, αβγ = −2이므로 답은 2이다.",
     "detailedExplanation": "x³ − 5x + 2 = 0에서 비에타 공식: α+β+γ = 0, αβ+βγ+γα = −5, αβγ = −2. α+β+γ = 0이면 각 쌍의 합은 나머지 한 근의 음수이다. (−γ)(−α)(−β) = −αβγ = −(−2) = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼차방정식의 세 근의 합이 0 이면 각 쌍의 합이 나머지 한 근의 음수가 된다는 점을 활용하세요.",
+      "x³−5x+2=0 의 비에타 공식에서 α+β+γ=0, αβγ=−2 를 확인한 뒤, (α+β)(β+γ)(γ+α)를 α,β,γ 의 대칭 관계로 단순화해 보세요."
+    ]
   },
   {
     "id": "gen_common_130",
@@ -2751,7 +3359,11 @@
     "answerIndex": 1,
     "explanation": "경우를 나누어 풀면 x = −2, x = 1, x = 3이 해이다(각각 대입 검증 필요). 세 근의 합은 −2 + 1 + 3 = 2이다.",
     "detailedExplanation": "x²−4 ≥ 0인 경우(x ≤ −2 또는 x ≥ 2): x²−4 = x+2 → x²−x−6 = 0 → x = 3 또는 x = −2 (둘 다 범위 만족). x²−4 < 0인 경우(−2 < x < 2): −(x²−4) = x+2 → x²+x−2 = 0 → x = 1 또는 x = −2. x = −2는 범위 밖이고 x = 1은 범위 내. 대입 검증: |1−4| = 3 = 1+2 ✓. 따라서 근은 −2, 1, 3이고 합 = 2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "절댓값이 포함된 방정식은 절댓값 안의 식의 부호에 따라 두 경우로 나누어 풀어요.",
+      "x²−4≥0(x≤−2 또는 x≥2) 인 경우와 x²−4<0(−2<x<2) 인 경우로 나눠 각각 풀고, 범위 조건을 확인해 유효한 근을 구해 더해 보세요."
+    ]
   },
   {
     "id": "gen_common_131",
@@ -2769,7 +3381,11 @@
     "answerIndex": 1,
     "explanation": "인수분해하면 (x−1)(x−3)(x−5)(x+1) < 0이다. 네 근 x = −1, 1, 3, 5를 기준으로 부호를 분석하면 해는 −1 < x < 1 또는 3 < x < 5이고, 범위 내 정수는 x = 0과 x = 4로 모두 2개이다.",
     "detailedExplanation": "x²−4x+3 = (x−1)(x−3), x²−4x−5 = (x+1)(x−5)이므로 전체 식은 (x+1)(x−1)(x−3)(x−5) < 0이다. 임계점 −1, 1, 3, 5에서 부호표를 작성하면: x < −1에서 (−)(−)(−)(−) = + > 0, −1 < x < 1에서 (+)(−)(−)(−) = − < 0 (해), 1 < x < 3에서 (+)(+)(−)(−) = + > 0, 3 < x < 5에서 (+)(+)(+)(−) = − < 0 (해), x > 5에서 + > 0. 따라서 해는 −1 < x < 1 또는 3 < x < 5이고 정수해는 0, 4로 2개이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x²−4x+3=(x−1)(x−3), x²−4x−5=(x+1)(x−5) 로 인수분해한 뒤 두 이차식의 곱으로 나타내 보세요.",
+      "네 근 −1, 1, 3, 5 를 기준으로 구간별 부호표를 만들어 곱이 음수인 구간을 찾고, 그 안의 정수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_common_132",
@@ -2787,7 +3403,11 @@
     "answerIndex": 2,
     "explanation": "내분점 공식에 의해 P = ((2×(−4)+1×2)/(2+1), (2×9+1×(−3))/(2+1)) = (−8+2)/3, (18−3)/3) = (−2, 5).",
     "detailedExplanation": "내분점 공식: m:n 내분점 = ((m×x_B + n×x_A)/(m+n), (m×y_B + n×y_A)/(m+n)).\nx좌표: (2×(−4) + 1×2)/3 = (−8+2)/3 = −6/3 = −2.\ny좌표: (2×9 + 1×(−3))/3 = (18−3)/3 = 15/3 = 5.\n따라서 P(−2, 5). 오답 (0,1)은 비율을 1:2로 바꿨을 때, (−1,3)은 중점 공식을 사용했을 때 나오는 값이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 점을 m:n으로 내분하는 점의 좌표 공식을 떠올려 보세요.",
+      "내분점 공식: x = (m·x_B + n·x_A)/(m+n), y = (m·y_B + n·y_A)/(m+n). m=2, n=1을 각각 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_133",
@@ -2805,7 +3425,11 @@
     "answerIndex": 1,
     "explanation": "외분점 공식에 의해 Q = ((3×5 − 1×(−1))/(3−1), (3×(−4) − 1×2)/(3−1)) = (16/2, −14/2) = (8, −7).",
     "detailedExplanation": "외분점 공식: m:n 외분점 = ((m×x_B − n×x_A)/(m−n), (m×y_B − n×y_A)/(m−n)).\nx좌표: (3×5 − 1×(−1))/(3−1) = (15+1)/2 = 8.\ny좌표: (3×(−4) − 1×2)/(3−1) = (−12−2)/2 = −7.\n오답 (7/2, −5/2)는 외분을 내분 공식으로 계산한 결과, (−4, 5)는 1:3 외분으로 계산한 결과이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "외분점 공식을 떠올려 보세요. 내분 공식과 부호가 달라지는 부분을 주의하세요.",
+      "외분점 공식: x = (m·x_B − n·x_A)/(m−n), y = (m·y_B − n·y_A)/(m−n). m=3, n=1을 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_134",
@@ -2823,7 +3447,11 @@
     "answerIndex": 2,
     "explanation": "P(t, 0)으로 놓으면 |PA|² = |PB|²에서 (t−2)²+16 = (t−6)²+4이고, 이를 풀면 8t = 20이므로 t = 5/2.",
     "detailedExplanation": "P(t, 0)에 대해 |PA|² = (t−2)²+4² = t²−4t+20, |PB|² = (t−6)²+2² = t²−12t+40.\n|PA|² = |PB|² 조건: t²−4t+20 = t²−12t+40 → 8t = 20 → t = 5/2.\n오답 4는 y좌표를 무시하고 |t−2| = |t−6|으로 계산한 결과(t = 4)이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x축 위의 점은 y좌표가 0임을 이용해 점 P를 P(t, 0)으로 놓고 조건을 세워 보세요.",
+      "|PA|² = |PB|² 조건을 t에 대한 방정식으로 세운 뒤 t를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_135",
@@ -2841,7 +3469,11 @@
     "answerIndex": 0,
     "explanation": "무게중심 공식에서 C의 좌표는 (3×3−1−5, 3×2−(−2)−4) = (9−6, 6+2−4) = (3, 4).",
     "detailedExplanation": "무게중심 G = ((x_A+x_B+x_C)/3, (y_A+y_B+y_C)/3)이므로\nx_C = 3×3 − 1 − 5 = 9 − 6 = 3.\ny_C = 3×2 − (−2) − 4 = 6 + 2 − 4 = 4.\n따라서 C(3, 4). 오답 (4,2)는 G 좌표와 B 좌표를 혼동했을 때, (3,3)은 y 계산에서 부호 실수가 있을 때 나온다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼각형의 무게중심 좌표 공식을 떠올려 보세요.",
+      "G = ((x_A+x_B+x_C)/3, (y_A+y_B+y_C)/3). 주어진 G 좌표로부터 x_C, y_C를 역산해 보세요."
+    ]
   },
   {
     "id": "gen_common_136",
@@ -2859,7 +3491,11 @@
     "answerIndex": 3,
     "explanation": "중점 공식에서 (a+2)/2 = 3이므로 a = 4, (1+b)/2 = −2이므로 b = −5. 따라서 a − b = 4 − (−5) = 9.",
     "detailedExplanation": "중점 공식: M = ((a+2)/2, (1+b)/2) = (3, −2).\nx좌표: (a+2)/2 = 3 → a+2 = 6 → a = 4.\ny좌표: (1+b)/2 = −2 → 1+b = −4 → b = −5.\na − b = 4 − (−5) = 9. 오답 −1은 a+b를 구한 값, 5는 a+|b|로 계산한 결과이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "중점 공식을 이용해 미지수 a, b에 대한 방정식을 세울 수 있습니다.",
+      "중점의 x좌표: (a+2)/2 = 3, y좌표: (1+b)/2 = −2. 각각 풀어 a, b를 구한 뒤 a−b를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_137",
@@ -2877,7 +3513,11 @@
     "answerIndex": 0,
     "explanation": "내분점 P = (0, 1), 외분점 Q = (10, −9)이므로 중점 = ((0+10)/2, (1+(−9))/2) = (5, −4).",
     "detailedExplanation": "내분점 P(1:2): x = (1×4+2×(−2))/3 = 0, y = (1×(−3)+2×3)/3 = 1. 즉 P(0, 1).\n외분점 Q(2:1): x = (2×4−1×(−2))/(2−1) = 10, y = (2×(−3)−1×3)/(2−1) = −9. 즉 Q(10, −9).\n중점 = ((0+10)/2, (1−9)/2) = (5, −4).",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "내분점 공식과 외분점 공식을 각각 적용해 P와 Q를 먼저 구해 보세요.",
+      "P는 AB를 1:2로 내분하는 점, Q는 2:1로 외분하는 점입니다. 두 점을 구한 후 중점 공식으로 중점 좌표를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_138",
@@ -2895,7 +3535,11 @@
     "answerIndex": 1,
     "explanation": "P = (−3+8t, 1+4t)(0≤t≤1)로 매개변수화하면 |OP|² = 80t²−40t+10이고, t = 1/4일 때 최솟값 5를 가지므로 |OP|의 최솟값은 √5.",
     "detailedExplanation": "선분 AB 위의 점: P = A + t(B−A) = (−3+8t, 1+4t), 0 ≤ t ≤ 1.\n|OP|² = (−3+8t)² + (1+4t)² = 64t²−48t+9 + 16t²+8t+1 = 80t²−40t+10.\n이차함수의 최솟값: t = 40/(2×80) = 1/4 ∈ [0,1]이므로 유효.\n최솟값: 80×(1/16)−40×(1/4)+10 = 5−10+10 = 5.\n따라서 |OP|의 최솟값은 √5. 오답 √10 = |OA|는 끝점 A에서의 거리이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "선분 AB 위의 점을 매개변수 t로 표현한 뒤, |OP|²을 t에 대한 함수로 나타내 보세요.",
+      "P = A + t(B−A)로 쓰면 |OP|²이 t에 대한 이차함수가 됩니다. 꼭짓점에서 최솟값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_139",
@@ -2913,7 +3557,11 @@
     "answerIndex": 1,
     "explanation": "D = (6−4t, 4t)이고 삼각형 ABD에서 AB = 6이 밑변, D의 y좌표 4t가 높이이므로 (1/2)×6×4t = 12t = 4, 따라서 t = 1/3.",
     "detailedExplanation": "D = B + t×(C−B) = (6, 0) + t×(−4, 4) = (6−4t, 4t).\nA(0,0), B(6,0)을 이은 선분이 x축이므로, 삼각형 ABD의 높이는 D의 y좌표 = 4t.\n넓이 = (1/2)×|AB|×높이 = (1/2)×6×4t = 12t = 4 → t = 1/3.\n검산: D = (6−4/3, 4/3) = (14/3, 4/3), 넓이 = (1/2)×6×(4/3) = 4 확인.\n오답 1/2는 12t=6으로 잘못 설정했을 때, 1/4는 (1/2)×6×t=4로 잘못 계산했을 때 나온다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "선분 BC를 t:(1−t)로 내분하는 점 D의 좌표를 먼저 t로 표현해 보세요.",
+      "D의 좌표를 구한 뒤, A, B, D로 이루어진 삼각형 넓이를 밑변 AB와 D의 y좌표를 이용해 표현하고 넓이=4 조건으로 t를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_140",
@@ -2931,7 +3579,11 @@
     "answerIndex": 0,
     "explanation": "기울기 m = (−1 − 3)/(4 − 1) = −4/3이고, 직선의 기울기가 tan θ이므로 tan θ = −4/3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "직선의 기울기가 곧 tan θ와 같음을 떠올려 보세요.",
+      "두 점을 이용해 기울기 m = (y₂−y₁)/(x₂−x₁)을 계산하면 그것이 tan θ의 값이 됩니다."
+    ]
   },
   {
     "id": "gen_common_141",
@@ -2949,7 +3601,11 @@
     "answerIndex": 0,
     "explanation": "점과 직선 사이의 거리 공식에 의해 |4(3) − 3(2) − 1| / √(4² + 3²) = |12 − 6 − 1| / 5 = 5/5 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점과 직선 사이의 거리 공식을 떠올려 보세요.",
+      "직선 ax + by + c = 0과 점 (x₀, y₀) 사이의 거리 = |ax₀ + by₀ + c| / √(a² + b²). 주어진 값을 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_142",
@@ -2967,7 +3623,11 @@
     "answerIndex": 1,
     "explanation": "두 평행선 사이의 거리는 |12−(−13)|/5 = 25/5 = 5이고, 중점 조건과 상관없이 PQ의 최솟값은 두 직선 사이의 거리인 5이다. 중점이 y=x 위에 있어도 PQ가 두 직선에 수직일 때 최소이므로 최솟값은 5이다.",
     "detailedExplanation": "두 직선 3x + 4y = 12와 3x + 4y = −13은 서로 평행하며, 직선 간 거리 = |12 − (−13)| / √(3² + 4²) = 25 / 5 = 5. P와 Q 각각 해당 직선 위의 점이므로 |PQ| ≥ 두 직선 사이의 거리 = 5. 중점 M이 y = x 위에 있는 조건에서: M = ((px+qx)/2, (py+qy)/2)이고 py+qy = px+qx. 두 직선의 법선 방향으로 PQ를 잡을 때 M의 x,y좌표가 같아지는 P, Q가 존재함을 확인할 수 있으므로 최솟값 5는 달성 가능하다. 따라서 |PQ|의 최솟값은 5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 직선이 평행한지 먼저 확인하고, 평행한 경우 두 직선 사이의 거리 공식을 떠올려 보세요.",
+      "두 직선 3x+4y=12와 3x+4y=−13은 평행하므로, 두 평행선 사이의 거리 = |c₁−c₂|/√(a²+b²)으로 |PQ|의 최솟값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_143",
@@ -2985,7 +3645,11 @@
     "answerIndex": 1,
     "explanation": "세 점을 지나는 원의 방정식 x²+y²+Dx+Ey+F=0에 각 점을 대입하면 D=−3, E=−3, F=2이므로 원은 (x−3/2)²+(y−3/2)²=5/2이다.",
     "detailedExplanation": "x²+y²+Dx+Ey+F=0에 A(1,0) 대입: 1+D+F=0, B(0,2) 대입: 4+2E+F=0, C(3,2) 대입: 13+3D+2E+F=0.\n①에서 F=−1−D, ②에 대입: 3+2E−D=0 → D=3+2E.\n③에 대입: 13+3(3+2E)+2E+(−1−3−2E)=0 → 18+6E=0 → E=−3.\n따라서 D=−3, F=2이고, 원의 중심은 (3/2, 3/2), r²=(3/2)²+(3/2)²−2=9/4+9/4−2=5/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "세 점을 지나는 원을 구하려면 일반형 x² + y² + Dx + Ey + F = 0에 각 점을 대입해 D, E, F를 구하세요.",
+      "연립방정식을 풀어 D, E, F를 구한 뒤, 표준형으로 변환해 반지름 r을 구하고 r²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_144",
@@ -3003,7 +3667,11 @@
     "answerIndex": 2,
     "explanation": "직선 y=mx+3을 mx−y+3=0으로 쓰고 중심 (2,1)까지의 거리가 √5임을 이용하면 m²−8m+1=0이 되어 근의 합 m₁+m₂=8이다.",
     "detailedExplanation": "직선 mx−y+3=0과 원의 중심 (2,1) 사이의 거리가 반지름 √5이어야 한다.\n|2m−1+3|/√(m²+1)=√5 → (2m+2)²=5(m²+1)\n4m²+8m+4=5m²+5 → m²−8m+1=0.\n근과 계수의 관계에 의해 m₁+m₂=8, m₁m₂=1이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "원에 접하는 직선의 조건을 떠올려 보세요. 원의 중심에서 직선까지의 거리가 반지름과 같아야 합니다.",
+      "y절편이 3인 직선을 y = mx + 3, 즉 mx − y + 3 = 0으로 표현하고, 중심 (2,1)에서의 거리 = √5 조건으로 m에 대한 방정식을 세운 뒤 근과 계수의 관계를 이용해 m₁+m₂를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_145",
@@ -3021,7 +3689,11 @@
     "answerIndex": 1,
     "explanation": "두 원의 방정식을 빼면 공통현의 직선 방정식 2x+y−5=0을 얻고, 원 x²+y²=10의 중심 (0,0)에서 이 직선까지의 거리가 √5이므로 공통현의 길이는 2√(10−5)=2√5이다.",
     "detailedExplanation": "두 원의 방정식을 빼면: (x²+y²)−(x²+y²−4x−2y)=10−0 → 4x+2y−10=0 → 2x+y−5=0 (공통현의 직선).\n원 x²+y²=10(반지름 √10)의 중심 (0,0)에서 직선 2x+y−5=0까지의 거리: d=|−5|/√(4+1)=5/√5=√5.\n공통현의 절반 길이 = √(10−5)=√5이므로 전체 길이 = 2√5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 원의 공통현은 두 원의 방정식을 빼서 얻은 직선 위에 있음을 떠올려 보세요.",
+      "두 방정식을 빼면 공통현의 직선 방정식이 나옵니다. 그 직선에서 한 원의 중심까지 거리 d를 구하고, 공통현 길이 = 2√(r²−d²)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_146",
@@ -3039,7 +3711,11 @@
     "answerIndex": 2,
     "explanation": "두 원이 내접하면 두 중심 사이의 거리는 반지름의 차와 같으므로, |r−2|=5에서 r=7(C₂가 C₁을 포함)이고 r²=49이다.",
     "detailedExplanation": "C₁의 중심 (1,2), 반지름 2; C₂의 중심 (−3,5), 반지름 r.\n두 중심 사이의 거리: d=√{(1−(−3))²+(2−5)²}=√(16+9)=5.\n내접 조건: d=|r₂−r₁| → 5=|r−2|.\nr>0이고 C₂가 C₁을 포함하는 경우: r−2=5 → r=7 → r²=49.\n(r=−3은 불가능하므로 유일한 해)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 원이 내접(내부 접촉)할 때 중심 간 거리와 반지름의 관계를 떠올려 보세요.",
+      "두 원이 내접하면 (중심 간 거리) = |r₂ − r₁|. 두 중심 사이의 거리를 계산한 뒤 r을 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_147",
@@ -3057,7 +3733,11 @@
     "answerIndex": 2,
     "explanation": "원의 중심 (0,0)에서 직선까지의 거리가 4이고 반지름이 5이므로, 최댓값은 4+5=9이다.",
     "detailedExplanation": "중심 (0,0)에서 직선 3x−4y+20=0까지의 거리: d=|20|/√(9+16)=20/5=4.\n원 위의 점 P에서 직선까지의 거리는 최대 d+r=4+5=9, 최소 |d−r|=|4−5|=1이다.\n(d=4 < r=5이므로 직선이 원과 교차하여 최솟값은 1)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원의 중심에서 주어진 직선까지의 거리를 먼저 구해 보세요.",
+      "원 위의 점 P에서 직선까지의 거리는 (중심~직선 거리) ± r 범위입니다. 최댓값은 d + r임을 이용해 보세요."
+    ]
   },
   {
     "id": "gen_common_148",
@@ -3075,7 +3755,11 @@
     "answerIndex": 1,
     "explanation": "두 원의 교점을 지나는 원족 C₁+k(C₂−C₁)=0에서 중심이 y=x 위에 있을 조건으로 k=−1/2를 구하면 원의 방정식은 (x−5/2)²+(y−5/2)²=17/2이다.",
     "detailedExplanation": "C₁+k(C₂−C₁)=0 꼴: x²+y²+(−2+6k)x+(−4+2k)y+(1−6k)=0.\n중심: (1−3k, 2−k)가 y=x 위에 있으려면 1−3k=2−k → −2k=1 → k=−1/2.\n방정식: x²+y²−5x−5y+4=0 → (x−5/2)²+(y−5/2)²=25/4+25/4−4=50/4−16/4=34/4=17/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 원의 공통현을 지나는 원들의 집합(원족)을 이용하는 방법을 떠올려 보세요. C₁ + k(C₂ − C₁) = 0 꼴로 표현할 수 있습니다.",
+      "원족 방정식에서 중심 좌표를 k로 나타낸 뒤, 중심이 y = x 위에 있다는 조건으로 k를 구하고 반지름²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_149",
@@ -3093,7 +3777,11 @@
     "answerIndex": 1,
     "explanation": "아폴로니우스 원: |PA|²=4|PB|²를 전개하면 x²+y²=4가 나오므로 반지름이 2이고 넓이는 4π이다.",
     "detailedExplanation": "|PA|=2|PB|이므로 |PA|²=4|PB|².\n(x−4)²+y²=4[(x−1)²+y²]\nx²−8x+16+y²=4x²−8x+4+4y²\n0=3x²+3y²−12\nx²+y²=4 → 중심 (0,0), 반지름 r=2.\n검증: 점 (2,0)에서 |PA|=2, |PB|=1 → 비율 2:1 ✓\n넓이=πr²=4π.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|PA|:|PB| = 2:1 조건을 |PA|² = 4|PB|² 형태로 바꿔 방정식을 세워 보세요.",
+      "P(x, y)로 놓고 |PA|² = 4|PB|² 식을 전개해 정리하면 어떤 도형의 방정식이 나오는지 확인한 뒤, 그 도형의 넓이를 구해 보세요."
+    ]
   },
   {
     "id": "gen_common_150",
@@ -3111,7 +3799,11 @@
     "answerIndex": 2,
     "explanation": "두 원의 중심 간 거리가 3이고 반지름의 합도 3이므로 외접(외부 접촉)하여 공통접선이 3개이다.",
     "detailedExplanation": "C₁: 중심 (−2, 0), 반지름 r₁=1; C₂: 중심 (1, 0), 반지름 r₂=2.\n두 중심 사이의 거리: d=√{(−2−1)²+0²}=3.\nr₁+r₂=1+2=3이고 |r₁−r₂|=1.\nd=r₁+r₂=3 → 두 원이 외접(외부에서 접촉).\n외접하는 경우 공통접선은 외부 공통접선 2개 + 접점에서의 공통접선 1개 = 3개.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 원의 위치 관계(외부, 외접, 내접, 내부 등)를 판단하기 위해 중심 간 거리와 두 반지름의 합·차를 비교해 보세요.",
+      "중심 간 거리 d와 r₁+r₂, |r₁−r₂|를 각각 구한 뒤, d와의 관계를 통해 위치 관계를 파악하면 공통접선의 개수를 알 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_151",
@@ -3129,7 +3821,11 @@
     "answerIndex": 0,
     "explanation": "원래 포물선의 꼭짓점: y = (x−2)² − 3이므로 꼭짓점은 (2, −3). 평행이동 후 꼭짓점: (2+2, −3+(−3)) = (4, −6).",
     "detailedExplanation": "y = x² − 4x + 1 = (x−2)² − 3이므로 꼭짓점은 (2, −3). x축 방향으로 2, y축 방향으로 −3 이동하면 꼭짓점은 (2+2, −3−3) = (4, −6). 따라서 답은 (4, −6).",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차함수를 완전제곱식으로 변환해 원래 포물선의 꼭짓점을 먼저 구해 보세요.",
+      "꼭짓점 (α, β)을 구한 뒤, 평행이동 (2, −3)을 더해 이동된 꼭짓점의 좌표를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_152",
@@ -3147,7 +3843,11 @@
     "answerIndex": 1,
     "explanation": "직선 y = −x에 대한 대칭이동은 (x, y) → (−y, −x)로 변환한다. 중심 (1, −2)의 대칭점: (−(−2), −1) = (2, −1). 따라서 (x−2)² + (y+1)² = 9이다.",
     "detailedExplanation": "직선 y = −x에 대한 대칭이동 공식: (a, b) → (−b, −a). 중심 (1, −2) → (−(−2), −1) = (2, −1). 반지름은 변하지 않으므로 대칭 원은 (x−2)² + (y+1)² = 9. 그런데 보기 0번은 (x+2)²+(y−1)²=9로 중심(−2,1). 재검토: y=−x 대칭 공식은 (a,b)→(−b,−a). (1,−2)→(2,−1). 중심(2,−1)이면 (x−2)²+(y+1)²=9 → 보기 1번. answerIndex를 1로 수정.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "직선 y = −x에 대한 대칭이동 공식 (a, b) → (−b, −a)를 떠올려 보세요.",
+      "원의 중심 (1, −2)에 대칭이동 공식을 적용해 새 중심을 구한 뒤, 반지름은 그대로 유지됨을 이용해 대칭 원의 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_common_153",
@@ -3165,7 +3865,11 @@
     "answerIndex": 0,
     "explanation": "역순으로 추적한다. Q(5, −3)이 y=x 대칭의 결과이므로 그 이전 점은 (−3, 5). (−3, 5)가 x축 대칭의 결과이므로 그 이전 점 P는 (−3, −5). 따라서 a=−3, b=−5, a+b=−8.",
     "detailedExplanation": "Q(5, −3)으로 가는 과정의 역방향: ① y=x 대칭의 역: (x,y)→(y,x)이므로 Q(5,−3)의 이전 점은 (−3, 5). ② x축 대칭의 역: (x,y)→(x,−y)이므로 (−3,5)의 이전 점은 (−3,−5) = P. 따라서 a=−3, b=−5, a+b=−8. 검증: P(−3,−5) →x축대칭→ (−3,5) →y=x대칭→ (5,−3) = Q. 정답 a+b = −8, answerIndex=0.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 번의 대칭이동을 역순으로 추적하는 방법을 생각해 보세요. 최종 점 Q에서 거꾸로 각 변환의 역을 적용합니다.",
+      "먼저 y=x 대칭의 역(x와 y를 교환)을 Q(5,−3)에 적용해 이전 점을 구하고, 다시 x축 대칭의 역(y 부호 반전)을 적용해 원래 점 P를 찾아 a+b를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_common_154",
@@ -3183,7 +3887,11 @@
     "answerIndex": 0,
     "explanation": "원 C의 중심 (3, −2), 반지름 3. 점 A(2,1)에 대한 대칭으로 C'의 중심은 (2·2−3, 2·1−(−2)) = (1, 4), 반지름 3. 두 중심 간 거리 = √((3−1)²+(−2−4)²) = √(4+36) = √40 = 2√10 ≈ 6.32. 두 반지름 합 = 6. 거리 > 합이므로 교점 없음(0개).",
     "detailedExplanation": "① 원 C: x²+y²−6x+4y+4=0 → (x−3)²+(y+2)²=9. 중심 (3,−2), 반지름 3. ② 점 A(2,1)에 대한 대칭이동: (x,y)→(4−x, 2−y). 중심 (3,−2) → (4−3, 2−(−2)) = (1, 4). C': (x−1)²+(y−4)²=9, 반지름 3. ③ 두 중심 거리 d=√((3−1)²+(−2−4)²)=√(4+36)=√40=2√10≈6.32. ④ r₁+r₂=6 < 2√10. 따라서 두 원은 외부에 있어 교점 0개.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "점 A에 대한 대칭이동 공식을 떠올려 보세요. 점 (x, y)를 점 A(a, b)에 대해 대칭이동하면 (2a−x, 2b−y)가 됩니다.",
+      "원 C의 중심을 구한 뒤 A(2,1)에 대해 대칭이동해 C'의 중심을 찾고, 두 원의 중심 간 거리와 반지름의 합을 비교해 교점 개수를 판단해 보세요."
+    ]
   },
   {
     "id": "gen_common_155",
@@ -3381,7 +4089,11 @@
     "answerIndex": 1,
     "explanation": "(g∘f)(a) = f(a)+3 = a²−2a+3이고, (f∘g)(a) = (a+3)²−2(a+3) = a²+4a+3이다. 두 식이 같으면 a²−2a+3 = a²+4a+3이므로 −6a=0, a=0이다. 따라서 합은 0이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "합성함수 (g∘f)(a) = g(f(a))이고, (f∘g)(a) = f(g(a))임을 기억하고 두 식을 각각 계산해 보세요.",
+      "(g∘f)(a) = f(a) + 3 = a² − 2a + 3이고, (f∘g)(a) = (a+3)² − 2(a+3)을 전개한 뒤 두 식을 같다고 놓고 a에 대한 방정식을 풀어 보세요."
+    ]
   },
   {
     "id": "gen_common_167",
@@ -3399,7 +4111,11 @@
     "answerIndex": 2,
     "explanation": "f(x)=0이면 √(x+4)=2, x=0. f(f(x))=0이 되려면 f(x)=0 (f의 치역에 0이 있을 때)이므로 x=0, 또는 f(x)=t이고 f(t)=0인 t를 먼저 구한다. f(t)=0이면 t=0. f(x)=0이면 x=0. 또는 f(x)=−2(f의 또 다른 역상이 있으면): f(x)=−2 → √(x+4)=0 → x=−4, 그러면 f(−4)=−2이고 f(f(−4))=f(−2)=√(−2+4)−2=√2−2≠0. 따라서 f(f(x))=0의 유일한 해는 x=0. 보기에 0이 있으므로 answerIndex=2.",
     "detailedExplanation": "f(x) = √(x+4) − 2. f(f(x)) = 0이 되려면 f(x) = k이고 f(k) = 0인 k를 먼저 구한다. f(k)=0: √(k+4)−2=0 → √(k+4)=2 → k+4=4 → k=0. 따라서 f(x)=0: √(x+4)−2=0 → x=0. x=0일 때 f(0)=√4−2=0, f(f(0))=f(0)=0 ✓. 정답 x=0.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(f(x)) = 0이 되려면 먼저 'f(무언가) = 0'을 만족하는 값이 무엇인지 구하는 두 단계 접근법을 떠올려 보세요.",
+      "f(k) = 0을 먼저 풀어 k를 구하고, 그 k에 대해 f(x) = k를 풀면 f(f(x)) = 0의 해를 구할 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_168",
@@ -3417,7 +4133,11 @@
     "answerIndex": 0,
     "explanation": "y=(3x−2)/(x−1)에서 x와 y를 바꾸면 x=(3y−2)/(y−1). xy−x=3y−2, xy−3y=x−2, y(x−3)=x−2, y=(x−2)/(x−3)=g(x). g(2)=(2−2)/(2−3)=0/(−1)=0. 보기 ①이 0이므로 answerIndex=0.",
     "detailedExplanation": "y = (3x−2)/(x−1)의 역함수: x↔y 교환 후 y에 대해 풀기. x = (3y−2)/(y−1) → x(y−1) = 3y−2 → xy−x = 3y−2 → xy−3y = x−2 → y(x−3) = x−2 → y = (x−2)/(x−3). g(x) = (x−2)/(x−3). g(2) = (2−2)/(2−3) = 0/(−1) = 0.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "역함수를 구하려면 y = f(x)에서 x와 y를 서로 바꾼 뒤 y에 대해 식을 정리하면 된다는 방법을 떠올려 보세요.",
+      "x = (3y − 2)/(y − 1)로 바꾼 뒤 y에 대해 풀면 역함수 g(x)를 얻을 수 있고, 그 식에 x = 2를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_common_169",
@@ -3435,7 +4155,11 @@
     "answerIndex": 2,
     "explanation": "정의역 최솟값 1: 2(1)−a=0이므로 a=2. 점 (3,5) 대입: 5=√(6−2)+b=√4+b=2+b, b=3. a×b=2×3=6.",
     "detailedExplanation": "정의역: 2x−a≥0 → x≥a/2. 최솟값 a/2=1이므로 a=2. 점 (3,5) 대입: 5=√(2·3−2)+b=√4+b=2+b → b=3. a×b=2×3=6.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "무리함수 y = √(2x − a) + b에서 정의역의 최솟값은 근호 안의 식이 0이 되는 x값임을 이용해 a를 먼저 구해 보세요.",
+      "a를 결정한 뒤, 점 (3, 5)를 함수식에 대입하면 b를 구할 수 있고, 최종적으로 a × b를 계산할 수 있습니다."
+    ]
   },
   {
     "id": "gen_common_170",
@@ -3453,7 +4177,11 @@
     "answerIndex": 1,
     "explanation": "k/(x−2)+3=x에서 k=(x−2)(x−3)=x²−5x+6. 교점의 x좌표는 x²−5x+6−k=0의 두 근이 모두 양수여야 한다. 두 근의 합=5>0, 두 근의 곱=6−k>0이면 k<6, 판별식=25−4(6−k)=1+4k>0이면 k>−1/4. 따라서 −1/4<k<6이고 k≠0인 정수: k=1,2,3,4,5. 최솟값=1.",
     "detailedExplanation": "k/(x−2)+3=x → k=(x−2)(x−3)=x²−5x+6 → x²−5x+(6−k)=0. 두 양의 실근 조건: ①판별식≥0: 25−4(6−k)≥0 → 4k≥−1 → k≥−1/4. ②두 근의 합=5>0 (자동 만족). ③두 근의 곱=6−k>0 → k<6. 또한 x≠2 조건: x=2가 근이 되면 0=0이 아닌 6−k=0 즉 k=6은 이미 제외됨. 종합: −1/4<k<6, k≠0인 정수이면 k=1,2,3,4,5. 최솟값은 1.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "y = k/(x − 2) + 3과 y = x를 연립하면 교점의 x좌표를 구하는 이차방정식이 나옵니다. 두 근이 모두 양수인 조건(근의 합, 근의 곱, 판별식)을 떠올려 보세요.",
+      "연립 후 x² − 5x + (6 − k) = 0이 나오면, 두 양의 실근 조건 세 가지(판별식 > 0, 근의 합 > 0, 근의 곱 > 0)를 모두 적용해 k의 범위를 구하고 조건을 만족하는 정수 중 최솟값을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_common_171",
@@ -3471,7 +4199,11 @@
     "answerIndex": 2,
     "explanation": "남학생 4명을 원형으로 배열하는 방법은 (4−1)!=6가지이고, 남학생 사이사이 4개의 자리에 여학생 3명을 배치하는 방법은 P(4,3)=24가지이므로 총 6×24=144가지이다.",
     "detailedExplanation": "여학생이 모두 이웃하지 않으려면 남학생 사이 자리에만 여학생을 배치해야 한다. ① 남학생 4명 원형 배열: (4−1)! = 3! = 6가지. ② 남학생 4명 사이에 생기는 4개의 빈자리 중 3개를 골라 여학생을 배열: P(4,3) = 4×3×2 = 24가지. ③ 총 경우의 수: 6 × 24 = 144가지.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원형 배열에서 특정 사람들이 서로 이웃하지 않으려면, 먼저 조건 없는 사람들을 원형으로 배열한 뒤 그 사이사이에 조건 있는 사람들을 끼워 넣는 방식을 떠올려 보세요.",
+      "남학생 4명을 원형으로 배열하는 수 (4−1)!을 먼저 구하고, 남학생 사이에 생기는 4개의 빈자리 중 3개를 골라 여학생 3명을 배열하는 수 P(4,3)을 곱하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_172",
@@ -3489,7 +4221,11 @@
     "answerIndex": 1,
     "explanation": "세 수의 합이 홀수가 되려면 홀수가 1개 또는 3개여야 한다. (홀수1개,짝수2개): C(5,1)×C(4,2)=5×6=30가지 조합, (홀수3개): C(5,3)=10가지 조합. 각 조합마다 3!=6가지 배열 → (30+10)×6=240가지.",
     "detailedExplanation": "1~9에서 홀수: 1,3,5,7,9 (5개), 짝수: 2,4,6,8 (4개). 합이 홀수 ↔ 홀수 개수가 홀수(1개 또는 3개). ① 홀수1개+짝수2개: C(5,1)×C(4,2)=5×6=30가지 조합. ② 홀수3개: C(5,3)=10가지 조합. ③ 조합 합계 40가지 각각에 3!=6가지 순열 → 40×6=240가지.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 수의 합이 홀수가 되는 조건을 홀수·짝수 개수의 조합으로 분류해 보세요. (홀수 1개+짝수 2개 또는 홀수 3개일 때 합이 홀수가 됩니다.)",
+      "1~9 중 홀수 5개, 짝수 4개임을 이용해 각 경우의 조합 수를 구한 뒤, 각 조합마다 3!가지의 순열이 가능함을 고려해 (경우의 조합 수 합계) × 6 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_173",
@@ -3507,7 +4243,11 @@
     "answerIndex": 3,
     "explanation": "전체 3⁶=729에서 포함-배제 원리 적용: 729 − C(3,1)×2⁶ + C(3,2)×1⁶ = 729 − 192 + 3 = 540... 재검산: 전체 3⁶=729, 1개 비는 경우 C(3,1)×2⁶=3×64=192, 2개 비는 경우 C(3,2)×1⁶=3. 포함-배제: 729−192+3=540. 선지 재확인 후 정답은 540.",
     "detailedExplanation": "포함-배제 원리 사용. 전체: 3⁶ = 729. A 상자가 빈 경우: 공 6개를 B,C에만 → 2⁶=64, C(3,1)=3상자 선택 → 3×64=192. 두 상자가 동시에 비는 경우: 공 6개를 1개 상자에만 → 1⁶=1, C(3,2)×1=3. 적어도 1개씩: 729 − 192 + 3 = 540.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "빈 상자 없이 분배하는 문제는 포함-배제 원리를 떠올려 보세요. 전체 경우에서 빈 상자가 생기는 경우를 빼는 방식입니다.",
+      "전체 경우의 수 3⁶에서, 한 상자가 비는 경우의 수 C(3,1)×2⁶을 빼고, 두 상자가 동시에 비는 경우의 수 C(3,2)×1⁶을 더하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_174",
@@ -3525,7 +4265,11 @@
     "answerIndex": 1,
     "explanation": "전체 해의 수는 H(3,10)=C(12,2)=66이고, x≥4인 해의 수는 x'=x−4로 치환하면 x'+y+z=6의 음이 아닌 정수해 H(3,6)=C(8,2)=28이므로, 66−28=38이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "음이 아닌 정수해의 개수를 구할 때는 중복조합 H(n,r) = C(n+r−1, r) 공식을 떠올려 보세요.",
+      "전체 해의 수 H(3,10)에서 x ≥ 4인 해의 수를 구하려면, x' = x − 4로 치환해 x' + y + z = 6의 음이 아닌 정수해 수 H(3,6)을 계산하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_common_175",
@@ -3543,7 +4287,11 @@
     "answerIndex": 0,
     "explanation": "a=2a'−1, b=2b'−1, c=2c'−1, d=2d'−1 (a',b',c',d'은 자연수)로 치환하면 a'+b'+c'+d'=8이 되고, 자연수해의 수는 H(4,4)=C(7,3)=35이다.",
     "detailedExplanation": "a,b,c,d가 모두 홀수인 자연수이므로 a=2a'−1 (a'≥1) 형태로 치환. 대입: (2a'−1)+(2b'−1)+(2c'−1)+(2d'−1)=12 → 2(a'+b'+c'+d')=16 → a'+b'+c'+d'=8. 자연수 순서쌍(각 ≥1)의 수: H(4,4)=C(7,3)=35.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "홀수인 자연수를 2k−1 (k는 자연수) 형태로 치환하면 조건을 다루기 쉬워집니다. 네 변수 모두 치환해 보세요.",
+      "a = 2a'−1, b = 2b'−1, c = 2c'−1, d = 2d'−1로 놓으면 a'+b'+c'+d' = ?가 되는지 확인하고, 자연수 순서쌍의 개수를 중복조합 C(7,3)으로 계산하는 식을 세워 보세요."
+    ]
   },
   {
     "id": "hand_com_1",
@@ -3561,7 +4309,11 @@
     "answerIndex": 2,
     "explanation": "x² + y² = (x+y)² − 2xy = 25 − 12 = 13.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x² + y²을 직접 계산하기 어려울 때는 (x + y)²을 전개해 x² + y²을 xy로 표현하는 변환을 떠올려 보세요.",
+      "(x + y)² = x² + 2xy + y²이므로 x² + y² = (x + y)² − 2xy입니다. x + y = 5, xy = 6을 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "hand_com_2",
@@ -3579,7 +4331,11 @@
     "answerIndex": 1,
     "explanation": "근과 계수의 관계로 두 근의 합 = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차방정식 ax²+bx+c=0 에서 두 근의 합은 −b/a 라는 근과 계수의 관계를 활용하세요.",
+      "x²−6x+4=0 에서 a=1, b=−6이에요. 두 근의 합 = −(−6)/1 을 계산해 보세요."
+    ]
   },
   {
     "id": "hand_com_3",
@@ -3597,6 +4353,10 @@
     "answerIndex": 2,
     "explanation": "반지름 r = 3 이므로 넓이는 πr² = 9π.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "표준형 원의 방정식에서 반지름을 먼저 읽어 보세요.",
+      "(x−a)² + (y−b)² = r² 꼴에서 반지름은 r입니다. r을 구한 뒤 원의 넓이 = πr²을 계산해 보세요."
+    ]
   }
 ]

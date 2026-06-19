@@ -15,7 +15,11 @@
     "answerIndex": 2,
     "explanation": "밑이 같으면 지수끼리 더합니다. 2³⁺² = 2⁵ = 32.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "밑이 같은 수의 곱셈에서 지수를 어떻게 처리하는지 떠올려 보세요.",
+      "aᵐ × aⁿ = aᵐ⁺ⁿ 공식을 이용해 지수끼리 더한 뒤 2의 거듭제곱 값을 계산하세요."
+    ]
   },
   {
     "id": "m1_exp_002",
@@ -33,7 +37,11 @@
     "answerIndex": 2,
     "explanation": "지수의 거듭제곱은 지수끼리 곱합니다. 2³ˣ² = 2⁶ = 64.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "거듭제곱의 거듭제곱, 즉 (aᵐ)ⁿ 꼴에서 지수를 어떻게 처리하는지 떠올려 보세요.",
+      "(aᵐ)ⁿ = aᵐˣⁿ 공식을 써서 지수끼리 곱한 뒤 2의 거듭제곱 값을 구하세요."
+    ]
   },
   {
     "id": "m1_exp_003",
@@ -51,7 +59,11 @@
     "answerIndex": 1,
     "explanation": "밑이 같은 나눗셈은 지수끼리 뺍니다. 2⁵⁻² = 2³ = 8.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "밑이 같은 수의 나눗셈에서 지수를 어떻게 처리하는지 떠올려 보세요.",
+      "aᵐ ÷ aⁿ = aᵐ⁻ⁿ 공식을 이용해 지수끼리 뺀 뒤 2의 거듭제곱 값을 계산하세요."
+    ]
   },
   {
     "id": "m1_exp_004",
@@ -69,7 +81,11 @@
     "answerIndex": 1,
     "explanation": "8 = 2³ 이므로 8^(2/3) = (2³)^(2/3) = 2² = 4.",
     "detailedExplanation": "유리수 지수는 거듭제곱근으로 봅니다.\n8^(2/3) = (8^(1/3))² = 2² = 4. (8의 세제곱근은 2)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "8을 2의 거듭제곱으로 바꾼 뒤 유리수 지수 공식 (aᵐ)ⁿ = aᵐˣⁿ을 떠올려 보세요.",
+      "8 = 2³으로 바꾸면 8^(2/3) = (2³)^(2/3) = 2^(3 × 2/3) 이 됩니다. 지수를 정리해 보세요."
+    ]
   },
   {
     "id": "m1_exp_005",
@@ -87,7 +103,11 @@
     "answerIndex": 2,
     "explanation": "9^(1/2) = 3, 27^(1/3) = 3 이므로 3 × 3 = 9.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "9와 27을 각각 소수의 거듭제곱으로 나타낸 뒤 유리수 지수 공식을 적용해 보세요.",
+      "9 = 3², 27 = 3³임을 이용해 9^(1/2) = (3²)^(1/2), 27^(1/3) = (3³)^(1/3) 을 각각 계산한 뒤 곱하세요."
+    ]
   },
   {
     "id": "m1_exp_006",
@@ -105,7 +125,11 @@
     "answerIndex": 2,
     "explanation": "a^(3/2) = (a^(1/2))³ = 3³ = 27.",
     "detailedExplanation": "a^(1/2) = 3 이면 a = 9.\na^(3/2) = a × a^(1/2) = 9 × 3 = 27, 또는 (a^(1/2))³ = 3³ = 27.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a^(3/2)를 a^(1/2)만으로 표현하는 방법을 떠올려 보세요. 지수의 관계를 이용하면 됩니다.",
+      "a^(3/2) = (a^(1/2))³ 임을 이용해 주어진 a^(1/2) = 3 을 대입해 보세요."
+    ]
   },
   {
     "id": "m1_log_001",
@@ -123,7 +147,11 @@
     "answerIndex": 1,
     "explanation": "2³ = 8 이므로 log₂ 8 = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "로그의 정의 logₐb = c ↔ aᶜ = b 를 떠올리세요. 2를 몇 제곱하면 8이 될까요?",
+      "2³ = 8 임을 확인했다면, 로그 정의에 따라 log₂8 = 3 인 이유를 설명해 보세요."
+    ]
   },
   {
     "id": "m1_log_002",
@@ -141,7 +169,11 @@
     "answerIndex": 1,
     "explanation": "log₃ 9 = 2, log₃ 3 = 1 이므로 합은 3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "log₃9와 log₃3을 각각 따로 계산해 보세요. 3을 몇 제곱하면 9, 3이 될까요?",
+      "log₃9 = 2, log₃3 = 1 임을 구한 뒤 두 값을 더하세요."
+    ]
   },
   {
     "id": "m1_log_003",
@@ -159,7 +191,11 @@
     "answerIndex": 1,
     "explanation": "로그의 뺄셈은 진수의 나눗셈. log₂(6/3) = log₂ 2 = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑이 같은 로그의 뺄셈은 진수의 나눗셈으로 바꿀 수 있음을 떠올려 보세요.",
+      "logₐm − logₐn = logₐ(m ÷ n) 공식을 써서 log₂(6 ÷ 3)을 계산해 보세요."
+    ]
   },
   {
     "id": "m1_log_004",
@@ -177,7 +213,11 @@
     "answerIndex": 1,
     "explanation": "log₂ 4 = 2, log₂ 8 = 3 이므로 합은 5. (또는 log₂(4×8) = log₂ 32 = 5)",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑이 같은 로그의 덧셈은 진수의 곱셈으로 바꾸거나, 각각 계산 후 더하는 두 방법을 생각해 보세요.",
+      "log₂4와 log₂8을 각각 '2를 몇 제곱한 값인가'로 계산한 뒤 합산하세요."
+    ]
   },
   {
     "id": "m1_log_005",
@@ -195,7 +235,11 @@
     "answerIndex": 1,
     "explanation": "5 = 10/2 이므로 log₁₀ 5 = log₁₀ 10 − log₁₀ 2 = 1 − a.",
     "detailedExplanation": "상용로그에서 log₁₀ 10 = 1.\nlog₁₀ 5 = log₁₀(10 ÷ 2) = 1 − a.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "5를 10과 2의 관계로 표현하면 로그로 분해할 수 있습니다. 5 = 10 ÷ 2 임을 이용하세요.",
+      "log₁₀5 = log₁₀(10 ÷ 2) = log₁₀10 − log₁₀2 임을 이용해 a로 나타내세요."
+    ]
   },
   {
     "id": "m1_log_006",
@@ -213,7 +257,11 @@
     "answerIndex": 1,
     "explanation": "밑변환공식으로 log₃ 4 = log₂ 4 / log₂ 3. 따라서 log₂ 3 × (log₂ 4 / log₂ 3) = log₂ 4 = 2.",
     "detailedExplanation": "log₃ 4 = log₂ 4 / log₂ 3 (밑변환).\n주어진 식 = log₂ 3 × log₂ 4 / log₂ 3 = log₂ 4 = 2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "밑이 다른 로그끼리의 곱셈에는 밑변환 공식을 활용하면 편리합니다.",
+      "logₐb × logbc = logₐc 성질 또는 밑변환 공식 log₃4 = log₂4 ÷ log₂3 을 이용해 식을 정리해 보세요."
+    ]
   },
   {
     "id": "m1_expf_001",
@@ -231,7 +279,11 @@
     "answerIndex": 2,
     "explanation": "y = 2³ = 8.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "지수함수 y = aˣ에 주어진 x값을 대입하면 y를 구할 수 있습니다.",
+      "y = 2ˣ에 x = 3을 넣으면 y = 2³ 입니다. 2³의 값을 계산하세요."
+    ]
   },
   {
     "id": "m1_expf_002",
@@ -249,7 +301,11 @@
     "answerIndex": 0,
     "explanation": "2⁻¹ = 1/2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "음수 지수를 양수 지수로 바꾸는 규칙 a⁻ⁿ = 1/aⁿ 을 떠올려 보세요.",
+      "y = 2⁻¹ = 1/2¹ 임을 이용하면 y 값을 바로 구할 수 있습니다."
+    ]
   },
   {
     "id": "m1_expf_003",
@@ -267,7 +323,11 @@
     "answerIndex": 1,
     "explanation": "a⁰ = 1 이므로 모든 지수함수는 (0, 1)을 지납니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "어떤 수든 0제곱하면 항상 1이 된다는 지수 법칙을 떠올려 보세요.",
+      "x = 0을 y = aˣ에 대입하면 y = a⁰ = 1 이 됩니다. 따라서 그래프는 항상 y좌표가 1인 점을 지납니다."
+    ]
   },
   {
     "id": "m1_expf_004",
@@ -285,7 +345,11 @@
     "answerIndex": 1,
     "explanation": "8 = 2³ 이므로 2ˣ = 2³, 즉 x = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "우변 8을 밑이 2인 거듭제곱으로 표현해 보세요. 밑이 같아지면 지수를 비교할 수 있습니다.",
+      "8 = 2³ 임을 이용해 2ˣ = 2³으로 만들면, 밑이 같으므로 지수끼리 같다는 조건을 세울 수 있습니다."
+    ]
   },
   {
     "id": "m1_expf_005",
@@ -303,7 +367,11 @@
     "answerIndex": 1,
     "explanation": "2^(a−1) = 1 = 2⁰ 이므로 a − 1 = 0, a = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = 1인 경우 지수함수에서 지수가 어떤 값이 되는지 생각해 보세요. 1 = 2⁰ 임을 이용하세요.",
+      "2^(a−1) = 1 = 2⁰ 이므로 지수끼리 같다는 조건 a − 1 = 0을 세워서 a를 구하세요."
+    ]
   },
   {
     "id": "m1_logf_001",
@@ -321,7 +389,11 @@
     "answerIndex": 1,
     "explanation": "log₂ 8 = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "로그함수 y = log₂x에 x = 8을 대입해 직접 계산해 보세요. 2를 몇 제곱하면 8인가요?",
+      "log₂8 = log₂(2³) = 3 임을 로그 정의로 확인하세요."
+    ]
   },
   {
     "id": "m1_logf_002",
@@ -339,7 +411,11 @@
     "answerIndex": 0,
     "explanation": "log₂ 1 = 0.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "모든 로그에서 logₐ1의 값이 얼마인지 기본 성질을 떠올려 보세요.",
+      "logₐ1 = 0 인 이유는 a⁰ = 1 이기 때문입니다. log₂1에 그대로 적용하세요."
+    ]
   },
   {
     "id": "m1_logf_003",
@@ -357,7 +433,11 @@
     "answerIndex": 1,
     "explanation": "logₐ 1 = 0 이므로 모든 로그함수는 (1, 0)을 지납니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "로그함수 y = logₐx에서 x = 1을 대입하면 y가 얼마가 되는지 생각해 보세요.",
+      "logₐ1 = 0 (왜냐하면 a⁰ = 1) 이므로, 점 (1, 0)을 항상 지나게 됩니다."
+    ]
   },
   {
     "id": "m1_logf_004",
@@ -375,7 +455,11 @@
     "answerIndex": 2,
     "explanation": "log₂ x = 4 이면 x = 2⁴ = 16.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "로그 방정식 logₐx = c는 x = aᶜ 로 바꿀 수 있다는 정의를 떠올려 보세요.",
+      "log₂x = 4 이면 x = 2⁴ 입니다. 2⁴의 값을 계산하세요."
+    ]
   },
   {
     "id": "m1_trig_001",
@@ -393,7 +477,11 @@
     "answerIndex": 0,
     "explanation": "특수각의 삼각비에서 sin 30° = 1/2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "특수각(30°, 45°, 60°)의 삼각비 표를 떠올려 보세요. 30°는 어떤 직각삼각형에서 나오나요?",
+      "1:2:√3 비를 가진 30-60-90 직각삼각형에서 sin 30° = (짧은 변) ÷ (빗변) 으로 식을 세워 보세요."
+    ]
   },
   {
     "id": "m1_trig_002",
@@ -411,7 +499,11 @@
     "answerIndex": 0,
     "explanation": "특수각의 삼각비에서 cos 60° = 1/2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "특수각 표에서 cos 60° 값을 직접 떠올려 보세요. 30-60-90 삼각형의 세 변 비율이 단서입니다.",
+      "변 비율이 1:2:√3인 직각삼각형에서 cos 60° = (60° 에 인접한 변) ÷ (빗변) 으로 식을 세워 보세요."
+    ]
   },
   {
     "id": "m1_trig_003",
@@ -429,7 +521,11 @@
     "answerIndex": 2,
     "explanation": "tan 45° = sin 45° / cos 45° = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "tan θ = sin θ ÷ cos θ 임을 기억하세요. 45°는 sin과 cos의 값이 어떤 특별한 관계인가요?",
+      "45-45-90 직각삼각형에서 두 직각변의 길이가 같으므로, sin 45° = cos 45° 입니다. tan 45° = sin 45° ÷ cos 45° 를 계산해 보세요."
+    ]
   },
   {
     "id": "m1_trig_004",
@@ -447,7 +543,11 @@
     "answerIndex": 1,
     "explanation": "삼각함수의 기본 항등식: sin²θ + cos²θ = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "삼각함수에서 가장 기본이 되는 항등식을 떠올려 보세요. sin²θ 와 cos²θ 의 합은 항상 어떤 값인가요?",
+      "단위원에서 점 P(x, y)에 대해 x² + y² = 1 이고, sin θ = y, cos θ = x 이므로 sin²θ + cos²θ 에 대입해 보세요."
+    ]
   },
   {
     "id": "m1_trig_005",
@@ -465,7 +565,11 @@
     "answerIndex": 1,
     "explanation": "cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25. 예각이므로 cos θ = 4/5.",
     "detailedExplanation": "sin²θ + cos²θ = 1 에서 cos²θ = 1 − (3/5)² = 16/25.\nθ가 예각이면 cos θ > 0 이므로 cos θ = 4/5. (3-4-5 직각삼각형)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "sin²θ + cos²θ = 1 항등식을 이용해 cos²θ 를 먼저 구해 보세요. 예각이라는 조건이 cos θ 의 부호를 결정합니다.",
+      "cos²θ = 1 − sin²θ = 1 − (3/5)² 로 식을 세우고, 예각이면 cos θ > 0 임을 이용해 √ 를 취하세요."
+    ]
   },
   {
     "id": "m1_trig_006",
@@ -483,7 +587,11 @@
     "answerIndex": 2,
     "explanation": "π 라디안 = 180° 이므로 π/2 = 90°.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "호도법과 육십분법의 관계를 떠올려 보세요. π 라디안이 몇 도인지 기억하면 비례로 풀 수 있습니다.",
+      "π 라디안 = 180° 이므로, π/2 라디안은 180° × (1/2) 로 계산해 보세요."
+    ]
   },
   {
     "id": "m1_trig_g_001",
@@ -501,7 +609,11 @@
     "answerIndex": 1,
     "explanation": "sin x 의 최댓값은 1 이므로 2 sin x 의 최댓값은 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = A sin x 의 최댓값은 sin x 의 최댓값인 1에 계수 A를 곱한 값임을 생각해 보세요.",
+      "sin x 의 최댓값이 1 이므로, y = 2 sin x 의 최댓값은 2 × 1 로 식을 세워 보세요."
+    ]
   },
   {
     "id": "m1_trig_g_002",
@@ -519,7 +631,11 @@
     "answerIndex": 0,
     "explanation": "cos x 의 최솟값은 −1 이므로 3 cos x 의 최솟값은 −3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = A cos x 의 최솟값은 cos x 의 최솟값인 −1에 계수 A를 곱한 값임을 떠올려 보세요.",
+      "cos x 의 최솟값이 −1 이므로, y = 3 cos x 의 최솟값은 3 × (−1) 로 계산해 보세요."
+    ]
   },
   {
     "id": "m1_trig_g_003",
@@ -537,7 +653,11 @@
     "answerIndex": 2,
     "explanation": "y = sin x 는 2π 마다 같은 값이 반복됩니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = sin x 는 x가 얼마만큼 증가하면 같은 값이 반복될까요? 그래프의 한 주기를 그려 보세요.",
+      "sin 0 = 0, sin 2π = 0 이 되고, 0에서 2π 사이에서 한 파형이 완성됩니다. 주기 = 2π 임을 확인해 보세요."
+    ]
   },
   {
     "id": "m1_trig_g_004",
@@ -555,7 +675,11 @@
     "answerIndex": 1,
     "explanation": "y = sin bx 의 주기는 2π/b. b = 2 이므로 주기는 π.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = sin bx 의 주기 공식을 떠올려 보세요. 계수 b가 주기에 어떤 영향을 주나요?",
+      "주기 = 2π ÷ b 이므로, b = 2 를 대입해 2π ÷ 2 로 계산해 보세요."
+    ]
   },
   {
     "id": "m1_trig_g_005",
@@ -573,7 +697,11 @@
     "answerIndex": 2,
     "explanation": "2 sin x 의 최댓값 2 에 1을 더해 3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = A sin x + D 에서 최댓값은 sin x 의 최댓값 1을 이용해 구합니다. 수직 이동 D에 주목하세요.",
+      "2 sin x 의 최댓값은 2 이고, 여기에 상수 1을 더한 값이 y = 2 sin x + 1 의 최댓값입니다."
+    ]
   },
   {
     "id": "m1_trig_law_001",
@@ -591,7 +719,11 @@
     "answerIndex": 1,
     "explanation": "코사인법칙 a² = b² + c² − 2bc cos A. A = 90° 이면 cos A = 0 이므로 a² = 25, a = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "코사인법칙 a² = b² + c² − 2bc cos A 를 떠올려 보세요. A = 90° 이면 cos A 가 특별한 값이 됩니다.",
+      "cos 90° = 0 이므로 코사인법칙이 a² = b² + c² 로 단순해집니다. b = 3, c = 4 를 대입해 보세요."
+    ]
   },
   {
     "id": "m1_trig_law_002",
@@ -609,7 +741,11 @@
     "answerIndex": 1,
     "explanation": "c² = a² + b² − 2ab cos C = 4 + 4 − 2·2·2·(1/2) = 4. 따라서 c = 2.",
     "detailedExplanation": "코사인법칙 c² = a² + b² − 2ab cos C.\n= 4 + 4 − 8 × cos 60° = 8 − 8 × (1/2) = 4, 즉 c = 2. (정삼각형)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "코사인법칙 c² = a² + b² − 2ab cos C 를 이용해 보세요. cos 60° 의 값을 특수각 표에서 확인하세요.",
+      "cos 60° = 1/2 이므로 c² = 4 + 4 − 2 × 2 × 2 × (1/2) 로 식을 세워 c² 값을 구하세요."
+    ]
   },
   {
     "id": "m1_trig_law_003",
@@ -627,7 +763,11 @@
     "answerIndex": 2,
     "explanation": "사인법칙 a/sin A = b/sin B. b = a · sin B / sin A = 5 × 1 / (1/2) = 10.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "사인법칙 a/sin A = b/sin B 를 떠올려 보세요. sin 90° 의 값이 계산을 단순하게 만들어 줍니다.",
+      "sin 90° = 1, sin 30° = 1/2 이므로 b = a × sin B ÷ sin A = 5 × 1 ÷ (1/2) 로 계산해 보세요."
+    ]
   },
   {
     "id": "m1_trig_law_004",
@@ -645,7 +785,11 @@
     "answerIndex": 1,
     "explanation": "사인법칙 a / sin A = 2R. 2√3 / (√3/2) = 4 = 2R 이므로 R = 2.",
     "detailedExplanation": "사인법칙의 확장형 a / sin A = 2R.\n2√3 ÷ sin 60° = 2√3 ÷ (√3/2) = 4 = 2R, 따라서 R = 2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "사인법칙의 확장형 a ÷ sin A = 2R 을 떠올려 보세요. a 와 sin A 를 알면 R을 바로 구할 수 있습니다.",
+      "sin 60° = √3/2 이므로 2R = 2√3 ÷ (√3/2) 로 식을 세우고 2R 을 먼저 구한 뒤 R 을 계산하세요."
+    ]
   },
   {
     "id": "seq_001",
@@ -663,7 +807,11 @@
     "answerIndex": 2,
     "explanation": "등차수열의 일반항은 aₙ = a₁ + (n − 1)d 입니다. a₅ = 3 + 4×2 = 11.",
     "detailedExplanation": "a₅ = a₁ + (5−1)d = 3 + 4×2 = 11.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등차수열의 일반항 공식 aₙ = a₁ + (n−1)d를 떠올려 보세요.",
+      "a₅를 구하려면 n=5, a₁=3, d=2를 공식에 대입하세요: a₅ = 3 + (5−1)×2."
+    ]
   },
   {
     "id": "seq_002",
@@ -681,7 +829,11 @@
     "answerIndex": 2,
     "explanation": "a₈ = 5 + (8−1)×(−2) = 5 − 14 = −9.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공차가 음수이면 수열이 감소해요. 일반항 공식 aₙ = a₁ + (n−1)d를 적용하세요.",
+      "a₈ = 5 + (8−1)×(−2)를 계산해 보세요. 부호에 주의하세요."
+    ]
   },
   {
     "id": "seq_007",
@@ -699,7 +851,11 @@
     "answerIndex": 1,
     "explanation": "a₅ = a₁ + 4d 이므로 14 = 2 + 4d, d = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등차수열에서 두 항의 관계식 aₙ = a₁ + (n−1)d를 이용하면 방정식을 세울 수 있어요.",
+      "a₅ = a₁ + 4d에 주어진 값을 대입하면 d에 대한 방정식이 나옵니다."
+    ]
   },
   {
     "id": "seq_003",
@@ -761,7 +917,11 @@
     "answerIndex": 0,
     "explanation": "(a₃+a₅) − (a₂+a₄) = 2d = 6, d = 3. a₂+a₄ = 2a₁+4d = 14 → a₁ = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 조건식의 차를 구하면 공차 d를 바로 얻을 수 있어요.",
+      "(a₃+a₅) − (a₂+a₄) = 2d임을 이용해 d를 구한 뒤, a₂+a₄를 a₁과 d로 표현하세요."
+    ]
   },
   {
     "id": "seq_006",
@@ -801,7 +961,11 @@
     "answerIndex": 2,
     "explanation": "등비수열의 일반항은 aₙ = a₁·rⁿ⁻¹. a₄ = 2×3³ = 54.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등비수열의 일반항 공식 aₙ = a₁ × rⁿ⁻¹을 떠올리세요.",
+      "a₄ = 2 × 3⁴⁻¹ = 2 × 3³ 을 직접 계산해 보세요."
+    ]
   },
   {
     "id": "seq_015",
@@ -819,7 +983,11 @@
     "answerIndex": 1,
     "explanation": "a₃ = 3 × 2² = 12.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등비수열의 일반항 aₙ = a₁ × rⁿ⁻¹을 이용하세요.",
+      "a₃ = 3 × 2³⁻¹ = 3 × 2² 를 계산하면 됩니다."
+    ]
   },
   {
     "id": "seq_012",
@@ -859,7 +1027,11 @@
     "answerIndex": 1,
     "explanation": "등비중항이므로 x² = 3 × 12 = 36. x > 0 이므로 x = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 수가 등비수열을 이루면 가운데 수를 등비중항이라 해요. 어떤 성질이 있을까요?",
+      "등비중항의 성질 x² = (앞 항) × (뒤 항)을 세 수 3, x, 12에 적용해 보세요."
+    ]
   },
   {
     "id": "seq_013",
@@ -877,7 +1049,11 @@
     "answerIndex": 2,
     "explanation": "Sₙ = a₁(rⁿ−1)/(r−1) = 2(3⁴−1)/(3−1) = 2×80/2 = 80.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "등비수열의 합 공식 Sₙ = a₁(rⁿ−1)/(r−1) (r≠1)을 떠올리세요.",
+      "a₁=2, r=3, n=4를 공식에 대입하면: S₄ = 2×(3⁴−1)/(3−1)."
+    ]
   },
   {
     "id": "seq_014",
@@ -895,7 +1071,11 @@
     "answerIndex": 1,
     "explanation": "a₅ / a₂ = r³ = 8 이므로 r = 2. a₁ = a₂ / r = 4 / 2 = 2.",
     "detailedExplanation": "a₅ = a₂ · r³ 이므로 r³ = 32/4 = 8, r = 2.\na₁ = a₂ / r = 4 / 2 = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₅를 a₂와 공비 r로 표현하면 a₅ = a₂ × r³ 이에요.",
+      "r³ = a₅ ÷ a₂ 로 공비를 먼저 구한 뒤, a₁ = a₂ ÷ r 를 계산하세요."
+    ]
   },
   {
     "id": "seq_021",
@@ -913,7 +1093,11 @@
     "answerIndex": 2,
     "explanation": "1부터 n까지의 합은 n(n+1)/2. 10×11/2 = 55.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "1부터 n까지 자연수의 합 공식 n(n+1)/2 를 떠올리세요.",
+      "n=10을 공식에 대입하면 10×11/2 가 됩니다."
+    ]
   },
   {
     "id": "seq_022",
@@ -931,7 +1115,11 @@
     "answerIndex": 2,
     "explanation": "제곱의 합은 n(n+1)(2n+1)/6 = 6×7×13/6 = 91.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "제곱의 합 공식 ∑k² = n(n+1)(2n+1)/6 을 활용하세요.",
+      "n=6을 공식에 대입하면 6×7×13/6 이 됩니다."
+    ]
   },
   {
     "id": "seq_025",
@@ -949,7 +1137,11 @@
     "answerIndex": 2,
     "explanation": "2·(1+2+3+4+5) + 5 = 2×15 + 5 = 35.",
     "detailedExplanation": "∑(2k+1) = 2∑k + ∑1 = 2×(5×6/2) + 5 = 30 + 5 = 35.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∑(2k+1) = 2∑k + ∑1 로 시그마를 분리할 수 있어요.",
+      "∑(k=1~5) k = 5×6/2 = 15, ∑(k=1~5) 1 = 5 를 이용해 계산하세요."
+    ]
   },
   {
     "id": "seq_023",
@@ -967,7 +1159,11 @@
     "answerIndex": 1,
     "explanation": "n(n+1)/2 = 45 → n(n+1) = 90 = 9×10 이므로 n = 9.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "합 공식 n(n+1)/2 = 45 로 놓고 n에 대한 방정식을 세워요.",
+      "n(n+1) = 90 이 되는 연속한 두 자연수를 찾아보세요."
+    ]
   },
   {
     "id": "seq_024",
@@ -1007,7 +1203,11 @@
     "answerIndex": 2,
     "explanation": "a₁ = 1, a₂ = 4, a₃ = 7. (공차 3인 등차수열)",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점화식 aₙ₊₁ = aₙ + 3 은 매 항마다 3을 더하는 규칙이에요. 어떤 수열일까요?",
+      "a₁=1부터 차례대로 a₂, a₃을 직접 계산해 보세요."
+    ]
   },
   {
     "id": "seq_032",
@@ -1025,7 +1225,11 @@
     "answerIndex": 2,
     "explanation": "a₁ = 2, a₂ = 4, a₃ = 8, a₄ = 16. (공비 2인 등비수열)",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점화식 aₙ₊₁ = 2aₙ 은 매 항마다 2를 곱하는 규칙이에요. 어떤 수열일까요?",
+      "a₁=2부터 차례로 a₂, a₃, a₄를 계산해 보세요."
+    ]
   },
   {
     "id": "seq_035",
@@ -1043,7 +1247,11 @@
     "answerIndex": 2,
     "explanation": "a₁=3, a₂=5, a₃=7, a₄=9, a₅=11.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점화식 aₙ₊₁ = aₙ + 2 에서 공차가 2인 등차수열임을 알 수 있어요.",
+      "a₁=3에서 시작해 차례대로 a₂, a₃, a₄, a₅를 구해 보세요."
+    ]
   },
   {
     "id": "seq_033",
@@ -1061,7 +1269,11 @@
     "answerIndex": 2,
     "explanation": "a₂=2, a₃=4, a₄=7, a₅=11. (더해지는 값이 1, 2, 3, 4)",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ = aₙ + n 에서 더해지는 값이 n으로 매 항마다 달라지는 점에 주목하세요.",
+      "a₁=1부터 차례로 a₂=a₁+1, a₃=a₂+2, a₄=a₃+3, a₅=a₄+4 를 계산하세요."
+    ]
   },
   {
     "id": "seq_034",
@@ -1079,7 +1291,11 @@
     "answerIndex": 2,
     "explanation": "a₁=1, a₂=3, a₃=7, a₄=15. (일반항 aₙ = 2ⁿ − 1)",
     "detailedExplanation": "a₂ = 2×1+1 = 3, a₃ = 2×3+1 = 7, a₄ = 2×7+1 = 15.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ = 2aₙ + 1 꼴의 점화식은 고정점(α = 2α+1)을 구해 등비수열로 변환할 수 있어요.",
+      "a₁=1부터 차례로 a₂=3, a₃=7, a₄를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_1",
@@ -1097,7 +1313,11 @@
     "answerIndex": 1,
     "explanation": "지수법칙 aᵐ × aⁿ = aᵐ⁺ⁿ에 의해 2³ × 2⁴ = 2³⁺⁴ = 2⁷ = 128이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "밑이 같은 수의 곱셈에서 지수법칙 aᵐ × aⁿ = aᵐ⁺ⁿ을 떠올려 보세요.",
+      "3 + 4 = 7이므로 2³ × 2⁴ = 2⁷ 입니다. 2⁷의 값을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_2",
@@ -1115,7 +1335,11 @@
     "answerIndex": 2,
     "explanation": "aᵐ × aⁿ = aᵐ⁺ⁿ이므로 3²⁄³ × 3¹⁄³ = 3²⁄³⁺¹⁄³ = 3¹ = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "밑이 같은 수의 곱셈에서 유리수 지수끼리도 aᵐ × aⁿ = aᵐ⁺ⁿ이 성립합니다.",
+      "2/3 + 1/3 = 1 이므로 3^(2/3) × 3^(1/3) = 3¹ 입니다. 3¹의 값을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_3",
@@ -1133,7 +1357,11 @@
     "answerIndex": 1,
     "explanation": "8¹⁄³ = (2³)¹⁄³ = 2, 4¹⁄² = (2²)¹⁄² = 2이므로 (2 + 2)² = 4² = 16이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "8^(1/3)과 4^(1/2)를 각각 소수의 거듭제곱으로 바꿔 단순화한 뒤 괄호 안을 먼저 계산하세요.",
+      "8 = 2³이므로 8^(1/3) = 2, 4 = 2²이므로 4^(1/2) = 2 임을 이용해 (2 + 2)²을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_4",
@@ -1151,7 +1379,11 @@
     "answerIndex": 1,
     "explanation": "8ˣ = (2³)ˣ = (2ˣ)³ = 27, 4ˣ = (2²)ˣ = (2ˣ)² = 9이므로 27 − 2 × 9 = 27 − 18 = 9이다.",
     "detailedExplanation": "2ˣ = 3으로 놓으면 8ˣ = (2³)ˣ = (2ˣ)³ = 3³ = 27, 4ˣ = (2²)ˣ = (2ˣ)² = 3² = 9이다. 따라서 8ˣ − 2 × 4ˣ = 27 − 18 = 9이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "8ˣ와 4ˣ를 모두 2ˣ의 거듭제곱으로 표현해 보세요. 지수법칙 (aᵐ)ⁿ = aᵐˣⁿ을 활용하세요.",
+      "8ˣ = (2³)ˣ = (2ˣ)³, 4ˣ = (2²)ˣ = (2ˣ)²이고 2ˣ = 3임을 대입하면 식을 계산할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_5",
@@ -1169,7 +1401,11 @@
     "answerIndex": 1,
     "explanation": "4ˣ⁺¹ = 2²⁽ˣ⁺¹⁾ = 2²ˣ⁺², 8^(2x−1) = 2³⁽²ˣ⁻¹⁾ = 2⁶ˣ⁻³이므로 2x+2 = 6x−3, 4x = 5, x = 5⁄4이다.",
     "detailedExplanation": "밑을 2로 통일하면 4ˣ⁺¹ = 2²⁽ˣ⁺¹⁾ = 2²ˣ⁺², 8^(2x−1) = 2³⁽²ˣ⁻¹⁾ = 2⁶ˣ⁻³이다. 지수를 비교하면 2x + 2 = 6x − 3이므로 4x = 5, x = 5⁄4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "양변을 밑이 2인 거듭제곱으로 통일하면 지수끼리 비교할 수 있습니다. 4 = 2², 8 = 2³을 이용하세요.",
+      "4^(x+1) = 2^(2(x+1)), 8^(2x−1) = 2^(3(2x−1))으로 바꾼 뒤 지수끼리 방정식을 세워 x를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_6",
@@ -1187,7 +1423,11 @@
     "answerIndex": 1,
     "explanation": "log₃27 = 3, log₃(1/3) = −1이므로 3 + (−1) = 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "log₃27과 log₃(1/3)을 각각 '3을 몇 제곱한 값'인지 생각해 계산해 보세요.",
+      "27 = 3³이므로 log₃27 = 3, 그리고 1/3 = 3⁻¹이므로 log₃(1/3) = −1 입니다. 두 값을 더하세요."
+    ]
   },
   {
     "id": "gen_math1_7",
@@ -1205,7 +1445,11 @@
     "answerIndex": 0,
     "explanation": "45 = 3² × 5이므로 log₂45 = 2log₂3 + log₂5 = 2a + b이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "45를 소인수분해하여 3과 5의 곱으로 나타낸 뒤 로그의 덧셈·지수 법칙을 이용하세요.",
+      "45 = 3² × 5이므로 log₂45 = log₂(3²) + log₂5 = 2·log₂3 + log₂5 = 2a + b 임을 이용하세요."
+    ]
   },
   {
     "id": "gen_math1_8",
@@ -1223,7 +1467,11 @@
     "answerIndex": 1,
     "explanation": "log₄[x(x−6)] = 2이므로 x(x−6) = 16, x² − 6x − 16 = 0, (x−8)(x+2) = 0. 진수 조건 x > 6에서 x = 8이다.",
     "detailedExplanation": "x(x − 6) = 4² = 16에서 x² − 6x − 16 = 0을 풀면 x = 8 또는 x = −2. 진수 조건에 의해 x > 6이어야 하므로 x = 8이 유일한 해이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 로그의 합은 진수의 곱으로 합칠 수 있습니다. log₄[x(x−6)] = 2로 변환해 보세요.",
+      "log₄[x(x−6)] = 2 이면 x(x−6) = 4² = 16 이므로 이차방정식을 세우되, 반드시 진수 조건(x > 0, x − 6 > 0)도 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_10",
@@ -1241,7 +1489,11 @@
     "answerIndex": 1,
     "explanation": "y = 2³ = 2 × 2 × 2 = 8이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "지수함수 y = aˣ에서 x 값을 그대로 대입해 계산합니다.",
+      "y = 2ˣ에 x = 3을 대입하면 y = 2³ 입니다. 2를 세 번 곱해 보세요."
+    ]
   },
   {
     "id": "gen_math1_11",
@@ -1259,7 +1511,11 @@
     "answerIndex": 1,
     "explanation": "3ᵃ = 27 = 3³이므로 a = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = 3ˣ의 그래프가 점 (a, 27)을 지난다는 것은 3ᵃ = 27임을 의미합니다.",
+      "27을 3의 거듭제곱으로 나타낸 뒤 밑이 같으므로 지수끼리 같다는 조건으로 a를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_12",
@@ -1277,7 +1533,11 @@
     "answerIndex": 2,
     "explanation": "밑이 0 < 1/2 < 1인 지수함수는 단조감소함수이므로, x가 증가하면 y는 감소한다.",
     "detailedExplanation": "지수함수 y = aˣ에서 0 < a < 1이면 감소함수, a > 1이면 증가함수이다. 또한 지수함수의 그래프는 항상 점 (0, 1)을 지나며, 치역은 y > 0인 양의 실수 전체이다.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "지수함수 y = aˣ에서 밑 a의 범위(0 < a < 1 인지, a > 1 인지)가 함수의 증감을 결정합니다.",
+      "밑 1/2는 0 < 1/2 < 1이므로 x가 커질수록 y가 줄어드는 감소함수입니다. 이를 토대로 각 선택지를 판단하세요."
+    ]
   },
   {
     "id": "gen_math1_13",
@@ -1295,7 +1555,11 @@
     "answerIndex": 2,
     "explanation": "4ˣ⁺¹ = 2²⁽ˣ⁺¹⁾, 8ˣ⁻¹ = 2³⁽ˣ⁻¹⁾ 로 바꾸면 2(x+1) = 3(x−1), 즉 2x+2 = 3x−3이므로 x = 5이다.",
     "detailedExplanation": "4 = 2², 8 = 2³으로 통일하면: 2²⁽ˣ⁺¹⁾ = 2³⁽ˣ⁻¹⁾ → 2(x+1) = 3(x−1) → 2x+2 = 3x−3 → x = 5. 검산: 4⁶ = 4096, 8⁴ = 4096 (일치).",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "양변을 밑이 2인 거듭제곱으로 통일하면 지수끼리 방정식을 세울 수 있습니다. 4 = 2², 8 = 2³을 이용하세요.",
+      "4^(x+1) = 2^(2(x+1)), 8^(x−1) = 2^(3(x−1))으로 변환해 지수끼리 등식 2(x+1) = 3(x−1)을 세우세요."
+    ]
   },
   {
     "id": "gen_math1_14",
@@ -1313,7 +1577,11 @@
     "answerIndex": 1,
     "explanation": "y = 2ˣ 와 y = 2⁻ˣ 는 x를 −x로 바꾼 관계이므로 y축에 대하여 대칭이다.",
     "detailedExplanation": "y = 2⁻ˣ = (1/2)ˣ 이므로, y = 2ˣ 의 그래프에서 x 대신 −x를 대입한 것과 같다. 이는 y축 대칭을 의미한다. 두 그래프 모두 점근선은 x축(y = 0)으로 같고, y = 2ˣ 는 (1, 2)를 지나지만 y = 2⁻ˣ 는 (1, 1/2)를 지나므로 두 그래프 모두 (1, 2)를 지나지는 않는다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = 2ˣ와 y = 2^(−x)의 관계를 '어떤 변환'으로 표현할 수 있는지 생각해 보세요.",
+      "f(−x) = 2^(−x)이므로 두 그래프는 y축을 기준으로 대칭입니다. 이 사실을 각 선택지와 비교해 보세요."
+    ]
   },
   {
     "id": "gen_math1_15",
@@ -1331,7 +1599,11 @@
     "answerIndex": 1,
     "explanation": "로그함수 y = logₐf(x)에서 진수 조건 f(x) > 0이 필요하므로 x − 1 > 0, 즉 x > 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "로그함수에서는 진수가 반드시 양수여야 한다는 조건을 떠올려 보세요.",
+      "y = log₃(x − 1)에서 진수 x − 1 > 0이 되어야 하므로 x의 범위를 부등식으로 나타내세요."
+    ]
   },
   {
     "id": "gen_math1_16",
@@ -1349,7 +1621,11 @@
     "answerIndex": 1,
     "explanation": "로그함수 y = logₐx는 밑 a에 관계없이 항상 점 (1, 0)을 지난다. 밑이 0 < a < 1이면 감소함수이고, 점근선은 x = 0(y축)이며, x축과는 만나지 않는다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "로그함수 y = logₐx는 밑 a의 크기에 따라 증가함수·감소함수가 달라지며, 항상 지나는 점이 있습니다.",
+      "밑 1/2는 0 < 1/2 < 1이므로 감소함수이고, logₐ1 = 0이므로 점 (1, 0)을 반드시 지납니다. 점근선도 확인해 보세요."
+    ]
   },
   {
     "id": "gen_math1_17",
@@ -1367,7 +1643,11 @@
     "answerIndex": 2,
     "explanation": "log₁₀(2¹⁰) = 10 × 0.3010 = 3.010이므로 2¹⁰ = 10^3.010 = 10³ × 10^0.010. 10^0.010 ≈ 1.023이므로 최고 자리 숫자는 1이다.",
     "detailedExplanation": "log₁₀(2¹⁰) = 10 × log₁₀2 = 10 × 0.3010 = 3.010. 정수 부분이 3이므로 2¹⁰은 4자리 수이다. 소수 부분 0.010에 대해 10^0.010 ≈ 1.023이므로 2¹⁰ ≈ 1.023 × 10³ = 1023, 최고 자리 숫자는 1이다. 실제 2¹⁰ = 1024로 일치한다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "상용로그의 지표와 가수 개념을 떠올리세요. log₁₀N = (정수부분) + (소수부분)에서 정수부분이 지표이고, 자릿수는 지표 + 1입니다.",
+      "log₁₀(2¹⁰) = 10 × 0.3010을 계산한 뒤 정수 부분(지표)으로 자릿수를, 소수 부분(가수)으로 log값의 소수부분을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_18",
@@ -1385,7 +1665,11 @@
     "answerIndex": 1,
     "explanation": "단위원에서 각 θ에 대응하는 점 P(x, y)에 대해 sin θ = y, cos θ = x로 정의된다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "단위원 위의 점 P(x, y) 에 대해 sin θ, cos θ, tan θ 를 각각 x, y, r 로 어떻게 정의하는지 떠올려 보세요.",
+      "단위원(r = 1)에서는 P(x, y) 라 할 때 sin θ = y, cos θ = x 로 정의합니다. 어느 좌표에 해당하는지 확인해 보세요."
+    ]
   },
   {
     "id": "gen_math1_19",
@@ -1403,7 +1687,11 @@
     "answerIndex": 2,
     "explanation": "cos 0° = 1, sin 90° = 1, tan 45° = 1이므로 합은 1 + 1 + 1 = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "특수각 0°, 90°, 45° 의 sin, cos, tan 값을 각각 떠올려 보세요.",
+      "cos 0° = 1, sin 90° = 1, tan 45° = 1 을 각각 구한 뒤 세 값을 더해 보세요."
+    ]
   },
   {
     "id": "gen_math1_20",
@@ -1421,7 +1709,11 @@
     "answerIndex": 2,
     "explanation": "제3사분면에서는 sin θ < 0, cos θ < 0이고, tan θ = sin θ / cos θ이므로 (음수)÷(음수) = 양수가 된다.",
     "detailedExplanation": "제3사분면은 x < 0, y < 0인 영역이다. sin θ = y < 0, cos θ = x < 0이므로 tan θ = y/x > 0이다. sin θ + cos θ는 두 음수의 합이므로 음수이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "제3사분면에서는 x < 0, y < 0 이므로 sin θ 와 cos θ 의 부호를 먼저 판단해 보세요.",
+      "tan θ = sin θ ÷ cos θ 이고 제3사분면에서 sin θ < 0, cos θ < 0 이므로 tan θ 의 부호를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_21",
@@ -1439,7 +1731,11 @@
     "answerIndex": 1,
     "explanation": "cos θ > 0이고 sin θ < 0이므로 θ는 제4사분면의 각이다. sin²θ + cos²θ = 1에서 cos θ = 4/5이므로 tan θ = sin θ / cos θ = (−3/5)/(4/5) = −3/4이다.",
     "detailedExplanation": "sin θ = −3/5이므로 sin²θ = 9/25, cos²θ = 1 − 9/25 = 16/25, cos θ = ±4/5. cos θ > 0 조건에 의해 cos θ = 4/5. 따라서 tan θ = (−3/5) ÷ (4/5) = −3/4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "sin θ < 0, cos θ > 0 이면 θ 는 몇 사분면의 각인가요? 사분면을 확인한 뒤 sin²θ + cos²θ = 1 을 이용하세요.",
+      "cos²θ = 1 − sin²θ = 1 − 9/25 로 cos θ 를 먼저 구한 뒤 tan θ = sin θ ÷ cos θ 로 식을 세우세요."
+    ]
   },
   {
     "id": "gen_math1_22",
@@ -1457,7 +1753,11 @@
     "answerIndex": 1,
     "explanation": "sin θ = √3/2를 만족하는 기준각은 60°이며, sin θ ≥ √3/2를 만족하는 범위는 단위원에서 y좌표가 √3/2 이상인 구간인 60° ≤ θ ≤ 120°이다.",
     "detailedExplanation": "sin 60° = sin 120° = √3/2이고, sin θ는 90°일 때 최댓값 1을 가진다. 따라서 sin θ ≥ √3/2를 만족하는 θ의 범위는 60° ≤ θ ≤ 120°이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "sin θ = √3/2 가 되는 각의 기준각이 몇 도인지 특수각 표에서 찾아보세요. 그래프에서 y 좌표가 √3/2 이상인 범위를 생각해 보세요.",
+      "sin θ = √3/2 를 만족하는 θ 는 60° 와 120° 두 곳입니다. sin θ ≥ √3/2 인 범위는 두 값 사이임을 이용해 보세요."
+    ]
   },
   {
     "id": "gen_math1_23",
@@ -1475,7 +1775,11 @@
     "answerIndex": 2,
     "explanation": "cos x 의 범위는 −1 ≤ cos x ≤ 1 이므로 최댓값은 1, 최솟값은 −1 이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = cos x 의 범위는 −1 ≤ cos x ≤ 1 임을 기억하세요. 최댓값과 최솟값을 이 범위에서 바로 읽을 수 있습니다.",
+      "cos x 가 가질 수 있는 가장 큰 값과 가장 작은 값을 범위 −1 ≤ cos x ≤ 1 에서 직접 확인해 보세요."
+    ]
   },
   {
     "id": "gen_math1_24",
@@ -1493,7 +1797,11 @@
     "answerIndex": 2,
     "explanation": "y = A sin(Bx) 의 주기는 2π/|B| 이므로 B = 3 일 때 주기는 2π/3 이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "y = A sin(Bx) 의 주기 공식을 떠올려 보세요. 계수 B 가 커지면 주기는 어떻게 변하나요?",
+      "주기 = 2π ÷ |B| 이므로 B = 3 을 대입하여 2π ÷ 3 으로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_25",
@@ -1511,7 +1819,11 @@
     "answerIndex": 2,
     "explanation": "sin 함수의 최댓값은 1 이므로 y 의 최댓값은 3 × 1 + 1 = 4 이다.",
     "detailedExplanation": "y = A sin(Bx + C) + D 에서 최댓값은 |A| + D, 최솟값은 −|A| + D 이다. A = 3, D = 1 이므로 최댓값 = 3 + 1 = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = A sin(Bx + C) + D 에서 최댓값은 sin 의 최댓값 1 과 진폭 A, 수직 이동 D 를 이용해 구합니다.",
+      "A = 3, D = 1 이므로 최댓값 = A × 1 + D = 3 + 1 로 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_math1_26",
@@ -1529,7 +1841,11 @@
     "answerIndex": 1,
     "explanation": "sin x = √2/2 의 해는 x = π/4, 3π/4 로 2개이다.",
     "detailedExplanation": "0 ≤ x < 2π 에서 sin x = √2/2 > 0 이면 x 가 제1사분면과 제2사분면에 해가 하나씩 존재한다. x = π/4 와 x = π − π/4 = 3π/4 가 해이므로 총 2개이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "sin x = √2/2 를 만족하는 기준각이 몇 라디안인지 특수각 표에서 찾아보세요. 양수(y > 0) 인 사분면을 생각해 보세요.",
+      "0 ≤ x < 2π 범위에서 sin 값이 양수(√2/2 > 0)이면 제1사분면과 제2사분면에 각각 해가 하나씩 존재합니다. x = π/4 와 x = π − π/4 를 확인해 보세요."
+    ]
   },
   {
     "id": "gen_math1_27",
@@ -1547,7 +1863,11 @@
     "answerIndex": 1,
     "explanation": "사인법칙에서 2R은 삼각형 ABC의 외접원의 반지름(R)의 2배이며, R은 외접원의 반지름이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "사인법칙 a/sin A = b/sin B = c/sin C 에서 모든 비가 같다고 할 때, 그 공통값 2R 에서 R 이 무엇을 나타내는지 생각해 보세요.",
+      "삼각형의 외접원 반지름을 R 이라 하면 사인법칙은 a/sin A = 2R 로 표현됩니다. R 이 어떤 원과 관련된 값인지 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_28",
@@ -1565,7 +1885,11 @@
     "answerIndex": 1,
     "explanation": "사인법칙에 의해 a/sin A = 2R이므로 2R = 4/sin 30° = 4/(1/2) = 8, 따라서 R = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "사인법칙 a ÷ sin A = 2R 을 이용해 보세요. a 와 A 가 주어졌으면 R 을 바로 구할 수 있습니다.",
+      "sin 30° = 1/2 이므로 2R = 4 ÷ sin 30° = 4 ÷ (1/2) 로 먼저 2R 을 구한 뒤 R 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_29",
@@ -1583,7 +1907,11 @@
     "answerIndex": 1,
     "explanation": "코사인법칙 c² = a² + b² − 2ab cos C에서 c² = 49 + 25 − 2×7×5×cos 60° = 74 − 70×(1/2) = 74 − 35 = 39이므로 c = √39이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 변과 그 사이 각이 주어진 경우, 코사인법칙 c² = a² + b² − 2ab cos C 를 사용합니다. cos 60° 의 값을 대입하세요.",
+      "cos 60° = 1/2 이므로 c² = 49 + 25 − 2 × 7 × 5 × (1/2) 로 식을 세우고 c² 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_30",
@@ -1601,7 +1929,11 @@
     "answerIndex": 2,
     "explanation": "코사인법칙에 의해 cos A = (b² + c² − a²)/(2bc) = (1 + 1 − 3)/(2×1×1) = −1/2이므로 A = 120°이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 변의 길이가 모두 주어졌을 때 각을 구하려면 코사인법칙을 각 버전으로 변형합니다. cos A = (b² + c² − a²) ÷ (2bc) 를 떠올려 보세요.",
+      "a = √3, b = 1, c = 1 을 cos A = (b² + c² − a²) ÷ (2bc) 에 대입해 cos A 를 계산한 뒤, 특수각 표에서 A 를 구해 보세요."
+    ]
   },
   {
     "id": "gen_math1_32",
@@ -1619,7 +1951,11 @@
     "answerIndex": 2,
     "explanation": "등차수열의 일반항은 aₙ = a₁ + (n−1)d이므로 a₅ = 3 + (5−1)×4 = 3 + 16 = 19이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등차수열의 일반항 공식 aₙ = a₁ + (n−1)d 를 떠올리세요.",
+      "a₁=3, d=4, n=5를 공식에 대입하면: a₅ = 3 + 4×4."
+    ]
   },
   {
     "id": "gen_math1_33",
@@ -1637,7 +1973,11 @@
     "answerIndex": 1,
     "explanation": "일반항 aₙ = 2 + (n−1)×3 = 3n−1이고, 3n−1 > 100에서 n > 33.67…이므로 처음으로 100을 넘는 것은 제34항(a₃₄ = 101)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "일반항 aₙ = a₁ + (n−1)d 를 먼저 구한 뒤, 처음으로 100을 넘는 조건 aₙ > 100 을 세워요.",
+      "aₙ = 3n−1 > 100 이 되는 n의 최솟값을 찾아야 합니다."
+    ]
   },
   {
     "id": "gen_math1_34",
@@ -1655,7 +1995,11 @@
     "answerIndex": 2,
     "explanation": "a₇ − a₃ = 4d이므로 4d = 12, d = 3이다. a₃ = a₁ + 2d = a₁ + 6 = 10에서 a₁ = 4이므로 d + a₁ = 3 + 4 = 7이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₇ − a₃ = 4d 를 이용해 공차 d를 먼저 구하세요.",
+      "d를 구한 뒤 a₃ = a₁ + 2d 에서 a₁을 구하고, d + a₁ 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_35",
@@ -1673,7 +2017,11 @@
     "answerIndex": 2,
     "explanation": "등차수열의 합에서 S₂₀ − S₁₀ = 200, S₃₀ − S₂₀은 S₂₀ − S₁₀보다 공차의 합만큼 100 더 크므로 S₃₀ − S₂₀ = 300이다. 따라서 S₃₀ = 300 + 300 = 600이다.",
     "detailedExplanation": "등차수열의 합 Sₙ = (n/2)(2a₁ + (n−1)d)에서 S₁₀ = 5(2a₁ + 9d) = 100 → 2a₁ + 9d = 20, S₂₀ = 10(2a₁ + 19d) = 300 → 2a₁ + 19d = 30이다. 두 식을 빼면 10d = 10, d = 1이고 a₁ = 11/2 = 5.5이다. S₃₀ = 15(2×5.5 + 29×1) = 15×40 = 600이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "등차수열의 합 Sₙ = (n/2)(2a₁ + (n−1)d) 공식으로 S₁₀, S₂₀ 두 방정식을 세울 수 있어요.",
+      "S₁₀과 S₂₀의 두 방정식을 연립해 a₁, d를 구한 뒤 S₃₀을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_36",
@@ -1691,7 +2039,11 @@
     "answerIndex": 1,
     "explanation": "등차수열의 조건에서 2(x+1) = (x−3) + (3x−1)이므로 2x+2 = 4x−4, 2x = 6, x = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 수가 등차수열이면 가운데 항이 등차중항 — 양 끝항 합의 절반이에요.",
+      "2(x+1) = (x−3) + (3x−1) 방정식을 세우고 x를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_37",
@@ -1709,7 +2061,11 @@
     "answerIndex": 2,
     "explanation": "등비수열의 제n항은 aₙ = a₁ × rⁿ⁻¹이므로 a₄ = 2 × 3³ = 2 × 27 = 54이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "등비수열의 일반항 aₙ = a₁ × rⁿ⁻¹ 을 떠올리세요.",
+      "a₁=2, r=3, n=4를 대입하면: a₄ = 2 × 3³."
+    ]
   },
   {
     "id": "gen_math1_38",
@@ -1727,7 +2083,11 @@
     "answerIndex": 1,
     "explanation": "첫째항 a₁ = 2, 공비 r = 3이므로 a₅ = 2 × 3⁴ = 2 × 81 = 162이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "수열 2, 6, 18, 54에서 공비 r을 먼저 확인하세요.",
+      "공비 r을 구한 뒤 aₙ = a₁ × rⁿ⁻¹ 공식으로 a₅를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_39",
@@ -1745,7 +2105,11 @@
     "answerIndex": 3,
     "explanation": "등비수열에서 중항의 제곱은 양 끝항의 곱과 같으므로 (x+4)² = x(x+12)를 풀면 x² + 8x + 16 = x² + 12x, 즉 4x = 16이므로 x = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 수 x, x+4, x+12가 등비수열이면 가운데 항의 제곱 = 양 끝항의 곱이에요.",
+      "(x+4)² = x × (x+12) 방정식을 전개하여 x를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_40",
@@ -1763,7 +2127,11 @@
     "answerIndex": 2,
     "explanation": "a₅ = a₂ × r³이므로 48 = 6r³, r³ = 8, r = 2. a₁ = a₂ ÷ r = 3. S₆ = 3 × (2⁶ − 1) ÷ (2 − 1) = 3 × 63 = 189이다.",
     "detailedExplanation": "a₂ = a₁r = 6, a₅ = a₁r⁴ = 48이므로 a₅ ÷ a₂ = r³ = 8, r = 2, a₁ = 3. S₆ = 3 × (2⁶ − 1) ÷ (2 − 1) = 3 × 63 = 189.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₅ = a₂ × r³ 임을 이용해 공비 r을 먼저 구하고, 첫째항 a₁을 구하세요.",
+      "a₁과 r을 구한 뒤 등비수열의 합 공식 Sₙ = a₁(rⁿ−1)/(r−1) 에 대입하세요."
+    ]
   },
   {
     "id": "gen_math1_41",
@@ -1781,7 +2149,11 @@
     "answerIndex": 2,
     "explanation": "a₁ = 1, a₂ = r = 4이면 a₄ = r³ = 64이고, b₃ = 4에서 1+2d = 4이므로 d = 3/2 — 이 경우 b₉ = 4 + 6×(3/2) = 13 ≠ 64. 따라서 r을 미지수로 놓고 풀면 공비 r = 2이다.",
     "detailedExplanation": "a₁ = 1, 공비 r이면 a₂ = r, a₄ = r³.\nb₃ = b₁ + 2d = 4, b₉ = b₁ + 8d.\na₄ = b₉ → r³ = b₁ + 8d.\na₂ = 4 → r = 4이 아니라, 공비 r은 a₂ = r = 4처럼 고정되어 있으므로: r = 4 → a₄ = 64, b₃ = 4 → b₁ + 2d = 4, b₉ = b₁ + 8d = 64 → 두 식의 차: 6d = 60, d = 10, b₁ = −16. 검산: b₃ = −16 + 20 = 4 ✓, b₉ = −16 + 80 = 64 = a₄ ✓. 그러나 선지에 4가 있으므로 r = 4.\n\n재검토: 선지 ①2 ②3 ③4 ④6 중 r = 4이면 answerIndex = 2. 하지만 검산이 성립하므로 answerIndex를 2로 수정: 공비 = 4.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "등비수열에서 a₂ = a₁ × r, 등차수열에서 b₃ = b₁ + 2d 임을 이용해 관계식을 세우세요.",
+      "a₂ = b₃ = 4 에서 r값을 구한 뒤, a₄ = b₉ 조건을 등차수열 식으로 검증하세요."
+    ]
   },
   {
     "id": "gen_math1_42",
@@ -1799,7 +2171,11 @@
     "answerIndex": 2,
     "explanation": "상수의 합 ∑ᵢ₌₁ⁿ c = nc 이므로, ∑ᵢ₌₁⁵ 3 = 5 × 3 = 15이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "상수를 n번 더하는 공식 ∑(k=1~n) c = nc 를 떠올리세요.",
+      "상수 3을 5번 더하면 됩니다: 5 × 3."
+    ]
   },
   {
     "id": "gen_math1_43",
@@ -1817,7 +2193,11 @@
     "answerIndex": 2,
     "explanation": "∑ₖ₌₁ⁿ k = n(n+1)/2 이므로, ∑ₖ₌₁¹⁰ k = 10 × 11 ÷ 2 = 55이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "1부터 n까지 자연수의 합 공식 ∑k = n(n+1)/2 를 활용하세요.",
+      "n=10을 대입하면 10×11/2 를 계산하면 됩니다."
+    ]
   },
   {
     "id": "gen_math1_44",
@@ -1835,7 +2215,11 @@
     "answerIndex": 1,
     "explanation": "∑ₖ₌₁⁵ (2k − 1) = 2·∑ₖ₌₁⁵ k − ∑ₖ₌₁⁵ 1 = 2 × 15 − 5 = 25이다.",
     "detailedExplanation": "∑ₖ₌₁⁵ k = 5×6/2 = 15이고, ∑ₖ₌₁⁵ 1 = 5이므로 2×15 − 5 = 25. 검산: (2·1−1)+(2·2−1)+(2·3−1)+(2·4−1)+(2·5−1) = 1+3+5+7+9 = 25.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∑(2k−1) = 2∑k − ∑1 로 분리해서 각각 공식을 적용하세요.",
+      "∑(k=1~5) k = 15, ∑(k=1~5) 1 = 5 를 이용해 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_45",
@@ -1853,7 +2237,11 @@
     "answerIndex": 2,
     "explanation": "∑ₖ₌₁ⁿ k² = n(n+1)(2n+1)/6 이므로, n=10이면 10×11×21/6 = 2310/6 = 385이다.",
     "detailedExplanation": "n=9일 때: 9×10×19/6 = 1710/6 = 285 ≠ 385. n=10일 때: 10×11×21/6 = 2310/6 = 385. 따라서 n=10.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "제곱의 합 공식 ∑k² = n(n+1)(2n+1)/6 을 이용하세요.",
+      "n에 작은 값부터 대입해 ∑k² = 385 가 되는 n을 찾아보세요."
+    ]
   },
   {
     "id": "gen_math1_46",
@@ -1871,7 +2259,11 @@
     "answerIndex": 1,
     "explanation": "∑ₖ₌₁¹⁰ (2k+1) = 2·∑ₖ₌₁¹⁰ k + ∑ₖ₌₁¹⁰ 1 = 2×55 + 10 = 120이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ = 2n+1을 대입하면 ∑aₖ = ∑(2k+1) = 2∑k + ∑1 로 분리할 수 있어요.",
+      "∑(k=1~10) k = 55, ∑(k=1~10) 1 = 10 을 이용해 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_47",
@@ -1889,7 +2281,11 @@
     "answerIndex": 2,
     "explanation": "∑ₖ₌₁ⁿ (k²+k) = n(n+1)(2n+1)/6 + n(n+1)/2 = n(n+1)(n+2)/3 이므로, n=6이면 6×7×8/3 = 112이다.",
     "detailedExplanation": "∑ₖ₌₁ⁿ k² + ∑ₖ₌₁ⁿ k = n(n+1)(2n+1)/6 + n(n+1)/2 = n(n+1)[(2n+1)/6 + 1/2] = n(n+1)·(2n+4)/6 = n(n+1)(n+2)/3. n=5: 5×6×7/3=70, n=6: 6×7×8/3=336/3=112. 검산: n=6 대입 시 성립.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∑(k²+k) = ∑k² + ∑k 로 분리한 뒤, 두 공식을 합산하여 인수분해해 보세요.",
+      "∑(k=1~n)(k²+k) = n(n+1)(n+2)/3 임을 이용하거나 직접 n에 값을 넣어 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_48",
@@ -1907,7 +2303,11 @@
     "answerIndex": 1,
     "explanation": "a₁=2, a₂=5, a₃=8, a₄=11 로 공차 3인 등차수열이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점화식 aₙ₊₁ = aₙ + 3 은 공차 3인 등차수열임을 의미해요.",
+      "a₁=2부터 차례로 더해 a₄까지 직접 구해 보세요."
+    ]
   },
   {
     "id": "gen_math1_49",
@@ -1925,7 +2325,11 @@
     "answerIndex": 2,
     "explanation": "a₁=3, a₂=6, a₃=12, a₄=24, a₅=48 로 공비 2인 등비수열이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점화식 aₙ₊₁ = 2aₙ 은 공비 2인 등비수열임을 의미해요.",
+      "a₁=3부터 차례로 2를 곱해 a₅까지 직접 구해 보세요."
+    ]
   },
   {
     "id": "gen_math1_50",
@@ -1943,7 +2347,11 @@
     "answerIndex": 2,
     "explanation": "a₂=3, a₃=7, a₄=13, a₅=21 로, 각 항에 2n 을 더해 계산한다.",
     "detailedExplanation": "aₙ₊₁ = aₙ + 2n 이므로 a₂=1+2×1=3, a₃=3+2×2=7, a₄=7+2×3=13, a₅=13+2×4=21.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "점화식 aₙ₊₁ = aₙ + 2n 에서 더해지는 양이 n에 따라 변해요. 차례대로 계산해 보세요.",
+      "a₂ = a₁+2×1, a₃ = a₂+2×2, a₄ = a₃+2×3, a₅ = a₄+2×4 를 순서대로 구하세요."
+    ]
   },
   {
     "id": "gen_math1_51",
@@ -1961,7 +2369,11 @@
     "answerIndex": 2,
     "explanation": "a₂=2+1=3, a₃=3+4=7, a₄=7+9=16 이다.",
     "detailedExplanation": "aₙ₊₁ = aₙ + n² 이므로 a₂=2+1²=3, a₃=3+2²=7, a₄=7+3²=16.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "점화식 aₙ₊₁ = aₙ + n² 에서 더해지는 양이 n²으로 바뀌어요. 차례대로 계산해 보세요.",
+      "a₂ = a₁+1², a₃ = a₂+2², a₄ = a₃+3² 를 순서대로 구하세요."
+    ]
   },
   {
     "id": "gen_math1_52",
@@ -1979,7 +2391,11 @@
     "answerIndex": 0,
     "explanation": "bₙ = aₙ − 1 로 치환하면 bₙ₊₁ = 3bₙ, b₁ = 0 이므로 bₙ = 0, 즉 aₙ = 1 (상수수열).",
     "detailedExplanation": "aₙ₊₁ = 3aₙ − 2 에서 bₙ = aₙ − 1 로 놓으면 bₙ₊₁ = 3bₙ. b₁ = 0 이므로 bₙ = 0, aₙ = 1. 검산: a₂=3×1−2=1, a₃=1. 확인 완료.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "점화식 aₙ₊₁ = 3aₙ − 2 에서 bₙ = aₙ − α 로 치환해 등비수열로 만드는 방법을 생각해 보세요.",
+      "고정점 α = 3α−2 를 풀어 α = 1 을 구하고, bₙ = aₙ−1로 놓으면 bₙ₊₁ = 3bₙ 이 돼요."
+    ]
   },
   {
     "id": "gen_math1_53",
@@ -1997,7 +2413,11 @@
     "answerIndex": 0,
     "explanation": "a₁~a₆을 차례로 계산하면 수열이 주기 6으로 순환하며 a₈ = 3 이다.",
     "detailedExplanation": "a₁=6, a₂=3, a₃=3−6=−3, a₄=−3−3=−6, a₅=−6−(−3)=−3, a₆=−3−(−6)=3, a₇=3−(−3)=6, a₈=6−3=3. 따라서 a₈=3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "점화식 aₙ₊₂ = aₙ₊₁ − aₙ 에서 항을 차례대로 구하면 수열이 일정한 주기로 반복돼요.",
+      "a₁=6, a₂=3부터 시작해 a₃, a₄, a₅, a₆ 까지 계산하면 주기를 발견할 수 있어요."
+    ]
   },
   {
     "id": "gen_math1_31",
@@ -2015,7 +2435,11 @@
     "answerIndex": 1,
     "explanation": "t = 2^x (t > 0)으로 치환하면 t² − 4t + 3 = 0, 즉 (t−1)(t−3) = 0이므로 t = 1 또는 t = 3이다. 따라서 x = 0 또는 x = log₂3이고, 두 해의 합은 log₂3이다.",
     "detailedExplanation": "① 4^x = (2^x)², 2^(x+2) = 4·2^x임을 이용해 t = 2^x (t > 0)으로 치환한다.\n② t² − 4t + 3 = 0 → (t−1)(t−3) = 0 → t = 1 또는 t = 3\n③ t = 2^x = 1이면 x = 0, t = 2^x = 3이면 x = log₂3\n④ 두 해의 합: 0 + log₂3 = log₂3\n[오답 분석] 2log₂3은 두 근이 모두 log₂3이라고 착각한 경우, 1+log₂3은 합산 실수에 해당한다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "4ˣ = (2ˣ)²임을 이용해 t = 2ˣ로 치환하면 이차방정식으로 바뀝니다.",
+      "t = 2ˣ(t > 0)로 놓으면 t² − 4t + 3 = 0이 됩니다. 이 이차방정식의 두 해 t로부터 각 x를 구한 뒤 모든 해의 합을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_54",
@@ -2033,7 +2457,11 @@
     "answerIndex": 1,
     "explanation": "t = 3^x (t > 0)으로 치환하면 t² − 4t + 3 ≤ 0, 즉 (t−1)(t−3) ≤ 0이므로 1 ≤ t ≤ 3이다. 3^0 ≤ 3^x ≤ 3^1에서 0 ≤ x ≤ 1이다.",
     "detailedExplanation": "① 9^x = (3^x)²이므로 t = 3^x (t > 0)으로 치환한다.\n② t² − 4t + 3 ≤ 0 → (t−1)(t−3) ≤ 0 → 1 ≤ t ≤ 3\n③ 1 ≤ 3^x ≤ 3 = 3^1이고, 밑 3 > 1이므로 지수 비교 가능: 0 ≤ x ≤ 1\n[오답 분석] (t−1)(t−3) ≤ 0의 해를 t ≤ 1 또는 t ≥ 3으로 잘못 구하면 'x ≤ 0 또는 x ≥ 1'이 나온다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "9ˣ = (3ˣ)²임을 이용해 t = 3ˣ로 치환하면 이차부등식으로 변환됩니다.",
+      "t = 3ˣ(t > 0)로 놓으면 t² − 4t + 3 ≤ 0이 됩니다. 이차부등식을 풀어 t의 범위를 구한 뒤, 밑 3 > 1임을 고려해 x의 범위로 변환하세요."
+    ]
   },
   {
     "id": "gen_math1_55",
@@ -2051,7 +2479,11 @@
     "answerIndex": 3,
     "explanation": "3^(2a+b) = (3^a)² × 3^b = 5² × 7 = 25 × 7 = 175이다.",
     "detailedExplanation": "① 지수법칙: 3^(2a+b) = 3^(2a) × 3^b\n② 3^(2a) = (3^a)² = 5² = 25\n③ 3^b = 7\n④ 25 × 7 = 175\n[오답 분석] 70은 2×5×7로 지수법칙을 곱셈으로 혼동한 경우, 125는 3^b항을 빠뜨린 경우(5³=125), 100은 계산 착오에 해당한다.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "3^(2a+b)를 지수법칙으로 분리하면 3ᵃ와 3ᵇ의 거듭제곱 형태로 나타낼 수 있습니다.",
+      "3^(2a+b) = (3ᵃ)² × 3ᵇ 임을 이용해 주어진 3ᵃ = 5, 3ᵇ = 7을 각각 대입하세요."
+    ]
   },
   {
     "id": "gen_math1_56",
@@ -2069,7 +2501,11 @@
     "answerIndex": 2,
     "explanation": "f(2x) = {f(x)}² − 2 = 7이고, 항등식 f(x)·f(2x) = f(3x) + f(x)를 이용하면 f(3x) = f(x)·f(2x) − f(x) = 3×7 − 3 = 18이다.",
     "detailedExplanation": "① {f(x)}² = (2^x + 2^(−x))² = 2^(2x) + 2 + 2^(−2x) = f(2x) + 2\n   → f(2x) = {f(x)}² − 2 = 9 − 2 = 7\n② f(x)·f(2x) = (2^x + 2^(−x))(2^(2x) + 2^(−2x))\n   = 2^(3x) + 2^(−x) + 2^x + 2^(−3x)\n   = f(3x) + f(x)\n③ f(3x) = f(x)·f(2x) − f(x) = 3×7 − 3 = 18\n[오답 분석] ②의 전개 과정을 빠뜨리고 f(3x) = 3×7 = 21로 계산하는 실수에 주의한다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x) = 2ˣ + 2^(−x)가 주어졌을 때, f(2x)를 f(x)로 표현하는 항등식을 먼저 유도해 보세요. f(x)를 제곱하면 단서가 보입니다.",
+      "{f(x)}² = (2ˣ + 2^(−x))² = 4ˣ + 2 + 4^(−x) = f(2x) + 2 임을 이용해 f(2x) 값을 먼저 구한 뒤, f(x)·f(2x) = f(3x) + f(x) 관계식으로 f(3x)를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_57",
@@ -2087,7 +2523,11 @@
     "answerIndex": 0,
     "explanation": "(2^a + 2^(−a))³ = 8^a + 8^(−a) + 3(2^a + 2^(−a))이므로 27 = 8^a + 8^(−a) + 9, 따라서 8^a + 8^(−a) = 18이다.",
     "detailedExplanation": "① (A + B)³ = A³ + B³ + 3AB(A + B) 전개 공식을 사용한다.\n   A = 2^a, B = 2^(−a)로 놓으면 AB = 2^a × 2^(−a) = 1\n② (2^a + 2^(−a))³ = 2^(3a) + 2^(−3a) + 3·1·(2^a + 2^(−a))\n   = 8^a + 8^(−a) + 3(2^a + 2^(−a))\n③ 3³ = 8^a + 8^(−a) + 3×3\n   27 = 8^a + 8^(−a) + 9\n④ 8^a + 8^(−a) = 18\n[오답 분석] 27은 (2^a + 2^(−a))³을 그대로 8^a + 8^(−a)로 오해한 경우이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "2ᵃ + 2^(−a) = 3의 양변을 세제곱하면 8ᵃ + 8^(−a)와 연결되는 항등식이 나타납니다.",
+      "(2ᵃ + 2^(−a))³ = 8ᵃ + 8^(−a) + 3(2ᵃ + 2^(−a)) 이므로 3³ = 8ᵃ + 8^(−a) + 3 × 3 으로 8ᵃ + 8^(−a)를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_58",
@@ -2105,7 +2545,11 @@
     "answerIndex": 0,
     "explanation": "log₄3 = a/2, log₄7 = b/2임을 이용하면 log₄(63/4) = log₄(9×7) − log₄4 = (2·(a/2) + b/2) − 1 = a + b/2 − 1이다.",
     "detailedExplanation": "63 = 9×7 = 3²×7임을 먼저 확인한다. log₄(63/4) = log₄63 − log₄4이고, log₄4 = 1이다. log₄63 = log₄(3²×7) = 2log₄3 + log₄7이다. 밑 변환 공식에 의해 log₄3 = log₂3 / log₂4 = a/2, log₄7 = log₂7 / log₂4 = b/2이다. 따라서 2·(a/2) + b/2 − 1 = a + b/2 − 1이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "log₄를 log₂로 변환하면 a, b로 표현하기 쉬워집니다. log₄x = log₂x ÷ 2 관계를 이용하세요.",
+      "log₄3 = a/2, log₄7 = b/2임을 이용해 log₄(63/4) = log₄(9 × 7) − log₄4 를 a, b 식으로 정리하세요."
+    ]
   },
   {
     "id": "gen_math1_59",
@@ -2123,7 +2567,11 @@
     "answerIndex": 0,
     "explanation": "로그를 합쳐 (x+2)(x-4) = 27을 얻으면 x² − 2x − 35 = 0, 즉 (x−7)(x+5) = 0이므로 x = 7 또는 x = −5인데, 진수 조건 x > 4에 의해 x = 7이다.",
     "detailedExplanation": "진수 조건: x+2 > 0이고 x−4 > 0이어야 하므로 x > 4이다. 로그의 합 공식을 적용하면 log₃((x+2)(x−4)) = 3이므로 (x+2)(x−4) = 3³ = 27이다. 전개하면 x² − 2x − 8 = 27, 즉 x² − 2x − 35 = 0이다. 인수분해하면 (x−7)(x+5) = 0이므로 x = 7 또는 x = −5인데, 진수 조건 x > 4를 만족하는 것은 x = 7뿐이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 로그의 합을 진수의 곱으로 묶어 하나의 로그로 만든 뒤 지수 형태 방정식으로 바꿔 보세요.",
+      "log₃[(x+2)(x−4)] = 3 이면 (x+2)(x−4) = 3³ = 27 이 됩니다. 이차방정식을 풀고 반드시 진수 조건(x+2 > 0, x−4 > 0)을 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_60",
@@ -2141,7 +2589,11 @@
     "answerIndex": 0,
     "explanation": "밑이 0.5 < 1이므로 부등호 방향이 바뀌어 2x−1 > x+3, 즉 x > 4가 되며, 이는 진수 조건 x > 4도 자동으로 만족한다.",
     "detailedExplanation": "진수 조건: 2x−1 > 0이므로 x > 1/2, x+3 > 0이므로 x > −3. 두 조건의 교집합은 x > 1/2이다. 밑이 0 < 0.5 < 1인 경우 로그 부등식에서 부등호 방향이 반전되므로 2x−1 > x+3이 된다. 이를 풀면 x > 4이다. 이 범위는 x > 1/2 범위에 포함되므로 최종 해는 x > 4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑이 1보다 작은 로그 부등식에서는 부등호 방향이 바뀜을 기억하세요.",
+      "밑 0.5 < 1이므로 log₀.₅(2x−1) < log₀.₅(x+3)에서 2x−1 > x+3으로 부등호가 반전됩니다. 또한 진수 조건(2x−1 > 0, x+3 > 0)도 함께 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_61",
@@ -2159,7 +2611,11 @@
     "answerIndex": 0,
     "explanation": "조건을 정리하면 a+b = 10√(ab)이고 양변을 제곱하면 (a+b)² = 100ab이므로 a² − 98ab + b² = 0, 양변을 ab로 나누면 a/b + b/a = 98이다.",
     "detailedExplanation": "주어진 조건 log(a+b) = (log a + log b)/2 + 1을 변형한다. (log a + log b)/2 = (1/2)log(ab) = log√(ab)이므로 log(a+b) = log√(ab) + log10 = log(10√(ab))이다. 따라서 a+b = 10√(ab)이다. 양변을 제곱하면 (a+b)² = 100ab이고, 전개하면 a² + 2ab + b² = 100ab이다. 정리하면 a² − 98ab + b² = 0이다. 양변을 ab(> 0)로 나누면 a/b − 98 + b/a = 0이므로 a/b + b/a = 98이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "주어진 조건을 지수 형태로 바꾸면 a+b와 √(ab)의 관계식이 나옵니다. 양변을 제곱해 정리해 보세요.",
+      "a+b = 10√(ab)의 양변을 제곱하면 (a+b)² = 100ab가 됩니다. 이 식을 ab로 나누어 a/b + b/a의 값을 구한 뒤 묻는 값을 찾으세요."
+    ]
   },
   {
     "id": "gen_math1_62",
@@ -2177,7 +2633,11 @@
     "answerIndex": 0,
     "explanation": "log(2³⁰) = 30 × 0.3010 = 9.030이므로 지표가 9이고, 2³⁰은 10자리 수이다.",
     "detailedExplanation": "n자리 자연수 N에 대해 log N의 지표는 n−1이다. log(2³⁰) = 30 × log 2 = 30 × 0.3010 = 9.030이다. 지표가 9이므로 2³⁰은 9+1 = 10자리 수이다. 참고로 가수는 0.030이고, 10^0.030 ≈ 1.07이므로 최고 자리 숫자는 1이다.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "log(2³⁰)을 계산한 뒤 정수부분(지표)으로 자릿수를 판단하는 방법을 떠올려 보세요.",
+      "log(2³⁰) = 30 × log2 = 30 × 0.3010 을 계산하면 지표를 얻을 수 있고, 자릿수 = 지표 + 1 입니다."
+    ]
   },
   {
     "id": "gen_math1_63",
@@ -2195,7 +2655,11 @@
     "answerIndex": 1,
     "explanation": "밑 1/3은 0 < 1/3 < 1이므로 지수 부등호가 반대로 바뀌어 x²−2x ≤ 2x+3, 즉 x²−4x−3 ≤ 0을 풀면 된다.",
     "detailedExplanation": "밑 1/3 < 1이므로 (1/3)^A ≥ (1/3)^B ⟺ A ≤ B.\nx²−2x ≤ 2x+3\nx²−4x−3 ≤ 0\n판별식: x = (4 ± √28)/2 = 2 ± √7\n√7 ≈ 2.646이므로 2−√7 ≈ −0.646, 2+√7 ≈ 4.646.\n해: −0.646 ≤ x ≤ 4.646\n이 범위의 정수: 0, 1, 2, 3, 4 → 5개?\n\n재검산: x = −0.646부터 4.646까지의 정수는 0, 1, 2, 3, 4로 5개.\n보기 정답을 5로 수정. answerIndex = 1(\"5\").\n\n※ 재검산 결과 정수해: 0, 1, 2, 3, 4 → 5개. 정답은 5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑 1/3은 0 < 1/3 < 1이므로 지수 부등호 방향이 반전됩니다. 이를 이용해 지수끼리 부등식을 세우세요.",
+      "(1/3)^A ≥ (1/3)^B 에서 밑 < 1이므로 A ≤ B, 즉 x²−2x ≤ 2x+3 인 이차부등식을 풀어 정수해의 개수를 세세요."
+    ]
   },
   {
     "id": "gen_math1_64",
@@ -2213,7 +2677,11 @@
     "answerIndex": 2,
     "explanation": "f(1)·f(2)·⋯·f(n) = 2^1·2^2·⋯·2^n = 2^(1+2+⋯+n) = 2^(n(n+1)/2) = 2^55이므로 n(n+1)/2 = 55, n²+n−110 = 0, (n−10)(n+11) = 0, n = 10.",
     "detailedExplanation": "f(x) = 2^x이므로 x = 1, 2, 3, ..., n에서의 함수값의 곱:\n2^1 × 2^2 × ⋯ × 2^n = 2^(1+2+⋯+n) = 2^(n(n+1)/2)\n\n이것이 2^55과 같으므로:\nn(n+1)/2 = 55\nn(n+1) = 110\nn² + n − 110 = 0\n(n−10)(n+11) = 0\nn = 10 (n은 자연수이므로)\n\n검산: 10×11/2 = 55 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(1)·f(2)·⋯·f(n) = 2¹·2²·⋯·2ⁿ 을 지수법칙으로 합쳐 보세요.",
+      "2¹·2²·⋯·2ⁿ = 2^(1+2+⋯+n) = 2^(n(n+1)/2) 이고, 이것이 2⁵⁵과 같으므로 n(n+1)/2 = 55 를 풀어 n을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_65",
@@ -2231,7 +2699,11 @@
     "answerIndex": 0,
     "explanation": "t = 2^x (t > 0)으로 치환하면 f = t² − 4t + k이고, 꼭짓점 t = 2에서 최솟값 4 − 8 + k = k − 4 = −3이므로 k = 1.",
     "detailedExplanation": "f(x) = 4^x − 2^(x+2) + k = (2^x)² − 4·2^x + k\nt = 2^x (t > 0)으로 치환:\ng(t) = t² − 4t + k = (t−2)² − 4 + k\n\nt > 0이고 꼭짓점 t = 2 > 0이므로 t = 2에서 최솟값을 가짐:\n최솟값 = (2−2)² − 4 + k = k − 4\n\nk − 4 = −3\nk = 1\n\n검산: f(x)의 최솟값 = 1 − 4 = −3 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "t = 2ˣ(t > 0)으로 치환해 이차식으로 바꾼 뒤 꼭짓점에서의 최솟값을 구하는 방법을 생각해 보세요.",
+      "t = 2ˣ로 놓으면 f = t² − 4t + k = (t−2)² − 4 + k가 됩니다. t > 0에서 꼭짓점 t = 2가 범위 안에 있으므로 최솟값 = k − 4 = −3으로 k를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_66",
@@ -2249,7 +2721,11 @@
     "answerIndex": 1,
     "explanation": "진수 조건 x > 1 하에서 log₂((x+3)(x−1)) = 3이므로 (x+3)(x−1) = 8, 즉 x² + 2x − 11 = 0을 풀면 x = −1 ± 2√3이고, x > 1을 만족하는 값은 x = −1 + 2√3이다.",
     "detailedExplanation": "① 진수 조건: x+3 > 0이고 x−1 > 0이어야 하므로 x > 1.\n② 로그 합을 정리: log₂((x+3)(x−1)) = 3 → (x+3)(x−1) = 2³ = 8.\n③ 전개: x² + 2x − 3 = 8 → x² + 2x − 11 = 0.\n④ 근의 공식: x = (−2 ± √(4+44))/2 = −1 ± 2√3.\n⑤ x = −1 + 2√3 ≈ 2.46 > 1 (적합), x = −1 − 2√3 < 1 (부적합).\n∴ x = −1 + 2√3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 로그의 합을 진수의 곱으로 묶어 하나의 로그로 만든 뒤 지수 방정식으로 변환하세요.",
+      "진수 조건(x > 1)을 확인한 뒤 log₂[(x+3)(x−1)] = 3 이면 (x+3)(x−1) = 2³ = 8 이 됩니다. 이차방정식을 풀고 진수 조건을 만족하는 해를 선택하세요."
+    ]
   },
   {
     "id": "gen_math1_67",
@@ -2267,7 +2743,11 @@
     "answerIndex": 2,
     "explanation": "로그의 진수 조건 x² − 5x + 6 > 0에서 (x−2)(x−3) > 0이므로 x < 2 또는 x > 3이다.",
     "detailedExplanation": "① 진수 조건: x² − 5x + 6 > 0.\n② 인수 분해: (x−2)(x−3) > 0.\n③ 이차부등식 풀기: x < 2 또는 x > 3 (경계값 x=2, x=3은 진수가 0이 되므로 제외).\n∴ 정의역은 {x | x < 2 또는 x > 3}.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "로그함수의 정의역은 진수가 양수인 조건으로 결정됩니다. x² − 5x + 6 > 0을 풀어야 합니다.",
+      "x² − 5x + 6 = (x−2)(x−3) > 0 을 이차부등식으로 풀면 x의 범위를 구할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_68",
@@ -2285,7 +2765,11 @@
     "answerIndex": 0,
     "explanation": "밑이 1/2 < 1이므로 부등호 방향이 바뀌어 2x−1 < x+2, 즉 x < 3이 되고, 진수 조건 2x−1 > 0에서 x > 1/2이므로 1/2 < x < 3이다.",
     "detailedExplanation": "① 진수 조건: 2x−1 > 0 → x > 1/2, x+2 > 0 → x > −2. 두 조건의 교집합: x > 1/2.\n② 밑 1/2 < 1이므로 단조 감소 → 부등호 방향 전환: 2x−1 < x+2 → x < 3.\n③ ①과 ②의 교집합: 1/2 < x < 3.\n∴ 해: 1/2 < x < 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑 1/2 < 1이면 로그 부등식에서 부등호 방향이 반전됩니다. 진수 조건도 함께 확인하세요.",
+      "log₁/₂(2x−1) > log₁/₂(x+2)에서 2x−1 < x+2로 부등호가 반전됩니다. 여기에 진수 조건 2x−1 > 0을 교집합하면 x의 범위를 얻을 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_69",
@@ -2303,7 +2787,11 @@
     "answerIndex": 2,
     "explanation": "동경이 점 (−3, 4)를 지나므로 r = √(9+16) = 5이고, sinθ = 4/5, cosθ = −3/5이다. 따라서 5sinθ + 3cosθ = 4 + (−9/5) = 11/5.",
     "detailedExplanation": "① r = √((−3)² + 4²) = √25 = 5\n② sinθ = y/r = 4/5, cosθ = x/r = −3/5\n③ 5sinθ + 3cosθ = 5×(4/5) + 3×(−3/5) = 4 − 9/5 = 20/5 − 9/5 = 11/5\n[오답 함정] r = √7로 잘못 계산하거나, cosθ의 부호를 양수로 착각하면 7/5 또는 13/5가 나온다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "동경이 점 (−3, 4) 를 지날 때, 원점에서 그 점까지의 거리 r 을 피타고라스 정리로 먼저 구해 보세요.",
+      "r = √(9 + 16) = 5 이므로 sin θ = y/r = 4/5, cos θ = x/r = −3/5 로 식을 세운 뒤 5 sin θ + 3 cos θ 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_70",
@@ -2321,7 +2809,11 @@
     "answerIndex": 3,
     "explanation": "sinθcosθ = {(sinθ+cosθ)² − 1}/2 = (1/4 − 1)/2 = −3/8이고, sin³θ + cos³θ = (sinθ+cosθ)(1 − sinθcosθ) = (1/2)(1 + 3/8) = 11/16이다.",
     "detailedExplanation": "① (sinθ + cosθ)² = 1 + 2sinθcosθ이므로 1/4 = 1 + 2sinθcosθ → sinθcosθ = −3/8\n② 인수분해: sin³θ + cos³θ = (sinθ+cosθ)(sin²θ − sinθcosθ + cos²θ)\n③ = (1/2)(1 − (−3/8)) = (1/2)(11/8) = 11/16\n[오답 함정] sin²θ + cos²θ = 1 대신 sinθcosθ를 직접 대입하는 실수로 9/16 선택에 주의한다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "sin θ + cos θ 의 양변을 제곱하면 sin θ cos θ 를 구할 수 있습니다. (sin θ + cos θ)² = 1 + 2 sin θ cos θ 를 활용하세요.",
+      "sin θ cos θ 를 구한 뒤 인수분해 공식 sin³θ + cos³θ = (sin θ + cos θ)(sin²θ − sin θ cos θ + cos²θ) = (sin θ + cos θ)(1 − sin θ cos θ) 로 식을 세우세요."
+    ]
   },
   {
     "id": "gen_math1_71",
@@ -2339,7 +2831,11 @@
     "answerIndex": 1,
     "explanation": "sinθ < 0이고 tanθ > 0이면 θ는 제3사분면 각이므로 cosθ < 0, sinθ < 0, tanθ > 0이다. 따라서 주어진 식 = (−1) + (−1) + 1 = −1.",
     "detailedExplanation": "① sinθ < 0 → 제3 또는 제4사분면\n② tanθ > 0 → 제1 또는 제3사분면\n③ 두 조건 공통: 제3사분면 → cosθ < 0, sinθ < 0, tanθ > 0\n④ cosθ/|cosθ| = −1, sinθ/|sinθ| = −1, tanθ/|tanθ| = +1\n⑤ 합 = −1 + (−1) + 1 = −1",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "sin θ < 0 이면 제3 또는 제4사분면, tan θ > 0 이면 제1 또는 제3사분면입니다. 두 조건이 동시에 성립하는 사분면을 찾아보세요.",
+      "θ 가 제3사분면이면 cos θ < 0, sin θ < 0, tan θ > 0 이므로 각 값의 절댓값으로 나눈 부호를 각각 구해 더해 보세요."
+    ]
   },
   {
     "id": "gen_math1_72",
@@ -2357,7 +2853,11 @@
     "answerIndex": 3,
     "explanation": "tanθ < 0이고 cosθ < 0이면 θ는 제2사분면 각이므로 sinθ > 0이다. sin²θ + cos²θ = 1과 tanθ = sinθ/cosθ = −4/3을 연립하면 sinθ = 4/5이다.",
     "detailedExplanation": "① tanθ = −4/3 < 0, cosθ < 0 → 제2사분면 (sinθ > 0, cosθ < 0, tanθ < 0)\n② sinθ = −4k, cosθ = 3k로 놓으면 (k < 0이어야 cosθ < 0 성립)\n③ sin²θ + cos²θ = 16k² + 9k² = 25k² = 1 → k = ±1/5\n④ k < 0이므로 k = −1/5, sinθ = −4×(−1/5) = 4/5, cosθ = 3×(−1/5) = −3/5\n⑤ 검증: tanθ = (4/5)/(−3/5) = −4/3 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "tan θ = sin θ ÷ cos θ 에서 tan θ < 0, cos θ < 0 이면 sin θ 의 부호는 어떻게 되나요? 사분면을 먼저 결정하세요.",
+      "sin θ = −4k, cos θ = 3k (k 는 실수) 로 놓고 sin²θ + cos²θ = 1 에 대입해 k 를 구한 뒤, cos θ < 0 조건으로 부호를 결정하세요."
+    ]
   },
   {
     "id": "gen_math1_73",
@@ -2375,7 +2875,11 @@
     "answerIndex": 2,
     "explanation": "(sinθ + cosθ)² = 1 + 2sinθcosθ이므로 2/3 = 1 + 2sinθcosθ → sinθcosθ = −1/6이다. 0 < θ < π에서 sinθ > 0이고 sinθcosθ < 0이므로 cosθ < 0이 되어 조건과 모순 없이 성립한다.",
     "detailedExplanation": "① (sinθ + cosθ)² = sin²θ + 2sinθcosθ + cos²θ = 1 + 2sinθcosθ\n② (√6/3)² = 6/9 = 2/3이므로 2/3 = 1 + 2sinθcosθ\n③ 2sinθcosθ = 2/3 − 1 = −1/3 → sinθcosθ = −1/6\n④ 0 < θ < π에서 sinθ > 0이고, sinθcosθ = −1/6 < 0이므로 cosθ < 0\n⑤ 즉 π/2 < θ < π (제2사분면)에서 sinθ + cosθ = √6/3 ≈ 0.816 > 0 성립 확인 ✓\n[오답 함정] 1/6은 부호 실수, −1/3은 2로 나누지 않은 오류이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "(sin θ + cos θ)² = 1 + 2 sin θ cos θ 공식을 이용해 sin θ cos θ 를 먼저 구해 보세요.",
+      "(√6/3)² = 2/3 이므로 2/3 = 1 + 2 sin θ cos θ 로 식을 세우고 sin θ cos θ 값을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_74",
@@ -2393,7 +2897,11 @@
     "answerIndex": 1,
     "explanation": "최대값과 최소값으로부터 a = (5−(−1))/2 = 3, d = (5+(−1))/2 = 2, 주기 π로부터 b = 2π/π = 2, x = π/6에서 최대이므로 2(π/6) + c = π/2 → c = π/6. 따라서 a + b + d = 3 + 2 + 2 = 7.",
     "detailedExplanation": "1단계: 최대값 M = a + d = 5, 최소값 m = −a + d = −1\n   → a = (M − m)/2 = (5 − (−1))/2 = 3, d = (M + m)/2 = (5 + (−1))/2 = 2\n\n2단계: 주기 = 2π/b = π → b = 2\n\n3단계: 최대값은 bx + c = π/2일 때, 즉 x = π/6 → 2(π/6) + c = π/2 → π/3 + c = π/2 → c = π/6\n   (조건 0 < c < π 만족 ✓)\n\n4단계: 검산 — y(π/6) = 3·sin(2·(π/6) + π/6) + 2 = 3·sin(π/2) + 2 = 5 ✓\n\n5단계: a + b + d = 3 + 2 + 2 = 7",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "y = a sin(bx + c) + d 에서 진폭 a = (최댓값 − 최솟값) ÷ 2, 수직 이동 d = (최댓값 + 최솟값) ÷ 2, 주기 = 2π ÷ b 임을 떠올려 보세요.",
+      "a, d, b 를 순서대로 구한 뒤, x = π/6 에서 최대이려면 bx + c = π/2 이어야 하므로 c 를 역산하여 a + b + d 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math1_75",
@@ -2411,7 +2919,11 @@
     "answerIndex": 2,
     "explanation": "점근선은 2x − π/3 = π/2 + nπ (n은 정수)에서 x = 5π/12 + nπ/2이다. −π/2 ≤ x ≤ π/2 범위에서 n = 0이면 x = 5π/12, n = −1이면 x = −π/12이므로 합은 5π/12 + (−π/12) = π/3.",
     "detailedExplanation": "1단계: y = tan(u)의 점근선은 u = π/2 + nπ이므로\n   2x − π/3 = π/2 + nπ → x = 5π/12 + nπ/2\n\n2단계: −π/2 ≤ x ≤ π/2에 속하는 값 탐색\n   - n = 0: x = 5π/12 ≈ 1.309 (π/2 ≈ 1.571이므로 범위 내) ✓\n   - n = −1: x = 5π/12 − π/2 = −π/12 ≈ −0.262 ✓\n   - n = 1: x = 5π/12 + π/2 = 11π/12 > π/2 ✗\n   - n = −2: x = 5π/12 − π = −7π/12 < −π/2 ✗\n\n3단계: 합 = 5π/12 + (−π/12) = 4π/12 = π/3",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "y = tan u 의 점근선은 u = π/2 + nπ (n 은 정수) 일 때 나타납니다. u = 2x − π/3 을 이 식에 대입해 x 를 표현해 보세요.",
+      "2x − π/3 = π/2 + nπ 에서 x = 5π/12 + nπ/2 로 정리한 뒤, −π/2 ≤ x ≤ π/2 를 만족하는 정수 n 값을 찾아 해당 x 들의 합을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_76",
@@ -2429,7 +2941,11 @@
     "answerIndex": 2,
     "explanation": "sin(πx) + cos(πx) = √2·sin(πx + π/4)이므로 최대값 M = √2, 주기 T = 2π/π = 2. 따라서 M × T = √2 × 2 = 2√2.",
     "detailedExplanation": "1단계: 합성 — a·sin(θ) + b·cos(θ) = √(a²+b²)·sin(θ + φ)\n   sin(πx) + cos(πx) = √(1²+1²)·sin(πx + π/4) = √2·sin(πx + π/4)\n\n2단계: 최대값 M = √2 (sin = 1일 때)\n\n3단계: 주기 T = 2π/π = 2\n\n4단계: M × T = √2 × 2 = 2√2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "sin(πx) + cos(πx) 는 a sin θ + b cos θ = √(a² + b²) sin(θ + φ) 합성 공식으로 단순화할 수 있습니다.",
+      "sin(πx) + cos(πx) = √2 sin(πx + π/4) 로 합성하면 최댓값 M = √2, 주기 T = 2π ÷ π 로 각각 구한 뒤 M × T 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_77",
@@ -2447,7 +2963,11 @@
     "answerIndex": 1,
     "explanation": "최대값·최소값으로부터 a = (4−(−2))/2 = 3, c = (4+(−2))/2 = 1, 주기 4π로부터 2π/b = 4π이므로 b = 1/2. 따라서 a + 2b + c = 3 + 1 + 1 = 5.",
     "detailedExplanation": "1단계: a = (최대값 − 최소값)/2 = (4 − (−2))/2 = 3\n2단계: c = (최대값 + 최소값)/2 = (4 + (−2))/2 = 1\n3단계: 주기 = 2π/b = 4π → b = 2π/(4π) = 1/2\n4단계: a + 2b + c = 3 + 2×(1/2) + 1 = 3 + 1 + 1 = 5\n\n[흔한 실수] b를 그대로 더하면 3 + 1/2 + 1 = 4.5 → 오답, 2b = 2×(1/2) = 1임에 주의",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = a cos(bx) + c 에서 a = (최댓값 − 최솟값) ÷ 2, c = (최댓값 + 최솟값) ÷ 2, 주기 = 2π ÷ b 임을 이용하세요.",
+      "a = 3, c = 1, 2π ÷ b = 4π 에서 b = 1/2 를 구한 뒤, a + 2b + c 에 각 값을 대입해 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_78",
@@ -2465,7 +2985,11 @@
     "answerIndex": 1,
     "explanation": "cos(x) = 1 − 2sin²(x/2)로 바꾸면 t = sin(x/2)로 치환 시 2t² + t − 1 = 0, 즉 t = 1/2 또는 t = −1. 각각에서 0 ≤ x ≤ 4π의 해를 구하면 x = π/3, 5π/3, 3π으로 총 3개이다.",
     "detailedExplanation": "1단계: 이중각 공식 cos(x) = 1 − 2sin²(x/2) 적용\n   sin(x/2) = 1 − 2sin²(x/2)\n\n2단계: t = sin(x/2)로 치환\n   t = 1 − 2t² → 2t² + t − 1 = 0 → (2t − 1)(t + 1) = 0\n   → t = 1/2 또는 t = −1\n\n3단계: t = sin(x/2) = 1/2 인 경우 (x ∈ [0, 4π]이므로 x/2 ∈ [0, 2π])\n   x/2 = π/6 → x = π/3 ✓\n   x/2 = 5π/6 → x = 5π/3 ✓\n\n4단계: t = sin(x/2) = −1 인 경우\n   x/2 = 3π/2 → x = 3π ✓ (3π < 4π이므로 범위 내)\n   다음: x/2 = 3π/2 + 2π = 7π/2 → x = 7π > 4π ✗\n\n5단계: 검산\n   x = π/3: sin(π/6) = 1/2, cos(π/3) = 1/2 ✓\n   x = 5π/3: sin(5π/6) = 1/2, cos(5π/3) = 1/2 ✓\n   x = 3π: sin(3π/2) = −1, cos(3π) = −1 ✓\n\n→ 해의 개수: 3",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "cos x = 1 − 2 sin²(x/2) 이중각 공식을 이용해 cos x 를 sin(x/2) 로 바꾸고, t = sin(x/2) 로 치환해 보세요.",
+      "t = sin(x/2) 로 치환하면 2t² + t − 1 = 0 이 됩니다. 이 이차방정식을 인수분해해 t 값을 구한 뒤, 0 ≤ x ≤ 4π 범위에서 x 의 개수를 세어 보세요."
+    ]
   },
   {
     "id": "gen_math1_79",
@@ -2483,7 +3007,11 @@
     "answerIndex": 2,
     "explanation": "코사인법칙 c² = a² + b² − 2ab·cosC에 대입하면 c² = 49 + 25 − 2·7·5·(1/2) = 74 − 35 = 39이므로 c = √39이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 변 a, b 와 끼인각 C 가 주어진 경우 코사인법칙 c² = a² + b² − 2ab cos C 를 사용합니다. cos 60° 를 확인하세요.",
+      "cos 60° = 1/2 이므로 c² = 7² + 5² − 2 × 7 × 5 × (1/2) 로 식을 세워 c² 를 구한 뒤 √ 를 취하세요."
+    ]
   },
   {
     "id": "gen_math1_80",
@@ -2501,7 +3029,11 @@
     "answerIndex": 1,
     "explanation": "사인법칙에서 2R = a/sinA = 2√3/(√3/2) = 4이므로 R = 2이고, b = 2R·sinB = 4·(√2/2) = 2√2이다.",
     "detailedExplanation": "① A + B + C = 180°이므로 C = 180° − 60° − 45° = 75°.\n② 사인법칙: 2R = a/sinA = 2√3/sin60° = 2√3/(√3/2) = 4 → R = 2.\n③ b = 2R·sinB = 4·sin45° = 4·(√2/2) = 2√2.\n④ 흔한 실수: sinA = sin120° = √3/2로 혼동하거나, a와 b를 바꿔 계산하는 경우에 주의한다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 각과 한 변이 주어진 경우 사인법칙 a ÷ sin A = 2R = b ÷ sin B 를 이용합니다. 먼저 외접원 반지름 R 을 구해 보세요.",
+      "2R = a ÷ sin A = 2√3 ÷ sin 60° 로 R 을 구한 뒤, b = 2R × sin B = 2R × sin 45° 로 b 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_81",
@@ -2519,7 +3051,11 @@
     "answerIndex": 2,
     "explanation": "코사인법칙에서 cosA = (b² + c² − a²)/(2bc) = (9 + 4 − 7)/(2·3·2) = 6/12 = 1/2이므로 A = 60°이다.",
     "detailedExplanation": "① 코사인법칙(각 구하기): cosA = (b² + c² − a²) / (2bc).\n② 대입: cosA = (9 + 4 − 7) / (2·3·2) = 6/12 = 1/2.\n③ 0° < A < 180°에서 cosA = 1/2이면 A = 60°.\n④ 오답 유도: a² = 7을 b²+c²−2bc·cosA에 대입해 cosA = (b²+c²−a²)/(2bc)가 아닌 cosA = a²/(2bc)로 잘못 세우는 실수에 주의.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 변이 주어졌을 때 각을 구하려면 코사인법칙을 변형한 cos A = (b² + c² − a²) ÷ (2bc) 를 사용합니다.",
+      "a = √7, b = 3, c = 2 를 cos A = (9 + 4 − 7) ÷ (2 × 3 × 2) 에 대입해 cos A 를 구하고, 특수각 표에서 A 를 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_82",
@@ -2537,7 +3073,11 @@
     "answerIndex": 0,
     "explanation": "사인법칙에서 sinC = c·sinB/b = 2√3·(1/2)/2 = √3/2이고, C가 둔각이므로 C = 120°, A = 30°이다. 넓이 = (1/2)·b·c·sinA = (1/2)·2·2√3·(1/2) = √3이다.",
     "detailedExplanation": "① 사인법칙: sinC/c = sinB/b → sinC = 2√3·sin30°/2 = √3/2.\n② C = 60° 또는 C = 120°인데, C가 둔각이므로 C = 120°.\n③ A = 180° − 30° − 120° = 30°.\n④ 넓이 = (1/2)·b·c·sinA = (1/2)·2·2√3·sin30° = (1/2)·4√3·(1/2) = √3.\n⑤ 흔한 실수: C가 둔각이라는 조건을 무시하고 C = 60°로 계산하면 넓이 = 2√3(오답)이 나온다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "먼저 사인법칙 sin C ÷ c = sin B ÷ b 로 sin C 를 구하세요. C 가 둔각이라는 조건이 sin C 의 두 가능한 값 중 하나를 결정합니다.",
+      "sin C = √3/2 에서 C = 60° 또는 C = 120° 인데 C 가 둔각이므로 C = 120°. 이후 A = 180° − B − C 로 A 를 구하고 넓이 = (1/2) × b × c × sin A 로 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_83",
@@ -2555,7 +3095,11 @@
     "answerIndex": 0,
     "explanation": "사인법칙에서 a = 2R·sinA = 4√2·(√2/2) = 4이고, 넓이 = (1/2)·bc·sinA = (1/2)·8·(√2/2) = 2√2이다.",
     "detailedExplanation": "① 사인법칙: a/sinA = 2R → a = 2·2√2·sin45° = 4√2·(√2/2) = 4.\n② 코사인법칙(검증): a² = b²+c² − 2bc·cosA에서 16 = b²+c² − 8√2, 즉 b²+c² = 16+8√2 (b²+c² ≥ 2bc = 16이므로 성립).\n③ 넓이 = (1/2)·b·c·sinA = (1/2)·8·sin45° = 4·(√2/2) = 2√2.\n④ 핵심 전략: a를 굳이 쓰지 않고, bc값과 sinA만으로 넓이를 바로 구할 수 있다. R을 이용해 a를 구하는 과정에서 불필요하게 b, c를 개별적으로 구하려다 막히는 경우가 많다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "외접원 반지름 R 과 각 A 가 주어지면 사인법칙 a = 2R sin A 로 a 를 구할 수 있습니다. 하지만 bc 가 주어졌으므로 넓이 공식을 직접 활용해 보세요.",
+      "넓이 = (1/2) × b × c × sin A 에서 b × c = 8, sin 45° = √2/2 를 대입하면 바로 넓이를 구할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_84",
@@ -2573,7 +3117,11 @@
     "answerIndex": 1,
     "explanation": "3d = a₅ − a₂ = 9이므로 d = 3, a₁ = 5 − 3 = 2. 따라서 a₁₀ = 2 + 9 × 3 = 29.",
     "detailedExplanation": "① 공차: d = (a₅ − a₂) ÷ (5 − 2) = 9 ÷ 3 = 3.\n② 첫째항: a₁ = a₂ − d = 5 − 3 = 2.\n③ a₁₀ = a₁ + 9d = 2 + 27 = 29.\n[오답 주의] a₁₀ = a₁ + 10d = 32로 계수를 10으로 착각하거나, a₁ = a₂ = 5로 오인하면 오류가 생긴다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 항의 차를 이용해 공차를 먼저 구하세요: d = (a₅−a₂) ÷ (5−2).",
+      "d를 구한 뒤 a₁ = a₂ − d, a₁₀ = a₁ + 9d 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_85",
@@ -2591,7 +3139,11 @@
     "answerIndex": 3,
     "explanation": "S₁₀ = 100, S₂₀ − S₁₀ = 200, S₃₀ − S₂₀ = 300으로 연속 구간 합이 100씩 증가하므로 S₃₀ = 600.",
     "detailedExplanation": "등차수열의 합 Sₙ = An + Bn²으로 놓으면\n① 5(2A + 9B·2) 형태를 이용하지 않고 성질 활용:\n   S₁₀ = 100, S₂₀ = 300에서 S₂₀ − S₁₀ = 200.\n② 등차수열에서 연속된 n항씩 묶은 구간 합은 공차 n²B만큼 증가:\n   구간합 차이 = S₂₀−S₁₀ − (S₁₀−S₀) = 200−100 = 100 (일정).\n③ 따라서 S₃₀ − S₂₀ = 200 + 100 = 300, S₃₀ = 300 + 300 = 600.\n[검산] a = 5.5, d = 1 대입 → S₃₀ = 15(11 + 29) = 600 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "등차수열의 합에서 연속된 n항씩 묶은 구간 합의 차이는 일정하게 증가해요.",
+      "S₂₀ − S₁₀ = 200 이고, 다음 구간 합 S₃₀ − S₂₀ 은 100 더 크다는 성질을 이용하세요."
+    ]
   },
   {
     "id": "gen_math1_86",
@@ -2609,7 +3161,11 @@
     "answerIndex": 1,
     "explanation": "등비수열 조건 a₅² = a₂ × a₁₄를 풀면 d = 2이고, a₂₀ = 1 + 19 × 2 = 39.",
     "detailedExplanation": "a₂ = 1+d, a₅ = 1+4d, a₁₄ = 1+13d로 놓으면\n① 등비 조건: (1+4d)² = (1+d)(1+13d)\n   1+8d+16d² = 1+14d+13d²\n   3d² − 6d = 0, 3d(d−2) = 0\n② d > 0이므로 d = 2.\n③ 검산: a₂=3, a₅=9, a₁₄=27 → 공비 3 등비수열 ✓\n④ a₂₀ = 1 + 19 × 2 = 39.\n[오답 주의] a₁ = 2로 착각하면 a₂₀ = 2+38 = 40, a₂₀ = a₁ + 20d = 41로 인덱스를 잘못 쓰면 오류.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "a₂, a₅, a₁₄가 등비수열이면 a₅² = a₂ × a₁₄ 조건을 세울 수 있어요.",
+      "a₂ = 1+d, a₅ = 1+4d, a₁₄ = 1+13d 로 놓고 등비 조건 방정식을 풀어 d를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_87",
@@ -2627,7 +3183,11 @@
     "answerIndex": 1,
     "explanation": "a₄ = 1을 기준으로 a₃ = 1−d, a₅ = 1+d라 하면 (1−d)(1+d) = 1−d² = −8, d² = 9, d = 3(양수). 따라서 a₁ = 1 − 3×3 = −8.",
     "detailedExplanation": "① a₄ = 1이므로 a₄를 중심으로 a₃ = 1−d, a₅ = 1+d (등차수열의 대칭성).\n② 조건: (1−d)(1+d) = −8 → 1−d² = −8 → d² = 9.\n③ d > 0이므로 d = 3.\n④ a₁ = a₄ − 3d = 1 − 9 = −8.\n[오답 주의]\n· a₁ = a₄ − 4d = 1−12 = −11: 인덱스 차이를 4로 착각.\n· d = −3(부호 착각) → a₁ = 1+9 = 10.\n· 계수 2로 착각 → a₁ = 1−6 = −5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "a₄=1 을 기준으로 a₃ = 1−d, a₅ = 1+d 로 표현해 보세요.",
+      "(1−d)(1+d) = 1−d² = −8 에서 d²을 구하고, 공차가 양수임을 이용하세요."
+    ]
   },
   {
     "id": "gen_math1_88",
@@ -2645,7 +3205,11 @@
     "answerIndex": 2,
     "explanation": "a₁₃ = 13 + 12 × (−2) = −11이고, S₁₃ = 13 × (13 + (−11)) ÷ 2 = 13.",
     "detailedExplanation": "① 조건 확인: S₄ = 4/2 × (26 + 3×(−2)) = 2 × 20 = 40.\n   S₁₀ = 10/2 × (26 + 9×(−2)) = 5 × 8 = 40. ✓ 조건 만족.\n② a₁₃ = 13 + 12 × (−2) = −11.\n③ S₁₃ = 13/2 × (a₁ + a₁₃) = 13/2 × (13 + (−11)) = 13/2 × 2 = 13.\n[오답 주의]\n· 13/2 × 2 = 13인데 ÷2를 빠뜨려 26으로 쓰는 실수 주의.\n· 첫째항~중간항 부호 계산 착각 시 0 또는 −13으로 오류.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₁=13, d=−2 를 일반항에 대입해 aₙ 을 구하고, S₁₃ = (13/2)(a₁+a₁₃) 공식을 활용하세요.",
+      "a₁₃ = 13 + 12×(−2) 를 계산한 뒤 S₁₃ = 13×(a₁+a₁₃)/2 에 대입하세요."
+    ]
   },
   {
     "id": "gen_math1_89",
@@ -2663,7 +3227,11 @@
     "answerIndex": 2,
     "explanation": "a₅ ÷ a₂ = r³ = 8이므로 r = 2, a₁ = 3이다. a₈ = a₁ × r⁷ = 3 × 128 = 384.",
     "detailedExplanation": "① a₅ / a₂ = (a₁r⁴) / (a₁r) = r³ = 48/6 = 8 → r = 2\n② a₁ = a₂ / r = 6 / 2 = 3\n③ a₈ = a₁ × r⁷ = 3 × 2⁷ = 3 × 128 = 384\n[오답 분석] 192: r을 6번 곱한 a₇값, 768: r을 8번 곱한 실수.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₅ ÷ a₂ = r³ 임을 이용해 공비 r을 먼저 구하세요.",
+      "r과 a₁을 구한 뒤 a₈ = a₁ × r⁷ 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_90",
@@ -2681,7 +3249,11 @@
     "answerIndex": 1,
     "explanation": "S₆ − S₃ = S₃ × r³이므로 S₃ × r³ = 56, a₁ = 1이면 S₃ = 1 + r + r²이고 r = 2일 때 성립하여 S₃ = 7이다.",
     "detailedExplanation": "① 등비수열 합의 성질: S₆ = S₃ + (a₄+a₅+a₆) = S₃ + S₃ × r³\n   따라서 S₆ − S₃ = S₃ × r³ = 56\n② a₁ = 1이면 S₃ = 1 + r + r²\n③ (1 + r + r²) × r³ = 56\n   r = 2 대입: (1+2+4) × 8 = 7 × 8 = 56 ✓\n④ S₃ = 1 + 2 + 4 = 7\n[오답 분석] 8 또는 14: r³ = 56 / S₃ 관계를 무시하고 임의 대입한 오류.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "등비수열에서 S₆ − S₃ 은 4~6항의 합인데, 이것은 S₃ × r³ 과 같아요.",
+      "S₃ × r³ = 56 과 a₁=1 조건으로 r을 구하면 S₃ 도 자연스럽게 구해져요."
+    ]
   },
   {
     "id": "gen_math1_91",
@@ -2699,7 +3271,11 @@
     "answerIndex": 2,
     "explanation": "등비중항 조건 (x+3)² = x × 4x에서 3x² − 6x − 9 = 0, 즉 (x−3)(x+1) = 0이므로 양수인 x = 3이다.",
     "detailedExplanation": "① 등비수열이면 중간항의 제곱 = 양 끝항의 곱\n   (x+3)² = x × 4x\n② x² + 6x + 9 = 4x²\n   3x² − 6x − 9 = 0\n   x² − 2x − 3 = 0\n   (x−3)(x+1) = 0 → x = 3 또는 x = −1\n③ x = 3이면 3, 6, 12 (공비 2) ✓\n   x = −1이면 −1, 2, −4 (공비 −2) ✓\n④ 양수인 x = 3\n[오답 분석] x = 1이면 1, 4, 4로 공비가 일정하지 않아 등비수열이 아님.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 수 x, x+3, 4x가 등비수열이면 가운데 항의 제곱 = 양 끝항의 곱이에요.",
+      "(x+3)² = x × 4x 방정식을 풀어 양수인 x를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_92",
@@ -2717,7 +3293,11 @@
     "answerIndex": 3,
     "explanation": "S₁₀ = S₅(r⁵ + 1)이므로 r⁵ + 1 = 3, r⁵ = 2, 따라서 r = ⁵√2이다.",
     "detailedExplanation": "① S₁₀ = S₅ + (a₆+…+a₁₀) = S₅ + S₅ × r⁵ = S₅(1 + r⁵)\n② S₁₀ = 3S₅이므로 S₅(1 + r⁵) = 3S₅\n③ 1 + r⁵ = 3 → r⁵ = 2 → r = 2^(1/5) = ⁵√2\n[오답 분석] ²√2: r²=2로 착각, ³√2: r³=2로 착각, ⁴√2: r⁴=2로 착각.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "S₁₀ = S₅(1+r⁵) 임을 이용하면 S₁₀ = 3S₅ 조건에서 r⁵ 값을 구할 수 있어요.",
+      "1+r⁵ = 3 에서 r⁵ = 2 이고, r > 1 이므로 r = ⁵√2 임을 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_93",
@@ -2735,7 +3315,11 @@
     "answerIndex": 0,
     "explanation": "a₅² = a₃ × a₇ = 64이므로 a₅ = 8, 이를 a₃ + a₇ = a₅/r² + a₅r² = 20에 대입하면 r² = 2, 즉 r = √2이다.",
     "detailedExplanation": "① 등비수열 등비중항 성질: a₅² = a₃ × a₇ = 64 → a₅ = 8 (양수 조건)\n② a₃ = a₅/r², a₇ = a₅r²이므로\n   a₃ + a₇ = 8/r² + 8r² = 20\n③ 양변에 r²을 곱: 8r⁴ − 20r² + 8 = 0\n   2r⁴ − 5r² + 2 = 0\n   (2r² − 1)(r² − 2) = 0\n   r² = 1/2 또는 r² = 2\n④ r > 1이므로 r² = 2, r = √2\n[오답 분석] r = 2이면 a₃+a₇ = 2+32 = 34 ≠ 20, r = √3이면 a₃+a₇ ≈ 26.7 ≠ 20.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "등비수열에서 a₅² = a₃ × a₇ 임을 이용해 a₅ 를 먼저 구하세요.",
+      "a₅를 구한 뒤 a₃ = a₅/r², a₇ = a₅r² 로 놓고 a₃+a₇=20 방정식을 세우세요."
+    ]
   },
   {
     "id": "gen_math1_94",
@@ -2753,7 +3337,11 @@
     "answerIndex": 2,
     "explanation": "k(k+2) = k² + 2k로 분리하면 ∑k² + 2∑k = 10×11×21/6 + 2×10×11/2 = 385 + 110 = 495이다.",
     "detailedExplanation": "∑ₖ₌₁¹⁰ k(k+2) = ∑ₖ₌₁¹⁰ k² + 2∑ₖ₌₁¹⁰ k\n= 10×11×21/6 + 2×(10×11/2)\n= 385 + 110 = 495.\n\n오답 분석: 385는 ∑k²만 계산한 값, 440은 2∑k 항을 55로 잘못 계산한 값, 510은 항을 과대 계산한 오류.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "k(k+2) = k² + 2k 로 전개한 뒤 시그마를 분리하세요.",
+      "∑k² = n(n+1)(2n+1)/6, ∑k = n(n+1)/2 공식에 n=10을 대입하세요."
+    ]
   },
   {
     "id": "gen_math1_95",
@@ -2771,7 +3359,11 @@
     "answerIndex": 2,
     "explanation": "S = ∑ₖ₌₁⁵ k·2ᵏ로 놓고 2S를 빼는 방법(등비수열 변형 합)을 쓰면 S = (5−1)·2⁶ + 2 = 4×64 + 2 = 258이다.",
     "detailedExplanation": "S = 1·2¹ + 2·2² + 3·2³ + 4·2⁴ + 5·2⁵ 라 하면\n2S = 1·2² + 2·2³ + 3·2⁴ + 4·2⁵ + 5·2⁶\n\nS - 2S = 2¹ + 2² + 2³ + 2⁴ + 2⁵ − 5·2⁶\n−S = (2⁶−2) − 5·2⁶ = 62 − 320 = −258\n따라서 S = 258.\n\n항별 확인: 2 + 8 + 24 + 64 + 160 = 258 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∑k·2ᵏ 은 일반 등비합 공식이 바로 적용되지 않아요. S−2S 방식(등차×등비 합 변형법)을 생각해 보세요.",
+      "S = ∑k·2ᵏ 로 놓고 2S = ∑k·2ᵏ⁺¹ 를 구한 뒤 S−2S 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_96",
@@ -2789,7 +3381,11 @@
     "answerIndex": 2,
     "explanation": "n≥2일 때 aₙ = Sₙ − Sₙ₋₁ = (2n²−n+3) − (2(n−1)²−(n−1)+3) = 4n−3이므로 a₁₀ = 4×10−3 = 37이다.",
     "detailedExplanation": "aₙ = Sₙ − Sₙ₋₁ (n≥2)\n= (2n²−n+3) − {2(n−1)²−(n−1)+3}\n= 2n²−n+3 − (2n²−4n+2−n+1+3)\n= 2n²−n+3 − 2n²+5n−6 = 4n−3\n\na₁ 확인: S₁ = 2−1+3 = 4, 공식 4(1)−3 = 1 ≠ 4이므로 a₁=4 (예외)\na₁₀ = 4×10−3 = 37 (n≥2이므로 공식 적용 가능)\n\n오답: 193은 S₁₀의 값, 33은 a₉의 값, 21은 잘못된 공식(2n+1) 적용.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ = Sₙ − Sₙ₋₁ (n ≥ 2) 를 이용해 일반항을 먼저 구하세요.",
+      "Sₙ − Sₙ₋₁ 을 전개하면 aₙ 식이 나오고, n=1일 때도 성립하는지 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_97",
@@ -2807,7 +3403,11 @@
     "answerIndex": 2,
     "explanation": "aₙ = n²−n+2 (n≥1)이므로 ∑ₖ₌₁¹⁰ aₖ = ∑(k²−k+2) = 385−55+20 = 350이다.",
     "detailedExplanation": "n≥2일 때, aₙ = a₁ + ∑ₖ₌₁ⁿ⁻¹ 2k = 2 + 2·(n−1)n/2 = 2 + n(n−1) = n²−n+2\n\nn=1 검증: 1−1+2 = 2 = a₁ ✓ (예외 없이 성립)\n\n∑ₖ₌₁¹⁰ (k²−k+2) = ∑k² − ∑k + 2×10\n= 10×11×21/6 − 10×11/2 + 20\n= 385 − 55 + 20 = 350\n\n오답: 330은 +2n 항 누락, 460은 −∑k를 +∑k로 부호 오류.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "점화식을 텔레스코핑으로 합산하면 aₙ = a₁ + ∑(k=1~n-1) 2k 로 쓸 수 있어요.",
+      "∑(k=1~n-1) 2k = n(n−1) 을 이용해 aₙ 을 구한 뒤 ∑aₖ 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_98",
@@ -2825,7 +3425,11 @@
     "answerIndex": 1,
     "explanation": "(2k−1)·3ᵏ = 2k·3ᵏ − 3ᵏ으로 분리하고 ∑k·3ᵏ을 등비수열 변형 합 공식으로 구하면 2×1641 − 363 = 2919이다.",
     "detailedExplanation": "분리: ∑ₖ₌₁⁵ (2k−1)·3ᵏ = 2∑ₖ₌₁⁵ k·3ᵏ − ∑ₖ₌₁⁵ 3ᵏ\n\n[∑k·3ᵏ 계산] T = ∑ₖ₌₁⁵ k·3ᵏ로 놓으면\n3T = ∑ₖ₌₁⁵ k·3ᵏ⁺¹ 이므로\nT − 3T = 3¹+3²+3³+3⁴+3⁵ − 5·3⁶\n−2T = (3⁶−3)/2 − 5·3⁶ = (729−3)/2 − 3645 = 363 − 3645 = −3282\nT = 1641\n\n[∑3ᵏ] = 3(3⁵−1)/(3−1) = 363\n\n따라서 2×1641 − 363 = 3282 − 363 = 2919\n\n항별 검증: 1·3 + 3·9 + 5·27 + 7·81 + 9·243 = 3+27+135+567+2187 = 2919 ✓\n\n오답: 1278은 ∑k·3ᵏ−3ᵏ(계수 2 누락), 3282는 −∑3ᵏ 항 누락, 3645는 부호 오류.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "(2k−1)·3ᵏ = 2k·3ᵏ − 3ᵏ 으로 분리하고, ∑k·3ᵏ 과 ∑3ᵏ 을 각각 구하세요.",
+      "∑k·3ᵏ 은 S−3S 변형법으로, ∑3ᵏ 은 등비합 공식으로 구할 수 있어요."
+    ]
   },
   {
     "id": "gen_math1_99",
@@ -2843,7 +3447,11 @@
     "answerIndex": 2,
     "explanation": "aₙ₊₁ − aₙ = 2n − 1을 n = 1부터 9까지 합산하면 a₁₀ − a₁ = ∑(k=1 to 9)(2k−1) = 9² = 81이므로 a₁₀ = 3 + 81 = 84이다.",
     "detailedExplanation": "【풀이】 aₙ₊₁ − aₙ = 2n − 1이므로 텔레스코핑(차례 대입)을 적용한다.\na₂ − a₁ = 1\na₃ − a₂ = 3\n...\na₁₀ − a₉ = 17\n모두 더하면 a₁₀ − a₁ = 1 + 3 + 5 + ... + 17 = ∑(k=1 to 9)(2k−1) = 9² = 81.\n따라서 a₁₀ = a₁ + 81 = 3 + 81 = 84.\n【오답 분석】 78: n을 8까지만 합산한 오류 / 81: a₁을 더하지 않은 오류 / 87: 2n+1로 잘못 계산한 오류",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ − aₙ = 2n−1 을 n=1부터 9까지 텔레스코핑(차례 대입 후 합산)하세요.",
+      "1+3+5+⋯+17 = ∑(k=1~9)(2k−1) = 9² 임을 활용하세요."
+    ]
   },
   {
     "id": "gen_math1_100",
@@ -2861,7 +3469,11 @@
     "answerIndex": 2,
     "explanation": "bₙ = aₙ + 3으로 놓으면 bₙ₊₁ = 2bₙ이고 b₁ = 4이므로 bₙ = 4 × 2ⁿ⁻¹ = 2ⁿ⁺¹이다. 따라서 aₙ = 2ⁿ⁺¹ − 3이고, a₇ = 2⁸ − 3 = 256 − 3 = 253이다.",
     "detailedExplanation": "【풀이】 aₙ₊₁ = 2aₙ + 3 꼴은 bₙ = aₙ + c로 변환하여 등비수열로 만든다.\nbₙ₊₁ = aₙ₊₁ + c = 2aₙ + 3 + c = 2(aₙ + c) + (3 − c)\n등비수열이 되려면 3 − c = 0, 즉 c = 3.\nbₙ = aₙ + 3이라 하면 bₙ₊₁ = 2bₙ, b₁ = 1 + 3 = 4.\n따라서 bₙ = 4 × 2ⁿ⁻¹ = 2ⁿ⁺¹이고, aₙ = 2ⁿ⁺¹ − 3.\na₇ = 2⁸ − 3 = 256 − 3 = 253.\n【오답 분석】 125 = 5³: a₆의 값 / 189: c = 3 대신 c = 1로 놓은 오류 / 509: 2⁹ − 3: 지수를 하나 크게 잡은 오류",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ = 2aₙ + 3 꼴은 bₙ = aₙ + α 로 치환해 등비수열로 만드는 방법을 생각해 보세요.",
+      "α = 2α+3 에서 α를 구하고 bₙ = aₙ+α 로 놓으면 bₙ₊₁ = 2bₙ 인 등비수열이 돼요."
+    ]
   },
   {
     "id": "gen_math1_101",
@@ -2879,7 +3491,11 @@
     "answerIndex": 1,
     "explanation": "bₙ = 1/aₙ으로 놓으면 {bₙ}은 첫째항 1, 공차 2인 등차수열이므로 bₙ = 2n − 1, 즉 aₙ = 1/(2n−1)이다. 따라서 합은 1 + 1/3 + 1/5 + 1/7 + 1/9 = 563/315이다.",
     "detailedExplanation": "【풀이】 bₙ = 1/aₙ으로 치환하면 bₙ₊₁ = bₙ + 2.\n초항 b₁ = 1/a₁ = 1, 공차 2인 등차수열.\nbₙ = 1 + 2(n−1) = 2n − 1 이므로 aₙ = 1/(2n−1).\n∑(n=1 to 5) aₙ = 1 + 1/3 + 1/5 + 1/7 + 1/9\n공통분모 315 = 9×7×5로 통분하면:\n= 315/315 + 105/315 + 63/315 + 45/315 + 35/315 = 563/315.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "bₙ = 1/aₙ 으로 역수 치환하면 점화식이 어떤 모양으로 바뀌는지 살펴보세요.",
+      "bₙ₊₁ = bₙ + 2 꼴의 등차수열이 되면, bₙ = 2n−1 로 일반항을 구할 수 있어요."
+    ]
   },
   {
     "id": "gen_math1_102",
@@ -2897,7 +3513,11 @@
     "answerIndex": 2,
     "explanation": "점화식을 반복 대입하면 aₙ = a₁ × (2/1) × (3/2) × ... × (n/(n−1)) = 2n이므로 ∑(k=1 to 10) 2k = 2 × (10 × 11)/2 = 110이다.",
     "detailedExplanation": "【풀이】 aₙ₊₁/aₙ = (n+1)/n이므로 곱셈 텔레스코핑을 적용한다.\naₙ = a₁ × ∏(k=1 to n−1) (k+1)/k\n= 2 × (2/1) × (3/2) × (4/3) × ... × (n/(n−1))\n분자·분모가 연쇄 약분되어 aₙ = 2 × n = 2n.\n따라서 ∑(k=1 to 10) aₖ = ∑(k=1 to 10) 2k = 2 × 55 = 110.\n【오답 분석】 100: k=1 to 10의 합을 50으로 계산한 오류 / 105: aₙ = n+1로 잘못 구한 경우 / 120: n을 11까지 합산한 오류",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁/aₙ = (n+1)/n 임을 이용해 곱셈 텔레스코핑으로 aₙ 을 구해 보세요.",
+      "분자 분모가 연쇄 약분되어 aₙ = a₁ × n 이 됨을 확인하고 ∑aₖ 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_103",
@@ -2915,7 +3535,11 @@
     "answerIndex": 2,
     "explanation": "특수해 aₙ = c × 2ⁿ을 대입하면 c = 1을 얻고, 일반해는 aₙ = A × 3ⁿ + 2ⁿ이다. a₁ = 3A + 2 = 2에서 A = 0이므로 aₙ = 2ⁿ, log₂ a₁₀ = log₂ 2¹⁰ = 10이다.",
     "detailedExplanation": "【풀이】 aₙ₊₁ = 3aₙ − 2ⁿ은 비제차 선형 점화식이다.\n[1단계] 제차 점화식 aₙ₊₁ = 3aₙ의 일반해: A × 3ⁿ.\n[2단계] 특수해: aₙ = c × 2ⁿ으로 놓으면\nc × 2ⁿ⁺¹ = 3c × 2ⁿ − 2ⁿ\n2c = 3c − 1 → c = 1.\n따라서 특수해는 2ⁿ.\n[3단계] 일반해: aₙ = A × 3ⁿ + 2ⁿ.\n초기 조건 a₁ = 2: 3A + 2 = 2 → A = 0.\n따라서 aₙ = 2ⁿ.\nlog₂ a₁₀ = log₂ 2¹⁰ = 10.\n【오답 분석】 8: aₙ = 2ⁿ⁻² 로 잘못 구한 경우 / 9: n을 9로 계산한 실수 / 11: 지수에 1을 더한 오류",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "aₙ₊₁ = 3aₙ − 2ⁿ 꼴은 특수해 aₙ = c×2ⁿ 을 가정해 c를 구하는 방법을 생각해 보세요.",
+      "일반해 aₙ = A×3ⁿ + 2ⁿ 에 초기 조건 a₁=2 를 대입하면 A가 정해져요."
+    ]
   },
   {
     "id": "gen_math1_104",
@@ -2933,7 +3557,11 @@
     "answerIndex": 0,
     "explanation": "8^(2/3) = (2³)^(2/3) = 4, 27^(-1/3) = (3³)^(-1/3) = 1/3이므로 (4 × 1/3) ÷ (1/6) = (4/3) × 6 = 8이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "8^(2/3)과 27^(−1/3)을 각각 소수의 거듭제곱으로 바꿔 단순화하고, 나눗셈은 역수의 곱으로 처리하세요.",
+      "8 = 2³이므로 8^(2/3) = 4, 27 = 3³이므로 27^(−1/3) = 1/3 임을 구한 뒤, 6^(−1) = 1/6이므로 ÷(1/6) = ×6으로 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_105",
@@ -2951,7 +3579,11 @@
     "answerIndex": 0,
     "explanation": "양변을 제곱하면 a + 2 + a^(-1) = 9이므로 a + a^(-1) = 7. 다시 제곱하면 a² + 2 + a^(-2) = 49이므로 a² + a^(-2) = 47이다.",
     "detailedExplanation": "① (a^(1/2) + a^(-1/2))² = a + 2 + a^(-1) = 9  →  a + a^(-1) = 7\n② (a + a^(-1))² = a² + 2 + a^(-2) = 49  →  a² + a^(-2) = 47",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a^(1/2) + a^(−1/2) = 3의 양변을 제곱해 a + a^(−1)를 먼저 구한 뒤, 다시 제곱하는 방식으로 a² + a^(−2)를 구하세요.",
+      "양변 제곱: a + 2 + a^(−1) = 9이므로 a + a^(−1) = 7. 다시 제곱: a² + 2 + a^(−2) = 49이므로 a² + a^(−2)의 값을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_106",
@@ -2969,7 +3601,11 @@
     "answerIndex": 0,
     "explanation": "t = 2^x으로 치환하면 2t² − 5t + 2 = 0, (2t − 1)(t − 2) = 0이므로 x = −1 또는 x = 1. 모든 근의 합은 −1 + 1 = 0이다.",
     "detailedExplanation": "① 2^(2x+1) = 2·(2^x)², t = 2^x (t > 0)으로 놓으면 2t² − 5t + 2 = 0\n② 인수분해: (2t − 1)(t − 2) = 0  →  t = 1/2 또는 t = 2\n③ 2^x = 1/2  →  x = −1,  2^x = 2  →  x = 1\n④ 근의 합: −1 + 1 = 0",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "t = 2ˣ(t > 0)로 치환하면 지수방정식이 이차방정식으로 바뀝니다. 2^(2x+1) = 2 × (2ˣ)²임을 이용하세요.",
+      "t = 2ˣ로 놓으면 2t² − 5t + 2 = 0이 됩니다. 두 근 t₁, t₂에서 x = log₂t로 각 x값을 구한 뒤 모든 근의 합을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_107",
@@ -2987,7 +3623,11 @@
     "answerIndex": 0,
     "explanation": "a^(3/2) − a^(-3/2) = (a^(1/2) − a^(-1/2))(a + 1 + a^(-1)) = 2(a + a^(-1) + 1) = 14이므로 a + a^(-1) + 1 = 7, 따라서 a + a^(-1) = 6이다.",
     "detailedExplanation": "① a^(3/2) − a^(-3/2) = (a^(1/2))³ − (a^(-1/2))³을 인수분해:\n   = (a^(1/2) − a^(-1/2))((a^(1/2))² + a^(1/2)·a^(-1/2) + (a^(-1/2))²)\n   = (a^(1/2) − a^(-1/2))(a + 1 + a^(-1))\n② 주어진 값 대입: 2·(a + 1 + a^(-1)) = 14\n③ a + a^(-1) + 1 = 7  →  a + a^(-1) = 6\n[검산] (a^(1/2) − a^(-1/2))² = a − 2 + a^(-1) = 4  →  a + a^(-1) = 6 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "a^(3/2) − a^(−3/2)를 a^(1/2) − a^(−1/2)의 인수를 포함하는 곱의 형태로 인수분해할 수 있습니다.",
+      "a^(3/2) − a^(−3/2) = (a^(1/2) − a^(−1/2))(a + 1 + a^(−1)) 임을 이용해, 주어진 값을 대입해서 a^(1/2) − a^(−1/2) 또는 a + a^(−1)의 값을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_108",
@@ -3005,7 +3645,11 @@
     "answerIndex": 0,
     "explanation": "2^a = 3^b = 6^c = k로 놓으면 2 = k^(1/a), 3 = k^(1/b), 6 = k^(1/c). 6 = 2 × 3이므로 k^(1/c) = k^(1/a + 1/b), 따라서 1/c = 1/a + 1/b이고 1/a + 1/b − 1/c = 0이다.",
     "detailedExplanation": "① 2^a = 3^b = 6^c = k (k > 0, k ≠ 1)로 놓는다.\n② 각 변을 변환: 2 = k^(1/a),  3 = k^(1/b),  6 = k^(1/c)\n③ 6 = 2 × 3이므로 k^(1/c) = k^(1/a) × k^(1/b) = k^(1/a + 1/b)\n④ 밑 k ≠ 1이므로 지수 비교: 1/c = 1/a + 1/b\n⑤ 따라서 1/a + 1/b − 1/c = 0",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "2ᵃ = 3ᵇ = 6ᶜ = k로 놓으면 2, 3, 6을 k의 지수 형태로 표현할 수 있고, 6 = 2 × 3 관계를 이용하세요.",
+      "2 = k^(1/a), 3 = k^(1/b)이므로 6 = k^(1/a) × k^(1/b) = k^(1/a+1/b) 이고 동시에 6 = k^(1/c)이므로 1/a + 1/b = 1/c 관계를 세울 수 있습니다. 1/a + 1/b − 1/c를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_109",
@@ -3023,7 +3667,11 @@
     "answerIndex": 1,
     "explanation": "log₄x = log₂x ÷ 2, log₈x = log₂x ÷ 3으로 변환하면 log₂x(1/2 + 1/3) = 10이므로 log₂x × 5/6 = 10, log₂x = 12이다.",
     "detailedExplanation": "log₄x = (log₂x) ÷ (log₂4) = (log₂x) ÷ 2\nlog₈x = (log₂x) ÷ (log₂8) = (log₂x) ÷ 3\nt = log₂x로 놓으면: t/2 + t/3 = 10\n3t/6 + 2t/6 = 10\n5t/6 = 10\nt = 12\n따라서 log₂x = 12",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "log₄x와 log₈x를 밑변환 공식으로 밑 2의 로그로 통일하면 log₂x로 묶을 수 있습니다.",
+      "log₄x = log₂x ÷ 2, log₈x = log₂x ÷ 3 이므로 log₂x(1/2 + 1/3) = 10 이 됩니다. log₂x를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_110",
@@ -3041,7 +3689,11 @@
     "answerIndex": 1,
     "explanation": "진수 조건에서 x > 1이어야 하고, log₂(x−1)(x+1) = 3이므로 (x−1)(x+1) = 8, x² − 1 = 8, x² = 9, x = 3이다.",
     "detailedExplanation": "진수 조건: x − 1 > 0 이고 x + 1 > 0 → x > 1\nlog₂((x−1)(x+1)) = 3\n(x−1)(x+1) = 2³ = 8\nx² − 1 = 8\nx² = 9\nx = ±3 → 진수 조건에 의해 x = 3",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 로그의 합을 진수의 곱으로 묶어 로그 방정식으로 변환하고, 진수 조건도 함께 확인하세요.",
+      "진수 조건 x > 1 하에서 log₂[(x−1)(x+1)] = 3이면 (x−1)(x+1) = 2³ = 8 이 됩니다. x² − 1 = 8을 풀고 조건에 맞는 해를 선택하세요."
+    ]
   },
   {
     "id": "gen_math1_111",
@@ -3059,7 +3711,11 @@
     "answerIndex": 1,
     "explanation": "x²−2x = (x−1)²−1 의 최솟값은 x=1일 때 −1이므로, f(x)의 최댓값은 (1/3)^(−1) = 3이다.",
     "detailedExplanation": "① 지수 부분 x²−2x를 완전제곱식으로 변환: x²−2x = (x−1)²−1.\n② (x−1)²≥0 이므로 x²−2x ≥ −1, 최솟값은 x=1일 때 −1.\n③ 밑 1/3 < 1이므로 지수가 작을수록 함숫값이 크다.\n④ 따라서 f(x)의 최댓값 = (1/3)^(−1) = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "밑 1/3은 0 < 1/3 < 1이므로 지수가 가장 작을 때 함수값이 가장 커집니다. 지수 x²−2x의 최솟값을 먼저 구하세요.",
+      "x²−2x = (x−1)²−1 이므로 최솟값은 x = 1일 때 −1입니다. (1/3)^(−1)을 계산하면 f(x)의 최댓값을 얻을 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_112",
@@ -3077,7 +3733,11 @@
     "answerIndex": 2,
     "explanation": "(2^x + 2^(−x))² = 4^x + 2 + 4^(−x) = 9 이므로 4^x + 4^(−x) = 7이다.",
     "detailedExplanation": "① (2^x + 2^(−x))² = 4^x + 2·2^x·2^(−x) + 4^(−x) = 4^x + 2 + 4^(−x).\n② 이 값이 3² = 9이므로 4^x + 4^(−x) = 9 − 2 = 7.\n③ 오답 선택지 9는 제곱을 그대로 쓴 실수, 5는 2를 더하지 않은 오류에서 비롯된 값이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "2ˣ + 2^(−x) = 3의 양변을 제곱하면 4ˣ + 4^(−x)가 등장하는 식을 얻을 수 있습니다.",
+      "(2ˣ + 2^(−x))² = 4ˣ + 2 + 4^(−x) 이므로 9 = 4ˣ + 4^(−x) + 2가 됩니다. 4ˣ + 4^(−x)를 구하세요."
+    ]
   },
   {
     "id": "gen_math1_113",
@@ -3095,7 +3755,11 @@
     "answerIndex": 2,
     "explanation": "t = 2^x (t≥1)로 치환하면 f = t²−4t+k = (t−2)²−4+k이고, t=2일 때 최솟값 k−4 > 0이므로 k > 4, 정수 최솟값은 5이다.",
     "detailedExplanation": "① t = 2^x로 놓으면 x≥0에서 t≥1.\n② f(x) = t²−4t+k = (t−2)²−4+k.\n③ t∈[1,∞)에서 (t−2)²의 최솟값: t=2일 때 0, 즉 g(t)의 최솟값은 k−4.\n④ f(x) > 0이 항상 성립하려면 k−4 > 0 → k > 4.\n⑤ 정수 k의 최솟값 = 5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "t = 2ˣ(x ≥ 0이면 t ≥ 1)로 치환해 이차식으로 바꾼 뒤 t의 범위에서 최솟값이 양수가 되는 조건을 찾으세요.",
+      "f = t² − 4t + k = (t−2)² − 4 + k에서 t ≥ 1일 때 최솟값은 t = 2에서 k − 4입니다. k − 4 > 0이 되려면 k가 얼마보다 커야 하는지 구한 뒤 정수 k의 최솟값을 찾으세요."
+    ]
   },
   {
     "id": "gen_math1_114",
@@ -3113,7 +3777,11 @@
     "answerIndex": 0,
     "explanation": "진수 조건(x > −1)에서 두 로그를 합치면 log₂((x+1)(x+7)) = 4이므로 (x+1)(x+7) = 16, 즉 x² + 8x − 9 = 0에서 (x+9)(x−1) = 0. 진수 조건을 만족하는 x = 1이다.",
     "detailedExplanation": "1단계: 진수 조건 → x+1 > 0, x+7 > 0이므로 x > −1.\n2단계: log₂(x+1) + log₂(x+7) = log₂((x+1)(x+7)) = 4.\n3단계: (x+1)(x+7) = 2⁴ = 16 → x² + 8x + 7 = 16 → x² + 8x − 9 = 0.\n4단계: (x+9)(x−1) = 0 → x = −9 또는 x = 1.\n5단계: x > −1이므로 x = 1. 검산: log₂2 + log₂8 = 1 + 3 = 4 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 로그의 합을 진수의 곱으로 묶어 하나의 로그로 만들고, 지수 형태 방정식으로 변환하세요.",
+      "진수 조건 x > −1 하에서 log₂[(x+1)(x+7)] = 4이면 (x+1)(x+7) = 2⁴ = 16 입니다. 이차방정식을 풀고 진수 조건을 만족하는 해를 고르세요."
+    ]
   },
   {
     "id": "gen_math1_115",
@@ -3131,7 +3799,11 @@
     "answerIndex": 0,
     "explanation": "평행이동 후 함수는 y = log₃((x−m)−2) + 1 + n = log₃(x−m−2) + 1 + n이고, 이것이 log₃(x+1) − 2와 같으려면 −m−2 = 1, 1+n = −2이므로 m = −3, n = −3. 따라서 m + n = −6.",
     "detailedExplanation": "1단계: x축 방향 m, y축 방향 n 평행이동 → y = log₃(x−m−2) + 1 + n.\n2단계: log₃(x−m−2) + (1+n) = log₃(x+1) − 2 이므로\n  · 진수 비교: x−m−2 = x+1 → −m−2 = 1 → m = −3\n  · 상수 비교: 1+n = −2 → n = −3\n3단계: m + n = −3 + (−3) = −6.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "평행이동 x축 m, y축 n만큼이란 x를 (x−m), y를 (y−n)으로 바꾸는 것임을 떠올려 보세요.",
+      "이동 후 함수는 y = log₃(x−m−2) + 1 + n 이고, 이것이 log₃(x+1) − 2와 같아지려면 계수를 비교해 m과 n의 값을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_116",
@@ -3149,7 +3821,11 @@
     "answerIndex": 2,
     "explanation": "log₂x = t로 치환하면 t² − 5t + 6 = 0, (t−2)(t−3) = 0이므로 t = 2 또는 t = 3. 따라서 α = 4, β = 8이고, α² + β² = 16 + 64 = 80.",
     "detailedExplanation": "1단계: t = log₂x로 치환 → t² − 5t + 6 = 0.\n2단계: (t−2)(t−3) = 0 → t = 2 또는 t = 3.\n3단계: log₂x = 2 → x = 4 = α, log₂x = 3 → x = 8 = β.\n4단계: α² + β² = 4² + 8² = 16 + 64 = 80.\n검산: (log₂4)² − 5·log₂4 + 6 = 4 − 10 + 6 = 0 ✓, (log₂8)² − 5·log₂8 + 6 = 9 − 15 + 6 = 0 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "t = log₂x로 치환하면 (log₂x)²가 포함된 방정식이 t에 대한 이차방정식으로 바뀝니다.",
+      "t² − 5t + 6 = 0을 풀어 t의 두 값을 구한 뒤, t = log₂x에서 각각의 x(= α, β)를 구하세요. 그런 다음 α × β 또는 α + β 등 문제가 요구하는 값을 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_117",
@@ -3167,7 +3843,11 @@
     "answerIndex": 2,
     "explanation": "역함수를 구하면 y = 2^(x−3) + 1이고, x = 7을 대입하면 y = 2⁴ + 1 = 17. 따라서 a = 17.",
     "detailedExplanation": "1단계: y = log₂(x−1) + 3에서 x와 y를 교환: x = log₂(y−1) + 3.\n2단계: x − 3 = log₂(y−1) → y−1 = 2^(x−3) → y = 2^(x−3) + 1.\n3단계: x = 7 대입 → a = 2^(7−3) + 1 = 2⁴ + 1 = 16 + 1 = 17.\n검산(원함수로 확인): 원함수 y = log₂(x−1)+3에 x = 17 대입 → log₂16 + 3 = 4 + 3 = 7 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y = log₂(x−1) + 3의 역함수를 구하려면 x와 y를 바꾼 뒤 y에 대해 풀면 됩니다.",
+      "역함수는 y = 2^(x−3) + 1 이 됩니다. 이 역함수에 x = 7을 대입하면 a의 값을 구할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math1_118",
@@ -3437,7 +4117,11 @@
     "answerIndex": 1,
     "explanation": "a₂ + a₈ = 2a₅ = 20이므로 a₅ = 10이고, a₃ × a₇ = (a₅ − 2d)(a₅ + 2d) = 100 − 4d² = 96에서 d = 1(d > 0)이므로 a₁ = 6, a₁₀ = 6 + 9 × 1 = 15이다.",
     "detailedExplanation": "① a₂ + a₈ = (a₁ + d) + (a₁ + 7d) = 2a₁ + 8d = 2(a₁ + 4d) = 2a₅ = 20, 따라서 a₅ = 10.\n② a₃ × a₇ = (a₅ − 2d)(a₅ + 2d) = a₅² − 4d² = 100 − 4d² = 96 → 4d² = 4 → d = ±1.\n③ 공차가 양수이므로 d = 1, a₁ = a₅ − 4d = 10 − 4 = 6.\n④ a₁₀ = a₁ + 9d = 6 + 9 = 15.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "a₂ + a₈ = 2a₅ 임을 이용하면 a₅ 를 바로 구할 수 있어요.",
+      "a₅ 를 구한 뒤 a₃ = a₅−2d, a₇ = a₅+2d 로 놓고 a₃ × a₇ = 96 방정식을 세우세요."
+    ]
   },
   {
     "id": "gen_math1_134",
@@ -3455,7 +4139,11 @@
     "answerIndex": 1,
     "explanation": "n ≥ 2일 때 aₙ = Sₙ − Sₙ₋₁ = (n² + 3n) − {(n−1)² + 3(n−1)} = 2n + 2이며, a₁ = S₁ = 4도 성립하므로 공차 d = a₂ − a₁ = 6 − 4 = 2이다.",
     "detailedExplanation": "① a₁ = S₁ = 1 + 3 = 4.\n② n ≥ 2: aₙ = Sₙ − Sₙ₋₁ = (n² + 3n) − {(n−1)² + 3(n−1)} = n² + 3n − n² + 2n − 1 − 3n + 3 = 2n + 2.\n③ a₁ = 4 = 2(1) + 2이므로 일반항 aₙ = 2n + 2가 n = 1에도 성립.\n④ 공차 d = aₙ₊₁ − aₙ = 2(n+1)+2 − (2n+2) = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ = Sₙ − Sₙ₋₁ (n ≥ 2) 를 이용해 일반항을 구하고, a₁ = S₁ 도 확인하세요.",
+      "aₙ 이 등차수열임을 확인한 뒤 공차 d = aₙ₊₁ − aₙ 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_135",
@@ -3473,7 +4161,11 @@
     "answerIndex": 1,
     "explanation": "등차중항 조건 2(x + 1) = (x − 2) + (3x − 2)에서 2x + 2 = 4x − 4이므로 x = 3이고, 세 수는 1, 4, 7이 되어 공차는 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "세 수가 등차수열이면 가운데 항이 등차중항 — 2(x+1) = (x−2) + (3x−2) 를 세울 수 있어요.",
+      "x를 구한 뒤 세 수를 실제 값으로 바꾸고 공차를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_136",
@@ -3491,7 +4183,11 @@
     "answerIndex": 2,
     "explanation": "aₙ = 53 − 3n이므로 a₁₇ = 2 > 0, a₁₈ = −1 < 0이다. 양수인 항까지 더할 때 합이 최대가 되므로 n = 17이다.",
     "detailedExplanation": "① aₙ = 50 + (n−1)(−3) = 53 − 3n.\n② aₙ > 0 ↔ 53 − 3n > 0 ↔ n < 17.67이므로 a₁₇ = 2 > 0, a₁₈ = −1 < 0.\n③ Sₙ은 양수항이 더해지는 동안 증가하고 음수항이 더해지면 감소한다.\n④ S₁₇ = (17/2)(50 + 2) = 17 × 26 = 442, S₁₈ = (18/2)(50 − 1) = 9 × 49 = 441 < 442.\n⑤ 따라서 Sₙ이 최대가 되는 n = 17.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "Sₙ 이 최대가 되려면 양수 항들까지만 더해야 해요. aₙ > 0 인 마지막 n을 찾아보세요.",
+      "aₙ = 53 − 3n > 0 에서 n < 17.67 이므로, a₁₇과 a₁₈의 부호를 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_137",
@@ -3509,7 +4205,11 @@
     "answerIndex": 1,
     "explanation": "S₆/S₃ = (r⁶−1)/(r³−1) = r³+1 = 189/21 = 9이므로 r³ = 8, 즉 r = 2이다.",
     "detailedExplanation": "등비수열의 합 공식에서 S₃ = a₁(r³−1)/(r−1), S₆ = a₁(r⁶−1)/(r−1)이다. S₆ ÷ S₃을 계산하면 (r⁶−1)/(r³−1) = r³+1 = 189/21 = 9이므로 r³ = 8이다. 공비가 양수이므로 r = 2이다. 검산: a₁ = 3, r = 2이면 S₃ = 3+6+12 = 21, S₆ = 21+48+96+... = 189 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "S₆ ÷ S₃ 를 계산하면 r³ + 1 이 나와요. 이를 이용해 r을 구하세요.",
+      "S₆/S₃ = r³ + 1 = 189/21 에서 r³ 을 구하고, 공비가 양수임을 이용하세요."
+    ]
   },
   {
     "id": "gen_math1_138",
@@ -3527,7 +4227,11 @@
     "answerIndex": 2,
     "explanation": "합 조건을 정리하면 10·log₂(a₁) + 45·log₂(r) = 35이고, log₂(a₅) + log₂(a₆) = 2·log₂(a₁) + 9·log₂(r) = (1/5) × 35 = 7이다.",
     "detailedExplanation": "aₙ = a₁·rⁿ⁻¹이므로 log₂(aₙ) = log₂(a₁) + (n−1)log₂(r)이다. 따라서 ∑log₂(aₙ) (n=1~10) = 10·log₂(a₁) + (0+1+⋯+9)·log₂(r) = 10·log₂(a₁) + 45·log₂(r) = 35 ⋯ ①. 구하는 값은 log₂(a₅)+log₂(a₆) = 2·log₂(a₁) + (4+5)·log₂(r) = 2·log₂(a₁) + 9·log₂(r)이고, 이는 ①의 1/5이므로 35/5 = 7이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "log₂(aₙ) = log₂(a₁) + (n−1)log₂(r) 임을 이용해 ∑log₂(aₙ) 를 a₁, r 로 표현하세요.",
+      "구하는 log₂(a₅)+log₂(a₆) 가 전체 합의 몇 분의 1인지 비율을 살펴보세요."
+    ]
   },
   {
     "id": "gen_math1_139",
@@ -3545,7 +4249,11 @@
     "answerIndex": 0,
     "explanation": "(S₇−S₅)/(S₅−S₃) = a₆+a₇ 대 a₄+a₅의 비이므로 r² = 192/48 = 4이고, 모든 항이 양수이므로 r = 2이다.",
     "detailedExplanation": "S₅−S₃ = a₄+a₅ = a₄(1+r) = 48, S₇−S₅ = a₆+a₇ = a₆(1+r) = 192이다. 두 식을 나누면 a₆/a₄ = r² = 192/48 = 4이므로 r = ±2인데, 모든 항이 양수이므로 r = 2이다. 검산: a₄(1+r) = 16×3 = 48 ✓, a₆(1+r) = 64×3 = 192 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "S₅−S₃ = a₄+a₅, S₇−S₅ = a₆+a₇ 임을 이용하세요.",
+      "두 구간 합의 비 (S₇−S₅)÷(S₅−S₃) = r² 임을 이용해 r을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_140",
@@ -3563,7 +4271,11 @@
     "answerIndex": 1,
     "explanation": "(a₄+a₆)/(a₂+a₄) = r² = 4이므로 r = 2이고, a₂ = 6, a₁ = 3임을 구한 뒤 S₆ = 3×(2⁶−1)/(2−1) = 189이다.",
     "detailedExplanation": "a₂+a₄ = a₂(1+r²) = 30, a₄+a₆ = a₄(1+r²) = a₂·r²·(1+r²) = 120이다. 두 식의 비로 r² = 4이고 모든 항이 양수이므로 r = 2이다. a₂(1+4) = 30 → a₂ = 6이므로 a₁ = a₂/r = 3이다. S₆ = 3×(64−1)/1 = 189이다. ※ 오답 378은 a₂부터 6개항을 더한 실수, 오답 126은 a₁=2로 잘못 구한 경우이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "(a₄+a₆)÷(a₂+a₄) = r² 임을 이용해 공비 r을 먼저 구하세요.",
+      "r과 a₂를 구한 뒤 a₁ = a₂ ÷ r, S₆ = a₁(r⁶−1)/(r−1) 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_141",
@@ -3581,7 +4293,11 @@
     "answerIndex": 2,
     "explanation": "점화식 2aₙ = 3aₙ − 3aₙ₋₁에서 공비 r = 3, n=1 대입으로 a₁ = 6을 구하면 a₅ = 6×3⁴ = 486이다.",
     "detailedExplanation": "2Sₙ = 3aₙ−6 ⋯①, 2Sₙ₋₁ = 3aₙ₋₁−6 ⋯② (n≥2). ①−②: 2aₙ = 3aₙ−3aₙ₋₁이므로 aₙ = 3aₙ₋₁이다. 따라서 공비 r = 3이다. n=1을 ①에 대입하면 2a₁ = 3a₁−6이므로 a₁ = 6이다. 따라서 a₅ = 6×3⁴ = 6×81 = 486이다. ※ 오답 162는 a₄의 값, 오답 243은 a₁=3으로 잘못 구한 경우(3×81)이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "n ≥ 2 에서 2aₙ = 3aₙ − 3aₙ₋₁ 로 변환해 공비를 구할 수 있어요.",
+      "공비를 구한 뒤 n=1 을 원래 조건식에 대입해 첫째항 a₁ 을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_142",
@@ -3599,7 +4315,11 @@
     "answerIndex": 2,
     "explanation": "n ≥ 2일 때 aₙ = Sₙ − Sₙ₋₁ = (2n²−n) − (2(n−1)²−(n−1)) = 4n−3이고, a₁ = S₁ = 1 = 4(1)−3도 성립하므로 a₁₀ = 4(10)−3 = 37.",
     "detailedExplanation": "Sₙ = 2n²−n\nn ≥ 2일 때:\naₙ = Sₙ − Sₙ₋₁\n= (2n²−n) − [2(n−1)²−(n−1)]\n= 2n²−n − 2n²+4n−2 + n−1\n= 4n − 3\na₁ = S₁ = 2(1)²−1 = 1 = 4(1)−3 = 1 (공식 성립 확인)\na₁₀ = 4(10)−3 = 37",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ = Sₙ − Sₙ₋₁ (n ≥ 2) 를 이용해 aₙ 을 구하세요.",
+      "Sₙ = 2n²−n 에 대입해 전개하면 aₙ 의 간단한 식이 나와요."
+    ]
   },
   {
     "id": "gen_math1_143",
@@ -3617,7 +4337,11 @@
     "answerIndex": 1,
     "explanation": "포함-배제 원리로 (3의 배수의 합)+(5의 배수의 합)−(15의 배수의 합)을 구하면 6633+4100−1365 = 9368.",
     "detailedExplanation": "3의 배수: 3, 6, …, 198 → 66개, 합 = 66×(3+198)/2 = 66×100.5 = 6633\n5의 배수: 5, 10, …, 200 → 40개, 합 = 40×(5+200)/2 = 40×102.5 = 4100\n15의 배수: 15, 30, …, 195 → 13개, 합 = 13×(15+195)/2 = 13×105 = 1365\n포함-배제: 6633+4100−1365 = 9368",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "포함-배제 원리를 떠올리세요: 3의 배수 합 + 5의 배수 합 − 15의 배수 합.",
+      "각각 등차수열의 합 공식으로 구한 뒤 포함-배제 원리를 적용하세요."
+    ]
   },
   {
     "id": "gen_math1_144",
@@ -3635,7 +4359,11 @@
     "answerIndex": 1,
     "explanation": "2Sₙ−3n = n²+2n에서 Sₙ = (n²+5n)/2이고, n ≥ 2일 때 aₙ = Sₙ−Sₙ₋₁ = n+2이며 a₁ = S₁ = 3 = 1+2로 성립하므로 a₇ = 9.",
     "detailedExplanation": "∑(k=1 to n)(2aₖ−3) = 2Sₙ−3n = n²+2n\n⟹ 2Sₙ = n²+5n\n⟹ Sₙ = n(n+5)/2\n\nn ≥ 2일 때:\naₙ = Sₙ−Sₙ₋₁ = n(n+5)/2 − (n−1)(n+4)/2\n= [n²+5n − (n²+3n−4)] / 2\n= (2n+4)/2 = n+2\n\na₁ = S₁ = 6/2 = 3 = 1+2 ✓\na₇ = 7+2 = 9",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∑(2aₖ−3) = 2Sₙ − 3n = n²+2n 에서 Sₙ 을 먼저 구하세요.",
+      "Sₙ 을 구한 뒤 aₙ = Sₙ − Sₙ₋₁ (n ≥ 2) 로 일반항을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_145",
@@ -3653,7 +4381,11 @@
     "answerIndex": 2,
     "explanation": "3·∑k²−∑k = 3×385−55 = 1155−55 = 1100.",
     "detailedExplanation": "∑(k=1 to 10) k² = 10×11×21/6 = 385\n∑(k=1 to 10) k = 10×11/2 = 55\n∑(3k²−k) = 3×385 − 55 = 1155 − 55 = 1100",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∑(3k²−k) = 3∑k² − ∑k 로 분리하세요.",
+      "∑(k=1~10) k² = 385, ∑(k=1~10) k = 55 를 대입해 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_146",
@@ -3671,7 +4403,11 @@
     "answerIndex": 3,
     "explanation": "bₙ = aₙ/n으로 치환하면 bₙ₊₁ = bₙ + 2/(n(n+1))이고 이를 부분분수로 합산하면 bₙ = 3−2/n, 즉 aₙ = 3n−2. 따라서 ∑(k=1 to 5) aₖ = 1+4+7+10+13 = 35.",
     "detailedExplanation": "점화식: naₙ₊₁ = (n+1)aₙ+2\n\nbₙ = aₙ/n 으로 치환 (bₙ₊₁ = aₙ₊₁/(n+1)):\n양변을 n(n+1)으로 나누면:\naₙ₊₁/(n+1) = aₙ/n + 2/(n(n+1))\n⟹ bₙ₊₁ = bₙ + 2/(n(n+1))\n\nb₁ = a₁/1 = 1\n부분분수: 2/(n(n+1)) = 2(1/n − 1/(n+1))\n\nbₙ = b₁ + 2∑(k=1 to n−1)(1/k − 1/(k+1))\n= 1 + 2(1 − 1/n)\n= 3 − 2/n\n\naₙ = n·bₙ = n(3−2/n) = 3n−2\n\n검산: a₁=1 ✓, a₂=4, 점화식: 1×4 = 2×1+2 = 4 ✓\n\n∑(k=1 to 5)(3k−2) = 1+4+7+10+13 = 35",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "bₙ = aₙ/n 으로 치환하면 점화식이 단순한 형태로 바뀌는지 살펴보세요.",
+      "bₙ₊₁ = bₙ + 2/(n(n+1)) 를 부분분수로 풀어 bₙ 를 구한 뒤 aₙ = n×bₙ 을 구하세요."
+    ]
   },
   {
     "id": "gen_math1_147",
@@ -3689,7 +4425,11 @@
     "answerIndex": 2,
     "explanation": "aₙ = aₙ₋₁ + 2(n−1) + 1 꼴의 점화식이므로 합산하면 aₙ = a₁ + ∑(k=1 to n-1)(2k+1) = 3 + n²−1 = n²+2이다. 따라서 a₁₀ = 100+2 = 102.",
     "detailedExplanation": "aₙ = a₁ + ∑(k=1 to n-1)(2k+1)\n= 3 + 2·(n-1)n/2 + (n-1)\n= 3 + n(n-1) + (n-1)\n= 3 + (n-1)(n+1)\n= 3 + n² − 1 = n² + 2\n\n검산: a₁=1+2=3 ✓, a₂=4+2=6이고 a₁+3=6 ✓\na₁₀ = 10²+2 = 102",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ − aₙ = 2n+1 를 n=1부터 n−1까지 텔레스코핑으로 합산하세요.",
+      "∑(k=1~n-1)(2k+1) 을 시그마 공식으로 정리하면 aₙ 의 일반식을 얻을 수 있어요."
+    ]
   },
   {
     "id": "gen_math1_148",
@@ -3707,7 +4447,11 @@
     "answerIndex": 1,
     "explanation": "점화식을 정리하면 aₙ₊₁/aₙ = n/(n+1)이므로 텔레스코핑 곱으로 aₙ = 6/n이 된다. 따라서 a₁₂ = 6/12 = 1/2.",
     "detailedExplanation": "aₙ = a₁ · ∏(k=1 to n-1)(k/(k+1))\n= 6 · (1/2)·(2/3)·(3/4)···((n-1)/n)\n= 6 · 1/n = 6/n\n\n검산: a₁=6/1=6 ✓, a₂=6/2=3이고 2·a₂=6=1·a₁ ✓\na₁₂ = 6/12 = 1/2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁/aₙ = n/(n+1) 임을 이용해 곱셈 텔레스코핑으로 aₙ 을 구하세요.",
+      "분자 분모가 연쇄 약분되어 aₙ = a₁/n 꼴이 됨을 확인하세요."
+    ]
   },
   {
     "id": "gen_math1_149",
@@ -3725,7 +4469,11 @@
     "answerIndex": 2,
     "explanation": "aₙ − 3 = 2(aₙ₋₁ − 3)으로 변환하면 {aₙ−3}은 공비 2인 등비수열이므로 aₙ = 2ⁿ + 3이다. 따라서 a₅ = 32+3 = 35.",
     "detailedExplanation": "고정점 α를 구하면: α = 2α−3 → α = 3\nbₙ = aₙ − 3으로 놓으면 bₙ₊₁ = 2bₙ\nb₁ = a₁−3 = 5−3 = 2이므로 bₙ = 2·2ⁿ⁻¹ = 2ⁿ\n따라서 aₙ = 2ⁿ + 3\n\n검산: a₁=2+3=5 ✓\na₂=2·5−3=7=4+3=7 ✓\na₃=2·7−3=11=8+3=11 ✓\na₅=32+3=35",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₁ = 2aₙ − 3 에서 고정점 α = 2α−3 을 구해 bₙ = aₙ−α 로 치환하세요.",
+      "bₙ₊₁ = 2bₙ 인 등비수열을 구한 뒤 aₙ = bₙ + α 로 되돌려 a₅ 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_150",
@@ -3743,7 +4491,11 @@
     "answerIndex": 2,
     "explanation": "항을 순서대로 계산하면 2, 3, 5, 8, 13, 21, 34, 55이므로 a₈ = 55이다.",
     "detailedExplanation": "a₁=2, a₂=3\na₃=3+2=5\na₄=5+3=8\na₅=8+5=13\na₆=13+8=21\na₇=21+13=34\na₈=34+21=55",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "aₙ₊₂ = aₙ₊₁ + aₙ 는 피보나치 수열과 같은 구조예요. 항을 차례대로 구해야 해요.",
+      "a₁=2, a₂=3 에서 시작해 a₃, a₄, a₅, a₆, a₇, a₈ 을 차례로 계산하세요."
+    ]
   },
   {
     "id": "gen_math1_151",
@@ -3761,7 +4513,11 @@
     "answerIndex": 1,
     "explanation": "bₙ = 1/aₙ으로 역수 치환하면 bₙ₊₁ = bₙ + 2인 등차수열이 되어 bₙ = 2n−1이므로 aₙ = 1/(2n−1)이다. 따라서 a₆ = 1/11.",
     "detailedExplanation": "bₙ = 1/aₙ으로 놓으면:\nbₙ₊₁ = 1/aₙ₊₁ = (2aₙ+1)/aₙ = 2 + 1/aₙ = bₙ + 2\n\n따라서 {bₙ}은 공차 2인 등차수열.\nb₁ = 1/a₁ = 1이므로 bₙ = 1 + (n−1)·2 = 2n−1\n→ aₙ = 1/(2n−1)\n\n검산: a₁=1/1=1 ✓\na₂=1/(2+1)=1/3이고 점화식: 1/(2·1+1)=1/3 ✓\na₃=1/5이고 점화식: (1/3)/(2/3+1)=(1/3)/(5/3)=1/5 ✓\na₆ = 1/(12−1) = 1/11",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "bₙ = 1/aₙ 으로 역수 치환하면 점화식이 어떤 형태로 바뀌는지 살펴보세요.",
+      "bₙ₊₁ = bₙ + 2 인 등차수열로 바뀌면 bₙ = 2n−1, aₙ = 1/(2n−1) 을 구할 수 있어요."
+    ]
   },
   {
     "id": "hand_short_m1_1",
@@ -3776,7 +4532,11 @@
     "answer": "17",
     "explanation": "aₙ = a₁+(n−1)d = 2+5×3 = 17.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "등차수열의 일반항 공식 aₙ = a₁ + (n−1)d 를 떠올리세요.",
+      "a₁=2, d=3, n=6 을 대입하면: a₆ = 2 + (6−1)×3."
+    ]
   },
   {
     "id": "hand_short_m1_2",
@@ -3791,6 +4551,10 @@
     "answer": "210",
     "explanation": "n(n+1)/2 = 20×21/2 = 210.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "1부터 n까지 자연수의 합 공식 n(n+1)/2 를 활용하세요.",
+      "n=20 을 공식에 대입하면 20×21/2 를 계산하면 됩니다."
+    ]
   }
 ]

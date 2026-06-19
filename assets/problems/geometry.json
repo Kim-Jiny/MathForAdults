@@ -15,7 +15,11 @@
     "answerIndex": 0,
     "explanation": "y² = 4px 에서 4p = 4, p = 1. 초점은 (1, 0).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 y² = 4px 꼴에서 p 값이 초점의 x좌표를 결정한다는 점을 떠올려 보세요.",
+      "4p = 4임을 이용해 p를 구한 뒤, 초점의 좌표 (p, 0)을 완성해 보세요."
+    ]
   },
   {
     "id": "ge_conic_002",
@@ -33,7 +37,11 @@
     "answerIndex": 1,
     "explanation": "y² = 4px 에서 4p = 8, p = 2. 초점은 (2, 0).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 y² = 4px 꼴의 표준형에서 계수와 p의 관계를 생각해 보세요.",
+      "4p = 8로부터 p를 구하고, 초점 (p, 0)의 좌표를 써 보세요."
+    ]
   },
   {
     "id": "ge_conic_003",
@@ -51,7 +59,11 @@
     "answerIndex": 2,
     "explanation": "a² = 9 이므로 a = 3. 장축의 길이는 2a = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1에서 장축의 길이는 a와 어떤 관계인지 떠올려 보세요.",
+      "a² = 9에서 a = 3을 구한 뒤, 장축의 길이 공식 2a를 적용해 보세요."
+    ]
   },
   {
     "id": "ge_vec_001",
@@ -69,7 +81,11 @@
     "answerIndex": 0,
     "explanation": "성분끼리 더합니다. (1+3, 2+4) = (4, 6).",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터를 더할 때는 같은 위치의 성분끼리 따로 더하면 된다는 '성분별 덧셈' 개념을 떠올려 보세요.",
+      "x성분끼리, y성분끼리 각각 덧셈식을 세워 보세요: (1+3, 2+4) = ?."
+    ]
   },
   {
     "id": "ge_vec_002",
@@ -87,7 +103,11 @@
     "answerIndex": 1,
     "explanation": "크기 = √(2² + 3²) = √13.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 크기는 피타고라스 정리로 구할 수 있다는 점을 떠올려 보세요.",
+      "|벡터| = √(x² + y²) 공식에 성분 2와 3을 대입해 보세요."
+    ]
   },
   {
     "id": "ge_vec_003",
@@ -105,7 +125,11 @@
     "answerIndex": 1,
     "explanation": "내적 = 1×3 + 2×4 = 3 + 8 = 11.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터의 내적은 대응하는 성분끼리 곱한 값들을 모두 더하는 연산임을 떠올려 보세요.",
+      "내적 = (첫째 성분끼리의 곱) + (둘째 성분끼리의 곱) 형태로 식을 세워 보세요."
+    ]
   },
   {
     "id": "ge_space_001",
@@ -123,7 +147,11 @@
     "answerIndex": 1,
     "explanation": "√(1² + 2² + 2²) = √9 = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "공간에서 두 점 사이의 거리를 구하는 공식을 떠올려 보세요. 평면의 피타고라스 정리를 3차원으로 확장한 형태입니다.",
+      "두 점 (x₁, y₁, z₁), (x₂, y₂, z₂) 사이의 거리 공식 √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²)에 두 점의 좌표를 직접 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "ge_space_002",
@@ -141,7 +169,11 @@
     "answerIndex": 0,
     "explanation": "xy평면으로의 정사영은 z좌표를 0으로. (1, 2, 0).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "어떤 좌표평면으로 정사영하느냐에 따라 어느 좌표 성분이 0이 되는지 생각해 보세요.",
+      "xy평면으로의 정사영은 점을 z축 방향으로 xy평면 위에 수직으로 내린 발이므로, z좌표만 0으로 바꾸면 됩니다."
+    ]
   },
   {
     "id": "gen_geometry_1",
@@ -159,7 +191,11 @@
     "answerIndex": 0,
     "explanation": "x² = −4py에서 4p = 8이므로 p = 2. 준선은 y = p = 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "포물선 x² = −4py (p > 0) 꼴에서 준선은 y = p임을 기억해 보세요.",
+      "4p = 8로부터 p = 2를 구한 뒤, 준선의 방정식 y = p를 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_2",
@@ -177,7 +213,11 @@
     "answerIndex": 0,
     "explanation": "초점 (0, p)에서 p = 3이므로 포물선은 x² = 4py = 12y이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "초점 (0, p)와 준선 y = −p를 갖는 포물선의 표준형 x² = 4py를 떠올려 보세요.",
+      "초점이 (0, 3)이므로 p = 3을 대입하여 x² = 4py를 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_3",
@@ -195,7 +235,11 @@
     "answerIndex": 0,
     "explanation": "y² = 8x에서 p = 2, 준선은 x = −2. 포물선 위의 점에서 초점까지의 거리는 준선까지의 거리와 같으므로 2 − (−2) = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "포물선의 정의: 포물선 위 임의의 점에서 초점까지의 거리와 준선까지의 거리는 같습니다.",
+      "y² = 8x에서 p = 2이므로 준선은 x = −2입니다. 점 P(2, 4)에서 준선까지의 거리를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_4",
@@ -213,7 +257,11 @@
     "answerIndex": 0,
     "explanation": "y² = 4x에서 p = 1, 초점 F(1, 0). x = 1을 대입하면 y² = 4, y = ±2. 현의 길이는 2 − (−2) = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y² = 4x에서 초점 F의 좌표를 먼저 구하고, 초점을 지나며 x축에 수직인 직선(x = 초점의 x좌표)을 포물선에 대입하는 방향을 생각해 보세요.",
+      "x = 1을 y² = 4x에 대입하면 y 값이 두 개 나옵니다. 이 두 y 값의 차가 현의 길이임을 이용해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_5",
@@ -231,7 +279,11 @@
     "answerIndex": 0,
     "explanation": "y² = 12x에서 p = 3, 준선 x = −3. PF = x좌표 − (−3) = x + 3 = 6이므로 x = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선의 정의에 따라 포물선 위 점 P에서 초점까지의 거리 PF는 준선까지의 거리와 같다는 점을 이용하세요.",
+      "y² = 12x에서 p = 3, 준선은 x = −3입니다. PF = (점의 x좌표) + p = 6이라는 식을 세워 x좌표를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_6",
@@ -249,7 +301,11 @@
     "answerIndex": 0,
     "explanation": "포물선 y² = 4x에서 p = 1. 초점을 지나는 현의 두 끝점 거리 r₁, r₂에 대해 1/r₁ + 1/r₂ = 1/p = 1이 성립한다. AF = 4/3이면 3/4 + 1/BF = 1이므로 BF = 4이다.",
     "detailedExplanation": "포물선 y² = 4x에서 p = 1, 초점 F(1, 0). 초점을 지나는 현의 두 끝점까지의 거리 r₁, r₂에 대해 1/r₁ + 1/r₂ = 1/p가 성립한다. p = 1이므로 1/(4/3) + 1/BF = 1, 즉 3/4 + 1/BF = 1에서 1/BF = 1/4, BF = 4이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선의 초점을 지나는 현의 두 끝점까지의 거리 r₁, r₂ 사이에는 조화평균 공식 1/r₁ + 1/r₂ = 1/p가 성립함을 떠올려 보세요.",
+      "y² = 4x에서 p = 1이므로 1/r₁ + 1/r₂ = 1이 됩니다. AF = 4/3을 r₁에 대입하여 BF를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_7",
@@ -267,7 +323,11 @@
     "answerIndex": 0,
     "explanation": "P(8, 8), F(2, 0), H(−2, 8)에서 좌표 공식으로 넓이 = 1/2|8(0−8) + 2(8−8) + (−2)(8−0)| = 1/2|−64 + 0 − 16| = 1/2 × 80 = 40이다.",
     "detailedExplanation": "y² = 8x에서 p = 2, 초점 F(2, 0), 준선 x = −2. P(8, 8)은 포물선 위의 점(8² = 64 = 8×8 성립). H는 P에서 준선에 내린 수선의 발이므로 H(−2, 8). 삼각형 PFH의 넓이를 좌표 공식으로 계산: 1/2|x_P(y_F − y_H) + x_F(y_H − y_P) + x_H(y_P − y_F)| = 1/2|8(0−8) + 2(8−8) + (−2)(8−0)| = 1/2|−64 + 0 − 16| = 40이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 점의 좌표를 이용한 삼각형 넓이 공식(신발끈 공식)을 떠올리고, 먼저 초점 F의 좌표를 확인해 보세요.",
+      "P(8, 8), F(2, 0), H(−2, 8) 세 좌표를 넓이 공식 ½|x₁(y₂−y₃)+x₂(y₃−y₁)+x₃(y₁−y₂)|에 대입해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_8",
@@ -285,7 +345,11 @@
     "answerIndex": 1,
     "explanation": "c² = a² − b² = 25 − 9 = 16이므로 c = 4. 두 초점 사이의 거리는 2c = 8이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1 (a > b > 0)에서 초점 거리 c는 c² = a² − b²로 구합니다.",
+      "a² = 25, b² = 9를 이용해 c를 구한 뒤, 두 초점 사이의 거리 2c를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_9",
@@ -303,7 +367,11 @@
     "answerIndex": 2,
     "explanation": "타원의 정의에 의해 PF + PF' = 2a = 2√16 = 8이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "타원의 정의: 타원 위의 점 P에서 두 초점까지의 거리의 합 PF + PF'는 항상 일정하게 2a입니다.",
+      "x²/16 + y²/7 = 1에서 a² = 16이므로 a를 구한 뒤, 2a를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_10",
@@ -321,7 +389,11 @@
     "answerIndex": 0,
     "explanation": "a = 5이므로 a² = 25, c = 3이므로 b² = a² − c² = 25 − 9 = 16. 따라서 x²/25 + y²/16 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원의 장축 길이 2a, 초점 거리 c를 먼저 확인하고, b² = a² − c² 관계를 이용하세요.",
+      "장축의 길이 10 → a = 5, a² = 25이고, c = 3이므로 b² = 25 − 9 = 16으로 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_11",
@@ -339,7 +411,11 @@
     "answerIndex": 2,
     "explanation": "PF + PF' = 2a = 6이고 PF = 1이므로 PF' = 6 − 1 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "타원의 정의에서 PF + PF'의 합이 2a임을 기억하고, 먼저 a를 구해 보세요.",
+      "x²/9 + y²/4 = 1에서 a² = 9이므로 a = 3, 2a = 6입니다. PF = 1을 대입하여 PF' = 2a − PF를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_12",
@@ -357,7 +433,11 @@
     "answerIndex": 2,
     "explanation": "단축의 끝점 B(0, 4)에서 초점 F(3, 0)까지의 거리: BF = √(3² + 4²) = √25 = 5이다.",
     "detailedExplanation": "c² = 25 − 16 = 9이므로 c = 3. 단축의 끝점 B(0, 4), 초점 F(3, 0)에 대해 BF = √(3² + 4²) = √(9 + 16) = √25 = 5. 일반적으로 단축의 끝점에서 초점까지의 거리는 장반축 a와 같다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "단축의 끝점 B는 (0, ±b)이고, 두 초점 F는 (±c, 0)임을 확인해 보세요. c² = a² − b² 관계도 활용하세요.",
+      "a² = 25, b² = 16에서 c = 3. B(0, 4)에서 F(3, 0)까지의 거리를 피타고라스 정리로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_13",
@@ -375,7 +455,11 @@
     "answerIndex": 1,
     "explanation": "2a = 2·(2b)이므로 a = 2b. c² = a² − b² = 4b² − b² = 3b²이므로 c = √3·b. e = c/a = √3·b/(2b) = √3/2이다.",
     "detailedExplanation": "장축의 길이 2a, 단축의 길이 2b에서 2a = 2·(2b)이면 a = 2b. c² = a² − b² = 4b² − b² = 3b², c = √3·b. 이심률 e = c/a = √3·b/(2b) = √3/2이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이심률 e = c/a임을 기억하고, 장축과 단축의 관계(2a = 2 × 2b)에서 a와 b의 비를 먼저 구해 보세요.",
+      "a = 2b로부터 c² = a² − b² = 4b² − b² = 3b²를 이용해 c를 b로 나타낸 뒤, e = c/a를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_14",
@@ -393,7 +477,11 @@
     "answerIndex": 0,
     "explanation": "2a = 8이므로 a = 4, a² = 16. c = √7이므로 b² = 16 − 7 = 9. 따라서 x²/16 + y²/9 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 초점이 주어지고 PF + PF'의 합이 일정한 점 P의 자취가 타원임을 떠올려 보세요. 2a = PF + PF'입니다.",
+      "2a = 8 → a = 4, a² = 16이고 c = √7이므로 b² = a² − c² = 16 − 7 = 9를 구해 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_15",
@@ -411,7 +499,11 @@
     "answerIndex": 3,
     "explanation": "PF = 3, PF' = 7, FF' = 8. 코사인 법칙으로 cos∠PFF' = (9 + 64 − 49)/48 = 1/2이므로 ∠PFF' = 60°. 넓이 = (1/2)·3·8·sin60° = 6√3이다.",
     "detailedExplanation": "PF + PF' = 2a = 10이므로 PF' = 7. FF' = 2c = 8. 코사인 법칙 적용: cos∠PFF' = (PF² + FF'² − PF'²)/(2·PF·FF') = (9 + 64 − 49)/(2·3·8) = 24/48 = 1/2. 따라서 ∠PFF' = 60°. 삼각형 PFF'의 넓이 = (1/2)·PF·FF'·sin60° = (1/2)·3·8·(√3/2) = 6√3이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원의 정의로 PF'을 구한 뒤, 삼각형 PFF'에 코사인 법칙을 적용하는 방향을 생각해 보세요.",
+      "PF = 3이면 PF' = 10 − 3 = 7이고 FF' = 8입니다. 코사인 법칙으로 ∠PFF'를 구한 뒤, 넓이 공식 ½ × 밑변 × 높이(또는 ½absinC)를 적용해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_16",
@@ -429,7 +521,11 @@
     "answerIndex": 0,
     "explanation": "x²/a² − y²/b² = 1 꼴의 쌍곡선에서 꼭짓점은 (±a, 0)이므로 a = 3에서 꼭짓점은 (±3, 0)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1 꼴에서 꼭짓점은 주축(x축) 위에 있고, (±a, 0)임을 기억해 보세요.",
+      "x²/9 − y²/4 = 1에서 a² = 9이므로 a = 3. 꼭짓점 좌표 (±a, 0)을 바로 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_17",
@@ -447,7 +543,11 @@
     "answerIndex": 0,
     "explanation": "c² = a² + b² = 16 + 9 = 25이므로 c = 5, 초점의 좌표는 (±5, 0)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1의 초점 거리는 c² = a² + b²로 구합니다(타원과 부호가 다름에 주의).",
+      "a² = 16, b² = 9를 이용해 c² = 16 + 9 = 25, c = 5를 구하고, 초점 좌표 (±c, 0)을 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_18",
@@ -465,7 +565,11 @@
     "answerIndex": 0,
     "explanation": "y²/b² − x²/a² = 1 꼴이면 주축이 y축 방향이고 꼭짓점은 (0, ±b)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선의 표준형 y²/b² − x²/a² = 1 꼴일 때 주축의 방향이 어디인지 생각해 보세요.",
+      "y² 항이 앞에 있고 양수이면 주축이 y축 방향이 됩니다. 꼭짓점이 (0, ±b)에 있음을 확인해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_19",
@@ -483,7 +587,11 @@
     "answerIndex": 0,
     "explanation": "x²/a² − y²/b² = 1의 점근선은 y = ±(b/a)x이므로, b = √12 = 2√3, a = 2에서 y = ±(2√3/2)x = ±√3 x이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1의 점근선 공식 y = ±(b/a)x를 떠올리고, a와 b 값을 먼저 읽어내 보세요.",
+      "a² = 4 → a = 2, b² = 12 → b = 2√3을 대입하여 y = ±(b/a)x를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_20",
@@ -501,7 +609,11 @@
     "answerIndex": 0,
     "explanation": "쌍곡선의 정의에서 2a = 6이므로 a = 3, c = 5이고 b² = c² − a² = 25 − 9 = 16이다. 따라서 x²/9 − y²/16 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선의 정의: 두 초점까지의 거리 차의 절댓값이 일정하며 이 값이 2a입니다. 또한 c는 초점까지의 거리입니다.",
+      "||PF| − |PF'|| = 6 = 2a이므로 a = 3, c = 5. 관계식 b² = c² − a²으로 b²를 구하여 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_21",
@@ -519,7 +631,11 @@
     "answerIndex": 0,
     "explanation": "점근선의 기울기 b/a = 3/5이고 a = 5이므로 b = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1의 점근선은 y = ±(b/a)x이므로, 기울기와 a로부터 b를 구할 수 있음을 생각해 보세요.",
+      "a = 5이고 점근선의 기울기 b/a = 3/5이므로, b = a × (3/5)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_22",
@@ -537,7 +653,11 @@
     "answerIndex": 0,
     "explanation": "a² = 9이므로 a = 3, 쌍곡선의 정의에서 ||PF| − |PF'|| = 2a = 6이다. 제1사분면의 점이고 오른쪽 초점에 더 가까우므로 |PF'| − |PF| = 6, |PF'| = |PF| + 6 = 2 + 6 = 8이다.",
     "detailedExplanation": "c² = 9 + 7 = 16이므로 c = 4, 초점은 F(4, 0), F'(−4, 0)이다.\n2a = 6이므로 ||PF| − |PF'|| = 6.\n제1사분면의 점 P는 오른쪽 초점 F(4, 0)에 더 가까우므로 |PF| < |PF'|.\n|PF'| − |PF| = 6 → |PF'| = 2 + 6 = 8.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선의 정의에서 ||PF| − |PF'|| = 2a이고, 제1사분면의 점은 오른쪽 초점에 더 가까우므로 어느 쪽이 큰지 판단해 보세요.",
+      "a = 3이므로 2a = 6. 제1사분면의 점 P에서 |PF'| − |PF| = 6으로 식을 세우고, |PF| = 2를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_23",
@@ -555,7 +675,11 @@
     "answerIndex": 0,
     "explanation": "점근선의 기울기가 b/a = 2/3이므로 b = 2k, a = 3k로 놓으면 c² = a² + b² = 9k² + 4k² = 13k² = 13에서 k² = 1이다. 따라서 a² = 9, b² = 4이고 a² + b² = 13이다.",
     "detailedExplanation": "점근선 y = ±(b/a)x에서 b/a = 2/3.\na = 3k, b = 2k (k > 0)으로 설정.\nc² = a² + b² = 9k² + 4k² = 13k².\n초점이 (±√13, 0)이므로 c = √13, c² = 13.\n13k² = 13 → k = 1.\na² = 9, b² = 4.\na² + b² = 9 + 4 = 13.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "점근선의 기울기 b/a = 2/3에서 a = 3k, b = 2k로 놓고, 초점 조건 c² = a² + b²을 이용해 k를 구하는 방향을 생각해 보세요.",
+      "c = √13이므로 c² = 13. 13k² = 13에서 k = 1을 구한 뒤, a² + b²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_24",
@@ -573,7 +697,11 @@
     "answerIndex": 0,
     "explanation": "직선을 타원에 대입하면 4x²+9(x+k)²=36이고, 판별식 D > 0 조건에서 k² < 13, 즉 −√13 < k < √13이다.",
     "detailedExplanation": "y = x+k를 x²/9 + y²/4 = 1에 대입하면\nx²/9 + (x+k)²/4 = 1\n4x² + 9(x+k)² = 36\n4x² + 9x² + 18kx + 9k² = 36\n13x² + 18kx + (9k²−36) = 0\n판별식 D > 0:\n(18k)² − 4·13·(9k²−36) > 0\n324k² − 52(9k²−36) > 0\n324k² − 468k² + 1872 > 0\n−144k² + 1872 > 0\nk² < 13\n−√13 < k < √13",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "직선을 타원 방정식에 대입하여 x에 대한 이차방정식을 만들고, 두 교점이 존재하려면 판별식 D > 0이어야 함을 떠올려 보세요.",
+      "y = x + k를 대입해 정리하면 13x² + 18kx + (9k² − 36) = 0이 됩니다. 이 방정식의 판별식 D > 0 조건으로 k의 범위를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_25",
@@ -591,7 +719,11 @@
     "answerIndex": 2,
     "explanation": "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선은 y = mx ± √(a²m²−b²)이므로, a²=4, b²=3, m=2를 대입하면 y = 2x ± √(16−3) = 2x ± √13이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선의 공식 y = mx ± √(a²m² − b²)를 떠올려 보세요.",
+      "a² = 4, b² = 3, m = 2를 대입하여 √(a²m² − b²) 부분을 계산해 접선 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_26",
@@ -609,7 +741,11 @@
     "answerIndex": 0,
     "explanation": "포물선 y² = 4px에서 p = 3이고, 점 (x₁, y₁) = (3, 6)에서의 접선은 y·y₁ = 2p(x+x₁), 즉 6y = 6(x+3)이므로 y = x + 3이다.",
     "detailedExplanation": "y² = 12x에서 4p = 12, p = 3.\n포물선 y² = 4px 위의 점 (x₁, y₁)에서의 접선 공식:\ny·y₁ = 2p(x + x₁)\ny·6 = 6(x + 3)\n6y = 6x + 18\ny = x + 3\n검산: x=3을 y=x+3에 대입하면 y=6. (3,6)을 지나고 기울기 1인 접선.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 y² = 4px 위의 점 (x₁, y₁)에서의 접선 공식 y·y₁ = 2p(x + x₁)를 떠올려 보세요.",
+      "y² = 12x에서 p = 3, 접점 (3, 6)을 공식에 대입하여 접선 방정식을 정리해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_27",
@@ -627,7 +763,11 @@
     "answerIndex": 2,
     "explanation": "타원 위의 점 (x₁, y₁)에서의 접선 공식 x·x₁/16 + y·y₁/9 = 1에 (2, 3√3/2)를 대입하면 x/8 + y√3/6 = 1이고, y=0을 대입하면 x = 8이다.",
     "detailedExplanation": "타원 x²/16 + y²/9 = 1 위의 점 (x₁, y₁)에서의 접선:\nx·x₁/16 + y·y₁/9 = 1\nx₁ = 2, y₁ = 3√3/2 대입:\n2x/16 + y·(3√3/2)/9 = 1\nx/8 + y√3/6 = 1\ny = 0 대입:\nx/8 = 1 → x = 8",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1 위의 점 (x₁, y₁)에서의 접선 공식 x·x₁/a² + y·y₁/b² = 1을 떠올려 보세요.",
+      "x₁ = 2, y₁ = 3√3/2, a² = 16, b² = 9를 접선 공식에 대입하고, y = 0을 넣어 x절편(x축과의 교점)을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_28",
@@ -645,7 +785,11 @@
     "answerIndex": 2,
     "explanation": "타원 위의 점 P(5cosθ, 4sinθ)에서의 접선은 xcosθ/5 + ysinθ/4 = 1이고, Q(5/cosθ, 0), R(0, 4/sinθ)이므로 |OQ|·|OR| = 20/(|sinθcosθ|) ≥ 40이다.",
     "detailedExplanation": "타원 x²/25 + y²/16 = 1을 매개변수로 나타내면 P = (5cosθ, 4sinθ).\n접선 방정식: x(5cosθ)/25 + y(4sinθ)/16 = 1\n→ xcosθ/5 + ysinθ/4 = 1\n\nQ: y=0 대입 → x = 5/cosθ → |OQ| = 5/|cosθ|\nR: x=0 대입 → y = 4/sinθ → |OR| = 4/|sinθ|\n\n|OQ|·|OR| = 20/(|sinθcosθ|) = 40/|sin2θ|\n\n|sin2θ| ≤ 1이므로 40/|sin2θ| ≥ 40.\n|sin2θ| = 1, 즉 θ = π/4일 때 최솟값 40.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원을 매개변수 P = (5cosθ, 4sinθ)로 표현하고, 해당 점에서의 접선 방정식 xcosθ/5 + ysinθ/4 = 1을 활용해 보세요.",
+      "Q는 y = 0, R는 x = 0을 접선 방정식에 대입하여 |OQ| = 5/|cosθ|, |OR| = 4/|sinθ|를 구한 뒤, |OQ|·|OR|의 최솟값을 |sin2θ| ≤ 1 조건으로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_29",
@@ -663,7 +807,11 @@
     "answerIndex": 1,
     "explanation": "스칼라 배는 각 성분에 스칼라를 곱하므로 2a⃗ = (2×3, 2×(−1)) = (6, −2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "스칼라 배는 벡터의 각 성분에 그 스칼라를 곱하는 연산임을 떠올려 보세요.",
+      "2a⃗의 각 성분에 2를 곱하는 식을 직접 써 보세요: (2×3, 2×(−1)) = ?."
+    ]
   },
   {
     "id": "gen_geometry_30",
@@ -681,7 +829,11 @@
     "answerIndex": 1,
     "explanation": "벡터의 덧셈은 성분끼리 더하므로 a⃗ + b⃗ = (2+(−1), 5+3) = (1, 8)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 덧셈은 x성분끼리, y성분끼리 각각 따로 더한다는 규칙을 떠올려 보세요.",
+      "a⃗ + b⃗ = (2+(−1), 5+3) 처럼 성분별로 식을 써서 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_31",
@@ -699,7 +851,11 @@
     "answerIndex": 0,
     "explanation": "a⃗ − 2b⃗ = (4−2×1, 6−2×2) = (4−2, 6−4) = (2, 2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "스칼라 배와 벡터 뺄셈을 조합할 때, 먼저 스칼라 배를 계산한 뒤 성분별로 뺀다는 순서를 떠올려 보세요.",
+      "2b⃗ = (2, 4)를 먼저 구한 뒤 a⃗ − 2b⃗ = (4−2, 6−4)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_32",
@@ -717,7 +873,11 @@
     "answerIndex": 2,
     "explanation": "|a⃗| = √(3² + (−2)²) = √(9+4) = √13이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 크기는 두 성분의 제곱합에 루트를 씌워 구한다는 공식을 떠올려 보세요.",
+      "|a⃗| = √(3² + (−2)²)을 직접 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_33",
@@ -735,7 +895,11 @@
     "answerIndex": 2,
     "explanation": "a⃗ + b⃗ = (1+3, 2+1) = (4, 3)이고, |(4, 3)| = √(16+9) = √25 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터의 합을 먼저 성분별로 구한 뒤 그 합벡터의 크기를 피타고라스 정리로 계산하는 두 단계 절차를 떠올려 보세요.",
+      "a⃗ + b⃗ = (4, 3)임을 먼저 확인하고, |(4, 3)| = √(4² + 3²)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_34",
@@ -753,7 +917,11 @@
     "answerIndex": 0,
     "explanation": "2x⃗ = a⃗ + b⃗ = (−2+6, 4+2) = (4, 6)이므로 x⃗ = (2, 3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터 방정식을 x⃗에 대해 풀 때는 양변에 같은 연산을 적용해 x⃗만 남기는 방법을 떠올려 보세요.",
+      "2x⃗ = a⃗ + b⃗ 로 정리한 뒤 a⃗ + b⃗의 성분을 구해 2로 나눠 보세요."
+    ]
   },
   {
     "id": "gen_geometry_35",
@@ -771,7 +939,11 @@
     "answerIndex": 1,
     "explanation": "|a⃗ + b⃗|² = |a⃗|² + 2a⃗·b⃗ + |b⃗|² = 25에서 9 + 2a⃗·b⃗ + 16 = 25이므로 a⃗·b⃗ = 0이다. |a⃗ − b⃗|² = 9 + 0 + 16 = 25이므로 |a⃗ − b⃗| = 5이다.",
     "detailedExplanation": "|a⃗ + b⃗|² = |a⃗|² + 2a⃗·b⃗ + |b⃗|²\n25 = 9 + 2a⃗·b⃗ + 16\n2a⃗·b⃗ = 0, 즉 a⃗·b⃗ = 0\n|a⃗ − b⃗|² = |a⃗|² − 2a⃗·b⃗ + |b⃗|² = 9 − 0 + 16 = 25\n따라서 |a⃗ − b⃗| = 5",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|a⃗ + b⃗|²을 전개하면 |a⃗|² + 2(a⃗·b⃗) + |b⃗|²이 됨을 이용해 a⃗·b⃗를 먼저 구하는 전략을 떠올려 보세요.",
+      "주어진 크기로부터 a⃗·b⃗ = 0 임을 유도한 뒤, |a⃗ − b⃗|² = |a⃗|² − 2(a⃗·b⃗) + |b⃗|² 식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_36",
@@ -789,7 +961,11 @@
     "answerIndex": 0,
     "explanation": "AB→ = B − A = (6−2, 1−5) = (4, −4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점으로 만들어지는 벡터 AB⃗의 성분은 끝점 좌표에서 시작점 좌표를 빼서 구한다는 정의를 떠올려 보세요.",
+      "AB⃗ = B − A = (6−2, 1−5)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_37",
@@ -807,7 +983,11 @@
     "answerIndex": 2,
     "explanation": "|a→| = √(3² + (−2)²) = √(9 + 4) = √13이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 크기는 √(x² + y²) 공식으로 구함을 떠올려 보세요.",
+      "|a→| = √(3² + (−2)²) 형태로 식을 세워 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_38",
@@ -825,7 +1005,11 @@
     "answerIndex": 0,
     "explanation": "a→ + b→ = (4+(−2), −1+3) = (2, 2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터의 합은 x성분끼리, y성분끼리 각각 더한다는 성분별 연산을 떠올려 보세요.",
+      "(4+(−2), −1+3) 처럼 각 성분을 직접 더해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_39",
@@ -843,7 +1027,11 @@
     "answerIndex": 0,
     "explanation": "AB→ = AC→이면 B = C이므로 C = (4, 7)이다.",
     "detailedExplanation": "AB→ = (3, 4)이고 AC→ = (a−1, b−3)이다. AB→ = AC→이면 a−1 = 3, b−3 = 4이므로 a = 4, b = 7. 따라서 C = (4, 7).",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 벡터가 서로 같으려면 각 성분이 모두 같아야 한다는 벡터 등호 조건을 떠올려 보세요.",
+      "AB⃗ = (3, 4)이고 AC⃗ = (a−1, b−3)이므로 두 벡터의 성분이 같다는 연립방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_40",
@@ -861,7 +1049,11 @@
     "answerIndex": 0,
     "explanation": "t² + (t−1)² = 5에서 2t² − 2t − 4 = 0, t² − t − 2 = 0, (t−2)(t+1) = 0이므로 t = 2 또는 t = −1이고, 합은 1이다.",
     "detailedExplanation": "|a→|² = t² + (t−1)² = 5. 전개: t² + t² − 2t + 1 = 5이므로 2t² − 2t − 4 = 0, t² − t − 2 = 0. 인수분해: (t−2)(t+1) = 0이므로 t = 2 또는 t = −1. 두 값의 합: 2 + (−1) = 1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a→|² = t² + (t−1)²라는 크기의 제곱 식을 이용해 이차방정식을 세우는 방향을 떠올려 보세요.",
+      "전개하면 2t² − 2t − 4 = 0이 되므로 인수분해로 t를 구한 뒤, 두 근의 합을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_41",
@@ -879,7 +1071,11 @@
     "answerIndex": 1,
     "explanation": "a⃗ · b⃗ = 3×1 + 4×2 = 3 + 8 = 11이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 내적은 대응 성분끼리 곱한 값의 합임을 떠올려 보세요.",
+      "a⃗·b⃗ = 3×1 + 4×2 처럼 식을 직접 세워 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_42",
@@ -897,7 +1093,11 @@
     "answerIndex": 1,
     "explanation": "a⃗ · b⃗ = |a⃗||b⃗|cos60° = 5 × 4 × (1/2) = 10이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터가 이루는 각도가 주어졌을 때 내적 공식 a⃗·b⃗ = |a⃗||b⃗|cosθ를 떠올려 보세요.",
+      "cos60° = 1/2 임을 이용해 5 × 4 × (1/2)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_43",
@@ -915,7 +1115,11 @@
     "answerIndex": 1,
     "explanation": "a⃗ · b⃗ = 2×3 + (−1)×6 = 6 − 6 = 0이므로, 내적이 0인 두 벡터는 서로 수직이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "내적을 직접 성분으로 계산한 뒤 그 값이 0인지 확인하면 수직 여부를 알 수 있다는 개념을 떠올려 보세요.",
+      "a⃗·b⃗ = 2×3 + (−1)×6을 계산해 그 결과로 두 벡터의 관계를 판단해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_44",
@@ -933,7 +1137,11 @@
     "answerIndex": 0,
     "explanation": "a⃗ ⊥ b⃗이면 a⃗ · b⃗ = 0이므로 1×x + 2×3 = 0, x + 6 = 0, x = −6이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터가 수직이면 내적이 0이라는 조건을 떠올려 보세요.",
+      "a⃗·b⃗ = 1×x + 2×3 = 0 으로 식을 세운 뒤 x를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_45",
@@ -951,7 +1159,11 @@
     "answerIndex": 2,
     "explanation": "|a⃗ + b⃗|² = |a⃗|² + 2(a⃗ · b⃗) + |b⃗|² = 9 + 6 + 4 = 19이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a⃗ + b⃗|²을 전개하면 |a⃗|² + 2(a⃗·b⃗) + |b⃗|² 임을 이용하는 방향을 떠올려 보세요.",
+      "9 + 2×3 + 4 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_46",
@@ -969,7 +1181,11 @@
     "answerIndex": 2,
     "explanation": "|a⃗ − b⃗|² = |a⃗|² − 2(a⃗ · b⃗) + |b⃗|² = 4 − 2(a⃗ · b⃗) + 9 = 7이므로, 2(a⃗ · b⃗) = 6, a⃗ · b⃗ = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a⃗ − b⃗|²을 전개하면 |a⃗|² − 2(a⃗·b⃗) + |b⃗|² 임을 이용해 내적을 구하는 방향을 떠올려 보세요.",
+      "|a⃗ − b⃗|² = 7이라는 조건을 4 − 2(a⃗·b⃗) + 9 = 7 형태로 세워 a⃗·b⃗를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_47",
@@ -987,7 +1203,11 @@
     "answerIndex": 1,
     "explanation": "(a⃗ + tb⃗) · b⃗ = a⃗ · b⃗ + t|b⃗|² = (2×1 + 1×3) + t(1 + 9) = 5 + 10t = 0이므로 t = −1/2이다.",
     "detailedExplanation": "a⃗ · b⃗ = 2×1 + 1×3 = 5, |b⃗|² = 1² + 3² = 10이다. (a⃗ + tb⃗) · b⃗ = 5 + 10t = 0을 풀면 t = −1/2이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분배법칙 (a⃗ + tb⃗)·b⃗ = a⃗·b⃗ + t|b⃗|² 임을 떠올려 보세요.",
+      "a⃗·b⃗와 |b⃗|²를 각각 성분으로 계산한 뒤 5 + 10t = 0 꼴의 방정식을 풀어 보세요."
+    ]
   },
   {
     "id": "gen_geometry_49",
@@ -1005,7 +1225,11 @@
     "answerIndex": 3,
     "explanation": "|2a⃗ + b⃗|² = 4 + 4(a⃗·b⃗) + 4, |2a⃗ − b⃗|² = 4 − 4(a⃗·b⃗) + 4이고, 차는 8(a⃗·b⃗) = 8×1×2×cosθ = 16cosθ이다.",
     "detailedExplanation": "|2a⃗ + b⃗|² = |2a⃗|² + 2(2a⃗)·b⃗ + |b⃗|² = 4|a⃗|² + 4(a⃗·b⃗) + |b⃗|² = 4 + 4(a⃗·b⃗) + 4이다. |2a⃗ − b⃗|² = 4|a⃗|² − 4(a⃗·b⃗) + |b⃗|² = 4 − 4(a⃗·b⃗) + 4이다. 두 식의 차는 8(a⃗·b⃗) = 8×|a⃗||b⃗|cosθ = 8×1×2×cosθ = 16cosθ이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|2a⃗ + b⃗|²과 |2a⃗ − b⃗|²을 각각 전개한 뒤 차를 구하면 내적 항만 남는다는 점을 떠올려 보세요.",
+      "차를 계산하면 8(a⃗·b⃗) = 8|a⃗||b⃗|cosθ 형태가 되므로 주어진 크기 값을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_50",
@@ -1023,7 +1247,11 @@
     "answerIndex": 0,
     "explanation": "점 A(1, 2)를 지나고 방향벡터 (3, 4)인 직선의 매개변수 방정식은 x = 1 + 3t, y = 2 + 4t이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "점과 방향벡터가 주어진 직선의 매개변수 방정식은 (x, y) = (x₀, y₀) + t(d₁, d₂) 형태임을 떠올려 보세요.",
+      "시작점 (1, 2)와 방향벡터 (3, 4)를 각 성분에 대입해 x와 y의 t 식을 각각 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_51",
@@ -1041,7 +1269,11 @@
     "answerIndex": 0,
     "explanation": "중심 (2, −1), 반지름 5인 원의 방정식은 (x − 2)² + (y + 1)² = 5² = 25이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원의 벡터방정식 |p⃗ − c⃗| = r 는 중심이 c⃗이고 반지름이 r인 원을 나타낸다는 정의를 떠올려 보세요.",
+      "|(x−2, y+1)| = 5를 제곱하면 (x−2)² + (y+1)² = 25가 됨을 확인해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_52",
@@ -1059,7 +1291,11 @@
     "answerIndex": 0,
     "explanation": "방향벡터는 AB = B − A = (5−1, 7−3) = (4, 4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 점을 지나는 직선의 방향벡터는 끝점에서 시작점을 뺀 벡터임을 떠올려 보세요.",
+      "방향벡터 = B − A = (5−1, 7−3)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_53",
@@ -1077,7 +1313,11 @@
     "answerIndex": 0,
     "explanation": "방향벡터가 (1, −2)이므로 기울기 = Δy/Δx = −2/1 = −2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "매개변수 방정식 x = 2 + t, y = 1 − 2t에서 방향벡터를 읽어 내고, 기울기 = Δy/Δx 관계를 떠올려 보세요.",
+      "방향벡터가 (1, −2)이므로 기울기 = −2/1 임을 확인해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_54",
@@ -1095,7 +1335,11 @@
     "answerIndex": 0,
     "explanation": "중심은 AB의 중점 c = ((1+5)/2, (2+4)/2) = (3, 3)이고, 반지름은 |AB|/2 = √((5−1)² + (4−2)²)/2 = √20/2 = √5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "지름의 양 끝점이 주어진 원의 중심은 두 점의 중점이고, 반지름은 지름의 절반임을 떠올려 보세요.",
+      "중심 = ((1+5)/2, (2+4)/2)을 구하고, r = |AB|/2 = √((4²+2²))/2 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_55",
@@ -1113,7 +1357,11 @@
     "answerIndex": 0,
     "explanation": "x = 2 + 3t = 8이면 t = 2이고, y = 1 + (−1)×2 = −1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터방정식 p⃗ = a⃗ + td⃗에서 x좌표 식을 t에 대해 풀고, 그 t를 y좌표 식에 대입하는 절차를 떠올려 보세요.",
+      "x = 2 + 3t = 8 을 풀어 t를 구한 뒤 y = 1 + (−1)t에 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_56",
@@ -1131,7 +1379,11 @@
     "answerIndex": 0,
     "explanation": "|（7, 5） − (3, 2)| = |(4, 3)| = √(16 + 9) = √25 = 5이므로 r = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원의 벡터방정식 |p⃗ − c⃗| = r에서 특정 점이 원 위에 있으려면 그 점과 중심 사이의 거리가 r이어야 한다는 조건을 떠올려 보세요.",
+      "|(7, 5) − (3, 2)| = |(4, 3)| = √(16+9) 를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_57",
@@ -1149,7 +1401,11 @@
     "answerIndex": 0,
     "explanation": "(4−1)² + (y−2)² = 10이므로 (y−2)² = 1, y = 1 또는 y = 3이고 두 값의 합은 1 + 3 = 4이다.",
     "detailedExplanation": "원의 방정식에 x = 4를 대입하면 (4−1)² + (y−2)² = 10 → 9 + (y−2)² = 10 → (y−2)² = 1 → y−2 = ±1 → y = 3 또는 y = 1. 두 y좌표의 합 = 3 + 1 = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원의 방정식에 x = 4를 대입해 y에 대한 이차방정식을 세우는 방향을 떠올려 보세요.",
+      "(4−1)² + (y−2)² = 10 에서 (y−2)² = ? 를 구한 뒤 두 y값의 합을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_58",
@@ -1167,7 +1423,11 @@
     "answerIndex": 2,
     "explanation": "공간에서 두 직선이 한 평면 위에 있지 않으면서 만나지도 않고 평행하지도 않을 때, 두 직선은 꼬인 위치에 있다고 한다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 직선이 이룰 수 있는 세 가지 위치 관계(만남, 평행, 그 외)를 떠올려 보세요.",
+      "두 직선이 같은 평면 위에 있지 않으면서 만나지도 않고 평행하지도 않은 관계를 무엇이라 하는지 정의를 정확히 기억해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_59",
@@ -1185,7 +1445,11 @@
     "answerIndex": 1,
     "explanation": "정육면체의 각 꼭짓점에는 3개의 면이 만난다. 따라서 꼭짓점 A를 지나는 면의 개수는 3개이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정육면체의 꼭짓점 한 곳에 몇 개의 면이 모이는지 실제로 그려서 세어 보세요.",
+      "정육면체의 각 꼭짓점은 서로 다른 세 방향의 면(x방향, y방향, z방향)과 각각 한 번씩 만납니다. 몇 개의 면이 해당 꼭짓점을 공유하는지 확인하세요."
+    ]
   },
   {
     "id": "gen_geometry_60",
@@ -1203,7 +1467,11 @@
     "answerIndex": 1,
     "explanation": "직선과 평면이 이루는 각이 90°이면 직선은 평면에 수직(법선)이다. 즉 직선 l ⊥ 평면 α이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "직선과 평면이 이루는 교각이 90°일 때, 직선이 평면에 대해 어떤 특별한 위치에 있는지 생각해 보세요.",
+      "직선이 평면과 이루는 각도가 90°라는 것은, 직선이 평면 위의 모든 직선과 수직임을 의미합니다. 이때 직선과 평면의 관계를 기하학적 용어로 나타내 보세요."
+    ]
   },
   {
     "id": "gen_geometry_61",
@@ -1221,7 +1489,11 @@
     "answerIndex": 2,
     "explanation": "직선 AB와 꼬인 위치에 있는 모서리 방향의 직선은 CG, DH, EH, FG로 총 4개이다. AB와 같은 방향(CD, EF, GH)은 평행, 만나는 것(AE, BF, AD, BC 등)은 제외된다.",
     "detailedExplanation": "AB와 평행한 모서리: CD, EF, GH (3개). AB와 한 점에서 만나는 모서리: AD, BC, AE, BF (4개). 나머지 모서리 중 AB와 한 평면 위에 있지 않고 만나지도 않는 것: DH, CG, EH, FG (4개)가 꼬인 위치이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "정육면체 ABCD-EFGH에서 직선 AB와 각 모서리의 관계(평행, 만남, 꼬인 위치)를 체계적으로 분류해 보세요.",
+      "AB와 평행한 모서리, AB와 한 점에서 만나는 모서리를 먼저 제거한 뒤, 나머지 모서리 방향의 직선 중 AB와 같은 평면 위에 있지 않은 것을 세어 보세요."
+    ]
   },
   {
     "id": "gen_geometry_62",
@@ -1239,7 +1511,11 @@
     "answerIndex": 1,
     "explanation": "이면각의 정의에 의해 교선에 수직인 평면으로 자른 단면에서 두 직선이 이루는 각이 곧 이면각의 크기이므로 60°이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "이면각의 정의를 떠올려 보세요. 두 평면이 이루는 이면각을 측정하는 방법이 이 문제의 핵심입니다.",
+      "이면각은 교선에 수직인 평면으로 잘랐을 때 단면에 나타나는 두 직선이 이루는 각과 같습니다. 따라서 교선에 수직인 평면 γ가 α, β와 만드는 두 직선이 이루는 각도를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_63",
@@ -1257,7 +1533,11 @@
     "answerIndex": 1,
     "explanation": "l ⊥ α이면 l은 α 위의 모든 직선에 수직이다. m ∥ α이면 m의 방향벡터는 α의 법선 l에 수직이므로 l ⊥ m이다.",
     "detailedExplanation": "l이 평면 α에 수직이므로 l의 방향벡터는 α의 법선벡터이다. m이 α에 평행이면 m의 방향벡터는 α에 속한 벡터이므로 α의 법선벡터와 수직이다. 따라서 l과 m의 방향벡터의 내적이 0이 되어 l ⊥ m이다. 단, 교점이 있을 수도, 꼬인 위치일 수도 있으나 두 직선이 이루는 각은 90°이므로 '수직이다'가 정답이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "직선 l이 평면 α에 수직일 때, l과 α 위의 어떤 직선이든 이루는 각도가 어떻게 되는지 생각해 보세요.",
+      "l ⊥ α이면 l의 방향벡터는 α의 법선벡터가 됩니다. m ∥ α이면 m의 방향벡터는 α에 속하는 벡터이므로 l의 방향벡터와 어떤 관계인지 내적으로 확인해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_64",
@@ -1275,7 +1555,11 @@
     "answerIndex": 1,
     "explanation": "한 변의 길이가 a인 정육면체의 공간 대각선의 길이는 a√3이므로, a = 4일 때 AG = 4√3이다.",
     "detailedExplanation": "A = (0,0,0), G = (4,4,4)로 놓으면 AG = √(4²+4²+4²) = √48 = 4√3이다.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정육면체의 공간 대각선이란 서로 마주 보는 꼭짓점을 잇는 선분입니다. 한 변의 길이가 a일 때 공간 대각선 길이 공식을 떠올려 보세요.",
+      "꼭짓점 A를 원점 (0,0,0), G를 (a,a,a)로 좌표를 설정한 뒤 두 점 사이의 거리 공식을 적용하면 AG = √(a²+a²+a²)로 계산됩니다. a = 4를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_65",
@@ -1293,7 +1577,11 @@
     "answerIndex": 1,
     "explanation": "A=(0,0,0), B=(6,0,0), D=(0,6,0), E=(0,0,6)으로 놓으면 평면 BDE의 방정식은 x+y+z=6이고, A에서 이 평면까지의 거리는 |0+0+0−6|/√3 = 6/√3 = 2√3이다.",
     "detailedExplanation": "좌표를 A=(0,0,0), B=(6,0,0), D=(0,6,0), E=(0,0,6)으로 설정한다. 세 점 B, D, E를 지나는 평면의 방정식: x/6 + y/6 + z/6 = 1, 즉 x + y + z = 6. 점 A=(0,0,0)에서 평면 x+y+z−6=0까지의 거리 = |0+0+0−6|/√(1²+1²+1²) = 6/√3 = 6√3/3 = 2√3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "꼭짓점을 좌표로 설정한 뒤, 세 꼭짓점 B, D, E를 지나는 평면의 방정식을 세우는 것이 핵심입니다.",
+      "A=(0,0,0), B=(6,0,0), D=(0,6,0), E=(0,0,6)으로 놓으면 평면 BDE의 방정식은 x+y+z=6이 됩니다. 점 A에서 이 평면까지의 거리 공식 |ax₀+by₀+cz₀+d|/√(a²+b²+c²)을 적용해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_66",
@@ -1311,7 +1599,11 @@
     "answerIndex": 0,
     "explanation": "두 점의 중점은 각 좌표의 평균이므로 ((3+3)/2, (−1+(−1))/2, (2+(−2))/2) = (3, −1, 0)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간의 두 점 A, B의 중점은 각 좌표 성분의 평균으로 구합니다.",
+      "중점의 x좌표 = (x_A+x_B)/2, y좌표 = (y_A+y_B)/2, z좌표 = (z_A+z_B)/2를 각각 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_67",
@@ -1329,7 +1621,11 @@
     "answerIndex": 0,
     "explanation": "3:1 내분점은 ((3×5+1×1)/(3+1), (3×(−2)+1×2)/(3+1), (3×3+1×(−1))/(3+1)) = (16/4, −4/4, 8/4) = (4, −1, 2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "공간에서 선분을 m:n으로 내분하는 점의 공식을 떠올려 보세요. 평면의 내분점 공식과 같은 형태로 z좌표까지 확장됩니다.",
+      "3:1 내분점은 ((3×x_B+1×x_A)/4, (3×y_B+1×y_A)/4, (3×z_B+1×z_A)/4)로 구합니다. A(1,2,−1), B(5,−2,3)을 대입해 각 좌표를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_68",
@@ -1347,7 +1643,11 @@
     "answerIndex": 0,
     "explanation": "삼각형의 무게중심은 세 꼭짓점 좌표의 평균이므로 ((2+0+4)/3, (1+3+(−1))/3, (0+2+4)/3) = (6/3, 3/3, 6/3) = (2, 1, 2)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼각형의 무게중심은 세 꼭짓점 좌표의 평균으로 구합니다. 공간에서도 똑같이 적용됩니다.",
+      "무게중심의 x좌표 = (x_A+x_B+x_C)/3, y좌표 = (y_A+y_B+y_C)/3, z좌표 = (z_A+z_B+z_C)/3을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_69",
@@ -1365,7 +1665,11 @@
     "answerIndex": 1,
     "explanation": "식을 완전제곱 형태로 변환하면 (x−2)² + (y+3)² + (z−1)² = 2+9+1+2 = 16이므로 중심 (2, −3, 1), 반지름 4이다. 세 좌표의 합은 2+(−3)+1 = 0이고 반지름 4를 더하면 4이다.",
     "detailedExplanation": "x² − 4x + y² + 6y + z² − 2z = 2\n(x−2)² − 4 + (y+3)² − 9 + (z−1)² − 1 = 2\n(x−2)² + (y+3)² + (z−1)² = 16\n중심: (2, −3, 1), 반지름: 4\n세 좌표의 합: 2 + (−3) + 1 = 0\n0 + 반지름 4 = 4",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "구의 일반 방정식을 표준형 (x−a)²+(y−b)²+(z−c)²=r²으로 변환하기 위해 완전제곱식 변형을 사용하세요.",
+      "x항, y항, z항 각각에 대해 완전제곱식을 만든 뒤 양변을 정리하여 중심 (a,b,c)과 반지름 r을 찾고, 세 좌표의 합과 반지름을 더해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_70",
@@ -1383,7 +1687,11 @@
     "answerIndex": 2,
     "explanation": "수직선 위 두 점 사이의 거리는 |5 − (−3)| = |8| = 8이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "수직선 위 두 점 사이의 거리는 두 수의 차의 절댓값입니다.",
+      "점 A(−3)과 B(5)에 대해 |B−A| = |5−(−3)|을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_71",
@@ -1401,7 +1709,11 @@
     "answerIndex": 2,
     "explanation": "두 점 사이의 거리 = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "좌표평면 위 두 점 사이의 거리 공식을 떠올려 보세요. 피타고라스 정리의 평면 버전입니다.",
+      "두 점 A(1,2), B(4,6)에 대해 √((4−1)²+(6−2)²)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_72",
@@ -1419,7 +1731,11 @@
     "answerIndex": 2,
     "explanation": "AB = √((3−1)² + (4−0)² + (2−2)²) = √(4 + 16 + 0) = √20이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점 사이의 거리 공식은 √((x₂−x₁)²+(y₂−y₁)²+(z₂−z₁)²)입니다.",
+      "A(1,0,2), B(3,4,2)를 대입하면 z성분의 차가 0임을 확인하고 나머지 성분을 제곱해 더해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_73",
@@ -1437,7 +1753,11 @@
     "answerIndex": 1,
     "explanation": "PQ = √((−1−2)² + (3−(−1))² + (7−3)²) = √(9 + 16 + 16) = √41이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점 P, Q의 거리를 구할 때 세 좌표 성분 차이를 각각 제곱하여 더한 뒤 제곱근을 취합니다.",
+      "P(2,−1,3), Q(−1,3,7)에 대해 각 성분의 차를 구한 뒤 √((−1−2)²+(3−(−1))²+(7−3)²)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_74",
@@ -1455,7 +1775,11 @@
     "answerIndex": 1,
     "explanation": "OP² = 1² + 2² + z² = 1 + 4 + z² = 14이므로 z² = 9, z = 3(양수 조건)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "원점에서 점 P(x,y,z)까지의 거리 공식은 √(x²+y²+z²)입니다. 이 값이 √14가 되려면 x²+y²+z²=14가 되어야 합니다.",
+      "x=1, y=2를 x²+y²+z²=14에 대입하여 z²을 구하고, z가 양수인 경우만 선택하세요."
+    ]
   },
   {
     "id": "gen_geometry_75",
@@ -1473,7 +1797,11 @@
     "answerIndex": 2,
     "explanation": "AB = BC = CA = √((1−0)²+(0−1)²+(0−0)²) = √2이므로 둘레 = 3√2이다.",
     "detailedExplanation": "AB = √((0−1)²+(1−0)²+(0−0)²) = √(1+1+0) = √2\nBC = √((0−0)²+(0−1)²+(1−0)²) = √(0+1+1) = √2\nCA = √((1−0)²+(0−0)²+(0−1)²) = √(1+0+1) = √2\n둘레 = AB + BC + CA = 3√2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 점 사이의 거리를 각각 공간 거리 공식으로 구한 뒤 더하여 둘레를 계산하세요.",
+      "AB, BC, CA를 각각 √((x₂−x₁)²+(y₂−y₁)²+(z₂−z₁)²)로 계산해 보면 세 변의 길이가 모두 같음을 알 수 있습니다. 이를 합산하세요."
+    ]
   },
   {
     "id": "gen_geometry_76",
@@ -1491,7 +1819,11 @@
     "answerIndex": 1,
     "explanation": "AB² = (0−2)² + (t−3)² + (0−(−1))² = 4 + (t−3)² + 1이 최소가 되려면 (t−3)² = 0, 즉 t = 3일 때 AB² = 5이므로 최솟값은 √5이다.",
     "detailedExplanation": "AB² = (0−2)² + (t−3)² + (0−(−1))²\n= 4 + (t−3)² + 1\n= 5 + (t−3)²\n이 식은 (t−3)² ≥ 0이므로 t = 3일 때 최솟값 5를 가진다.\n따라서 거리의 최솟값 = √5",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "y축 위의 점은 (0,t,0) 형태입니다. 점 A(2,3,−1)에서 이 점까지의 거리를 t에 대한 식으로 나타내 보세요.",
+      "AB² = (0−2)²+(t−3)²+(0−(−1))²로 나타낸 뒤, 이 이차식이 최솟값을 갖는 t를 구하고 최솟값을 계산하세요."
+    ]
   },
   {
     "id": "gen_geometry_77",
@@ -1509,7 +1841,11 @@
     "answerIndex": 1,
     "explanation": "중심이 원점이고 반지름이 r인 구의 방정식은 x² + y² + z² = r²이므로, r = 3일 때 x² + y² + z² = 9이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "중심이 원점이고 반지름이 r인 구의 방정식 기본 형태를 떠올려 보세요.",
+      "원점 중심의 구 방정식은 x²+y²+z²=r²이므로, r=3을 대입하여 r²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_78",
@@ -1527,7 +1863,11 @@
     "answerIndex": 2,
     "explanation": "구의 방정식 (x−a)² + (y−b)² + (z−c)² = r²에서 중심은 (a, b, c)이므로, 주어진 방정식의 중심은 (1, −2, 3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "구의 표준 방정식 (x−a)²+(y−b)²+(z−c)²=r²에서 중심은 (a,b,c)임을 기억하세요.",
+      "주어진 방정식에서 각 괄호 안의 부호를 주의하며 a, b, c 값을 바로 읽어내 보세요."
+    ]
   },
   {
     "id": "gen_geometry_79",
@@ -1545,7 +1885,11 @@
     "answerIndex": 1,
     "explanation": "지름의 양 끝점이 A(2,0,0), B(−2,0,0)이므로 중심은 중점 (0,0,0)이고 반지름은 |AB|/2 = 4/2 = 2이다. 따라서 방정식은 x² + y² + z² = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "지름의 양 끝점이 주어지면, 중점이 구의 중심이 되고 반지름은 지름의 절반입니다.",
+      "중심 = ((x_A+x_B)/2, (y_A+y_B)/2, (z_A+z_B)/2)를 구하고, 반지름 = |AB|/2를 계산하여 구의 방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_80",
@@ -1563,7 +1907,11 @@
     "answerIndex": 1,
     "explanation": "주어진 방정식을 완전제곱식으로 변형하면 (x−2)² + (y+3)² + (z−1)² = 4+9+1−9 = 5이므로 반지름은 √5이다.",
     "detailedExplanation": "x² − 4x + y² + 6y + z² − 2z + 9 = 0\n(x−2)² − 4 + (y+3)² − 9 + (z−1)² − 1 + 9 = 0\n(x−2)² + (y+3)² + (z−1)² = 5\n따라서 반지름 r = √5이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구의 일반 방정식을 완전제곱식으로 변환하면 중심과 반지름을 바로 읽을 수 있습니다.",
+      "x²−4x = (x−2)²−4, y²+6y = (y+3)²−9, z²−2z = (z−1)²−1으로 변환한 뒤 우변을 정리해 반지름²을 구하세요."
+    ]
   },
   {
     "id": "gen_geometry_81",
@@ -1581,7 +1929,11 @@
     "answerIndex": 1,
     "explanation": "구의 중심 (0,0,0)에서 평면 z = 3까지의 거리는 3이므로, 교선인 원의 반지름은 √(5² − 3²) = √(25−9) = √16 = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구와 평면이 교선을 이룰 때, 교선인 원의 반지름은 구의 반지름과 중심에서 평면까지의 거리로 구합니다.",
+      "구의 중심에서 평면 z=3까지의 거리를 구한 뒤, r_원² = r_구² − d²을 적용해 교선 원의 반지름을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_82",
@@ -1599,7 +1951,11 @@
     "answerIndex": 1,
     "explanation": "xy평면(z = 0)에 접하는 구의 반지름은 중심의 z좌표의 절댓값 |3| = 3이므로, 구의 방정식은 (x−1)² + (y−2)² + (z−3)² = 9이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구가 좌표평면에 접할 때, 반지름은 중심에서 해당 좌표평면까지의 수직 거리와 같습니다.",
+      "중심 (1,2,3)에서 xy평면(z=0)까지의 거리는 |z좌표|임을 이용하여 반지름을 구하고, 구의 방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_83",
@@ -1617,7 +1973,11 @@
     "answerIndex": 1,
     "explanation": "세 좌표평면(xy, yz, zx 평면)에 모두 접하려면 중심 (1,1,1)에서 각 좌표평면까지의 거리가 모두 r와 같아야 하므로, r = 1이다.",
     "detailedExplanation": "중심이 (1,1,1)일 때, xy평면(z=0)까지의 거리 = 1, yz평면(x=0)까지의 거리 = 1, zx평면(y=0)까지의 거리 = 1이다. 세 거리가 모두 1로 같으므로 r = 1이어야 세 좌표평면에 모두 접한다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "세 좌표평면에 모두 접하려면, 중심에서 각 좌표평면까지의 거리가 모두 반지름 r과 같아야 합니다.",
+      "중심 (1,1,1)에서 xy평면, yz평면, zx평면까지의 거리는 각각 중심의 z성분, x성분, y성분의 절댓값입니다. 이 세 값이 모두 같아야 한다는 조건으로 r을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_84",
@@ -1635,7 +1995,11 @@
     "answerIndex": 1,
     "explanation": "주어진 구를 표준형으로 변환하면 (x−1)² + (y+2)² + (z−3)² = 9이므로 중심 (1,−2,3), 반지름 3이다. 원점에서 중심까지의 거리는 √14이므로, 원점에서 구 위의 점까지 최대 거리는 √14 + 3이고, 따라서 a² + b² + c²의 최댓값은 (√14 + 3)²= 14 + 6√14 + 9 = 23 + 6√14이다.",
     "detailedExplanation": "방정식 정리: x² − 2x + y² + 4y + z² − 6z + 5 = 0\n(x−1)² − 1 + (y+2)² − 4 + (z−3)² − 9 + 5 = 0\n(x−1)² + (y+2)² + (z−3)² = 9\n중심 C(1, −2, 3), 반지름 r = 3\n원점 O에서 중심 C까지의 거리: |OC| = √(1+4+9) = √14\n원점에서 구 위의 점 P까지의 최대 거리 = |OC| + r = √14 + 3\n따라서 a² + b² + c²의 최댓값 = (√14 + 3)² = 14 + 6√14 + 9 = 23 + 6√14\n선택지 ②의 (3 + √14)² = 9 + 6√14 + 14 = 23 + 6√14이므로 ②가 정답.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "구 x²+y²+z²−2x+4y−6z+5=0을 먼저 완전제곱식으로 변환하여 중심과 반지름을 구하세요.",
+      "원점에서 구의 중심까지의 거리를 구한 뒤, 원점에서 구 위의 점 P까지의 최대 거리는 (중심까지 거리 + 반지름)임을 이용해 a²+b²+c²의 최댓값을 제곱값으로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_85",
@@ -1653,7 +2017,11 @@
     "answerIndex": 1,
     "explanation": "초점 (0, −3)과 준선 y = 3으로부터 p = −3이므로 x² = 4py = −12y이다.",
     "detailedExplanation": "포물선 x² = 4py에서 초점은 (0, p), 준선은 y = −p이다. 초점이 (0, −3)이면 p = −3, 준선은 y = 3으로 조건과 일치한다. 따라서 x² = 4×(−3)×y = −12y.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 x² = 4py에서 초점은 (0, p), 준선은 y = −p임을 기억해 보세요. 초점이 아래쪽이면 p < 0이 됩니다.",
+      "초점 (0, −3) → p = −3이므로 x² = 4py = 4 × (−3) × y로 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_86",
@@ -1671,7 +2039,11 @@
     "answerIndex": 2,
     "explanation": "포물선의 정의에 의해 점 P에서 초점까지의 거리는 준선까지의 거리와 같으므로 |PF| = 5이다.",
     "detailedExplanation": "y² = 4x에서 p = 1이므로 초점은 (1, 0), 준선은 x = −1이다. 포물선의 정의에 의해 포물선 위의 임의의 점에서 초점까지의 거리와 준선까지의 거리는 항상 같다. 따라서 |PF| = (준선까지의 거리) = 5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선의 가장 핵심적인 성질: 포물선 위의 점에서 초점까지의 거리와 준선까지의 거리는 항상 같습니다.",
+      "준선까지의 거리가 주어졌다면, 그 값이 곧 초점까지의 거리와 동일함을 이용해 |PF|를 바로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_87",
@@ -1689,7 +2061,11 @@
     "answerIndex": 0,
     "explanation": "a² = 16, b² = 9이므로 c² = a² − b² = 7, c = √7이고, 두 초점 사이의 거리는 2c = 2√7이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1에서 초점 거리 c는 c² = a² − b² 관계를 이용해 구합니다.",
+      "a² = 16, b² = 9로부터 c² = 7, c = √7을 구한 뒤, 두 초점 사이의 거리 2c를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_88",
@@ -1707,7 +2083,11 @@
     "answerIndex": 0,
     "explanation": "장축의 길이가 10이므로 a = 5, a² = 25이고, c = 3이므로 b² = a² − c² = 25 − 9 = 16. 따라서 x²/25 + y²/16 = 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "장축의 길이 2a와 초점 거리 c로부터 b² = a² − c²를 이용해 타원의 방정식을 결정하는 방향을 생각해 보세요.",
+      "장축의 길이 10 → a = 5, c = 3. b² = 25 − 9 = 16을 구해 x²/a² + y²/b² = 1 꼴로 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_89",
@@ -1725,7 +2105,11 @@
     "answerIndex": 0,
     "explanation": "PF + PF' = 2a = 10이고, PF × PF'은 PF = PF' = 5일 때 최대이므로 최댓값은 5 × 5 = 25이다.",
     "detailedExplanation": "두 양수 PF, PF'의 합이 일정할 때 곱은 두 값이 같을 때 최대(산술-기하 평균 부등식). PF = PF' = 5이려면 P가 단축의 끝점이어야 한다. 단축의 끝점 (0, ±3)에서 c = 4이므로 PF = PF' = √(16 + 9) = 5가 성립하여 최댓값은 25이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 양수 PF, PF'의 합 PF + PF' = 2a가 일정할 때, 곱 PF × PF'의 최댓값은 두 값이 같을 때 생김(산술–기하 평균)을 떠올려 보세요.",
+      "2a = 10에서 PF = PF' = 5일 때 최댓값을 구하고, 이 점이 단축의 끝점임을 확인해 성립 여부를 검토해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_90",
@@ -1743,7 +2127,11 @@
     "answerIndex": 1,
     "explanation": "쌍곡선 x²/a² − y²/b² = 1의 점근선은 y = ±(b/a)x이므로, a = 3, b = 4를 대입하면 y = ±(4/3)x이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1의 점근선 공식 y = ±(b/a)x에서 a, b를 먼저 읽어내 보세요.",
+      "a² = 9 → a = 3, b² = 16 → b = 4를 대입하여 기울기 b/a를 계산한 뒤 점근선 방정식을 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_91",
@@ -1761,7 +2149,11 @@
     "answerIndex": 2,
     "explanation": "쌍곡선 x²/a² − y²/b² = 1에서 c² = a² + b² = 4 + 12 = 16이므로 c = 4. 따라서 초점은 (±4, 0)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "쌍곡선의 초점 거리는 c² = a² + b²으로 구합니다. 이 점이 타원과의 차이점입니다.",
+      "a² = 4, b² = 12를 더해 c²을 구하고, c = √(a² + b²)으로 초점 좌표 (±c, 0)을 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_92",
@@ -1779,7 +2171,11 @@
     "answerIndex": 0,
     "explanation": "c = 5이고 |PF − PF'| = 2a = 8이므로 a = 4, a² = 16. b² = c² − a² = 25 − 16 = 9. 따라서 쌍곡선의 방정식은 x²/16 − y²/9 = 1이다.",
     "detailedExplanation": "쌍곡선의 정의에 의해 두 초점까지의 거리 차의 절댓값이 일정하고 이 값이 2a와 같다. c = 5, 2a = 8 → a = 4, a² = 16. b² = c² − a² = 25 − 16 = 9. 검산: x = 4 (꼭짓점)일 때 PF = 4 + 5 = 9, PF' = |4 − (−5)| = 9이므로 |PF − PF'| = 0이 아니다. 꼭짓점 (4, 0)에서 PF = c − a = 1, PF' = c + a = 9, 차 = 8. 확인 완료.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선의 정의에서 두 초점까지의 거리 차의 절댓값 = 2a임을 이용해 a를 먼저 구해 보세요.",
+      "c = 5, 2a = 8 → a = 4, a² = 16. 그리고 b² = c² − a² 관계로 b²를 구해 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_94",
@@ -1797,7 +2193,11 @@
     "answerIndex": 0,
     "explanation": "벡터의 합은 성분별로 더한다. (3+(−1), (−1)+4) = (2, 3)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 합은 x성분끼리, y성분끼리 따로 더한다는 성분별 덧셈을 떠올려 보세요.",
+      "(3+(−1), (−1)+4)를 직접 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_95",
@@ -1815,7 +2215,11 @@
     "answerIndex": 1,
     "explanation": "2a⃗ = (4, 2), b⃗ = (−1, 3)이므로 2a⃗ − b⃗ = (4−(−1), 2−3) = (5, −1)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "스칼라 배를 먼저 계산한 뒤 성분별로 뺀다는 순서를 떠올려 보세요.",
+      "2a⃗ = (4, 2)를 먼저 구하고 (4−(−1), 2−3)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_96",
@@ -1833,7 +2237,11 @@
     "answerIndex": 0,
     "explanation": "AB⃗ = (3, 4), CA⃗ = (1−3, 2−7) = (−2, −5)이므로 AB⃗ + CA⃗ = (3−2, 4−5) = (1, −1)이다.",
     "detailedExplanation": "AB⃗ = B − A = (4−1, 6−2) = (3, 4). CA⃗ = A − C = (1−3, 2−7) = (−2, −5). 따라서 AB⃗ + CA⃗ = (3+(−2), 4+(−5)) = (1, −1)이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "AB⃗와 CA⃗를 각각 끝점−시작점으로 구한 뒤 성분별로 더하는 방향을 떠올려 보세요.",
+      "AB⃗ = (3, 4), CA⃗ = A − C = (1−3, 2−7)을 구한 뒤 두 벡터를 더해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_97",
@@ -1851,7 +2259,11 @@
     "answerIndex": 0,
     "explanation": "AB→ = B − A = (5−2, 3−(−1)) = (3, 4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터 AB⃗의 성분은 B의 좌표에서 A의 좌표를 빼서 구한다는 정의를 떠올려 보세요.",
+      "AB⃗ = (5−2, 3−(−1))을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_98",
@@ -1869,7 +2281,11 @@
     "answerIndex": 1,
     "explanation": "두 벡터가 평행하려면 성분의 비가 같아야 하므로 1/3 = k/6, k = 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "두 벡터가 평행하면 대응 성분의 비가 일정하다는 조건을 떠올려 보세요.",
+      "1/3 = k/6 처럼 성분 비가 같다는 비례식을 세워 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_99",
@@ -1887,7 +2303,11 @@
     "answerIndex": 2,
     "explanation": "두 벡터의 내적은 대응하는 성분끼리 곱하여 더한 값이므로 a⃗ · b⃗ = 3×1 + 4×2 = 3 + 8 = 11이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "내적은 대응하는 성분끼리 곱한 값을 모두 더하는 연산임을 떠올려 보세요.",
+      "a⃗·b⃗ = 3×1 + 4×2 를 직접 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_100",
@@ -1905,7 +2325,11 @@
     "answerIndex": 1,
     "explanation": "a⃗ · b⃗ = |a⃗||b⃗|cos60° = 2 × 3 × (1/2) = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "내적 공식 a⃗·b⃗ = |a⃗||b⃗|cosθ를 사용하는 방향을 떠올려 보세요.",
+      "cos60° = 1/2임을 이용해 2 × 3 × (1/2)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_101",
@@ -1923,7 +2347,11 @@
     "answerIndex": 2,
     "explanation": "두 벡터가 수직이면 내적이 0이므로 a⃗ · b⃗ = 2k + 1×(−4) = 2k − 4 = 0, 따라서 k = 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 벡터가 수직이면 내적이 0이어야 한다는 조건을 떠올려 보세요.",
+      "a⃗·b⃗ = 2k + 1×(−4) = 0 형태의 방정식을 세워 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_102",
@@ -1941,7 +2369,11 @@
     "answerIndex": 0,
     "explanation": "벡터방정식 (x, y) = (1, 2) + t(3, −1)에서 x = 1 + 3t, y = 2 − t이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터방정식 p⃗ = a⃗ + td⃗에서 각 성분은 시작점 성분에 방향벡터 성분의 t배를 더한 것임을 떠올려 보세요.",
+      "x = 1 + 3t, y = 2 + (−1)t 형태로 성분을 분리해 y의 식을 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_103",
@@ -1959,7 +2391,11 @@
     "answerIndex": 2,
     "explanation": "원의 벡터방정식 |p⃗ − c⃗| = r에서 |(x−3, y−1)| = 2이므로 (x−3)² + (y−1)² = 2² = 4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원의 벡터방정식 |p⃗ − c⃗| = r를 제곱하면 (x−cx)² + (y−cy)² = r² 임을 떠올려 보세요.",
+      "|(x−3, y−1)| = 2를 제곱해 k 값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_104",
@@ -1977,7 +2413,11 @@
     "answerIndex": 2,
     "explanation": "공간에서 두 직선이 평행하지도 않고 한 점에서 만나지도 않는 경우, 두 직선은 꼬인 위치에 있다고 한다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 직선이 이룰 수 있는 세 가지 관계(만남, 평행, 그 외)를 떠올려 보세요.",
+      "두 직선이 서로 평행하지도 않고 한 점에서 만나지도 않는 경우, 이 두 직선은 같은 평면 위에 있지 않습니다. 이 관계의 이름을 떠올려 보세요."
+    ]
   },
   {
     "id": "gen_geometry_105",
@@ -1995,7 +2435,11 @@
     "answerIndex": 1,
     "explanation": "두 평면 α ∥ β이고 β ∥ γ이면, 삼단논법에 의해 α ∥ γ가 성립한다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "평행한 두 평면의 관계에 삼단논법을 적용해 보세요. α ∥ β이고 β ∥ γ이면 α와 γ의 관계는 어떻게 되는지 생각해 보세요.",
+      "평행 관계는 추이적으로 성립합니다. α ∥ β이고 β ∥ γ이면 α와 γ는 반드시 어떤 관계인지 결론을 내려 보세요."
+    ]
   },
   {
     "id": "gen_geometry_106",
@@ -2013,7 +2457,11 @@
     "answerIndex": 2,
     "explanation": "두 점 A(1, 2, 3), B(4, 6, 3) 사이의 거리는 √((4−1)² + (6−2)² + (3−3)²) = √(9 + 16 + 0) = √25 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점 사이의 거리 공식을 사용하세요. 세 좌표 성분의 차를 각각 제곱하여 더한 뒤 제곱근을 취합니다.",
+      "A(1,2,3), B(4,6,3)에서 z좌표가 같으므로 z성분의 차는 0입니다. 나머지 두 성분에 대해 √((4−1)²+(6−2)²)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_107",
@@ -2031,7 +2479,11 @@
     "answerIndex": 0,
     "explanation": "중점 M의 좌표는 각 성분의 평균이므로 ((2+6)/2, (−1+3)/2, (4+(−2))/2) = (4, 1, 1)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점의 중점 공식은 각 좌표 성분의 평균입니다.",
+      "A(2,−1,4)와 B(6,3,−2)에 대해 중점 M의 각 좌표를 (x_A+x_B)/2, (y_A+y_B)/2, (z_A+z_B)/2로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_108",
@@ -2049,7 +2501,11 @@
     "answerIndex": 2,
     "explanation": "두 점 사이의 거리 공식 AB = √((4−1)² + (6−2)² + (3−3)²) = √(9 + 16 + 0) = √25 = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점 사이의 거리는 각 좌표 성분의 차를 제곱하여 더한 뒤 제곱근을 취합니다.",
+      "A(1,2,3), B(4,6,3)의 z좌표가 같으므로 z성분 차이는 0이 됩니다. √((4−1)²+(6−2)²+0²)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_109",
@@ -2067,7 +2523,11 @@
     "answerIndex": 2,
     "explanation": "PQ = √((3−(−1))² + (−2−2)² + (1−4)²) = √(16 + 16 + 9) = √41.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간 두 점 거리 공식 √((x₂−x₁)²+(y₂−y₁)²+(z₂−z₁)²)를 사용하세요.",
+      "P(−1,2,4), Q(3,−2,1)을 대입하여 각 성분의 차 (4, −4, −3)를 제곱해 더한 뒤 제곱근을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_110",
@@ -2085,7 +2545,11 @@
     "answerIndex": 3,
     "explanation": "AB² = (5−2)² + (3−a)² + (−2−1)² = 9 + (3−a)² + 9 = 27이므로 (3−a)² = 9, 3−a = ±3. a > 0이므로 a = 6.",
     "detailedExplanation": "AB = √27이면 AB² = 27. 9 + (3−a)² + 9 = 27에서 (3−a)² = 9, 3−a = 3 또는 3−a = −3. a = 0 또는 a = 6. 양수 조건에서 a = 6.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "공간 거리 공식으로 AB² = (x_B−x_A)²+(y_B−y_A)²+(z_B−z_A)² = 27이라는 방정식을 세우세요.",
+      "A(2,a,1), B(5,3,−2)를 대입하면 9+(3−a)²+9=27이 됩니다. (3−a)²의 값을 구한 뒤 양수 a를 선택하세요."
+    ]
   },
   {
     "id": "gen_geometry_111",
@@ -2103,7 +2567,11 @@
     "answerIndex": 2,
     "explanation": "중심 (a, b, c), 반지름 r인 구의 방정식은 (x−a)² + (y−b)² + (z−c)² = r²이므로, 중심 (2, −1, 3), 반지름 4를 대입하면 (x−2)² + (y+1)² + (z−3)² = 16이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "구의 표준 방정식은 (x−a)²+(y−b)²+(z−c)²=r²이며 중심이 (a,b,c), 반지름이 r입니다.",
+      "중심 (2,−1,3), 반지름 4를 대입할 때 y항의 부호에 주의하여 (y−(−1))² = (y+1)²로 써야 합니다."
+    ]
   },
   {
     "id": "gen_geometry_112",
@@ -2121,7 +2589,11 @@
     "answerIndex": 0,
     "explanation": "완전제곱식으로 변형하면 (x−2)² + (y+3)² + (z−1)² = 4+9+1−9 = 5이므로, 중심은 (2, −3, 1)이고 반지름은 √5이다.",
     "detailedExplanation": "x²−4x = (x−2)²−4, y²+6y = (y+3)²−9, z²−2z = (z−1)²−1로 변환 후 우변을 정리하면 4+9+1−9 = 5가 된다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x²−4x, y²+6y, z²−2z 각각에 대해 완전제곱식 변환을 적용하세요.",
+      "각 항을 (x−2)²−4, (y+3)²−9, (z−1)²−1로 바꾼 뒤, 우변의 수를 정리하면 중심과 반지름을 바로 읽을 수 있습니다."
+    ]
   },
   {
     "id": "gen_geometry_113",
@@ -2139,7 +2611,11 @@
     "answerIndex": 0,
     "explanation": "지름의 중점이 구의 중심이므로 중심은 ((1+5)/2, (2+(−2))/2, (−1+3)/2) = (3, 0, 1)이고, 반지름은 지름의 절반인 AB/2 = √((5−1)²+(−2−2)²+(3−(−1))²)/2 = √(16+16+16)/2 = 4√3/2 = 2√3이므로 r² = 12이다.",
     "detailedExplanation": "AB = √(4²+(−4)²+4²) = √(16+16+16) = √48 = 4√3이고, 반지름 r = 2√3이므로 r² = 12. 따라서 구의 방정식은 (x−3)² + y² + (z−1)² = 12이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "지름의 양 끝점이 주어지면 중점이 구의 중심, 지름의 절반이 반지름이 됩니다.",
+      "A(1,2,−1)와 B(5,−2,3)의 중점으로 중심을 구하고, |AB|/2로 반지름을 계산한 뒤 r²값을 구해 방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_114",
@@ -2157,7 +2633,11 @@
     "answerIndex": 2,
     "explanation": "포물선의 정의에 의해 초점까지의 거리 = 준선까지의 거리이므로, 점 P와 초점 사이의 거리도 6이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "포물선의 정의에서 포물선 위의 점은 초점까지의 거리와 준선까지의 거리가 항상 같음을 기억해 보세요.",
+      "준선까지의 거리가 6으로 주어졌다면, 포물선의 정의에 따라 초점까지의 거리도 바로 결정됩니다."
+    ]
   },
   {
     "id": "gen_geometry_115",
@@ -2175,7 +2655,11 @@
     "answerIndex": 1,
     "explanation": "x² = −12y는 x² = −4py (p > 0) 꼴이므로 4p = 12, p = 3. 초점은 (0, −3), 준선은 y = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "포물선 x² = −4py (p > 0) 꼴에서 초점은 (0, −p), 준선은 y = p임을 기억해 보세요.",
+      "4p = 12에서 p = 3을 구하고, 초점 좌표와 준선 방정식을 각각 써 보세요."
+    ]
   },
   {
     "id": "gen_geometry_116",
@@ -2193,7 +2677,11 @@
     "answerIndex": 0,
     "explanation": "꼭짓점이 원점이고 초점이 (−2, 0)이므로 포물선의 방정식은 y² = −8x. 점 (a, 3)을 대입하면 9 = −8a, a = −9/8이다.",
     "detailedExplanation": "초점 (−2, 0), 준선 x = 2이므로 꼭짓점은 원점, y² = 4·(−2)·x = −8x. 점 (a, 3) 대입: 3² = −8a → 9 = −8a → a = −9/8.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "초점 (−2, 0)과 준선 x = 2로부터 꼭짓점이 원점인 포물선의 표준형 y² = 4px를 생각해 보세요. p의 부호에 주의하세요.",
+      "y² = −8x 방정식에 점 (a, 3)을 대입하여 a를 구하는 식 9 = −8a를 풀어 보세요."
+    ]
   },
   {
     "id": "gen_geometry_117",
@@ -2211,7 +2699,11 @@
     "answerIndex": 1,
     "explanation": "초점 F = (2, 0), 직선 y = x − 2를 y² = 8x에 대입하면 x² − 12x + 4 = 0. 근과 계수 관계: x₁x₂ = 4, x₁+x₂ = 12. |AF|·|BF| = (x₁+2)(x₂+2) = x₁x₂ + 2(x₁+x₂) + 4 = 4 + 24 + 4 = 32.",
     "detailedExplanation": "y = x − 2를 y² = 8x에 대입: (x−2)² = 8x → x² − 4x + 4 = 8x → x² − 12x + 4 = 0. 비에타 공식: x₁ + x₂ = 12, x₁x₂ = 4. 포물선 정의에서 |AF| = x₁ + 2, |BF| = x₂ + 2 (준선 x = −2). |AF|·|BF| = (x₁+2)(x₂+2) = x₁x₂ + 2(x₁+x₂) + 4 = 4 + 24 + 4 = 32.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "초점 F = (2, 0)을 지나고 기울기 1인 직선 방정식을 세운 뒤, y² = 8x에 대입해 이차방정식을 만들고 근과 계수의 관계를 활용하세요.",
+      "직선 y = x − 2를 y² = 8x에 대입하면 x에 대한 이차방정식이 나옵니다. 두 교점의 x좌표의 합·곱으로 AB의 길이를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_118",
@@ -2229,7 +2721,11 @@
     "answerIndex": 2,
     "explanation": "포물선 y² = 12x에서 p = 3. 초점현의 조화평균 공식 1/|AF| + 1/|BF| = 1/p에서 1/4 + 1/|BF| = 1/3, 1/|BF| = 1/12, |BF| = 12.",
     "detailedExplanation": "포물선 y² = 4px에서 4p = 12이므로 p = 3, 초점 F = (3, 0). 초점을 지나는 현에서 1/|AF| + 1/|BF| = 1/p = 1/3 (초점현 조화평균). 1/4 + 1/|BF| = 1/3 → 1/|BF| = 1/3 − 1/4 = 1/12 → |BF| = 12.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선의 초점을 지나는 현의 두 끝점까지 거리에 대한 조화평균 공식 1/|AF| + 1/|BF| = 1/p를 떠올려 보세요.",
+      "y² = 12x에서 p = 3. |AF| = 4를 공식에 대입하여 1/4 + 1/|BF| = 1/3 식을 풀어 보세요."
+    ]
   },
   {
     "id": "gen_geometry_119",
@@ -2247,7 +2743,11 @@
     "answerIndex": 2,
     "explanation": "y = √3(x−1)을 y² = 4x에 대입하면 3(x−1)² = 4x → 3x² − 10x + 3 = 0 → x = 3 또는 x = 1/3. 제1사분면 점은 x = 3, 준선 x = −1까지의 거리 = 3 + 1 = 4.",
     "detailedExplanation": "y² = 4x에서 p = 1, 초점 F = (1, 0), 준선 x = −1. 직선: y = tan60°·(x−1) = √3(x−1). 대입: 3(x−1)² = 4x → 3x² − 6x + 3 = 4x → 3x² − 10x + 3 = 0 → (3x−1)(x−3) = 0. x = 3(제1사분면) 또는 x = 1/3(제4사분면). P = (3, 2√3). 준선까지의 거리 = 3 + 1 = 4.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "초점 F(1, 0)을 지나고 x축과 60° 이루는 직선의 기울기는 tan60° = √3임을 이용해 직선 방정식을 세워 보세요.",
+      "직선 y = √3(x − 1)을 y² = 4x에 대입하면 이차방정식이 나옵니다. 제1사분면의 근을 선택해 P의 좌표와 |PF|를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_120",
@@ -2265,7 +2765,11 @@
     "answerIndex": 0,
     "explanation": "|PF| = t² + 2 (포물선 정의), |PO| = √(t⁴ + 8t²). 이 둘이 같으면 (t²+2)² = t⁴ + 8t² → 4t² + 4 = 8t² → t² = 1이 아님. 검산: t⁴+4t²+4 = t⁴+8t² → 4t²=4 → t=1. 선택지 재확인: t=1일 때 P=(1, 2√2), |PF|=3, |PO|=3. t=1이 정답, answerIndex=0.",
     "detailedExplanation": "y² = 8x에서 p = 2, 초점 F = (2, 0). P = (t², 2√2·t). 포물선 정의: |PF| = t² + 2. |PO| = √(t⁴ + 8t²). 조건: t²+2 = √(t⁴+8t²) → (t²+2)² = t⁴+8t² → t⁴+4t²+4 = t⁴+8t² → 4t²=4 → t²=1 → t=1(t>0). 검증: P=(1,2√2), |PF|=1+2=3, |PO|=√(1+8)=3 ✓.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|PF|는 포물선의 정의(초점까지 거리 = 준선까지 거리)로, |PO|는 좌표로부터 거리 공식으로 표현해 보세요.",
+      "|PF| = t² + 2, |PO|² = t⁴ + 8t²를 세운 뒤, |PF| = |PO| 조건에서 (t² + 2)² = t⁴ + 8t² 방정식을 풀어 t를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_121",
@@ -2283,7 +2787,11 @@
     "answerIndex": 2,
     "explanation": "y = √3(x−2)를 y² = 8x에 대입하면 P = (6, 4√3). |PQ| = 6−(−2) = 8 (밑변), F와 직선 y = 4√3 사이 거리 = 4√3 (높이). 넓이 = (1/2)×8×4√3 = 16√3.",
     "detailedExplanation": "y² = 8x에서 p = 2, F = (2, 0), 준선 x = −2. 직선 PF: y = √3(x−2). 포물선과 연립: 3(x−2)² = 8x → 3x²−12x+12 = 8x → 3x²−20x+12 = 0 → (3x−2)(x−6) = 0. x = 6(제1사분면) 또는 x = 2/3(제4사분면). P = (6, 4√3). Q는 P에서 준선 x = −2에 내린 수선의 발이므로 Q = (−2, 4√3). 삼각형 PFQ: 꼭짓점 P = (6, 4√3), F = (2, 0), Q = (−2, 4√3). PQ는 수평선(y = 4√3), 길이 = 6−(−2) = 8. F에서 PQ까지의 수직거리 = |4√3 − 0| = 4√3. 넓이 = (1/2)×8×4√3 = 16√3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "기울기 √3인 직선이 초점 F(2, 0)을 지나므로 직선 방정식을 세운 뒤, y² = 8x에 대입해 교점 P의 좌표를 구해 보세요.",
+      "삼각형의 넓이는 ½ × 밑변 × 높이로 구할 수 있습니다. Q는 준선 위의 점(x = −2)이고 밑변·높이를 좌표로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_122",
@@ -2301,7 +2809,11 @@
     "answerIndex": 1,
     "explanation": "|PF'| = 2a − |PF| = 8 − 3 = 5이고, cos(∠F'PF) = (9+25−28)/30 = 1/5이므로 sin(∠F'PF) = 2√6/5, 넓이 = (1/2)·3·5·(2√6/5) = 3√6.",
     "detailedExplanation": "① a=4, b=3이므로 c=√(16−9)=√7, FF'=2√7.\n② |PF'| = 2·4 − 3 = 5 (타원의 정의).\n③ 코사인 법칙으로 ∠F'PF 구하기: |FF'|² = |PF|² + |PF'|² − 2|PF||PF'|cos(∠F'PF) → 28 = 9+25 − 30cos(∠F'PF) → cos(∠F'PF) = 6/30 = 1/5.\n④ sin(∠F'PF) = √(1−1/25) = √(24/25) = 2√6/5.\n⑤ 삼각형 넓이 = (1/2)·3·5·(2√6/5) = (15/2)·(2√6/5) = 3√6.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원의 정의로 |PF'|을 먼저 구하고, 삼각형 F'PF에서 코사인 법칙을 적용하여 각도를 구해 보세요.",
+      "|PF| = 3, |PF'| = 8 − 3 = 5, |FF'| = 2c = 2√7입니다. 코사인 법칙으로 cos(∠F'PF)를 구한 뒤 sin값을 이용해 삼각형 넓이를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_123",
@@ -2319,7 +2831,11 @@
     "answerIndex": 1,
     "explanation": "접선의 기울기를 k로 놓으면 접선의 조건에서 k=±1/2이고, 두 접점은 (1, 3/2)와 (1, −3/2)이다. 삼각형 AT₁T₂의 밑변 T₁T₂=3, 높이=|4−1|=3이므로 넓이=(1/2)·3·3=9/2.",
     "detailedExplanation": "① y=k(x−4)를 타원에 대입: (3+4k²)x² − 32k²x + 64k²−12=0.\n② 판별식=0 조건: (32k²)² − 4(3+4k²)(64k²−12)=0 → −576k²+144=0 → k²=1/4, k=±1/2.\n③ k=1/2일 때 접점 x: 4x²−8x+4=0 → (x−1)²=0 → x=1, y=1/2·(1−4)=−3/2. 접점 T₁(1,−3/2).\n④ k=−1/2이면 대칭으로 T₂(1, 3/2).\n⑤ 삼각형 AT₁T₂: A(4,0), T₁(1,−3/2), T₂(1,3/2). 밑변 |T₁T₂|=3, 높이=3, 넓이=9/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "외부 점 A(4, 0)에서 타원 x²/4 + y²/3 = 1에 그은 접선의 기울기를 k로 놓고, 접선 조건(판별식 = 0)을 이용해 k를 구해 보세요.",
+      "접점 좌표를 구한 뒤, 삼각형 AT₁T₂의 넓이를 밑변(T₁T₂의 길이)과 높이(A에서 T₁T₂까지의 거리)를 이용해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_124",
@@ -2337,7 +2853,11 @@
     "answerIndex": 2,
     "explanation": "x=2를 타원에 대입하면 y²=5·(1−4/9)=25/9이므로 P=(2, 5/3). |PF'|=a+ex₀=3+(2/3)·2=3+4/3=13/3.",
     "detailedExplanation": "① a=3, b²=5, c=√(9−5)=2, e=c/a=2/3.\n② 초점 F(2,0)에서 x=2인 현의 끝점: 4/9+y²/5=1 → y²=25/9 → P=(2, 5/3).\n③ 반직선 관계 이용: |PF'| = a + e·x₀ = 3+(2/3)·2 = 13/3 (왼쪽 초점 기준).\n④ 직접 계산 검증: √((2+2)²+(5/3)²) = √(16+25/9) = √(169/9) = 13/3 ✓.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "오른쪽 초점 F(c, 0)를 지나고 장축에 수직인 현을 구하려면 x = c를 타원 방정식에 대입해 교점의 y좌표를 구하세요.",
+      "반직통(semi-latus rectum) 공식 또는 좌표 대입으로 P의 좌표를 구한 뒤, 이심률 e = c/a를 이용해 |PF'|을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_125",
@@ -2355,7 +2875,11 @@
     "answerIndex": 2,
     "explanation": "|PF₁|=a+ex₀, |PF₂|=a−ex₀ (e=2/3)이므로 |PF₁|²+|PF₂|²=2a²+2e²x₀²=18+(8/9)x₀²=20 → x₀²=9/4.",
     "detailedExplanation": "① a=3, c=2, e=2/3.\n② 왼쪽·오른쪽 초점 거리: |PF₁|=a+ex₀=3+(2/3)x₀, |PF₂|=a−ex₀=3−(2/3)x₀.\n③ 합의 제곱 전개: |PF₁|²+|PF₂|²=(3+2x₀/3)²+(3−2x₀/3)²=2·9+2·(4/9)x₀²=18+(8/9)x₀².\n④ 18+(8/9)x₀²=20 → (8/9)x₀²=2 → x₀²=9/4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 위의 점 P(x₀, y₀)에서 두 초점까지의 거리는 이심률 e를 이용해 |PF₁| = a + ex₀, |PF₂| = a − ex₀로 나타낼 수 있음을 기억해 보세요.",
+      "|PF₁|² + |PF₂|² = 20 조건에 위 식을 대입하여 x₀를 구하고, 타원 방정식으로 y₀를 찾아 보세요."
+    ]
   },
   {
     "id": "gen_geometry_126",
@@ -2373,7 +2897,11 @@
     "answerIndex": 0,
     "explanation": "중점 (h,k)를 갖는 현의 기울기는 −b²h/(a²k) = −4·(3/2)/(9·(2/3)) = −1이므로, 현의 방정식은 y−2/3=−(x−3/2), 정리하면 x+y=13/6.",
     "detailedExplanation": "① 타원 x²/9+y²/4=1에서 a²=9, b²=4.\n② 현의 중점 (h,k)=(3/2, 2/3)일 때, 중점 공식으로 기울기 m: m = −(b²·h)/(a²·k) = −(4·3/2)/(9·2/3) = −6/6 = −1.\n③ 현의 방정식: y−2/3 = −1·(x−3/2) → x+y = 3/2+2/3 = 9/6+4/6 = 13/6.\n④ 검증: 타원에 x+y=13/6 대입 시 판별식>0이며 두 교점의 x평균=3/2 ✓.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 위 현의 중점이 (h, k)일 때, 현의 기울기는 −b²h/(a²k) 공식으로 구할 수 있음을 떠올려 보세요.",
+      "a² = 9, b² = 4, 중점 (3/2, 2/3)을 대입해 기울기를 구한 뒤, 점-기울기 형태로 현의 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_127",
@@ -2391,7 +2919,11 @@
     "answerIndex": 1,
     "explanation": "|PF₁|+|PF₂|=6, ∠F₁PF₂=90°이면 |PF₁|·|PF₂|=2b²=8이므로 |PF₁|=2, |PF₂|=4(또는 그 역). 넓이=(1/2)·2·4=4.",
     "detailedExplanation": "① a=3, b=2, c=√5, |F₁F₂|=2√5.\n② |PF₁|+|PF₂|=2a=6.\n③ ∠F₁PF₂=90°이면 |PF₁|²+|PF₂|²=|F₁F₂|²=20 → (|PF₁|+|PF₂|)²−2|PF₁||PF₂|=20 → 36−2|PF₁||PF₂|=20 → |PF₁||PF₂|=8.\n④ |PF₁|, |PF₂|는 t²−6t+8=0의 근: (t−2)(t−4)=0 → {2,4}.\n⑤ 넓이=(1/2)·|PF₁|·|PF₂|·sin90°=(1/2)·2·4=4=b².",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∠F₁PF₂ = 90°이면 피타고라스 정리 |PF₁|² + |PF₂|² = |F₁F₂|²이 성립합니다. 또한 타원의 정의로 합도 알 수 있습니다.",
+      "|PF₁| + |PF₂| = 6, |PF₁|² + |PF₂|² = 4c² = 4 × 5 = 20을 연립하여 |PF₁|·|PF₂|를 구한 뒤 넓이 ½ × |PF₁| × |PF₂|을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_128",
@@ -2409,7 +2941,11 @@
     "answerIndex": 0,
     "explanation": "초점을 지나는 현의 양 끝점까지 거리에 대해 1/|AF|+1/|BF|=2a/b²=10/9가 성립하므로, 1/3+1/|BF|=10/9 → 1/|BF|=7/9 → |BF|=9/7.",
     "detailedExplanation": "① a=5, b=3, c=4.\n② 타원의 초점 현 성질: 초점 F를 지나는 현의 두 부분 r₁, r₂에 대해 1/r₁+1/r₂=2a/b².\n③ 증명 개요: 극좌표 r=b²/a/(1−e·cosθ)에서 한 끝은 θ, 다른 끝은 θ+π이므로 1/r₁+1/r₂=2a/b².\n④ 대입: 1/3+1/|BF|=10/9 → 1/|BF|=10/9−3/9=7/9 → |BF|=9/7.\n⑤ 확인: |BF|=9/7≈1.29이고 b²/a(1+e)=9/5/(9/5)=1에서 최솟값 1 이상이므로 유효. (AB=3+9/7=30/7)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원의 초점을 지나는 현(초점현)의 두 끝점 거리에 대해 1/|AF| + 1/|BF| = 2a/b²가 성립함을 기억해 보세요.",
+      "a = 5, b² = 9, |AF| = 3을 대입한 뒤, 1/3 + 1/|BF| = 10/9 식을 풀어 |BF|를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_129",
@@ -2427,7 +2963,11 @@
     "answerIndex": 2,
     "explanation": "2a=|PF₁|+|PF₂|=8이므로 a=4. 코사인 법칙으로 |F₁F₂|²=9+25−2·3·5·(1/5)=28, 즉 c=√7. b²=a²−c²=16−7=9, 단축의 길이=2b=6.",
     "detailedExplanation": "① 타원의 정의: |PF₁|+|PF₂|=2a=3+5=8 → a=4.\n② 코사인 법칙(삼각형 PF₁F₂에서): |F₁F₂|²=|PF₁|²+|PF₂|²−2|PF₁||PF₂|cos(∠F₁PF₂) = 9+25−2·3·5·(1/5) = 34−6 = 28.\n③ (2c)²=28 → c²=7 → c=√7.\n④ b²=a²−c²=16−7=9 → b=3.\n⑤ 단축의 길이=2b=6.\n[오답 함정] ③ 선택 이유: cos(∠F₁PF₂)의 항에서 2·3·5·(1/5)=6을 놓치고 FF'²=34로 계산하면 c²=17/2이 되어 b²이 정수가 아님. ④ 선택 이유: 단축의 길이와 b를 혼동.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|PF₁| + |PF₂|로 a를 구하고, 코사인 법칙으로 |F₁F₂|를 구해 c를 찾은 뒤, b² = a² − c²로 이심률을 계산해 보세요.",
+      "코사인 법칙: |F₁F₂|² = |PF₁|² + |PF₂|² − 2|PF₁||PF₂|cos(∠F₁PF₂)에 주어진 값을 대입해 c를 구하고, 이심률 e = c/a를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_130",
@@ -2445,7 +2985,11 @@
     "answerIndex": 2,
     "explanation": "e = 2이므로 c = 2a, b² = c² − a² = 3a²이다. 점 (2√3, 3)을 대입하면 12/a² − 9/(3a²) = 9/a² = 1이므로 a² = 9, b² = 27, a² + b² = 36이다.",
     "detailedExplanation": "e = c/a = 2이므로 c = 2a. b² = c² − a² = 4a² − a² = 3a². 점 (2√3, 3) 대입: (2√3)²/a² − 3²/(3a²) = 1 → 12/a² − 9/(3a²) = 12/a² − 3/a² = 9/a² = 1. 따라서 a² = 9, b² = 3·9 = 27. a² + b² = 9 + 27 = 36.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이심률 e = c/a = 2에서 c = 2a, 그리고 b² = c² − a² = 3a²를 얻을 수 있음을 생각해 보세요.",
+      "점 (2√3, 3)을 쌍곡선 방정식 x²/a² − y²/b² = 1에 대입하고, b² = 3a²를 이용하면 a²를 구할 수 있습니다. 그 뒤 a² + b²를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_131",
@@ -2463,7 +3007,11 @@
     "answerIndex": 1,
     "explanation": "쌍곡선 x²/a² − y²/b² = 1의 초점에서 점근선까지의 거리는 항상 b이다. 여기서 b² = 4이므로 b = 2이다.",
     "detailedExplanation": "a² = 12, b² = 4이므로 a = 2√3, b = 2, c² = 16, c = 4. 초점 (4, 0)에서 점근선 bx − ay = 0, 즉 2x − 2√3 y = 0 (x − √3 y = 0)까지의 거리 = |4 − 0|/√(1 + 3) = 4/2 = 2. 일반적으로 초점에서 점근선까지의 거리 = bc/c = b임을 확인할 수 있다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선의 초점에서 점근선까지의 거리는 항상 b와 같다는 특별한 성질을 떠올려 보세요.",
+      "b² = 4에서 b = 2를 구하면 초점에서 점근선까지의 거리를 바로 알 수 있습니다."
+    ]
   },
   {
     "id": "gen_geometry_132",
@@ -2481,7 +3029,11 @@
     "answerIndex": 2,
     "explanation": "a = 4이므로 오른쪽 가지에서 |PF₁| − |PF₂| = 2a = 8, |PF₂| = 2. 코사인 법칙으로 cos∠F₁PF₂ = 1/10, sin∠F₁PF₂ = 3√11/10. 넓이 = (1/2)·10·2·(3√11/10) = 3√11.",
     "detailedExplanation": "a = 4, c = 5, 2a = 8. 오른쪽 가지의 점 P에서 F₁이 먼 초점이므로 |PF₁| − |PF₂| = 2a = 8. |PF₁| = 10이면 |PF₂| = 2. |F₁F₂| = 10. 코사인 법칙: 10² = 10² + 2² − 2·10·2·cos∠F₁PF₂ → cos∠F₁PF₂ = 4/40 = 1/10. sin∠F₁PF₂ = √(1 − 1/100) = √(99/100) = 3√11/10. 넓이 = (1/2)·|PF₁|·|PF₂|·sin∠ = (1/2)·10·2·(3√11/10) = 3√11.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "오른쪽 가지 위의 점에서 두 초점까지의 거리 차를 쌍곡선 정의로 구한 뒤, 코사인 법칙을 적용할 준비를 해 보세요.",
+      "a = 4, 2a = 8이므로 오른쪽 가지에서 |PF₁| − |PF₂| = 8입니다. |PF₂| = 2가 주어지면 |PF₁|을 구한 뒤, ∠F₁PF₂를 코사인 법칙으로 찾아 보세요."
+    ]
   },
   {
     "id": "gen_geometry_133",
@@ -2499,7 +3051,11 @@
     "answerIndex": 1,
     "explanation": "두 점근선 y = ±(b/a)x가 수직이면 (b/a)·(−b/a) = −1이므로 b = a. 꼭짓점이 (3, 0)이면 a = 3, b = 3, c = 3√2이므로 e = c/a = √2이다.",
     "detailedExplanation": "점근선 y = (b/a)x와 y = −(b/a)x의 기울기의 곱 = −(b/a)² = −1이므로 b = a. 꼭짓점 (3, 0)에서 a = 3이므로 b = 3. c² = a² + b² = 9 + 9 = 18, c = 3√2. 이심률 e = c/a = 3√2/3 = √2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 점근선 y = ±(b/a)x가 서로 수직이면 기울기의 곱이 −1이 됩니다. 이를 이용해 a와 b의 관계를 구해 보세요.",
+      "점근선 수직 조건 (b/a) × (−b/a) = −1에서 b = a가 나옵니다. 꼭짓점 (3, 0)에서 a = 3으로 쌍곡선 방정식을 완성해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_134",
@@ -2517,7 +3073,11 @@
     "answerIndex": 2,
     "explanation": "a = 3이므로 2a = 6. 왼쪽 가지에서는 오른쪽 초점 F₂가 더 멀므로 |PF₂| − |PF₁| = 2a = 6. 따라서 |PF₂| = 7 + 6 = 13이다.",
     "detailedExplanation": "a = 3, c = 5. 쌍곡선의 정의에 의해 ||PF₁| − |PF₂|| = 2a = 6. P가 왼쪽 가지 위에 있으면 오른쪽 초점 F₂(5, 0)까지의 거리가 더 크므로 |PF₂| − |PF₁| = 6. |PF₁| = 7이므로 |PF₂| = 7 + 6 = 13. (오답 유인: 잘못된 부호 적용 시 |PF₂| = 1, 이심률 혼동 시 15 등을 고를 수 있다.)",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "왼쪽 가지 위의 점에서는 오른쪽 초점까지의 거리가 더 멀므로 |PF₂| − |PF₁| = 2a 관계가 성립합니다.",
+      "a = 3, 2a = 6이고 |PF₁| = 1이 주어지면, |PF₂| − |PF₁| = 6 식에서 |PF₂|를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_135",
@@ -2535,7 +3095,11 @@
     "answerIndex": 2,
     "explanation": "|PF₁| = p, |PF₂| = q로 놓으면 p − q = 2a = 4이고 PF₁ ⊥ PF₂이므로 p² + q² = |F₁F₂|² = 36. (p−q)² = p²−2pq+q² = 16에서 pq = 10. 넓이 = pq/2 = 5.",
     "detailedExplanation": "a = 2, b = √5, c² = 4 + 5 = 9, c = 3. F₁F₂ = 6, F₁F₂² = 36. P는 오른쪽 가지이므로 |PF₁| − |PF₂| = 2a = 4. PF₁ ⊥ PF₂이면 피타고라스 정리: |PF₁|² + |PF₂|² = |F₁F₂|² = 36. p − q = 4이므로 (p−q)² = p²−2pq+q² = 16 = 36 − 2pq → pq = 10. 삼각형 넓이 = (1/2)·p·q = 5. (실제 p = 2+√14, q = −2+√14로 존재 확인됨.)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "PF₁ ⊥ PF₂ 조건에서 피타고라스 정리 |PF₁|² + |PF₂|² = |F₁F₂|²을 이용하고, 쌍곡선 정의 |PF₁| − |PF₂| = 2a도 함께 쓰세요.",
+      "두 조건 p − q = 4와 p² + q² = 36을 연립하면 pq를 구할 수 있고, 이로부터 삼각형 넓이 ½ × p × q를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_136",
@@ -2553,7 +3117,11 @@
     "answerIndex": 1,
     "explanation": "삼각형 내접원에서 꼭짓점 F₂의 접선 길이 = 반둘레 − |PF₁|이고, 이를 정리하면 |F₂T| = (|PF₂| + 2c − |PF₁|)/2 = (2c − 2a)/2 = c − a = 5 − 3 = 2이다.",
     "detailedExplanation": "내접원의 반지름을 r, 반둘레를 s = (|PF₁|+|PF₂|+2c)/2라 하면, 꼭짓점 F₂에서 내접원까지의 접선 길이 |F₂T| = s − |PF₁|. = (|PF₁|+|PF₂|+2c)/2 − |PF₁| = (|PF₂|−|PF₁|+2c)/2. 오른쪽 가지에서 |PF₁|−|PF₂| = 2a이므로 |PF₂|−|PF₁| = −2a. 따라서 |F₂T| = (−2a+2c)/2 = c−a = 5−3 = 2. 이 값은 점 P의 위치에 무관하게 일정하다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "삼각형의 내접원에서 각 꼭짓점으로부터 접점까지의 거리가 반둘레에서 대변을 뺀 값임을 기억해 보세요.",
+      "|PF₁| + |PF₂| + |F₁F₂|를 반둘레로 삼아, F₂에서 내접원 접점까지의 길이를 (반둘레 − |PF₁|)로 나타내어 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_137",
@@ -2571,7 +3139,11 @@
     "answerIndex": 1,
     "explanation": "y = 2x + k를 y² = 8x에 대입하면 4x² + (4k−8)x + k² = 0이 되고, 판별식 D/4 = (2k−4)² − 4k² = −16k + 16 = 0에서 k = 1이다.",
     "detailedExplanation": "y = 2x + k를 y² = 8x에 대입하면 (2x+k)² = 8x → 4x² + (4k−8)x + k² = 0.\n판별식 D = 0이어야 접하므로 D/4 = (2k−4)² − 4k² = 4k² − 16k + 16 − 4k² = −16k + 16 = 0.\n따라서 k = 1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선과 직선이 접하려면 대입 후 얻은 이차방정식의 판별식 D = 0이어야 함을 떠올려 보세요.",
+      "y = 2x + k를 y² = 8x에 대입해 정리한 이차방정식의 판별식을 0으로 놓고 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_138",
@@ -2589,7 +3161,11 @@
     "answerIndex": 3,
     "explanation": "타원 x²/a² + y²/b² = 1에 기울기 m인 접선의 조건은 n² = a²m² + b²이므로, n² = 9(1)² + 4 = 13이고 양수 n = √13이다.",
     "detailedExplanation": "타원 x²/9 + y²/4 = 1에 y = x + n을 대입하면 x²/9 + (x+n)²/4 = 1.\n정리하면 (4 + 9)x² + 18nx + 9n² − 36 = 0 → 13x² + 18nx + 9(n²−4) = 0.\n판별식 D = 0: (18n)² − 4·13·9(n²−4) = 0 → 324n² − 468n² + 1872 = 0 → −144n² + 1872 = 0 → n² = 13.\n양수 n = √13.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1에 기울기 m인 접선 y = mx + n의 조건은 n² = a²m² + b²임을 기억해 보세요.",
+      "a² = 9, b² = 4, m = 1을 대입하여 n² = 9 + 4 = 13을 구하고, 양수 n 값을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_geometry_139",
@@ -2607,7 +3183,11 @@
     "answerIndex": 2,
     "explanation": "y = 2x + k를 쌍곡선에 대입하여 정리하면 7x² + 16kx + 4k² + 36 = 0이 되고, 판별식 D = 256k² − 28(4k²+36) = 144k² − 1008 = 0에서 k² = 7이다.",
     "detailedExplanation": "y = 2x + k를 x²/4 − y²/9 = 1에 대입: x²/4 − (2x+k)²/9 = 1.\n양변에 36을 곱하면 9x² − 4(4x²+4kx+k²) = 36 → −7x² − 16kx − 4k² − 36 = 0.\n즉 7x² + 16kx + 4k² + 36 = 0.\n판별식 D = (16k)² − 4·7·(4k²+36) = 256k² − 112k² − 1008 = 144k² − 1008 = 0.\n따라서 k² = 7.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "직선을 쌍곡선에 대입한 뒤 이차방정식의 판별식 D = 0 조건으로 접선의 k² 값을 구해 보세요.",
+      "y = 2x + k를 x²/4 − y²/9 = 1에 대입해 정리하면 x에 대한 이차방정식이 나옵니다. 그 판별식 = 0을 이용해 k²를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_140",
@@ -2625,7 +3205,11 @@
     "answerIndex": 0,
     "explanation": "포물선 y² = 16x의 기울기 m인 접선은 y = mx + 4/m이고, 이 접선이 (−1, 2)를 지나면 m² + 2m − 4 = 0이 되어, 두 근의 곱은 비에타 공식에 의해 −4이다.",
     "detailedExplanation": "y² = 16x에 기울기 m인 접선의 방정식: y = mx + 4/m.\n점 (−1, 2)를 대입: 2 = m(−1) + 4/m → 2m = −m² + 4 → m² + 2m − 4 = 0.\n두 근을 m₁, m₂라 하면 비에타 공식에 의해 m₁m₂ = −4/1 = −4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 y² = 16x에 기울기 m인 접선의 방정식은 y = mx + 4/m 꼴임을 기억하고, 이 접선이 특정 점을 지나는 조건을 세워 보세요.",
+      "접선 y = mx + 4/m이 점 (−1, 2)를 지나는 조건을 m에 관한 이차방정식으로 쓴 뒤, 두 근의 곱(근과 계수 관계)을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_141",
@@ -2643,7 +3227,11 @@
     "answerIndex": 2,
     "explanation": "점 P(2, 3√3/2)에서의 접선은 x/8 + (√3/6)y = 1이므로 x절편은 8, y절편은 2√3이고, 삼각형 OAB의 넓이는 (1/2)·8·2√3 = 8√3이다.",
     "detailedExplanation": "P(2, 3√3/2)가 타원 위의 점인지 확인: 4/16 + (27/4)/9 = 1/4 + 3/4 = 1 ✓.\n접선의 방정식: (x₀/16)x + (y₀/9)y = 1 → (2/16)x + (3√3/2)/9·y = 1 → x/8 + (√3/6)y = 1.\nx절편(y=0): x = 8 → A(8, 0).\ny절편(x=0): (√3/6)y = 1 → y = 6/√3 = 2√3 → B(0, 2√3).\n삼각형 OAB의 넓이 = (1/2)·8·2√3 = 8√3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원 위의 점에서의 접선 공식으로 접선 방정식을 구하고, x축과 y축의 교점(x절편, y절편)을 찾아 보세요.",
+      "접선의 x절편과 y절편을 구한 뒤, 원점을 포함한 삼각형의 넓이 = ½ × |x절편| × |y절편|으로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_142",
@@ -2661,7 +3249,11 @@
     "answerIndex": 2,
     "explanation": "쌍곡선 x²/9 − y²/16 = 1에 기울기 2인 접선은 y = 2x ± √(9·4−16) = 2x ± 2√5이므로, n₁ = 2√5, n₂ = −2√5이고 n₁² + n₂² = 20 + 20 = 40이다.",
     "detailedExplanation": "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선: y = mx ± √(a²m²−b²).\na² = 9, b² = 16, m = 2를 대입: y = 2x ± √(9×4−16) = 2x ± √20 = 2x ± 2√5.\n두 y절편: n₁ = 2√5, n₂ = −2√5.\nn₁² + n₂² = (2√5)² + (−2√5)² = 20 + 20 = 40.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1에 기울기 m인 접선은 y = mx ± √(a²m² − b²) 꼴이고, y절편은 ±√(a²m² − b²)임을 기억해 보세요.",
+      "a² = 9, b² = 16, m = 2를 대입해 y절편 n₁, n₂를 구한 뒤, n₁² + n₂²를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_143",
@@ -2679,7 +3271,11 @@
     "answerIndex": 2,
     "explanation": "x² = 4(x+k)에서 x² − 4x − 4k = 0이고, 기울기 1인 직선에서 |AB| = √2·|x₁−x₂| = √2·√(16+16k) = 4√(2(1+k)) = 8이 되려면 k = 1이다.",
     "detailedExplanation": "x² = 4y에 y = x + k를 대입: x² = 4(x+k) → x² − 4x − 4k = 0.\n두 근 x₁, x₂에 대해 x₁+x₂ = 4, x₁x₂ = −4k.\n(x₁−x₂)² = (x₁+x₂)² − 4x₁x₂ = 16 + 16k.\n직선의 기울기가 1이므로 |AB| = √(1+1²)·|x₁−x₂| = √2·√(16+16k) = 4√(2(1+k)).\n4√(2(1+k)) = 8 → 2(1+k) = 4 → k = 1.\n(단, 두 교점 존재 조건: 16+16k > 0 → k > −1, k = 1 ✓)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x² = 4y와 y = x + k를 연립하면 x에 대한 이차방정식이 나옵니다. 두 근 x₁, x₂를 근과 계수로 표현하고, 현의 길이 공식을 세워 보세요.",
+      "기울기 1인 직선에서 두 교점 사이의 거리는 |AB| = √2 × |x₁ − x₂|로 계산할 수 있습니다. 이를 이용해 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_144",
@@ -2697,7 +3293,11 @@
     "answerIndex": 3,
     "explanation": "타원 위의 점을 P = (2cosθ, sinθ)로 놓으면 거리는 |2cosθ + √3sinθ − 4|/2이고, 2cosθ + √3sinθ의 최댓값이 √7이므로 최솟값은 (4−√7)/2이다.",
     "detailedExplanation": "타원 x²/4 + y² = 1을 매개변수로 표현: P = (2cosθ, sinθ).\n직선 x + √3y − 4 = 0까지의 거리 = |2cosθ + √3sinθ − 4| / √(1²+(√3)²) = |2cosθ + √3sinθ − 4| / 2.\nf(θ) = 2cosθ + √3sinθ의 최댓값 = √(2²+(√3)²) = √(4+3) = √7 ≈ 2.65 < 4이므로\n항상 4 − f(θ) > 0.\n거리의 최솟값 = (4 − √7) / 2 (f(θ)가 최댓값 √7일 때).",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "타원 위의 점을 매개변수 P = (2cosθ, sinθ)로 나타내고, 주어진 직선까지의 거리를 θ의 함수로 표현해 보세요.",
+      "거리 = |2cosθ + √3sinθ − 4|/2에서 분자의 2cosθ + √3sinθ 부분의 최댓값·최솟값을 합성 삼각함수로 구하여 거리의 최솟값을 찾아 보세요."
+    ]
   },
   {
     "id": "gen_geometry_145",
@@ -2715,7 +3315,11 @@
     "answerIndex": 0,
     "explanation": "2a⃗ − b⃗ = (6−(−1), −2−2) = (7, −4)이므로 |2a⃗ − b⃗| = √(49+16) = √65.",
     "detailedExplanation": "2a⃗ = (6, −2), b⃗ = (−1, 2)이므로 2a⃗ − b⃗ = (6+1, −2−2) = (7, −4). 크기 = √(7²+(−4)²) = √(49+16) = √65. 오답 유형: 빼기 부호 실수로 (5, −4) 또는 (7, −2) 계산하는 경우.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "스칼라 배 후 성분별 뺄셈을 순서대로 적용하는 방법을 떠올려 보세요.",
+      "2a⃗ = (6, −2), b⃗ = (−1, 2)이므로 2a⃗ − b⃗ = (6−(−1), −2−2) = (7, −4)의 크기를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_146",
@@ -2733,7 +3337,11 @@
     "answerIndex": 0,
     "explanation": "a⃗ + 2b⃗ = (2+(−2), 1+6) = (0, 7)이므로 |a⃗ + 2b⃗| = √(0+49) = 7.",
     "detailedExplanation": "2b⃗ = (−2, 6). a⃗ + 2b⃗ = (2−2, 1+6) = (0, 7). 크기 = √(0²+7²) = 7. 오답 유형: a⃗+2b⃗를 (1, 4)로 잘못 계산해 √17이 나오는 경우.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "스칼라 배를 먼저 계산하고 나서 성분별 덧셈을 한다는 절차를 떠올려 보세요.",
+      "2b⃗ = (−2, 6)을 구한 뒤 a⃗ + 2b⃗ = (2+(−2), 1+6)을 계산해 크기를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_147",
@@ -2751,7 +3359,11 @@
     "answerIndex": 0,
     "explanation": "AB⃗ = (3, 4)이므로 AC⃗ = (5−3, 3−4) = (2, −1). 따라서 C = A + AC⃗ = (1+2, 2−1) = (3, 1).",
     "detailedExplanation": "AB⃗ = B − A = (4−1, 6−2) = (3, 4). AB⃗ + AC⃗ = (5, 3)이므로 AC⃗ = (5−3, 3−4) = (2, −1). C = A + AC⃗ = (1+2, 2+(−1)) = (3, 1). 검산: AB⃗ + AC⃗ = (3,4)+(2,−1) = (5,3) ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "AB⃗ + AC⃗ = 주어진 벡터라는 조건에서 AC⃗를 먼저 분리하고, C = A + AC⃗로 좌표를 구하는 방향을 떠올려 보세요.",
+      "AB⃗ = (3, 4)이므로 AC⃗ = (5−3, 3−4) = (2, −1)을 구한 뒤 C = (1+2, 2−1)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_148",
@@ -2769,7 +3381,11 @@
     "answerIndex": 0,
     "explanation": "|a⃗+b⃗|² = |a⃗|²+2a⃗·b⃗+|b⃗|² = 25이므로 9+2(a⃗·b⃗)+16 = 25, a⃗·b⃗ = 0. |a⃗−b⃗|² = 9−0+16 = 25, |a⃗−b⃗| = 5.",
     "detailedExplanation": "|a⃗+b⃗|² = |a⃗|² + 2(a⃗·b⃗) + |b⃗|² = 9 + 2(a⃗·b⃗) + 16 = 25. 따라서 2(a⃗·b⃗) = 0, a⃗·b⃗ = 0. |a⃗−b⃗|² = |a⃗|² − 2(a⃗·b⃗) + |b⃗|² = 9 − 0 + 16 = 25, |a⃗−b⃗| = 5. 즉 a⃗⊥b⃗이므로 |a⃗+b⃗| = |a⃗−b⃗| = 5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a⃗ + b⃗|²을 전개해 a⃗·b⃗를 먼저 구한 뒤, 이를 |a⃗ − b⃗|² 식에 대입하는 전략을 떠올려 보세요.",
+      "|a⃗ + b⃗|² = |a⃗|² + 2(a⃗·b⃗) + |b⃗|² = 25에서 a⃗·b⃗를 구하고, |a⃗ − b⃗|² = 9 − 2(a⃗·b⃗) + 16 을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_149",
@@ -2787,7 +3403,11 @@
     "answerIndex": 0,
     "explanation": "2a⃗ + b⃗ = (2p+3, 4+q) = (7, 8)이므로 p = 2, q = 4, p+q = 6.",
     "detailedExplanation": "2a⃗ = (2p, 4), b⃗ = (3, q). 2a⃗+b⃗ = (2p+3, 4+q) = (7, 8). 연립: 2p+3=7 → p=2, 4+q=8 → q=4. p+q = 2+4 = 6. 검산: 2(2,2)+(3,4)=(4+3, 4+4)=(7,8) ✓",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터 등호는 성분별로 방정식을 세워 연립하는 방식으로 접근함을 떠올려 보세요.",
+      "2a⃗ + b⃗ = (2p+3, 4+q) = (7, 8)에서 p와 q에 대한 두 방정식을 각각 풀어 보세요."
+    ]
   },
   {
     "id": "gen_geometry_150",
@@ -2805,7 +3425,11 @@
     "answerIndex": 0,
     "explanation": "|−a⃗+3b⃗|² = |a⃗|²−6(a⃗·b⃗)+9|b⃗|² = 4−6(a⃗·b⃗)+81 = 85−6(a⃗·b⃗). a⃗·b⃗의 최댓값은 6이므로 최솟값은 √(85−36) = √49 = 7.",
     "detailedExplanation": "|−a⃗+3b⃗|² = (−a⃗+3b⃗)·(−a⃗+3b⃗) = |a⃗|² − 6(a⃗·b⃗) + 9|b⃗|² = 4 − 6(a⃗·b⃗) + 81 = 85 − 6(a⃗·b⃗). 이 식이 최소가 되려면 a⃗·b⃗가 최대여야 한다. 코시-슈바르츠: a⃗·b⃗ ≤ |a⃗||b⃗| = 2×3 = 6. a⃗와 b⃗가 평행(같은 방향)일 때 등호 성립. 최솟값 = √(85−36) = √49 = 7.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|−a⃗ + 3b⃗|²을 전개하면 내적 항이 나타나고, 내적의 최댓값은 코시-슈바르츠 부등식 a⃗·b⃗ ≤ |a⃗||b⃗|로 구함을 떠올려 보세요.",
+      "전개식 85 − 6(a⃗·b⃗)가 최소가 되려면 a⃗·b⃗가 최대여야 하므로 a⃗·b⃗의 최댓값 6을 대입해 √(85−36)을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_151",
@@ -2823,7 +3447,11 @@
     "answerIndex": 0,
     "explanation": "3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗에서 5PC⃗ = 3PA⃗ + 2PB⃗이므로 PC⃗ = (3PA⃗ + 2PB⃗) ÷ 5.",
     "detailedExplanation": "주어진 조건 3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗을 PC⃗에 대해 정리하면, 5PC⃗ = 3PA⃗ + 2PB⃗. 따라서 PC⃗ = (3PA⃗ + 2PB⃗)/5. 기하학적 의미: P는 △ABC의 무게중심 방향으로 이동하되, A:B:C = 3:2:5의 가중 평균 점. 직접 검산: 3PA⃗+2PB⃗−5·(3PA⃗+2PB⃗)/5 = 3PA⃗+2PB⃗−3PA⃗−2PB⃗ = 0⃗ ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "벡터 조건식을 PC⃗에 대해 정리하는 대수적 변환 방법을 떠올려 보세요.",
+      "3PA⃗ + 2PB⃗ − 5PC⃗ = 0⃗에서 5PC⃗를 이항하면 PC⃗를 PA⃗와 PB⃗로 나타낼 수 있어요."
+    ]
   },
   {
     "id": "gen_geometry_152",
@@ -2841,7 +3469,11 @@
     "answerIndex": 0,
     "explanation": "2a⃗ − b⃗ = (6, −2) − (−2, 4) = (8, −6)이므로 성분의 합은 8 + (−6) = 2.",
     "detailedExplanation": "2a⃗ = 2×(3, −1) = (6, −2)\n2a⃗ − b⃗ = (6−(−2), −2−4) = (8, −6)\n성분의 합 = 8 + (−6) = 2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "스칼라 배와 성분별 뺄셈을 순서대로 적용한 뒤 결과 벡터의 성분을 모두 더하는 절차를 떠올려 보세요.",
+      "2a⃗ − b⃗ = (6, −2) − (−2, 4) = (8, −6)을 먼저 구한 뒤 성분의 합을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_153",
@@ -2859,7 +3491,11 @@
     "answerIndex": 1,
     "explanation": "|a⃗|² = 4 + k² = 13이므로 k² = 9, k = 3(양수).",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "벡터의 크기 공식 |a⃗|² = x² + y²에서 크기가 √13이면 크기의 제곱이 13임을 이용해 이차방정식을 세우는 방향을 떠올려 보세요.",
+      "4 + k² = 13 을 풀어 k를 구하고 양수 조건을 적용해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_154",
@@ -2877,7 +3513,11 @@
     "answerIndex": 0,
     "explanation": "AB⃗ = B − A = (3, −4)이므로 성분의 곱 = 3 × (−4) = −12.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "AB⃗ = B − A로 성분을 구한 뒤 두 성분을 곱한다는 절차를 떠올려 보세요.",
+      "AB⃗ = (4−1, −1−3) = (3, −4)이므로 성분의 곱 3 × (−4)를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_155",
@@ -2895,7 +3535,11 @@
     "answerIndex": 1,
     "explanation": "x성분: t+1 = 3 → t = 2, y성분: 2t = t+2 → t = 2로 일치하므로 t = 2.",
     "detailedExplanation": "두 벡터가 같으려면 각 성분이 같아야 한다.\nx성분: t+1 = 3 → t = 2\ny성분: 2t = t+2 → t = 2\n두 조건 모두 t = 2에서 성립하므로 t = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 벡터가 같으려면 x성분끼리, y성분끼리 각각 같아야 한다는 조건을 떠올려 보세요.",
+      "x성분: t+1 = 3, y성분: 2t = t+2 두 방정식을 각각 풀어 t를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_156",
@@ -2913,7 +3557,11 @@
     "answerIndex": 2,
     "explanation": "|a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗) = 4(3×1 + 1×2) = 4×5 = 20.",
     "detailedExplanation": "공식: |a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗)\na⃗·b⃗ = 3×1 + 1×2 = 5\n4×5 = 20\n\n직접 계산으로 검산:\na⃗+b⃗ = (4, 3) → |a⃗+b⃗|² = 16+9 = 25\na⃗−b⃗ = (2, −1) → |a⃗−b⃗|² = 4+1 = 5\n25 − 5 = 20 ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗)라는 항등식을 떠올려 보세요.",
+      "성분 공식으로 a⃗·b⃗ = 3×1 + 1×2 = 5를 구한 뒤 4배 해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_157",
@@ -2931,7 +3579,11 @@
     "answerIndex": 2,
     "explanation": "OA⃗ = (4, 2), OB⃗ = (1, 5)이므로 OC⃗ = (5, 7), a+b = 12.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "OA⃗와 OB⃗를 각각 좌표로 쓴 뒤 성분별로 더하면 OC⃗가 됨을 떠올려 보세요.",
+      "OA⃗ = (4, 2), OB⃗ = (1, 5)를 더해 점 C의 좌표를 구한 뒤 a + b를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_158",
@@ -2949,7 +3601,11 @@
     "answerIndex": 0,
     "explanation": "P는 선분 BC 위의 점이고 P = (2s, 2−2s) (0≤s≤1)로 나타낼 수 있다. |OP|² = 4s²+(2−2s)² = 8s²−8s+4를 최소화하면 s = 1/2일 때 최솟값 2를 가지므로 |OP| = √2.",
     "detailedExplanation": "AP⃗ = sAB⃗ + tAC⃗, s+t=1, s≥0, t≥0이면 P는 선분 BC 위의 점이다.\n\nAB⃗ = (2, 0), AC⃗ = (0, 2)\nP = A + sAB⃗ + tAC⃗ = s(2,0) + t(0,2) = (2s, 2t)\nt = 1−s이므로 P = (2s, 2(1−s)) = (2s, 2−2s), 0≤s≤1\n\n|OP⃗|² = (2s)² + (2−2s)²\n= 4s² + 4 − 8s + 4s²\n= 8s² − 8s + 4\n= 8(s − 1/2)² + 2\n\ns = 1/2일 때 최솟값 = 2 (범위 내 ✓)\n|OP⃗|의 최솟값 = √2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "AP⃗ = sAB⃗ + tAC⃗, s+t=1, s≥0, t≥0 조건에서 점 P가 선분 BC 위에 있음을 떠올려 보세요.",
+      "P = (2s, 2−2s)로 나타낸 뒤 |OP⃗|² = 8s² − 8s + 4를 완전제곱으로 변환해 최솟값을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_159",
@@ -2967,7 +3623,11 @@
     "answerIndex": 0,
     "explanation": "|a⃗+b⃗|² = |a⃗|²+2a⃗·b⃗+|b⃗|² = 7, |a⃗−b⃗|² = |a⃗|²−2a⃗·b⃗+|b⃗|² = 9이므로 두 식을 빼면 4a⃗·b⃗ = −2, 따라서 a⃗·b⃗ = −1/2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|a⃗+b⃗|²과 |a⃗−b⃗|²을 각각 전개한 뒤 두 식의 차를 이용하면 a⃗·b⃗를 직접 구할 수 있음을 떠올려 보세요.",
+      "두 전개식의 차 |a⃗+b⃗|² − |a⃗−b⃗|² = 4(a⃗·b⃗)에서 7 − 9 = 4(a⃗·b⃗) 형태의 방정식을 세워 보세요."
+    ]
   },
   {
     "id": "gen_geometry_160",
@@ -2985,7 +3645,11 @@
     "answerIndex": 1,
     "explanation": "PA⃗·PB⃗ = (4−x)(−x)+(−y)(3−y) = 0을 정리하면 x²+y²−4x−3y = 0이고, 완전제곱으로 변환하면 (x−2)²+(y−3/2)² = 25/4이므로 r² = 25/4, 4r² = 25이다.",
     "detailedExplanation": "① PA⃗ = (4−x, −y), PB⃗ = (−x, 3−y)\n② PA⃗·PB⃗ = (4−x)(−x)+(−y)(3−y) = −4x+x²−3y+y² = 0\n③ x²−4x+y²−3y = 0\n④ (x−2)²+(y−3/2)² = 4+9/4 = 25/4\n⑤ r² = 25/4이므로 4r² = 25",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "PA⃗·PB⃗ = 0 조건을 성분으로 전개해 자취 방정식을 세운 뒤 완전제곱으로 변환하는 방향을 떠올려 보세요.",
+      "PA⃗ = (4−x, −y), PB⃗ = (−x, 3−y)의 내적을 0으로 놓고 전개한 뒤 (x−2)²+(y−3/2)² = r² 형태로 변환해 r²을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_161",
@@ -3003,7 +3667,11 @@
     "answerIndex": 0,
     "explanation": "AM⃗ = (AB⃗+AC⃗)/2이므로 AM⃗·BC⃗ = (1/2)(AB⃗+AC⃗)·(AC⃗−AB⃗) = (1/2)(|AC⃗|²−|AB⃗|²) = 0. AB⃗·AC⃗ = |AB⃗||AC⃗|cos60° = 2×2×(1/2) = 2. 따라서 합은 0+2 = 2이다.",
     "detailedExplanation": "① BC⃗ = AC⃗−AB⃗, AM⃗ = (AB⃗+AC⃗)/2\n② AM⃗·BC⃗ = (1/2)(AB⃗+AC⃗)·(AC⃗−AB⃗) = (1/2)(|AC⃗|²−|AB⃗|²) = (1/2)(4−4) = 0\n③ AB⃗·AC⃗ = 2×2×cos60° = 4×(1/2) = 2\n④ 최종 합 = 0+2 = 2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "AM⃗ = (AB⃗ + AC⃗)/2, BC⃗ = AC⃗ − AB⃗임을 이용해 각 내적을 계산하는 방향을 떠올려 보세요.",
+      "AM⃗·BC⃗ = (1/2)(|AC⃗|² − |AB⃗|²)가 되고, AB⃗·AC⃗ = |AB⃗||AC⃗|cos60° 를 각각 구해 더해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_162",
@@ -3021,7 +3689,11 @@
     "answerIndex": 0,
     "explanation": "법선벡터가 (2,−1)이고 점 (3,−1)을 지나므로 직선의 방정식은 2(x−3)−(y+1)=0 즉 2x−y−7=0이고, 점 (1,5)까지의 거리는 |2·1−5−7|/√5 = |−10|/√5 = 10/√5 = 2√5이다. 단, 2√5 = 2√5이므로 선택지를 3√5/5로 재설정하면 맞지 않는다. 거리 = 10/√5 = 2√5 = 2√5.",
     "detailedExplanation": "주어진 방정식 (x−3, y+1)·(2,−1)=0을 전개하면:\n2(x−3)+(−1)(y+1)=0 → 2x−6−y−1=0 → 2x−y−7=0.\n점 (1,5)에서 이 직선까지의 거리:\nd = |2(1)−(5)−7| / √(2²+(−1)²) = |2−5−7| / √5 = |−10| / √5 = 10/√5 = 2√5.\n따라서 정답은 2√5이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터방정식 (p⃗ − c⃗)·n⃗ = 0은 점 c⃗를 지나고 법선벡터가 n⃗인 직선을 나타냄을 떠올려 보세요.",
+      "(x−3, y+1)·(2, −1) = 0을 전개해 직선의 방정식 2x − y − 7 = 0을 구한 뒤 점과 직선 사이의 거리 공식을 적용해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_163",
@@ -3039,7 +3711,11 @@
     "answerIndex": 0,
     "explanation": "직선 y=x 위의 점은 (s,s) 형태이며, 원 위의 점 P=(2+3cosθ, 1+3sinθ)에서 직선에 내린 수선의 발의 x좌표는 (x+y)/2 = (3+3cosθ+3sinθ)/2이고, 최댓값은 (3+3√2)/2 = (2√2+3)/2는 아니고 (3+3√2)/2이다.",
     "detailedExplanation": "원: (x−2)²+(y−1)²=9, 반지름 r=3.\n직선 l: y=x 방향벡터 (1,1)/√2.\n원 위의 점 P=(2+3cosθ, 1+3sinθ).\n점 P에서 직선 y=x에 내린 수선의 발 H의 x좌표는 (x_P+y_P)/2:\n= (2+3cosθ+1+3sinθ)/2 = (3+3cosθ+3sinθ)/2.\n3cosθ+3sinθ의 최댓값은 3√2이므로,\nx좌표 최댓값 = (3+3√2)/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "원 위의 점 P를 매개변수 θ로 나타낸 뒤, P에서 직선 y=x에 내린 수선의 발의 x좌표를 θ로 표현하는 방향을 떠올려 보세요.",
+      "수선의 발의 x좌표 = (x_P + y_P)/2임을 이용해 (3 + 3cosθ + 3sinθ)/2의 최댓값을 3cosθ + 3sinθ의 범위로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_164",
@@ -3057,7 +3733,11 @@
     "answerIndex": 1,
     "explanation": "원의 중심은 두 점의 중점 m⃗=(0,2)이고, 반지름은 |AB|/2이다. |AB|²=(−2)²+4²=4+16=20이므로 r=√20/2=√5, r²=5.",
     "detailedExplanation": "중심 m = ((1+(−1))/2, (0+4)/2) = (0, 2).\n|AB|² = (−1−1)²+(4−0)² = 4+16 = 20.\n지름 = √20이므로 반지름 r = √20/2 = √5.\n따라서 r² = 5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "지름의 양 끝점이 주어진 원의 중심은 두 점의 중점이고, 반지름은 |AB|/2 임을 떠올려 보세요.",
+      "중심 m = (0, 2), |AB|² = (−2)² + 4² = 20이므로 r = √5, r² = 5임을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_165",
@@ -3075,7 +3755,11 @@
     "answerIndex": 0,
     "explanation": "수선의 발 H=(3+2t, 1−t)에서 QH⃗ = (3+2t−7, 1−t+1) = (2t−4, 2−t)가 방향벡터 (2,−1)에 수직이어야 하므로 2(2t−4)+(−1)(2−t)=0 → 5t−10=0 → t=2. H=(7,−1). 실제로 t=2이면 H=(3+4, 1−2)=(7,−1)이나 Q=(7,−1)과 같으므로 거리가 0. 올바른 문제라면 Q를 (7,2)로 수정: QH⃗=(2t−4, 1−t), 수직 조건 2(2t−4)−(1−t)=0 → 4t−8−1+t=0 → 5t=9 → t=9/5, H=(3+18/5, 1−9/5)=(33/5, −4/5). 이는 선택지와 맞지 않으므로 Q=(7,0)으로 수정: QH⃗=(2t−4, 1−t), 2(2t−4)−1(1−t)=0 → 5t=9 비슷. Q=(5,3)으로 수정: QH⃗=(2t−2, −2−t), 2(2t−2)+(−1)(−2−t)=0 → 4t−4+2+t=0 → 5t=2 → t=2/5, H=(3+4/5, 1−2/5)=(19/5, 3/5). 선택지 (5,0)이 되려면 t=1: H=(5,0). Q=(a,b)에서 QH = (5−a, 0−b), 방향벡터 (2,−1)과 수직: 2(5−a)+(−1)(0−b)=0 → 10−2a+b=0. t=1일 때 H=(5,0), QH를 방향벡터에 수직: Q를 (6,2)로 설정: 2(5−6)+(−1)(0−2)=−2+2=0 ✓. Q=(6,2)로 문제 수정.",
     "detailedExplanation": "직선 l: P=(3+2t, 1−t).\n점 Q(6,2)에서 수선의 발 H=(3+2t, 1−t)를 구한다.\nQH⃗ = (3+2t−6, 1−t−2) = (2t−3, −1−t).\n방향벡터 (2,−1)과 수직 조건:\n2(2t−3)+(−1)(−1−t) = 4t−6+1+t = 5t−5 = 0 → t=1.\nH = (3+2, 1−1) = (5, 0).",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "수선의 발 H는 직선 위의 점이므로 H = (3+2t, 1−t)로 나타내고, QH⃗가 방향벡터와 수직이 되는 조건을 세우는 방향을 떠올려 보세요.",
+      "QH⃗ = (2t−3, −1−t)와 방향벡터 (2, −1)의 내적이 0이 되는 t를 구한 뒤 H의 좌표를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_166",
@@ -3093,7 +3777,11 @@
     "answerIndex": 2,
     "explanation": "|p⃗−a⃗|²+|p⃗−b⃗|²=k를 변환하면 중심이 (a⃗+b⃗)/2=(2,1), 반지름²=k/2−|a⃗−b⃗|²/4이다. |a⃗−b⃗|²=4+4=8이므로 5=k/2−2 → k=14가 아니라, 올바른 전개로 k/2−|a⃗−b⃗|²/4=5 → k/2−2=5 → k=14. 선택지 조정 필요. 재계산: 2|p⃗|²−2p⃗·(a⃗+b⃗)+|a⃗|²+|b⃗|²=k, 완전제곱 정리하면 |p⃗−(a⃗+b⃗)/2|²=(k−|a⃗|²−|b⃗|²)/2+|(a⃗+b⃗)/2|²이다. a⃗=(1,0), b⃗=(3,2): |a⃗|²=1, |b⃗|²=13, (a⃗+b⃗)/2=(2,1), |(a⃗+b⃗)/2|²=5. r²=(k−14)/2+5=5 → (k−14)/2=0 → k=14. 선택지 재설정.",
     "detailedExplanation": "|p⃗−a⃗|²+|p⃗−b⃗|²=k 전개:\n(|p⃗|²−2p⃗·a⃗+|a⃗|²)+(|p⃗|²−2p⃗·b⃗+|b⃗|²)=k\n2|p⃗|²−2p⃗·(a⃗+b⃗)+|a⃗|²+|b⃗|²=k\n2|p⃗−(a⃗+b⃗)/2|²−|(a⃗+b⃗)/2|²·2+|a⃗|²+|b⃗|²... \n정리: 중심 m=(a⃗+b⃗)/2=(2,1), r²=(k−|a⃗|²−|b⃗|²)/2+|m|².\na⃗=(1,0)→|a⃗|²=1, b⃗=(3,2)→|b⃗|²=13, |m|²=5.\nr²=(k−14)/2+5.\nr=√5이면 r²=5: (k−14)/2+5=5 → k=14.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "|p⃗−a⃗|² + |p⃗−b⃗|² = k를 전개하면 중심과 반지름이 나타나는 원의 방정식으로 변환할 수 있음을 떠올려 보세요.",
+      "중심 m = (a⃗+b⃗)/2 = (2, 1)로 구한 뒤 r² = (k − |a⃗|² − |b⃗|²)/2 + |m|² = 5가 되는 k를 방정식으로 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_167",
@@ -3111,7 +3799,11 @@
     "answerIndex": 2,
     "explanation": "두 직선이 수직이면 방향벡터의 내적이 0: (1,1)·(a,1)=a+1=0 → a=−1. 교점을 구하면 l₁: (1+s, 2+s), l₂: (3−t, t) 연립하면 1+s=3−t, 2+s=t → t=2+s, 1+s=3−(2+s) → 2s=0 → s=0. 교점은 (1,2)이고 y좌표는 2이다. 그런데 a=−1일 때 검증: l₂=(3−t, t), s=0이면 (1,2)=(3−t,t) → t=2, 3−2=1 ✓. y좌표=2.",
     "detailedExplanation": "수직 조건: 방향벡터 (1,1)·(a,1)=a+1=0 → a=−1.\nl₁ 위의 점: (1+s, 2+s)\nl₂ 위의 점: (3−t, t)\n연립: 1+s=3−t ... (i), 2+s=t ... (ii)\n(ii)를 (i)에 대입: 1+s=3−(2+s) → 2s=0 → s=0.\n교점: (1, 2), y좌표 = 2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 직선이 수직이면 방향벡터의 내적이 0이라는 조건을 사용해 a를 먼저 구하는 방향을 떠올려 보세요.",
+      "(1,1)·(a,1) = a+1 = 0에서 a = −1을 구한 뒤 두 직선의 매개변수 방정식을 연립해 교점의 y좌표를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_168",
@@ -3129,7 +3821,11 @@
     "answerIndex": 0,
     "explanation": "이면각의 정의에서 P, R, Q가 이루는 삼각형에서 ∠PRQ = 60°(이면각), PR = 4이고 PQ⊥β이므로 PQ = PR·sin60° = 4·(√3/2) = 2√3이다.",
     "detailedExplanation": "점 P는 평면 α 위에 있고 R는 교선 위의 점이다. PR⊥(교선), PQ⊥β이므로 RQ가 β 위에 있고 RQ⊥(교선)이다. 따라서 ∠PRQ가 이면각 60°이다. 직각삼각형 PRQ에서 PQ = PR·sin60° = 4·(√3/2) = 2√3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이면각의 측정 원리를 떠올려 보세요. 교선에 수직인 평면을 이용하면 이면각을 삼각형에서의 각도로 환산할 수 있습니다.",
+      "P, R, Q가 이루는 삼각형에서 ∠PRQ가 이면각 60°임을 이용하고, PR=4를 밑변으로 하여 직각삼각형에서 PQ = PR×sin60°를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_169",
@@ -3147,7 +3843,11 @@
     "answerIndex": 1,
     "explanation": "|AB|² = (6−2)² + (3−(−1))² + (−1−3)² = 16+16+16 = 48이므로 |AB| = 4√3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 두 점 사이의 거리 공식을 사용하세요. 각 좌표 성분의 차를 제곱하여 더한 뒤 제곱근을 취합니다.",
+      "A(2,−1,3), B(6,3,−1)에서 각 성분의 차 (4,4,−4)를 구하고, 4²+4²+(−4)²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_170",
@@ -3165,7 +3865,11 @@
     "answerIndex": 0,
     "explanation": "1:2 내분점은 ((1×9+2×(−3))/(1+2), (1×(−5)+2×1)/(1+2), (1×8+2×2)/(1+2)) = (3/3, −3/3, 12/3) = (1, −1, 4)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "공간에서 선분 AB를 m:n으로 내분하는 점 공식을 떠올려 보세요.",
+      "1:2 내분점의 각 좌표는 (1×x_B+2×x_A)/3, (1×y_B+2×y_A)/3, (1×z_B+2×z_A)/3으로 구합니다. A(−3,1,2), B(9,−5,8)을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_171",
@@ -3183,7 +3887,11 @@
     "answerIndex": 1,
     "explanation": "주어진 구를 표준형으로 변환하면 (x+2)²+(y−1)²+(z−3)²=16이고, z=0을 대입하면 (x+2)²+(y−1)²=7이므로 원의 넓이는 7π이다.",
     "detailedExplanation": "x²+y²+z²+4x−2y−6z−2=0을 완전제곱식으로 변환하면 (x+2)²−4+(y−1)²−1+(z−3)²−9−2=0, 즉 (x+2)²+(y−1)²+(z−3)²=16이다. xy평면(z=0)을 대입하면 (x+2)²+(y−1)²+9=16에서 (x+2)²+(y−1)²=7이 되므로, 교원의 반지름²=7이고 넓이=7π이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구의 일반 방정식을 완전제곱식으로 변환하여 표준형으로 바꾼 뒤, z=0을 대입하면 xy평면과의 교원 방정식을 얻을 수 있습니다.",
+      "표준형으로 변환한 구에 z=0을 대입한 결과를 (x−a)²+(y−b)²=R²형태로 정리하면 교원의 반지름²=R²이 되고, 넓이는 πR²입니다."
+    ]
   },
   {
     "id": "gen_geometry_172",
@@ -3201,7 +3909,11 @@
     "answerIndex": 1,
     "explanation": "점 P에서 y축까지의 거리는 √(x²+z²)이며, 구의 중심 C(1, 2, −2)에서 y축까지의 거리는 √(1²+(−2)²)=√5이다. 반지름이 3이므로 최댓값은 √5+3이다.",
     "detailedExplanation": "y축까지의 거리는 y좌표와 무관하게 √(x²+z²)로 결정된다. 중심 C(1, 2, −2)에서 y축(x=0, z=0인 직선)까지의 거리는 √(1²+(−2)²)=√5이다. 구 위의 점은 중심에서 반지름 3만큼 떨어져 있으므로 y축까지의 거리의 최댓값은 √5+3이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "점에서 y축까지의 거리는 y좌표와 무관하게 √(x²+z²)로 결정됩니다. 구의 중심에서 y축까지의 거리를 먼저 구해 보세요.",
+      "중심 C에서 y축까지의 거리를 d₀라 하면, 구 위의 점에서 y축까지의 거리의 최댓값은 d₀+r(반지름)임을 이용해 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_173",
@@ -3219,7 +3931,11 @@
     "answerIndex": 1,
     "explanation": "원점 대칭: Q(−2, 1, −3), xy평면 대칭: R(−2, 1, 3)이므로 |PR|=√((−2−2)²+(1−(−1))²+(3−3)²)=√(16+4+0)=2√5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원점 대칭과 xy평면 대칭의 규칙을 각각 떠올려 보세요. 원점 대칭은 모든 좌표의 부호를 바꾸고, xy평면 대칭은 z좌표의 부호만 바꿉니다.",
+      "P(2,−1,3)을 원점 대칭하면 Q(−2,1,−3), Q를 xy평면 대칭하면 R(−2,1,3)이 됩니다. 이제 |PR|을 공간 거리 공식으로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_174",
@@ -3237,7 +3953,11 @@
     "answerIndex": 2,
     "explanation": "무게중심의 좌표 조건에서 (a+2−2)/3=1이므로 a=3, (1+b+4)/3=3이므로 b=4, (−3+5+c)/3=2이므로 c=4이다. 따라서 a+b+c=11이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "삼각형의 무게중심 좌표는 세 꼭짓점 각 성분의 평균임을 이용하세요.",
+      "무게중심 G(1,3,2)에 대해 (a+2+(−2))/3=1, (1+b+4)/3=3, (−3+5+c)/3=2를 연립하여 a, b, c를 각각 구한 뒤 합산하세요."
+    ]
   },
   {
     "id": "gen_geometry_175",
@@ -3255,7 +3975,11 @@
     "answerIndex": 1,
     "explanation": "표준형으로 변환하면 (x−1)²+(y+2)²+(z−3)²=14−k이고, z=0 대입 시 (x−1)²+(y+2)²=5−k이다. 반지름이 2이면 5−k=4이므로 k=1이다.",
     "detailedExplanation": "x²+y²+z²−2x+4y−6z+k=0을 완전제곱식으로 변환하면 (x−1)²+(y+2)²+(z−3)²=1+4+9−k=14−k이다. xy평면(z=0)을 대입하면 (x−1)²+(y+2)²+(0−3)²=14−k, 즉 (x−1)²+(y+2)²=14−k−9=5−k이다. 이 원의 반지름이 2이면 반지름²=4이므로 5−k=4에서 k=1이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구의 일반 방정식을 완전제곱식으로 변환하여 표준형을 만들고, z=0을 대입하여 xy평면과의 교원 방정식을 세우세요.",
+      "표준형에서 z=0을 대입하면 교원의 반지름² = (구의 반지름²) − (중심의 z좌표)²임을 이용해, 이 값이 4(반지름 2)가 되도록 하는 k를 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_176",
@@ -3273,7 +3997,11 @@
     "answerIndex": 2,
     "explanation": "구의 중심 C(4, 6, 3)에 대해 |AC|=√((4−1)²+(6−2)²+(3−3)²)=√(9+16)=5이고, 접선의 길이=√(|AC|²−r²)=√(25−9)=√16=4이다.",
     "detailedExplanation": "외부의 점 A에서 구에 그은 접선의 길이 l은 접점을 T라 하면 AT⊥CT이므로 피타고라스 정리에 의해 l²=|AC|²−r²이다. |AC|=√((4−1)²+(6−2)²+(3−3)²)=√(9+16+0)=5이고, 반지름 r=3이므로 l=√(25−9)=√16=4이다. A가 구의 외부인지 확인: |AC|=5>3=r이므로 성립한다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "외부의 점 A에서 구에 그은 접선의 길이는 피타고라스 정리로 구할 수 있습니다. 접점 T에서 AT ⊥ CT 관계를 이용하세요.",
+      "접선 길이 l = √(|AC|²−r²)로 구합니다. 먼저 점 A(1,2,3)에서 구의 중심 C(4,6,3)까지의 거리를 계산하고 반지름 r=3을 이용해 l을 구해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_177",
@@ -3291,7 +4019,11 @@
     "answerIndex": 1,
     "explanation": "(a−1)²+(b−1)²+(c−1)² = a²+b²+c²−2(a+b+c)+3 = 14−12+3 = 5이므로 |PQ|²은 항상 5로 일정하다. 따라서 |PQ|=√5. 이 값이 최솟값이자 유일한 값이므로 답은 5.",
     "detailedExplanation": "|PQ|² = (a−1)²+(b−1)²+(c−1)²\n= a²+b²+c² − 2(a+b+c) + 1+1+1\n= a²+b²+c² − 2(a+b+c) + 3.\n조건 ①②를 대입: = 14 − 2×6 + 3 = 14 − 12 + 3 = 5.\n따라서 |PQ|² = 5로 상수이며 |PQ| = √5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|PQ|²을 좌표 성분으로 전개한 뒤, 주어진 조건 a+b+c=6과 a²+b²+c²=14를 대입하세요.",
+      "|PQ|² = (a−1)²+(b−1)²+(c−1)² = a²+b²+c² − 2(a+b+c) + 3으로 변형한 뒤 주어진 수치를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_179",
@@ -3309,7 +4041,11 @@
     "answerIndex": 0,
     "explanation": "완전제곱식으로 변환하면 (x−1)² + (y+2)² + (z−3)² = 1+4+9−5 = 9이므로 중심 (1, −2, 3), 반지름 3이다.",
     "detailedExplanation": "x²−2x = (x−1)²−1, y²+4y = (y+2)²−4, z²−6z = (z−3)²−9로 변환한다. 대입하면 (x−1)²+(y+2)²+(z−3)² −1−4−9+5 = 0, 즉 (x−1)²+(y+2)²+(z−3)² = 9. 따라서 중심 (1,−2,3), 반지름 r = √9 = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구의 일반 방정식을 완전제곱식으로 변환하여 중심과 반지름을 읽어내세요.",
+      "x²−2x = (x−1)²−1, y²+4y = (y+2)²−4, z²−6z = (z−3)²−9로 변환한 뒤 우변을 정리하면 반지름²이 구해집니다."
+    ]
   },
   {
     "id": "gen_geometry_180",
@@ -3327,7 +4063,11 @@
     "answerIndex": 0,
     "explanation": "반지름은 AB의 거리이므로 r² = (4−2)² + (3−1)² + (6−3)² = 4+4+9 = 17. 구의 방정식은 (x−2)²+(y−1)²+(z−3)² = 17이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "중심이 주어진 구의 반지름은 중심에서 구 위의 점 B까지의 거리입니다.",
+      "반지름² = (x_B−x_A)²+(y_B−y_A)²+(z_B−z_A)²으로 계산하여 구의 방정식 (x−x_A)²+(y−y_A)²+(z−z_A)²=r²에 대입해 보세요."
+    ]
   },
   {
     "id": "gen_geometry_181",
@@ -3345,7 +4085,11 @@
     "answerIndex": 1,
     "explanation": "구의 중심 (0,0,0)에서 평면까지의 거리가 반지름 5와 같아야 하므로 |k|/√(1²+2²+2²) = |k|/3 = 5, k = 15이다.",
     "detailedExplanation": "구 x²+y²+z²=25의 중심은 (0,0,0), 반지름은 5. 평면 x+2y+2z = k까지의 거리 = |0+0+0−k|/√(1+4+4) = |k|/3. 접하는 조건: |k|/3 = 5 → |k| = 15. k > 0이므로 k = 15.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구가 평면에 접하려면, 구의 중심에서 평면까지의 거리가 반지름과 같아야 합니다.",
+      "중심 (0,0,0)에서 평면 x+2y+2z=k까지의 거리 |k|/√(1²+2²+2²)가 반지름 5와 같다고 놓고, 양수 k를 구해 보세요."
+    ]
   },
   {
     "id": "hand_geo_1",
@@ -3363,7 +4107,11 @@
     "answerIndex": 1,
     "explanation": "y² = 4px 에서 4p = 12, p = 3. 초점은 (3, 0).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선 y² = 4px 꼴에서 4p = 12임을 이용해 p 값을 먼저 구해 보세요.",
+      "p를 구하면 초점 좌표는 (p, 0)이 됩니다. 이를 바로 써 보세요."
+    ]
   },
   {
     "id": "hand_geo_2",
@@ -3381,7 +4129,11 @@
     "answerIndex": 2,
     "explanation": "a² = 25 이므로 a = 5. 장축의 길이는 2a = 10.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 x²/a² + y²/b² = 1 (a > b > 0)에서 장축의 길이는 2a입니다. a² 값을 먼저 읽어내 보세요.",
+      "a² = 25에서 a = 5를 구한 뒤, 장축의 길이 2a를 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_3",
@@ -3399,7 +4151,11 @@
     "answerIndex": 1,
     "explanation": "a² = 9 이므로 a = 3. 주축의 길이는 2a = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "쌍곡선 x²/a² − y²/b² = 1에서 주축의 길이는 2a입니다. a² 값을 먼저 확인해 보세요.",
+      "a² = 9에서 a = 3을 구한 뒤, 주축의 길이 2a를 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_4",
@@ -3417,7 +4173,11 @@
     "answerIndex": 1,
     "explanation": "준선이 x = −1 이므로 초점까지 거리는 x + 1 = 5, x = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "포물선의 정의에서 포물선 위의 점까지 초점까지의 거리는 준선까지의 거리와 같습니다. y² = 4x의 준선이 어디인지 먼저 확인해 보세요.",
+      "준선 x = −1을 이용하면 초점까지의 거리 = x + 1 = 5라는 식을 세울 수 있습니다. 이를 풀어 x좌표를 구해 보세요."
+    ]
   },
   {
     "id": "hand_geo_5",
@@ -3435,7 +4195,11 @@
     "answerIndex": 1,
     "explanation": "c² = a² − b² = 16 − 7 = 9, c = 3. 두 초점 사이 거리는 2c = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "타원 x²/16 + y²/7 = 1에서 a² = 16, b² = 7을 확인하고, c² = a² − b² 관계로 c를 먼저 구해 보세요.",
+      "c = 3임을 구한 뒤, 두 초점 사이의 거리는 2c임을 이용해 최종 값을 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_6",
@@ -3453,7 +4217,11 @@
     "answerIndex": 0,
     "explanation": "성분끼리 더하면 (3−2, −1+4) = (1, 3).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터의 합은 x성분끼리, y성분끼리 각각 더한다는 성분별 연산을 떠올려 보세요.",
+      "(3+(−2), (−1)+4)를 직접 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_7",
@@ -3471,7 +4239,11 @@
     "answerIndex": 0,
     "explanation": "2×1 + 1×(−3) = 2 − 3 = −1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 벡터의 내적은 대응 성분끼리 곱한 뒤 더하는 연산임을 떠올려 보세요.",
+      "2×1 + 1×(−3)을 직접 계산해 부호에 주의해 보세요."
+    ]
   },
   {
     "id": "hand_geo_8",
@@ -3489,7 +4261,11 @@
     "answerIndex": 0,
     "explanation": "√(4² + 3²) = √25 = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "벡터의 크기는 √(x² + y²) 공식으로 구함을 떠올려 보세요.",
+      "√(4² + 3²) = √(16 + 9) = √25를 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_9",
@@ -3507,7 +4283,11 @@
     "answerIndex": 2,
     "explanation": "수직이면 내적이 0. 1·k + 2·(−1) = k − 2 = 0, k = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 벡터가 수직이면 내적이 0이라는 조건을 떠올려 보세요.",
+      "a⃗·b⃗ = 1×k + 2×(−1) = 0 형태의 방정식을 세워 k를 구해 보세요."
+    ]
   },
   {
     "id": "hand_geo_10",
@@ -3525,7 +4305,11 @@
     "answerIndex": 0,
     "explanation": "2a = (2, 4), 2a − b = (2−3, 4−1) = (−1, 3).",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "스칼라 배를 먼저 계산한 뒤 성분별로 빼는 순서를 떠올려 보세요.",
+      "2a = (2, 4)를 구한 뒤 2a − b = (2−3, 4−1)을 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_11",
@@ -3543,7 +4327,11 @@
     "answerIndex": 1,
     "explanation": "√{(4−1)²+(6−2)²+(3−3)²} = √(9+16+0) = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "공간에서 두 점 사이의 거리 공식을 적용하세요.",
+      "A(1,2,3), B(4,6,3)에서 z성분의 차가 0임을 확인하고 √((4−1)²+(6−2)²)를 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_12",
@@ -3561,7 +4349,11 @@
     "answerIndex": 1,
     "explanation": "√(2²+(−3)²+6²) = √(4+9+36) = √49 = 7.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원점 (0,0,0)과 점 (a,b,c) 사이의 거리 공식은 √(a²+b²+c²)입니다.",
+      "√(2²+(−3)²+6²)를 계산하여 각 항을 더한 뒤 제곱근을 구해 보세요."
+    ]
   },
   {
     "id": "hand_geo_13",
@@ -3579,7 +4371,11 @@
     "answerIndex": 0,
     "explanation": "x²+y²+z² = r² 에서 r² = 16, r = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "구의 방정식 x²+y²+z²=r²에서 반지름은 r이며, r²이 우변의 상수와 같습니다.",
+      "x²+y²+z²=16에서 r²=16이므로, r = √16을 계산해 보세요."
+    ]
   },
   {
     "id": "hand_geo_14",
@@ -3597,6 +4393,10 @@
     "answerIndex": 1,
     "explanation": "√(3²+4²+12²) = √(9+16+144) = √169 = 13.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "원점과 점 (a,b,c) 사이의 거리 공식 √(a²+b²+c²)을 사용하세요.",
+      "√(3²+4²+12²)를 계산해 각 제곱값을 더한 뒤 제곱근을 구해 보세요."
+    ]
   }
 ]

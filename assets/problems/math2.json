@@ -15,7 +15,11 @@
     "answerIndex": 2,
     "explanation": "다항함수는 연속이므로 대입하면 3×2 + 1 = 7.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "다항함수의 극한은 어떻게 구할 수 있는지 떠올려 보세요.",
+      "다항함수는 모든 점에서 연속이므로, x = 2를 식에 직접 대입하여 3x + 1의 값을 계산해 보세요."
+    ]
   },
   {
     "id": "m2_lim_002",
@@ -33,7 +37,11 @@
     "answerIndex": 1,
     "explanation": "(x−3)(x+3)/(x−3) = x+3 이므로 극한값은 6.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "분자 x² − 9를 인수분해하면 공통인수가 나타납니다.",
+      "(x² − 9) = (x − 3)(x + 3)으로 인수분해한 뒤 분모 (x − 3)을 약분하면, x ≠ 3일 때 식이 간단해집니다. 그 결과에 x → 3을 적용해 보세요."
+    ]
   },
   {
     "id": "m2_lim_003",
@@ -51,7 +59,11 @@
     "answerIndex": 2,
     "explanation": "(x−2)(x+2)/(x−2) = x+2 이므로 극한값은 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분자 x² − 4를 인수분해하면 분모와 공통인수가 생깁니다.",
+      "(x² − 4) = (x − 2)(x + 2)로 인수분해한 후 분모 (x − 2)를 약분하면 x ≠ 2에서 식이 x + 2가 됩니다. 여기에 x → 2를 적용해 보세요."
+    ]
   },
   {
     "id": "m2_lim_006",
@@ -69,7 +81,11 @@
     "answerIndex": 2,
     "explanation": "분자를 인수분해하면 (x−1)(x+3)/(x−1) = x+3 이므로 극한값은 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분자 x² + 2x − 3을 인수분해하면 분모 (x − 1)과 공통인수가 나올지 확인해 보세요.",
+      "x² + 2x − 3 = (x − 1)(x + 3)이므로 (x − 1)을 약분하면 x + 3이 남습니다. 여기에 x → 1을 대입해 보세요."
+    ]
   },
   {
     "id": "m2_lim_004",
@@ -87,7 +103,11 @@
     "answerIndex": 2,
     "explanation": "분자·분모를 x² 으로 나누면 (2 + 1/x²)/(1 − 1/x) → 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x → ∞인 유리함수 극한에서는 분자·분모의 최고차항 차수를 비교하는 것이 핵심입니다.",
+      "분자와 분모를 각각 x²으로 나누어 보세요. x → ∞일 때 1/x, 1/x² 같은 항은 0으로 수렴하므로, 남는 계수만으로 극한값을 구할 수 있습니다."
+    ]
   },
   {
     "id": "m2_lim_005",
@@ -105,7 +125,11 @@
     "answerIndex": 1,
     "explanation": "분자를 유리화하면 x / {x(√(x+1)+1)} = 1/(√(x+1)+1) → 1/2.",
     "detailedExplanation": "0/0 꼴이므로 분자 √(x+1)−1 에 √(x+1)+1 을 분자·분모에 곱합니다.\n= (x+1−1) / {x(√(x+1)+1)} = 1/(√(x+1)+1).\nx→0 이면 1/(1+1) = 1/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "0/0 꼴의 극한에서 분자에 무리식(√)이 있으면 유리화를 떠올리세요.",
+      "분자·분모에 √(x + 1) + 1을 곱하면 분자가 (x + 1) − 1 = x로 정리됩니다. 약분 후 x → 0을 대입해 보세요."
+    ]
   },
   {
     "id": "m2_cont_002",
@@ -123,7 +147,11 @@
     "answerIndex": 2,
     "explanation": "연속이므로 극한값과 함숫값이 같습니다. f(2) = 2² + 1 = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수가 어떤 점에서 연속이면 극한값과 함숫값이 일치함을 기억하세요.",
+      "f(x) = x² + 1은 다항함수이므로 x = 2에서 f(2)를 직접 계산하면 됩니다. 2² + 1을 구해 보세요."
+    ]
   },
   {
     "id": "m2_cont_003",
@@ -141,7 +169,11 @@
     "answerIndex": 0,
     "explanation": "다항함수는 모든 실수에서 연속입니다. 나머지는 정의되지 않는 점이 있습니다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수가 모든 실수에서 연속이려면 정의되지 않는 점이 없어야 한다는 것을 생각해 보세요.",
+      "각 보기를 확인해 보세요. 1/x는 x = 0, 1/(x − 1)은 x = 1, √x는 x < 0에서 정의되지 않습니다. 다항함수는 모든 실수에서 정의되고 연속입니다."
+    ]
   },
   {
     "id": "m2_cont_001",
@@ -159,7 +191,11 @@
     "answerIndex": 1,
     "explanation": "x≠1 에서 f(x) = x+1 이고 극한값은 2. 연속이려면 f(1) = 2, 즉 k = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x = 1에서 연속이 되려면 lim(x→1) f(x) = f(1)이어야 합니다. 먼저 극한값을 구해 보세요.",
+      "x ≠ 1일 때 (x² − 1) ÷ (x − 1) = (x − 1)(x + 1) ÷ (x − 1) = x + 1이 됩니다. x → 1을 대입한 극한값과 k가 같아야 합니다."
+    ]
   },
   {
     "id": "m2_cont_004",
@@ -177,7 +213,11 @@
     "answerIndex": 1,
     "explanation": "x=1에서 우극한 f(1)=3, 좌극한 1+a. 연속이려면 1+a = 3, a = 2.",
     "detailedExplanation": "우극한·함숫값: 2×1 + 1 = 3.\n좌극한: 1 + a.\n연속 조건 1 + a = 3 이므로 a = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "조각 함수가 x = 1에서 연속이려면 좌극한, 우극한, 함숫값이 모두 같아야 합니다.",
+      "x ≥ 1일 때 f(1) = 2(1) + 1 = 3이 우극한·함숫값입니다. x < 1일 때의 좌극한은 lim(x→1⁻)(x + a) = 1 + a이므로, 1 + a = 3을 풀어 a를 구하세요."
+    ]
   },
   {
     "id": "m2_diff_001",
@@ -195,7 +235,11 @@
     "answerIndex": 1,
     "explanation": "xⁿ 의 도함수는 n·xⁿ⁻¹. 따라서 f′(x) = 2x.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "xⁿ 꼴 함수를 미분하는 기본 공식(거듭제곱 규칙)을 떠올려 보세요.",
+      "거듭제곱 규칙: (xⁿ)′ = n·xⁿ⁻¹. x²에 이 공식을 바로 적용해 f′(x)를 구해 보세요."
+    ]
   },
   {
     "id": "m2_diff_002",
@@ -213,7 +257,11 @@
     "answerIndex": 2,
     "explanation": "f′(x) = 3x² 이므로 f′(2) = 3×4 = 12.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "먼저 f(x) = x³의 도함수 f′(x)를 거듭제곱 규칙으로 구하세요.",
+      "f′(x)를 구한 뒤, x = 2를 대입해 f′(2)의 값을 계산하세요."
+    ]
   },
   {
     "id": "m2_diff_003",
@@ -231,7 +279,11 @@
     "answerIndex": 0,
     "explanation": "f′(x) = 2x − 3 이므로 f′(1) = 2 − 3 = −1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 따로 미분하세요. 상수 항의 도함수는 0입니다.",
+      "f′(x) = (x²)′ − (3x)′ = 2x − 3을 구한 뒤, x = 1을 대입하세요."
+    ]
   },
   {
     "id": "m2_diff_007",
@@ -249,7 +301,11 @@
     "answerIndex": 0,
     "explanation": "f′(x) = 6x² − 6x 이므로 f′(1) = 6 − 6 = 0.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "각 항을 거듭제곱 규칙으로 미분하여 f′(x)를 구하세요.",
+      "f′(x) = 6x² − 6x 임을 확인하고, x = 1을 대입해 값을 구해 보세요."
+    ]
   },
   {
     "id": "m2_diff_008",
@@ -267,7 +323,11 @@
     "answerIndex": 1,
     "explanation": "이 극한은 미분계수 f′(2)의 정의입니다. f′(x) = 2x 이므로 f′(2) = 4.",
     "detailedExplanation": "lim(h→0) {f(a+h) − f(a)}/h = f′(a) 입니다.\nf′(x) = 2x 이므로 f′(2) = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(h→0) {f(a+h) − f(a)}/h 는 미분계수 f′(a)의 정의임을 떠올리세요.",
+      "극한식이 f′(2)임을 확인했다면, f(x) = x²의 도함수 f′(x) = 2x에 x = 2를 대입하세요."
+    ]
   },
   {
     "id": "m2_diff_004",
@@ -285,7 +345,11 @@
     "answerIndex": 1,
     "explanation": "y′ = 2x 이고 x = 1 에서 기울기는 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "곡선 위의 점에서의 접선 기울기는 도함수 y′을 그 점의 x값에서 계산한 값입니다.",
+      "y = x²의 도함수 y′ = 2x를 구한 뒤, x = 1을 대입해 접선의 기울기를 구하세요."
+    ]
   },
   {
     "id": "m2_diff_009",
@@ -303,7 +367,11 @@
     "answerIndex": 1,
     "explanation": "x축과 평행 ⇔ 기울기 0. y′ = 2x − 2 = 0 이므로 x = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x축과 평행한 접선의 기울기는 0입니다. y′ = 0이 되는 x를 찾으세요.",
+      "y′ = 2x − 2 = 0을 풀면 접선이 수평이 되는 x 좌표를 구할 수 있습니다."
+    ]
   },
   {
     "id": "m2_diff_005",
@@ -343,7 +411,11 @@
     "answerIndex": 0,
     "explanation": "f′(x) = 3x² − 6x = 3x(x−2) = 0 → x = 0, 2. f(2) = 8−12+2 = −2 (극소).",
     "detailedExplanation": "f′(x) = 3x(x−2). x = 2 에서 부호가 −→+ 이므로 극소.\nf(2) = 8 − 12 + 2 = −2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 0이 되는 x를 구하고, 그 점들 좌우에서 f′의 부호 변화를 살펴보세요.",
+      "f′(x) = 3x(x − 2)이므로 x = 0, 2가 후보입니다. 부호가 − → + 로 바뀌는 점에서 극솟값을 계산하세요."
+    ]
   },
   {
     "id": "m2_int_001",
@@ -361,7 +433,11 @@
     "answerIndex": 0,
     "explanation": "xⁿ 의 부정적분은 xⁿ⁺¹/(n+1). ∫2x dx = x² + C.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "xⁿ의 부정적분 공식 ∫xⁿ dx = xⁿ⁺¹/(n+1) + C 를 떠올리세요.",
+      "2x = 2·x¹ 로 보고, n=1 을 공식에 대입해 계수까지 처리하면 됩니다."
+    ]
   },
   {
     "id": "m2_int_002",
@@ -379,7 +455,11 @@
     "answerIndex": 0,
     "explanation": "∫3x² dx = 3 · x³/3 + C = x³ + C.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫xⁿ dx = xⁿ⁺¹/(n+1) + C 공식과 상수 배 법칙을 함께 사용하세요.",
+      "∫3x² dx = 3 × x³/3 + C 처럼 계수와 지수 공식을 나눠서 계산해 보세요."
+    ]
   },
   {
     "id": "m2_int_006",
@@ -397,7 +477,11 @@
     "answerIndex": 0,
     "explanation": "∫2x dx + ∫1 dx = x² + x + C.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "합의 적분은 각 항을 따로 나눠 계산할 수 있다는 선형성을 떠올리세요.",
+      "∫2x dx 와 ∫1 dx 를 각각 구한 뒤 더하세요."
+    ]
   },
   {
     "id": "m2_int_003",
@@ -415,7 +499,11 @@
     "answerIndex": 1,
     "explanation": "[x²]₀¹ = 1² − 0² = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "먼저 부정적분 F(x)를 구한 뒤, 정적분 공식 [F(x)]ₐᵇ = F(b) − F(a) 를 사용하세요.",
+      "∫2x dx = x² + C 임을 이용해 [x²]₀¹ 을 계산해 보세요."
+    ]
   },
   {
     "id": "m2_int_007",
@@ -433,7 +521,11 @@
     "answerIndex": 1,
     "explanation": "[x²/2]₋₁¹ = 1/2 − 1/2 = 0. (기함수의 대칭구간 정적분은 0)",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f(x) = x 는 기함수(홀함수)입니다. 원점 대칭 구간에서 기함수의 정적분에 대한 성질을 떠올려 보세요.",
+      "또는 직접 [x²/2]₋₁¹ 을 계산해 F(1) − F(−1) 을 구해도 됩니다."
+    ]
   },
   {
     "id": "m2_int_004",
@@ -451,7 +543,11 @@
     "answerIndex": 1,
     "explanation": "[x² + x]₁² = (4+2) − (1+1) = 6 − 2 = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "부정적분 ∫(2x + 1) dx 를 먼저 구한 뒤 상·하한을 대입하세요.",
+      "[x² + x]₁² 꼴로 만들어 x=2 일 때 값에서 x=1 일 때 값을 빼면 됩니다."
+    ]
   },
   {
     "id": "m2_int_008",
@@ -469,7 +565,11 @@
     "answerIndex": 2,
     "explanation": "[x³]₀² = 8 − 0 = 8.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∫3x² dx 의 부정적분을 먼저 구하세요. 결과는 x³ 형태가 됩니다.",
+      "[x³]₀² 처럼 위끝 x=2 와 아래끝 x=0 을 각각 대입해 뺀 값이 정적분입니다."
+    ]
   },
   {
     "id": "m2_int_009",
@@ -487,7 +587,11 @@
     "answerIndex": 1,
     "explanation": "넓이 = ∫₀² x dx = [x²/2]₀² = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x축과 직선 x=2 로 둘러싸인 넓이는 ∫₀² f(x) dx 로 구합니다. 이때 곡선이 x축 위에 있어야 합니다.",
+      "∫₀² x dx 를 계산하면 [x²/2]₀² 꼴이 됩니다. 위끝과 아래끝을 대입해 보세요."
+    ]
   },
   {
     "id": "m2_int_010",
@@ -505,7 +609,11 @@
     "answerIndex": 2,
     "explanation": "넓이 = ∫₁³ 2x dx = [x²]₁³ = 9 − 1 = 8.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x=1 부터 x=3 까지 y=2x 와 x축으로 둘러싸인 넓이이므로 정적분 ∫₁³ 2x dx 를 세우세요.",
+      "∫2x dx = x² + C 를 이용해 [x²]₁³ 을 계산하세요."
+    ]
   },
   {
     "id": "m2_int_005",
@@ -545,7 +653,11 @@
     "answerIndex": 2,
     "explanation": "상수함수의 극한은 상수 자체이므로 lim(x→2) 3 = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x가 특정 값으로 다가갈 때 상수함수의 극한은 어떻게 될지 생각해 보세요.",
+      "상수함수 f(x) = c의 극한은 x가 어디로 가든 항상 c입니다. 즉 lim(x→a) c = c 공식을 직접 적용해 보세요."
+    ]
   },
   {
     "id": "gen_math2_2",
@@ -563,7 +675,11 @@
     "answerIndex": 2,
     "explanation": "x→1일 때 다항함수는 직접 대입할 수 있으므로 1 + 4 = 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "다항함수의 극한을 구할 때 사용할 수 있는 가장 간단한 방법을 떠올려 보세요.",
+      "다항함수는 연속이므로 x → 1일 때 x + 4에 x = 1을 직접 대입할 수 있습니다. 1 + 4를 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math2_3",
@@ -581,7 +697,11 @@
     "answerIndex": 1,
     "explanation": "x가 양의 무한대로 갈수록 1/x는 0에 수렴한다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x가 양의 무한대로 커질 때 분수 1/x가 어떻게 변하는지 생각해 보세요.",
+      "x가 한없이 커지면 분자 1은 그대로이고 분모 x는 무한히 커지므로, 분수의 값이 어떤 수에 가까워지는지 판단해 보세요."
+    ]
   },
   {
     "id": "gen_math2_4",
@@ -599,7 +719,11 @@
     "answerIndex": 2,
     "explanation": "분자와 분모를 최고차항 x²으로 나누면 (3 + 2/x) / (1 − 1/x²) → 3/1 = 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x → ∞인 유리함수 극한에서는 분자·분모의 최고차항 차수를 먼저 비교하세요.",
+      "분자와 분모를 모두 x²으로 나누어 보세요. x → ∞일 때 2/x, 1/x² 등은 0이 되므로, 남는 상수 계수들로 극한값을 결정할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_5",
@@ -617,7 +741,11 @@
     "answerIndex": 2,
     "explanation": "분자를 인수분해하면 (x−3)(x+2)이므로 f(x) = x+2 (x≠3)이고, x→3이면 5이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "분자 x² − x − 6을 인수분해하면 분모 (x − 3)과 공통인수가 나오는지 확인해 보세요.",
+      "x² − x − 6 = (x − 3)(x + 2)로 인수분해하면 분모와 약분됩니다. x ≠ 3에서 식이 x + 2가 되므로, 여기에 x → 3을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_math2_6",
@@ -635,7 +763,11 @@
     "answerIndex": 2,
     "explanation": "분자·분모에 (√(x²+x)+x)를 곱하면 x/(√(x²+x)+x) = 1/(√(1+1/x)+1) → 1/2이다.",
     "detailedExplanation": "√(x²+x)−x에 (√(x²+x)+x)/(√(x²+x)+x)를 곱하면 분자는 x, 분모는 √(x²+x)+x가 된다. x로 나누면 1/(√(1+1/x)+1)이고, x→∞에서 1/(1+1) = 1/2이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∞ − ∞ 꼴의 극한은 무리식의 유리화를 활용해 변형할 수 있습니다.",
+      "√(x² + x) − x에 (√(x² + x) + x) ÷ (√(x² + x) + x)를 곱하면 분자가 유리화됩니다. 그 결과를 x로 나눈 뒤 x → ∞를 적용해 보세요."
+    ]
   },
   {
     "id": "gen_math2_7",
@@ -653,7 +785,11 @@
     "answerIndex": 2,
     "explanation": "분자는 (x−1)(x²+x+1), 분모는 (x−1)(x+1)이므로 약분하면 (x²+x+1)/(x+1) → (1+1+1)/(1+1) = 3/2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "0/0 꼴이므로 분자와 분모를 각각 인수분해하여 공통인수를 약분해 보세요.",
+      "분자 x³ − 1 = (x − 1)(x² + x + 1), 분모 x² − 1 = (x − 1)(x + 1)입니다. 공통인수 (x − 1)을 약분한 뒤 x → 1을 대입해 보세요."
+    ]
   },
   {
     "id": "gen_math2_8",
@@ -671,7 +807,11 @@
     "answerIndex": 2,
     "explanation": "통분하면 1/x − 1/(x(x+1)) = (x+1−1)/(x(x+1)) = x/(x(x+1)) = 1/(x+1)이고, x→0이면 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 분수의 차를 하나의 분수로 합치는 통분을 이용해 보세요.",
+      "1/x − 1/(x² + x) = 1/x − 1/(x(x + 1))을 통분하면 분자가 (x + 1 − 1) = x가 됩니다. 약분 후 x → 0을 적용해 보세요."
+    ]
   },
   {
     "id": "gen_math2_9",
@@ -689,7 +829,11 @@
     "answerIndex": 2,
     "explanation": "x→2⁺이면 x−2 > 0이므로 |x−2| = x−2이고, (x+2)(x−2)/(x−2) = x+2 → 4이다.",
     "detailedExplanation": "우극한이므로 x > 2에서 |x−2| = x−2로 쓸 수 있다. 따라서 식은 x+2가 되고 x→2⁺ 대입 시 4이다. 참고로 좌극한은 −(x+2) → −4이므로 좌·우극한이 다르지만 이 문제는 우극한만 묻는다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "우극한(x→2⁺)이므로 x > 2인 경우의 |x − 2|를 어떻게 쓸 수 있는지 생각해 보세요.",
+      "x > 2이면 x − 2 > 0이므로 |x − 2| = x − 2입니다. 이를 이용해 식을 정리한 뒤 분모·분자를 약분하고 x → 2를 대입해 보세요."
+    ]
   },
   {
     "id": "gen_math2_10",
@@ -707,7 +851,11 @@
     "answerIndex": 3,
     "explanation": "함수의 연속 조건은 ① f(a) 정의, ② 극한값 존재, ③ 극한값 = 함숫값의 세 가지이며, f(a) = 0일 필요는 없다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수의 연속 세 조건(정의, 극한 존재, 극한값 = 함숫값)을 하나씩 점검해 보세요.",
+      "각 보기가 연속 조건 ①②③ 중 어떤 것인지 확인하고, 이 세 조건에 포함되지 않는 불필요한 조건을 찾아보세요."
+    ]
   },
   {
     "id": "gen_math2_11",
@@ -725,7 +873,11 @@
     "answerIndex": 1,
     "explanation": "lim(x→3) (x² − 9) ÷ (x − 3) = lim(x→3) (x + 3) = 6이므로 연속이 되려면 k = f(3) = 6이어야 한다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x = 3에서 연속이 되려면 극한값과 f(3) = k가 같아야 합니다. 먼저 극한값을 구해 보세요.",
+      "x ≠ 3일 때 (x² − 9) ÷ (x − 3) = (x − 3)(x + 3) ÷ (x − 3) = x + 3이 됩니다. x → 3을 대입한 값이 k와 같아야 합니다."
+    ]
   },
   {
     "id": "gen_math2_12",
@@ -743,7 +895,11 @@
     "answerIndex": 3,
     "explanation": "f(x) = x² + 3은 다항함수이므로 모든 실수에서 연속이고, x = 0에서도 f(0) = 3이며 극한값도 3으로 연속이다.",
     "detailedExplanation": "f(x) = 1/x는 x=0에서 정의 안 됨. |x|/x는 좌극한 −1, 우극한 1로 불연속. √x는 x=0에서 좌극한이 존재하지 않음.",
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "각 보기가 x = 0에서 정의되는지, 극한값이 존재하는지, 극한값과 함숫값이 같은지 차례로 확인하세요.",
+      "1/x는 x = 0에서 정의 안 됨, |x|/x는 좌극한 −1·우극한 1로 극한 없음, √x는 x < 0에서 정의 안 됨을 확인한 뒤 남은 보기를 살펴보세요."
+    ]
   },
   {
     "id": "gen_math2_13",
@@ -761,7 +917,11 @@
     "answerIndex": 2,
     "explanation": "lim(x→1)(x² − 1) = 0이고 f(1) = 3이므로 극한값과 함숫값이 다르다. 따라서 x = 1에서 불연속이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x = 1에서의 연속 세 조건 중 어떤 것이 성립하지 않는지 확인해 보세요.",
+      "x ≠ 1일 때 f(x) = x² − 1이므로 lim(x→1) f(x) = 1 − 1 = 0입니다. f(1) = 3과 비교하면 어떤 조건이 깨지는지 판단해 보세요."
+    ]
   },
   {
     "id": "gen_math2_14",
@@ -779,7 +939,11 @@
     "answerIndex": 2,
     "explanation": "lim(x→2)(f(x)−5)÷(x−2)가 존재하려면 분자 f(x)−5도 x=2에서 0이어야 한다. 즉 f(2)−5 = 0이므로 f(2) = 5.",
     "detailedExplanation": "분모 (x−2)→0이므로 극한이 존재하려면 분자 f(x)−5도 x→2일 때 0이어야 한다(0/0 꼴). 따라서 f(2) = 5.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분모 (x − 2) → 0일 때 극한값이 유한한 값으로 존재하려면 분자는 어떤 조건을 만족해야 하는지 떠올려 보세요.",
+      "g(x)가 x = 2에서 연속이고 극한값이 유한하려면 (f(x) − 5)도 x → 2일 때 0에 가까워져야 합니다(0/0 꼴). 즉 f(2) − 5 = 0임을 이용하세요."
+    ]
   },
   {
     "id": "gen_math2_15",
@@ -797,7 +961,11 @@
     "answerIndex": 1,
     "explanation": "좌극한: lim(x→1⁻)(x²−2x) = 1−2 = −1. 우극한: lim(x→1⁺)(√(x−1)+b) = b. 연속 조건: a = −1, b = −1. a² + b² = 1 + 1 = 2.",
     "detailedExplanation": "좌극한 = −1, 우극한 = 0 + b = b. 연속이 되려면 −1 = b = a. 따라서 a = −1, b = −1이고 a² + b² = 1 + 1 = 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "조각 함수가 x = 1에서 연속이 되려면 좌극한, 우극한, 함숫값 f(1) = a가 모두 같아야 합니다.",
+      "좌극한: lim(x→1⁻)(x² − 2x) = 1 − 2 = −1이고, 우극한: lim(x→1⁺)(√(x − 1) + b) = 0 + b = b입니다. a = −1, b = −1 조건으로 a² + b²을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math2_16",
@@ -815,7 +983,11 @@
     "answerIndex": 2,
     "explanation": "극한값이 존재하므로 분자 f(x)−3의 극한도 0이어야 한다. 즉 lim(x→2)f(x) = 3이고, f가 x=2에서 연속이므로 f(2) = 3.",
     "detailedExplanation": "lim(x→2)(f(x)−3)÷(x−2) = 5(유한)이 되려면 (x−2)→0이므로 f(x)−3→0, 즉 lim(x→2)f(x) = 3. f가 x=2에서 연속이면 f(2) = lim(x→2)f(x) = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분모 (x − 2) → 0일 때 극한값이 유한하게 존재하려면 분자 f(x) − 3의 극한이 어떻게 되어야 하는지 생각해 보세요.",
+      "극한이 유한한 값 5가 되려면 분자 f(x) − 3도 x → 2에서 0이어야 합니다(0/0 꼴). 따라서 lim(x→2) f(x) = 3이고, f가 x = 2에서 연속임을 이용해 f(2)를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_17",
@@ -833,7 +1005,11 @@
     "answerIndex": 2,
     "explanation": "닫힌구간에서 연속인 함수가 양수와 음수 값을 모두 취하면 중간에 0이 되는 점이 반드시 존재한다는 것이 사잇값 정리(중간값 정리)이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "닫힌구간에서 연속인 함수가 구간 양 끝에서 서로 다른 부호의 값을 가질 때 적용되는 정리의 이름을 떠올려 보세요.",
+      "f(a) < 0 < f(b)이면 함수값이 음수에서 양수로 바뀌는 중간 어딘가에서 반드시 0이 되는 점이 존재한다는 정리를 보기에서 찾아보세요."
+    ]
   },
   {
     "id": "gen_math2_18",
@@ -851,7 +1027,11 @@
     "answerIndex": 3,
     "explanation": "f(1) = 1 − 2 − 1 = −2 < 0, f(2) = 8 − 4 − 1 = 3 > 0이므로 사잇값 정리에 의해 (1, 2)에서 f(x) = 0인 근이 존재한다.",
     "detailedExplanation": "f(−2) = −8+4−1 = −5 < 0, f(−1) = −1+2−1 = 0. f(0) = −1 < 0, f(1) = −2 < 0, f(2) = 3 > 0. 부호가 바뀌는 구간은 (1, 2)이다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "사잇값 정리를 쓰려면 구간 양 끝점의 함수값 부호가 반대인 구간을 찾아야 합니다.",
+      "각 보기의 구간 양 끝점에 f(x) = x³ − 2x − 1을 대입해 부호를 확인하세요. f(값) < 0이고 f(다른 값) > 0이 되는 구간이 정답 후보입니다."
+    ]
   },
   {
     "id": "gen_math2_19",
@@ -869,7 +1049,11 @@
     "answerIndex": 2,
     "explanation": "연속이 되려면 lim(x→1)(x²+ax+b)÷(x−1) = 3이어야 한다. 분모→0이므로 분자도 0: 1+a+b = 0. x²+ax+b = (x−1)(x−k)로 인수분해하면 lim(x→1)(x−k) = 1−k = 3이므로 k = −2. 따라서 (x−1)(x+2) = x²+x−2이므로 a = 1, b = −2, a+b = −1.",
     "detailedExplanation": "조건 1: 1+a+b = 0 (분자가 x=1에서 0). 조건 2: x²+ax+b = (x−1)(x−k)로 쓰면 전개 시 a = 1−k, b = k. lim(x→1)(x−k) = 1−k = 3 → k = −2. 따라서 a = 1−(−2) = 3, b = −2는 모순. 재계산: (x−1)(x−k) = x²−(1+k)x+k이므로 a = −(1+k), b = k. 1−k = 3 → k = −2. a = −(1+(−2)) = 1, b = −2. a+b = 1+(−2) = −1. 검증: x²+x−2 = (x−1)(x+2), lim(x→1)(x+2) = 3 ✓.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x = 1에서 연속이려면 극한값이 3이어야 하고, 분모가 0이 되므로 분자도 반드시 0이 되어야 합니다(0/0 꼴). 이를 이용해 a, b의 관계식을 세우세요.",
+      "1 + a + b = 0 (분자 조건)과, 약분 후 남는 일차식의 x → 1 극한이 3이 되어야 한다는 조건으로 연립방정식을 풀어 a + b를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_20",
@@ -887,7 +1071,11 @@
     "answerIndex": 0,
     "explanation": "미분계수 f'(a)는 lim(h→0) [f(a+h) − f(a)] ÷ h로 정의된다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "미분계수 f′(a)는 x = a에서의 순간변화율로, 극한식 lim(h→0) [f(a+h) − f(a)] ÷ h 로 정의됩니다.",
+      "네 가지 보기 중 이 정의와 정확히 일치하는 식을 고르세요. h → ∞ 또는 덧셈 부호 등 잘못된 부분을 확인하세요."
+    ]
   },
   {
     "id": "gen_math2_21",
@@ -905,7 +1093,11 @@
     "answerIndex": 2,
     "explanation": "상수함수의 도함수는 항상 0이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "상수함수 f(x) = c에 대해 도함수가 무엇인지 떠올려 보세요.",
+      "상수는 x가 아무리 변해도 변화량이 0이므로, 도함수(순간변화율)도 항상 0입니다."
+    ]
   },
   {
     "id": "gen_math2_22",
@@ -923,7 +1115,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x²이므로 f'(2) = 3 × 4 = 12이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f(x) = x³의 도함수를 거듭제곱 규칙으로 구하세요.",
+      "f′(x) = 3x²를 구한 뒤, x = 2를 대입해 f′(2)를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_23",
@@ -941,7 +1137,11 @@
     "answerIndex": 0,
     "explanation": "각 항을 미분하면 (3x²)' = 6x, (−2x)' = −2, (1)' = 0이므로 f'(x) = 6x − 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 따로 미분하세요. 상수항의 도함수는 0입니다.",
+      "(3x²)′ = 6x, (−2x)′ = −2, (1)′ = 0 이므로 이를 합산해 f′(x)를 완성하세요."
+    ]
   },
   {
     "id": "gen_math2_24",
@@ -959,7 +1159,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 4x³ − 6x이므로 f'(1) = 4 − 6 = −2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "먼저 f(x) = x⁴ − 3x² + 2를 항별로 미분하여 f′(x)를 구하세요.",
+      "f′(x) = 4x³ − 6x에 x = 1을 대입해 미분계수를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_25",
@@ -977,7 +1181,11 @@
     "answerIndex": 1,
     "explanation": "lim(h→0) [f(3+2h) − f(3)] ÷ h = lim(h→0) [f(3+2h) − f(3)] ÷ (2h) × 2 = 2f'(3)이다.",
     "detailedExplanation": "분자와 분모를 2h로 나누면 미분계수의 정의식 lim(t→0) [f(3+t) − f(3)] ÷ t = f'(3)에 상수 2가 곱해진 형태가 된다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(h→0) [f(3+2h) − f(3)] ÷ h 와 미분계수 정의 f′(3)의 차이를 파악하세요. 분모에 2h가 필요합니다.",
+      "분자·분모를 2h 기준으로 변환하면 극한값은 2 × f′(3)임을 확인하세요."
+    ]
   },
   {
     "id": "gen_math2_26",
@@ -995,7 +1203,11 @@
     "answerIndex": 1,
     "explanation": "f'(x) = 3x² − 3이므로 f'(2) = 3 × 4 − 3 = 12 − 3 = 9이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "접선의 기울기는 도함수 f′(x)를 해당 x 값에서 구한 것과 같습니다.",
+      "f(x) = x³ − 3x의 도함수 f′(x) = 3x² − 3을 구하고, x = 2를 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_27",
@@ -1013,7 +1225,11 @@
     "answerIndex": 1,
     "explanation": "f(x) = x³ − 2x² + x − 2로 전개하면 f'(x) = 3x² − 4x + 1이므로 f'(1) = 3 − 4 + 1 = 0이다.",
     "detailedExplanation": "곱의 미분법 [f·g]' = f'g + fg'을 이용하면 f'(x) = 2x(x−2) + (x²+1)·1 = 2x²−4x+x²+1 = 3x²−4x+1. f'(1) = 3−4+1 = 0.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x) = (x² + 1)(x − 2)를 전개하거나 곱의 미분법 [u·v]′ = u′v + uv′을 사용하세요.",
+      "전개하면 f(x) = x³ − 2x² + x − 2이고, f′(x) = 3x² − 4x + 1에 x = 1을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_28",
@@ -1031,7 +1247,11 @@
     "answerIndex": 1,
     "explanation": "[f(1+3h) − f(1−h)] ÷ h = 3·[f(1+3h)−f(1)] ÷ (3h) + [f(1−h)−f(1)] ÷ (−h)로 분리하면 3f'(1) + f'(1) = 4f'(1) = 8이므로 f'(1) = 2이다.",
     "detailedExplanation": "f(1+3h) − f(1−h) = [f(1+3h) − f(1)] + [f(1) − f(1−h)]로 분해한다. 첫째 항 ÷ h = 3 × [f(1+3h)−f(1)] ÷ (3h) → 3f'(1), 둘째 항 ÷ h = [f(1)−f(1−h)] ÷ h = [f(1−h)−f(1)] ÷ (−h) → f'(1). 따라서 4f'(1) = 8, f'(1) = 2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(1+3h) − f(1−h)를 f(1+3h) − f(1)과 f(1) − f(1−h)로 나눠 각각 미분계수 정의와 연결하세요.",
+      "나눈 뒤 계수를 맞추면 3f′(1) + f′(1) = 4f′(1) = 8 꼴이 됩니다. 이를 풀어 f′(1)을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_29",
@@ -1049,7 +1269,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² + 2ax + b이고 f'(1) = 0, f'(−1) = 0에서 3 + 2a + b = 0, 3 − 2a + b = 0을 연립하면 a = 0, b = −3. 따라서 f'(0) = b = −3.",
     "detailedExplanation": "두 방정식을 더하면 6 + 2b = 0 → b = −3. 빼면 4a = 0 → a = 0. f'(x) = 3x² − 3이므로 f'(0) = −3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 3x² + 2ax + b이고, f′(1) = 0, f′(−1) = 0 두 조건을 연립방정식으로 세우세요.",
+      "두 방정식을 더하거나 빼서 a, b를 구한 뒤, f′(0) = b를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_30",
@@ -1067,7 +1291,11 @@
     "answerIndex": 0,
     "explanation": "f'(2) = 0이고 최고차항의 계수가 1이므로 f(x) = (x−2)³ + c 형태. f(2) = c = 4이므로 f(x) = (x−2)³ + 4. f(3) = 1 + 4 = 5.",
     "detailedExplanation": "lim(x→2) [f(x)−f(2)] ÷ (x−2) = f'(2) = 0. 최고차항 계수 1인 삼차함수이고 x=2에서만 f'(x)=0이므로 f'(x) = 3(x−2)², 즉 f(x) = (x−2)³ + C. f(2) = C = 4이므로 f(3) = (3−2)³ + 4 = 1 + 4 = 5.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "lim(x→2) [f(x) − f(2)] ÷ (x − 2) = 0은 미분계수 f′(2) = 0임을 의미합니다.",
+      "최고차항 계수 1이고 x = 2에서만 f′(x) = 0이므로 f(x) = (x − 2)³ + C 형태임을 이용해 f(2) = 4 조건으로 C를 구한 뒤 f(3)을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_31",
@@ -1085,7 +1313,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 6x = 3x(x − 2) = 0이므로 x = 0 또는 x = 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f′(x) = 0이 되는 x값을 찾아야 합니다. 먼저 f(x) = x³ − 3x² + 2를 미분하세요.",
+      "f′(x) = 3x² − 6x = 3x(x − 2)로 인수분해하면 f′(x) = 0의 두 근을 바로 찾을 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_32",
@@ -1103,7 +1335,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3)이고, f'(x) > 0인 구간은 x < 1 또는 x > 3이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "함수가 증가하는 구간은 f′(x) > 0인 구간입니다. 먼저 f′(x)를 구하세요.",
+      "f′(x) = 3(x − 1)(x − 3)의 부호표를 만들어 f′(x) > 0인 x의 범위를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_33",
@@ -1121,7 +1357,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x² − 3 = 3(x+1)(x−1)이므로 x = −1에서 극대 f(−1) = 7, x = 1에서 극소 f(1) = 3이고, 합은 10이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f′(x) = 0의 근에서 극값이 발생합니다. 먼저 f′(x)를 구하고 부호표를 작성하세요.",
+      "f′(x) = 3(x+1)(x−1)에서 x = −1에서 극대, x = 1에서 극소이므로 각각 f(−1)과 f(1)을 계산해 합산하세요."
+    ]
   },
   {
     "id": "gen_math2_34",
@@ -1139,7 +1379,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 6x = 3x(x−2)이므로 임계점은 x = 0, 2이다. f(0) = 1, f(2) = −3, f(3) = 1이므로 최댓값은 1이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "닫힌구간에서의 최댓값은 극값 후보와 양 끝점 값을 모두 비교해야 합니다.",
+      "f′(x) = 3x(x − 2) = 0에서 x = 0, 2. f(0), f(2), f(3) 세 값을 구해 가장 큰 것을 고르세요."
+    ]
   },
   {
     "id": "gen_math2_35",
@@ -1157,7 +1401,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = x³ − 3x로 놓으면 f'(x) = 3x² − 3 = 0에서 x = ±1이고, 극대 f(−1) = 2, 극소 f(1) = −2이므로 k = f(x)가 세 실근을 가지려면 −2 < k < 2이어야 한다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "방정식을 x³ − 3x = k로 변형하고, f(x) = x³ − 3x의 그래프와 y = k의 교점 수를 생각하세요.",
+      "f(x)의 극댓값과 극솟값 사이에 k가 들어와야 세 실근이 생깁니다. f′(x) = 0에서 극값을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_36",
@@ -1175,7 +1423,11 @@
     "answerIndex": 0,
     "explanation": "y' = 3x² − 1이므로 x = 1에서 기울기 = 3(1)² − 1 = 2이고, 점 (1, 0)을 지나므로 y − 0 = 2(x − 1), 즉 y = 2x − 2이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "곡선 위의 접선 기울기는 y′에 해당 x값을 대입한 값입니다. y = x³ − x를 미분하세요.",
+      "기울기 y′(1) = 2와 점 (1, 0)을 이용해 점-기울기 형태 y − y₁ = m(x − x₁)으로 접선 방정식을 세우세요."
+    ]
   },
   {
     "id": "gen_math2_37",
@@ -1193,7 +1445,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 3a = 0에서 x = ±√a이다. f(−√a) = −a√a + 3a√a + 2 = 2a√a + 2, f(√a) = a√a − 3a√a + 2 = −2a√a + 2이므로 극댓값 − 극솟값 = 4a√a이다.",
     "detailedExplanation": "f'(x) = 3x² − 3a = 3(x² − a)이므로 x = −√a에서 극대, x = √a에서 극소이다. f(−√a) = (−√a)³ − 3a(−√a) + 2 = −a√a + 3a√a + 2 = 2a√a + 2. f(√a) = (√a)³ − 3a(√a) + 2 = a√a − 3a√a + 2 = −2a√a + 2. 따라서 극댓값 − 극솟값 = (2a√a + 2) − (−2a√a + 2) = 4a√a이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 3x² − 3a = 0에서 극값 후보 x = ±√a를 구하세요. a > 0이므로 x = −√a에서 극대, x = √a에서 극소입니다.",
+      "f(−√a)와 f(√a)를 각각 계산한 뒤, 극댓값 − 극솟값을 a로 나타내세요."
+    ]
   },
   {
     "id": "gen_math2_38",
@@ -1211,7 +1467,11 @@
     "answerIndex": 2,
     "explanation": "f'(x)의 부호가 x = −1에서 + → −, x = 2에서 − → +로 바뀌므로 f(x)는 x = −1에서 극대, x = 2에서 극소를 가져 극값은 2개이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x)의 극값 개수는 f′(x)의 부호가 바뀌는 횟수와 같습니다.",
+      "f′(x)의 그래프에서 부호가 양→음, 음→양으로 바뀌는 x값 각각이 극대, 극소에 해당합니다."
+    ]
   },
   {
     "id": "gen_math2_39",
@@ -1229,7 +1489,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 4x³ − 16x = 4x(x²−4) = 4x(x+2)(x−2)이므로 x = ±2에서 극소이고, f(2) = 16 − 32 + 3 = −13이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f′(x) = 4x³ − 16x = 4x(x² − 4)로 인수분해하여 f′(x) = 0의 근을 구하세요.",
+      "부호표를 작성해 극소가 되는 x를 찾고, 그 x값을 f(x)에 대입해 극솟값을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_40",
@@ -1247,7 +1511,11 @@
     "answerIndex": 1,
     "explanation": "f'(x) = 3x² + 2ax + b이므로 f'(0) = b = 3, f'(2) = 12 + 4a + b = 3에서 4a = −12, a = −3이다. c = f(0) = 1이고, f(1) = 1 − 3 + 3 + 1 = 2이다.",
     "detailedExplanation": "f'(x) = 3x² + 2ax + b. f'(0) = b = 3. f'(2) = 12 + 4a + 3 = 3 → 4a = −12 → a = −3. f(0) = c = 1. 따라서 f(x) = x³ − 3x² + 3x + 1이고 f(1) = 1 − 3 + 3 + 1 = 2이다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 3x² + 2ax + b에 f′(0) = 3과 f′(2) = 3 두 조건을 대입해 a, b를 구하세요.",
+      "f(0) = c = 1 조건으로 c를 구한 뒤, f(1)을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_41",
@@ -1265,7 +1533,11 @@
     "answerIndex": 0,
     "explanation": "F'(x) = f(x)가 되어야 하므로 F(x) = x³ + C를 미분하면 3x²이 된다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "부정적분 F(x)는 F'(x) = f(x) 를 만족하는 함수입니다. 미분해서 원래 함수가 나오는지 확인해 보세요.",
+      "각 선택지를 미분해 보고, 결과가 f(x) = 3x² 와 일치하는 것을 찾으세요."
+    ]
   },
   {
     "id": "gen_math2_42",
@@ -1283,7 +1555,11 @@
     "answerIndex": 1,
     "explanation": "상수함수 1의 부정적분은 x + C이다. 미분하면 1이 되는 함수이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "상수 1 의 부정적분은 어떤 함수를 미분하면 1 이 나오는지 생각하세요.",
+      "∫xⁿ dx = xⁿ⁺¹/(n+1) + C 에서 n=0 인 경우로 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math2_43",
@@ -1301,7 +1577,11 @@
     "answerIndex": 0,
     "explanation": "각 항을 개별적으로 적분하면 4x³ → x⁴, −6x → −3x², 2 → 2x이므로 x⁴ − 3x² + 2x + C이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 분리해 ∫4x³ dx, ∫(−6x) dx, ∫2 dx 를 각각 적분하세요.",
+      "∫xⁿ dx = xⁿ⁺¹/(n+1) + C 를 각 항에 적용한 뒤 합하면 됩니다."
+    ]
   },
   {
     "id": "gen_math2_44",
@@ -1319,7 +1599,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = ∫(6x² − 4x)dx = 2x³ − 2x² + C이고, f(0) = C = 3이므로 f(1) = 2 − 2 + 3 = 3이다.",
     "detailedExplanation": "f(x) = 2x³ − 2x² + C. f(0) = C = 3이므로 f(x) = 2x³ − 2x² + 3. f(1) = 2(1) − 2(1) + 3 = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f'(x) 를 적분해 f(x) = ∫(6x² − 4x) dx 를 구하면 적분상수 C 가 포함된 식이 나옵니다.",
+      "f(0) = 3 이라는 초기조건을 f(x) 에 x=0 을 대입해 C 를 먼저 구하세요."
+    ]
   },
   {
     "id": "gen_math2_45",
@@ -1337,7 +1621,11 @@
     "answerIndex": 0,
     "explanation": "(x² + 1)(x − 2) = x³ − 2x² + x − 2로 전개한 후 적분하면 x⁴/4 − 2x³/3 + x²/2 − 2x + C이다.",
     "detailedExplanation": "전개: x³ − 2x² + x − 2. 적분: x⁴/4 − 2x³/3 + x²/2 − 2x + C.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "(x² + 1)(x − 2) 를 전개하면 다항식이 되고, 그 뒤 각 항을 부정적분 공식으로 적분할 수 있습니다.",
+      "전개 후 ∫x³ dx, ∫x² dx, ∫x dx, ∫1 dx 를 각각 처리해 합산하세요."
+    ]
   },
   {
     "id": "gen_math2_46",
@@ -1355,7 +1643,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = F'(x) = 3x² − 6x + a이고, f(2) = 12 − 12 + a = a = 4이어야 하므로 a = 4인데, 선택지를 다시 보면 a = 4이다.",
     "detailedExplanation": "f(x) = F'(x) = 3x² − 6x + a. f(2) = 3(4) − 6(2) + a = 12 − 12 + a = a. 문제에서 f(2) = 4이므로 a = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "F(x) 의 부정적분이 주어져 있으므로 f(x) = F'(x) 로 미분해 f(x) 를 구하세요.",
+      "f(2) = 4 조건에 x=2 를 대입해 a 의 값을 결정하세요."
+    ]
   },
   {
     "id": "gen_math2_47",
@@ -1373,7 +1665,11 @@
     "answerIndex": 1,
     "explanation": "f(x) = x³ − x² + x + C이고 f(1) = 1 − 1 + 1 + C = 5이므로 C = 4. f(−1) = −1 − 1 − 1 + 4 = 1.",
     "detailedExplanation": "f(x) = ∫(3x² − 2x + 1)dx = x³ − x² + x + C. f(1) = 1 − 1 + 1 + C = 1 + C = 5이므로 C = 4. f(−1) = (−1)³ − (−1)² + (−1) + 4 = −1 − 1 − 1 + 4 = 1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f'(x) = 3x² − 2x + 1 을 적분해 f(x) 를 구하면 적분상수 C 가 남습니다.",
+      "f(1) = 5 를 이용해 C 를 먼저 결정한 뒤 f(−1) 을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_48",
@@ -1391,7 +1687,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = x⁴ − 3x² + C이고 f(1) = 1 − 3 + C = 2이므로 C = 4. f(2) = 16 − 12 + 4 = 8이다.",
     "detailedExplanation": "f(x) = ∫(4x³ − 6x)dx = x⁴ − 3x² + C. f(1) = 1 − 3 + C = −2 + C = 2이므로 C = 4. f(2) = 2⁴ − 3(2²) + 4 = 16 − 12 + 4 = 8.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f'(x) = 4x³ − 6x 를 적분해 f(x) 를 구하세요. 적분상수 C 가 포함됩니다.",
+      "곡선이 점 (1, 2) 를 지나므로 f(1) = 2 로 C 를 결정한 뒤 f(2) 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_49",
@@ -1409,7 +1709,11 @@
     "answerIndex": 1,
     "explanation": "∫₁³ 1 dx = [x]₁³ = 3 − 1 = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "피적분함수가 상수 1 일 때, 부정적분은 x + C 임을 떠올리세요.",
+      "[x]₁³ 처럼 위끝 x=3 과 아래끝 x=1 을 대입해 뺀 값이 정답입니다."
+    ]
   },
   {
     "id": "gen_math2_50",
@@ -1427,7 +1731,11 @@
     "answerIndex": 1,
     "explanation": "∫₀² x dx = [x²/2]₀² = 4/2 − 0 = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫x dx = x²/2 + C 를 이용해 정적분 [x²/2]₀² 를 세우세요.",
+      "위끝 x=2 와 아래끝 x=0 을 각각 대입해 뺍니다."
+    ]
   },
   {
     "id": "gen_math2_51",
@@ -1445,7 +1753,11 @@
     "answerIndex": 2,
     "explanation": "적분 구간의 시작과 끝이 같으면 정적분의 값은 항상 0이다.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정적분의 기본 성질 중, 적분 구간의 시작과 끝이 같을 때의 규칙을 떠올리세요.",
+      "∫ₐᵃ f(x) dx = F(a) − F(a) 임을 생각하면 바로 결론에 도달합니다."
+    ]
   },
   {
     "id": "gen_math2_52",
@@ -1463,7 +1775,11 @@
     "answerIndex": 1,
     "explanation": "∫₁³ (2x+1) dx = [x²+x]₁³ = (9+3) − (1+1) = 12 − 2 = 10. 정답은 10.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫(2x + 1) dx 의 부정적분을 먼저 구하세요. 결과는 x² + x + C 가 됩니다.",
+      "[x² + x]₁³ 을 계산해 위끝(x=3)과 아래끝(x=1)을 대입한 뒤 빼세요."
+    ]
   },
   {
     "id": "gen_math2_53",
@@ -1481,7 +1797,11 @@
     "answerIndex": 2,
     "explanation": "∫₀² (3x²−2x+1) dx = [x³−x²+x]₀² = (8−4+2) − 0 = 6.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫(3x² − 2x + 1) dx 의 부정적분을 각 항별로 구하세요.",
+      "[x³ − x² + x]₀² 를 이용해 x=2 일 때 값에서 x=0 일 때 값을 빼세요."
+    ]
   },
   {
     "id": "gen_math2_54",
@@ -1499,7 +1819,11 @@
     "answerIndex": 1,
     "explanation": "0≤x<1에서 |x−1|=1−x, 1≤x≤2에서 |x−1|=x−1. ∫₀¹(1−x)dx + ∫₁²(x−1)dx = 1/2 + 1/2 = 1.",
     "detailedExplanation": "∫₀¹(1−x)dx = [x−x²/2]₀¹ = 1−1/2 = 1/2. ∫₁²(x−1)dx = [x²/2−x]₁² = (2−2)−(1/2−1) = 0+1/2 = 1/2. 합계 = 1.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|x − 1| 의 부호가 x=1 에서 바뀌므로 적분 구간을 [0,1] 과 [1,2] 로 나눠서 절댓값을 풀어야 합니다.",
+      "[0,1] 구간에서 |x−1| = 1−x, [1,2] 구간에서 |x−1| = x−1 로 바꾼 뒤 각각 정적분하여 더하세요."
+    ]
   },
   {
     "id": "gen_math2_55",
@@ -1517,7 +1841,11 @@
     "answerIndex": 2,
     "explanation": "∫₁³ f(x) dx = ∫₀³ f(x) dx − ∫₀¹ f(x) dx = 7 − 2 = 5.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정적분의 구간 분리 성질 ∫₀³ = ∫₀¹ + ∫₁³ 를 떠올리세요.",
+      "∫₁³ f(x) dx = ∫₀³ f(x) dx − ∫₀¹ f(x) dx 로 변환해 주어진 값을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_56",
@@ -1535,7 +1863,11 @@
     "answerIndex": 2,
     "explanation": "[2x²−2x]₀ᵏ = 2k²−2k = 4 이므로 k²−k−2=0, (k−2)(k+1)=0. k>0이므로 k=2.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∫₀ᵏ (4x − 2) dx 를 직접 계산해 k 에 관한 방정식을 세우세요.",
+      "[2x² − 2x]₀ᵏ = 2k² − 2k = 4 가 되므로 이를 정리한 이차방정식을 풀고, 양수 조건을 적용하세요."
+    ]
   },
   {
     "id": "gen_math2_57",
@@ -1553,7 +1885,11 @@
     "answerIndex": 1,
     "explanation": "∫₀²(2x−1)f(x)dx = 2∫₀²x·f(x)dx − ∫₀²f(x)dx = 2×5 − 3 = 7.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "정적분의 선형성 ∫(af + bg) = a∫f + b∫g 를 적용하세요.",
+      "∫₀²(2x−1)f(x)dx = 2∫₀²x·f(x)dx − ∫₀²f(x)dx 로 나눈 뒤 주어진 값을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_58",
@@ -1571,7 +1907,11 @@
     "answerIndex": 1,
     "explanation": "∫₁³ 2 dx = 2×(3−1) = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "피적분함수가 상수 2 이므로 정적분은 2 × (구간의 길이) 로 계산할 수 있습니다.",
+      "[2x]₁³ = 2×3 − 2×1 을 계산해도 됩니다."
+    ]
   },
   {
     "id": "gen_math2_59",
@@ -1589,7 +1929,11 @@
     "answerIndex": 1,
     "explanation": "[x³ − x² + x]₀¹ = 1 − 1 + 1 = 1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫(3x² − 2x + 1) dx 의 부정적분을 각 항별로 구하세요.",
+      "[x³ − x² + x]₀¹ 을 이용해 위끝(x=1)과 아래끝(x=0)을 각각 대입해 빼세요."
+    ]
   },
   {
     "id": "gen_math2_60",
@@ -1607,7 +1951,11 @@
     "answerIndex": 2,
     "explanation": "∫₀³ x² dx = [x³/3]₀³ = 27/3 = 9.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "x=0 에서 x=3 까지 x축 위의 곡선 y=x² 과 x축 사이의 넓이를 정적분으로 나타내세요.",
+      "∫₀³ x² dx = [x³/3]₀³ 을 계산해 보세요."
+    ]
   },
   {
     "id": "gen_math2_61",
@@ -1625,7 +1973,11 @@
     "answerIndex": 1,
     "explanation": "4 − x² = 0의 근은 x = ±2이므로, 넓이 = ∫₋₂² (4−x²) dx = 2×[4x−x³/3]₀² = 2×16/3 = 32/3.",
     "detailedExplanation": "대칭성을 이용하면 2×∫₀² (4−x²) dx = 2×[4x − x³/3]₀² = 2×(8 − 8/3) = 2×16/3 = 32/3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "곡선 y = 4 − x² 이 x축과 만나는 점(x² = 4, 즉 x = ±2)을 먼저 구하세요.",
+      "∫₋₂² (4 − x²) dx 를 계산하세요. 피적분함수가 우함수이므로 2×∫₀² (4−x²) dx 로 단순화할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_62",
@@ -1643,7 +1995,11 @@
     "answerIndex": 1,
     "explanation": "교점 x = −1, 2. ∫₋₁² (x+2−x²) dx = [x²/2+2x−x³/3]₋₁² = 10/3 − (−7/6) = 27/6 = 9/2.",
     "detailedExplanation": "x=2: [x²/2+2x−x³/3] = 2+4−8/3 = 18/3−8/3 = 10/3. x=−1: 1/2−2+1/3 = 3/6−12/6+2/6 = −7/6. 넓이 = 10/3 − (−7/6) = 20/6+7/6 = 27/6 = 9/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 곡선의 교점을 먼저 구하세요. x² = x+2 가 성립하는 x 값이 적분 구간의 경계가 됩니다.",
+      "위쪽 곡선에서 아래쪽 곡선을 뺀 식 (x+2−x²) 를 교점 구간에서 정적분하세요."
+    ]
   },
   {
     "id": "gen_math2_63",
@@ -1661,7 +2017,11 @@
     "answerIndex": 2,
     "explanation": "x²−4x = x(x−4) ≤ 0 (0 ≤ x ≤ 4)이므로, ∫₀⁴ (4x−x²) dx = [2x²−x³/3]₀⁴ = 32−64/3 = 32/3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "|x²−4x| = |x(x−4)| 이므로 x=0 과 x=4 에서 부호가 바뀝니다. 구간 [0,4] 전체에서 x(x−4) 의 부호를 확인하세요.",
+      "[0,4] 에서 x(x−4) ≤ 0 이므로 |x²−4x| = 4x−x² 로 바꾸어 정적분하세요."
+    ]
   },
   {
     "id": "gen_math2_64",
@@ -1679,7 +2039,11 @@
     "answerIndex": 1,
     "explanation": "x³−x = x(x−1)(x+1)의 근: x = −1, 0, 1. 홀함수이므로 넓이 = 2×∫₀¹ (x−x³) dx = 2×[x²/2−x⁴/4]₀¹ = 2×1/4 = 1/2.",
     "detailedExplanation": "0 ≤ x ≤ 1에서 x³−x ≤ 0이므로 |x³−x| = x−x³. ∫₀¹(x−x³) dx = [x²/2−x⁴/4]₀¹ = 1/2−1/4 = 1/4. 홀함수이므로 −1 ≤ x ≤ 0 구간의 넓이도 1/4. 합계 = 1/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "y = x³ − x = x(x−1)(x+1) 의 영점은 x=−1, 0, 1 입니다. 각 구간에서 곡선이 x축의 위/아래에 있는지 확인하세요.",
+      "홀함수이므로 [−1,0] 과 [0,1] 의 넓이가 같습니다. ∫₀¹ (x−x³) dx 를 구한 뒤 2를 곱하세요."
+    ]
   },
   {
     "id": "gen_math2_65",
@@ -1697,7 +2061,11 @@
     "answerIndex": 2,
     "explanation": "교점 x = 0, a. ∫₀ᵃ (ax−x²) dx = a³/6 = 9/2 → a³ = 27 → a = 3.",
     "detailedExplanation": "∫₀ᵃ (ax−x²) dx = [ax²/2−x³/3]₀ᵃ = a³/2 − a³/3 = a³/6. a³/6 = 9/2 → a³ = 27 → a = 3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "직선 y=ax 와 곡선 y=x² 의 교점을 먼저 구하세요. ax=x² 에서 x=0 과 x=a 가 나옵니다.",
+      "∫₀ᵃ (ax − x²) dx 를 계산하면 a³/6 꼴이 됩니다. 이를 9/2 로 놓고 a 를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_66",
@@ -1715,7 +2083,11 @@
     "answerIndex": 2,
     "explanation": "v(t) = 3t(t−2) = 0 → t = 0, 2. 0≤t≤2에서 v≤0이므로, 거리 = |∫₀² v dt| + |∫₂³ v dt| = 4 + 4 = 8.",
     "detailedExplanation": "[t³−3t²]₀² = 8−12 = −4, ∫₀²|v|dt = 4. [t³−3t²]₂³ = (27−27)−(8−12) = 0−(−4) = 4, ∫₂³ v dt = 4. 총 거리 = 4+4 = 8.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "속도 v(t) = 3t² − 6t = 3t(t−2) 의 영점을 구해 방향이 바뀌는 시각을 파악하세요.",
+      "이동 거리는 |∫₀² v dt| + |∫₂³ v dt| 처럼 부호가 바뀌는 지점에서 구간을 나눠 절댓값 합으로 구합니다."
+    ]
   },
   {
     "id": "gen_math2_67",
@@ -1733,7 +2105,11 @@
     "answerIndex": 2,
     "explanation": "v(t) = (t−1)(t−3) = 0 → t = 1, 3. 거리 = ∫₀¹ v dt + |∫₁³ v dt| = 4/3 + 4/3 = 8/3.",
     "detailedExplanation": "[t³/3−2t²+3t]₀¹ = 1/3−2+3 = 4/3. [t³/3−2t²+3t]₁³ = (9−18+9)−(1/3−2+3) = 0−4/3 = −4/3. 절댑값 = 4/3. 총 거리 = 4/3+4/3 = 8/3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "v(t) = (t−1)(t−3) = 0 인 t = 1, 3 에서 속도의 부호가 바뀝니다.",
+      "거리 = ∫₀¹ v dt + |∫₁³ v dt| + ∫₃³ v dt 처럼 구간을 나누어 절댓값을 취해 더하세요."
+    ]
   },
   {
     "id": "gen_math2_68",
@@ -1751,7 +2127,11 @@
     "answerIndex": 1,
     "explanation": "교점: x² = 2x−x² → 2x²−2x = 0 → x = 0, 1. ∫₀¹ (2x−2x²) dx = [x²−2x³/3]₀¹ = 1−2/3 = 1/3.",
     "detailedExplanation": "0 ≤ x ≤ 1에서 위쪽: y = 2x−x², 아래쪽: y = x². 넓이 = ∫₀¹ (2x−x²−x²) dx = ∫₀¹ (2x−2x²) dx = [x²−2x³/3]₀¹ = 1−2/3 = 1/3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 곡선의 교점을 먼저 구하세요. x² = 2x−x² 에서 2x²−2x=0, 즉 x=0, 1 입니다.",
+      "[0,1] 구간에서 위쪽 곡선이 y=2x−x², 아래쪽이 y=x² 이므로 ∫₀¹ (2x−2x²) dx 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_69",
@@ -1769,7 +2149,11 @@
     "answerIndex": 2,
     "explanation": "교점: x³−3x+2 = x+2 → x³−4x = 0 → x = 0, ±2. 넓이 = ∫₋₂⁰ (x³−4x) dx + ∫₀² (−x³+4x) dx = 4+4 = 8.",
     "detailedExplanation": "제일 위 곡선 판단: x=−1에서 직선 y=1, 곡선 y=−1+3+2=4 → 곡선이 위. ∫₋₂⁰ (x³−4x) dx = [x⁴/4−2x²]₋₂⁰ = 0−(4−8) = 4. x=1에서 직선 y=3, 곡선 y=0 → 직선이 위. ∫₀² (−x³+4x) dx = [−x⁴/4+2x²]₀² = (−4+8)−0 = 4. 합계 = 8.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "곡선과 직선의 교점을 먼저 구하세요. x³−3x+2 = x+2 에서 x³−4x=0 을 인수분해하세요.",
+      "교점이 여러 개이므로 각 구간에서 어느 쪽이 위에 있는지 확인한 뒤, 구간별로 넓이를 더하세요."
+    ]
   },
   {
     "id": "m2_x_001",
@@ -1805,7 +2189,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = (x−2)² − 1 이므로 x = 2에서 최솟값 −1.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "이차함수의 최솟값은 완전제곱식으로 변환하거나 꼭짓점 공식을 이용해 구할 수 있습니다.",
+      "f(x) = (x − 2)² − 1 꼴로 변환하면 꼭짓점의 y좌표가 최솟값임을 바로 알 수 있습니다."
+    ]
   },
   {
     "id": "m2_x_003",
@@ -1823,7 +2211,11 @@
     "answerIndex": 2,
     "explanation": "f′(x) = 4x 이므로 f′(3) = 12.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f(x) = 2x² + 1을 거듭제곱 규칙으로 미분해 f′(x)를 구하세요.",
+      "f′(x) = 4x에 x = 3을 대입하면 f′(3)을 계산할 수 있습니다."
+    ]
   },
   {
     "id": "m2_x_004",
@@ -1841,7 +2233,11 @@
     "answerIndex": 2,
     "explanation": "[x³/3]₀³ = 27/3 = 9.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫x² dx = x³/3 + C 공식을 이용해 정적분 [x³/3]₀³ 을 세우세요.",
+      "위끝 x=3 과 아래끝 x=0 을 각각 대입해 뺀 값이 정답입니다."
+    ]
   },
   {
     "id": "m2_x_005",
@@ -1859,7 +2255,11 @@
     "answerIndex": 1,
     "explanation": "∫₁² 2x dx = [x²]₁² = 4 − 1 = 3.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x=1 부터 x=2 까지 y=2x 와 x축으로 둘러싸인 넓이는 ∫₁² 2x dx 로 구합니다.",
+      "∫2x dx = x² + C 를 이용해 [x²]₁² 를 계산하고, x=2 일 때 값에서 x=1 일 때 값을 빼세요."
+    ]
   },
   {
     "id": "gen_math2_70",
@@ -2075,7 +2475,11 @@
     "answerIndex": 2,
     "explanation": "주어진 극한을 f'(2)로 변환하면, lim(h→0) [f(2+3h)−f(2)] / h = 3 × lim(h→0) [f(2+3h)−f(2)] / (3h) = 3f'(2)이다. f'(x) = 3x²−2이므로 f'(2) = 10이고, 따라서 답은 3×10 = 30이다.",
     "detailedExplanation": "1단계: 분자·분모를 3h 기준으로 변형한다.\nlim(h→0) [f(2+3h)−f(2)] / h = lim(h→0) [f(2+3h)−f(2)] / (3h) × 3\n\n2단계: t = 3h로 놓으면 h→0일 때 t→0이므로\n= 3 × lim(t→0) [f(2+t)−f(2)] / t = 3f'(2)\n\n3단계: f'(x) = 3x²−2이므로 f'(2) = 3×4−2 = 10\n\n4단계: 3×10 = 30",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(h→0) [f(2+3h) − f(2)] ÷ h와 미분계수 f′(2)의 정의를 비교해 상수 배율을 파악하세요.",
+      "분자·분모를 3h 기준으로 변환하면 3f′(2) 꼴임을 확인하고, f′(x) = 3x² − 2를 구해 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_82",
@@ -2093,7 +2497,11 @@
     "answerIndex": 2,
     "explanation": "x = 1에서 연속이면 a+b = 2, 미분가능이면 좌미분계수(3)와 우미분계수(2a)가 같아야 하므로 a = 3/2, b = 1/2이다. 따라서 4a+2b = 6+1 = 7이다.",
     "detailedExplanation": "1단계: x=1에서 연속 조건\nlim(x→1⁻) f(x) = 3(1)−1 = 2,  f(1) = a+b\n→ a+b = 2  … ①\n\n2단계: x=1에서 미분가능 조건 (좌·우 미분계수 일치)\n좌미분계수: lim(h→0⁻) [f(1+h)−f(1)] / h = 3 (직선의 기울기)\n우미분계수: f'(x) = 2ax이므로 f'(1) = 2a\n→ 2a = 3  →  a = 3/2  … ②\n\n3단계: ①에 대입 → b = 2 − 3/2 = 1/2\n\n4단계: 4a+2b = 4×(3/2) + 2×(1/2) = 6+1 = 7",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "x = 1에서 미분가능하려면 먼저 연속이어야 합니다. 좌극한 = f(1) 조건으로 a + b를 구하세요.",
+      "이어서 좌미분계수(직선의 기울기 3)와 우미분계수(2a)가 같아야 하므로 2a = 3을 풀어 a와 b를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_83",
@@ -2111,7 +2519,11 @@
     "answerIndex": 2,
     "explanation": "x²+x−1은 x=1에서 1에 가까워지므로 g(x) = x²+x−1로 치환하면 (g(x)−g(1))/(x−1) → g'(1) = 3이고, 전체 극한은 f'(1)×g'(1) = 5×3 = 15이다.",
     "detailedExplanation": "1단계: 분자를 분해한다.\n[f(x²+x−1)−f(1)] / (x−1)\n= [f(x²+x−1)−f(1)] / (x²+x−1−1) × (x²+x−2) / (x−1)\n\n2단계: x²+x−2 = (x−1)(x+2)이므로\n(x²+x−2)/(x−1) = x+2 → 3  (x→1)\n\n3단계: x→1일 때 x²+x−1→1이므로\n[f(x²+x−1)−f(1)] / (x²+x−1−1) → f'(1)\n\n4단계: f'(x) = 6x²−1, f'(1) = 5\n\n5단계: 전체 극한 = f'(1)×3 = 5×3 = 15",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "분자 f(x² + x − 1) − f(1)을 두 부분으로 나누어 미분계수 f′(1)과 연결하세요.",
+      "x² + x − 2 = (x − 1)(x + 2)임을 이용하면 극한 전체를 f′(1) × (x + 2)|ₓ₌₁ 꼴로 변환할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_84",
@@ -2129,7 +2541,11 @@
     "answerIndex": 2,
     "explanation": "분자를 f(3+2h)−f(3)과 f(3)−f(3−h)로 분리하면 각각 2f'(3)·h, f'(3)·h에 해당하여 극한값은 (2f'(3)+f'(3))/(3) = f'(3)이 된다. f'(3) = 6(9)−6(3) = 36이다.",
     "detailedExplanation": "1단계: 분자를 두 부분으로 나눈다.\n[f(3+2h)−f(3−h)] / 3h\n= [f(3+2h)−f(3)] / 3h + [f(3)−f(3−h)] / 3h\n\n2단계: 각 항을 미분계수 형태로 변환\n= (2/3) × [f(3+2h)−f(3)] / 2h + (1/3) × [f(3)−f(3−h)] / h\n\n3단계: h→0 극한을 취하면\n= (2/3)f'(3) + (1/3)f'(3) = f'(3)\n\n4단계: f'(x) = 6x²−6x, f'(3) = 54−18 = 36",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "분자 f(3+2h) − f(3−h)를 f(3+2h) − f(3)과 f(3) − f(3−h)로 분리해 미분계수와 연결하세요.",
+      "각 항을 적절한 계수로 정리하면 (2/3)f′(3) + (1/3)f′(3) = f′(3)이 됩니다. f′(x) = 6x² − 6x에 x = 3을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_85",
@@ -2147,7 +2563,11 @@
     "answerIndex": 2,
     "explanation": "f(0)=1에서 d=1, 연속조건 a+b=c, 미분가능조건 2+a=3c, f(2)=4+2a+b=6으로 연립하면 a=1, b=0, c=1, d=1이므로 a+b+c+d=3이다.",
     "detailedExplanation": "1단계: f(0) = c×0+d = d = 1  →  d = 1\n\n2단계: x=1 연속 조건\nf(1⁻) = c×1+d = c+1,  f(1) = c+1\nf(1⁺) → 1+a+b\n→ 1+a+b = c+1  →  a+b = c  … ①\n\n3단계: x=1 미분가능 조건 (좌·우 도함수 일치)\n좌: f'(x)=3cx² → f'(1⁻)=3c\n우: f'(x)=2x+a → f'(1⁺)=2+a\n→ 2+a = 3c  … ②\n\n4단계: f(2) = 4+2a+b = 6  →  2a+b = 2  … ③\n\n5단계: ③−① → a = 2−c  … ④\n②에 대입: 2+(2−c) = 3c  →  4 = 4c  →  c = 1\n→ a = 1, b = 0\n\n6단계: a+b+c+d = 1+0+1+1 = 3",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x = 1에서 미분가능 조건은 ① 연속(함숫값이 같음)과 ② 좌·우 도함수 값이 같음입니다. 두 조건을 차례로 세우세요.",
+      "f(0) = 1과 f(2) = 6 조건도 함께 연립하여 a, b, c, d를 모두 구하세요."
+    ]
   },
   {
     "id": "gen_math2_86",
@@ -2165,7 +2585,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x² + 2ax + b의 두 근이 x = 1, x = 3이므로 근과 계수의 관계에 의해 1 + 3 = −2a/3 → a = −6, 1 × 3 = b/3 → b = 9. 따라서 a + b = −6 + 9 = 3.",
     "detailedExplanation": "f'(x) = 3x² + 2ax + b이 x = 1, x = 3에서 0이므로 f'(x) = 3(x − 1)(x − 3) = 3x² − 12x + 9와 계수를 비교한다. 2a = −12 → a = −6, b = 9. 따라서 a + b = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f′(x) = 3x² + 2ax + b의 두 근이 x = 1, x = 3이므로 f′(x)를 3(x − 1)(x − 3) 꼴로 나타내 계수를 비교하세요.",
+      "전개하면 2a = −12, b = 9임을 구할 수 있습니다. a + b를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_87",
@@ -2183,7 +2607,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x(x − 2)이므로 극대는 x = 0, 극소는 x = 2. 구간 내 후보값: f(−1) = a − 4, f(0) = a, f(2) = a − 4, f(3) = a. 최댓값 = a = 11이므로 최솟값 = a − 4 = 7.",
     "detailedExplanation": "f'(x) = 3x² − 6x = 3x(x − 2) = 0에서 x = 0(극대), x = 2(극소). f(−1) = −1 − 3 + a = a − 4, f(0) = a, f(2) = 8 − 12 + a = a − 4, f(3) = 27 − 27 + a = a. 네 값 중 최댓값은 a이고 a = 11이므로, 최솟값 = 11 − 4 = 7.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "닫힌구간 [−1, 3]에서 최댓값·최솟값은 극값 후보와 끝점 값을 모두 비교해야 합니다.",
+      "f′(x) = 3x(x − 2) = 0에서 x = 0, 2. f(−1), f(0), f(2), f(3)을 a로 표현하고 최댓값 = a = 11로 a를 결정한 뒤 최솟값을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_88",
@@ -2201,7 +2629,11 @@
     "answerIndex": 2,
     "explanation": "접점 (t, t³ − 3t)에서의 접선이 (2, 0)을 지나는 조건을 세우면 t³ − 3t² + 3 = 0. 비에타 공식으로 세 근의 합 = 3, 두 근 곱의 합 = 0이므로 기울기 합 = 3(t₁² + t₂² + t₃²) − 9 = 3 × 9 − 9 = 18.",
     "detailedExplanation": "접점을 (t, t³ − 3t)으로 놓으면 접선의 기울기는 3t² − 3. 접선: y − (t³ − 3t) = (3t² − 3)(x − t). (2, 0) 대입하면 −t³ + 3t = (3t² − 3)(2 − t)를 정리하면 t³ − 3t² + 3 = 0. 세 실수근 t₁, t₂, t₃에 대해 t₁ + t₂ + t₃ = 3, t₁t₂ + t₁t₃ + t₂t₃ = 0. 기울기 합 = Σ(3tᵢ² − 3) = 3(t₁² + t₂² + t₃²) − 9 = 3[(t₁+t₂+t₃)² − 2(t₁t₂+t₁t₃+t₂t₃)] − 9 = 3 × 9 − 9 = 18.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "접점 (t, t³ − 3t)에서의 접선이 점 (2, 0)을 지나는 조건을 식으로 세우세요.",
+      "조건을 정리하면 t³ − 3t² + 3 = 0이 되고, 세 근 t₁, t₂, t₃에 대해 비에타 공식(근과 계수의 관계)을 이용해 기울기 합 Σ(3tᵢ² − 3)을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_89",
@@ -2219,7 +2651,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = x³ − 3x² − 9x + k로 놓으면 f'(x) = 3(x + 1)(x − 3). 극댓값 f(−1) = 5 + k, 극솟값 f(3) = k − 27. 세 실근 조건: k − 27 < 0 이고 5 + k > 0 → −5 < k < 27. 이를 만족하는 정수는 −4, −3, …, 26으로 31개.",
     "detailedExplanation": "f'(x) = 3x² − 6x − 9 = 3(x+1)(x−3) = 0 → x = −1(극대), x = 3(극소). f(−1) = −1 − 3 + 9 + k = 5 + k, f(3) = 27 − 27 − 27 + k = k − 27. 세 실근 조건은 (극댓값) > 0 이고 (극솟값) < 0, 즉 5 + k > 0이고 k − 27 < 0. 이를 풀면 −5 < k < 27. 정수 k는 −4부터 26까지 26 − (−4) + 1 = 31개.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "방정식을 x³ − 3x² − 9x = −k로 변형하고, f(x) = x³ − 3x² − 9x의 극대·극소를 구하세요.",
+      "세 실근 조건은 (극솟값) < −k < (극댓값), 즉 극솟값 < k < 극댓값이 아닌 형태임에 주의하며 k의 범위를 구하고 그 안의 정수 개수를 세세요."
+    ]
   },
   {
     "id": "gen_math2_90",
@@ -2237,7 +2673,11 @@
     "answerIndex": 3,
     "explanation": "v(t) = 3t² − 12t + 9 = 3(t − 1)(t − 3). v = 0인 t = 1, 3에서 방향이 바뀐다. x(0) = 2, x(1) = 6, x(3) = 2, x(4) = 6이므로 총 이동 거리 = |6−2| + |2−6| + |6−2| = 4 + 4 + 4 = 12.",
     "detailedExplanation": "v(t) = 3t² − 12t + 9 = 3(t − 1)(t − 3)으로 t = 1과 t = 3에서 속도가 0이 되어 방향을 바꾼다. 위치를 구하면: x(0) = 2, x(1) = 1 − 6 + 9 + 2 = 6, x(3) = 27 − 54 + 27 + 2 = 2, x(4) = 64 − 96 + 36 + 2 = 6. 총 이동 거리 = |x(1) − x(0)| + |x(3) − x(1)| + |x(4) − x(3)| = 4 + 4 + 4 = 12. 변위(4)와 혼동하지 않도록 주의해야 한다.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "속도 v(t) = x′(t)이므로 v(t) = 3t² − 12t + 9 = 3(t−1)(t−3)에서 운동 방향이 바뀌는 시각 t = 1, 3을 찾으세요.",
+      "x(0), x(1), x(3), x(4)를 각각 계산하고 구간별 이동 거리의 합을 구하세요. 변위와 거리를 혼동하지 마세요."
+    ]
   },
   {
     "id": "gen_math2_91",
@@ -2255,7 +2695,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3(x + 1)(x − 3)으로 극대는 x = −1에서 f(−1) = 5 + k, 극소는 x = 3에서 f(3) = k − 27. 조건 5 + k = 2(k − 27)을 풀면 k = 59.",
     "detailedExplanation": "f'(x) = 3x² − 6x − 9 = 3(x+1)(x−3)이므로 x = −1에서 극대, x = 3에서 극소. f(−1) = (−1)³ − 3(−1)² − 9(−1) + k = −1 − 3 + 9 + k = 5 + k. f(3) = 27 − 27 − 27 + k = k − 27. 극댓값 = 2 × 극솟값 조건: 5 + k = 2(k − 27) → 5 + k = 2k − 54 → k = 59. 검증: 극댓값 = 64, 극솟값 = 32, 64 = 2 × 32 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 3(x + 1)(x − 3)에서 x = −1이 극대, x = 3이 극소임을 확인하고 f(−1)과 f(3)을 k로 나타내세요.",
+      "극댓값 = 2 × 극솟값 조건을 방정식으로 세워 k를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_92",
@@ -2273,7 +2717,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = x³ − 2x² + x + C로 놓고 f(1) = 1 − 2 + 1 + C = C = 2이므로 C = 2. 따라서 f(3) = 27 − 18 + 3 + 2 = 14.",
     "detailedExplanation": "① f′(x)를 적분: f(x) = ∫(3x² − 4x + 1)dx = x³ − 2x² + x + C.\n② 초기조건 대입: f(1) = 1 − 2 + 1 + C = 0 + C = 2 → C = 2.\n③ f(3) = 27 − 18 + 3 + 2 = 14.\n[오답 분석] C를 구하지 않고 C = 0으로 두면 f(3) = 12 (선택 ②), 초기조건을 f(0) = 2로 오해하면 C는 그대로 2가 되어 동일하지만, f′(x)의 부호를 틀리면 f(3) = 16 등이 나온다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f'(x) = 3x² − 4x + 1 을 적분해 f(x) 를 구하면 적분상수 C 가 포함됩니다.",
+      "f(1) = 2 조건으로 C 를 먼저 결정한 뒤, f(3) 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_93",
@@ -2291,7 +2739,11 @@
     "answerIndex": 2,
     "explanation": "치환 u = 2x + 1로 놓으면 du = 2dx이므로 ∫u³ · (du/2) = u⁴/8 + C = (2x+1)⁴/8 + C.",
     "detailedExplanation": "① u = 2x + 1으로 치환, du/dx = 2 → dx = du/2.\n② ∫u³ · (du/2) = (1/2) · u⁴/4 + C = u⁴/8 + C.\n③ 역치환: (2x+1)⁴/8 + C.\n[오답 분석] 연쇄법칙(1/2)을 빠뜨리면 (2x+1)⁴/4 (선택 ②), 분모를 전혀 붙이지 않으면 (2x+1)⁴ (선택 ①), 미분과 혼동하면 선택 ④가 나온다. 검산: d/dx[(2x+1)⁴/8] = 4(2x+1)³ · 2/8 = (2x+1)³ ✓",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∫(2x+1)³ dx 에서 u = 2x+1 로 치환하면 du = 2 dx 이므로 dx = du/2 가 됩니다.",
+      "∫u³ × (du/2) = u⁴/(4×2) + C 꼴로 계산한 뒤 역치환하세요. 앞의 1/2 계수를 빠뜨리지 않도록 주의하세요."
+    ]
   },
   {
     "id": "gen_math2_94",
@@ -2309,7 +2761,11 @@
     "answerIndex": 3,
     "explanation": "F(x) = ∫(3x² − x − 2)dx = x³ − x²/2 − 2x + C에서 F(1) = 1 − 1/2 − 2 + C = −3/2 + C = 2이므로 C = 7/2. 따라서 F(0) = 7/2.",
     "detailedExplanation": "① 피적분함수 전개: (x−1)(3x+2) = 3x² + 2x − 3x − 2 = 3x² − x − 2.\n② 적분: F(x) = x³ − x²/2 − 2x + C.\n③ F(1) = 1 − 1/2 − 2 + C = −3/2 + C = 2 → C = 7/2.\n④ F(0) = 0 − 0 − 0 + 7/2 = 7/2.\n[오답 분석] x항의 부호를 틀려 3x²+x−2로 전개하면 C = 5/2, F(0) = 5/2 (선택 ②). C = 2로 잘못 놓으면 F(0) = 2 (선택 ①).",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "F'(x) = (x−1)(3x+2) 를 전개한 뒤 부정적분 공식으로 F(x) 를 구하세요.",
+      "F(1) = 2 조건을 대입해 적분상수 C 를 결정한 뒤 F(0) 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_95",
@@ -2327,7 +2783,11 @@
     "answerIndex": 2,
     "explanation": "t = x + 1로 치환하면 x = t − 1이므로 f(t) = 3(t−1)² + 2(t−1) = 3t² − 4t + 1. 따라서 ∫f(x)dx = x³ − 2x² + x + C.",
     "detailedExplanation": "① t = x + 1로 놓으면 x = t − 1.\n② f(t) = 3(t−1)² + 2(t−1) = 3t² − 6t + 3 + 2t − 2 = 3t² − 4t + 1.\n③ f(x) = 3x² − 4x + 1로 바꿔 쓴 후 적분.\n④ ∫(3x² − 4x + 1)dx = x³ − 2x² + x + C.\n[오답 분석] 치환 후 부호를 틀려 f(t) = 3t²+4t+1로 계산하면 선택 ④, x−1 대입 시 제곱항 전개 오류로 선택 ② 또는 ①이 나올 수 있다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f(x+1) = 3x² + 2x 에서 t = x+1 로 놓으면 x = t−1 이 됩니다. f(t) 를 t 로 표현하세요.",
+      "f(t) 를 구한 뒤 변수를 x 로 바꾸어 ∫f(x) dx 를 각 항별로 적분하세요."
+    ]
   },
   {
     "id": "gen_math2_96",
@@ -2345,7 +2805,11 @@
     "answerIndex": 2,
     "explanation": "√x = x^(1/2), x√x = x^(3/2)이므로 ∫x^(1/2)dx = (2/3)x^(3/2), ∫x^(3/2)dx = (2/5)x^(5/2). 따라서 (2/3)x√x + (2/5)x²√x + C.",
     "detailedExplanation": "① 지수 표현: √x = x^(1/2), x√x = x^(3/2), x²√x = x^(5/2).\n② ∫x^(1/2)dx = x^(3/2)/(3/2) = (2/3)x^(3/2) = (2/3)x√x.\n③ ∫x^(3/2)dx = x^(5/2)/(5/2) = (2/5)x^(5/2) = (2/5)x²√x.\n④ 합산: (2/3)x√x + (2/5)x²√x + C.\n[오답 분석] 계수를 1/(지수)로 잘못 계산하면 선택 ④, 미분으로 혼동하면 선택 ①, 두 항의 계수를 똑같이 2/3으로 쓰면 선택 ②가 나온다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "√x = x^(1/2), x√x = x^(3/2) 로 지수 형태로 바꾼 뒤 ∫xⁿ dx = xⁿ⁺¹/(n+1) + C 공식을 적용하세요.",
+      "두 항 각각 ∫x^(1/2) dx 와 ∫x^(3/2) dx 를 계산하면 분수 지수 형태의 결과가 나옵니다."
+    ]
   },
   {
     "id": "gen_math2_97",
@@ -2363,7 +2827,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = ax² + bx + c로 놓으면 f(x+1)−f(x) = 2ax + (a+b) = 6x+2이므로 a = 3, b = −1. f(0) = c = 3. F(x) = x³ − x²/2 + 3x + C에서 F(1) = 7/2 + C = 5이므로 C = 3/2. 따라서 F(2) = 8 − 2 + 6 + 3/2 = 27/2.",
     "detailedExplanation": "① f(x) = ax² + bx + c로 놓는다.\n② f(x+1) = a(x+1)² + b(x+1) + c = ax² + (2a+b)x + (a+b+c).\n③ f(x+1) − f(x) = 2ax + (a+b) = 6x + 2이므로 2a = 6 → a = 3, a+b = 2 → b = −1.\n④ f(0) = c = 3이므로 f(x) = 3x² − x + 3.\n⑤ F(x) = ∫f(x)dx = x³ − x²/2 + 3x + C.\n⑥ F(1) = 1 − 1/2 + 3 + C = 7/2 + C = 5 → C = 3/2.\n⑦ F(2) = 8 − 2 + 6 + 3/2 = 12 + 3/2 = 27/2.\n[오답 분석] f(0)=c=3을 f(x)의 상수항이 아닌 c=1로 잘못 쓰면 F(2)=23/2 (선택 ①). F(1) 계산 시 산술 오류로 C=1/2를 얻으면 F(2)=25/2 (선택 ②).",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x) = ax² + bx + c 로 놓고 f(x+1) − f(x) = 6x+2 를 전개해 계수를 비교하세요. 그 뒤 f(0) = 3 으로 c 를 구하세요.",
+      "f(x) 가 결정되면 F(x) = ∫f(x) dx 를 구하고, F(1) = 5 로 적분상수 C 를 결정해 F(2) 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_98",
@@ -2381,7 +2849,11 @@
     "answerIndex": 1,
     "explanation": "정적분의 선형성에 의해 2×5 − 3 = 10 − 3 = 7.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "정적분의 선형성 ∫(af + bg) = a∫f + b∫g 를 떠올리세요.",
+      "∫₀²{2f(x)−g(x)}dx = 2×∫₀²f(x)dx − ∫₀²g(x)dx 로 나눈 뒤 주어진 값을 각각 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_99",
@@ -2399,7 +2871,11 @@
     "answerIndex": 2,
     "explanation": "x = ±1 에서 피적분함수의 부호가 바뀌므로 구간을 분리하면 8/3이 나온다.",
     "detailedExplanation": "x²−1 = 0의 근은 x = −1, 1이다. [−1, 1]에서 x²−1 ≤ 0, [1, 2]에서 x²−1 ≥ 0이므로\n∫₋₁¹(1−x²)dx + ∫₁²(x²−1)dx\n= [x − x³/3]₋₁¹ + [x³/3 − x]₁²\n= {(1 − 1/3) − (−1 + 1/3)} + {(8/3 − 2) − (1/3 − 1)}\n= (2/3 + 2/3) + (2/3 + 2/3)\n= 4/3 + 4/3 = 8/3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x² − 1 = (x−1)(x+1) = 0 의 근 x=−1, 1 에서 절댓값 안의 부호가 바뀝니다. 구간 [−1,1] 과 [1,2] 로 나누세요.",
+      "[−1,1] 에서 |x²−1| = 1−x², [1,2] 에서 |x²−1| = x²−1 로 바꾼 뒤 각각 적분하여 더하세요."
+    ]
   },
   {
     "id": "gen_math2_100",
@@ -2417,7 +2893,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = x³ − x², f'(x) = 3x² − 2x = x(3x−2) = 0이므로 x = 2/3에서 극솟값 f(2/3) = 8/27 − 4/9 = −4/27.",
     "detailedExplanation": "f(x) = ∫₀ˣ (3t²−2t)dt = [t³−t²]₀ˣ = x³−x².\nf'(x) = 3x²−2x = x(3x−2) 이므로 f'(x) = 0의 근은 x = 0, x = 2/3.\nf'(x)의 부호: x < 0이면 +, 0 < x < 2/3이면 −, x > 2/3이면 +.\n따라서 x = 2/3에서 극소이고 극솟값 f(2/3) = (2/3)³−(2/3)² = 8/27−12/27 = −4/27.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x) = ∫₀ˣ (3t² − 2t) dt 이므로 미적분의 기본 정리를 이용하면 f'(x) = 3x² − 2x 입니다. 먼저 f(x) 를 직접 구하세요.",
+      "f'(x) = 0 이 되는 x 값의 좌우에서 f'(x) 의 부호 변화를 확인해 극소를 찾고, 그 x 를 f(x) 에 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_101",
@@ -2435,7 +2915,11 @@
     "answerIndex": 0,
     "explanation": "x³, −x는 기함수이므로 [-2,2]에서의 적분이 0이 되고, 우함수 부분만 계산하면 2∫₀²(2x²+1)dx = 2[2x³/3+x]₀² = 2(16/3+2) = 44/3.",
     "detailedExplanation": "기함수 f(x) = x³−x에 대해 ∫₋₂² f(x)dx = 0.\n우함수 g(x) = 2x²+1에 대해 ∫₋₂² g(x)dx = 2∫₀²(2x²+1)dx\n= 2[2x³/3 + x]₀² = 2(16/3 + 2) = 2 × 22/3 = 44/3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "피적분함수를 기함수 부분(x³, −x)과 우함수 부분(2x², 1)으로 나눠서 생각하세요.",
+      "대칭 구간 [−2,2] 에서 기함수의 정적분은 0 이므로, 짝함수 부분만 2×∫₀²(…)dx 로 계산하면 됩니다."
+    ]
   },
   {
     "id": "gen_math2_102",
@@ -2453,7 +2937,11 @@
     "answerIndex": 1,
     "explanation": "∫₀⁴(x²−4x)dx = k = −32/3이고, 넓이 S = −k = 32/3이므로 S + k = 32/3 − 32/3 = 0.",
     "detailedExplanation": "x²−4x = x(x−4) = 0의 근은 x = 0, 4.\n[0, 4]에서 x²−4x ≤ 0이므로\nk = ∫₀⁴(x²−4x)dx = [x³/3 − 2x²]₀⁴ = 64/3 − 32 = 64/3 − 96/3 = −32/3.\n넓이 S = ∫₀⁴|x²−4x|dx = −k = 32/3.\n따라서 S + k = 32/3 + (−32/3) = 0.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∫₀⁴ (x²−4x) dx = k 를 직접 계산하세요. 구간 [0,4] 에서 x²−4x 의 부호도 확인하세요.",
+      "넓이 S 는 ∫₀⁴ |x²−4x| dx 이고, 해당 구간에서 x²−4x ≤ 0 이므로 S = −k 가 됩니다. S+k 의 값을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_103",
@@ -2471,7 +2959,11 @@
     "answerIndex": 1,
     "explanation": "교점은 x² − 2x = x에서 x(x − 3) = 0이므로 x = 0, 3이고, 넓이는 ∫₀³ (3x − x²) dx = [3x²/2 − x³/3]₀³ = 27/2 − 9 = 9/2이다.",
     "detailedExplanation": "① 교점: x² − 2x = x → x² − 3x = 0 → x(x−3) = 0 → x = 0, 3\n② [0, 3]에서 위쪽 곡선 확인: x = 1 대입 시 y = x → 1, y = x² − 2x → −1이므로 직선이 위에 있음\n③ 넓이 = ∫₀³ (x − (x²−2x)) dx = ∫₀³ (3x − x²) dx\n= [3x²/2 − x³/3]₀³ = 27/2 − 27/3 = 27/2 − 9 = 9/2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 그래프의 교점을 먼저 구하세요. x²−2x = x 에서 x(x−3) = 0 이므로 x=0, 3 이 경계입니다.",
+      "[0,3] 구간에서 위쪽 그래프(직선 y=x)에서 아래쪽 그래프(곡선 y=x²−2x)를 뺀 식을 정적분하세요."
+    ]
   },
   {
     "id": "gen_math2_104",
@@ -2489,7 +2981,11 @@
     "answerIndex": 2,
     "explanation": "교점은 x = −2, 0, 2이고, 대칭성을 이용하면 넓이 = 2 × ∫₀² (x − (x³−3x)) dx = 2 × [2x² − x⁴/4]₀² = 2 × 4 = 8이다.",
     "detailedExplanation": "① 교점: x³ − 3x = x → x³ − 4x = 0 → x(x−2)(x+2) = 0 → x = −2, 0, 2\n② 원점 대칭인 도형이므로 [0, 2] 구간 넓이 × 2로 계산\n③ [0, 2]에서 x = 1 대입: y=x → 1, y=x³−3x → −2 이므로 직선이 위\n④ ∫₀² (x − x³ + 3x) dx = ∫₀² (4x − x³) dx = [2x² − x⁴/4]₀² = 8 − 4 = 4\n⑤ 전체 넓이 = 4 + 4 = 8",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 곡선 y=x 와 y=x³−3x 의 교점을 구하세요. x = x³−3x 에서 x³−4x=0 을 인수분해하세요.",
+      "교점이 x=−2, 0, 2 이고 도형이 원점에 대칭이므로, [0,2] 구간 넓이를 구한 뒤 2배 하세요."
+    ]
   },
   {
     "id": "gen_math2_105",
@@ -2507,7 +3003,11 @@
     "answerIndex": 2,
     "explanation": "v(t) = (t−1)(t−3)의 부호가 바뀌는 t = 1, 3을 기준으로 나누면, 이동 거리 = 4/3 + 4/3 + 4/3 = 4이다.",
     "detailedExplanation": "① v(t) = t² − 4t + 3 = (t−1)(t−3): t∈[0,1]에서 양수, [1,3]에서 음수, [3,4]에서 양수\n② ∫₀¹ v dt = [t³/3 − 2t² + 3t]₀¹ = 1/3 − 2 + 3 = 4/3\n③ |∫₁³ v dt| = |[t³/3 − 2t² + 3t]₁³| = |(9 − 18 + 9) − (1/3 − 2 + 3)| = |0 − 4/3| = 4/3\n④ ∫₃⁴ v dt = [t³/3 − 2t² + 3t]₃⁴ = (64/3 − 32 + 12) − (9 − 18 + 9) = 4/3\n⑤ 이동 거리 = 4/3 + 4/3 + 4/3 = 4",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "v(t) = (t−1)(t−3) = 0 이 되는 t=1, 3 에서 속도의 부호가 바뀝니다. 각 구간 [0,1], [1,3], [3,4] 를 나누세요.",
+      "이동 거리 = ∫₀¹ v dt + |∫₁³ v dt| + ∫₃⁴ v dt 처럼 각 구간의 정적분 절댓값을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_106",
@@ -2525,7 +3025,11 @@
     "answerIndex": 1,
     "explanation": "t = 0에서 t = 3까지의 변위는 ∫₀³ (6t² − 6t − 12) dt = [2t³ − 3t² − 12t]₀³ = 54 − 27 − 36 = −9이므로 위치는 5 + (−9) = −4이다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "t=0 에서 t=3 까지의 변위는 ∫₀³ v(t) dt 로 구합니다. 이동 거리와 변위를 혼동하지 마세요.",
+      "초기 위치 + 변위 = 최종 위치 공식을 이용해 t=3 에서의 위치를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_107",
@@ -2543,7 +3047,11 @@
     "answerIndex": 2,
     "explanation": "x³ − x² − 2x = x(x−2)(x+1)이므로 x = −1, 0, 2이고, 넓이 = |∫₋₁⁰ f dx| + |∫₀² f dx| = 5/12 + 8/3 = 37/12이다.",
     "detailedExplanation": "① 인수분해: x(x−2)(x+1) = 0 → x = −1, 0, 2\n② [−1, 0] 구간: x = −0.5 대입 시 양수 → 곡선이 x축 위\n   ∫₋₁⁰ (x³−x²−2x) dx = [x⁴/4 − x³/3 − x²]₋₁⁰ = 0 − (1/4 + 1/3 − 1) = 5/12\n③ [0, 2] 구간: x = 1 대입 시 음수 → 곡선이 x축 아래\n   |∫₀² (x³−x²−2x) dx| = |[x⁴/4 − x³/3 − x²]₀²| = |4 − 8/3 − 4| = 8/3\n④ 전체 넓이 = 5/12 + 8/3 = 5/12 + 32/12 = 37/12",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x³−x²−2x = x(x−2)(x+1) 로 인수분해하면 영점이 x=−1, 0, 2 입니다. 각 구간에서 곡선이 x축의 위/아래에 있는지 확인하세요.",
+      "넓이 = |∫₋₁⁰ f dx| + |∫₀² f dx| 처럼 구간별 정적분의 절댓값을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_108",
@@ -2561,7 +3069,11 @@
     "answerIndex": 2,
     "explanation": "두 곡선의 교점은 x = −1, 2이고, 넓이 = ∫₋₁² (−2x² + 2x + 4) dx = [−2x³/3 + x² + 4x]₋₁² = 20/3 − (−7/3) = 9이다.",
     "detailedExplanation": "① 교점: x² − 2x = −x² + 4 → 2x² − 2x − 4 = 0 → (x−2)(x+1) = 0 → x = −1, 2\n② [−1, 2]에서 −x²+4 ≥ x²−2x 확인: x=0 대입 시 4 > 0 ✓\n③ 넓이 = ∫₋₁² ((−x²+4) − (x²−2x)) dx = ∫₋₁² (−2x²+2x+4) dx\n④ = [−2x³/3 + x² + 4x]₋₁²\n   x=2: −16/3 + 4 + 8 = 20/3\n   x=−1: 2/3 + 1 − 4 = −7/3\n⑤ 넓이 = 20/3 − (−7/3) = 27/3 = 9",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 곡선의 교점을 먼저 구하세요. x²−2x = −x²+4 에서 2x²−2x−4=0 을 풀면 교점의 x 좌표가 나옵니다.",
+      "교점 사이 구간에서 위쪽 곡선(y=−x²+4)에서 아래쪽 곡선(y=x²−2x)을 뺀 식을 적분하세요."
+    ]
   },
   {
     "id": "gen_math2_109",
@@ -2759,7 +3271,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 6x + 2이므로 f'(2) = 3(4) − 6(2) + 2 = 12 − 12 + 2 = 2.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f(x) = x³ − 3x² + 2x를 항별로 미분하여 f′(x)를 구하세요.",
+      "f′(x) = 3x² − 6x + 2에 x = 2를 대입해 값을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_120",
@@ -2777,7 +3293,11 @@
     "answerIndex": 1,
     "explanation": "[f(1+2h) − f(1)] / h = 2 · [f(1+2h) − f(1)] / (2h) → 2f'(1) = 6이므로 f'(1) = 3.",
     "detailedExplanation": "lim(h→0) [f(1+2h) − f(1)] / h에서 분자·분모에 2를 조작하면 2 × lim(h→0) [f(1+2h) − f(1)] / (2h)가 된다. t = 2h로 놓으면 h→0일 때 t→0이므로 2 × lim(t→0) [f(1+t) − f(1)] / t = 2f'(1) = 6. 따라서 f'(1) = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(h→0) [f(1+2h) − f(1)] ÷ h를 미분계수 정의와 비교하면 분모가 2h가 되어야 함을 떠올리세요.",
+      "분자·분모에 2를 조작하면 극한값이 2f′(1)임을 확인하고, 2f′(1) = 6으로 f′(1)을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_121",
@@ -2795,7 +3315,11 @@
     "answerIndex": 0,
     "explanation": "x→1⁻일 때 f(x) = x(1−x)이므로 좌미분 = lim[x(1−x)/( x−1)] = −x|ₓ₌₁ = −1... 재계산: 좌미분 lim(h→0⁻)[f(1+h)−f(1)]/h = lim(h→0⁻)[(1+h)|h|/h] = lim(h→0⁻)[(1+h)(−1)] = −1, 우미분 = lim(h→0⁺)[(1+h)(h)/h] = 1. 좌미분 ≠ 우미분이므로 미분불가능.",
     "detailedExplanation": "f(1) = 1·|0| = 0. 좌미분(h < 0): [f(1+h) − 0]/h = [(1+h)|h|]/h = (1+h)(−h)/h = −(1+h) → −1 (h→0⁻). 우미분(h > 0): [(1+h)(h)]/h = 1+h → 1 (h→0⁺). 좌미분 = −1 ≠ 1 = 우미분이므로 x = 1에서 미분불가능. 따라서 답은 ①이다. (보기 ①이 정답)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x = 1에서의 미분가능성은 좌미분계수와 우미분계수가 일치하는지 확인하면 됩니다.",
+      "h → 0⁻일 때 |h| = −h, h → 0⁺일 때 |h| = h임을 이용해 좌미분계수와 우미분계수를 각각 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_122",
@@ -2813,7 +3337,11 @@
     "answerIndex": 1,
     "explanation": "주어진 극한에서 f(2)=3, f'(2)=5. lim(x→2)[xf(x)−2f(2)]/(x−2) = lim[xf(x)−2f(x)+2f(x)−2f(2)]/(x−2) = lim f(x)·(x−2)/(x−2) + 2·lim[f(x)−f(2)]/(x−2) = f(2) + 2f'(2) = 3 + 10 = 13.",
     "detailedExplanation": "먼저 극한값 조건에서: x→2일 때 분모→0이고 극한이 존재하므로 f(2)−3=0, 즉 f(2)=3. 또한 lim(x→2)[f(x)−f(2)]/(x−2)=f'(2)=5. 구하는 극한 = lim(x→2)[xf(x)−2f(2)]/(x−2). 분자를 xf(x)−2f(x)+2f(x)−2f(2)=(x−2)f(x)+2[f(x)−f(2)]로 변형. 따라서 극한 = lim f(x) + 2·lim[f(x)−f(2)]/(x−2) = f(2) + 2f'(2) = 3 + 2×5 = 13.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(x→2) [f(x) − 3] ÷ (x − 2)가 유한한 값을 가지고 분모 → 0이므로, 분자도 0이어야 합니다. f(2)를 먼저 구하세요.",
+      "분자 xf(x) − 2f(2)를 (x − 2)f(x) + 2[f(x) − f(2)]로 변형한 뒤 극한을 분리해 f(2)와 f′(2)를 각각 활용하세요."
+    ]
   },
   {
     "id": "gen_math2_123",
@@ -2831,7 +3359,11 @@
     "answerIndex": 1,
     "explanation": "x² − 4x + 3 = (x−1)(x−3)이 0이 되는 x=1, x=3에서 절댓값 내부가 0이 되므로 미분가능성을 확인한다. x=1에서 x²−1=0이므로 f(x)=(x²−1)(x−1)(x−3) 형태가 되어 매끄럽게 미분가능. x=3에서 x²−1=8≠0이므로 좌미분과 우미분의 부호가 달라져 미분불가능. 따라서 미분불가능한 점은 x=3 한 개.",
     "detailedExplanation": "x²−4x+3=(x−1)(x−3). x=1: f(x)=(x²−1)|（x−1)(x−3)|. x²−1=(x−1)(x+1)이므로 f(x)=(x−1)(x+1)|(x−1)(x−3)|. x=1 근방에서 (x−1)이 부호 변화를 가지고 |(x−1)(x−3)|에서도 (x−1)의 부호가 바뀌므로 서로 상쇄. 정확히: x=1 근방(x≠3)에서 |x−3|=3−x(x<3이므로). f(x)=(x−1)(x+1)|(x−1)|(3−x). h→0⁻: |(1+h−1)|=|h|=−h, f(1+h)=h(2+h)|h|(2−h). [f(1+h)−0]/h = (2+h)(−h)(2−h)/h·(-1)... 실제로 x=1에서 f(1)=0. lim(h→0) f(1+h)/h = lim(h→0)(h(2+h)|h|(2−h))/h = lim(2+h)|h|(2−h). h→0⁺: 2×0×2=0, h→0⁻: 2×0×2=0. 좌=우=0이므로 f'(1)=0 존재. x=3: f(3)=(9−1)×0=0. h→0⁺: f(3+h)=((3+h)²−1)|(h)(h+2)|=((3+h)²−1)h(h+2). [f(3+h)]/h=(（3+h)²−1)(h+2)→8×2=16. h→0⁻: f(3+h)=((3+h)²−1)|h(h+2)|=((3+h)²−1)(−h)(h+2). [f(3+h)]/h=−((3+h)²−1)(h+2)→−16. 좌미분=−16≠16=우미분. 따라서 x=3에서만 미분불가능. 정답: 1개.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x² − 4x + 3 = (x − 1)(x − 3)이 0이 되는 x = 1, 3에서 절댓값 내부가 0이 되므로, 이 두 점에서 좌·우 미분계수를 각각 확인하세요.",
+      "x = 1에서는 f(x) 안의 (x² − 1) 인수가 절댓값의 부호 변화를 상쇄시켜 미분가능한지, x = 3에서는 f(3) ≠ 0이므로 좌·우 미분계수가 다른지 확인하세요."
+    ]
   },
   {
     "id": "gen_math2_124",
@@ -2849,7 +3381,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x² − 6x + 9 = 3(x² − 2x + 3) = 3{(x−1)² + 2} > 0이므로 f(x)는 항상 증가하여 극값이 존재하지 않는다.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "극값이 존재하려면 f′(x) = 0이 되는 실수 근이 있어야 합니다. f′(x)의 판별식을 살펴보세요.",
+      "f′(x) = 3x² − 6x + 9를 완전제곱식으로 변환하여 항상 양수인지 확인하세요."
+    ]
   },
   {
     "id": "gen_math2_125",
@@ -2867,7 +3403,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = 3x² + 2ax + b에서 f'(1) = 0, f'(3) = 0을 연립하면 a = −6, b = 9이므로 a + b = 3이다.",
     "detailedExplanation": "f'(1) = 3 + 2a + b = 0 … ①, f'(3) = 27 + 6a + b = 0 … ②. ② − ①: 24 + 4a = 0 → a = −6. 이를 ①에 대입하면 3 − 12 + b = 0 → b = 9. 따라서 a + b = −6 + 9 = 3.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f′(x) = 3x² + 2ax + b에서 f′(1) = 0, f′(3) = 0 두 조건을 연립방정식으로 세우세요.",
+      "두 방정식을 연립하면 a와 b를 구할 수 있고, 그 합 a + b를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_126",
@@ -2885,7 +3425,11 @@
     "answerIndex": 1,
     "explanation": "y' = 3x² − 3 = 0에서 x = ±1이고, y(1) = 0, y(−1) = 4이므로 y좌표의 합은 0 + 4 = 4이다.",
     "detailedExplanation": "y' = 3x² − 3 = 0 → x² = 1 → x = 1 또는 x = −1. y(1) = 1 − 3 + 2 = 0, y(−1) = −1 + 3 + 2 = 4. 합 = 0 + 4 = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "접선의 기울기 y′ = 0인 점을 찾으세요. y = x³ − 3x + 2를 미분하면 y′ = 3x² − 3입니다.",
+      "y′ = 0의 두 근 x = ±1 각각에서 곡선 위의 y값을 계산해 합산하세요."
+    ]
   },
   {
     "id": "gen_math2_127",
@@ -2903,7 +3447,11 @@
     "answerIndex": 0,
     "explanation": "v(t) = 3t² − 12t + 9 = 3(t−1)(t−3)이므로 t = 1에서 처음으로 방향이 바뀌고, 가속도 a(t) = 6t − 12에서 a(1) = −6이다.",
     "detailedExplanation": "v(t) = 3t² − 12t + 9 = 3(t−1)(t−3). t = 0일 때 v(0) = 9 > 0. t = 1에서 v = 0이고 t∈(1,3)에서 v < 0이므로 t = 1에서 처음으로 운동 방향 변화. a(t) = 6t − 12이므로 a(1) = 6 − 12 = −6.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "운동 방향이 바뀌는 것은 속도 v(t) = 0이 되는 순간입니다. x′(t) = v(t)를 먼저 구하세요.",
+      "v(t) = 3(t − 1)(t − 3)에서 t = 1이 처음으로 방향이 바뀌는 시각이고, 가속도 a(t) = v′(t)에 t = 1을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_128",
@@ -2921,7 +3469,11 @@
     "answerIndex": 1,
     "explanation": "f'(x) = 4x³ − 12x² + 8x = 4x(x−1)(x−2)이고 f'(x) > 0인 구간은 x∈(0, 1) ∪ (2, ∞)이다.",
     "detailedExplanation": "f'(x) = 4x³ − 12x² + 8x = 4x(x² − 3x + 2) = 4x(x−1)(x−2). 부호를 구간별로 분석하면: x < 0에서 (−)(−)(−) < 0, 0 < x < 1에서 (+)(−)(−) > 0, 1 < x < 2에서 (+)(+)(−) < 0, x > 2에서 (+)(+)(+) > 0. 따라서 증가 구간은 (0, 1) ∪ (2, ∞).",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 4x³ − 12x² + 8x = 4x(x − 1)(x − 2)로 인수분해하여 부호표를 작성하세요.",
+      "f′(x) > 0인 구간이 증가 구간입니다. 각 구간에서 f′(x)의 부호를 확인하세요."
+    ]
   },
   {
     "id": "gen_math2_129",
@@ -2939,7 +3491,11 @@
     "answerIndex": 1,
     "explanation": "f(0) = b = 0이고 f'(x) = 3x² + 2ax = x(3x + 2a)에서 극소점은 x = −2a/3이며, f(−2a/3) = −4 조건에서 a = −3, b = 0이므로 a + b = −3이다.",
     "detailedExplanation": "f(0) = b = 0. f'(x) = 3x² + 2ax = x(3x + 2a)이므로 x = 0 또는 x = −2a/3에서 f'= 0. x = 0이 극대이려면 −2a/3 > 0이어야 하므로 a < 0. 극솟값: f(−2a/3) = (−2a/3)³ + a(−2a/3)² + 0 = −8a³/27 + 4a³/9 = −8a³/27 + 12a³/27 = 4a³/27 = −4. 따라서 a³ = −27 → a = −3. a + b = −3 + 0 = −3. 검산: f(x) = x³ − 3x², f'(x) = 3x(x−2), x=0 극대 f(0)=0 ✓, x=2 극소 f(2)=8−12=−4 ✓.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x = 0에서 극대이고 f(0) = 0이므로, f(0) = b = 0임을 먼저 확인하세요.",
+      "f′(x) = 3x² + 2ax = x(3x + 2a)에서 극소점 x = −2a/3에 f값을 대입해 극솟값 = −4 조건으로 a를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_130",
@@ -2957,7 +3513,11 @@
     "answerIndex": 0,
     "explanation": "∫(3x² − 4x + 1)dx = x³ − 2x² + x + C이므로 a = 1, b = −2, a + b = −1.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "∫(3x² − 4x + 1) dx 를 각 항별로 적분해 ax³ + bx² + x + C 꼴로 나타내세요.",
+      "결과에서 x³ 앞의 계수가 a, x² 앞의 계수가 b 이므로 a + b 를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_131",
@@ -2975,7 +3535,11 @@
     "answerIndex": 1,
     "explanation": "(√x + 1/√x)² = x + 2 + 1/x이므로 적분하면 x²/2 + 2x + ln|x| + C.",
     "detailedExplanation": "먼저 피적분함수를 전개한다: (√x + 1/√x)² = (√x)² + 2·√x·(1/√x) + (1/√x)² = x + 2 + x⁻¹. 각 항을 적분하면 ∫x dx + ∫2 dx + ∫(1/x)dx = x²/2 + 2x + ln|x| + C.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "(√x + 1/√x)² 를 전개하면 x + 2 + x⁻¹ 이 됩니다. 각 항을 확인해 보세요.",
+      "전개 후 ∫x dx, ∫2 dx, ∫(1/x) dx 를 각각 적분하세요. 1/x 의 부정적분에 유의하세요."
+    ]
   },
   {
     "id": "gen_math2_132",
@@ -2993,7 +3557,11 @@
     "answerIndex": 2,
     "explanation": "홀함수(x³, −x)의 대칭구간 정적분은 0이므로, 짝함수(3x², 2) 부분만 계산하면 2∫₀²(3x²+2)dx = 2[x³+2x]₀² = 2×12 = 24이다.",
     "detailedExplanation": "1단계: 피적분함수를 홀함수와 짝함수로 분리한다. x³−x는 홀함수이므로 대칭구간 [−2, 2]에서 정적분이 0이다.\n2단계: 짝함수인 3x²+2만 계산한다. ∫₋₂²(3x²+2)dx = 2∫₀²(3x²+2)dx\n3단계: 2∫₀²(3x²+2)dx = 2[x³+2x]₀² = 2(8+4) = 24.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "피적분함수를 홀함수(기함수) 부분과 짝함수(우함수) 부분으로 나눠 생각하세요.",
+      "대칭 구간 [−2,2] 에서 기함수 정적분은 0, 우함수는 2×∫₀²(…)dx 로 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_133",
@@ -3011,7 +3579,11 @@
     "answerIndex": 1,
     "explanation": "x²−2x = x(x−2)이므로 [0,2]에서 음수, [2,3]에서 양수임을 이용해 구간을 나눠 적분하면 4/3 + 4/3 = 8/3이다.",
     "detailedExplanation": "1단계: x(x−2) = 0의 근: x = 0, x = 2. [0,2]에서 x²−2x ≤ 0.\n2단계: ∫₀²(2x−x²)dx = [x²−x³/3]₀² = 4 − 8/3 = 4/3\n3단계: ∫₂³(x²−2x)dx = [x³/3−x²]₂³ = (9−9)−(8/3−4) = 4/3\n4단계: 합계 = 4/3 + 4/3 = 8/3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x²−2x = x(x−2) = 0 의 근 x=0, 2 에서 절댓값 안의 부호가 바뀝니다. 구간 [0,2] 와 [2,3] 으로 나누세요.",
+      "[0,2] 에서 |x²−2x| = 2x−x², [2,3] 에서 |x²−2x| = x²−2x 로 바꾸어 각각 적분 후 더하세요."
+    ]
   },
   {
     "id": "gen_math2_134",
@@ -3029,7 +3601,11 @@
     "answerIndex": 3,
     "explanation": "x = 1 대입으로 a = 2를 구하고, 양변을 미분하면 f(x) = 3x²−3이므로 f(3) = 27−3 = 24이다.",
     "detailedExplanation": "1단계: x = 1 대입: ∫₁¹f(t)dt = 0이므로 0 = 1−3+a → a = 2\n2단계: 등식 ∫₁ˣf(t)dt = x³−3x+2의 양변을 x에 대해 미분한다.\n3단계: f(x) = 3x²−3\n4단계: f(3) = 3×9−3 = 27−3 = 24.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "등식 ∫₁ˣ f(t) dt = x³−3x+a 에 x=1 을 대입하면 상수 a 를 바로 구할 수 있습니다.",
+      "a 를 구한 뒤 등식의 양변을 x 에 대해 미분하면 f(x) 를 얻고, 거기에 x=3 을 대입하세요."
+    ]
   },
   {
     "id": "gen_math2_135",
@@ -3047,7 +3623,11 @@
     "answerIndex": 0,
     "explanation": "u = x²+1로 치환하면 du = 2x dx이고, 적분 범위가 [1,5]로 바뀌므로 (1/2)∫₁⁵√u du = (1/3)[u^(3/2)]₁⁵ = (5√5−1)/3이다.",
     "detailedExplanation": "1단계: u = x²+1로 치환. du = 2x dx → x dx = du/2\n2단계: x = 0이면 u = 1, x = 2이면 u = 5\n3단계: ∫₀²x√(x²+1)dx = (1/2)∫₁⁵√u du = (1/2)×[2u^(3/2)/3]₁⁵\n4단계: = (1/3)(5^(3/2)−1^(3/2)) = (5√5−1)/3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∫x√(x²+1) dx 에서 u = x²+1 로 치환하면 du = 2x dx 이므로 x dx = du/2 가 됩니다.",
+      "치환 후 적분 범위도 변환해 ∫√u × (du/2) 를 계산한 뒤 결과를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_136",
@@ -3065,7 +3645,11 @@
     "answerIndex": 1,
     "explanation": "c = ∫₀¹f(t)dt로 놓으면 f(x) = 3x²+2c이고, 이를 [0,1]에서 적분해 c = 1+2c를 풀면 c = −1이므로 f(x) = 3x²−2, ∫₀²f(x)dx = 4이다.",
     "detailedExplanation": "1단계: c = ∫₀¹f(t)dt (c는 상수)로 놓으면 f(x) = 3x²+2c\n2단계: 이를 [0,1]에서 적분한다. ∫₀¹(3t²+2c)dt = [t³+2ct]₀¹ = 1+2c\n3단계: 정의에 의해 c = 1+2c → −c = 1 → c = −1\n4단계: f(x) = 3x²−2\n5단계: ∫₀²(3x²−2)dx = [x³−2x]₀² = 8−4 = 4.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∫₀¹ f(t) dt 는 상수이므로 c 로 놓으면 f(x) = 3x² + 2c 가 됩니다. 이 식을 [0,1] 에서 적분해 c 에 관한 방정식을 세우세요.",
+      "c 에 대한 방정식을 풀어 c 값을 결정한 뒤, f(x) 를 확정하고 ∫₀² f(x) dx 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_137",
@@ -3083,7 +3667,11 @@
     "answerIndex": 1,
     "explanation": "두 그래프의 교점 x = 0, 3을 구한 뒤 ∫₀³ (x − (x²−2x)) dx = ∫₀³ (3x − x²) dx를 계산하면 [3x²/2 − x³/3]₀³ = 27/2 − 9 = 9/2이다.",
     "detailedExplanation": "① 교점: x²−2x = x → x²−3x = 0 → x(x−3) = 0, 즉 x = 0, 3\n② [0, 3]에서 y=x가 y=x²−2x보다 위에 있으므로\n   넓이 = ∫₀³ (x − (x²−2x)) dx = ∫₀³ (3x − x²) dx\n③ = [3x²/2 − x³/3]₀³ = (27/2 − 9) − 0 = 9/2",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "곡선과 직선의 교점을 먼저 구하세요. x²−2x = x 에서 x(x−3) = 0 이므로 x=0, 3 이 경계입니다.",
+      "[0,3] 에서 위쪽이 직선 y=x, 아래쪽이 곡선 y=x²−2x 이므로 ∫₀³ (x − (x²−2x)) dx 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_138",
@@ -3101,7 +3689,11 @@
     "answerIndex": 2,
     "explanation": "x²−x = x(x−1)의 부호 변화를 구간 [−1,0], [0,1], [1,2]로 나누어 적분하면 5/6 + 1/6 + 5/6 = 11/6이다.",
     "detailedExplanation": "① x²−x = x(x−1): x=0, 1에서 부호 변화\n   [−1,0]: x²−x > 0, [0,1]: x²−x ≤ 0, [1,2]: x²−x ≥ 0\n② ∫₋₁⁰ (x²−x) dx = [x³/3 − x²/2]₋₁⁰ = 0 − (−1/3 − 1/2) = 5/6\n③ −∫₀¹ (x²−x) dx = −[x³/3 − x²/2]₀¹ = −(1/3 − 1/2) = 1/6\n④ ∫₁² (x²−x) dx = [x³/3 − x²/2]₁² = (8/3 − 2) − (1/3 − 1/2) = 2/3 + 1/6 = 5/6\n⑤ 합계: 5/6 + 1/6 + 5/6 = 11/6",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x²−x = x(x−1) = 0 의 근 x=0, 1 에서 부호가 바뀝니다. 구간 [−1,0], [0,1], [1,2] 로 나누세요.",
+      "각 구간에서 x²−x 의 부호를 판단해 절댓값을 풀고, 구간별 정적분을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_139",
@@ -3119,7 +3711,11 @@
     "answerIndex": 1,
     "explanation": "v(t) = (t−1)(t−3)의 부호를 [0,1], [1,3], [3,4]에서 분리하여 |v(t)|를 적분하면 4/3 + 4/3 + 4/3 = 4이다.",
     "detailedExplanation": "① v(t) = (t−1)(t−3): t=1, 3에서 0\n   [0,1]: v>0, [1,3]: v<0, [3,4]: v>0\n② ∫₀¹ v dt = [t³/3 − 2t² + 3t]₀¹ = 1/3 − 2 + 3 = 4/3\n③ −∫₁³ v dt = −[t³/3 − 2t² + 3t]₁³ = −[(9−18+9)−(1/3−2+3)] = −(0 − 4/3) = 4/3\n④ ∫₃⁴ v dt = [t³/3 − 2t² + 3t]₃⁴ = (64/3 − 32 + 12) − (9 − 18 + 9) = 4/3 − 0 = 4/3\n⑤ 총 거리: 4/3 + 4/3 + 4/3 = 4",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "v(t) = (t−1)(t−3) = 0 이 되는 t=1, 3 에서 속도의 부호가 바뀝니다.",
+      "이동 거리 = ∫₀¹ |v| dt + ∫₁³ |v| dt + ∫₃⁴ |v| dt 처럼 구간별 절댓값 정적분을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_140",
@@ -3137,7 +3733,11 @@
     "answerIndex": 2,
     "explanation": "교점 x = ±√2를 구한 뒤 ∫₋√₂^√₂ (4−2x²) dx = 2[4x − 2x³/3]₀^√₂ = 2(4√2 − 4√2/3) = 16√2/3이다.",
     "detailedExplanation": "① 교점: x² = −x²+4 → 2x² = 4 → x = ±√2\n② 넓이 = ∫₋√₂^√₂ ((−x²+4) − x²) dx = ∫₋√₂^√₂ (4−2x²) dx\n③ 우함수이므로 = 2∫₀^√₂ (4−2x²) dx = 2[4x − 2x³/3]₀^√₂\n④ = 2(4√2 − 2·(2√2)/3) = 2(4√2 − 4√2/3) = 2·√2·(4 − 4/3)\n   = 2√2 · 8/3 = 16√2/3",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "두 포물선의 교점을 먼저 구하세요. x² = −x²+4 에서 x² = 2, 즉 x = ±√2 입니다.",
+      "∫₋√₂^√₂ ((−x²+4) − x²) dx = ∫₋√₂^√₂ (4−2x²) dx 를 계산하세요. 우함수이므로 2×∫₀^√₂ (4−2x²) dx 로 단순화할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_141",
@@ -3155,7 +3755,11 @@
     "answerIndex": 2,
     "explanation": "위치 x(3) = x(0) + ∫₀³ (6t²−6t) dt = 2 + [2t³ − 3t²]₀³ = 2 + (54 − 27) = 29이다.",
     "detailedExplanation": "① x(t) = x(0) + ∫₀ᵗ v(s) ds 이용\n② ∫₀³ (6t²−6t) dt = [2t³ − 3t²]₀³ = (2·27 − 3·9) − 0 = 54 − 27 = 27\n③ x(3) = 2 + 27 = 29\n※ 오답 유의: 위치(29)와 변위(27)를 혼동하거나 초기 위치 2를 빠뜨리면 27이 된다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "위치 변화는 속도의 정적분으로 구합니다. x(3) = x(0) + ∫₀³ v(t) dt 를 떠올리세요.",
+      "∫₀³ (6t²−6t) dt = [2t³−3t²]₀³ 를 계산해 변위를 구하고 초기 위치 2 를 더하세요."
+    ]
   },
   {
     "id": "gen_math2_142",
@@ -3173,7 +3777,11 @@
     "answerIndex": 2,
     "explanation": "∫₀ᵃ (2x−x²) dx = a² − a³/3 = 4/3이므로 3a² − a³ = 4, 즉 a³ − 3a² + 4 = 0을 풀면 (a−2)²(a+1) = 0이 되어 a = 2이다.",
     "detailedExplanation": "① ∫₀ᵃ (2x−x²) dx = [x² − x³/3]₀ᵃ = a² − a³/3 = 4/3\n② 양변에 3을 곱하면: 3a² − a³ = 4 → a³ − 3a² + 4 = 0\n③ 인수분해: a=2 대입 시 8−12+4=0 이므로 (a−2)가 인수\n   a³ − 3a² + 4 = (a−2)(a²−a−2) = (a−2)(a−2)(a+1) = (a−2)²(a+1)\n④ a > 0이므로 a = 2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∫₀ᵃ (2x−x²) dx 를 계산하면 a², a³ 이 포함된 식이 나옵니다. 이를 4/3 과 같다고 놓으세요.",
+      "정리된 방정식 a³−3a²+4=0 을 인수분해하거나 대입을 통해 양수인 a 를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_143",
@@ -3335,7 +3943,11 @@
     "answerIndex": 1,
     "explanation": "lim(h→0) [f(1+3h) − f(1)] / h = 3 · f'(1)이므로 3f'(1) = 12, f'(1) = 4.",
     "detailedExplanation": "lim(h→0) [f(1+3h) − f(1)] / h에서 분자·분모에 3을 조작하면 3 · lim(h→0) [f(1+3h) − f(1)] / (3h) = 3f'(1) = 12이므로 f'(1) = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "lim(h→0) [f(1+3h) − f(1)] ÷ h와 f′(1)의 정의를 비교해 계수 관계를 파악하세요.",
+      "분자·분모를 3h 기준으로 변환하면 3f′(1)이 됩니다. 3f′(1) = 12에서 f′(1)을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_152",
@@ -3353,7 +3965,11 @@
     "answerIndex": 1,
     "explanation": "분자를 f(2+h)−f(2)와 f(2)−f(2−3h)로 분리하면 (1/2)[f'(2) + 3f'(2)] = 2f'(2) = 5이므로 f'(2) = 5/2.",
     "detailedExplanation": "lim(h→0) [f(2+h) − f(2−3h)] / (2h) = lim(h→0) {[f(2+h) − f(2)] / (2h) + [f(2) − f(2−3h)] / (2h)}. 첫 번째 항: (1/2)f'(2), 두 번째 항: (3/2)f'(2). 합하면 2f'(2) = 5, 따라서 f'(2) = 5/2.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "분자 f(2+h) − f(2−3h)를 [f(2+h) − f(2)]와 [f(2) − f(2−3h)]로 분리하세요.",
+      "첫째 항 ÷ (2h) → (1/2)f′(2), 둘째 항 ÷ (2h) → (3/2)f′(2)이므로 합하면 2f′(2) = 5가 됩니다."
+    ]
   },
   {
     "id": "gen_math2_153",
@@ -3371,7 +3987,11 @@
     "answerIndex": 1,
     "explanation": "f(x)² − 4 = (f(x)−2)(f(x)+2)이므로 극한값은 f'(1) · (f(1)+2) = f'(1)·4 = 12, 따라서 f'(1) = 3.",
     "detailedExplanation": "lim(x→1) [f(x)²−4] / (x−1) = lim(x→1) [(f(x)−2)(f(x)+2)] / (x−1). f(1)=2이므로 lim(x→1)(f(x)+2) = 4, lim(x→1)[f(x)−2]/(x−1) = f'(1). 곱하면 4f'(1) = 12, f'(1) = 3.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f(x)² − 4 = [f(x) − 2][f(x) + 2]로 인수분해하세요. f(1) = 2를 이용해 분자를 변형하세요.",
+      "lim(x→1) [f(x) − 2] ÷ (x − 1) = f′(1)이고 lim(x→1)[f(x) + 2] = f(1) + 2 = 4이므로 곱해서 f′(1)을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_154",
@@ -3389,7 +4009,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3)이므로 x=1에서 극대, x=3에서 극소이다. f(1) = 1 − 6 + 9 + 2 = 6, f(3) = 27 − 54 + 27 + 2 = 2이므로 f(a) − f(b) = 6 − 2 = 4.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3)에서 x = 1(극대), x = 3(극소)임을 확인하세요.",
+      "f(a)는 x = 1에서의 값, f(b)는 x = 3에서의 값입니다. 각각 계산해 차를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_155",
@@ -3407,7 +4031,11 @@
     "answerIndex": 0,
     "explanation": "g(x) = x³ − 3x로 놓으면 g'(x) = 3x² − 3 = 3(x−1)(x+1). 극댓값 g(−1) = 2, 극솟값 g(1) = −2. y = g(x)와 y = k가 세 점에서 만나려면 −2 < k < 2이어야 한다.",
     "detailedExplanation": "x³ − 3x = k로 변형하여 h(x) = x³ − 3x의 그래프와 y = k의 교점 수를 분석한다.\nh'(x) = 3x² − 3 = 0 → x = ±1\n• h(−1) = −1 + 3 = 2 (극대)\n• h(1) = 1 − 3 = −2 (극소)\n세 교점 조건: 극솟값 < k < 극댓값 → −2 < k < 2.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "방정식을 x³ − 3x = k로 변형하고, g(x) = x³ − 3x의 극대·극솟값을 구하세요.",
+      "y = g(x)와 y = k가 세 점에서 만나려면 극솟값 < k < 극댓값 조건이 필요합니다. g′(x) = 3x² − 3에서 극값을 구하세요."
+    ]
   },
   {
     "id": "gen_math2_156",
@@ -3425,7 +4053,11 @@
     "answerIndex": 0,
     "explanation": "f'(x) = 3x² − 6x = 3x(x−2)에서 x=0에서 극대, x=2에서 극소. f(x) = x³ − 3x² + C (적분 상수 C). 극솟값 f(2) = 8 − 12 + C = −4 + C = −4이므로 C = 0. 따라서 극댓값 f(0) = 0.",
     "detailedExplanation": "f'(x) = 3x² − 6x = 3x(x−2)\n• x = 0: 좌측 f' > 0, 우측 f' < 0 → 극대\n• x = 2: 좌측 f' < 0, 우측 f' > 0 → 극소\nf(x) = ∫(3x² − 6x)dx = x³ − 3x² + C\n조건 (나): f(2) = 8 − 12 + C = C − 4 = −4 → C = 0\n∴ f(x) = x³ − 3x²\n극댓값 = f(0) = 0.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f′(x) = 3x(x − 2)에서 x = 0이 극대, x = 2가 극소임을 확인하세요.",
+      "f(x) = x³ − 3x² + C로 두고, f(2) = −4 조건으로 C를 구한 뒤 극댓값 f(0)을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_157",
@@ -3443,7 +4075,11 @@
     "answerIndex": 0,
     "explanation": "f(x) = x³ − 2x² + x + C로 놓고, f(1) = 1 − 2 + 1 + C = 2에서 C = 2. 따라서 f(3) = 27 − 18 + 3 + 2 = 14... 아니라 f(3) = 27 − 18 + 3 + 2 = 14인지 재검산: 27−18=9, 9+3=12, 12+2=14. 정답은 14.",
     "detailedExplanation": "f'(x) = 3x² − 4x + 1을 적분하면 f(x) = x³ − 2x² + x + C.\nf(1) = 1 − 2 + 1 + C = 0 + C = C = 2이므로 C = 2.\nf(3) = 3³ − 2·3² + 3 + 2 = 27 − 18 + 3 + 2 = 14.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "f'(x) = 3x² − 4x + 1 을 적분해 f(x) 를 구하면 적분상수 C 가 포함됩니다.",
+      "f(1) = 2 조건을 대입해 C 를 결정한 뒤, f(3) 을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_158",
@@ -3461,7 +4097,11 @@
     "answerIndex": 1,
     "explanation": "치환 u = 2x+1로 놓으면 du = 2dx이므로 dx = du/2. 적분은 ∫u³·(du/2) = u⁴/8 + C = (2x+1)⁴/8 + C.",
     "detailedExplanation": "u = 2x + 1로 치환하면 du/dx = 2이므로 dx = du/2.\n∫(2x+1)³ dx = ∫u³·(du/2) = (1/2)·u⁴/4 + C = u⁴/8 + C = (2x+1)⁴/8 + C.\n오답 ①은 치환 시 1/2 계수를 빠뜨린 실수, ③은 1/6을 잘못 계산한 실수다.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "u = 2x+1 로 치환하면 du = 2 dx 이므로 dx = du/2 입니다. 적분식이 ∫u³ × (du/2) 로 바뀝니다.",
+      "∫u³ × (du/2) = u⁴/8 + C 가 되고, 역치환해 (2x+1)⁴/8 + C 를 얻습니다. 앞의 1/2 계수를 빠뜨리지 마세요."
+    ]
   },
   {
     "id": "gen_math2_159",
@@ -3479,7 +4119,11 @@
     "answerIndex": 2,
     "explanation": "f'(x) = x² − x − 2를 적분하면 f(x) = x³/3 − x²/2 − 2x + 3. x = 2에서 극소이며 f(2) = 8/3 − 2 − 4 + 3 = 8/3 − 3 = −1/3... 재검산: 8/3−2/4=아래 상세 참조.",
     "detailedExplanation": "f'(x) = (x+1)(x−2) = x² − x − 2.\n적분: f(x) = x³/3 − x²/2 − 2x + C.\nf(0) = C = 3이므로 f(x) = x³/3 − x²/2 − 2x + 3.\n\nf'(x) = 0: (x+1)(x−2)=0 → x=−1 또는 x=2.\nx<−1: f'(x)=(−)(−)=+ (증가)\n−1<x<2: f'(x)=(+)(−)=− (감소)\nx>2: f'(x)=(+)(+)=+ (증가)\n따라서 x=2에서 극소.\n\nf(2) = 8/3 − 4/2 − 4 + 3 = 8/3 − 2 − 4 + 3 = 8/3 − 3 = 8/3 − 9/3 = −1/3.\n\n그런데 보기 ②는 3−16/3 = 9/3−16/3 = −7/3이고 보기 ③이 −1/3이므로 정답은 ③ −1/3.\n\n(answerIndex를 2로 수정해야 하나 검산 결과 보기 ③ −1/3이 정답이므로 answerIndex=2)",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "f'(x) = (x+1)(x−2) 를 전개해 부정적분하고, f(0) = 3 으로 적분상수 C 를 결정하세요.",
+      "f'(x) = 0 이 되는 x 값의 좌우에서 f'(x) 의 부호 변화를 확인해 극소가 어디에 있는지 찾으세요."
+    ]
   },
   {
     "id": "gen_math2_160",
@@ -3497,7 +4141,11 @@
     "answerIndex": 1,
     "explanation": "x²−2x = x(x−2)의 부호를 구간 [−1,0], [0,2], [2,3]으로 나누어 절댓값을 풀고 각 구간에서 정적분하면 4/3 + 4/3 + 4/3 = 4이다.",
     "detailedExplanation": "① 부호 분석: x(x−2)는 [−1,0]과 [2,3]에서 양수, [0,2]에서 음수.\n② ∫₋₁⁰ (x²−2x)dx = [x³/3 − x²]₋₁⁰ = 0 − (−1/3 − 1) = 4/3\n③ ∫₀² (−x²+2x)dx = [−x³/3 + x²]₀² = (−8/3 + 4) − 0 = 4/3\n④ ∫₂³ (x²−2x)dx = [x³/3 − x²]₂³ = (9−9) − (8/3−4) = 0 + 4/3 = 4/3\n⑤ 합계: 4/3 + 4/3 + 4/3 = 4",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x²−2x = x(x−2) = 0 의 근 x=0, 2 에서 부호가 바뀝니다. [−1,0], [0,2], [2,3] 으로 구간을 나누세요.",
+      "각 구간에서 x²−2x 의 부호를 판단해 절댓값을 풀고, 구간별 정적분의 절댓값을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_161",
@@ -3515,7 +4163,11 @@
     "answerIndex": 1,
     "explanation": "F'(x) = 3x²−6x = 3x(x−2)이므로 x=2에서 극소. F(2) = [t³−3t²]₀² = 8−12 = −4이다.",
     "detailedExplanation": "① F'(x) = 3x²−6x = 3x(x−2): x=0에서 극대, x=2에서 극소 (F''(x)=6x−6, F''(2)=6>0).\n② 극솟값: F(2) = ∫₀² (3t²−6t)dt = [t³−3t²]₀² = (8−12) − 0 = −4.\n③ 오답 유형: −6은 적분 범위 오류, −2는 부호 착각, 0은 F(0) 혼동.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "미적분의 기본 정리에 의해 F'(x) = 3x² − 6x = 3x(x−2) 입니다. F'(x) = 0 이 되는 x 값을 구하세요.",
+      "F'(x) 의 부호가 음에서 양으로 바뀌는 x 에서 극소가 발생합니다. 그 x 에서 F(x) = ∫₀ˣ(3t²−6t) dt 를 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_162",
@@ -3533,7 +4185,11 @@
     "answerIndex": 2,
     "explanation": "[x³−3x²]₀ᵃ = a³−3a² = 16이므로 a³−3a²−16 = 0. a=4를 대입하면 64−48−16 = 0으로 성립한다.",
     "detailedExplanation": "① 적분 계산: [x³−3x²]₀ᵃ = a³−3a².\n② 방정식: a³−3a²−16 = 0.\n③ 검산:\n· a=2: 8−12−16 = −20 ✗\n· a=3: 27−27−16 = −16 ✗\n· a=4: 64−48−16 = 0 ✓\n· a=5: 125−75−16 = 34 ✗\n④ 따라서 a = 4.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∫₀ᵃ (3x²−6x) dx = [x³−3x²]₀ᵃ = a³−3a² 임을 계산한 뒤 이를 16 과 같다고 놓으세요.",
+      "방정식 a³−3a²−16 = 0 을 후보 정수(a=2,3,4,…)를 대입해 근을 찾으세요."
+    ]
   },
   {
     "id": "gen_math2_163",
@@ -3551,7 +4207,11 @@
     "answerIndex": 2,
     "explanation": "f(x)가 우함수이면 ∫₋₃³ f(x)dx = 2×7 = 14이고, 2x는 기함수이므로 ∫₋₃³ 2x dx = 0. 따라서 합계는 14이다.",
     "detailedExplanation": "① 우함수 성질: f(−x) = f(x)이면 ∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx.\n   → ∫₋₃³ f(x)dx = 2×7 = 14.\n② 기함수 성질: 2x는 기함수(홀함수)이므로 ∫₋₃³ 2x dx = 0.\n③ 결과: ∫₋₃³ {f(x)+2x}dx = 14 + 0 = 14.",
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "우함수 f(x) 는 f(−x) = f(x) 를 만족하므로 ∫₋₃³ f(x) dx = 2 × ∫₀³ f(x) dx 입니다.",
+      "2x 는 기함수(홀함수)이므로 ∫₋₃³ 2x dx = 0 임을 활용해 전체 정적분을 계산하세요."
+    ]
   },
   {
     "id": "gen_math2_164",
@@ -3569,7 +4229,11 @@
     "answerIndex": 2,
     "explanation": "교점: x²+x = x+4 → x² = 4 → x = ±2. 넓이 = ∫₋₂² (4−x²)dx = 2∫₀² (4−x²)dx = 2×[4x−x³/3]₀² = 2×(8−8/3) = 32/3이다.",
     "detailedExplanation": "① 교점: x²+x = x+4 → x² = 4 → x = ±2.\n② 구간 [−2, 2]에서 위 곡선: y = x+4 (x=0 대입: 4 > 0).\n③ 넓이 = ∫₋₂² {(x+4)−(x²+x)} dx = ∫₋₂² (4−x²) dx.\n④ (4−x²)는 우함수이므로:\n   = 2∫₀² (4−x²)dx = 2×[4x − x³/3]₀²\n   = 2×(8 − 8/3) = 2×16/3 = 32/3.\n⑤ 오답 유형: 28/3은 [0,2]만 계산한 값 오류, 10·12는 정수 근삿값 혼동.",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 곡선의 교점을 먼저 구하세요. x²+x = x+4 에서 x² = 4 이므로 x = ±2 입니다.",
+      "∫₋₂² ((x+4)−(x²+x)) dx = ∫₋₂² (4−x²) dx 를 계산하세요. 우함수이므로 2×∫₀² (4−x²) dx 로 단순화할 수 있습니다."
+    ]
   },
   {
     "id": "gen_math2_165",
@@ -3587,7 +4251,11 @@
     "answerIndex": 2,
     "explanation": "f(x) = x(x−1)(x−2)이므로 [0,1]에서 f(x) ≥ 0, [1,2]에서 f(x) ≤ 0이다. ∫₀¹ f(x)dx = 1/4, ∫₁² f(x)dx = −1/4이므로 총 넓이 = 1/4 + 1/4 = 1/2이다.",
     "detailedExplanation": "①인수분해: x³ − 3x² + 2x = x(x² − 3x + 2) = x(x−1)(x−2), 영점 x = 0, 1, 2\n②구간 [0,1]: f(x) ≥ 0 → ∫₀¹(x³−3x²+2x)dx = [x⁴/4 − x³ + x²]₀¹ = 1/4 − 1 + 1 = 1/4\n③구간 [1,2]: f(x) ≤ 0 → −∫₁²(x³−3x²+2x)dx\n[x⁴/4 − x³ + x²]₁² = (4 − 8 + 4) − (1/4 − 1 + 1) = 0 − 1/4 = −1/4 → 넓이 기여 = 1/4\n④총 넓이 = 1/4 + 1/4 = 1/2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "x³−3x²+2x = x(x−1)(x−2) 로 인수분해하면 영점이 x=0, 1, 2 입니다. 각 구간에서 곡선이 x축의 위/아래를 확인하세요.",
+      "넓이 = |∫₀¹ f dx| + |∫₁² f dx| 처럼 구간별로 나누어 절댓값 정적분을 더하세요."
+    ]
   },
   {
     "id": "gen_math2_166",
@@ -3605,7 +4273,11 @@
     "answerIndex": 1,
     "explanation": "두 곡선의 교점은 x = 0, k+2이고 넓이 = (k+2)³/6 = 32/3이므로 (k+2)³ = 64, k+2 = 4, k = 2이다.",
     "detailedExplanation": "①교점: x² − 2x = kx → x² − (k+2)x = 0 → x = 0 또는 x = k+2\n②구간 [0, k+2]에서 kx − (x²−2x) = (k+2)x − x² ≥ 0\n③넓이 = ∫₀^(k+2) ((k+2)x − x²) dx = [(k+2)x²/2 − x³/3]₀^(k+2)\n= (k+2)³/2 − (k+2)³/3 = (k+2)³ × (1/2 − 1/3) = (k+2)³/6\n④(k+2)³/6 = 32/3 → (k+2)³ = 64 → k+2 = 4 → k = 2",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "두 그래프의 교점 x 좌표를 먼저 구하세요. x²−2x = kx 에서 x(x−(k+2)) = 0 이므로 x=0, k+2 가 경계입니다.",
+      "넓이를 (k+2)³/6 형태로 정리한 뒤 32/3 과 같다고 놓아 k+2 에 대한 방정식을 풀고 양수 k 를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_167",
@@ -3623,7 +4295,11 @@
     "answerIndex": 2,
     "explanation": "y = |x² − 1| ≤ 3의 범위는 −2 ≤ x ≤ 2이고, 대칭성을 이용해 넓이를 구하면 2(∫₀¹(3−(1−x²))dx + ∫₁²(3−(x²−1))dx) = 2(7/3 + 5/3) = 8이다.",
     "detailedExplanation": "①y = |x²−1| ≤ 3의 해: |x²−1| ≤ 3 → −3 ≤ x²−1 ≤ 3 → x² ≤ 4 → −2 ≤ x ≤ 2\n②y축 대칭이므로 넓이 = 2 × (x ≥ 0 부분)\n③[0,1]에서 |x²−1| = 1−x²: ∫₀¹(3−(1−x²))dx = ∫₀¹(2+x²)dx = [2x + x³/3]₀¹ = 2 + 1/3 = 7/3\n④[1,2]에서 |x²−1| = x²−1: ∫₁²(3−(x²−1))dx = ∫₁²(4−x²)dx = [4x − x³/3]₁² = (8 − 8/3) − (4 − 1/3) = 4 − 7/3 = 5/3\n⑤총 넓이 = 2 × (7/3 + 5/3) = 2 × 4 = 8",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "y=3 과 y=|x²−1| 의 교점을 구해 적분 구간의 경계를 정하세요. |x²−1| = 3 → x²=4 → x=±2 입니다.",
+      "[−2,−1], [−1,1], [1,2] 에서 |x²−1| 의 식이 달라집니다. 구간별로 (3 − |x²−1|) 를 적분한 뒤 더하세요."
+    ]
   },
   {
     "id": "gen_math2_168",
@@ -3641,7 +4317,11 @@
     "answerIndex": 2,
     "explanation": "위치 a = 2 + ∫₀⁴ v(t)dt = 2 + 16 = 18이고, v(t) = 0이 되는 t = 2를 기준으로 거리 b = ∫₀² (−v(t))dt + ∫₂⁴ v(t)dt = 4 + 20 = 24이므로 a + b = 18 + 24 = 42이다.",
     "detailedExplanation": "①위치: ∫₀⁴(3t²−6t)dt = [t³−3t²]₀⁴ = 64 − 48 = 16, a = 2 + 16 = 18\n②v(t) = 3t(t−2) = 0 → t = 0 또는 t = 2\n③[0,2]에서 v(t) ≤ 0: ∫₀²|v(t)|dt = −[t³−3t²]₀² = −(8−12) = 4\n④[2,4]에서 v(t) ≥ 0: ∫₂⁴ v(t)dt = [t³−3t²]₂⁴ = (64−48) − (8−12) = 16+4 = 20\n⑤b = 4 + 20 = 24, a + b = 18 + 24 = 42",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "t=4 에서의 위치 a = 초기위치 + ∫₀⁴ v(t) dt 로 구하고, 거리 b 는 v(t)=0 이 되는 시각에서 구간을 나누어 |v(t)| 의 적분 합으로 구하세요.",
+      "v(t) = 3t(t−2) = 0 에서 t=2 가 방향 전환 시각입니다. ∫₀² |v| dt + ∫₂⁴ v dt 를 계산해 b 를 구하세요."
+    ]
   },
   {
     "id": "gen_math2_169",
@@ -3659,7 +4339,11 @@
     "answerIndex": 2,
     "explanation": "k = ∫₀¹ t·f(t) dt로 놓으면 f(x) = 3x² + k이고, 이를 대입하면 k = 3/4 + k/2에서 k = 3/2이다. 따라서 ∫₀²(3x² + 3/2) dx = [x³ + 3x/2]₀² = 8 + 3 = 11이다.",
     "detailedExplanation": "①k = ∫₀¹ t·f(t) dt 로 놓으면 (k는 상수) f(x) = 3x² + k\n②k의 값 결정: k = ∫₀¹ t·(3t² + k) dt = ∫₀¹(3t³ + kt) dt\n= [3t⁴/4 + kt²/2]₀¹ = 3/4 + k/2\n③k − k/2 = 3/4 → k/2 = 3/4 → k = 3/2\n④f(x) = 3x² + 3/2\n⑤∫₀² f(x) dx = ∫₀²(3x² + 3/2) dx = [x³ + 3x/2]₀² = (8 + 3) − 0 = 11\n⑥검산: k = ∫₀¹ t(3t²+3/2)dt = [3t⁴/4 + 3t²/4]₀¹ = 3/4 + 3/4 = 3/2 ✓",
-    "estimatedTime": "3분"
+    "estimatedTime": "3분",
+    "hints": [
+      "∫₀¹ t·f(t) dt 는 상수이므로 k 로 놓으면 f(x) = 3x² + k 가 됩니다. 이 식을 t·f(t) 에 대입해 [0,1] 에서 적분하세요.",
+      "k 에 관한 방정식을 풀어 k 를 결정한 뒤, f(x) 를 확정하고 ∫₀² f(x) dx 를 계산하세요."
+    ]
   },
   {
     "id": "hand_short_m2_1",
@@ -3674,7 +4358,11 @@
     "answer": "8",
     "explanation": "[x³]₀² = 8.",
     "detailedExplanation": null,
-    "estimatedTime": "2분"
+    "estimatedTime": "2분",
+    "hints": [
+      "∫3x² dx = x³ + C 임을 이용해 정적분 [x³]₀² 를 세우세요.",
+      "위끝 x=2 와 아래끝 x=0 을 각각 대입해 뺀 값이 정답입니다."
+    ]
   },
   {
     "id": "hand_short_m2_2",
@@ -3689,6 +4377,10 @@
     "answer": "8",
     "explanation": "f′(x)=2x+2 이므로 f′(3)=8.",
     "detailedExplanation": null,
-    "estimatedTime": "1분"
+    "estimatedTime": "1분",
+    "hints": [
+      "f(x) = x² + 2x를 거듭제곱 규칙으로 미분하여 f′(x)를 구하세요.",
+      "f′(x) = 2x + 2에 x = 3을 대입해 f′(3)의 값을 계산하세요."
+    ]
   }
 ]
