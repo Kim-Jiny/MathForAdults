@@ -73,6 +73,7 @@ class UserStats {
   final ContinueInfo? continueFrom;
   final List<RecentRecord> recent;
   final Set<String> attendance; // 출석한 날짜 'yyyy-MM-dd'
+  final Set<String> solvedIds; // 한 번이라도 푼 문제 id (모의수능 '안 푼 문제 우선'용)
 
   const UserStats({
     required this.totalSolved,
@@ -84,6 +85,7 @@ class UserStats {
     required this.continueFrom,
     required this.recent,
     this.attendance = const {},
+    this.solvedIds = const {},
   });
 
   /// 첫 실행/초기화 상태 (전부 0).
@@ -97,6 +99,7 @@ class UserStats {
         continueFrom: null,
         recent: [],
         attendance: {},
+        solvedIds: {},
       );
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
@@ -119,6 +122,7 @@ class UserStats {
     ContinueInfo? continueFrom,
     List<RecentRecord>? recent,
     Set<String>? attendance,
+    Set<String>? solvedIds,
   }) {
     return UserStats(
       totalSolved: totalSolved ?? this.totalSolved,
@@ -130,6 +134,7 @@ class UserStats {
       continueFrom: continueFrom ?? this.continueFrom,
       recent: recent ?? this.recent,
       attendance: attendance ?? this.attendance,
+      solvedIds: solvedIds ?? this.solvedIds,
     );
   }
 
@@ -142,6 +147,7 @@ class UserStats {
       prog[k] = v > (prog[k] ?? 0) ? v : (prog[k] ?? 0);
     });
     final attend = {...attendance, ...other.attendance};
+    final solved = {...solvedIds, ...other.solvedIds};
     // 최근 기록: 둘을 합쳐 problemId 중복 제거(현재 것 우선), 20개까지
     final seen = <String>{};
     final mergedRecent = <RecentRecord>[];
@@ -161,6 +167,7 @@ class UserStats {
       continueFrom: continueFrom ?? other.continueFrom,
       recent: mergedRecent,
       attendance: attend,
+      solvedIds: solved,
     );
   }
 
@@ -188,6 +195,8 @@ class UserStats {
           .toList(),
       attendance:
           (j['attendance'] as List<dynamic>? ?? []).map((e) => e.toString()).toSet(),
+      solvedIds:
+          (j['solvedIds'] as List<dynamic>? ?? []).map((e) => e.toString()).toSet(),
     );
   }
 
@@ -203,5 +212,6 @@ class UserStats {
         'continueFrom': continueFrom?.toJson(),
         'recent': recent.map((r) => r.toJson()).toList(),
         'attendance': attendance.toList(),
+        'solvedIds': solvedIds.toList(),
       };
 }

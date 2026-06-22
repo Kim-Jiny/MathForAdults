@@ -24,8 +24,9 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
   Future<void> _start() async {
     setState(() => _loading = true);
     final repo = ref.read(contentRepositoryProvider);
-    final problems =
-        await buildMockExam(repo, elective: _elective, preset: _preset);
+    final seen = ref.read(statsProvider).solvedIds;
+    final problems = await buildMockExam(repo,
+        elective: _elective, preset: _preset, seen: seen);
     if (!mounted) return;
     setState(() => _loading = false);
     if (problems.length < 3) {

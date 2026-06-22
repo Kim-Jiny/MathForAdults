@@ -9,6 +9,7 @@ import '../models/concept_card.dart';
 import '../models/curriculum_index.dart';
 import '../models/math_problem.dart';
 import '../models/user_stats.dart';
+import '../services/notification_service.dart';
 
 // ───────────────────────── 영속화 ─────────────────────────
 
@@ -86,6 +87,10 @@ class StatsNotifier extends StateNotifier<UserStats> {
     ];
     if (recent.length > 20) recent.removeRange(20, recent.length);
 
+    final solved = state.solvedIds.contains(problem.id)
+        ? state.solvedIds
+        : {...state.solvedIds, problem.id};
+
     state = state.copyWith(
       totalSolved: state.totalSolved + 1,
       totalCorrect: state.totalCorrect + (correct ? 1 : 0),
@@ -93,6 +98,7 @@ class StatsNotifier extends StateNotifier<UserStats> {
       wrongProblems: wrong,
       subjectProgress: progress,
       recent: recent,
+      solvedIds: solved,
     );
     _persist();
   }
@@ -176,34 +182,46 @@ extension DailyGoalInfo on DailyGoal {
 
 class Settings {
   final bool notificationsOn;
+  final int reminderHour; // 학습 리마인더 시각(시)
+  final int reminderMinute; // 학습 리마인더 시각(분)
   final DailyGoal dailyGoal;
   final ThemeMode themeMode;
 
   const Settings({
-    this.notificationsOn = true,
+    this.notificationsOn = false, // 권한 필요 — 기본 꺼짐(옵트인)
+    this.reminderHour = 18, // 기본 저녁 6시
+    this.reminderMinute = 0,
     this.dailyGoal = DailyGoal.three,
     this.themeMode = ThemeMode.system,
   });
 
   Settings copyWith({
     bool? notificationsOn,
+    int? reminderHour,
+    int? reminderMinute,
     DailyGoal? dailyGoal,
     ThemeMode? themeMode,
   }) =>
       Settings(
         notificationsOn: notificationsOn ?? this.notificationsOn,
+        reminderHour: reminderHour ?? this.reminderHour,
+        reminderMinute: reminderMinute ?? this.reminderMinute,
         dailyGoal: dailyGoal ?? this.dailyGoal,
         themeMode: themeMode ?? this.themeMode,
       );
 
   Map<String, dynamic> toJson() => {
         'notificationsOn': notificationsOn,
+        'reminderHour': reminderHour,
+        'reminderMinute': reminderMinute,
         'dailyGoal': dailyGoal.name,
         'themeMode': themeMode.name,
       };
 
   factory Settings.fromJson(Map<String, dynamic> j) => Settings(
-        notificationsOn: j['notificationsOn'] as bool? ?? true,
+        notificationsOn: j['notificationsOn'] as bool? ?? false,
+        reminderHour: j['reminderHour'] as int? ?? 18,
+        reminderMinute: j['reminderMinute'] as int? ?? 0,
         dailyGoal: DailyGoal.values.firstWhere(
           (g) => g.name == j['dailyGoal'],
           orElse: () => DailyGoal.three,
@@ -218,7 +236,12 @@ class Settings {
 class SettingsNotifier extends StateNotifier<Settings> {
   final SharedPreferences? _prefs;
 
-  SettingsNotifier([this._prefs]) : super(_load(_prefs));
+  SettingsNotifier([this._prefs]) : super(_load(_prefs)) {
+    // 앱 시작 시 켜져 있으면 예약 재설정(재부팅·업데이트 대비).
+    if (state.notificationsOn) {
+      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+    }
+  }
 
   static Settings _load(SharedPreferences? prefs) {
     final raw = prefs?.getString(_kSettingsKey);
@@ -237,6 +260,19 @@ class SettingsNotifier extends StateNotifier<Settings> {
   void toggleNotifications(bool v) {
     state = state.copyWith(notificationsOn: v);
     _persist();
+    if (v) {
+      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+    } else {
+      NotificationService.cancelDaily();
+    }
+  }
+
+  void setReminderTime(int hour, int minute) {
+    state = state.copyWith(reminderHour: hour, reminderMinute: minute);
+    _persist();
+    if (state.notificationsOn) {
+      NotificationService.scheduleDaily(hour, minute);
+    }
   }
 
   void setGoal(DailyGoal g) {

@@ -26,9 +26,9 @@ dependencies:
   http: ^1.2.2
   # 약관/지원 페이지 열기
   url_launcher: ^6.3.1
-  # 소셜 로그인 (선택적 로그인·동기화)
-  google_sign_in: ^6.2.1
-  sign_in_with_apple: ^6.1.4
+  # 로컬 알림 (학습 리마인더)
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
 
 dev_dependencies:
   flutter_test:
@@ -57,9 +57,13 @@ flutter_launcher_icons:
   adaptive_icon_foreground: "assets/icon.png"
 
 # 스플래시 (dart run flutter_native_splash:create)
+# cover(센터크롭): 짧은 쪽 기준으로 화면을 꽉 채우고 넘치는 부분은 잘라냄.
 flutter_native_splash:
   color: "#CBDEF1"
   image: "assets/splash.png"
+  fullscreen: true
+  ios_content_mode: scaleAspectFill
+  android_gravity: fill
   android_12:
     image: "assets/icon.png"
     color: "#DEE8F1"
