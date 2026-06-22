@@ -26,6 +26,9 @@ dependencies:
   http: ^1.2.2
   # 약관/지원 페이지 열기
   url_launcher: ^6.3.1
+  # 소셜 로그인 (선택적 로그인·동기화)
+  google_sign_in: ^6.2.1
+  sign_in_with_apple: ^6.1.4
 
 dev_dependencies:
   flutter_test:

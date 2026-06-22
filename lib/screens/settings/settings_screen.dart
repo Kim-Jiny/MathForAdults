@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../l10n/app_localizations.dart';
+import '../../services/auth_service.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
@@ -24,6 +25,9 @@ class SettingsScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
         children: [
+          const SectionHeader('계정'),
+          const _AccountCard(),
+          const SizedBox(height: 22),
           const SectionHeader('알림'),
           AppCard(
             padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -157,5 +161,120 @@ class SettingsScreen extends ConsumerWidget {
             : Icon(Icons.circle_outlined, color: scheme.outlineVariant),
       );
     });
+  }
+}
+
+/// 계정 카드: 로그아웃 상태면 소셜 로그인 버튼, 로그인 상태면 계정·동기화·로그아웃.
+class _AccountCard extends ConsumerWidget {
+  const _AccountCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final st = ref.watch(accountProvider);
+    final notifier = ref.read(accountProvider.notifier);
+    final busy = st.phase == SyncPhase.working;
+
+    if (!st.loggedIn) {
+      return AppCard(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('로그인하고 백업·동기화',
+                style: theme.textTheme.titleSmall
+                    ?.copyWith(fontWeight: FontWeight.w800)),
+            const SizedBox(height: 4),
+            Text('로그인하면 진도·출석·오답이 기기 간에 안전하게 유지돼요. (선택)',
+                style: theme.textTheme.bodySmall
+                    ?.copyWith(color: scheme.onSurfaceVariant)),
+            const SizedBox(height: 14),
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+              onPressed: busy ? null : notifier.signInWithApple,
+              icon: const Icon(Icons.apple, size: 20),
+              label: const Text('Apple로 로그인'),
+            ),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+              onPressed: busy ? null : notifier.signInWithGoogle,
+              icon: const Text('G',
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+              label: const Text('Google로 로그인'),
+            ),
+            if (busy) ...[
+              const SizedBox(height: 10),
+              const Center(child: CircularProgressIndicator()),
+            ],
+          ],
+        ),
+      );
+    }
+
+    final a = st.account!;
+    final label = a.email ?? a.nickname ?? '로그인됨';
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 18,
+                backgroundColor: scheme.primary.withValues(alpha: 0.15),
+                child: Icon(Icons.person_rounded, color: scheme.primary),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(label,
+                        style: theme.textTheme.titleSmall
+                            ?.copyWith(fontWeight: FontWeight.w700),
+                        overflow: TextOverflow.ellipsis),
+                    Text(
+                      st.phase == SyncPhase.done
+                          ? '동기화됨'
+                          : st.phase == SyncPhase.error
+                              ? (st.message ?? '동기화 오류')
+                              : '백업·동기화 사용 중',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: st.phase == SyncPhase.error
+                            ? scheme.error
+                            : scheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Row(
+            children: [
+              Expanded(
+                child: FilledButton.tonalIcon(
+                  onPressed: busy ? null : notifier.syncNow,
+                  icon: busy
+                      ? const SizedBox(
+                          width: 16,
+                          height: 16,
+                          child: CircularProgressIndicator(strokeWidth: 2))
+                      : const Icon(Icons.sync_rounded, size: 18),
+                  label: const Text('지금 동기화'),
+                ),
+              ),
+              const SizedBox(width: 10),
+              OutlinedButton(
+                onPressed: busy ? null : notifier.signOut,
+                child: const Text('로그아웃'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -133,6 +133,37 @@ class UserStats {
     );
   }
 
+  /// 로컬과 클라우드 상태를 합친다(기기 간 동기화).
+  /// 누적값은 큰 쪽, 집합/맵은 합집합(진행률은 과목별 최댓값)으로 보수적 병합.
+  UserStats mergedWith(UserStats other) {
+    final wrong = {...other.wrongProblems, ...wrongProblems};
+    final prog = <String, double>{...other.subjectProgress};
+    subjectProgress.forEach((k, v) {
+      prog[k] = v > (prog[k] ?? 0) ? v : (prog[k] ?? 0);
+    });
+    final attend = {...attendance, ...other.attendance};
+    // 최근 기록: 둘을 합쳐 problemId 중복 제거(현재 것 우선), 20개까지
+    final seen = <String>{};
+    final mergedRecent = <RecentRecord>[];
+    for (final r in [...recent, ...other.recent]) {
+      if (seen.add('${r.problemId}|${r.dateLabel}')) mergedRecent.add(r);
+      if (mergedRecent.length >= 20) break;
+    }
+    return UserStats(
+      totalSolved: totalSolved > other.totalSolved ? totalSolved : other.totalSolved,
+      totalCorrect:
+          totalCorrect > other.totalCorrect ? totalCorrect : other.totalCorrect,
+      streakDays: streakDays > other.streakDays ? streakDays : other.streakDays,
+      weeklySolved:
+          weeklySolved > other.weeklySolved ? weeklySolved : other.weeklySolved,
+      wrongProblems: wrong,
+      subjectProgress: prog,
+      continueFrom: continueFrom ?? other.continueFrom,
+      recent: mergedRecent,
+      attendance: attend,
+    );
+  }
+
   factory UserStats.fromJson(Map<String, dynamic> j) {
     final wrong = <String, MathProblem>{};
     (j['wrongProblems'] as Map<String, dynamic>? ?? {}).forEach((k, v) {

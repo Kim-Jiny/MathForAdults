@@ -130,6 +130,12 @@ class StatsNotifier extends StateNotifier<UserStats> {
     _persist();
   }
 
+  /// 전체 상태 교체 (클라우드 동기화 병합 결과 반영).
+  void replaceAll(UserStats next) {
+    state = next;
+    _persist();
+  }
+
   /// '다시 풀 문제'에 수동 저장/해제
   void toggleReview(MathProblem problem) {
     final wrong = Map<String, MathProblem>.from(state.wrongProblems);
