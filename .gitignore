@@ -43,3 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# 서명 키스토어 / 비밀번호 — 절대 커밋 금지
+*.jks
+*.keystore
+/android/key.properties
