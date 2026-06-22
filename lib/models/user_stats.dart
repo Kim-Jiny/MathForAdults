@@ -69,7 +69,7 @@ class UserStats {
   final int streakDays;
   final int weeklySolved;
   final Map<String, MathProblem> wrongProblems; // 다시 풀 문제 (객체 보관)
-  final Map<String, double> subjectProgress; // 과목명 → 0..1
+  final Map<String, int> solvedByChapter; // "과목|단원" → 푼 문제 수(고유)
   final ContinueInfo? continueFrom;
   final List<RecentRecord> recent;
   final Set<String> attendance; // 출석한 날짜 'yyyy-MM-dd'
@@ -81,7 +81,7 @@ class UserStats {
     required this.streakDays,
     required this.weeklySolved,
     required this.wrongProblems,
-    required this.subjectProgress,
+    required this.solvedByChapter,
     required this.continueFrom,
     required this.recent,
     this.attendance = const {},
@@ -95,7 +95,7 @@ class UserStats {
         streakDays: 0,
         weeklySolved: 0,
         wrongProblems: {},
-        subjectProgress: {},
+        solvedByChapter: {},
         continueFrom: null,
         recent: [],
         attendance: {},
@@ -104,12 +104,18 @@ class UserStats {
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
 
-  /// 가장 진행률이 낮은(=약한) 과목명 (기록 있는 과목 중)
-  String? get weakestSubject {
-    if (subjectProgress.isEmpty) return null;
-    final entries = subjectProgress.entries.toList()
-      ..sort((a, b) => a.value.compareTo(b.value));
-    return entries.first.key;
+  /// 특정 단원에서 고유하게 푼 문제 수.
+  int solvedInChapter(String subject, String chapter) =>
+      solvedByChapter['$subject|$chapter'] ?? 0;
+
+  /// 특정 과목에서 고유하게 푼 문제 수(모든 단원 합).
+  int solvedInSubject(String subject) {
+    var n = 0;
+    final prefix = '$subject|';
+    solvedByChapter.forEach((k, v) {
+      if (k.startsWith(prefix)) n += v;
+    });
+    return n;
   }
 
   UserStats copyWith({
@@ -118,7 +124,7 @@ class UserStats {
     int? streakDays,
     int? weeklySolved,
     Map<String, MathProblem>? wrongProblems,
-    Map<String, double>? subjectProgress,
+    Map<String, int>? solvedByChapter,
     ContinueInfo? continueFrom,
     List<RecentRecord>? recent,
     Set<String>? attendance,
@@ -130,7 +136,7 @@ class UserStats {
       streakDays: streakDays ?? this.streakDays,
       weeklySolved: weeklySolved ?? this.weeklySolved,
       wrongProblems: wrongProblems ?? this.wrongProblems,
-      subjectProgress: subjectProgress ?? this.subjectProgress,
+      solvedByChapter: solvedByChapter ?? this.solvedByChapter,
       continueFrom: continueFrom ?? this.continueFrom,
       recent: recent ?? this.recent,
       attendance: attendance ?? this.attendance,
@@ -142,8 +148,8 @@ class UserStats {
   /// 누적값은 큰 쪽, 집합/맵은 합집합(진행률은 과목별 최댓값)으로 보수적 병합.
   UserStats mergedWith(UserStats other) {
     final wrong = {...other.wrongProblems, ...wrongProblems};
-    final prog = <String, double>{...other.subjectProgress};
-    subjectProgress.forEach((k, v) {
+    final prog = <String, int>{...other.solvedByChapter};
+    solvedByChapter.forEach((k, v) {
       prog[k] = v > (prog[k] ?? 0) ? v : (prog[k] ?? 0);
     });
     final attend = {...attendance, ...other.attendance};
@@ -163,7 +169,7 @@ class UserStats {
       weeklySolved:
           weeklySolved > other.weeklySolved ? weeklySolved : other.weeklySolved,
       wrongProblems: wrong,
-      subjectProgress: prog,
+      solvedByChapter: prog,
       continueFrom: continueFrom ?? other.continueFrom,
       recent: mergedRecent,
       attendance: attend,
@@ -176,9 +182,9 @@ class UserStats {
     (j['wrongProblems'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
       wrong[k] = MathProblem.fromJson(v as Map<String, dynamic>);
     });
-    final prog = <String, double>{};
-    (j['subjectProgress'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
-      prog[k] = (v as num).toDouble();
+    final prog = <String, int>{};
+    (j['solvedByChapter'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
+      prog[k] = (v as num).toInt();
     });
     return UserStats(
       totalSolved: j['totalSolved'] as int? ?? 0,
@@ -186,7 +192,7 @@ class UserStats {
       streakDays: j['streakDays'] as int? ?? 0,
       weeklySolved: j['weeklySolved'] as int? ?? 0,
       wrongProblems: wrong,
-      subjectProgress: prog,
+      solvedByChapter: prog,
       continueFrom: j['continueFrom'] == null
           ? null
           : ContinueInfo.fromJson(j['continueFrom'] as Map<String, dynamic>),
@@ -208,7 +214,7 @@ class UserStats {
         'wrongProblems': {
           for (final e in wrongProblems.entries) e.key: e.value.toJson()
         },
-        'subjectProgress': subjectProgress,
+        'solvedByChapter': solvedByChapter,
         'continueFrom': continueFrom?.toJson(),
         'recent': recent.map((r) => r.toJson()).toList(),
         'attendance': attendance.toList(),

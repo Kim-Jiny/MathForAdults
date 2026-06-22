@@ -67,12 +67,12 @@ class StatsNotifier extends StateNotifier<UserStats> {
       wrong[problem.id] = problem;
     }
 
-    final progress = Map<String, double>.from(state.subjectProgress);
-    final cur = progress[problem.subject] ?? 0;
-    if (correct) {
-      progress[problem.subject] = (cur + 0.01).clamp(0.0, 1.0);
-    } else if (!progress.containsKey(problem.subject)) {
-      progress[problem.subject] = cur; // 약한 단원 집계에 잡히도록 0으로 등록
+    // 처음 푸는 문제면 단원별 진행 카운트를 +1 (정답 여부와 무관, 고유 집계).
+    final newlySolved = !state.solvedIds.contains(problem.id);
+    final byChapter = Map<String, int>.from(state.solvedByChapter);
+    if (newlySolved) {
+      final key = '${problem.subject}|${problem.chapter}';
+      byChapter[key] = (byChapter[key] ?? 0) + 1;
     }
 
     final recent = <RecentRecord>[
@@ -87,16 +87,15 @@ class StatsNotifier extends StateNotifier<UserStats> {
     ];
     if (recent.length > 20) recent.removeRange(20, recent.length);
 
-    final solved = state.solvedIds.contains(problem.id)
-        ? state.solvedIds
-        : {...state.solvedIds, problem.id};
+    final solved =
+        newlySolved ? {...state.solvedIds, problem.id} : state.solvedIds;
 
     state = state.copyWith(
       totalSolved: state.totalSolved + 1,
       totalCorrect: state.totalCorrect + (correct ? 1 : 0),
       weeklySolved: state.weeklySolved + 1,
       wrongProblems: wrong,
-      subjectProgress: progress,
+      solvedByChapter: byChapter,
       recent: recent,
       solvedIds: solved,
     );
@@ -165,6 +164,21 @@ final statsProvider = StateNotifierProvider<StatsNotifier, UserStats>(
 /// 다시 풀 문제(틀린 문제) 목록
 final wrongProblemsProvider = Provider<List<MathProblem>>((ref) {
   return ref.watch(statsProvider).wrongProblems.values.toList();
+});
+
+/// 과목명 → 실제 진행률(0..1) = 고유 푼 문제 / 전체 문제.
+/// 인덱스가 아직 로드되지 않았으면 빈 맵을 돌려준다.
+final subjectProgressProvider = Provider<Map<String, double>>((ref) {
+  final stats = ref.watch(statsProvider);
+  final index = ref.watch(curriculumIndexProvider).valueOrNull;
+  if (index == null) return const {};
+  final out = <String, double>{};
+  for (final s in index.subjects) {
+    final total = s.chapters.fold<int>(0, (a, c) => a + c.count);
+    if (total == 0) continue;
+    out[s.name] = (stats.solvedInSubject(s.name) / total).clamp(0.0, 1.0);
+  }
+  return out;
 });
 
 // ───────────────────────── 설정 ─────────────────────────

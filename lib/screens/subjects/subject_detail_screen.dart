@@ -17,6 +17,7 @@ class SubjectDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final indexAsync = ref.watch(curriculumIndexProvider);
+    final stats = ref.watch(statsProvider);
     return Scaffold(
       appBar: AppBar(title: Text('${subject.emoji} ${subject.name}')),
       body: indexAsync.when(
@@ -32,6 +33,7 @@ class SubjectDetailScreen extends ConsumerWidget {
                 subject: subject,
                 chapter: chapter,
                 idxChapter: idxChapter,
+                solved: stats.solvedInChapter(subject.name, chapter),
               );
             }).toList(),
           );
@@ -45,11 +47,13 @@ class _ChapterCard extends StatelessWidget {
   final Subject subject;
   final String chapter;
   final IdxChapter? idxChapter;
+  final int solved;
 
   const _ChapterCard({
     required this.subject,
     required this.chapter,
     required this.idxChapter,
+    required this.solved,
   });
 
   @override
@@ -61,7 +65,8 @@ class _ChapterCard extends StatelessWidget {
             ? idxChapter!.lessons.first.difficulties.first
             : idxChapter!.difficulties.first)
         : null;
-    final p = _pseudoProgress(subject.name + chapter);
+    final total = idxChapter?.count ?? 0;
+    final p = total == 0 ? 0.0 : (solved / total).clamp(0.0, 1.0);
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
@@ -108,7 +113,16 @@ class _ChapterCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 12),
-              ProgressBar(value: p),
+              Row(
+                children: [
+                  Expanded(child: ProgressBar(value: p)),
+                  const SizedBox(width: 10),
+                  Text('$solved / $total',
+                      style: theme.textTheme.labelSmall?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                          fontWeight: FontWeight.w600)),
+                ],
+              ),
             ],
           ],
         ),
@@ -126,9 +140,4 @@ class _ChapterCard extends StatelessWidget {
             style: theme.textTheme.labelSmall
                 ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
       );
-
-  double _pseudoProgress(String key) {
-    final h = key.codeUnits.fold<int>(0, (a, b) => a + b);
-    return (h % 65) / 100.0;
-  }
 }

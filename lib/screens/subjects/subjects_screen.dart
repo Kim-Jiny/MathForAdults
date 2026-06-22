@@ -13,7 +13,7 @@ class SubjectsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final progress = ref.watch(statsProvider).subjectProgress;
+    final progress = ref.watch(subjectProgressProvider);
     final theme = Theme.of(context);
 
     return Scaffold(

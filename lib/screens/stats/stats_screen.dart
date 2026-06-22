@@ -15,6 +15,16 @@ class StatsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final s = ref.watch(statsProvider);
+    final progress = ref.watch(subjectProgressProvider);
+    final progressEntries = progress.entries.toList();
+    // 약한 과목: 한 문제라도 푼 경우, 진행률이 가장 낮은 과목.
+    String? weakest;
+    if (s.totalSolved > 0 && progressEntries.isNotEmpty) {
+      weakest = (progressEntries.toList()
+            ..sort((a, b) => a.value.compareTo(b.value)))
+          .first
+          .key;
+    }
 
     return Scaffold(
       appBar: AppBar(title: const Text('내 기록')),
@@ -52,7 +62,7 @@ class StatsScreen extends ConsumerWidget {
                 child: AppCard(
                   child: StatTile(
                     icon: Icons.flag_rounded,
-                    value: s.weakestSubject ?? '-',
+                    value: weakest ?? '-',
                     label: '약한 단원',
                     valueColor: const Color(0xFFD66A5F),
                   ),
@@ -65,15 +75,23 @@ class StatsScreen extends ConsumerWidget {
           // 과목별 진행률
           const SectionHeader('과목별 진행률'),
           AppCard(
-            child: Column(
-              children: [
-                for (final e in s.subjectProgress.entries) ...[
-                  _subjectRow(theme, e.key, e.value),
-                  if (e.key != s.subjectProgress.keys.last)
-                    const SizedBox(height: 16),
-                ],
-              ],
-            ),
+            child: progressEntries.isEmpty
+                ? Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text('아직 푼 문제가 없어요. 한 문제부터 시작해 볼까요?',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant)),
+                  )
+                : Column(
+                    children: [
+                      for (var i = 0; i < progressEntries.length; i++) ...[
+                        _subjectRow(theme, progressEntries[i].key,
+                            progressEntries[i].value),
+                        if (i != progressEntries.length - 1)
+                          const SizedBox(height: 16),
+                      ],
+                    ],
+                  ),
           ),
           const SizedBox(height: 24),
 
