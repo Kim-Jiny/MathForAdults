@@ -179,7 +179,7 @@
     "id": "mid_eq_simul_001",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 x + y = 5, x − y = 1 에서 x의 값은?",
     "choices": [
@@ -201,7 +201,7 @@
     "id": "mid_eq_simul_002",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "연립방정식 2x + y = 7, x + y = 5 의 해에 대하여 xy의 값은?",
     "choices": [
@@ -5971,7 +5971,7 @@
     "id": "gen_middle_243",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 3x + y = 11, x + y = 5 를 풀었을 때, x + 2y 의 값은?",
     "choices": [
@@ -5994,7 +5994,7 @@
     "id": "gen_middle_244",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 x + 2y = 8, x − y = 2 의 해를 (x, y) 라 할 때, x의 값은?",
     "choices": [
@@ -6017,7 +6017,7 @@
     "id": "gen_middle_245",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 x + 2y = 10, 3x − y = 9 를 풀었을 때, x − y 의 값은?",
     "choices": [
@@ -6040,7 +6040,7 @@
     "id": "gen_middle_246",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 4x + y = 14, 2x − y = 4 의 해 (x, y) 에 대하여 x² + y² 의 값은?",
     "choices": [
@@ -6063,7 +6063,7 @@
     "id": "gen_middle_247",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "어떤 두 자리 자연수가 있다. 각 자리 숫자의 합이 11이고, 십의 자리 숫자와 일의 자리 숫자를 바꾸면 원래 수보다 27이 작아진다. 원래 수는?",
     "choices": [
@@ -6086,7 +6086,7 @@
     "id": "gen_middle_248",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "철수와 영희가 함께 어떤 일을 하면 6일이 걸리고, 철수 혼자 하면 10일이 걸린다. 영희 혼자 이 일을 완성하는 데 걸리는 날수는?",
     "choices": [
@@ -6109,7 +6109,7 @@
     "id": "gen_middle_249",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "연립방정식 { 2x − y = 3, x + 2y = 9 } 를 풀었을 때, x + y 의 값은?",
     "choices": [
@@ -12963,7 +12963,7 @@
     "id": "gen_middle_557",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "기본 유형",
     "question": "연립방정식 { 3x - y = 7, x + 2y = 7 } 를 풀었을 때, 2x + y 의 값은?",
     "choices": [
@@ -12986,7 +12986,7 @@
     "id": "gen_middle_558",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "연립방정식 { 2x + 3y = 13, 3x - 2y = 0 } 의 해 (x, y)에 대하여 x + y 의 값은?",
     "choices": [
@@ -13009,7 +13009,7 @@
     "id": "gen_middle_559",
     "subject": "중학 수학",
     "chapter": "방정식과 부등식",
-    "lesson": "연립방정식",
+    "lesson": "연립일차방정식",
     "difficulty": "대표 유형",
     "question": "집에서 도서관까지 갈 때 시속 4 km로 걷고, 돌아올 때 시속 6 km로 걸었더니 왕복에 총 1시간이 걸렸다. 집에서 도서관까지의 거리를 x km, 걸린 시간의 합을 구하는 연립방정식을 세울 때, 집에서 도서관까지의 거리(km)는?",
     "choices": [

@@ -113,7 +113,7 @@
     "id": "ge_vec_003",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "두 벡터 (1, 2) 와 (3, 4) 의 내적은?",
     "choices": [
@@ -7184,7 +7184,7 @@
     "id": "gen_geometry_303",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "두 벡터 a⃗ = (2, -1), b⃗ = (k, 3) 이 서로 수직일 때, 실수 k의 값은?",
     "choices": [
@@ -7207,7 +7207,7 @@
     "id": "gen_geometry_304",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "|a⃗| = 3, |b⃗| = 4이고 a⃗와 b⃗가 이루는 각의 크기가 60°일 때, a⃗·b⃗의 값은?",
     "choices": [
@@ -7229,7 +7229,7 @@
     "id": "gen_geometry_305",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "두 벡터 a⃗ = (3, 4), b⃗ = (-4, 3) 에 대하여 |a⃗ + b⃗|²의 값은?",
     "choices": [
@@ -7252,7 +7252,7 @@
     "id": "gen_geometry_306",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "세 점 A(1, 0), B(4, 0), C(2, 3)에 대하여 AB⃗·AC⃗의 값은?",
     "choices": [
@@ -7274,7 +7274,7 @@
     "id": "gen_geometry_307",
     "subject": "기하",
     "chapter": "평면벡터",
-    "lesson": "평면벡터의 성분과 내적",
+    "lesson": "벡터의 내적",
     "difficulty": "대표 유형",
     "question": "|a⃗| = 5, |b⃗| = 5이고 a⃗·b⃗ = -10일 때, |a⃗ - b⃗|의 값은?",
     "choices": [

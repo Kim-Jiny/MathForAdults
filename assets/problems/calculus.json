@@ -179,7 +179,7 @@
     "id": "ca_diff_004",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "y = x·eˣ 의 도함수는?",
     "choices": [
@@ -9525,7 +9525,7 @@
     "id": "gen_calculus_418",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "함수 f(x) = x³·ln x 의 도함수 f′(x)는? (단, x > 0)",
     "choices": [
@@ -9548,7 +9548,7 @@
     "id": "gen_calculus_419",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "함수 f(x) = sin x · cos x 의 도함수 f′(x)는?",
     "choices": [
@@ -9571,7 +9571,7 @@
     "id": "gen_calculus_420",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "함수 f(x) = e^(3x²) 의 도함수 f′(x)는?",
     "choices": [
@@ -9594,7 +9594,7 @@
     "id": "gen_calculus_421",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "함수 f(x) = ln(x² + 1) 의 도함수 f′(x)는?",
     "choices": [
@@ -9617,7 +9617,7 @@
     "id": "gen_calculus_422",
     "subject": "미적분",
     "chapter": "미분법",
-    "lesson": "여러 가지 미분법",
+    "lesson": "여러 가지 함수의 미분",
     "difficulty": "수능 기초",
     "question": "함수 f(x) = (2x + 1)⁵ 의 도함수 f′(x)는?",
     "choices": [
