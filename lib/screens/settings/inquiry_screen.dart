@@ -30,7 +30,10 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
   }
 
   void _reload() {
-    setState(() => _future = ref.read(inquiryServiceProvider).fetchMine());
+    final future = ref.read(inquiryServiceProvider).fetchMine();
+    setState(() {
+      _future = future;
+    });
   }
 
   Future<void> _send() async {
@@ -49,7 +52,7 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('전송에 실패했어요. 잠시 후 다시 시도해 주세요')),
+        const SnackBar(content: Text('전송에 실패했어요. 잠시 후 다시 시도해 주세요')),
       );
     } finally {
       if (mounted) setState(() => _sending = false);

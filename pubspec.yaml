@@ -2,7 +2,7 @@ name: math_for_adults
 description: "어른을 위한 수능 수학 — 다시 시작하는 수학 학습 앱"
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ^3.11.0
@@ -61,7 +61,7 @@ flutter_launcher_icons:
 flutter_native_splash:
   color: "#CBDEF1"
   image: "assets/splash.png"
-  fullscreen: true
+  fullscreen: false
   ios_content_mode: scaleAspectFill
   android_gravity: fill
   android_12:

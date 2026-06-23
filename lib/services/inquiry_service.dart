@@ -68,8 +68,9 @@ class InquiryService {
               'nickname': nickname.trim(),
           }),
         )
-        .timeout(const Duration(seconds: 15));
-    if (res.statusCode != 200) {
+        .timeout(const Duration(seconds: 20));
+    // 2xx 전체를 성공으로 인정 (서버가 201 Created 등을 반환해도 OK).
+    if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('전송 실패 (${res.statusCode})');
     }
   }
@@ -78,8 +79,8 @@ class InquiryService {
     final res = await http
         .get(Uri.parse(
             '$_base/inquiries?deviceId=${Uri.encodeQueryComponent(deviceId)}'))
-        .timeout(const Duration(seconds: 15));
-    if (res.statusCode != 200) {
+        .timeout(const Duration(seconds: 20));
+    if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('불러오기 실패 (${res.statusCode})');
     }
     final data = jsonDecode(res.body) as Map<String, dynamic>;
