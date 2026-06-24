@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/concept_card.dart';
 import '../../models/math_problem.dart';
+import '../../services/ads/ad_service.dart';
 import '../../state/app_state.dart';
 import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 import 'explanation_panel.dart';
 import 'session_result.dart';
 
@@ -53,6 +55,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     });
     if (correct) _correctCount++;
     ref.read(statsProvider.notifier).recordAnswer(_problem, correct: correct);
+    // 문제 → 채점 전환. (QuizScreen은 일반 문제 전용 — 모의수능은 별도 화면)
+    AdService.instance.maybeShowInterstitial(isMockExam: false);
   }
 
   void _onSelect(int i) {
@@ -85,6 +89,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       _index++;
       _resetForCurrent();
     });
+    // 다음 문제 전환.
+    AdService.instance.maybeShowInterstitial(isMockExam: false);
   }
 
   void _retryCurrent() => setState(_resetForCurrent);
@@ -225,6 +231,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       correct: _lastCorrect,
                       onSimilar: _openSimilar,
                     ),
+                    // 채점 후 해설 아래 배너.
+                    const BannerAdSlot(placement: BannerPlacement.quiz),
                   ],
                 ],
               ),

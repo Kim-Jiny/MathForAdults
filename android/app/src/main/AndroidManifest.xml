@@ -35,6 +35,11 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
+        <!-- AdMob 앱 ID (운영) -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2707874353926722~4497195509" />
+
         <!-- flutter_local_notifications: 예약 알림 + 재부팅 후 재예약 -->
         <receiver android:exported="false"
             android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />

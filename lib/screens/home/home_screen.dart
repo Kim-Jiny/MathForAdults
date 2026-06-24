@@ -10,6 +10,7 @@ import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_backdrop.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 import '../../l10n/app_localizations.dart';
 import '../exam/mock_exam_setup_screen.dart';
 import '../quiz/quiz_launcher.dart';
@@ -104,6 +105,7 @@ class HomeScreen extends ConsumerWidget {
                 _MockExamCard(),
                 const SizedBox(height: 12),
                 _ReviewCard(count: wrongCount, onTap: () => onOpenTab(2)),
+                const BannerAdSlot(placement: BannerPlacement.home),
                 const SizedBox(height: 20),
                 const SectionHeader('이번 주 기록'),
                 _WeeklyCard(),

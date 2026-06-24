@@ -29,6 +29,8 @@ dependencies:
   # 로컬 알림 (학습 리마인더)
   flutter_local_notifications: ^18.0.1
   timezone: ^0.9.4
+  # AdMob 배너 + 전면 광고
+  google_mobile_ads: ^9.0.0
 
 dev_dependencies:
   flutter_test:

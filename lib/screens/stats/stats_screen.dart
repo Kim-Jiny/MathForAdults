@@ -6,6 +6,7 @@ import '../../widgets/app_card.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/stat_tile.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 
 /// 기록 탭: 요약 통계 + 과목별 진행률 + 약한 단원 + 최근 기록.
 class StatsScreen extends ConsumerWidget {
@@ -96,6 +97,10 @@ class StatsScreen extends ConsumerWidget {
           const SizedBox(height: 24),
 
           // 최근 풀이 기록
+          const BannerAdSlot(
+            placement: BannerPlacement.stats,
+            margin: EdgeInsets.only(bottom: 12),
+          ),
           const SectionHeader('최근 풀이 기록'),
           AppCard(
             padding: const EdgeInsets.symmetric(vertical: 4),

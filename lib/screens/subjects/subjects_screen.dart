@@ -5,6 +5,7 @@ import '../../models/curriculum.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/progress_bar.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 import 'subject_detail_screen.dart';
 
 /// 단원 탭: 과목 목록.
@@ -25,44 +26,50 @@ class SubjectsScreen extends ConsumerWidget {
               style: theme.textTheme.bodyMedium
                   ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
           const SizedBox(height: 16),
-          ...kCurriculum.map((s) {
-            final p = progress[s.name] ?? 0;
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: AppCard(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder: (_) => SubjectDetailScreen(subject: s)),
-                ),
-                child: Row(
-                  children: [
-                    Text(s.emoji, style: const TextStyle(fontSize: 30)),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(s.name,
-                              style: theme.textTheme.titleMedium
-                                  ?.copyWith(fontWeight: FontWeight.w800)),
-                          const SizedBox(height: 2),
-                          Text('${s.chapters.length}개 단원',
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                  color: theme.colorScheme.onSurfaceVariant)),
-                          const SizedBox(height: 10),
-                          ProgressBar(value: p),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Icon(Icons.chevron_right_rounded,
-                        color: theme.colorScheme.onSurfaceVariant),
-                  ],
-                ),
-              ),
-            );
-          }),
+          for (final s in kCurriculum) ...[
+            _subjectCard(context, theme, s, progress[s.name] ?? 0),
+            // 고등 공통수학과 수학Ⅰ 사이에 배너 1개.
+            if (s.name == '고등 공통수학')
+              const BannerAdSlot(placement: BannerPlacement.subjects),
+          ],
         ],
+      ),
+    );
+  }
+
+  Widget _subjectCard(
+      BuildContext context, ThemeData theme, Subject s, double p) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: AppCard(
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => SubjectDetailScreen(subject: s)),
+        ),
+        child: Row(
+          children: [
+            Text(s.emoji, style: const TextStyle(fontSize: 30)),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(s.name,
+                      style: theme.textTheme.titleMedium
+                          ?.copyWith(fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 2),
+                  Text('${s.chapters.length}개 단원',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant)),
+                  const SizedBox(height: 10),
+                  ProgressBar(value: p),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            Icon(Icons.chevron_right_rounded,
+                color: theme.colorScheme.onSurfaceVariant),
+          ],
+        ),
       ),
     );
   }

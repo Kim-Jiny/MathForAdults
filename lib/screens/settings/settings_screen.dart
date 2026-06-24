@@ -8,6 +8,7 @@ import '../../services/notification_service.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 import 'inquiry_screen.dart';
 
 /// 설정 탭: 알림 / 목표 / 테마 / 문의 / 앱 정보.
@@ -95,6 +96,10 @@ class SettingsScreen extends ConsumerWidget {
                 _themeTile(ref, settings, ThemeMode.dark, '다크', Icons.dark_mode),
               ],
             ),
+          ),
+          const BannerAdSlot(
+            placement: BannerPlacement.settings,
+            margin: EdgeInsets.symmetric(vertical: 10),
           ),
           const SizedBox(height: 22),
 
