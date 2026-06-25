@@ -235,7 +235,7 @@ class SettingsScreen extends ConsumerWidget {
 class AboutAppDialog extends StatelessWidget {
   const AboutAppDialog({super.key});
 
-  static const _appVersion = '1.0.0';
+  static const _appVersion = '1.0.1';
 
   @override
   Widget build(BuildContext context) {
