@@ -41,6 +41,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   void initState() {
     super.initState();
     ref.read(conceptsProvider); // 개념 카드 선로드
+    AdService.instance.preloadRewarded(); // 힌트용 보상형 광고 미리 로드
   }
 
   @override
@@ -80,18 +81,16 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     _lastCorrect = false;
     _revealedHints = 0;
     _loadingHintAd = false;
-  }
-
-  /// 힌트 잠금 해제: 보상형 광고를 보면 다음 힌트를 연다.
-  /// 광고가 아직 준비되지 않았으면 힌트가 막히지 않도록 바로 열어 주고 미리 로드한다.
-  Future<void> _unlockHintWithAd() async {
-    if (_loadingHintAd) return;
-
+    // 다음 문제로 넘어갈 때 보상형 광고가 준비 안 됐으면 재시도 로드.
     if (!AdService.instance.isRewardedReady) {
       AdService.instance.preloadRewarded();
-      setState(() => _revealedHints++);
-      return;
     }
+  }
+
+  /// 힌트 잠금 해제: 보상형 광고를 끝까지 봐야만 다음 힌트를 연다.
+  /// 광고가 준비됐을 때만 버튼이 활성화되므로 여기서는 항상 광고를 띄운다.
+  Future<void> _unlockHintWithAd() async {
+    if (_loadingHintAd || !AdService.instance.isRewardedReady) return;
 
     setState(() => _loadingHintAd = true);
     final earned = await AdService.instance.showRewardedForHint();
@@ -305,26 +304,45 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           if (_revealedHints < p.hints.length)
             Align(
               alignment: Alignment.centerLeft,
-              child: TextButton.icon(
-                onPressed: _loadingHintAd ? null : _unlockHintWithAd,
-                icon: _loadingHintAd
-                    ? SizedBox(
-                        width: 16,
-                        height: 16,
-                        child: CircularProgressIndicator(
-                            strokeWidth: 2, color: scheme.secondary),
-                      )
-                    : Icon(Icons.smart_display_outlined,
-                        size: 18, color: scheme.secondary),
-                label: Text(
-                  _loadingHintAd
-                      ? '광고 불러오는 중…'
-                      : _revealedHints == 0
-                          ? '광고 보고 힌트 보기'
-                          : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
-                  style: TextStyle(
-                      color: scheme.secondary, fontWeight: FontWeight.w700),
-                ),
+              child: ValueListenableBuilder<bool>(
+                valueListenable: AdService.instance.rewardedReadyListenable,
+                builder: (context, adReady, _) {
+                  final busy = _loadingHintAd || !adReady;
+                  final disabledColor =
+                      scheme.onSurface.withValues(alpha: 0.38);
+                  return TextButton.icon(
+                    // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
+                    onPressed:
+                        (adReady && !_loadingHintAd) ? _unlockHintWithAd : null,
+                    icon: busy
+                        ? SizedBox(
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: _loadingHintAd
+                                    ? scheme.secondary
+                                    : disabledColor),
+                          )
+                        : Icon(Icons.smart_display_outlined,
+                            size: 18, color: scheme.secondary),
+                    label: Text(
+                      _loadingHintAd
+                          ? '광고 표시 중…'
+                          : !adReady
+                              ? '광고 준비 중…'
+                              : _revealedHints == 0
+                                  ? '광고 보고 힌트 보기'
+                                  : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                      style: TextStyle(
+                        color: (adReady && !_loadingHintAd)
+                            ? scheme.secondary
+                            : disabledColor,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
         ],

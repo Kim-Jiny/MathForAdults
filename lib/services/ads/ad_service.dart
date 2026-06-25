@@ -34,6 +34,8 @@ class AdService {
 
   RewardedAd? _rewarded;
   bool _loadingRewarded = false;
+  // 보상형(힌트) 광고 준비 여부 — UI가 구독해 힌트 버튼 활성화 상태를 갱신한다.
+  final ValueNotifier<bool> _rewardedReady = ValueNotifier<bool>(false);
 
   /// main()에서 1회 호출. SDK 초기화 + 설치 시각 기록 + 첫 전면 광고 프리로드.
   Future<void> init(SharedPreferences prefs) async {
@@ -132,10 +134,12 @@ class AdService {
         onAdLoaded: (ad) {
           _rewarded = ad;
           _loadingRewarded = false;
+          _rewardedReady.value = true;
         },
         onAdFailedToLoad: (error) {
           _rewarded = null;
           _loadingRewarded = false;
+          _rewardedReady.value = false;
           debugPrint('보상형 광고 로드 실패: $error');
         },
       ),
@@ -144,6 +148,9 @@ class AdService {
 
   /// 보상형(힌트) 광고가 지금 노출 준비됐는지.
   bool get isRewardedReady => _rewarded != null;
+
+  /// 보상형 광고 준비 여부를 구독할 수 있는 리스너블(힌트 버튼 활성화용).
+  ValueListenable<bool> get rewardedReadyListenable => _rewardedReady;
 
   /// 보상형 광고를 미리 로드해 둔다(준비 안 됐을 때 다음 노출 대비).
   void preloadRewarded() => _loadRewarded();
@@ -163,6 +170,7 @@ class AdService {
     }
 
     _rewarded = null; // 같은 광고 객체 재사용 방지
+    _rewardedReady.value = false;
     final completer = Completer<bool>();
     var earned = false;
 
