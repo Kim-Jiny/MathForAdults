@@ -257,34 +257,48 @@ class AboutAppDialog extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // 브랜드 배지 (테마 그라데이션)
+              // 브랜드 배지 (앱 아이콘 이미지)
               Center(
                 child: Container(
-                  width: 72,
-                  height: 72,
-                  alignment: Alignment.center,
+                  width: 76,
+                  height: 76,
                   decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [AppColors.primary, AppColors.accent],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primary.withValues(alpha: 0.32),
+                        color: AppColors.primary.withValues(alpha: 0.28),
                         blurRadius: 18,
                         offset: const Offset(0, 8),
                       ),
                     ],
                   ),
-                  child: const Text(
-                    'x²',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w800,
-                      height: 1,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'assets/icon.png',
+                      width: 76,
+                      height: 76,
+                      fit: BoxFit.cover,
+                      // 자산 로드 실패 시 그라데이션 배지로 폴백.
+                      errorBuilder: (context, error, stack) => Container(
+                        alignment: Alignment.center,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [AppColors.primary, AppColors.accent],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
+                        child: const Text(
+                          'x²',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 32,
+                            fontWeight: FontWeight.w800,
+                            height: 1,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -337,7 +351,7 @@ class AboutAppDialog extends StatelessWidget {
                 label: const Text('오픈소스 라이선스'),
               ),
               const SizedBox(height: 2),
-              Text('© 2026 Jiny',
+              Text('© 2026 JinSoft',
                   textAlign: TextAlign.center,
                   style: theme.textTheme.labelSmall
                       ?.copyWith(color: scheme.onSurfaceVariant)),
