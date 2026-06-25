@@ -1,12 +1,15 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:math_for_adults/l10n/app_localizations.dart';
 import 'package:math_for_adults/models/difficulty.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/state/app_state.dart';
 import 'package:math_for_adults/screens/quiz/quiz_launcher.dart';
+import 'package:math_for_adults/screens/settings/settings_screen.dart';
 
 const _p = MathProblem(
   id: 'test_01',
@@ -65,6 +68,36 @@ void main() {
         containsAll([Difficulty.conceptCheck, Difficulty.basic]));
     expect(QuizLauncher.csatBands[4],
         containsAll([Difficulty.csatBasic, Difficulty.csatReal]));
+  });
+
+  testWidgets('앱 정보 다이얼로그가 레이아웃 예외 없이 렌더된다', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        locale: const Locale('ko'),
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: ElevatedButton(
+                onPressed: () => showDialog<void>(
+                  context: context,
+                  builder: (_) => const AboutAppDialog(),
+                ),
+                child: const Text('open'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.tap(find.text('open'));
+    await tester.pumpAndSettle();
+
+    // 무한 너비 등 레이아웃 예외가 없어야 한다.
+    expect(tester.takeException(), isNull);
+    expect(find.text('닫기'), findsOneWidget);
+    expect(find.text('오픈소스 라이선스'), findsOneWidget);
   });
 
   group('JSON 에셋 무결성', () {
