@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
@@ -31,6 +32,9 @@ class AdService {
   bool _loadingInterstitial = false;
   bool _initialized = false;
 
+  RewardedAd? _rewarded;
+  bool _loadingRewarded = false;
+
   /// main()에서 1회 호출. SDK 초기화 + 설치 시각 기록 + 첫 전면 광고 프리로드.
   Future<void> init(SharedPreferences prefs) async {
     if (_initialized) return;
@@ -46,6 +50,7 @@ class AdService {
     try {
       await MobileAds.instance.initialize();
       _loadInterstitial();
+      _loadRewarded();
     } catch (e) {
       debugPrint('AdMob 초기화 실패: $e');
     }
@@ -115,5 +120,74 @@ class AdService {
       },
     );
     ad.show();
+  }
+
+  void _loadRewarded() {
+    if (_loadingRewarded || _rewarded != null) return;
+    _loadingRewarded = true;
+    RewardedAd.load(
+      adUnitId: AdIds.rewarded,
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) {
+          _rewarded = ad;
+          _loadingRewarded = false;
+        },
+        onAdFailedToLoad: (error) {
+          _rewarded = null;
+          _loadingRewarded = false;
+          debugPrint('보상형 광고 로드 실패: $error');
+        },
+      ),
+    );
+  }
+
+  /// 보상형(힌트) 광고가 지금 노출 준비됐는지.
+  bool get isRewardedReady => _rewarded != null;
+
+  /// 보상형 광고를 미리 로드해 둔다(준비 안 됐을 때 다음 노출 대비).
+  void preloadRewarded() => _loadRewarded();
+
+  /// 힌트 잠금 해제용 보상형 광고를 띄운다.
+  ///
+  /// 사용자가 광고를 끝까지 보고 보상을 획득하면 true, 광고가 준비되지 않았거나
+  /// 표시에 실패하면 false를 반환한다(이 경우 호출 측에서 힌트를 그대로 열어 줄지 결정).
+  /// 광고가 닫힌 뒤에 결과가 확정되도록 dismiss 콜백에서 완료한다.
+  Future<bool> showRewardedForHint() async {
+    if (!_initialized) return false;
+
+    final ad = _rewarded;
+    if (ad == null) {
+      _loadRewarded(); // 다음 기회를 위해 미리 로드
+      return false;
+    }
+
+    _rewarded = null; // 같은 광고 객체 재사용 방지
+    final completer = Completer<bool>();
+    var earned = false;
+
+    void finish(bool result) {
+      if (!completer.isCompleted) completer.complete(result);
+    }
+
+    ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: (ad) {
+        ad.dispose();
+        _loadRewarded(); // 다음 노출용 프리로드
+        finish(earned);
+      },
+      onAdFailedToShowFullScreenContent: (ad, error) {
+        ad.dispose();
+        _loadRewarded();
+        debugPrint('보상형 광고 표시 실패: $error');
+        finish(false);
+      },
+    );
+
+    ad.show(onUserEarnedReward: (ad, reward) {
+      earned = true;
+    });
+
+    return completer.future;
   }
 }

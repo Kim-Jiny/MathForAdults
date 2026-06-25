@@ -25,6 +25,10 @@ class AdIds {
       'ca-app-pub-3940256099942544/1033173712';
   static const String _testInterstitialIos =
       'ca-app-pub-3940256099942544/4411468910';
+  static const String _testRewardedAndroid =
+      'ca-app-pub-3940256099942544/5224354917';
+  static const String _testRewardedIos =
+      'ca-app-pub-3940256099942544/1712485313';
 
   // ───────── 운영 배너 (화면별) ─────────
   static const Map<BannerPlacement, String> _bannerAndroid = {
@@ -49,6 +53,12 @@ class AdIds {
   static const String _interstitialIos =
       'ca-app-pub-2707874353926722/3641455007';
 
+  // ───────── 운영 보상형(힌트) ─────────
+  static const String _rewardedAndroid =
+      'ca-app-pub-2707874353926722/5144208552';
+  static const String _rewardedIos =
+      'ca-app-pub-2707874353926722/2359665484';
+
   static String banner(BannerPlacement placement) {
     if (kDebugMode) return _android ? _testBannerAndroid : _testBannerIos;
     return (_android ? _bannerAndroid : _bannerIos)[placement]!;
@@ -59,5 +69,12 @@ class AdIds {
       return _android ? _testInterstitialAndroid : _testInterstitialIos;
     }
     return _android ? _interstitialAndroid : _interstitialIos;
+  }
+
+  static String get rewarded {
+    if (kDebugMode) {
+      return _android ? _testRewardedAndroid : _testRewardedIos;
+    }
+    return _android ? _rewardedAndroid : _rewardedIos;
   }
 }

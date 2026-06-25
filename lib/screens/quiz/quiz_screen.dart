@@ -32,6 +32,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   int _correctCount = 0;
   bool _finished = false;
   int _revealedHints = 0;
+  bool _loadingHintAd = false; // 힌트용 보상형 광고 표시 중
 
   MathProblem get _problem => widget.problems[_index];
   int get _total => widget.problems.length;
@@ -78,6 +79,32 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     _checked = false;
     _lastCorrect = false;
     _revealedHints = 0;
+    _loadingHintAd = false;
+  }
+
+  /// 힌트 잠금 해제: 보상형 광고를 보면 다음 힌트를 연다.
+  /// 광고가 아직 준비되지 않았으면 힌트가 막히지 않도록 바로 열어 주고 미리 로드한다.
+  Future<void> _unlockHintWithAd() async {
+    if (_loadingHintAd) return;
+
+    if (!AdService.instance.isRewardedReady) {
+      AdService.instance.preloadRewarded();
+      setState(() => _revealedHints++);
+      return;
+    }
+
+    setState(() => _loadingHintAd = true);
+    final earned = await AdService.instance.showRewardedForHint();
+    if (!mounted) return;
+    setState(() {
+      _loadingHintAd = false;
+      if (earned) _revealedHints++;
+    });
+    if (!earned) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('광고를 끝까지 보면 힌트가 열려요.')),
+      );
+    }
   }
 
   void _next() {
@@ -279,13 +306,22 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
             Align(
               alignment: Alignment.centerLeft,
               child: TextButton.icon(
-                onPressed: () => setState(() => _revealedHints++),
-                icon: Icon(Icons.lightbulb_outline_rounded,
-                    size: 18, color: scheme.secondary),
+                onPressed: _loadingHintAd ? null : _unlockHintWithAd,
+                icon: _loadingHintAd
+                    ? SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                            strokeWidth: 2, color: scheme.secondary),
+                      )
+                    : Icon(Icons.smart_display_outlined,
+                        size: 18, color: scheme.secondary),
                 label: Text(
-                  _revealedHints == 0
-                      ? '힌트 보기'
-                      : '힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                  _loadingHintAd
+                      ? '광고 불러오는 중…'
+                      : _revealedHints == 0
+                          ? '광고 보고 힌트 보기'
+                          : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
                   style: TextStyle(
                       color: scheme.secondary, fontWeight: FontWeight.w700),
                 ),
