@@ -10248,5 +10248,1743 @@
       "적분으로 f(x)를 구하고 f(2)=5로 C를 정하자.",
       "f(0)은 곧 상수 C와 같음을 이용하면 빠르다."
     ]
+  },
+  {
+    "id": "m2_idef_g001",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀³ 4x dx 의 값은?",
+    "choices": [
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
+    "answerIndex": 1,
+    "explanation": "∫4x dx = 2x² 이므로 [2x²]₀³ = 18 − 0 = 18.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫4x dx = 4 · x²/2 = 2x² + C\n정적분 계산에서는 상수 C가 소거되므로 F(x) = 2x² 로 둔다.\n\n2단계: 구간 [0, 3]을 대입한다.\n[2x²]₀³ = 2·(3)² − 2·(0)² = 2·9 − 0 = 18\n\n따라서 정답은 18 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "부정적분 ∫4x dx 를 먼저 구한 뒤 [F(x)]₀³ = F(3) − F(0) 을 계산하세요.",
+      "∫4x dx = 2x² 임을 이용해 2·3² 의 값을 구하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g002",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₁⁴ 2 dx 의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "∫2 dx = 2x 이므로 [2x]₁⁴ = 8 − 2 = 6.",
+    "detailedExplanation": "1단계: 상수함수의 부정적분을 구한다.\n∫2 dx = 2x + C 이므로 F(x) = 2x 로 둔다.\n\n2단계: 구간 [1, 4]를 대입한다.\n[2x]₁⁴ = 2·4 − 2·1 = 8 − 2 = 6\n\n3단계: 기하학적 확인.\n∫₁⁴ 2 dx 는 가로 (4−1)=3, 세로 2 인 직사각형의 넓이이므로 3·2 = 6 으로 일치한다.\n\n따라서 정답은 6 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "상수 k의 정적분은 ∫ₐᵇ k dx = k(b − a) 입니다.",
+      "2·(4 − 1) 을 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g003",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀² 6x² dx 의 값은?",
+    "choices": [
+      "8",
+      "12",
+      "16",
+      "24"
+    ],
+    "answerIndex": 2,
+    "explanation": "∫6x² dx = 2x³ 이므로 [2x³]₀² = 16 − 0 = 16.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫6x² dx = 6 · x³/3 = 2x³ + C\n따라서 F(x) = 2x³ 로 둔다.\n\n2단계: 구간 [0, 2]를 대입한다.\n[2x³]₀² = 2·(2)³ − 2·(0)³ = 2·8 − 0 = 16\n\n따라서 정답은 16 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "∫xⁿ dx = xⁿ⁺¹/(n+1) 공식을 써서 6x² 를 적분하세요.",
+      "∫6x² dx = 2x³ 이므로 2·2³ 을 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g004",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₂² (5x³ − x + 7) dx 의 값은?",
+    "choices": [
+      "0",
+      "7",
+      "14",
+      "37"
+    ],
+    "answerIndex": 0,
+    "explanation": "적분의 상한과 하한이 같으면 ∫ₐᵃ f(x) dx = 0 이다.",
+    "detailedExplanation": "1단계: 정적분의 기본 성질을 떠올린다.\n임의의 실수 a와 연속함수 f(x)에 대해 ∫ₐᵃ f(x) dx = 0 이다.\n\n2단계: 주어진 식에 적용한다.\n상한과 하한이 모두 2로 같으므로 피적분함수가 무엇이든 값은 0이다.\n∫₂² (5x³ − x + 7) dx = 0\n\n따라서 정답은 0 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "적분 구간의 위끝과 아래끝을 먼저 비교해 보세요.",
+      "∫ₐᵃ f(x) dx = 0 이라는 성질을 그대로 적용하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g005",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀¹ (3x² + 4x) dx 의 값은?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "[x³ + 2x²]₀¹ = (1 + 2) − 0 = 3.",
+    "detailedExplanation": "1단계: 각 항을 적분한다.\n∫3x² dx = x³, ∫4x dx = 2x²\n따라서 F(x) = x³ + 2x²\n\n2단계: 구간 [0, 1]을 대입한다.\n[x³ + 2x²]₀¹ = (1³ + 2·1²) − (0 + 0) = (1 + 2) − 0 = 3\n\n따라서 정답은 3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "다항함수는 각 항별로 따로 적분합니다.",
+      "F(x) = x³ + 2x² 를 구한 뒤 F(1) − F(0) 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g006",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₋₂² x³ dx 의 값은?",
+    "choices": [
+      "−8",
+      "0",
+      "8",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = x³ 은 기함수이므로 원점 대칭 구간에서 정적분은 0.",
+    "detailedExplanation": "1단계: 피적분함수가 기함수인지 확인한다.\nf(−x) = (−x)³ = −x³ = −f(x) 이므로 f(x) = x³ 은 기함수다.\n\n2단계: 기함수의 대칭구간 성질을 적용한다.\n기함수에 대해 ∫₋ₐᵃ f(x) dx = 0 이므로 ∫₋₂² x³ dx = 0\n\n3단계: 직접 계산으로 검증한다.\n[x⁴/4]₋₂² = (2⁴/4) − ((−2)⁴/4) = 4 − 4 = 0\n\n따라서 정답은 0 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x³ 이 기함수인지부터 판별해 보세요.",
+      "원점 대칭 구간에서 기함수의 정적분 값은 0입니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g007",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀⁵ x dx 의 값은?",
+    "choices": [
+      "5/2",
+      "5",
+      "25/2",
+      "25"
+    ],
+    "answerIndex": 2,
+    "explanation": "[x²/2]₀⁵ = 25/2 − 0 = 25/2.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫x dx = x²/2 + C 이므로 F(x) = x²/2 로 둔다.\n\n2단계: 구간 [0, 5]를 대입한다.\n[x²/2]₀⁵ = (5²/2) − (0²/2) = 25/2 − 0 = 25/2\n\n3단계: 기하학적 확인.\ny = x, x축, x = 5 로 둘러싸인 삼각형의 넓이 = (1/2)·5·5 = 25/2 로 일치한다.\n\n따라서 정답은 25/2 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "∫x dx = x²/2 임을 이용하세요.",
+      "[x²/2]₀⁵ 에서 5²/2 의 값을 구하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g008",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀² (3x² + 1) dx 의 값은?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answerIndex": 2,
+    "explanation": "[x³ + x]₀² = (8 + 2) − 0 = 10.",
+    "detailedExplanation": "1단계: 각 항을 적분한다.\n∫3x² dx = x³, ∫1 dx = x\n따라서 F(x) = x³ + x\n\n2단계: 구간 [0, 2]를 대입한다.\n[x³ + x]₀² = (2³ + 2) − (0 + 0) = (8 + 2) − 0 = 10\n\n따라서 정답은 10 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 따로 적분해 F(x) = x³ + x 를 만드세요.",
+      "F(2) − F(0) 을 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g009",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₁² 4x³ dx 의 값은?",
+    "choices": [
+      "12",
+      "15",
+      "16",
+      "30"
+    ],
+    "answerIndex": 1,
+    "explanation": "∫4x³ dx = x⁴ 이므로 [x⁴]₁² = 16 − 1 = 15.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫4x³ dx = 4 · x⁴/4 = x⁴ + C\n따라서 F(x) = x⁴ 로 둔다.\n\n2단계: 구간 [1, 2]를 대입한다.\n[x⁴]₁² = (2)⁴ − (1)⁴ = 16 − 1 = 15\n\n따라서 정답은 15 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "∫4x³ dx 의 부정적분은 x⁴ 형태입니다.",
+      "[x⁴]₁² = 2⁴ − 1⁴ 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g010",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀⁴ 5 dx 의 값은?",
+    "choices": [
+      "5",
+      "9",
+      "16",
+      "20"
+    ],
+    "answerIndex": 3,
+    "explanation": "∫ₐᵇ k dx = k(b − a) 이므로 5·(4 − 0) = 20.",
+    "detailedExplanation": "1단계: 상수함수의 정적분 성질을 적용한다.\n∫ₐᵇ k dx = k(b − a)\n\n2단계: k = 5, a = 0, b = 4 를 대입한다.\n∫₀⁴ 5 dx = 5·(4 − 0) = 5·4 = 20\n\n3단계: 기하학적 확인.\n가로 4, 세로 5 인 직사각형의 넓이이므로 4·5 = 20 으로 일치한다.\n\n따라서 정답은 20 (④)",
+    "estimatedTime": "1분",
+    "hints": [
+      "상수 k의 정적분은 k(b − a) 로 바로 구할 수 있습니다.",
+      "5·(4 − 0) 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g011",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₋₁¹ (4x² + 3) dx 의 값은?",
+    "choices": [
+      "20/3",
+      "22/3",
+      "26/3",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "[ (4/3)x³ + 3x ]₋₁¹ = (4/3 + 3) − (−4/3 − 3) = 8/3 + 6 = 26/3.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫4x² dx = (4/3)x³, ∫3 dx = 3x\n따라서 F(x) = (4/3)x³ + 3x\n\n2단계: 구간 [−1, 1]을 대입한다.\nF(1) = 4/3 + 3,  F(−1) = −4/3 − 3\nF(1) − F(−1) = (4/3 + 3) − (−4/3 − 3) = 8/3 + 6 = 8/3 + 18/3 = 26/3\n\n따라서 정답은 26/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "F(x) = (4/3)x³ + 3x 를 구한 뒤 F(1) − F(−1) 을 계산하세요.",
+      "분수 8/3 과 6 을 통분하여 더하면 26/3 이 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g012",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₁³ x² dx 의 값은?",
+    "choices": [
+      "20/3",
+      "26/3",
+      "8",
+      "28/3"
+    ],
+    "answerIndex": 1,
+    "explanation": "[x³/3]₁³ = 27/3 − 1/3 = 26/3.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫x² dx = x³/3 + C 이므로 F(x) = x³/3 로 둔다.\n\n2단계: 구간 [1, 3]을 대입한다.\n[x³/3]₁³ = (3³/3) − (1³/3) = 27/3 − 1/3 = 26/3\n\n따라서 정답은 26/3 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "∫x² dx = x³/3 임을 이용하세요.",
+      "[x³/3]₁³ = 27/3 − 1/3 을 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g013",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₀² (6x − 1) dx 의 값은?",
+    "choices": [
+      "8",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "[3x² − x]₀² = (12 − 2) − 0 = 10.",
+    "detailedExplanation": "1단계: 각 항을 적분한다.\n∫6x dx = 3x², ∫(−1) dx = −x\n따라서 F(x) = 3x² − x\n\n2단계: 구간 [0, 2]를 대입한다.\n[3x² − x]₀² = (3·2² − 2) − (0 − 0) = (12 − 2) − 0 = 10\n\n따라서 정답은 10 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "F(x) = 3x² − x 를 먼저 구하세요.",
+      "F(2) − F(0) 을 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g014",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "개념 확인",
+    "question": "∫₂⁴ x dx 의 값은?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "answerIndex": 1,
+    "explanation": "[x²/2]₂⁴ = 8 − 2 = 6.",
+    "detailedExplanation": "1단계: 부정적분을 구한다.\n∫x dx = x²/2 + C 이므로 F(x) = x²/2 로 둔다.\n\n2단계: 구간 [2, 4]를 대입한다.\n[x²/2]₂⁴ = (4²/2) − (2²/2) = 16/2 − 4/2 = 8 − 2 = 6\n\n따라서 정답은 6 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "∫x dx = x²/2 임을 이용하세요.",
+      "[x²/2]₂⁴ 에서 16/2 − 4/2 를 계산하면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g101",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀² 4x dx 의 값은?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "16"
+    ],
+    "answerIndex": 1,
+    "explanation": "4x의 부정적분은 2x²이므로 [2x²]₀²=2·4−0=8.",
+    "detailedExplanation": "1단계: 피적분함수 4x의 부정적분을 구한다.\n∫4x dx = 2x²\n\n2단계: 위끝 2와 아래끝 0을 대입한다.\n2·2² − 2·0² = 8 − 0 = 8\n\n따라서 정답은 8 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "4x를 적분하면 2x²이 된다.",
+      "2x²에 x=2와 x=0을 차례로 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g102",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₁² 3x² dx 의 값은?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "3x²의 부정적분은 x³이므로 [x³]₁²=8−1=7.",
+    "detailedExplanation": "1단계: 3x²의 부정적분을 구한다.\n∫3x² dx = x³\n\n2단계: 위끝 2, 아래끝 1을 대입한다.\n2³ − 1³ = 8 − 1 = 7\n\n따라서 정답은 7 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "3x²을 적분하면 x³이다.",
+      "x³에 x=2, x=1을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g103",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀² (2x + 3) dx 의 값은?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x²+3x이므로 [x²+3x]₀²=(4+6)−0=10.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(2x+3) dx = x² + 3x\n\n2단계: 위끝 2, 아래끝 0을 대입한다.\n(2² + 3·2) − 0 = (4 + 6) = 10\n\n따라서 정답은 10 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 따로 적분해 x²+3x를 얻는다.",
+      "x=2를 대입한 값에서 x=0 대입값을 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g104",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀² (6x² − 2x) dx 의 값은?",
+    "choices": [
+      "12",
+      "14",
+      "16",
+      "20"
+    ],
+    "answerIndex": 0,
+    "explanation": "부정적분은 2x³−x²이므로 [2x³−x²]₀²=(16−4)−0=12.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(6x²−2x) dx = 2x³ − x²\n\n2단계: 위끝 2, 아래끝 0을 대입한다.\n(2·2³ − 2²) − 0 = (16 − 4) = 12\n\n따라서 정답은 12 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "6x²은 2x³, −2x는 −x²로 적분된다.",
+      "x=2 대입값에서 x=0 대입값을 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g105",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₁³ (x² − x) dx 의 값은?",
+    "choices": [
+      "10/3",
+      "11/3",
+      "13/3",
+      "14/3"
+    ],
+    "answerIndex": 3,
+    "explanation": "부정적분은 x³/3−x²/2이며 [..]₁³=(9−9/2)−(1/3−1/2)=14/3.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(x²−x) dx = x³/3 − x²/2\n\n2단계: 위끝 3과 아래끝 1을 대입한다.\n(27/3 − 9/2) − (1/3 − 1/2) = (9 − 9/2) − (1/3 − 1/2)\n= 9/2 − (−1/6) = 27/6 + 1/6 = 28/6 = 14/3\n\n따라서 정답은 14/3 (④)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x²은 x³/3, x는 x²/2로 적분된다.",
+      "분수를 통분하여 정확히 계산하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g106",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀² (x − 1)(x + 1) dx 의 값은?",
+    "choices": [
+      "2/3",
+      "4/3",
+      "2",
+      "8/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "(x−1)(x+1)=x²−1이고 부정적분은 x³/3−x이므로 [..]₀²=8/3−2=2/3.",
+    "detailedExplanation": "1단계: 피적분함수를 전개한다.\n(x−1)(x+1) = x² − 1\n\n2단계: 적분 후 대입한다.\n∫(x²−1) dx = x³/3 − x\n(8/3 − 2) − 0 = 8/3 − 6/3 = 2/3\n\n따라서 정답은 2/3 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "곱을 먼저 전개해 x²−1로 바꿔라.",
+      "x³/3−x에 x=2를 대입하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g107",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₁² (3x² + 2x) dx 의 값은?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x³+x²이고 [x³+x²]₁²=(8+4)−(1+1)=10.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(3x²+2x) dx = x³ + x²\n\n2단계: 위끝 2, 아래끝 1을 대입한다.\n(2³ + 2²) − (1³ + 1²) = (8 + 4) − (1 + 1) = 12 − 2 = 10\n\n따라서 정답은 10 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "3x²은 x³, 2x는 x²로 적분된다.",
+      "x=2 대입값에서 x=1 대입값을 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g108",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₁² 4x³ dx 의 값은?",
+    "choices": [
+      "12",
+      "15",
+      "16",
+      "17"
+    ],
+    "answerIndex": 1,
+    "explanation": "4x³의 부정적분은 x⁴이므로 [x⁴]₁²=16−1=15.",
+    "detailedExplanation": "1단계: 4x³의 부정적분을 구한다.\n∫4x³ dx = x⁴\n\n2단계: 위끝 2, 아래끝 1을 대입한다.\n2⁴ − 1⁴ = 16 − 1 = 15\n\n따라서 정답은 15 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "4x³을 적분하면 x⁴이다.",
+      "x⁴에 x=2, x=1을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g109",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₁⁴ (2x − 1) dx 의 값은?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "15"
+    ],
+    "answerIndex": 1,
+    "explanation": "부정적분은 x²−x이고 [x²−x]₁⁴=(16−4)−(1−1)=12.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(2x−1) dx = x² − x\n\n2단계: 위끝 4, 아래끝 1을 대입한다.\n(4² − 4) − (1² − 1) = (16 − 4) − 0 = 12\n\n따라서 정답은 12 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "2x는 x², −1은 −x로 적분된다.",
+      "x=4 대입값에서 x=1 대입값을 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g110",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₋₂² x² dx 의 값은?",
+    "choices": [
+      "8/3",
+      "4",
+      "16/3",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x³/3이고 [x³/3]₋₂²=8/3−(−8/3)=16/3.",
+    "detailedExplanation": "1단계: x²의 부정적분을 구한다.\n∫x² dx = x³/3\n\n2단계: 위끝 2, 아래끝 −2를 대입한다.\n2³/3 − (−2)³/3 = 8/3 − (−8/3) = 16/3\n\n따라서 정답은 16/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x²을 적분하면 x³/3이다.",
+      "(−2)³=−8임에 주의하여 부호를 정확히 처리하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g111",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₋₁³ 6x dx 의 값은?",
+    "choices": [
+      "20",
+      "22",
+      "24",
+      "27"
+    ],
+    "answerIndex": 2,
+    "explanation": "6x의 부정적분은 3x²이고 [3x²]₋₁³=27−3=24.",
+    "detailedExplanation": "1단계: 6x의 부정적분을 구한다.\n∫6x dx = 3x²\n\n2단계: 위끝 3, 아래끝 −1을 대입한다.\n3·3² − 3·(−1)² = 27 − 3 = 24\n\n따라서 정답은 24 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "6x를 적분하면 3x²이다.",
+      "(−1)²=1임에 주의하여 대입하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g112",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀³ (3x² − 4x + 1) dx 의 값은?",
+    "choices": [
+      "9",
+      "12",
+      "15",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "부정적분은 x³−2x²+x이고 [..]₀³=27−18+3=12.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(3x²−4x+1) dx = x³ − 2x² + x\n\n2단계: 위끝 3, 아래끝 0을 대입한다.\n(27 − 2·9 + 3) − 0 = 27 − 18 + 3 = 12\n\n따라서 정답은 12 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "3x²→x³, −4x→−2x², 1→x로 적분한다.",
+      "x=3을 대입한 뒤 차례로 계산하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g113",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₀³ (x + 2)(x − 1) dx 의 값은?",
+    "choices": [
+      "13/2",
+      "7",
+      "15/2",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "(x+2)(x−1)=x²+x−2이고 부정적분은 x³/3+x²/2−2x이므로 [..]₀³=9+9/2−6=15/2.",
+    "detailedExplanation": "1단계: 피적분함수를 전개한다.\n(x+2)(x−1) = x² + x − 2\n\n2단계: 적분 후 대입한다.\n∫(x²+x−2) dx = x³/3 + x²/2 − 2x\n(27/3 + 9/2 − 6) − 0 = 9 + 9/2 − 6 = 3 + 9/2 = 15/2\n\n따라서 정답은 15/2 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "곱을 전개해 x²+x−2로 만들어라.",
+      "x=3을 대입한 뒤 통분하여 계산하라."
+    ]
+  },
+  {
+    "id": "m2_idef_g114",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "기본 유형",
+    "question": "∫₂⁵ (8x − 3) dx 의 값은?",
+    "choices": [
+      "63",
+      "69",
+      "75",
+      "84"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 4x²−3x이고 [4x²−3x]₂⁵=(100−15)−(16−6)=75.",
+    "detailedExplanation": "1단계: 항별로 적분한다.\n∫(8x−3) dx = 4x² − 3x\n\n2단계: 위끝 5, 아래끝 2를 대입한다.\n(4·25 − 15) − (4·4 − 6) = (100 − 15) − (16 − 6) = 85 − 10 = 75\n\n따라서 정답은 75 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "8x는 4x², −3은 −3x로 적분된다.",
+      "x=5 대입값에서 x=2 대입값을 빼라."
+    ]
+  },
+  {
+    "id": "m2_idef_g201",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀² (3x² − 4x + 1) dx 의 값은?",
+    "choices": [
+      "0",
+      "2",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "각 항을 적분해 부정적분 x³ − 2x² + x 를 구하고 위끝 2, 아래끝 0 을 대입하면 2.",
+    "detailedExplanation": "1단계: 피적분함수를 항별로 적분한다.\n∫(3x² − 4x + 1) dx = x³ − 2x² + x + C\n따라서 F(x) = x³ − 2x² + x\n\n2단계: 미적분학의 기본정리로 정적분을 계산한다.\n∫₀² (3x² − 4x + 1) dx = [x³ − 2x² + x]₀²\n\n3단계: 위끝과 아래끝을 대입한다.\nF(2) = 8 − 8 + 2 = 2\nF(0) = 0\n\n4단계: 차를 구한다.\n2 − 0 = 2\n\n따라서 정답은 2 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "다항함수는 항마다 ∫xⁿ dx = xⁿ⁺¹/(n+1) 공식을 적용하세요.",
+      "부정적분 F(x) = x³ − 2x² + x 에 x=2 와 x=0 을 대입해 빼면 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g202",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₋₂³ |x| dx 의 값은?",
+    "choices": [
+      "5/2",
+      "9/2",
+      "13/2",
+      "17/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "x<0 에서 |x|=−x, x≥0 에서 |x|=x 로 나누어 적분하면 2 + 9/2 = 13/2.",
+    "detailedExplanation": "1단계: 절댓값 부호가 바뀌는 x=0 을 기준으로 구간을 나눈다.\n∫₋₂³ |x| dx = ∫₋₂⁰ (−x) dx + ∫₀³ x dx\n\n2단계: 음수 구간을 계산한다.\n∫₋₂⁰ (−x) dx = [−x²/2]₋₂⁰ = 0 − (−(−2)²/2) = 0 − (−2) = 2\n\n3단계: 양수 구간을 계산한다.\n∫₀³ x dx = [x²/2]₀³ = 9/2 − 0 = 9/2\n\n4단계: 두 넓이를 더한다.\n2 + 9/2 = 4/2 + 9/2 = 13/2\n\n따라서 정답은 13/2 (③)",
+    "estimatedTime": "2분",
+    "hints": [
+      "절댓값 함수는 부호가 바뀌는 x=0 에서 구간을 나누어 적분합니다.",
+      "음수 구간에서는 |x|=−x, 양수 구간에서는 |x|=x 로 놓고 각각 정적분하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g203",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "연속함수 f(x)에 대하여 ∫₁⁴ f(x) dx = 10, ∫₁² f(x) dx = 3 일 때, ∫₂⁴ f(x) dx 의 값은?",
+    "choices": [
+      "5",
+      "7",
+      "10",
+      "13"
+    ],
+    "answerIndex": 1,
+    "explanation": "정적분의 구간 분할 성질에서 ∫₂⁴ f = ∫₁⁴ f − ∫₁² f = 10 − 3 = 7.",
+    "detailedExplanation": "1단계: 정적분의 구간에 대한 가법성을 이용한다.\n∫₁⁴ f(x) dx = ∫₁² f(x) dx + ∫₂⁴ f(x) dx\n\n2단계: 구하려는 항에 대해 정리한다.\n∫₂⁴ f(x) dx = ∫₁⁴ f(x) dx − ∫₁² f(x) dx\n\n3단계: 주어진 값을 대입한다.\n∫₂⁴ f(x) dx = 10 − 3 = 7\n\n따라서 정답은 7 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "∫ₐᶜ f = ∫ₐᵇ f + ∫ᵇᶜ f 라는 구간 분할 성질을 떠올리세요.",
+      "전체 [1,4] 적분에서 [1,2] 적분을 빼면 [2,4] 적분이 됩니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g204",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "두 함수 f(x), g(x)에 대하여 ∫₀³ f(x) dx = 6, ∫₀³ g(x) dx = −2 일 때, ∫₀³ {3f(x) + 2g(x)} dx 의 값은?",
+    "choices": [
+      "10",
+      "14",
+      "16",
+      "22"
+    ],
+    "answerIndex": 1,
+    "explanation": "정적분의 선형성으로 3·6 + 2·(−2) = 18 − 4 = 14.",
+    "detailedExplanation": "1단계: 정적분의 선형성(합·상수배)을 적용한다.\n∫₀³ {3f(x) + 2g(x)} dx = 3∫₀³ f(x) dx + 2∫₀³ g(x) dx\n\n2단계: 주어진 값을 대입한다.\n= 3 × 6 + 2 × (−2)\n\n3단계: 계산한다.\n= 18 − 4 = 14\n\n따라서 정답은 14 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "∫{af + bg} dx = a∫f dx + b∫g dx 의 선형성을 이용하세요.",
+      "g(x)의 적분값이 음수(−2)임에 주의하여 2×(−2)=−4 를 더하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g205",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₋₃³ (x³ + 2x² − x + 1) dx 의 값은?",
+    "choices": [
+      "30",
+      "42",
+      "48",
+      "147/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "대칭구간에서 홀수차항(x³, −x)의 적분은 0 이므로 ∫₋₃³ (2x² + 1) dx = 2∫₀³ (2x² + 1) dx = 42.",
+    "detailedExplanation": "1단계: 대칭구간 [−3, 3] 에서 홀함수·짝함수 성질을 이용한다.\n홀수차항 x³, −x 의 정적분은 0 이다.\n짝수차항 2x², 상수항 1 만 남는다.\n\n2단계: 짝함수 성질을 적용한다.\n∫₋₃³ (2x² + 1) dx = 2∫₀³ (2x² + 1) dx\n\n3단계: 정적분을 계산한다.\n∫₀³ (2x² + 1) dx = [2x³/3 + x]₀³ = (2·27/3 + 3) − 0 = 18 + 3 = 21\n\n4단계: 2배 한다.\n2 × 21 = 42\n\n따라서 정답은 42 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "원점 대칭 구간 [−a, a] 에서 홀함수의 적분값은 0 입니다.",
+      "x³ 과 −x 는 빼고 2x²+1 만 남겨 ∫₋₃³ = 2∫₀³ 로 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g206",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀³ |x² − 1| dx 의 값은?",
+    "choices": [
+      "6",
+      "20/3",
+      "22/3",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "0≤x≤1 에서 x²−1≤0, 1≤x≤3 에서 x²−1≥0 으로 나누어 적분하면 2/3 + 20/3 = 22/3.",
+    "detailedExplanation": "1단계: x² − 1 = 0 인 x = 1(구간 내) 을 기준으로 부호를 나눈다.\n0 ≤ x ≤ 1 에서 x² − 1 ≤ 0  →  |x²−1| = −(x²−1) = 1 − x²\n1 ≤ x ≤ 3 에서 x² − 1 ≥ 0  →  |x²−1| = x² − 1\n\n2단계: 첫 구간을 적분한다.\n∫₀¹ (1 − x²) dx = [x − x³/3]₀¹ = 1 − 1/3 = 2/3\n\n3단계: 둘째 구간을 적분한다.\n∫₁³ (x² − 1) dx = [x³/3 − x]₁³ = (27/3 − 3) − (1/3 − 1) = (9 − 3) − (−2/3) = 6 + 2/3 = 20/3\n\n4단계: 두 값을 더한다.\n2/3 + 20/3 = 22/3\n\n따라서 정답은 22/3 (③)",
+    "estimatedTime": "2분",
+    "hints": [
+      "x²−1 의 부호가 바뀌는 x=1 에서 구간을 나누세요.",
+      "x<1 구간에서는 1−x², x>1 구간에서는 x²−1 로 적분하여 더합니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g207",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "함수 F(x) = ∫₀ˣ (3t² − 4t + 5) dt 에 대하여 F(2)의 값은?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "F(x) = x³ − 2x² + 5x 이고 F(2) = 8 − 8 + 10 = 10.",
+    "detailedExplanation": "1단계: 적분변수 t 에 대해 부정적분을 구한다.\n∫(3t² − 4t + 5) dt = t³ − 2t² + 5t + C\n\n2단계: F(x) = ∫₀ˣ (3t² − 4t + 5) dt 를 계산한다.\nF(x) = [t³ − 2t² + 5t]₀ˣ = x³ − 2x² + 5x\n\n3단계: x = 2 를 대입한다.\nF(2) = 2³ − 2·2² + 5·2 = 8 − 8 + 10\n\n4단계: 계산한다.\n= 10\n\n따라서 정답은 10 (③)",
+    "estimatedTime": "2분",
+    "hints": [
+      "적분구간의 위끝이 x 인 정적분은 F(x)=[부정적분]₀ˣ 로 함수가 됩니다.",
+      "F(x)=x³−2x²+5x 를 구한 뒤 x=2 를 대입하세요."
+    ]
+  },
+  {
+    "id": "m2_idef_g208",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "연속함수 f(x)에 대하여 ∫₋₂³ f(x) dx = 9, ∫₋₂¹ f(x) dx = 4 일 때, ∫₁³ f(x) dx 의 값은?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "13"
+    ],
+    "answerIndex": 2,
+    "explanation": "∫₁³ f = ∫₋₂³ f − ∫₋₂¹ f = 9 − 4 = 5.",
+    "detailedExplanation": "1단계: 구간 [−2, 3] 을 [−2, 1] 과 [1, 3] 으로 분할한다.\n∫₋₂³ f(x) dx = ∫₋₂¹ f(x) dx + ∫₁³ f(x) dx\n\n2단계: 구하려는 적분에 대해 정리한다.\n∫₁³ f(x) dx = ∫₋₂³ f(x) dx − ∫₋₂¹ f(x) dx\n\n3단계: 값을 대입한다.\n= 9 − 4 = 5\n\n따라서 정답은 5 (③)",
+    "estimatedTime": "2분",
+    "hints": [
+      "나누는 점 x=1 을 기준으로 정적분의 가법성을 적용하세요.",
+      "전체 [−2,3] 에서 [−2,1] 을 빼면 [1,3] 의 적분이 남습니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g209",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀³ (2x + k) dx = 21 일 때, 상수 k의 값은?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "7"
+    ],
+    "answerIndex": 1,
+    "explanation": "∫₀³ (2x + k) dx = 9 + 3k = 21 이므로 k = 4.",
+    "detailedExplanation": "1단계: 피적분함수를 적분한다.\n∫(2x + k) dx = x² + kx + C\n\n2단계: 정적분을 계산한다.\n∫₀³ (2x + k) dx = [x² + kx]₀³ = (9 + 3k) − 0 = 9 + 3k\n\n3단계: 주어진 값과 같게 놓는다.\n9 + 3k = 21\n\n4단계: k 에 대해 푼다.\n3k = 12  →  k = 4\n\n따라서 정답은 4 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "미지수 k 가 포함된 채로 정적분을 계산해 k 의 식으로 나타내세요.",
+      "9 + 3k = 21 을 풀어 k 를 구합니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g210",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "∫₀² (x − 1)³ dx 의 값은?",
+    "choices": [
+      "−2",
+      "0",
+      "2",
+      "4"
+    ],
+    "answerIndex": 1,
+    "explanation": "(x−1)³ 은 x=1 에 대해 대칭인 홀함수 형태로, 0≤x≤1 과 1≤x≤2 의 적분이 서로 상쇄되어 0.",
+    "detailedExplanation": "1단계: 전개하여 적분하거나 부정적분을 구한다.\n∫(x − 1)³ dx = (x − 1)⁴/4 + C\n\n2단계: 정적분을 계산한다.\n∫₀² (x − 1)³ dx = [(x − 1)⁴/4]₀²\n\n3단계: 위끝과 아래끝을 대입한다.\n= ((2−1)⁴)/4 − ((0−1)⁴)/4 = 1/4 − 1/4 = 0\n\n4단계: 의미 확인.\n(x−1)³ 은 x=1 을 중심으로 부호가 반대인 대칭이므로 [0,1] 과 [1,2] 의 넓이가 상쇄되어 0 이 된다.\n\n따라서 정답은 0 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "(x−1)³ 의 부정적분은 (x−1)⁴/4 로 치환 적분처럼 처리됩니다.",
+      "(2−1)⁴ 과 (0−1)⁴ 을 대입하면 같은 값이 되어 차가 0 입니다."
+    ]
+  },
+  {
+    "id": "m2_idef_g211",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분",
+    "difficulty": "대표 유형",
+    "question": "함수 g(x) = ∫₀ˣ (t² − 2t − 3) dt 의 극솟값은?",
+    "choices": [
+      "−9",
+      "−5",
+      "5/3",
+      "9"
+    ],
+    "answerIndex": 0,
+    "explanation": "g′(x) = x² − 2x − 3 = (x+1)(x−3) 이므로 x=3 에서 극소, g(3) = 9 − 9 − 9 = −9.",
+    "detailedExplanation": "1단계: 미적분학의 기본정리로 g′(x) 를 구한다.\ng′(x) = x² − 2x − 3 = (x + 1)(x − 3)\n\n2단계: g′(x) = 0 의 해와 부호 변화를 조사한다.\nx = −1, x = 3 에서 g′(x) = 0\nx = −1 앞뒤로 + → −  (극대), x = 3 앞뒤로 − → +  (극소)\n따라서 x = 3 에서 극솟값을 갖는다.\n\n3단계: g(x) 를 적분으로 구한다.\ng(x) = [t³/3 − t² − 3t]₀ˣ = x³/3 − x² − 3x\n\n4단계: x = 3 을 대입한다.\ng(3) = 27/3 − 9 − 9 = 9 − 9 − 9 = −9\n\n따라서 정답은 −9 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "g(x)=∫₀ˣ f(t)dt 이면 g′(x)=f(x) 임을 이용해 도함수를 구하세요.",
+      "g′(x)=(x+1)(x−3) 의 부호변화로 극소점 x=3 을 찾고 g(3) 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g001",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = 4x³ 과 x축, 두 직선 x = 0, x = 1 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "구간 [0,1]에서 y=4x³≥0이므로 넓이는 ∫₀¹ 4x³ dx = [x⁴]₀¹ = 1 이다.",
+    "detailedExplanation": "1단계: 구간 [0,1]에서 y=4x³≥0이므로 넓이는 정적분 ∫₀¹ 4x³ dx 로 구한다.\n\n2단계: 4x³의 부정적분은 x⁴이므로 ∫₀¹ 4x³ dx = [x⁴]₀¹ = 1⁴ − 0⁴ = 1.\n\n따라서 정답은 1 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이 = ∫₀¹ (함수) dx 로 계산한다.",
+      "4x³의 부정적분 x⁴에 1과 0을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g002",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "∫₀² 6x dx 의 값은?",
+    "choices": [
+      "6",
+      "9",
+      "12",
+      "18"
+    ],
+    "answerIndex": 2,
+    "explanation": "6x의 부정적분은 3x²이므로 ∫₀² 6x dx = [3x²]₀² = 12 − 0 = 12 이다.",
+    "detailedExplanation": "1단계: 6x의 부정적분은 3x²이다.\n\n2단계: [3x²]₀² = 3·2² − 3·0² = 12 − 0 = 12.\n\n따라서 정답은 12 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "6x의 부정적분을 먼저 구한다.",
+      "3x²에 위끝 2와 아래끝 0을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g003",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = −x² + 4x − 3 과 x축이 만나는 점의 x좌표를 모두 구하면?",
+    "choices": [
+      "x = 1, x = 3",
+      "x = −1, x = 3",
+      "x = 0, x = 4",
+      "x = 1, x = −3"
+    ],
+    "answerIndex": 0,
+    "explanation": "−x²+4x−3=0, 즉 x²−4x+3=0에서 (x−1)(x−3)=0이므로 x=1, x=3 이다.",
+    "detailedExplanation": "1단계: x축과의 교점은 y=0일 때이므로 −x²+4x−3=0 을 푼다.\n\n2단계: 양변에 −1을 곱하면 x²−4x+3=0, 인수분해하면 (x−1)(x−3)=0 이므로 x=1, x=3.\n\n따라서 정답은 x = 1, x = 3 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x축과의 교점은 y=0을 대입해 구한다.",
+      "x²−4x+3=0을 인수분해하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g004",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "수직선 위를 움직이는 점 P의 속도가 v(t) = 4 (일정)일 때, t = 1에서 t = 5까지 점 P의 위치의 변화량은?",
+    "choices": [
+      "8",
+      "12",
+      "16",
+      "20"
+    ],
+    "answerIndex": 2,
+    "explanation": "위치의 변화량은 ∫₁⁵ v(t) dt = ∫₁⁵ 4 dt = 4·(5−1) = 16 이다.",
+    "detailedExplanation": "1단계: 위치의 변화량은 속도를 시각에 대해 적분한 ∫₁⁵ 4 dt 이다.\n\n2단계: ∫₁⁵ 4 dt = 4·(5−1) = 4·4 = 16.\n\n따라서 정답은 16 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "위치의 변화량 = ∫ v(t) dt 이다.",
+      "상수 4의 정적분은 4에 구간의 길이를 곱한 값이다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g005",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = x² 과 x축, 두 직선 x = 0, x = 2 로 둘러싸인 도형의 넓이를 나타내는 식으로 옳은 것은?",
+    "choices": [
+      "∫₀² x² dx",
+      "∫₀² 2x dx",
+      "∫₀² (x² + 2) dx",
+      "2 · ∫₀² x dx"
+    ],
+    "answerIndex": 0,
+    "explanation": "구간 [0,2]에서 y=x²≥0이므로 넓이는 ∫₀² x² dx 로 나타낸다.",
+    "detailedExplanation": "1단계: 구간 [0,2]에서 곡선 y=x²은 x축보다 위에 있으므로(x²≥0) 넓이는 곡선의 함숫값을 적분한다.\n\n2단계: 따라서 넓이를 나타내는 식은 ∫₀² x² dx 이다.\n\n따라서 정답은 ∫₀² x² dx (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이는 곡선 식 그대로 적분한다.",
+      "미분하지 말고 y = x²을 그대로 피적분함수로 둔다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g006",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "∫₁² 3x² dx 의 값은?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "explanation": "3x²의 부정적분은 x³이므로 ∫₁² 3x² dx = [x³]₁² = 8 − 1 = 7 이다.",
+    "detailedExplanation": "1단계: 3x²의 부정적분은 x³이다.\n\n2단계: [x³]₁² = 2³ − 1³ = 8 − 1 = 7.\n\n따라서 정답은 7 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "3x²의 부정적분 x³을 이용한다.",
+      "위끝 2, 아래끝 1을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g007",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "닫힌 구간 [a, b]에서 f(x) ≥ 0일 때, 곡선 y = f(x)와 x축, 두 직선 x = a, x = b 로 둘러싸인 도형의 넓이 S는?",
+    "choices": [
+      "S = ∫ₐᵇ f(x) dx",
+      "S = ∫ₐᵇ f′(x) dx",
+      "S = f(b) − f(a)",
+      "S = ∫ₐᵇ |f′(x)| dx"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(x)≥0인 구간에서 넓이는 S = ∫ₐᵇ f(x) dx 로 정의된다.",
+    "detailedExplanation": "1단계: f(x)≥0이면 곡선은 x축보다 위에 있으므로 넓이는 함숫값 f(x)를 a부터 b까지 적분한다.\n\n2단계: 따라서 S = ∫ₐᵇ f(x) dx 이다. 도함수 f′(x)나 함숫값의 차 f(b)−f(a)는 넓이가 아니다.\n\n따라서 정답은 S = ∫ₐᵇ f(x) dx (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이는 함수 그대로의 정적분이다.",
+      "도함수 f′(x)가 아니라 f(x)를 적분함에 유의하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g008",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = x³ 과 x축, 두 직선 x = 0, x = 2 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "구간 [0,2]에서 y=x³≥0이므로 넓이는 ∫₀² x³ dx = [x⁴/4]₀² = 16/4 = 4 이다.",
+    "detailedExplanation": "1단계: 구간 [0,2]에서 y=x³≥0이므로 넓이는 ∫₀² x³ dx 이다.\n\n2단계: x³의 부정적분은 x⁴/4이므로 [x⁴/4]₀² = 2⁴/4 − 0 = 16/4 = 4.\n\n따라서 정답은 4 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이 = ∫₀² x³ dx 로 계산한다.",
+      "x³의 부정적분은 x⁴/4 이다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g009",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "두 곡선 y = f(x), y = g(x)가 닫힌 구간 [a, b]에서 f(x) ≥ g(x)일 때, 두 곡선과 두 직선 x = a, x = b 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "∫ₐᵇ {f(x) − g(x)} dx",
+      "∫ₐᵇ {g(x) − f(x)} dx",
+      "∫ₐᵇ {f(x) + g(x)} dx",
+      "∫ₐᵇ f(x)·g(x) dx"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(x)≥g(x)인 구간의 넓이는 위쪽 함수에서 아래쪽 함수를 뺀 ∫ₐᵇ {f(x)−g(x)} dx 이다.",
+    "detailedExplanation": "1단계: 두 곡선 사이의 넓이는 (위쪽 함수) − (아래쪽 함수)를 적분한다.\n\n2단계: f(x)≥g(x)이므로 f가 위쪽, g가 아래쪽이다. 따라서 넓이는 ∫ₐᵇ {f(x)−g(x)} dx 이다.\n\n따라서 정답은 ∫ₐᵇ {f(x) − g(x)} dx (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "두 곡선 사이 넓이는 (위 함수)−(아래 함수)의 적분이다.",
+      "f≥g이므로 f에서 g를 빼는 순서로 둔다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g010",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = 6x² 과 x축, 두 직선 x = 1, x = 2 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "넓이는 ∫₁² 6x² dx = [2x³]₁² = 16 − 2 = 14 이다.",
+    "detailedExplanation": "1단계: 구간 [1,2]에서 y=6x²≥0이므로 넓이는 ∫₁² 6x² dx 이다.\n\n2단계: 6x²의 부정적분은 2x³이므로 [2x³]₁² = 2·8 − 2·1 = 16 − 2 = 14.\n\n따라서 정답은 14 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이 = ∫₁² 6x² dx 로 계산한다.",
+      "6x²의 부정적분은 2x³ 이다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g011",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t² 일 때, t = 0에서 t = 2까지 점 P의 위치의 변화량은?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "위치의 변화량은 ∫₀² 3t² dt = [t³]₀² = 8 − 0 = 8 이다.",
+    "detailedExplanation": "1단계: 위치의 변화량은 ∫₀² v(t) dt = ∫₀² 3t² dt 이다.\n\n2단계: 3t²의 부정적분은 t³이므로 [t³]₀² = 2³ − 0 = 8.\n\n따라서 정답은 8 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "위치의 변화량 = ∫ v(t) dt 이다.",
+      "3t²의 부정적분 t³에 2와 0을 대입하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g012",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = x² − 3x 와 x축이 만나는 점의 x좌표를 모두 구하면?",
+    "choices": [
+      "x = 0, x = 3",
+      "x = 0, x = −3",
+      "x = 3 (중근)",
+      "x = 1, x = 3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x²−3x=0에서 x(x−3)=0이므로 x=0, x=3 이다.",
+    "detailedExplanation": "1단계: x축과의 교점은 y=0일 때이므로 x²−3x=0 을 푼다.\n\n2단계: 공통인수 x로 묶으면 x(x−3)=0 이므로 x=0 또는 x=3.\n\n따라서 정답은 x = 0, x = 3 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "y=0을 대입해 x를 구한다.",
+      "x로 공통인수를 묶어 인수분해하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g013",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "∫₀³ (2x + 1) dx 의 값은?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 3,
+    "explanation": "2x+1의 부정적분은 x²+x이므로 ∫₀³ (2x+1) dx = [x²+x]₀³ = (9+3) − 0 = 12 이다.",
+    "detailedExplanation": "1단계: 2x+1의 부정적분은 x²+x이다.\n\n2단계: [x²+x]₀³ = (3²+3) − (0+0) = 12 − 0 = 12.\n\n따라서 정답은 12 (④)",
+    "estimatedTime": "1분",
+    "hints": [
+      "항별로 부정적분을 구한다.",
+      "x²+x에 위끝 3과 아래끝 0을 대입해 빼라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g014",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "개념 확인",
+    "question": "곡선 y = 5x⁴ 과 x축, 두 직선 x = 0, x = 1 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "5"
+    ],
+    "answerIndex": 0,
+    "explanation": "넓이는 ∫₀¹ 5x⁴ dx = [x⁵]₀¹ = 1 − 0 = 1 이다.",
+    "detailedExplanation": "1단계: 구간 [0,1]에서 y=5x⁴≥0이므로 넓이는 ∫₀¹ 5x⁴ dx 이다.\n\n2단계: 5x⁴의 부정적분은 x⁵이므로 [x⁵]₀¹ = 1⁵ − 0 = 1.\n\n따라서 정답은 1 (①)",
+    "estimatedTime": "1분",
+    "hints": [
+      "넓이 = ∫₀¹ 5x⁴ dx 로 계산한다.",
+      "5x⁴의 부정적분은 x⁵ 이다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g101",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₀² (6x² − 4x + 1) dx 의 값은?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "answerIndex": 1,
+    "explanation": "부정적분은 2x³ − 2x² + x. 위끝 2를 대입하면 16 − 8 + 2 = 10, 아래끝 0은 0이므로 10.",
+    "detailedExplanation": "1단계: 각 항을 적분한다.\n∫(6x² − 4x + 1) dx = 2x³ − 2x² + x.\n\n2단계: 구간 [0, 2]에서 대입한다.\nx = 2: 2·8 − 2·4 + 2 = 16 − 8 + 2 = 10.\nx = 0: 0.\n\n3단계: 차를 구한다.\n10 − 0 = 10.\n\n따라서 정답은 10 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 거듭제곱 적분 공식으로 적분하세요.",
+      "2x³ − 2x² + x 에 x=2를 대입한 값에서 x=0 대입값을 빼세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g102",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₁³ (2x + 3) dx 의 값은?",
+    "choices": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "부정적분은 x² + 3x. (9 + 9) − (1 + 3) = 18 − 4 = 14.",
+    "detailedExplanation": "1단계: 적분한다.\n∫(2x + 3) dx = x² + 3x.\n\n2단계: 구간 [1, 3]에서 대입한다.\nx = 3: 9 + 9 = 18.\nx = 1: 1 + 3 = 4.\n\n3단계: 차를 구한다.\n18 − 4 = 14.\n\n따라서 정답은 14 (②)",
+    "estimatedTime": "1분",
+    "hints": [
+      "일차식의 정적분이므로 x² + 3x 로 적분하세요.",
+      "위끝 3 대입값에서 아래끝 1 대입값을 빼세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g103",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² 과 x축, 직선 x = 2 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "4/3",
+      "2",
+      "8/3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "구간 [0, 2]에서 y = x² ≥ 0 이므로 넓이 = ∫₀² x² dx = [x³/3]₀² = 8/3.",
+    "detailedExplanation": "1단계: 적분 구간을 정한다.\n곡선 y = x² 은 x축과 x = 0 에서 만나고 x = 2 가 오른쪽 경계이므로 구간은 [0, 2].\n\n2단계: 넓이를 정적분으로 나타낸다.\n[0, 2]에서 y ≥ 0 이므로 넓이 = ∫₀² x² dx.\n\n3단계: 계산한다.\n[x³/3]₀² = 8/3 − 0 = 8/3.\n\n따라서 정답은 8/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "곡선과 x축이 만나는 x = 0 을 적분 구간의 한쪽 끝으로 잡으세요.",
+      "∫₀² x² dx = [x³/3]₀² 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g104",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = 9 − x² 와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "18",
+      "27",
+      "36",
+      "45"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점은 x = ±3. 넓이 = ∫₋₃³ (9 − x²) dx = [9x − x³/3]₋₃³ = 18 − (−18) = 36.",
+    "detailedExplanation": "1단계: 교점을 구한다.\n9 − x² = 0 → x = ±3.\n\n2단계: 넓이를 적분으로 나타낸다.\n[−3, 3]에서 y ≥ 0 이므로 넓이 = ∫₋₃³ (9 − x²) dx.\n\n3단계: 계산한다.\n[9x − x³/3]: x = 3 → 27 − 9 = 18, x = −3 → −27 + 9 = −18.\n18 − (−18) = 36.\n\n따라서 정답은 36 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "9 − x² = 0 으로 두 교점 x = ±3 을 구하세요.",
+      "좌우 대칭이므로 ∫₀³ 의 2배로 계산해도 됩니다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g105",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² − 1 과 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "2/3",
+      "1",
+      "4/3",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점은 x = ±1. 구간에서 y ≤ 0 이므로 넓이 = ∫₋₁¹ (1 − x²) dx = [x − x³/3]₋₁¹ = 2/3 − (−2/3) = 4/3.",
+    "detailedExplanation": "1단계: 교점을 구한다.\nx² − 1 = 0 → x = ±1.\n\n2단계: 부호를 확인한다.\n[−1, 1]에서 곡선이 x축 아래(y ≤ 0)이므로 넓이 = ∫₋₁¹ (1 − x²) dx.\n\n3단계: 계산한다.\n[x − x³/3]: x = 1 → 1 − 1/3 = 2/3, x = −1 → −2/3.\n2/3 − (−2/3) = 4/3.\n\n따라서 정답은 4/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "곡선이 x축 아래에 있으므로 넓이는 −(x²−1)을 적분합니다.",
+      "∫₋₁¹ (1 − x²) dx = [x − x³/3]₋₁¹ 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g106",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₋₁² 3x² dx 의 값은?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x³. (2³) − (−1)³ = 8 − (−1) = 9.",
+    "detailedExplanation": "1단계: 적분한다.\n∫ 3x² dx = x³.\n\n2단계: 구간 [−1, 2]에서 대입한다.\nx = 2: 8.\nx = −1: −1.\n\n3단계: 차를 구한다.\n8 − (−1) = 9.\n\n따라서 정답은 9 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "3x² 의 부정적분은 x³ 입니다.",
+      "아래끝이 음수이므로 부호에 주의하여 8 − (−1)을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g107",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² 과 직선 y = 2x 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "2/3",
+      "1",
+      "4/3",
+      "5/3"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점: x² = 2x → x = 0, 2. 넓이 = ∫₀² (2x − x²) dx = [x² − x³/3]₀² = 4 − 8/3 = 4/3.",
+    "detailedExplanation": "1단계: 교점을 구한다.\nx² = 2x → x² − 2x = 0 → x = 0, 2.\n\n2단계: 위아래를 판단한다.\n[0, 2]에서 직선 y = 2x 가 곡선 y = x² 보다 위에 있으므로 넓이 = ∫₀² (2x − x²) dx.\n\n3단계: 계산한다.\n[x² − x³/3]₀² = 4 − 8/3 = 4/3.\n\n따라서 정답은 4/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x² = 2x 로 교점 x = 0, 2 를 구하세요.",
+      "구간에서 직선이 위이므로 ∫₀² (2x − x²) dx 를 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g108",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₁² (3x² − 2x) dx 의 값은?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x³ − x². (8 − 4) − (1 − 1) = 4 − 0 = 4.",
+    "detailedExplanation": "1단계: 적분한다.\n∫(3x² − 2x) dx = x³ − x².\n\n2단계: 구간 [1, 2]에서 대입한다.\nx = 2: 8 − 4 = 4.\nx = 1: 1 − 1 = 0.\n\n3단계: 차를 구한다.\n4 − 0 = 4.\n\n따라서 정답은 4 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "각 항을 적분하면 x³ − x² 입니다.",
+      "위끝 2 대입값에서 아래끝 1 대입값을 빼세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g109",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = 6 − x − x² 와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "100/6",
+      "115/6",
+      "125/6",
+      "135/6"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점: 6 − x − x² = 0 → x = −3, 2. 넓이 = ∫₋₃² (6 − x − x²) dx = 125/6.",
+    "detailedExplanation": "1단계: 교점을 구한다.\n6 − x − x² = 0 → x² + x − 6 = 0 → (x+3)(x−2) = 0 → x = −3, 2.\n\n2단계: 넓이를 적분으로 나타낸다.\n[−3, 2]에서 y ≥ 0 이므로 넓이 = ∫₋₃² (6 − x − x²) dx.\n\n3단계: 계산한다.\n[6x − x²/2 − x³/3]: x = 2 → 12 − 2 − 8/3 = 22/3, x = −3 → −18 − 9/2 + 9 = −27/2.\n22/3 − (−27/2) = 44/6 + 81/6 = 125/6.\n\n따라서 정답은 125/6 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "6 − x − x² = 0 을 인수분해하여 교점 x = −3, 2 를 구하세요.",
+      "∫₋₃² (6 − x − x²) dx 를 구간 양끝 대입으로 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g110",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₁⁴ (2x − 1) dx 의 값은?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x² − x. (16 − 4) − (1 − 1) = 12 − 0 = 12.",
+    "detailedExplanation": "1단계: 적분한다.\n∫(2x − 1) dx = x² − x.\n\n2단계: 구간 [1, 4]에서 대입한다.\nx = 4: 16 − 4 = 12.\nx = 1: 1 − 1 = 0.\n\n3단계: 차를 구한다.\n12 − 0 = 12.\n\n따라서 정답은 12 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "일차식을 적분하면 x² − x 입니다.",
+      "위끝 4 대입값에서 아래끝 1 대입값을 빼세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g111",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² 과 직선 y = x + 2 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "7/2",
+      "4",
+      "9/2",
+      "5"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점: x² = x + 2 → x = −1, 2. 넓이 = ∫₋₁² (x + 2 − x²) dx = 9/2.",
+    "detailedExplanation": "1단계: 교점을 구한다.\nx² = x + 2 → x² − x − 2 = 0 → (x+1)(x−2) = 0 → x = −1, 2.\n\n2단계: 위아래를 판단한다.\n[−1, 2]에서 직선 y = x + 2 가 위에 있으므로 넓이 = ∫₋₁² (x + 2 − x²) dx.\n\n3단계: 계산한다.\n[x²/2 + 2x − x³/3]: x = 2 → 2 + 4 − 8/3 = 10/3, x = −1 → 1/2 − 2 + 1/3 = −7/6.\n10/3 − (−7/6) = 20/6 + 7/6 = 27/6 = 9/2.\n\n따라서 정답은 9/2 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "x² = x + 2 로 교점 x = −1, 2 를 구하세요.",
+      "구간에서 직선이 위이므로 ∫₋₁² (x + 2 − x²) dx 를 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g112",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "∫₀¹ (4x³ + 1) dx 의 값은?",
+    "choices": [
+      "1",
+      "3/2",
+      "2",
+      "5/2"
+    ],
+    "answerIndex": 2,
+    "explanation": "부정적분은 x⁴ + x. (1 + 1) − 0 = 2.",
+    "detailedExplanation": "1단계: 적분한다.\n∫(4x³ + 1) dx = x⁴ + x.\n\n2단계: 구간 [0, 1]에서 대입한다.\nx = 1: 1 + 1 = 2.\nx = 0: 0.\n\n3단계: 차를 구한다.\n2 − 0 = 2.\n\n따라서 정답은 2 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "4x³ 의 적분은 x⁴ 임에 주의하세요.",
+      "x⁴ + x 에 x=1을 대입한 값을 구하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g113",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = x² − 2x 와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "2/3",
+      "1",
+      "4/3",
+      "2"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점: x² − 2x = 0 → x = 0, 2. 구간에서 y ≤ 0 이므로 넓이 = ∫₀² (2x − x²) dx = 4/3.",
+    "detailedExplanation": "1단계: 교점을 구한다.\nx² − 2x = 0 → x(x − 2) = 0 → x = 0, 2.\n\n2단계: 부호를 확인한다.\n[0, 2]에서 곡선이 x축 아래(y ≤ 0)이므로 넓이 = ∫₀² (2x − x²) dx.\n\n3단계: 계산한다.\n[x² − x³/3]₀² = 4 − 8/3 = 4/3.\n\n따라서 정답은 4/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "곡선이 x축 아래에 있으므로 −(x²−2x)를 적분합니다.",
+      "∫₀² (2x − x²) dx = [x² − x³/3]₀² 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g114",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "기본 유형",
+    "question": "곡선 y = −x² + 4x 와 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "16/3",
+      "8",
+      "32/3",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "교점: −x² + 4x = 0 → x = 0, 4. 넓이 = ∫₀⁴ (−x² + 4x) dx = [−x³/3 + 2x²]₀⁴ = 32/3.",
+    "detailedExplanation": "1단계: 교점을 구한다.\n−x² + 4x = 0 → x(4 − x) = 0 → x = 0, 4.\n\n2단계: 넓이를 적분으로 나타낸다.\n[0, 4]에서 y ≥ 0 이므로 넓이 = ∫₀⁴ (−x² + 4x) dx.\n\n3단계: 계산한다.\n[−x³/3 + 2x²]₀⁴ = −64/3 + 32 = −64/3 + 96/3 = 32/3.\n\n따라서 정답은 32/3 (③)",
+    "estimatedTime": "1분",
+    "hints": [
+      "−x² + 4x = 0 으로 교점 x = 0, 4 를 구하세요.",
+      "∫₀⁴ (−x² + 4x) dx = [−x³/3 + 2x²]₀⁴ 을 계산하세요."
+    ]
+  },
+  {
+    "id": "m2_iapp_g201",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x² − 3x 와 직선 y = 2x 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "125/6",
+      "125/3",
+      "125/12",
+      "625/6"
+    ],
+    "answerIndex": 0,
+    "explanation": "두 그래프의 교점을 구한 뒤, 위쪽 그래프에서 아래쪽 그래프를 뺀 함수를 교점 사이에서 적분한다.",
+    "detailedExplanation": "1단계: 교점 구하기\nx² − 3x = 2x 에서 x² − 5x = 0, 즉 x(x − 5) = 0 이므로 x = 0, x = 5.\n\n2단계: 위·아래 판별\n구간 (0, 5)에서 직선 y = 2x 가 곡선 y = x² − 3x 보다 위에 있다.\n\n3단계: 넓이 적분\nS = ∫₀⁵ {2x − (x² − 3x)} dx = ∫₀⁵ (5x − x²) dx = [5x²/2 − x³/3]₀⁵ = 125/2 − 125/3.\n\n4단계: 계산\n125/2 − 125/3 = 375/6 − 250/6 = 125/6.\n\n따라서 정답은 125/6 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "두 식을 연립하여 교점의 x좌표부터 구하라.",
+      "(위 함수 − 아래 함수)를 두 교점 사이에서 적분하면 5x − x²을 0부터 5까지 적분하는 형태가 된다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g202",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "두 곡선 y = −x² + 4 와 y = x² − 2x 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "6",
+      "9",
+      "12",
+      "27/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "두 곡선의 교점을 구하고, 위쪽 곡선에서 아래쪽 곡선을 뺀 함수를 적분한다.",
+    "detailedExplanation": "1단계: 교점 구하기\n−x² + 4 = x² − 2x 에서 2x² − 2x − 4 = 0, 즉 x² − x − 2 = 0, (x + 1)(x − 2) = 0 이므로 x = −1, x = 2.\n\n2단계: 위·아래 판별\n구간 (−1, 2)에서 y = −x² + 4 가 y = x² − 2x 보다 위에 있다.\n\n3단계: 넓이 적분\nS = ∫₋₁² {(−x² + 4) − (x² − 2x)} dx = ∫₋₁² (−2x² + 2x + 4) dx.\n\n4단계: 계산\n[−2x³/3 + x² + 4x]₋₁² = (−16/3 + 4 + 8) − (2/3 + 1 − 4) = (−16/3 + 12) − (2/3 − 3) = 20/3 − (−7/3) = 27/3 = 9.\n\n따라서 정답은 9 (②)",
+    "estimatedTime": "2분",
+    "hints": [
+      "두 곡선을 연립하면 x² − x − 2 = 0 이 된다.",
+      "(−x² + 4) − (x² − 2x) = −2x² + 2x + 4 를 −1부터 2까지 적분하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g203",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "정적분 ∫₀³ |x² − 2x| dx 의 값은?",
+    "choices": [
+      "8/3",
+      "2",
+      "0",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² − 2x 의 부호가 바뀌는 x = 2 를 경계로 구간을 나누어 절댓값을 푼다.",
+    "detailedExplanation": "1단계: 부호 분석\nx² − 2x = x(x − 2) 이므로 0 < x < 2 에서 음수, 2 < x < 3 에서 양수이다.\n\n2단계: 절댓값 분리\n∫₀³ |x² − 2x| dx = ∫₀² (2x − x²) dx + ∫₂³ (x² − 2x) dx.\n\n3단계: 각 적분 계산\n∫₀² (2x − x²) dx = [x² − x³/3]₀² = 4 − 8/3 = 4/3.\n∫₂³ (x² − 2x) dx = [x³/3 − x²]₂³ = (9 − 9) − (8/3 − 4) = 0 − (−4/3) = 4/3.\n\n4단계: 합\n4/3 + 4/3 = 8/3.\n\n따라서 정답은 8/3 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "x² − 2x = x(x − 2) 의 부호가 바뀌는 x = 2 에서 구간을 나누어라.",
+      "음수 구간에서는 부호를 바꾸어 (2x − x²)을 적분해야 한다."
+    ]
+  },
+  {
+    "id": "m2_iapp_g204",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ − 4x 와 x축으로 둘러싸인 모든 도형의 넓이의 합은?",
+    "choices": [
+      "8",
+      "4",
+      "16",
+      "8/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x축과의 교점을 구하고, 원점에 대한 대칭성을 이용해 한쪽 넓이의 2배를 구한다.",
+    "detailedExplanation": "1단계: 교점 구하기\nx³ − 4x = x(x² − 4) = x(x − 2)(x + 2) = 0 이므로 x = −2, 0, 2.\n\n2단계: 대칭성 이용\ny = x³ − 4x 는 기함수이므로 그래프는 원점 대칭이다. 따라서 전체 넓이는 (0, 2)에서의 넓이의 2배이다.\n\n3단계: (0, 2) 구간 넓이\n구간 (0, 2)에서 x³ − 4x < 0 이므로 넓이는 ∫₀² (4x − x³) dx = [2x² − x⁴/4]₀² = 8 − 4 = 4.\n\n4단계: 전체 합\n2 × 4 = 8.\n\n따라서 정답은 8 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "x(x − 2)(x + 2) = 0 으로 교점을 먼저 구하라.",
+      "기함수의 대칭성으로 (0, 2)에서의 넓이 ∫₀²(4x − x³)dx 를 2배 하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g205",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = t² − 3t 일 때, t = 0 에서 t = 4 까지 점 P가 실제로 움직인 거리는?",
+    "choices": [
+      "19/3",
+      "8/3",
+      "−8/3",
+      "37/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "움직인 거리는 속도의 절댓값을 적분한 것이므로 v(t)의 부호가 바뀌는 t = 3 에서 구간을 나눈다.",
+    "detailedExplanation": "1단계: 속도의 부호\nv(t) = t² − 3t = t(t − 3) 이므로 0 < t < 3 에서 음수, 3 < t < 4 에서 양수이다.\n\n2단계: 움직인 거리 = ∫|v(t)| dt\n거리 = ∫₀³ (3t − t²) dt + ∫₃⁴ (t² − 3t) dt.\n\n3단계: 각 적분 계산\n∫₀³ (3t − t²) dt = [3t²/2 − t³/3]₀³ = 27/2 − 9 = 9/2.\n∫₃⁴ (t² − 3t) dt = [t³/3 − 3t²/2]₃⁴ = (64/3 − 24) − (9 − 27/2) = (−8/3) − (−9/2) = −8/3 + 9/2 = 11/6.\n\n4단계: 합\n9/2 + 11/6 = 27/6 + 11/6 = 38/6 = 19/3.\n\n따라서 정답은 19/3 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "움직인 거리는 위치 변화량이 아니라 ∫|v(t)|dt 임에 유의하라.",
+      "v(t) = t(t − 3) 의 부호가 바뀌는 t = 3 에서 구간을 나누어 적분하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g206",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "두 곡선 y = x² 과 y = −x² + 8x 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "64/3",
+      "32/3",
+      "128/3",
+      "16/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "두 포물선의 교점을 구하고, 위쪽 곡선에서 아래쪽 곡선을 뺀 함수를 적분한다.",
+    "detailedExplanation": "1단계: 교점 구하기\nx² = −x² + 8x 에서 2x² − 8x = 0, 즉 2x(x − 4) = 0 이므로 x = 0, x = 4.\n\n2단계: 위·아래 판별\n구간 (0, 4)에서 y = −x² + 8x 가 y = x² 보다 위에 있다.\n\n3단계: 넓이 적분\nS = ∫₀⁴ {(−x² + 8x) − x²} dx = ∫₀⁴ (−2x² + 8x) dx.\n\n4단계: 계산\n[−2x³/3 + 4x²]₀⁴ = −128/3 + 64 = −128/3 + 192/3 = 64/3.\n\n따라서 정답은 64/3 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "두 식을 연립하면 2x(x − 4) = 0 이 된다.",
+      "(−x² + 8x) − x² = −2x² + 8x 를 0부터 4까지 적분하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g207",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = 4x 와 x축, 두 직선 x = 1, x = 3 으로 둘러싸인 부분의 넓이는?",
+    "choices": [
+      "16",
+      "8",
+      "20",
+      "24"
+    ],
+    "answerIndex": 0,
+    "explanation": "구간 [1, 3]에서 y = 4x ≥ 0 이므로 넓이는 ∫₁³ 4x dx 이다.",
+    "detailedExplanation": "1단계: 부호 확인\n구간 1 ≤ x ≤ 3 에서 y = 4x > 0 이므로 넓이는 곡선과 x축 사이의 정적분이다.\n\n2단계: 넓이 적분\nS = ∫₁³ 4x dx = [2x²]₁³.\n\n3단계: 계산\n2 · 9 − 2 · 1 = 18 − 2 = 16.\n\n4단계: 검산\n사다리꼴 넓이로 보면 윗변 4, 아랫변 12, 높이 2 → (4 + 12) × 2 / 2 = 16 으로 일치한다.\n\n따라서 정답은 16 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "구간 [1, 3]에서 y = 4x 가 양수이므로 그대로 정적분하면 된다.",
+      "∫₁³ 4x dx = [2x²]₁³ 을 계산하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g208",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "양수 a에 대하여 ∫₀ᵃ (x² − 2x) dx = 0 을 만족시키는 a의 값은?",
+    "choices": [
+      "3",
+      "2",
+      "6",
+      "9"
+    ],
+    "answerIndex": 0,
+    "explanation": "좌변을 a에 대한 식으로 적분한 뒤 0이 되는 양수 a를 구한다.",
+    "detailedExplanation": "1단계: 적분하기\n∫₀ᵃ (x² − 2x) dx = [x³/3 − x²]₀ᵃ = a³/3 − a².\n\n2단계: 방정식 세우기\na³/3 − a² = 0.\n\n3단계: 풀이\n양변에 3을 곱하면 a³ − 3a² = 0, 즉 a²(a − 3) = 0 이므로 a = 0 또는 a = 3.\n\n4단계: 조건 적용\na는 양수이므로 a = 3.\n\n따라서 정답은 3 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "먼저 ∫₀ᵃ (x² − 2x) dx 를 a에 대한 식으로 나타내라.",
+      "a³/3 − a² = 0 에서 a²(a − 3) = 0 을 풀고 양수 조건을 적용하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g209",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x² − 4 와 직선 y = 2x − 1 로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "32/3",
+      "16/3",
+      "32",
+      "64/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "교점을 구한 뒤, 위쪽인 직선에서 아래쪽인 곡선을 뺀 함수를 적분한다.",
+    "detailedExplanation": "1단계: 교점 구하기\nx² − 4 = 2x − 1 에서 x² − 2x − 3 = 0, (x + 1)(x − 3) = 0 이므로 x = −1, x = 3.\n\n2단계: 위·아래 판별\n구간 (−1, 3)에서 직선 y = 2x − 1 이 곡선 y = x² − 4 보다 위에 있다.\n\n3단계: 넓이 적분\nS = ∫₋₁³ {(2x − 1) − (x² − 4)} dx = ∫₋₁³ (−x² + 2x + 3) dx.\n\n4단계: 계산\n[−x³/3 + x² + 3x]₋₁³ = (−9 + 9 + 9) − (1/3 + 1 − 3) = 9 − (−5/3) = 9 + 5/3 = 32/3.\n\n따라서 정답은 32/3 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "두 식을 연립하면 x² − 2x − 3 = 0 이 된다.",
+      "(직선 − 곡선) = −x² + 2x + 3 을 −1부터 3까지 적분하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g210",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "수직선 위를 움직이는 점 P의 시각 t에서의 속도가 v(t) = 3t² − 12 이다. t = 0 에서 점 P의 위치가 1일 때, t = 3 에서 점 P의 위치는?",
+    "choices": [
+      "−8",
+      "8",
+      "10",
+      "−10"
+    ],
+    "answerIndex": 0,
+    "explanation": "위치는 처음 위치에 위치의 변화량(속도의 정적분)을 더한 값이다.",
+    "detailedExplanation": "1단계: 위치 변화량\n위치 변화량 = ∫₀³ v(t) dt = ∫₀³ (3t² − 12) dt.\n\n2단계: 적분 계산\n[t³ − 12t]₀³ = (27 − 36) − 0 = −9.\n\n3단계: 위치 구하기\n(t = 3 에서의 위치) = (t = 0 에서의 위치) + 변화량 = 1 + (−9) = −8.\n\n4단계: 정리\n움직인 거리가 아니라 위치이므로 부호 그대로 더하면 된다.\n\n따라서 정답은 −8 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "위치 = 처음 위치 + ∫₀³ v(t) dt 임을 이용하라.",
+      "∫₀³ (3t² − 12) dt = [t³ − 12t]₀³ 을 구해 1에 더하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g211",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "곡선 y = x³ − x² 과 x축으로 둘러싸인 도형의 넓이는?",
+    "choices": [
+      "1/12",
+      "1/4",
+      "1/6",
+      "1/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "x축과의 교점을 구한 뒤, 곡선이 x축 아래에 있는 구간에서 절댓값을 취해 적분한다.",
+    "detailedExplanation": "1단계: 교점 구하기\nx³ − x² = x²(x − 1) = 0 이므로 x = 0(중근), x = 1.\n\n2단계: 부호 판별\n구간 (0, 1)에서 x²(x − 1) < 0 이므로 곡선은 x축 아래에 있다.\n\n3단계: 넓이 적분\nS = ∫₀¹ {−(x³ − x²)} dx = ∫₀¹ (x² − x³) dx.\n\n4단계: 계산\n[x³/3 − x⁴/4]₀¹ = 1/3 − 1/4 = 4/12 − 3/12 = 1/12.\n\n따라서 정답은 1/12 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "x²(x − 1) = 0 으로 교점을 구하면 둘러싸인 구간은 0부터 1까지이다.",
+      "구간 (0, 1)에서 곡선이 x축 아래이므로 (x² − x³)을 적분하라."
+    ]
+  },
+  {
+    "id": "m2_iapp_g212",
+    "subject": "수학Ⅱ",
+    "chapter": "적분",
+    "lesson": "정적분의 활용",
+    "difficulty": "대표 유형",
+    "question": "연속함수 f(x)가 모든 실수 x에 대하여 f(x) = 4x + ∫₀² f(t) dt 를 만족시킬 때, ∫₀³ f(x) dx 의 값은?",
+    "choices": [
+      "−6",
+      "6",
+      "18",
+      "−18"
+    ],
+    "answerIndex": 0,
+    "explanation": "정적분 ∫₀² f(t) dt 는 상수이므로 이를 미지수로 두고 f(x)를 결정한다.",
+    "detailedExplanation": "1단계: 상수 치환\n∫₀² f(t) dt 는 상수이므로 a = ∫₀² f(t) dt 로 놓으면 f(x) = 4x + a.\n\n2단계: a에 대한 방정식\na = ∫₀² (4x + a) dx = [2x² + ax]₀² = 8 + 2a.\n따라서 a = 8 + 2a, 즉 −a = 8, a = −8.\n\n3단계: f(x) 결정\nf(x) = 4x − 8.\n\n4단계: 구하는 적분\n∫₀³ (4x − 8) dx = [2x² − 8x]₀³ = 18 − 24 = −6.\n\n따라서 정답은 −6 (①)",
+    "estimatedTime": "2분",
+    "hints": [
+      "∫₀² f(t) dt 는 상수이므로 a로 두고 f(x) = 4x + a 로 표현하라.",
+      "a = ∫₀²(4x + a)dx 로 a를 구한 뒤 ∫₀³ f(x) dx 를 계산하라."
+    ]
   }
 ]
