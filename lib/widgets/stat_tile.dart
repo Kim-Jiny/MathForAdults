@@ -25,11 +25,17 @@ class StatTile extends StatelessWidget {
           Icon(icon, size: 20, color: valueColor ?? theme.colorScheme.primary),
           const SizedBox(height: 4),
         ],
-        Text(
-          value,
-          style: theme.textTheme.headlineSmall?.copyWith(
-            fontWeight: FontWeight.w800,
-            color: valueColor ?? theme.colorScheme.onSurface,
+        // 값이 긴 텍스트(예: 과목명)여도 한 줄을 유지하도록 너비에 맞춰 축소.
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            value,
+            maxLines: 1,
+            softWrap: false,
+            style: theme.textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.w800,
+              color: valueColor ?? theme.colorScheme.onSurface,
+            ),
           ),
         ),
         const SizedBox(height: 2),
