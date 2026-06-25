@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 import 'dart:math' as math;
 
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -50,11 +52,58 @@ class AdService {
     }
 
     try {
+      // 광고 SDK 초기화 전에 동의를 먼저 처리한다:
+      // (1) Google UMP(GDPR/EEA) 동의, (2) iOS ATT(추적 동의).
+      await _gatherConsentAndAtt();
       await MobileAds.instance.initialize();
       _loadInterstitial();
       _loadRewarded();
     } catch (e) {
       debugPrint('AdMob 초기화 실패: $e');
+    }
+  }
+
+  /// 광고 SDK 초기화 전 동의 수집: Google UMP(GDPR) → iOS ATT 순서.
+  /// 어느 단계가 실패해도 광고 초기화는 진행한다(비맞춤형으로 폴백).
+  Future<void> _gatherConsentAndAtt() async {
+    // 1) Google UMP: 동의 정보 갱신 + (필요 시) 동의 폼 표시.
+    try {
+      final completer = Completer<void>();
+      final params = ConsentRequestParameters();
+      ConsentInformation.instance.requestConsentInfoUpdate(
+        params,
+        () async {
+          try {
+            await ConsentForm.loadAndShowConsentFormIfRequired((formError) {
+              if (formError != null) {
+                debugPrint('UMP 동의 폼 오류: ${formError.message}');
+              }
+            });
+          } finally {
+            if (!completer.isCompleted) completer.complete();
+          }
+        },
+        (requestError) {
+          debugPrint('UMP 정보 갱신 오류: ${requestError.message}');
+          if (!completer.isCompleted) completer.complete();
+        },
+      );
+      await completer.future;
+    } catch (e) {
+      debugPrint('UMP 처리 실패: $e');
+    }
+
+    // 2) iOS ATT: 아직 결정되지 않았을 때만 추적 동의 프롬프트 표시.
+    if (Platform.isIOS) {
+      try {
+        final status =
+            await AppTrackingTransparency.trackingAuthorizationStatus;
+        if (status == TrackingStatus.notDetermined) {
+          await AppTrackingTransparency.requestTrackingAuthorization();
+        }
+      } catch (e) {
+        debugPrint('ATT 요청 실패: $e');
+      }
     }
   }
 
