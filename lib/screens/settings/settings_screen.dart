@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/notification_service.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
@@ -14,6 +15,8 @@ import 'inquiry_screen.dart';
 /// 설정 탭: 알림 / 목표 / 테마 / 문의 / 앱 정보.
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
+
+  static const _appVersion = '1.0.0';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -141,17 +144,119 @@ class SettingsScreen extends ConsumerWidget {
                   title: const Text('앱 정보',
                       style: TextStyle(fontWeight: FontWeight.w600)),
                   trailing: const Icon(Icons.chevron_right_rounded),
-                  onTap: () => showAboutDialog(
-                    context: context,
-                    applicationName: AppLocalizations.of(context).appName,
-                    applicationVersion: '1.0.0',
-                    applicationLegalese: '어른이 다시 시작하는 수학 루틴',
-                  ),
+                  onTap: () => _showAboutDialog(context),
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  /// 앱 디자인 언어에 맞춘 커스텀 '앱 정보' 다이얼로그.
+  void _showAboutDialog(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final appName = AppLocalizations.of(context).appName;
+
+    showDialog<void>(
+      context: context,
+      builder: (dialogCtx) => Dialog(
+        backgroundColor: scheme.surface,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 28, 24, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 브랜드 배지 (테마 그라데이션)
+              Container(
+                width: 72,
+                height: 72,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [AppColors.primary, AppColors.accent],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.32),
+                      blurRadius: 18,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
+                ),
+                child: const Text(
+                  'x²',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w800,
+                    height: 1,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 18),
+              Text(appName,
+                  style: theme.textTheme.titleLarge
+                      ?.copyWith(fontWeight: FontWeight.w800)),
+              const SizedBox(height: 8),
+              // 버전 칩
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                decoration: BoxDecoration(
+                  color: scheme.primary.withValues(alpha: 0.10),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text('버전 $_appVersion',
+                    style: theme.textTheme.labelMedium?.copyWith(
+                        color: scheme.primary, fontWeight: FontWeight.w700)),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                '어른이 다시 시작하는 수학 루틴',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodyMedium?.copyWith(
+                    color: scheme.onSurfaceVariant, height: 1.5),
+              ),
+              const SizedBox(height: 20),
+              Divider(height: 1, color: scheme.outlineVariant),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () {
+                        Navigator.of(dialogCtx).pop();
+                        showLicensePage(
+                          context: context,
+                          applicationName: appName,
+                          applicationVersion: _appVersion,
+                        );
+                      },
+                      icon: const Icon(Icons.description_outlined, size: 18),
+                      label: const Text('오픈소스 라이선스'),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  FilledButton(
+                    onPressed: () => Navigator.of(dialogCtx).pop(),
+                    child: const Text('닫기'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
+              Text('© 2026 Jiny',
+                  style: theme.textTheme.labelSmall
+                      ?.copyWith(color: scheme.onSurfaceVariant)),
+            ],
+          ),
+        ),
       ),
     );
   }
