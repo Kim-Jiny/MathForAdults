@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../models/difficulty.dart';
+import '../../models/exam_analysis.dart';
 import '../../models/math_problem.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/math_text.dart';
+import '../quiz/quiz_launcher.dart';
+import 'exam_analysis_cards.dart';
 
 /// 모의수능 결과 + 문항별 해설.
 class ExamResultView extends StatelessWidget {
@@ -24,18 +27,10 @@ class ExamResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    var score = 0;
-    var maxScore = 0;
-    var correctCount = 0;
-    for (var i = 0; i < problems.length; i++) {
-      final pts = problems[i].difficulty.examPoints;
-      maxScore += pts;
-      final resp = answers[i] ?? '';
-      if (resp.trim().isNotEmpty && problems[i].isCorrect(resp)) {
-        score += pts;
-        correctCount++;
-      }
-    }
+    final a = ExamAnalysis.from(problems, answers);
+    final score = a.score;
+    final maxScore = a.maxScore;
+    final correctCount = a.correctCount;
 
     return Scaffold(
       appBar: AppBar(
@@ -74,6 +69,15 @@ class ExamResultView extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(height: 24),
+            ExamAnalysisCards(
+              analysis: a,
+              onRetryWrong: () => QuizLauncher.startWith(
+                context,
+                a.wrongProblems,
+                title: '오답 다시 풀기',
               ),
             ),
             const SizedBox(height: 24),

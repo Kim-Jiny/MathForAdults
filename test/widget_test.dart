@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:math_for_adults/l10n/app_localizations.dart';
 import 'package:math_for_adults/models/concept_card.dart';
 import 'package:math_for_adults/models/difficulty.dart';
+import 'package:math_for_adults/models/exam_analysis.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/models/user_stats.dart';
 import 'package:math_for_adults/state/app_state.dart';
@@ -144,6 +145,69 @@ void main() {
       // 같은 날 재출석은 무시
       n.checkIn(today);
       expect(n.state.attendance.length, 2);
+    });
+  });
+
+  group('모의수능 결과 분석', () {
+    MathProblem prob({
+      required String subject,
+      required String lesson,
+      required Difficulty difficulty,
+      required int answerIndex,
+    }) => MathProblem(
+      id: '$subject-$lesson-$answerIndex',
+      subject: subject,
+      chapter: '단원',
+      lesson: lesson,
+      difficulty: difficulty,
+      question: 'q',
+      choices: const ['a', 'b', 'c', 'd'],
+      answerIndex: answerIndex,
+      explanation: 'e',
+      estimatedTime: '1분',
+    );
+
+    final problems = [
+      prob(subject: '수학Ⅰ', lesson: '등차수열', difficulty: Difficulty.basic, answerIndex: 0), // 2점
+      prob(subject: '수학Ⅱ', lesson: '미분', difficulty: Difficulty.typical, answerIndex: 1), // 3점
+      prob(subject: '미적분', lesson: '급수', difficulty: Difficulty.csatReal, answerIndex: 2), // 4점
+      prob(subject: '미적분', lesson: '급수', difficulty: Difficulty.applied, answerIndex: 3), // 3점
+    ];
+    // p1 정답, p2 오답, p3 정답, p4 미응답
+    final answers = {0: '0', 1: '0', 2: '2'};
+    final a = ExamAnalysis.from(problems, answers);
+
+    test('점수·정답률 집계', () {
+      expect(a.maxScore, 12);
+      expect(a.score, 6); // 2 + 4
+      expect(a.correctCount, 2);
+      expect(a.totalCount, 4);
+      expect(a.accuracy, 0.5);
+    });
+
+    test('배점별 통계', () {
+      expect(a.tiers.map((t) => t.points), [2, 3, 4]);
+      expect(a.tiers[0].correct, 1); // 2점 1/1
+      expect(a.tiers[1].correct, 0); // 3점 0/2
+      expect(a.tiers[2].correct, 1); // 4점 1/1
+    });
+
+    test('공통 vs 선택 영역', () {
+      expect(a.common.total, 2);
+      expect(a.common.scoreGot, 2);
+      expect(a.common.scoreMax, 5);
+      expect(a.elective.total, 2);
+      expect(a.elective.scoreGot, 4);
+      expect(a.elective.scoreMax, 7);
+    });
+
+    test('오답 단원·과목·다시풀기 목록', () {
+      expect(a.wrongProblems.length, 2); // p2, p4
+      expect(a.wrongBySubject['수학Ⅱ'], 1);
+      expect(a.wrongBySubject['미적분'], 1);
+      // 급수(미적분)는 1문항만 틀림(p4), 미분(수학Ⅱ)도 1문항.
+      final lessons = a.wrongLessons.map((l) => l.lesson).toSet();
+      expect(lessons, {'미분', '급수'});
     });
   });
 
