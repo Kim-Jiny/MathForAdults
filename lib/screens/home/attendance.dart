@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 
 /// 홈 상단 출석 버튼. 탭하면 출석 달력 시트가 열린다.
 class AttendanceButton extends ConsumerWidget {
@@ -30,7 +31,7 @@ class AttendanceButton extends ConsumerWidget {
             children: [
               Icon(done ? Icons.local_fire_department_rounded : Icons.event_available_rounded,
                   size: 16,
-                  color: done ? const Color(0xFFE08A3C) : scheme.primary),
+                  color: done ? AppColors.streakOf(theme.brightness) : scheme.primary),
               const SizedBox(width: 5),
               Text(
                 done ? '${stats.streakDays}일째' : '출석하기',
@@ -113,19 +114,23 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFE08A3C).withValues(alpha: 0.14),
+                    color: AppColors.streakOf(theme.brightness)
+                        .withValues(alpha: 0.14),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.local_fire_department_rounded,
-                          size: 15, color: Color(0xFFE08A3C)),
+                      Icon(Icons.local_fire_department_rounded,
+                          size: 15,
+                          color: AppColors.streakOf(theme.brightness)),
                       const SizedBox(width: 4),
                       Text('연속 ${stats.streakDays}일',
                           style: theme.textTheme.labelMedium?.copyWith(
                               fontWeight: FontWeight.w800,
-                              color: const Color(0xFFB96B22))),
+                              color: theme.brightness == Brightness.dark
+                                  ? AppColors.streakDark
+                                  : const Color(0xFFB96B22))),
                     ],
                   ),
                 ),

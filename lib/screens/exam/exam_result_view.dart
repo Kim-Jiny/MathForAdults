@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/difficulty.dart';
 import '../../models/math_problem.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/math_text.dart';
 
@@ -19,9 +20,6 @@ class ExamResultView extends StatelessWidget {
     required this.elapsed,
     required this.title,
   });
-
-  static const _green = Color(0xFF2E9E6B);
-  static const _red = Color(0xFFD66A5F);
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +102,9 @@ class ExamResultView extends StatelessWidget {
     final resp = (answers[i] ?? '').trim();
     final answered = resp.isNotEmpty;
     final correct = answered && p.isCorrect(resp);
-    final color = correct ? _green : _red;
+    final color = correct
+        ? AppColors.correctOf(theme.brightness)
+        : AppColors.wrongOf(theme.brightness);
 
     String myAnswer;
     if (!answered) {

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/math_text.dart';
 
 /// 정답/해설 패널. 정답 여부 → 짧은 해설 → 상세 해설(접기) → 액션들.
@@ -30,8 +31,12 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
     final theme = Theme.of(context);
     final p = widget.problem;
     final correct = widget.correct;
-    final color = correct ? const Color(0xFF2E9E6B) : const Color(0xFFD66A5F);
-    final bg = correct ? const Color(0xFFE7F5EE) : const Color(0xFFFBECEA);
+    final color = correct
+        ? AppColors.correctOf(theme.brightness)
+        : AppColors.wrongOf(theme.brightness);
+    final bg = correct
+        ? AppColors.correctBgOf(theme.brightness)
+        : AppColors.wrongBgOf(theme.brightness);
     final inReview = ref.watch(statsProvider).wrongProblems.containsKey(p.id);
 
     return Container(
@@ -74,11 +79,14 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
                   width: 22,
                   height: 22,
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF2E9E6B), shape: BoxShape.circle),
+                  decoration: BoxDecoration(
+                      color: AppColors.correctOf(theme.brightness),
+                      shape: BoxShape.circle),
                   child: Text('${p.answerIndex + 1}',
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: theme.brightness == Brightness.dark
+                              ? const Color(0xFF14181C)
+                              : Colors.white,
                           fontSize: 12,
                           fontWeight: FontWeight.w700)),
                 ),

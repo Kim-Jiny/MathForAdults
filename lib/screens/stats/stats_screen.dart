@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
@@ -65,7 +66,7 @@ class StatsScreen extends ConsumerWidget {
                     icon: Icons.flag_rounded,
                     value: weakest ?? '-',
                     label: '약한 단원',
-                    valueColor: const Color(0xFFD66A5F),
+                    valueColor: AppColors.wrongOf(theme.brightness),
                   ),
                 ),
               ),
@@ -115,8 +116,8 @@ class StatsScreen extends ConsumerWidget {
                           ? Icons.check_circle_rounded
                           : Icons.cancel_rounded,
                       color: s.recent[i].correct
-                          ? const Color(0xFF2E9E6B)
-                          : const Color(0xFFD66A5F),
+                          ? AppColors.correctOf(theme.brightness)
+                          : AppColors.wrongOf(theme.brightness),
                     ),
                     title: Text('${s.recent[i].subject} · ${s.recent[i].lesson}',
                         style: const TextStyle(fontWeight: FontWeight.w600)),

@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/difficulty.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/math_text.dart';
 import 'exam_result_view.dart';
 
@@ -163,7 +164,8 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
                   color: warn
-                      ? const Color(0xFFD66A5F).withValues(alpha: 0.15)
+                      ? AppColors.wrongOf(theme.brightness)
+                          .withValues(alpha: 0.15)
                       : theme.colorScheme.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -173,14 +175,14 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                     Icon(Icons.timer_outlined,
                         size: 16,
                         color: warn
-                            ? const Color(0xFFD66A5F)
+                            ? AppColors.wrongOf(theme.brightness)
                             : theme.colorScheme.primary),
                     const SizedBox(width: 4),
                     Text(_fmt(_remaining),
                         style: theme.textTheme.titleSmall?.copyWith(
                           fontWeight: FontWeight.w800,
                           color: warn
-                              ? const Color(0xFFD66A5F)
+                              ? AppColors.wrongOf(theme.brightness)
                               : theme.colorScheme.primary,
                         )),
                   ],

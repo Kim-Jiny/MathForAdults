@@ -5,6 +5,7 @@ import '../../models/concept_card.dart';
 import '../../models/math_problem.dart';
 import '../../services/ads/ad_service.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
@@ -367,7 +368,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final scheme = theme.colorScheme;
     Color border = scheme.outlineVariant;
     if (_checked) {
-      border = _lastCorrect ? const Color(0xFF2E9E6B) : const Color(0xFFD66A5F);
+      border = _lastCorrect
+          ? AppColors.correctOf(theme.brightness)
+          : AppColors.wrongOf(theme.brightness);
     }
     return TextField(
       controller: _shortController,
@@ -411,21 +414,23 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     Color numFg = scheme.onSurfaceVariant;
     Widget? trailing;
 
+    final isDark = theme.brightness == Brightness.dark;
+    final badgeFg = isDark ? const Color(0xFF14181C) : Colors.white;
     if (_checked) {
       if (isAnswer) {
-        border = const Color(0xFF2E9E6B);
-        bg = const Color(0xFFE7F5EE);
-        numBg = const Color(0xFF2E9E6B);
-        numFg = Colors.white;
-        trailing = const Icon(Icons.check_circle_rounded,
-            color: Color(0xFF2E9E6B));
+        final c = AppColors.correctOf(theme.brightness);
+        border = c;
+        bg = AppColors.correctBgOf(theme.brightness);
+        numBg = c;
+        numFg = badgeFg;
+        trailing = Icon(Icons.check_circle_rounded, color: c);
       } else if (isSelected) {
-        border = const Color(0xFFD66A5F);
-        bg = const Color(0xFFFBECEA);
-        numBg = const Color(0xFFD66A5F);
-        numFg = Colors.white;
-        trailing =
-            const Icon(Icons.cancel_rounded, color: Color(0xFFD66A5F));
+        final c = AppColors.wrongOf(theme.brightness);
+        border = c;
+        bg = AppColors.wrongBgOf(theme.brightness);
+        numBg = c;
+        numFg = badgeFg;
+        trailing = Icon(Icons.cancel_rounded, color: c);
       }
     } else if (isSelected) {
       border = scheme.primary;
