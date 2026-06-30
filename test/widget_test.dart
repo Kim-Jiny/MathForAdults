@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:math_for_adults/l10n/app_localizations.dart';
+import 'package:math_for_adults/models/concept_card.dart';
 import 'package:math_for_adults/models/difficulty.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/models/user_stats.dart';
@@ -249,6 +250,26 @@ void main() {
         final file = File('assets/problems/${(s as Map)['file']}');
         expect(file.existsSync(), isTrue, reason: '${s['file']} 없음');
       }
+    });
+
+    test('concepts.json 파싱 · 필수 필드 무결성', () {
+      final json =
+          jsonDecode(File('assets/concepts.json').readAsStringSync())
+              as Map<String, dynamic>;
+      expect(json, isNotEmpty);
+      json.forEach((key, value) {
+        final c = ConceptCard.fromJson(key, value as Map<String, dynamic>);
+        expect(c.title.trim(), isNotEmpty, reason: '$key title');
+        expect(c.points, isNotEmpty, reason: '$key points');
+        // 예시는 질문이 있어야 의미가 있다.
+        for (final e in c.examples) {
+          expect(e.prompt.trim(), isNotEmpty, reason: '$key example prompt');
+        }
+        // O/X 퀴즈는 명제가 있어야 한다(answer는 모델에서 bool 보장).
+        for (final q in c.quiz) {
+          expect(q.statement.trim(), isNotEmpty, reason: '$key quiz statement');
+        }
+      });
     });
   });
 }
