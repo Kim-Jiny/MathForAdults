@@ -150,7 +150,13 @@ class ChapterLessonsScreen extends ConsumerWidget {
                         style: OutlinedButton.styleFrom(
                           minimumSize: const Size.fromHeight(46),
                         ),
-                        onPressed: () => showConceptSheet(context, concept),
+                        onPressed: () {
+                          // 난이도 시트를 먼저 닫고 개념 시트를 띄운다.
+                          // (시트를 겹쳐 쌓으면 상세 페이지에서 뒤로 갈 때
+                          //  이전 난이도 시트가 다시 보이는 문제가 생김)
+                          Navigator.of(sheetCtx).pop();
+                          showConceptSheet(context, concept);
+                        },
                         icon: const Text('📘', style: TextStyle(fontSize: 16)),
                         label: const Text('개념 카드 먼저 보기'),
                       ),

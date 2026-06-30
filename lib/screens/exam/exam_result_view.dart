@@ -63,8 +63,7 @@ class ExamResultView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       _mini(theme, '$correctCount / ${problems.length}', '정답'),
-                      _mini(theme, '${(correctCount / problems.length * 100).round()}%',
-                          '정답률'),
+                      _mini(theme, '${(a.accuracy * 100).round()}%', '정답률'),
                       _mini(theme, _fmt(elapsed), '소요'),
                     ],
                   ),

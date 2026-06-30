@@ -322,9 +322,26 @@ void main() {
               as Map<String, dynamic>;
       expect(json, isNotEmpty);
       json.forEach((key, value) {
-        final c = ConceptCard.fromJson(key, value as Map<String, dynamic>);
+        final raw = value as Map<String, dynamic>;
+        final c = ConceptCard.fromJson(key, raw);
         expect(c.title.trim(), isNotEmpty, reason: '$key title');
         expect(c.points, isNotEmpty, reason: '$key points');
+        // 파서가 원본 항목을 누락 없이 모두 읽었는지(개수 일치).
+        expect(
+          c.points.length,
+          (raw['points'] as List?)?.length ?? 0,
+          reason: '$key points 개수',
+        );
+        expect(
+          c.examples.length,
+          (raw['examples'] as List?)?.length ?? 0,
+          reason: '$key examples 개수',
+        );
+        expect(
+          c.quiz.length,
+          (raw['quiz'] as List?)?.length ?? 0,
+          reason: '$key quiz 개수',
+        );
         // 예시는 질문이 있어야 의미가 있다.
         for (final e in c.examples) {
           expect(e.prompt.trim(), isNotEmpty, reason: '$key example prompt');
