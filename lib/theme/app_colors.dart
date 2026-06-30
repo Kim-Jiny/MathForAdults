@@ -48,10 +48,6 @@ class AppColors {
   static const Color surfaceDark = Color(0xFF1C2026);
   static const Color outlineDark = Color(0xFF2C323B);
 
-  // 텍스트
-  static const Color textPrimary = Color(0xFF1B2430);
-  static const Color textSecondary = Color(0xFF63718A);
-
   // 난이도 단계별 색 (은은한 단계감)
   static const List<Color> difficultyColors = [
     Color(0xFF6FB1E0), // 개념 확인
