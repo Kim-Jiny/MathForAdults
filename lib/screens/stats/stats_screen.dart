@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
@@ -22,10 +23,10 @@ class StatsScreen extends ConsumerWidget {
     // 약한 과목: 한 문제라도 푼 경우, 진행률이 가장 낮은 과목.
     String? weakest;
     if (s.totalSolved > 0 && progressEntries.isNotEmpty) {
-      weakest = (progressEntries.toList()
-            ..sort((a, b) => a.value.compareTo(b.value)))
-          .first
-          .key;
+      weakest =
+          (progressEntries.toList()..sort((a, b) => a.value.compareTo(b.value)))
+              .first
+              .key;
     }
 
     return Scaffold(
@@ -40,8 +41,7 @@ class StatsScreen extends ConsumerWidget {
               children: [
                 StatTile(value: '${s.totalSolved}', label: '푼 문제'),
                 _vline(theme),
-                StatTile(
-                    value: '${(s.accuracy * 100).round()}%', label: '정답률'),
+                StatTile(value: '${(s.accuracy * 100).round()}%', label: '정답률'),
                 _vline(theme),
                 StatTile(value: '${s.streakDays}일', label: '연속'),
               ],
@@ -80,15 +80,21 @@ class StatsScreen extends ConsumerWidget {
             child: progressEntries.isEmpty
                 ? Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Text('아직 푼 문제가 없어요. 한 문제부터 시작해 볼까요?',
-                        style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant)),
+                    child: Text(
+                      '아직 푼 문제가 없어요. 한 문제부터 시작해 볼까요?',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
                   )
                 : Column(
                     children: [
                       for (var i = 0; i < progressEntries.length; i++) ...[
-                        _subjectRow(theme, progressEntries[i].key,
-                            progressEntries[i].value),
+                        _subjectRow(
+                          theme,
+                          progressEntries[i].key,
+                          progressEntries[i].value,
+                        ),
                         if (i != progressEntries.length - 1)
                           const SizedBox(height: 16),
                       ],
@@ -109,8 +115,7 @@ class StatsScreen extends ConsumerWidget {
               children: [
                 for (var i = 0; i < s.recent.length; i++) ...[
                   ListTile(
-                    contentPadding:
-                        const EdgeInsets.symmetric(horizontal: 14),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 14),
                     leading: Icon(
                       s.recent[i].correct
                           ? Icons.check_circle_rounded
@@ -119,18 +124,24 @@ class StatsScreen extends ConsumerWidget {
                           ? AppColors.correctOf(theme.brightness)
                           : AppColors.wrongOf(theme.brightness),
                     ),
-                    title: Text('${s.recent[i].subject} · ${s.recent[i].lesson}',
-                        style: const TextStyle(fontWeight: FontWeight.w600)),
-                    trailing: Text(s.recent[i].dateLabel,
-                        style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant)),
+                    title: Text(
+                      '${s.recent[i].subject} · ${s.recent[i].lesson}',
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    trailing: Text(
+                      _recentDateLabel(s.recent[i]),
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
                   ),
                   if (i != s.recent.length - 1)
                     Divider(
-                        height: 1,
-                        indent: 14,
-                        endIndent: 14,
-                        color: theme.colorScheme.outlineVariant),
+                      height: 1,
+                      indent: 14,
+                      endIndent: 14,
+                      color: theme.colorScheme.outlineVariant,
+                    ),
                 ],
               ],
             ),
@@ -141,18 +152,35 @@ class StatsScreen extends ConsumerWidget {
   }
 
   Widget _subjectRow(ThemeData theme, String name, double v) => Row(
-        children: [
-          SizedBox(
-            width: 96,
-            child: Text(name,
-                style: const TextStyle(fontWeight: FontWeight.w600),
-                overflow: TextOverflow.ellipsis),
-          ),
-          const SizedBox(width: 12),
-          Expanded(child: ProgressBar(value: v)),
-        ],
-      );
+    children: [
+      SizedBox(
+        width: 96,
+        child: Text(
+          name,
+          style: const TextStyle(fontWeight: FontWeight.w600),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      const SizedBox(width: 12),
+      Expanded(child: ProgressBar(value: v)),
+    ],
+  );
 
   Widget _vline(ThemeData theme) =>
       Container(width: 1, height: 36, color: theme.colorScheme.outlineVariant);
+
+  String _recentDateLabel(RecentRecord record) {
+    final key = record.dateKey;
+    if (key == null || key.isEmpty) return record.dateLabel;
+    final today = DateTime.now();
+    final todayKey = StatsNotifier.dateKey(today);
+    if (key == todayKey) return '오늘';
+    final yesterdayKey = StatsNotifier.dateKey(
+      today.subtract(const Duration(days: 1)),
+    );
+    if (key == yesterdayKey) return '어제';
+    final parsed = DateTime.tryParse(key);
+    if (parsed == null) return record.dateLabel;
+    return '${parsed.month}/${parsed.day}';
+  }
 }

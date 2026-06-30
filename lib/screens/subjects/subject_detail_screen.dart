@@ -60,10 +60,13 @@ class _ChapterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final ready = idxChapter != null;
-    final recommended = ready && idxChapter!.difficulties.isNotEmpty
-        ? (idxChapter!.lessons.first.difficulties.isNotEmpty
-            ? idxChapter!.lessons.first.difficulties.first
-            : idxChapter!.difficulties.first)
+    final firstLessonDifficulties = ready && idxChapter!.lessons.isNotEmpty
+        ? idxChapter!.lessons.first.difficulties
+        : const [];
+    final recommended = firstLessonDifficulties.isNotEmpty
+        ? firstLessonDifficulties.first
+        : ready && idxChapter!.difficulties.isNotEmpty
+        ? idxChapter!.difficulties.first
         : null;
     final total = idxChapter?.count ?? 0;
     final p = total == 0 ? 0.0 : (solved / total).clamp(0.0, 1.0);
@@ -73,11 +76,13 @@ class _ChapterCard extends StatelessWidget {
       child: AppCard(
         onTap: ready
             ? () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => ChapterLessonsScreen(
-                        subjectName: subject.name, chapter: chapter),
+                MaterialPageRoute(
+                  builder: (_) => ChapterLessonsScreen(
+                    subjectName: subject.name,
+                    chapter: chapter,
                   ),
-                )
+                ),
+              )
             : null,
         color: ready ? null : theme.colorScheme.surfaceContainerHighest,
         child: Column(
@@ -86,16 +91,19 @@ class _ChapterCard extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Text(chapter,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w800,
-                        color:
-                            ready ? null : theme.colorScheme.onSurfaceVariant,
-                      )),
+                  child: Text(
+                    chapter,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w800,
+                      color: ready ? null : theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
                 ),
                 if (ready)
-                  Icon(Icons.chevron_right_rounded,
-                      color: theme.colorScheme.onSurfaceVariant)
+                  Icon(
+                    Icons.chevron_right_rounded,
+                    color: theme.colorScheme.onSurfaceVariant,
+                  )
                 else
                   _comingSoon(theme),
               ],
@@ -104,9 +112,12 @@ class _ChapterCard extends StatelessWidget {
               const SizedBox(height: 6),
               Row(
                 children: [
-                  Text('${idxChapter!.lessons.length}개 세부 단원 · 추천',
-                      style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant)),
+                  Text(
+                    '${idxChapter!.lessons.length}개 세부 단원 · 추천',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
                   const SizedBox(width: 8),
                   if (recommended != null)
                     DifficultyBadge(recommended, compact: true),
@@ -117,10 +128,13 @@ class _ChapterCard extends StatelessWidget {
                 children: [
                   Expanded(child: ProgressBar(value: p)),
                   const SizedBox(width: 10),
-                  Text('$solved / $total',
-                      style: theme.textTheme.labelSmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
-                          fontWeight: FontWeight.w600)),
+                  Text(
+                    '$solved / $total',
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -131,13 +145,16 @@ class _ChapterCard extends StatelessWidget {
   }
 
   Widget _comingSoon(ThemeData theme) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-        decoration: BoxDecoration(
-          color: theme.colorScheme.surfaceContainer,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text('준비 중',
-            style: theme.textTheme.labelSmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-      );
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+    decoration: BoxDecoration(
+      color: theme.colorScheme.surfaceContainer,
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Text(
+      '준비 중',
+      style: theme.textTheme.labelSmall?.copyWith(
+        color: theme.colorScheme.onSurfaceVariant,
+      ),
+    ),
+  );
 }

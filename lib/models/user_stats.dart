@@ -15,18 +15,18 @@ class ContinueInfo {
   });
 
   factory ContinueInfo.fromJson(Map<String, dynamic> j) => ContinueInfo(
-        subject: j['subject'] as String,
-        chapter: j['chapter'] as String,
-        lesson: j['lesson'] as String,
-        progress: (j['progress'] as num?)?.toDouble() ?? 0,
-      );
+    subject: j['subject'] as String,
+    chapter: j['chapter'] as String,
+    lesson: j['lesson'] as String,
+    progress: (j['progress'] as num?)?.toDouble() ?? 0,
+  );
 
   Map<String, dynamic> toJson() => {
-        'subject': subject,
-        'chapter': chapter,
-        'lesson': lesson,
-        'progress': progress,
-      };
+    'subject': subject,
+    'chapter': chapter,
+    'lesson': lesson,
+    'progress': progress,
+  };
 }
 
 /// 최근 풀이 기록 한 줄
@@ -36,6 +36,7 @@ class RecentRecord {
   final String lesson;
   final bool correct;
   final String dateLabel;
+  final String? dateKey; // yyyy-MM-dd. 없으면 기존 dateLabel을 그대로 쓴다.
 
   const RecentRecord({
     required this.problemId,
@@ -43,23 +44,26 @@ class RecentRecord {
     required this.lesson,
     required this.correct,
     required this.dateLabel,
+    this.dateKey,
   });
 
   factory RecentRecord.fromJson(Map<String, dynamic> j) => RecentRecord(
-        problemId: j['problemId'] as String,
-        subject: j['subject'] as String,
-        lesson: j['lesson'] as String,
-        correct: j['correct'] as bool? ?? false,
-        dateLabel: j['dateLabel'] as String? ?? '',
-      );
+    problemId: j['problemId'] as String,
+    subject: j['subject'] as String,
+    lesson: j['lesson'] as String,
+    correct: j['correct'] as bool? ?? false,
+    dateLabel: j['dateLabel'] as String? ?? '',
+    dateKey: j['dateKey'] as String?,
+  );
 
   Map<String, dynamic> toJson() => {
-        'problemId': problemId,
-        'subject': subject,
-        'lesson': lesson,
-        'correct': correct,
-        'dateLabel': dateLabel,
-      };
+    'problemId': problemId,
+    'subject': subject,
+    'lesson': lesson,
+    'correct': correct,
+    'dateLabel': dateLabel,
+    'dateKey': dateKey,
+  };
 }
 
 /// 사용자 학습 상태. 로컬에 영속화된다.
@@ -68,6 +72,7 @@ class UserStats {
   final int totalCorrect;
   final int streakDays;
   final int weeklySolved;
+  final String? weeklyKey; // ISO week key. 주가 바뀌면 weeklySolved 리셋.
   final Map<String, MathProblem> wrongProblems; // 다시 풀 문제 (객체 보관)
   final Map<String, int> solvedByChapter; // "과목|단원" → 푼 문제 수(고유)
   final ContinueInfo? continueFrom;
@@ -80,6 +85,7 @@ class UserStats {
     required this.totalCorrect,
     required this.streakDays,
     required this.weeklySolved,
+    this.weeklyKey,
     required this.wrongProblems,
     required this.solvedByChapter,
     required this.continueFrom,
@@ -90,17 +96,18 @@ class UserStats {
 
   /// 첫 실행/초기화 상태 (전부 0).
   factory UserStats.empty() => const UserStats(
-        totalSolved: 0,
-        totalCorrect: 0,
-        streakDays: 0,
-        weeklySolved: 0,
-        wrongProblems: {},
-        solvedByChapter: {},
-        continueFrom: null,
-        recent: [],
-        attendance: {},
-        solvedIds: {},
-      );
+    totalSolved: 0,
+    totalCorrect: 0,
+    streakDays: 0,
+    weeklySolved: 0,
+    weeklyKey: null,
+    wrongProblems: {},
+    solvedByChapter: {},
+    continueFrom: null,
+    recent: [],
+    attendance: {},
+    solvedIds: {},
+  );
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
 
@@ -123,6 +130,7 @@ class UserStats {
     int? totalCorrect,
     int? streakDays,
     int? weeklySolved,
+    String? weeklyKey,
     Map<String, MathProblem>? wrongProblems,
     Map<String, int>? solvedByChapter,
     ContinueInfo? continueFrom,
@@ -135,6 +143,7 @@ class UserStats {
       totalCorrect: totalCorrect ?? this.totalCorrect,
       streakDays: streakDays ?? this.streakDays,
       weeklySolved: weeklySolved ?? this.weeklySolved,
+      weeklyKey: weeklyKey ?? this.weeklyKey,
       wrongProblems: wrongProblems ?? this.wrongProblems,
       solvedByChapter: solvedByChapter ?? this.solvedByChapter,
       continueFrom: continueFrom ?? this.continueFrom,
@@ -158,16 +167,29 @@ class UserStats {
     final seen = <String>{};
     final mergedRecent = <RecentRecord>[];
     for (final r in [...recent, ...other.recent]) {
-      if (seen.add('${r.problemId}|${r.dateLabel}')) mergedRecent.add(r);
+      if (seen.add('${r.problemId}|${r.dateKey ?? r.dateLabel}')) {
+        mergedRecent.add(r);
+      }
       if (mergedRecent.length >= 20) break;
     }
+    final mergedWeeklyKey = _latestKey(weeklyKey, other.weeklyKey);
+    final mergedWeeklySolved = weeklyKey == other.weeklyKey
+        ? (weeklySolved > other.weeklySolved
+              ? weeklySolved
+              : other.weeklySolved)
+        : mergedWeeklyKey == weeklyKey
+        ? weeklySolved
+        : other.weeklySolved;
     return UserStats(
-      totalSolved: totalSolved > other.totalSolved ? totalSolved : other.totalSolved,
-      totalCorrect:
-          totalCorrect > other.totalCorrect ? totalCorrect : other.totalCorrect,
+      totalSolved: totalSolved > other.totalSolved
+          ? totalSolved
+          : other.totalSolved,
+      totalCorrect: totalCorrect > other.totalCorrect
+          ? totalCorrect
+          : other.totalCorrect,
       streakDays: streakDays > other.streakDays ? streakDays : other.streakDays,
-      weeklySolved:
-          weeklySolved > other.weeklySolved ? weeklySolved : other.weeklySolved,
+      weeklyKey: mergedWeeklyKey,
+      weeklySolved: mergedWeeklySolved,
       wrongProblems: wrong,
       solvedByChapter: prog,
       continueFrom: continueFrom ?? other.continueFrom,
@@ -175,6 +197,12 @@ class UserStats {
       attendance: attend,
       solvedIds: solved,
     );
+  }
+
+  static String? _latestKey(String? a, String? b) {
+    if (a == null) return b;
+    if (b == null) return a;
+    return a.compareTo(b) >= 0 ? a : b;
   }
 
   factory UserStats.fromJson(Map<String, dynamic> j) {
@@ -191,6 +219,7 @@ class UserStats {
       totalCorrect: j['totalCorrect'] as int? ?? 0,
       streakDays: j['streakDays'] as int? ?? 0,
       weeklySolved: j['weeklySolved'] as int? ?? 0,
+      weeklyKey: j['weeklyKey'] as String?,
       wrongProblems: wrong,
       solvedByChapter: prog,
       continueFrom: j['continueFrom'] == null
@@ -199,25 +228,28 @@ class UserStats {
       recent: (j['recent'] as List<dynamic>? ?? [])
           .map((e) => RecentRecord.fromJson(e as Map<String, dynamic>))
           .toList(),
-      attendance:
-          (j['attendance'] as List<dynamic>? ?? []).map((e) => e.toString()).toSet(),
-      solvedIds:
-          (j['solvedIds'] as List<dynamic>? ?? []).map((e) => e.toString()).toSet(),
+      attendance: (j['attendance'] as List<dynamic>? ?? [])
+          .map((e) => e.toString())
+          .toSet(),
+      solvedIds: (j['solvedIds'] as List<dynamic>? ?? [])
+          .map((e) => e.toString())
+          .toSet(),
     );
   }
 
   Map<String, dynamic> toJson() => {
-        'totalSolved': totalSolved,
-        'totalCorrect': totalCorrect,
-        'streakDays': streakDays,
-        'weeklySolved': weeklySolved,
-        'wrongProblems': {
-          for (final e in wrongProblems.entries) e.key: e.value.toJson()
-        },
-        'solvedByChapter': solvedByChapter,
-        'continueFrom': continueFrom?.toJson(),
-        'recent': recent.map((r) => r.toJson()).toList(),
-        'attendance': attendance.toList(),
-        'solvedIds': solvedIds.toList(),
-      };
+    'totalSolved': totalSolved,
+    'totalCorrect': totalCorrect,
+    'streakDays': streakDays,
+    'weeklySolved': weeklySolved,
+    'weeklyKey': weeklyKey,
+    'wrongProblems': {
+      for (final e in wrongProblems.entries) e.key: e.value.toJson(),
+    },
+    'solvedByChapter': solvedByChapter,
+    'continueFrom': continueFrom?.toJson(),
+    'recent': recent.map((r) => r.toJson()).toList(),
+    'attendance': attendance.toList(),
+    'solvedIds': solvedIds.toList(),
+  };
 }
