@@ -25,25 +25,37 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
     setState(() => _loading = true);
     final repo = ref.read(contentRepositoryProvider);
     final seen = ref.read(statsProvider).solvedIds;
-    final problems = await buildMockExam(repo,
-        elective: _elective, preset: _preset, seen: seen);
-    if (!mounted) return;
-    setState(() => _loading = false);
-    if (problems.length < 3) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('문제가 부족해요. 다른 구성을 선택해 주세요')),
+    try {
+      final problems = await buildMockExam(
+        repo,
+        elective: _elective,
+        preset: _preset,
+        seen: seen,
       );
-      return;
-    }
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) => MockExamScreen(
-          problems: problems,
-          duration: _preset.duration,
-          title: '모의수능 · ${_preset.short}',
+      if (!mounted) return;
+      if (problems.length < 3) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('문제가 부족해요. 다른 구성을 선택해 주세요')),
+        );
+        return;
+      }
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => MockExamScreen(
+            problems: problems,
+            duration: _preset.duration,
+            title: '모의수능 · ${_preset.short}',
+          ),
         ),
-      ),
-    );
+      );
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('문제를 불러오지 못했어요. 잠시 후 다시 시도해 주세요')),
+      );
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
   }
 
   @override
@@ -54,14 +66,20 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
         children: [
-          Text('실제 수능 수학처럼 공통(수학Ⅰ·Ⅱ) + 선택 1과목으로 출제돼요.',
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+          Text(
+            '실제 수능 수학처럼 공통(수학Ⅰ·Ⅱ) + 선택 1과목으로 출제돼요.',
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
           const SizedBox(height: 20),
 
-          Text('선택 과목',
-              style: theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w800)),
+          Text(
+            '선택 과목',
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w800,
+            ),
+          ),
           const SizedBox(height: 10),
           Wrap(
             spacing: 10,
@@ -85,9 +103,12 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
           ),
           const SizedBox(height: 24),
 
-          Text('형식',
-              style: theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w800)),
+          Text(
+            '형식',
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w800,
+            ),
+          ),
           const SizedBox(height: 10),
           ...ExamPreset.values.map((p) {
             final sel = _preset == p;
@@ -113,13 +134,19 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(p.label,
-                              style: theme.textTheme.titleSmall
-                                  ?.copyWith(fontWeight: FontWeight.w700)),
+                          Text(
+                            p.label,
+                            style: theme.textTheme.titleSmall?.copyWith(
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
                           const SizedBox(height: 2),
-                          Text('만점 ${p.totalPoints}점',
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                  color: theme.colorScheme.onSurfaceVariant)),
+                          Text(
+                            '만점 ${p.totalPoints}점',
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: theme.colorScheme.onSurfaceVariant,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -141,10 +168,13 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
                 : const Text('응시 시작'),
           ),
           const SizedBox(height: 8),
-          Text('시작하면 타이머가 작동하고, 제출 전까지 정답은 보이지 않아요.',
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+          Text(
+            '시작하면 타이머가 작동하고, 제출 전까지 정답은 보이지 않아요.',
+            textAlign: TextAlign.center,
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
         ],
       ),
     );

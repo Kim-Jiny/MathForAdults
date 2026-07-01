@@ -48,7 +48,14 @@ class StatsNotifier extends StateNotifier<UserStats> {
     final raw = prefs?.getString(_kStatsKey);
     if (raw == null || raw.isEmpty) return UserStats.empty();
     try {
-      return UserStats.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+      final loaded = UserStats.fromJson(
+        jsonDecode(raw) as Map<String, dynamic>,
+      );
+      final normalized = _normalizeWeekly(loaded, DateTime.now());
+      if (!identical(loaded, normalized)) {
+        prefs?.setString(_kStatsKey, jsonEncode(normalized.toJson()));
+      }
+      return normalized;
     } catch (_) {
       return UserStats.empty();
     }
@@ -59,7 +66,12 @@ class StatsNotifier extends StateNotifier<UserStats> {
   }
 
   /// 문제 풀이 결과 반영.
-  void recordAnswer(MathProblem problem, {required bool correct}) {
+  void recordAnswer(
+    MathProblem problem, {
+    required bool correct,
+    DateTime? answeredAt,
+  }) {
+    final answeredDay = answeredAt ?? DateTime.now();
     final wrong = Map<String, MathProblem>.from(state.wrongProblems);
     if (correct) {
       wrong.remove(problem.id); // 맞히면 다시 풀 문제에서 제거
@@ -82,18 +94,26 @@ class StatsNotifier extends StateNotifier<UserStats> {
         lesson: problem.lesson,
         correct: correct,
         dateLabel: '오늘',
+        dateKey: dateKey(answeredDay),
       ),
       ...state.recent,
     ];
     if (recent.length > 20) recent.removeRange(20, recent.length);
 
-    final solved =
-        newlySolved ? {...state.solvedIds, problem.id} : state.solvedIds;
+    final solved = newlySolved
+        ? {...state.solvedIds, problem.id}
+        : state.solvedIds;
+
+    final weekKey = _weekKey(answeredDay);
+    final weeklySolved = state.weeklyKey == weekKey
+        ? state.weeklySolved + 1
+        : 1;
 
     state = state.copyWith(
       totalSolved: state.totalSolved + 1,
       totalCorrect: state.totalCorrect + (correct ? 1 : 0),
-      weeklySolved: state.weeklySolved + 1,
+      weeklySolved: weeklySolved,
+      weeklyKey: weekKey,
       wrongProblems: wrong,
       solvedByChapter: byChapter,
       recent: recent,
@@ -105,6 +125,22 @@ class StatsNotifier extends StateNotifier<UserStats> {
   /// 'yyyy-MM-dd' 키
   static String dateKey(DateTime d) =>
       '${d.year.toString().padLeft(4, '0')}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+
+  /// 주간 통계 기준 키. 월요일 날짜를 주의 대표값으로 쓴다.
+  static String _weekKey(DateTime d) {
+    final monday = DateTime(
+      d.year,
+      d.month,
+      d.day,
+    ).subtract(Duration(days: d.weekday - DateTime.monday));
+    return dateKey(monday);
+  }
+
+  static UserStats _normalizeWeekly(UserStats stats, DateTime now) {
+    final currentWeekKey = _weekKey(now);
+    if (stats.weeklyKey == currentWeekKey) return stats;
+    return stats.copyWith(weeklySolved: 0, weeklyKey: currentWeekKey);
+  }
 
   /// 오늘 출석 체크. 연속 출석일(streak) 재계산 후 저장.
   void checkIn(DateTime day) {
@@ -137,7 +173,7 @@ class StatsNotifier extends StateNotifier<UserStats> {
 
   /// 전체 상태 교체 (클라우드 동기화 병합 결과 반영).
   void replaceAll(UserStats next) {
-    state = next;
+    state = _normalizeWeekly(next, DateTime.now());
     _persist();
   }
 
@@ -187,11 +223,11 @@ enum DailyGoal { one, three, five, free }
 
 extension DailyGoalInfo on DailyGoal {
   String get label => switch (this) {
-        DailyGoal.one => '하루 1문제',
-        DailyGoal.three => '하루 3문제',
-        DailyGoal.five => '하루 5문제',
-        DailyGoal.free => '자유롭게',
-      };
+    DailyGoal.one => '하루 1문제',
+    DailyGoal.three => '하루 3문제',
+    DailyGoal.five => '하루 5문제',
+    DailyGoal.free => '자유롭게',
+  };
 }
 
 class Settings {
@@ -215,36 +251,35 @@ class Settings {
     int? reminderMinute,
     DailyGoal? dailyGoal,
     ThemeMode? themeMode,
-  }) =>
-      Settings(
-        notificationsOn: notificationsOn ?? this.notificationsOn,
-        reminderHour: reminderHour ?? this.reminderHour,
-        reminderMinute: reminderMinute ?? this.reminderMinute,
-        dailyGoal: dailyGoal ?? this.dailyGoal,
-        themeMode: themeMode ?? this.themeMode,
-      );
+  }) => Settings(
+    notificationsOn: notificationsOn ?? this.notificationsOn,
+    reminderHour: reminderHour ?? this.reminderHour,
+    reminderMinute: reminderMinute ?? this.reminderMinute,
+    dailyGoal: dailyGoal ?? this.dailyGoal,
+    themeMode: themeMode ?? this.themeMode,
+  );
 
   Map<String, dynamic> toJson() => {
-        'notificationsOn': notificationsOn,
-        'reminderHour': reminderHour,
-        'reminderMinute': reminderMinute,
-        'dailyGoal': dailyGoal.name,
-        'themeMode': themeMode.name,
-      };
+    'notificationsOn': notificationsOn,
+    'reminderHour': reminderHour,
+    'reminderMinute': reminderMinute,
+    'dailyGoal': dailyGoal.name,
+    'themeMode': themeMode.name,
+  };
 
   factory Settings.fromJson(Map<String, dynamic> j) => Settings(
-        notificationsOn: j['notificationsOn'] as bool? ?? false,
-        reminderHour: j['reminderHour'] as int? ?? 18,
-        reminderMinute: j['reminderMinute'] as int? ?? 0,
-        dailyGoal: DailyGoal.values.firstWhere(
-          (g) => g.name == j['dailyGoal'],
-          orElse: () => DailyGoal.three,
-        ),
-        themeMode: ThemeMode.values.firstWhere(
-          (m) => m.name == j['themeMode'],
-          orElse: () => ThemeMode.system,
-        ),
-      );
+    notificationsOn: j['notificationsOn'] as bool? ?? false,
+    reminderHour: j['reminderHour'] as int? ?? 18,
+    reminderMinute: j['reminderMinute'] as int? ?? 0,
+    dailyGoal: DailyGoal.values.firstWhere(
+      (g) => g.name == j['dailyGoal'],
+      orElse: () => DailyGoal.three,
+    ),
+    themeMode: ThemeMode.values.firstWhere(
+      (m) => m.name == j['themeMode'],
+      orElse: () => ThemeMode.system,
+    ),
+  );
 }
 
 class SettingsNotifier extends StateNotifier<Settings> {
@@ -253,7 +288,10 @@ class SettingsNotifier extends StateNotifier<Settings> {
   SettingsNotifier([this._prefs]) : super(_load(_prefs)) {
     // 앱 시작 시 켜져 있으면 예약 재설정(재부팅·업데이트 대비).
     if (state.notificationsOn) {
-      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+      NotificationService.scheduleDaily(
+        state.reminderHour,
+        state.reminderMinute,
+      );
     }
   }
 
@@ -275,7 +313,10 @@ class SettingsNotifier extends StateNotifier<Settings> {
     state = state.copyWith(notificationsOn: v);
     _persist();
     if (v) {
-      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+      NotificationService.scheduleDaily(
+        state.reminderHour,
+        state.reminderMinute,
+      );
     } else {
       NotificationService.cancelDaily();
     }

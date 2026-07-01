@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../services/inquiry_service.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 
 /// 문의하기: 작성 → 서버 전송, 내 문의·답변 조회.
@@ -147,7 +148,8 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
       );
 
   Widget _inquiryTile(ThemeData theme, MyInquiry q) {
-    final color = q.replied ? const Color(0xFF2E9E6B) : theme.colorScheme.primary;
+    final green = AppColors.correctOf(theme.brightness);
+    final color = q.replied ? green : theme.colorScheme.primary;
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: AppCard(
@@ -183,18 +185,16 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
                 width: double.infinity,
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2E9E6B).withValues(alpha: 0.07),
+                  color: green.withValues(alpha: 0.07),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                      color: const Color(0xFF2E9E6B).withValues(alpha: 0.3)),
+                  border: Border.all(color: green.withValues(alpha: 0.3)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('답변',
                         style: theme.textTheme.labelMedium?.copyWith(
-                            color: const Color(0xFF2E9E6B),
-                            fontWeight: FontWeight.w800)),
+                            color: green, fontWeight: FontWeight.w800)),
                     const SizedBox(height: 4),
                     Text(q.reply!,
                         style: theme.textTheme.bodyMedium?.copyWith(height: 1.5)),

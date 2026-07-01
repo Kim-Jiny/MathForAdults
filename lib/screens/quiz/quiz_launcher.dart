@@ -39,12 +39,9 @@ class QuizLauncher {
   }) async {
     final problems = await _withLoading(
       context,
-      ref.read(contentRepositoryProvider).loadLesson(
-            subject,
-            chapter,
-            lesson,
-            difficulty: difficulty,
-          ),
+      ref
+          .read(contentRepositoryProvider)
+          .loadLesson(subject, chapter, lesson, difficulty: difficulty),
     );
     if (problems == null || !context.mounted) return;
     startWith(context, problems, title: title ?? lesson);
@@ -80,11 +77,23 @@ class QuizLauncher {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (_) => const Center(child: CircularProgressIndicator()),
+      builder: (_) => const PopScope(
+        canPop: false,
+        child: Center(child: CircularProgressIndicator()),
+      ),
     );
-    final result = await future;
-    if (context.mounted) Navigator.of(context).pop(); // 로딩 닫기
-    return result;
+    try {
+      return await future;
+    } catch (_) {
+      if (context.mounted) {
+        _toast(context, '문제를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.');
+      }
+      return null;
+    } finally {
+      if (context.mounted) {
+        Navigator.of(context, rootNavigator: true).pop();
+      }
+    }
   }
 
   static void _toast(BuildContext context, String msg) =>

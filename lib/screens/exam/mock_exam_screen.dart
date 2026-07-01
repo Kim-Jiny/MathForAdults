@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/difficulty.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/math_text.dart';
 import 'exam_result_view.dart';
 
@@ -33,6 +34,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   late Duration _remaining;
   Timer? _timer;
   bool _submitted = false;
+  bool _dialogOpen = false; // 제출/나가기 확인 다이얼로그가 떠 있는지
 
   List<MathProblem> get _ps => widget.problems;
   MathProblem get _p => _ps[_index];
@@ -44,6 +46,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
       if (_remaining.inSeconds <= 1) {
+        _remaining = Duration.zero; // 소요 시간이 전체 시간으로 정확히 찍히도록
         _submit(auto: true);
       } else {
         setState(() => _remaining -= const Duration(seconds: 1));
@@ -78,6 +81,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   Future<void> _confirmSubmit() async {
     final unanswered = _ps.length - _answeredCount;
     if (unanswered > 0) {
+      _dialogOpen = true;
       final ok = await showDialog<bool>(
         context: context,
         builder: (ctx) => AlertDialog(
@@ -93,7 +97,9 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
           ],
         ),
       );
-      if (ok != true) return;
+      _dialogOpen = false;
+      // 다이얼로그가 열린 사이 시간이 다 되어 자동 제출됐다면 여기서 멈춘다.
+      if (_submitted || ok != true) return;
     }
     _submit();
   }
@@ -101,6 +107,11 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   void _submit({bool auto = false}) {
     if (_submitted) return;
     _timer?.cancel();
+    // 자동 제출 시점에 확인 다이얼로그가 떠 있으면, 결과 화면 위에 남지 않도록 닫는다.
+    if (_dialogOpen) {
+      Navigator.of(context, rootNavigator: true).pop();
+      _dialogOpen = false;
+    }
     final notifier = ref.read(statsProvider.notifier);
     for (var i = 0; i < _ps.length; i++) {
       final resp = _answers[i] ?? '';
@@ -135,6 +146,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
       onPopInvokedWithResult: (didPop, _) async {
         if (didPop) return;
         final nav = Navigator.of(context);
+        _dialogOpen = true;
         final leave = await showDialog<bool>(
           context: context,
           builder: (ctx) => AlertDialog(
@@ -150,6 +162,9 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
             ],
           ),
         );
+        _dialogOpen = false;
+        // 다이얼로그 사이 자동 제출됐다면 나가지 말고 결과 화면을 보여준다.
+        if (_submitted) return;
         if (leave == true && mounted) nav.pop();
       },
       child: Scaffold(
@@ -163,7 +178,8 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
                   color: warn
-                      ? const Color(0xFFD66A5F).withValues(alpha: 0.15)
+                      ? AppColors.wrongOf(theme.brightness)
+                          .withValues(alpha: 0.15)
                       : theme.colorScheme.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -173,14 +189,14 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                     Icon(Icons.timer_outlined,
                         size: 16,
                         color: warn
-                            ? const Color(0xFFD66A5F)
+                            ? AppColors.wrongOf(theme.brightness)
                             : theme.colorScheme.primary),
                     const SizedBox(width: 4),
                     Text(_fmt(_remaining),
                         style: theme.textTheme.titleSmall?.copyWith(
                           fontWeight: FontWeight.w800,
                           color: warn
-                              ? const Color(0xFFD66A5F)
+                              ? AppColors.wrongOf(theme.brightness)
                               : theme.colorScheme.primary,
                         )),
                   ],

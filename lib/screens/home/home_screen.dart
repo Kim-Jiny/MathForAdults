@@ -5,6 +5,7 @@ import '../../models/curriculum_index.dart';
 import '../../models/difficulty.dart';
 import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_backdrop.dart';
@@ -389,10 +390,11 @@ class _ReviewCard extends StatelessWidget {
             width: 46,
             height: 46,
             decoration: BoxDecoration(
-              color: const Color(0xFFD66A5F).withValues(alpha: 0.12),
+              color: AppColors.wrongOf(theme.brightness).withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: const Icon(Icons.refresh_rounded, color: Color(0xFFD66A5F)),
+            child: Icon(Icons.refresh_rounded,
+                color: AppColors.wrongOf(theme.brightness)),
           ),
           const SizedBox(width: 14),
           Expanded(
