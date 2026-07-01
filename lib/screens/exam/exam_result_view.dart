@@ -41,6 +41,15 @@ class ExamResultView extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
           children: [
+            // 어떤 시험 결과인지(프리셋 등) 표시
+            Center(
+              child: Text(title,
+                  style: theme.textTheme.labelLarge?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                    fontWeight: FontWeight.w700,
+                  )),
+            ),
+            const SizedBox(height: 12),
             // 점수 요약
             AppCard(
               color: theme.colorScheme.primary.withValues(alpha: 0.10),

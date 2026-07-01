@@ -352,5 +352,29 @@ void main() {
         }
       });
     });
+
+    test('concepts.json 키가 실제 커리큘럼 단원과 연결됨', () {
+      // 개념 조회는 "과목|단원|세부단원"으로 하므로, 키가 index.json의
+      // 실제 lesson과 정확히 일치하지 않으면 개념 카드가 표시되지 않는다.
+      final index =
+          jsonDecode(File('assets/problems/index.json').readAsStringSync())
+              as Map<String, dynamic>;
+      final valid = <String>{};
+      for (final s in index['subjects'] as List<dynamic>) {
+        final subject = (s as Map)['name'] as String;
+        for (final ch in s['chapters'] as List<dynamic>) {
+          final chapter = (ch as Map)['name'] as String;
+          for (final le in ch['lessons'] as List<dynamic>) {
+            valid.add('$subject|$chapter|${(le as Map)['name']}');
+          }
+        }
+      }
+      final concepts =
+          jsonDecode(File('assets/concepts.json').readAsStringSync())
+              as Map<String, dynamic>;
+      for (final key in concepts.keys) {
+        expect(valid.contains(key), isTrue, reason: '연결 안되는 개념 키: $key');
+      }
+    });
   });
 }
