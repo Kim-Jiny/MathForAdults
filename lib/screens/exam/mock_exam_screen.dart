@@ -46,6 +46,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
       if (_remaining.inSeconds <= 1) {
+        _remaining = Duration.zero; // 소요 시간이 전체 시간으로 정확히 찍히도록
         _submit(auto: true);
       } else {
         setState(() => _remaining -= const Duration(seconds: 1));
