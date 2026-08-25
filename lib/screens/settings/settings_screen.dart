@@ -56,6 +56,15 @@ class SettingsScreen extends ConsumerWidget {
                     onTap: () => _pickTime(context, ref, settings),
                   ),
                 ],
+                const Divider(height: 1, indent: 16, endIndent: 16),
+                SwitchListTile(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                  title: const Text('주간시험 리마인더',
+                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  subtitle: const Text('매주 일요일, 같은 시각에 알려드려요'),
+                  value: settings.weeklyTestReminderOn,
+                  onChanged: (v) => _toggleWeeklyTestReminder(context, ref, v),
+                ),
               ],
             ),
           ),
@@ -194,6 +203,25 @@ class SettingsScreen extends ConsumerWidget {
         content: Text('매일 ${_fmtTime(s.reminderHour, s.reminderMinute)}에 알려드릴게요')));
   }
 
+  Future<void> _toggleWeeklyTestReminder(
+      BuildContext context, WidgetRef ref, bool v) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final notifier = ref.read(settingsProvider.notifier);
+    if (!v) {
+      notifier.toggleWeeklyTestReminder(false);
+      return;
+    }
+    final granted = await NotificationService.requestPermission();
+    if (!granted) {
+      messenger.showSnackBar(const SnackBar(
+          content: Text('알림 권한이 꺼져 있어요. 기기 설정에서 허용해 주세요')));
+      return;
+    }
+    notifier.toggleWeeklyTestReminder(true);
+    messenger.showSnackBar(
+        const SnackBar(content: Text('매주 일요일에 주간시험을 알려드릴게요')));
+  }
+
   Future<void> _pickTime(BuildContext context, WidgetRef ref, Settings s) async {
     final messenger = ScaffoldMessenger.of(context);
     final picked = await showTimePicker(
@@ -244,7 +272,7 @@ class SettingsScreen extends ConsumerWidget {
 class AboutAppDialog extends StatelessWidget {
   const AboutAppDialog({super.key});
 
-  static const _appVersion = '1.0.1';
+  static const _appVersion = '1.0.3';
 
   @override
   Widget build(BuildContext context) {

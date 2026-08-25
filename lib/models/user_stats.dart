@@ -66,6 +66,35 @@ class RecentRecord {
   };
 }
 
+/// 주간시험 응시 결과 한 주치.
+class WeeklyTestRecord {
+  final String weekKey; // 해당 주 월요일 'yyyy-MM-dd'
+  final int correct;
+  final int total;
+  final String dateKey; // 응시일 'yyyy-MM-dd'
+
+  const WeeklyTestRecord({
+    required this.weekKey,
+    required this.correct,
+    required this.total,
+    required this.dateKey,
+  });
+
+  factory WeeklyTestRecord.fromJson(Map<String, dynamic> j) => WeeklyTestRecord(
+    weekKey: j['weekKey'] as String,
+    correct: j['correct'] as int? ?? 0,
+    total: j['total'] as int? ?? 0,
+    dateKey: j['dateKey'] as String? ?? '',
+  );
+
+  Map<String, dynamic> toJson() => {
+    'weekKey': weekKey,
+    'correct': correct,
+    'total': total,
+    'dateKey': dateKey,
+  };
+}
+
 /// 사용자 학습 상태. 로컬에 영속화된다.
 class UserStats {
   final int totalSolved;
@@ -79,6 +108,10 @@ class UserStats {
   final List<RecentRecord> recent;
   final Set<String> attendance; // 출석한 날짜 'yyyy-MM-dd'
   final Set<String> solvedIds; // 한 번이라도 푼 문제 id (모의수능 '안 푼 문제 우선'용)
+  final Set<String> weeklyLessonKeys; // 이번 주 학습한 레슨 "과목|단원|세부단원". 주가 바뀌면 리셋.
+  final List<WeeklyTestRecord> weeklyTestHistory; // 주간시험 응시 기록 (weekKey당 1건, 최신 12건)
+  final int weeklyTestStreak; // 주간시험 연속 응시 주차 수
+  final Map<String, MathProblem> weeklyTestWrong; // 주간시험에서 틀려 다음 주로 이월된 문제(정답 맞히면 제거, 주가 바뀌어도 유지)
 
   const UserStats({
     required this.totalSolved,
@@ -92,6 +125,10 @@ class UserStats {
     required this.recent,
     this.attendance = const {},
     this.solvedIds = const {},
+    this.weeklyLessonKeys = const {},
+    this.weeklyTestHistory = const [],
+    this.weeklyTestStreak = 0,
+    this.weeklyTestWrong = const {},
   });
 
   /// 첫 실행/초기화 상태 (전부 0).
@@ -107,6 +144,10 @@ class UserStats {
     recent: [],
     attendance: {},
     solvedIds: {},
+    weeklyLessonKeys: {},
+    weeklyTestHistory: [],
+    weeklyTestStreak: 0,
+    weeklyTestWrong: {},
   );
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
@@ -137,6 +178,10 @@ class UserStats {
     List<RecentRecord>? recent,
     Set<String>? attendance,
     Set<String>? solvedIds,
+    Set<String>? weeklyLessonKeys,
+    List<WeeklyTestRecord>? weeklyTestHistory,
+    int? weeklyTestStreak,
+    Map<String, MathProblem>? weeklyTestWrong,
   }) {
     return UserStats(
       totalSolved: totalSolved ?? this.totalSolved,
@@ -150,6 +195,10 @@ class UserStats {
       recent: recent ?? this.recent,
       attendance: attendance ?? this.attendance,
       solvedIds: solvedIds ?? this.solvedIds,
+      weeklyLessonKeys: weeklyLessonKeys ?? this.weeklyLessonKeys,
+      weeklyTestHistory: weeklyTestHistory ?? this.weeklyTestHistory,
+      weeklyTestStreak: weeklyTestStreak ?? this.weeklyTestStreak,
+      weeklyTestWrong: weeklyTestWrong ?? this.weeklyTestWrong,
     );
   }
 
@@ -180,6 +229,23 @@ class UserStats {
         : mergedWeeklyKey == weeklyKey
         ? weeklySolved
         : other.weeklySolved;
+    final mergedLessonKeys = weeklyKey == other.weeklyKey
+        ? {...weeklyLessonKeys, ...other.weeklyLessonKeys}
+        : mergedWeeklyKey == weeklyKey
+        ? weeklyLessonKeys
+        : other.weeklyLessonKeys;
+    final testHistoryByWeek = <String, WeeklyTestRecord>{};
+    for (final r in [...weeklyTestHistory, ...other.weeklyTestHistory]) {
+      final existing = testHistoryByWeek[r.weekKey];
+      if (existing == null || r.dateKey.compareTo(existing.dateKey) >= 0) {
+        testHistoryByWeek[r.weekKey] = r;
+      }
+    }
+    final mergedTestHistory = testHistoryByWeek.values.toList()
+      ..sort((a, b) => a.weekKey.compareTo(b.weekKey));
+    final trimmedTestHistory = mergedTestHistory.length > 12
+        ? mergedTestHistory.sublist(mergedTestHistory.length - 12)
+        : mergedTestHistory;
     return UserStats(
       totalSolved: totalSolved > other.totalSolved
           ? totalSolved
@@ -196,6 +262,12 @@ class UserStats {
       recent: mergedRecent,
       attendance: attend,
       solvedIds: solved,
+      weeklyLessonKeys: mergedLessonKeys,
+      weeklyTestHistory: trimmedTestHistory,
+      weeklyTestStreak: weeklyTestStreak > other.weeklyTestStreak
+          ? weeklyTestStreak
+          : other.weeklyTestStreak,
+      weeklyTestWrong: {...other.weeklyTestWrong, ...weeklyTestWrong},
     );
   }
 
@@ -234,6 +306,17 @@ class UserStats {
       solvedIds: (j['solvedIds'] as List<dynamic>? ?? [])
           .map((e) => e.toString())
           .toSet(),
+      weeklyLessonKeys: (j['weeklyLessonKeys'] as List<dynamic>? ?? [])
+          .map((e) => e.toString())
+          .toSet(),
+      weeklyTestHistory: (j['weeklyTestHistory'] as List<dynamic>? ?? [])
+          .map((e) => WeeklyTestRecord.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      weeklyTestStreak: j['weeklyTestStreak'] as int? ?? 0,
+      weeklyTestWrong: {
+        for (final e in (j['weeklyTestWrong'] as Map<String, dynamic>? ?? {}).entries)
+          e.key: MathProblem.fromJson(e.value as Map<String, dynamic>),
+      },
     );
   }
 
@@ -251,5 +334,11 @@ class UserStats {
     'recent': recent.map((r) => r.toJson()).toList(),
     'attendance': attendance.toList(),
     'solvedIds': solvedIds.toList(),
+    'weeklyLessonKeys': weeklyLessonKeys.toList(),
+    'weeklyTestHistory': weeklyTestHistory.map((r) => r.toJson()).toList(),
+    'weeklyTestStreak': weeklyTestStreak,
+    'weeklyTestWrong': {
+      for (final e in weeklyTestWrong.entries) e.key: e.value.toJson(),
+    },
   };
 }

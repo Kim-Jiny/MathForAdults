@@ -9,6 +9,7 @@ class NotificationService {
   static final _plugin = FlutterLocalNotificationsPlugin();
   static bool _inited = false;
   static const _dailyId = 1001;
+  static const _weeklyTestId = 1002;
 
   static Future<void> init() async {
     if (_inited) return;
@@ -94,6 +95,51 @@ class NotificationService {
     try {
       await init();
       await _plugin.cancel(_dailyId);
+    } catch (_) {}
+  }
+
+  /// 매주 일요일 [hour]:[minute]에 주간시험 리마인더 예약 (기존 예약은 교체).
+  static Future<void> scheduleWeeklyTestReminder(int hour, int minute) async {
+    try {
+      await init();
+      await _plugin.cancel(_weeklyTestId);
+
+      final now = tz.TZDateTime.now(tz.local);
+      var when =
+          tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
+      final daysUntilSunday = (DateTime.sunday - when.weekday) % 7;
+      when = when.add(Duration(days: daysUntilSunday));
+      if (!when.isAfter(now)) when = when.add(const Duration(days: 7));
+
+      await _plugin.zonedSchedule(
+        _weeklyTestId,
+        '이번 주 시험 어때요?',
+        '이번 주 배운 내용으로 짧게 확인해봐요',
+        when,
+        const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'weekly_test_reminder',
+            '주간시험 리마인더',
+            channelDescription: '매주 주간시험 알림',
+            importance: Importance.defaultImportance,
+            priority: Priority.defaultPriority,
+          ),
+          iOS: DarwinNotificationDetails(),
+        ),
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+        matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
+      );
+    } catch (_) {
+      // 예약 실패해도 앱 흐름엔 영향 없음.
+    }
+  }
+
+  static Future<void> cancelWeeklyTestReminder() async {
+    try {
+      await init();
+      await _plugin.cancel(_weeklyTestId);
     } catch (_) {}
   }
 }

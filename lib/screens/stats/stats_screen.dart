@@ -28,6 +28,11 @@ class StatsScreen extends ConsumerWidget {
               .first
               .key;
     }
+    // 최신 주가 앞에 오도록 정렬(최대 8건).
+    final weeklyTestRows = ([...s.weeklyTestHistory]
+          ..sort((a, b) => b.weekKey.compareTo(a.weekKey)))
+        .take(8)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(title: const Text('내 기록')),
@@ -103,6 +108,35 @@ class StatsScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 24),
 
+          // 주간시험 기록
+          if (weeklyTestRows.isNotEmpty) ...[
+            const SectionHeader('주간시험 기록'),
+            AppCard(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Column(
+                children: [
+                  for (var i = 0; i < weeklyTestRows.length; i++) ...[
+                    _weeklyTestRow(
+                      theme,
+                      weeklyTestRows[i],
+                      i + 1 < weeklyTestRows.length
+                          ? weeklyTestRows[i + 1]
+                          : null,
+                    ),
+                    if (i != weeklyTestRows.length - 1)
+                      Divider(
+                        height: 1,
+                        indent: 14,
+                        endIndent: 14,
+                        color: theme.colorScheme.outlineVariant,
+                      ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(height: 24),
+          ],
+
           // 최근 풀이 기록
           const BannerAdSlot(
             placement: BannerPlacement.stats,
@@ -165,6 +199,61 @@ class StatsScreen extends ConsumerWidget {
       Expanded(child: ProgressBar(value: v)),
     ],
   );
+
+  Widget _weeklyTestRow(
+    ThemeData theme,
+    WeeklyTestRecord r,
+    WeeklyTestRecord? prev,
+  ) {
+    final acc = r.total == 0 ? 0 : (r.correct / r.total * 100).round();
+    String? delta;
+    IconData? deltaIcon;
+    Color? deltaColor;
+    if (prev != null && prev.total > 0) {
+      final prevAcc = prev.correct / prev.total * 100;
+      final diff = (acc - prevAcc).round();
+      if (diff > 0) {
+        delta = '+$diff%p';
+        deltaIcon = Icons.trending_up_rounded;
+        deltaColor = AppColors.correctOf(theme.brightness);
+      } else if (diff < 0) {
+        delta = '$diff%p';
+        deltaIcon = Icons.trending_down_rounded;
+        deltaColor = AppColors.wrongOf(theme.brightness);
+      }
+    }
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 14),
+      leading: const Icon(Icons.quiz_rounded),
+      title: Text(
+        '${r.correct}/${r.total}문제 · $acc%',
+        style: const TextStyle(fontWeight: FontWeight.w600),
+      ),
+      subtitle: Text(_weekLabel(r.weekKey)),
+      trailing: delta == null
+          ? null
+          : Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(deltaIcon, size: 16, color: deltaColor),
+                const SizedBox(width: 2),
+                Text(
+                  delta,
+                  style: TextStyle(
+                    color: deltaColor,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
+
+  String _weekLabel(String weekKey) {
+    final d = DateTime.tryParse(weekKey);
+    if (d == null) return weekKey;
+    return '${d.month}/${d.day} 주';
+  }
 
   Widget _vline(ThemeData theme) =>
       Container(width: 1, height: 36, color: theme.colorScheme.outlineVariant);

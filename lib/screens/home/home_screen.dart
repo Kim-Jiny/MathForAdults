@@ -15,6 +15,7 @@ import '../../widgets/ads/banner_ad_slot.dart';
 import '../../l10n/app_localizations.dart';
 import '../exam/mock_exam_setup_screen.dart';
 import '../quiz/quiz_launcher.dart';
+import '../weekly_test/weekly_test_launcher.dart';
 import 'attendance.dart';
 
 /// 오늘의 학습 대상 (인덱스에서 해석).
@@ -110,6 +111,8 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: 20),
                 const SectionHeader('이번 주 기록'),
                 _WeeklyCard(),
+                const SizedBox(height: 12),
+                _WeeklyTestCard(),
               ],
             );
           },
@@ -453,4 +456,63 @@ class _WeeklyCard extends ConsumerWidget {
 
   Widget _divider(ThemeData theme) =>
       Container(width: 1, height: 34, color: theme.colorScheme.outlineVariant);
+}
+
+/// 이번 주 학습을 바탕으로 한 짧은 주간시험 진입 카드.
+class _WeeklyTestCard extends ConsumerWidget {
+  static const _threshold = 5;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final s = ref.watch(statsProvider);
+    final ready = s.weeklySolved >= _threshold;
+    return AppCard(
+      onTap: ready ? () => WeeklyTestLauncher.start(context, ref) : null,
+      child: Row(
+        children: [
+          Container(
+            width: 46,
+            height: 46,
+            decoration: BoxDecoration(
+              color: AppColors.streakOf(
+                theme.brightness,
+              ).withValues(alpha: 0.14),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(
+              Icons.emoji_events_rounded,
+              color: AppColors.streakOf(theme.brightness),
+            ),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '이번 주 시험보기',
+                  style: theme.textTheme.titleSmall?.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  ready
+                      ? '이번 주 배운 내용으로 짧게 확인해봐요'
+                      : '${_threshold - s.weeklySolved}문제 더 풀면 열려요',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: scheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          if (ready)
+            Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant),
+        ],
+      ),
+    );
+  }
 }
