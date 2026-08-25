@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:math_for_adults/data/content_repository.dart';
 import 'package:math_for_adults/l10n/app_localizations.dart';
 import 'package:math_for_adults/models/concept_card.dart';
 import 'package:math_for_adults/models/difficulty.dart';
@@ -14,6 +15,7 @@ import 'package:math_for_adults/models/user_stats.dart';
 import 'package:math_for_adults/state/app_state.dart';
 import 'package:math_for_adults/screens/quiz/quiz_launcher.dart';
 import 'package:math_for_adults/screens/settings/settings_screen.dart';
+import 'package:math_for_adults/screens/weekly_test/weekly_test_builder.dart';
 
 const _p = MathProblem(
   id: 'test_01',
@@ -29,6 +31,77 @@ const _p = MathProblem(
 );
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  group('buildWeeklyTest', () {
+    const lessonKey = '중학 수학|수와 연산|정수와 유리수';
+
+    test('이번 주 학습 레슨이 있으면 3문제 이상 구성', () async {
+      final repo = ContentRepository();
+      final result = await buildWeeklyTest(
+        repo,
+        lessonKeys: {lessonKey},
+        solvedIds: {},
+        reviewPool: [],
+      );
+      expect(result.length, greaterThanOrEqualTo(3));
+      expect(result.length, lessThanOrEqualTo(6));
+      for (final p in result) {
+        expect('${p.subject}|${p.chapter}|${p.lesson}', lessonKey);
+      }
+      // 중복 없이 구성되어야 한다.
+      expect(result.map((p) => p.id).toSet().length, result.length);
+    });
+
+    test('이번 주 학습 기록이 없으면 빈 리스트', () async {
+      final repo = ContentRepository();
+      final result = await buildWeeklyTest(
+        repo,
+        lessonKeys: {},
+        solvedIds: {},
+        reviewPool: [],
+      );
+      expect(result, isEmpty);
+    });
+
+    test('이번 주 오답이 결과에 포함된다', () async {
+      final repo = ContentRepository();
+      MathProblem wrongProb(String id) => MathProblem(
+        id: id,
+        subject: '중학 수학',
+        chapter: '수와 연산',
+        lesson: '정수와 유리수',
+        difficulty: Difficulty.basic,
+        question: 'q',
+        choices: const ['1', '2', '3', '4'],
+        answerIndex: 0,
+        explanation: 'e',
+        estimatedTime: '1분',
+      );
+      final wrong = [wrongProb('wrong_1'), wrongProb('wrong_2')];
+      final result = await buildWeeklyTest(
+        repo,
+        lessonKeys: {lessonKey},
+        solvedIds: {},
+        reviewPool: wrong,
+      );
+      final ids = result.map((p) => p.id).toSet();
+      expect(ids, containsAll(['wrong_1', 'wrong_2']));
+    });
+
+    test('레슨의 모든 문제를 이미 풀었고 오답도 없으면 빈 리스트', () async {
+      final repo = ContentRepository();
+      final all = await repo.loadLesson('중학 수학', '수와 연산', '정수와 유리수');
+      final result = await buildWeeklyTest(
+        repo,
+        lessonKeys: {lessonKey},
+        solvedIds: all.map((p) => p.id).toSet(),
+        reviewPool: [],
+      );
+      expect(result, isEmpty);
+    });
+  });
+
   group('StatsNotifier', () {
     test('오답이면 다시 풀 문제에 추가, 정답이면 제거', () {
       final n = StatsNotifier();
@@ -135,6 +208,70 @@ void main() {
       expect(n.state.wrongProblems.containsKey('test_01'), isFalse);
     });
 
+    test('이번 주 학습 레슨 키는 주가 바뀌면 리셋', () {
+      final n = StatsNotifier();
+      n.recordAnswer(_p, correct: true, answeredAt: DateTime(2026, 6, 22));
+      expect(
+        n.state.weeklyLessonKeys,
+        contains('수학Ⅰ|수열|등차수열'),
+      );
+
+      n.recordAnswer(_p, correct: true, answeredAt: DateTime(2026, 6, 29));
+      expect(n.state.weeklyLessonKeys, {'수학Ⅰ|수열|등차수열'});
+    });
+
+    test('주간시험 결과 기록: 첫 응시는 연속 1주', () {
+      final n = StatsNotifier();
+      n.recordWeeklyTestResult(4, 6, DateTime(2026, 6, 22)); // 월요일
+      expect(n.state.weeklyTestStreak, 1);
+      expect(n.state.weeklyTestHistory.single.correct, 4);
+      expect(n.state.weeklyTestHistory.single.total, 6);
+    });
+
+    test('주간시험 연속 주차: 직전 주 기록이 있으면 +1, 없으면 리셋', () {
+      final n = StatsNotifier();
+      n.recordWeeklyTestResult(3, 6, DateTime(2026, 6, 15)); // 1주차
+      n.recordWeeklyTestResult(5, 6, DateTime(2026, 6, 22)); // 2주차(연속)
+      expect(n.state.weeklyTestStreak, 2);
+
+      n.recordWeeklyTestResult(2, 6, DateTime(2026, 7, 6)); // 한 주 건너뜀
+      expect(n.state.weeklyTestStreak, 1);
+    });
+
+    test('같은 주 재응시는 기록을 덮어쓰고 연속 주차는 유지', () {
+      final n = StatsNotifier();
+      n.recordWeeklyTestResult(3, 6, DateTime(2026, 6, 22));
+      n.recordWeeklyTestResult(6, 6, DateTime(2026, 6, 23));
+      expect(n.state.weeklyTestHistory.length, 1);
+      expect(n.state.weeklyTestHistory.single.correct, 6);
+      expect(n.state.weeklyTestStreak, 1);
+    });
+
+    test('주간시험에서 틀린 문제는 다음 주로 이월된다', () {
+      final n = StatsNotifier();
+      n.recordWeeklyTestResult(
+        4,
+        6,
+        DateTime(2026, 6, 22),
+        wrongProblems: [_p],
+      );
+      expect(n.state.weeklyTestWrong.containsKey('test_01'), isTrue);
+    });
+
+    test('이월된 오답도 다른 경로로 맞히면 제거된다', () {
+      final n = StatsNotifier();
+      n.recordWeeklyTestResult(
+        4,
+        6,
+        DateTime(2026, 6, 22),
+        wrongProblems: [_p],
+      );
+      expect(n.state.weeklyTestWrong.containsKey('test_01'), isTrue);
+
+      n.recordAnswer(_p, correct: true, answeredAt: DateTime(2026, 6, 29));
+      expect(n.state.weeklyTestWrong.containsKey('test_01'), isFalse);
+    });
+
     test('출석 체크인 + 연속일수', () {
       final n = StatsNotifier();
       final today = DateTime(2026, 6, 19);
@@ -145,6 +282,19 @@ void main() {
       // 같은 날 재출석은 무시
       n.checkIn(today);
       expect(n.state.attendance.length, 2);
+    });
+  });
+
+  group('Settings', () {
+    test('weeklyTestReminderOn은 JSON 저장/복원된다', () {
+      const s = Settings(weeklyTestReminderOn: true);
+      final restored = Settings.fromJson(s.toJson());
+      expect(restored.weeklyTestReminderOn, isTrue);
+    });
+
+    test('기본값은 꺼짐(옵트인)', () {
+      const s = Settings();
+      expect(s.weeklyTestReminderOn, isFalse);
     });
   });
 

@@ -78,6 +78,9 @@ class StatsNotifier extends StateNotifier<UserStats> {
     } else {
       wrong[problem.id] = problem;
     }
+    // 주간시험 이월 오답도 맞히면 제거(정답 처리는 어느 경로든 동일하게 반영).
+    final weeklyTestWrong = Map<String, MathProblem>.from(state.weeklyTestWrong);
+    if (correct) weeklyTestWrong.remove(problem.id);
 
     // 처음 푸는 문제면 단원별 진행 카운트를 +1 (정답 여부와 무관, 고유 집계).
     final newlySolved = !state.solvedIds.contains(problem.id);
@@ -105,9 +108,16 @@ class StatsNotifier extends StateNotifier<UserStats> {
         : state.solvedIds;
 
     final weekKey = _weekKey(answeredDay);
-    final weeklySolved = state.weeklyKey == weekKey
-        ? state.weeklySolved + 1
-        : 1;
+    final sameWeek = state.weeklyKey == weekKey;
+    final weeklySolved = sameWeek ? state.weeklySolved + 1 : 1;
+    final lessonKey = ConceptCard.keyOf(
+      problem.subject,
+      problem.chapter,
+      problem.lesson,
+    );
+    final lessonKeys = sameWeek
+        ? {...state.weeklyLessonKeys, lessonKey}
+        : {lessonKey};
 
     state = state.copyWith(
       totalSolved: state.totalSolved + 1,
@@ -118,6 +128,8 @@ class StatsNotifier extends StateNotifier<UserStats> {
       solvedByChapter: byChapter,
       recent: recent,
       solvedIds: solved,
+      weeklyLessonKeys: lessonKeys,
+      weeklyTestWrong: weeklyTestWrong,
     );
     _persist();
   }
@@ -139,7 +151,55 @@ class StatsNotifier extends StateNotifier<UserStats> {
   static UserStats _normalizeWeekly(UserStats stats, DateTime now) {
     final currentWeekKey = _weekKey(now);
     if (stats.weeklyKey == currentWeekKey) return stats;
-    return stats.copyWith(weeklySolved: 0, weeklyKey: currentWeekKey);
+    return stats.copyWith(
+      weeklySolved: 0,
+      weeklyKey: currentWeekKey,
+      weeklyLessonKeys: {},
+    );
+  }
+
+  /// 주간시험 결과 반영: weekKey당 1건으로 upsert, 연속 응시 주차 재계산,
+  /// 이번에 틀린 문제는 다음 주로 이월(맞힐 때까지 계속 복습 후보로 남는다).
+  void recordWeeklyTestResult(
+    int correct,
+    int total,
+    DateTime takenAt, {
+    List<MathProblem> wrongProblems = const [],
+  }) {
+    final weekKey = _weekKey(takenAt);
+    final attemptDateKey = dateKey(takenAt);
+    final alreadyHasThisWeek =
+        state.weeklyTestHistory.any((r) => r.weekKey == weekKey);
+    final prevWeekKey = _weekKey(takenAt.subtract(const Duration(days: 7)));
+    final hasPrevWeekRecord =
+        state.weeklyTestHistory.any((r) => r.weekKey == prevWeekKey);
+    final streak = alreadyHasThisWeek
+        ? state.weeklyTestStreak
+        : (hasPrevWeekRecord ? state.weeklyTestStreak + 1 : 1);
+
+    final history = [
+      ...state.weeklyTestHistory.where((r) => r.weekKey != weekKey),
+      WeeklyTestRecord(
+        weekKey: weekKey,
+        correct: correct,
+        total: total,
+        dateKey: attemptDateKey,
+      ),
+    ]..sort((a, b) => a.weekKey.compareTo(b.weekKey));
+    final trimmed =
+        history.length > 12 ? history.sublist(history.length - 12) : history;
+
+    final carryOver = Map<String, MathProblem>.from(state.weeklyTestWrong);
+    for (final p in wrongProblems) {
+      carryOver[p.id] = p;
+    }
+
+    state = state.copyWith(
+      weeklyTestHistory: trimmed,
+      weeklyTestStreak: streak,
+      weeklyTestWrong: carryOver,
+    );
+    _persist();
   }
 
   /// 오늘 출석 체크. 연속 출석일(streak) 재계산 후 저장.
@@ -236,6 +296,7 @@ class Settings {
   final int reminderMinute; // 학습 리마인더 시각(분)
   final DailyGoal dailyGoal;
   final ThemeMode themeMode;
+  final bool weeklyTestReminderOn; // 매주 일요일, reminderHour/Minute에 주간시험 알림
 
   const Settings({
     this.notificationsOn = false, // 권한 필요 — 기본 꺼짐(옵트인)
@@ -243,6 +304,7 @@ class Settings {
     this.reminderMinute = 0,
     this.dailyGoal = DailyGoal.three,
     this.themeMode = ThemeMode.system,
+    this.weeklyTestReminderOn = false,
   });
 
   Settings copyWith({
@@ -251,12 +313,14 @@ class Settings {
     int? reminderMinute,
     DailyGoal? dailyGoal,
     ThemeMode? themeMode,
+    bool? weeklyTestReminderOn,
   }) => Settings(
     notificationsOn: notificationsOn ?? this.notificationsOn,
     reminderHour: reminderHour ?? this.reminderHour,
     reminderMinute: reminderMinute ?? this.reminderMinute,
     dailyGoal: dailyGoal ?? this.dailyGoal,
     themeMode: themeMode ?? this.themeMode,
+    weeklyTestReminderOn: weeklyTestReminderOn ?? this.weeklyTestReminderOn,
   );
 
   Map<String, dynamic> toJson() => {
@@ -265,6 +329,7 @@ class Settings {
     'reminderMinute': reminderMinute,
     'dailyGoal': dailyGoal.name,
     'themeMode': themeMode.name,
+    'weeklyTestReminderOn': weeklyTestReminderOn,
   };
 
   factory Settings.fromJson(Map<String, dynamic> j) => Settings(
@@ -279,6 +344,7 @@ class Settings {
       (m) => m.name == j['themeMode'],
       orElse: () => ThemeMode.system,
     ),
+    weeklyTestReminderOn: j['weeklyTestReminderOn'] as bool? ?? false,
   );
 }
 
@@ -289,6 +355,12 @@ class SettingsNotifier extends StateNotifier<Settings> {
     // 앱 시작 시 켜져 있으면 예약 재설정(재부팅·업데이트 대비).
     if (state.notificationsOn) {
       NotificationService.scheduleDaily(
+        state.reminderHour,
+        state.reminderMinute,
+      );
+    }
+    if (state.weeklyTestReminderOn) {
+      NotificationService.scheduleWeeklyTestReminder(
         state.reminderHour,
         state.reminderMinute,
       );
@@ -327,6 +399,22 @@ class SettingsNotifier extends StateNotifier<Settings> {
     _persist();
     if (state.notificationsOn) {
       NotificationService.scheduleDaily(hour, minute);
+    }
+    if (state.weeklyTestReminderOn) {
+      NotificationService.scheduleWeeklyTestReminder(hour, minute);
+    }
+  }
+
+  void toggleWeeklyTestReminder(bool v) {
+    state = state.copyWith(weeklyTestReminderOn: v);
+    _persist();
+    if (v) {
+      NotificationService.scheduleWeeklyTestReminder(
+        state.reminderHour,
+        state.reminderMinute,
+      );
+    } else {
+      NotificationService.cancelWeeklyTestReminder();
     }
   }
 
