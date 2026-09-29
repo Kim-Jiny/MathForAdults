@@ -12,7 +12,10 @@ import 'package:math_for_adults/models/difficulty.dart';
 import 'package:math_for_adults/models/exam_analysis.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/models/user_stats.dart';
+import 'package:math_for_adults/services/auth/sync_service.dart';
+import 'package:math_for_adults/services/iap/iap_service.dart';
 import 'package:math_for_adults/state/app_state.dart';
+import 'package:math_for_adults/state/iap_state.dart';
 import 'package:math_for_adults/screens/quiz/quiz_launcher.dart';
 import 'package:math_for_adults/screens/settings/settings_screen.dart';
 import 'package:math_for_adults/screens/weekly_test/weekly_test_builder.dart';
@@ -283,6 +286,50 @@ void main() {
       n.checkIn(today);
       expect(n.state.attendance.length, 2);
     });
+
+    test('출석하면 힌트쿠폰 1개, 이미 출석했으면 0개 반환', () {
+      final n = StatsNotifier();
+      final today = DateTime(2026, 6, 19);
+      final earned = n.checkIn(today);
+      expect(earned, 1);
+      expect(n.state.hintCoupons, 1);
+      expect(n.checkIn(today), 0); // 같은 날 재출석
+      expect(n.state.hintCoupons, 1); // 안 늘어남
+    });
+
+    test('연속 7일 출석하면 그날은 보너스 5개 추가(총 6개)', () {
+      final n = StatsNotifier();
+      final start = DateTime(2026, 6, 1);
+      for (var i = 0; i < 6; i++) {
+        n.checkIn(start.add(Duration(days: i))); // 1~6일차: 1개씩
+      }
+      expect(n.state.hintCoupons, 6);
+      final earnedOnDay7 = n.checkIn(start.add(const Duration(days: 6)));
+      expect(n.state.streakDays, 7);
+      expect(earnedOnDay7, 6); // 1(기본) + 5(보너스)
+      expect(n.state.hintCoupons, 12); // 6 + 6
+    });
+
+    test('useHintCoupon: 있으면 1개 소비하고 true, 없으면 false', () {
+      final n = StatsNotifier();
+      expect(n.useHintCoupon(), isFalse);
+      n.checkIn(DateTime(2026, 6, 19));
+      expect(n.state.hintCoupons, 1);
+      expect(n.useHintCoupon(), isTrue);
+      expect(n.state.hintCoupons, 0);
+      expect(n.useHintCoupon(), isFalse);
+    });
+
+    test('addHintCoupons: 인앱결제로 지급 시 누적, 0 이하는 무시', () {
+      final n = StatsNotifier();
+      n.addHintCoupons(10);
+      expect(n.state.hintCoupons, 10);
+      n.addHintCoupons(5);
+      expect(n.state.hintCoupons, 15);
+      n.addHintCoupons(0);
+      n.addHintCoupons(-3);
+      expect(n.state.hintCoupons, 15);
+    });
   });
 
   group('Settings', () {
@@ -295,6 +342,137 @@ void main() {
     test('기본값은 꺼짐(옵트인)', () {
       const s = Settings();
       expect(s.weeklyTestReminderOn, isFalse);
+    });
+
+    test('replaceAll은 상태를 통째로 교체하고 저장한다(클라우드 동기화 병합 결과 반영)', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+      final n = SettingsNotifier(prefs);
+      n.replaceAll(const Settings(dailyGoal: DailyGoal.five, reminderHour: 21));
+      expect(n.state.dailyGoal, DailyGoal.five);
+      expect(n.state.reminderHour, 21);
+
+      final reloaded = SettingsNotifier(prefs);
+      expect(reloaded.state.dailyGoal, DailyGoal.five);
+      expect(reloaded.state.reminderHour, 21);
+    });
+  });
+
+  group('SyncService.merge (기기간 동기화 병합)', () {
+    late SyncService sync;
+
+    setUp(() async {
+      SharedPreferences.setMockInitialValues({});
+      sync = SyncService(await SharedPreferences.getInstance());
+    });
+
+    test('클라우드 데이터가 없으면 로컬 그대로 유지', () {
+      const localSettings = Settings(dailyGoal: DailyGoal.three);
+      final result = sync.merge(
+        const CloudProgress(),
+        UserStats.empty(),
+        localSettings,
+      );
+      expect(result.settings.dailyGoal, DailyGoal.three);
+    });
+
+    test('내가 동기화한 적 없고 클라우드에 데이터가 있으면 클라우드 설정 채택', () {
+      const cloudSettings = Settings(dailyGoal: DailyGoal.one);
+      final result = sync.merge(
+        CloudProgress(
+          settings: cloudSettings,
+          updatedAt: DateTime.now(),
+        ),
+        UserStats.empty(),
+        const Settings(dailyGoal: DailyGoal.three),
+      );
+      expect(result.settings.dailyGoal, DailyGoal.one);
+    });
+
+    test('통계는 항상 mergedWith로 누적 병합된다', () {
+      final localStats = UserStats.empty().copyWith(totalSolved: 3, totalCorrect: 2);
+      final cloudStats = UserStats.empty().copyWith(totalSolved: 5, totalCorrect: 1);
+      final result = sync.merge(
+        CloudProgress(stats: cloudStats, updatedAt: DateTime.now()),
+        localStats,
+        const Settings(),
+      );
+      expect(result.stats.totalSolved, 5); // 큰 쪽
+      expect(result.stats.totalCorrect, 2); // 큰 쪽
+    });
+
+    test('양쪽 다 진짜 기록이 있고 푼 문제가 서로 다르면 충돌로 판단', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      final cloudStats = UserStats.empty()
+          .copyWith(totalSolved: 5, solvedIds: {'x', 'y', 'z', 'w', 'v'});
+      expect(
+        sync.hasConflict(CloudProgress(stats: cloudStats), localStats),
+        isTrue,
+      );
+    });
+
+    test('한쪽이 비어 있으면 충돌 아님', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      expect(
+        sync.hasConflict(const CloudProgress(), localStats),
+        isFalse, // 클라우드에 기록 없음(신규 계정) — 그냥 올리면 됨
+      );
+      expect(
+        sync.hasConflict(
+          CloudProgress(
+            stats: UserStats.empty()
+                .copyWith(totalSolved: 5, solvedIds: {'x', 'y'}),
+          ),
+          UserStats.empty(),
+        ),
+        isFalse, // 이 기기에 기록 없음(새 기기) — 그냥 받아오면 됨
+      );
+    });
+
+    test('이미 동기화돼서 푼 문제 집합이 완전히 같으면 충돌 아님', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      final cloudStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      expect(
+        sync.hasConflict(CloudProgress(stats: cloudStats), localStats),
+        isFalse,
+      );
+    });
+  });
+
+  group('인앱결제', () {
+    test('IapVerifyResult.fromJson: 검증 통과 + 힌트쿠폰 지급 파싱', () {
+      final r = IapVerifyResult.fromJson({
+        'verified': true,
+        'kind': 'hint_coupons',
+        'coupons': 10,
+        'alreadyProcessed': false,
+      });
+      expect(r.verified, isTrue);
+      expect(r.kind, 'hint_coupons');
+      expect(r.coupons, 10);
+    });
+
+    test('IapVerifyResult.fromJson: 검증 실패는 verified false', () {
+      final r = IapVerifyResult.fromJson({'verified': false, 'reason': 'bad_signature'});
+      expect(r.verified, isFalse);
+      expect(r.coupons, 0);
+    });
+
+    test('AdsRemovedNotifier: 기본값 false, 저장된 값 복원, setRemoved 저장', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+      final n = AdsRemovedNotifier(prefs);
+      expect(n.state, isFalse);
+
+      n.setRemoved(true);
+      expect(n.state, isTrue);
+
+      final reloaded = AdsRemovedNotifier(prefs);
+      expect(reloaded.state, isTrue); // 재시작해도 유지
     });
   });
 

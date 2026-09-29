@@ -134,8 +134,33 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                     ],
                   ),
                 ),
+                const Spacer(),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: scheme.secondary.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.confirmation_number_rounded,
+                          size: 15, color: scheme.secondary),
+                      const SizedBox(width: 4),
+                      Text('힌트쿠폰 ${stats.hintCoupons}개',
+                          style: theme.textTheme.labelMedium?.copyWith(
+                              fontWeight: FontWeight.w800,
+                              color: scheme.secondary)),
+                    ],
+                  ),
+                ),
               ],
             ),
+            const SizedBox(height: 4),
+            Text('출석하면 힌트쿠폰 1개, 7일 연속 출석 시 보너스 5개를 더 드려요',
+                style: theme.textTheme.bodySmall
+                    ?.copyWith(color: scheme.onSurfaceVariant)),
             const SizedBox(height: 16),
 
             // 월 이동
@@ -196,7 +221,7 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
               child: FilledButton.icon(
                 onPressed: attendedToday
                     ? null
-                    : () => ref.read(statsProvider.notifier).checkIn(now),
+                    : () => _checkIn(context, ref, now),
                 icon: Icon(attendedToday
                     ? Icons.check_circle_rounded
                     : Icons.event_available_rounded),
@@ -207,6 +232,18 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
         ),
       ),
     );
+  }
+
+  void _checkIn(BuildContext context, WidgetRef ref, DateTime now) {
+    final earned = ref.read(statsProvider.notifier).checkIn(now);
+    if (earned <= 0) return;
+    final streak = ref.read(statsProvider).streakDays;
+    final bonus = streak > 0 && streak % 7 == 0;
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(bonus
+          ? '연속 $streak일 출석! 힌트쿠폰 +$earned개 (보너스 포함)'
+          : '출석 완료! 힌트쿠폰 +$earned개'),
+    ));
   }
 
   Widget _dayCell(

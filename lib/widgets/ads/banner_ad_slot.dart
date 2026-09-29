@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../../services/ads/ad_ids.dart';
+import '../../state/iap_state.dart';
 
 export '../../services/ads/ad_ids.dart' show BannerPlacement;
 
@@ -10,7 +12,8 @@ export '../../services/ads/ad_ids.dart' show BannerPlacement;
 /// 광고가 로드되기 전·실패 시에는 빈 공간([SizedBox.shrink])을 반환해
 /// 레이아웃을 차지하지 않는다. 스크롤 리스트 어디에나 끼워 넣을 수 있다.
 /// [placement] 에 따라 화면별 광고 단위 ID를 사용한다.
-class BannerAdSlot extends StatefulWidget {
+/// "광고 제거"를 구매했으면([adsRemovedProvider]) 아예 로드하지 않는다.
+class BannerAdSlot extends ConsumerStatefulWidget {
   /// 이 배너가 놓인 화면 위치 — 광고 단위 ID 결정.
   final BannerPlacement placement;
 
@@ -24,17 +27,17 @@ class BannerAdSlot extends StatefulWidget {
   });
 
   @override
-  State<BannerAdSlot> createState() => _BannerAdSlotState();
+  ConsumerState<BannerAdSlot> createState() => _BannerAdSlotState();
 }
 
-class _BannerAdSlotState extends State<BannerAdSlot> {
+class _BannerAdSlotState extends ConsumerState<BannerAdSlot> {
   BannerAd? _ad;
   bool _loaded = false;
 
   @override
   void initState() {
     super.initState();
-    _load();
+    if (!ref.read(adsRemovedProvider)) _load();
   }
 
   void _load() {
@@ -61,6 +64,18 @@ class _BannerAdSlotState extends State<BannerAdSlot> {
 
   @override
   Widget build(BuildContext context) {
+    final adsRemoved = ref.watch(adsRemovedProvider);
+    // 로드돼 있던 중에 구매가 확정된 경우 리소스 정리(side effect라 listen에서 처리).
+    ref.listen<bool>(adsRemovedProvider, (prev, next) {
+      if (next && _ad != null) {
+        setState(() {
+          _ad!.dispose();
+          _ad = null;
+          _loaded = false;
+        });
+      }
+    });
+    if (adsRemoved) return const SizedBox.shrink();
     final ad = _ad;
     if (!_loaded || ad == null) return const SizedBox.shrink();
     return Padding(

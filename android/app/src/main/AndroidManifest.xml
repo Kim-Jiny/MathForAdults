@@ -51,6 +51,21 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
             </intent-filter>
         </receiver>
+
+        <!-- 카카오 로그인(카카오계정/웹) 리다이렉트 수신용 — kakao_flutter_sdk_auth가 제공하는
+             AuthCodeHandlerActivity에 앱별 커스텀 스킴 intent-filter를 추가로 붙여야 한다
+             (SDK 자체 매니페스트엔 scheme이 비어 있어 앱이 채워 넣는 구조).
+             스킴은 Kakao Developers 네이티브 앱 키 기준(docs/소셜로그인_설정.md 참고). -->
+        <activity
+            android:name="com.kakao.sdk.flutter.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="kakao5d96aa78e032d9f1e91f2dffe4dd2cbd" android:host="oauth" />
+            </intent-filter>
+        </activity>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

@@ -112,6 +112,7 @@ class UserStats {
   final List<WeeklyTestRecord> weeklyTestHistory; // 주간시험 응시 기록 (weekKey당 1건, 최신 12건)
   final int weeklyTestStreak; // 주간시험 연속 응시 주차 수
   final Map<String, MathProblem> weeklyTestWrong; // 주간시험에서 틀려 다음 주로 이월된 문제(정답 맞히면 제거, 주가 바뀌어도 유지)
+  final int hintCoupons; // 힌트쿠폰 보유 개수 (출석 시 +1, 연속 7일마다 +5 보너스)
 
   const UserStats({
     required this.totalSolved,
@@ -129,6 +130,7 @@ class UserStats {
     this.weeklyTestHistory = const [],
     this.weeklyTestStreak = 0,
     this.weeklyTestWrong = const {},
+    this.hintCoupons = 0,
   });
 
   /// 첫 실행/초기화 상태 (전부 0).
@@ -148,6 +150,7 @@ class UserStats {
     weeklyTestHistory: [],
     weeklyTestStreak: 0,
     weeklyTestWrong: {},
+    hintCoupons: 0,
   );
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
@@ -182,6 +185,7 @@ class UserStats {
     List<WeeklyTestRecord>? weeklyTestHistory,
     int? weeklyTestStreak,
     Map<String, MathProblem>? weeklyTestWrong,
+    int? hintCoupons,
   }) {
     return UserStats(
       totalSolved: totalSolved ?? this.totalSolved,
@@ -199,6 +203,7 @@ class UserStats {
       weeklyTestHistory: weeklyTestHistory ?? this.weeklyTestHistory,
       weeklyTestStreak: weeklyTestStreak ?? this.weeklyTestStreak,
       weeklyTestWrong: weeklyTestWrong ?? this.weeklyTestWrong,
+      hintCoupons: hintCoupons ?? this.hintCoupons,
     );
   }
 
@@ -268,6 +273,12 @@ class UserStats {
           ? weeklyTestStreak
           : other.weeklyTestStreak,
       weeklyTestWrong: {...other.weeklyTestWrong, ...weeklyTestWrong},
+      // 큰 쪽 채택(다른 카운터와 동일한 정책). 힌트쿠폰은 출석 보상 성격의 가벼운
+      // 재화라 완벽한 분산 잔액 추적 대신 "절대 손해 안 봄" 쪽을 택함 — 두 기기에서
+      // 각각 쓴 뒤 동기화하면 드물게 이미 쓴 쿠폰이 되살아날 수 있음(허용 가능한 트레이드오프).
+      hintCoupons: hintCoupons > other.hintCoupons
+          ? hintCoupons
+          : other.hintCoupons,
     );
   }
 
@@ -317,6 +328,7 @@ class UserStats {
         for (final e in (j['weeklyTestWrong'] as Map<String, dynamic>? ?? {}).entries)
           e.key: MathProblem.fromJson(e.value as Map<String, dynamic>),
       },
+      hintCoupons: j['hintCoupons'] as int? ?? 0,
     );
   }
 
@@ -340,5 +352,6 @@ class UserStats {
     'weeklyTestWrong': {
       for (final e in weeklyTestWrong.entries) e.key: e.value.toJson(),
     },
+    'hintCoupons': hintCoupons,
   };
 }
