@@ -207,6 +207,20 @@ class AuthNotifier extends StateNotifier<AuthState> {
     state = const AuthState();
   }
 
+  /// 회원탈퇴. 성공하면 true(자동으로 로그아웃 상태가 됨).
+  Future<bool> deleteAccount() async {
+    state = state.copyWith(syncing: true, clearError: true);
+    try {
+      await _auth.deleteAccount();
+      state = const AuthState();
+      return true;
+    } catch (e) {
+      if (kDebugMode) debugPrint('[Auth] 회원탈퇴 실패: $e');
+      state = state.copyWith(syncing: false, error: '회원탈퇴에 실패했어요');
+      return false;
+    }
+  }
+
   Future<bool> updateNickname(String nickname) async {
     state = state.copyWith(syncing: true, clearError: true);
     try {

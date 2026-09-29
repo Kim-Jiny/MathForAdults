@@ -225,6 +225,16 @@ class _LoggedInView extends ConsumerWidget {
               style: TextStyle(fontWeight: FontWeight.w600)),
           onTap: auth.syncing ? null : notifier.logout,
         ),
+        const Divider(height: 1, indent: 16, endIndent: 16),
+        ListTile(
+          leading: Icon(Icons.person_remove_outlined,
+              color: Theme.of(context).colorScheme.error),
+          title: Text('회원탈퇴',
+              style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Theme.of(context).colorScheme.error)),
+          onTap: auth.syncing ? null : () => _confirmDeleteAccount(context, ref),
+        ),
       ],
     );
   }
@@ -266,6 +276,38 @@ class _LoggedInView extends ConsumerWidget {
     final ok = await ref.read(authProvider.notifier).updateNickname(result);
     if (ok) {
       messenger.showSnackBar(const SnackBar(content: Text('닉네임을 바꿨어요')));
+    }
+  }
+
+  Future<void> _confirmDeleteAccount(BuildContext context, WidgetRef ref) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('회원탈퇴'),
+        content: const Text(
+          '계정과 클라우드에 저장된 학습기록·구매 연결 정보가 삭제돼요. 이 기기에 남아있는 학습기록은 '
+          '그대로 유지되고(게스트로 계속 사용 가능), 되돌릴 수 없어요.\n\n정말 탈퇴할까요?',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('취소'),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(
+              backgroundColor: Theme.of(dialogContext).colorScheme.error,
+            ),
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('탈퇴하기'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+    final ok = await ref.read(authProvider.notifier).deleteAccount();
+    if (ok) {
+      messenger.showSnackBar(const SnackBar(content: Text('탈퇴 처리됐어요')));
     }
   }
 }

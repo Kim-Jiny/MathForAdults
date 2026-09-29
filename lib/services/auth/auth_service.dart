@@ -146,6 +146,21 @@ class AuthService {
     await _storage.delete(key: _tokenKey);
     await _storage.delete(key: _userKey);
   }
+
+  /// 회원탈퇴 — 서버 계정(클라우드 학습기록·구매 연결)을 삭제한다.
+  /// 이 기기의 로컬 학습기록은 그대로 남는다(게스트로 계속 사용 가능).
+  Future<void> deleteAccount() async {
+    final token = await cachedToken;
+    if (token == null) throw Exception('로그인이 필요해요');
+    final res = await http.delete(
+      Uri.parse('$_base/account'),
+      headers: {'Authorization': 'Bearer $token'},
+    ).timeout(const Duration(seconds: 20));
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw Exception('회원탈퇴 실패 (${res.statusCode})');
+    }
+    await logout();
+  }
 }
 
 final secureStorageProvider = Provider<FlutterSecureStorage>(
