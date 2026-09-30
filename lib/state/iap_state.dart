@@ -130,9 +130,10 @@ class IapNotifier extends StateNotifier<IapState> {
   final Ref _ref;
   StreamSubscription<List<PurchaseDetails>>? _sub;
 
-  /// buy() 호출 시점의 로그인 토큰. 구매 결과는 비동기로(때론 앱 재실행 후) 도착하는데,
-  /// 그사이 로그아웃하거나 다른 계정으로 바뀌면 "결제를 시작한 계정"이 아니라 "결과가
-  /// 도착한 시점에 로그인된 계정"에 잘못 귀속될 수 있어서, 시작 시점 토큰을 캡처해둔다.
+  /// buy() 호출 시점의 로그인 토큰(같은 프로세스 내 빠른 경로용 메모리 캐시).
+  /// **영구 보관은 [AuthService.savePendingPurchaseToken]가 담당** — 앱이 완전히
+  /// 꺼졌다 재시작된 뒤에 구매가 완료되는 경우(가족 승인 대기 등)엔 이 메모리 값이
+  /// 사라지므로, 실제 귀속 판단은 항상 영구 저장값을 우선 확인한다.
   /// 복원(restore)으로 들어온 건은 이 값이 없으므로 자연스럽게 "현재 로그인 계정"으로 검증된다.
   String? _initiatorToken;
 
@@ -186,6 +187,9 @@ class IapNotifier extends StateNotifier<IapState> {
     }
     state = state.copyWith(busy: true, clearMessage: true);
     _initiatorToken = await _auth.cachedToken;
+    // 영구 저장 — 앱이 꺼졌다 재시작된 뒤 구매가 완료되는 경우에도 "결제를 시작한
+    // 계정"을 알 수 있게 한다(메모리 캐시는 프로세스 재시작 시 사라짐).
+    await _auth.savePendingPurchaseToken(_initiatorToken);
     try {
       final available = await _iap.isAvailable();
       if (!available) {
@@ -255,10 +259,18 @@ class IapNotifier extends StateNotifier<IapState> {
   /// 구매/복원된 트랜잭션을 서버로 검증하고, [decideIapOutcome]의 판단대로 반영한다.
   Future<void> _verifyAndApply(PurchaseDetails p) async {
     state = state.copyWith(busy: true, clearMessage: true);
-    // buy()가 캡처해둔 "결제를 시작한 계정" 토큰을 우선 사용 — 그사이 로그아웃/계정
-    // 전환이 있었어도 엉뚱한 계정에 지급되지 않는다. 복원 등 buy() 경유가 아니면
-    // 캡처된 값이 없으므로 현재 로그인 계정을 쓴다. 1회성이라 쓰고 나면 비운다.
-    final token = _initiatorToken ?? await _auth.cachedToken;
+    final String? token;
+    if (p.status == PurchaseStatus.restored) {
+      // 복원(restore())은 정의상 "지금 로그인된 계정"으로 가져오는 동작이라, buy()가
+      // 남겨둔 귀속 정보(다른 거래의 것일 수 있음)를 써서는 안 된다.
+      token = await _auth.cachedToken;
+    } else {
+      // 신규 구매(.purchased) — "결제를 시작한 계정" 토큰을 우선 사용. 그사이 로그아웃/
+      // 계정 전환이 있었어도 엉뚱한 계정에 지급되지 않는다. 메모리 캐시(같은 프로세스)
+      // → 영구 저장값(앱이 꺼졌다 재시작된 뒤 도착한 경우) → 현재 로그인 계정 순.
+      token =
+          _initiatorToken ?? await _auth.pendingPurchaseToken ?? await _auth.cachedToken;
+    }
     _initiatorToken = null;
 
     IapVerifyResult? result;
@@ -290,10 +302,16 @@ class IapNotifier extends StateNotifier<IapState> {
     }
     state = state.copyWith(busy: false, message: decision.message);
     // shouldComplete=false면(로그인 안 됨/네트워크 오류로 확정 응답을 못 받음) 완료 처리하지
-    // 않고 남겨둔다 — 그래야 다음 앱 실행 때 purchaseStream으로 다시 전달돼 재시도된다.
+    // 않고, 영구 저장된 귀속 토큰도 그대로 남겨둔다 — 그래야 다음 앱 실행 때
+    // purchaseStream으로 다시 전달됐을 때도 같은 계정으로 재시도된다.
     // (완료 처리부터 해버리면 결제는 되는데 지급은 안 되는 사고가 날 수 있음.)
-    if (decision.shouldComplete && p.pendingCompletePurchase) {
-      await _iap.completePurchase(p);
+    if (decision.shouldComplete) {
+      // 복원 건은 애초에 이 저장값을 안 썼으니 지우지 않는다(다른 미해결 구매 건의
+      // 귀속 정보일 수 있어서 건드리면 안 됨).
+      if (p.status != PurchaseStatus.restored) {
+        await _auth.savePendingPurchaseToken(null); // 거래 종결 — 보관해둔 귀속 정보 정리
+      }
+      if (p.pendingCompletePurchase) await _iap.completePurchase(p);
     }
   }
 }

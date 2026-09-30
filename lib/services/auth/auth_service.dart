@@ -33,6 +33,7 @@ class AuthService {
   static const _base = 'https://duo.jiny.shop/api/mathforadults';
   static const _tokenKey = 'mfa_jwt';
   static const _userKey = 'mfa_user_json';
+  static const _pendingIapTokenKey = 'mfa_pending_iap_token';
 
   final FlutterSecureStorage _storage;
   AuthService(this._storage);
@@ -146,6 +147,25 @@ class AuthService {
     await _storage.delete(key: _tokenKey);
     await _storage.delete(key: _userKey);
   }
+
+  /// 구매를 "시작한" 계정의 토큰을 영구 저장(Keychain/Keystore)해둔다. 인앱결제 결과는
+  /// 스토어에서 비동기로(앱이 완전히 꺼졌다 재시작된 뒤에도) 도착할 수 있는데, 그사이
+  /// 로그아웃하거나 다른 계정으로 전환하면 "결제를 시작한 계정"이 아니라 "결과가 도착한
+  /// 시점에 로그인된 계정"에 잘못 귀속될 수 있다. 메모리 변수로는 앱 재시작 시 사라져서
+  /// 방지가 안 되므로, 로그인 토큰과 같은 보안 등급(secure storage)으로 영구 저장한다.
+  /// 거래가 확정(성공/명시적 거부) 처리되면 [null]로 지운다.
+  ///
+  /// 알려진 한계: 슬롯이 1개뿐이라, 이전 구매가 아직 미해결(앱이 꺼진 채 대기 등)인
+  /// 상태에서 다른 계정으로 새 구매를 또 시작하면 나중 값으로 덮어써진다 — 이 경우
+  /// 먼저 시작한 구매가 재전달될 때 잘못된 계정으로 귀속될 수 있음(매우 드문 케이스,
+  /// 항상 이용자 본인의 계정 중 하나로만 귀속되므로 피해는 제한적).
+  Future<void> savePendingPurchaseToken(String? token) {
+    if (token == null) return _storage.delete(key: _pendingIapTokenKey);
+    return _storage.write(key: _pendingIapTokenKey, value: token);
+  }
+
+  Future<String?> get pendingPurchaseToken =>
+      _storage.read(key: _pendingIapTokenKey);
 
   /// 회원탈퇴 — 서버 계정(클라우드 학습기록·구매 연결)을 삭제한다.
   /// 이 기기의 로컬 학습기록은 그대로 남는다(게스트로 계속 사용 가능).
