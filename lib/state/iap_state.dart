@@ -186,10 +186,7 @@ class IapNotifier extends StateNotifier<IapState> {
       return;
     }
     state = state.copyWith(busy: true, clearMessage: true);
-    _initiatorToken = await _auth.cachedToken;
-    // 영구 저장 — 앱이 꺼졌다 재시작된 뒤 구매가 완료되는 경우에도 "결제를 시작한
-    // 계정"을 알 수 있게 한다(메모리 캐시는 프로세스 재시작 시 사라짐).
-    await _auth.savePendingPurchaseToken(_initiatorToken);
+    final token = await _auth.cachedToken;
     try {
       final available = await _iap.isAvailable();
       if (!available) {
@@ -204,10 +201,18 @@ class IapNotifier extends StateNotifier<IapState> {
       final started = productId == IapService.kHintCoupons10Id
           ? await _iap.buyConsumable(details)
           : await _iap.buyNonConsumable(details);
-      if (!started) {
+      if (started) {
+        // 플랫폼에 실제로 구매 요청이 들어간 뒤에만 귀속 정보를 저장한다 — 그 전에
+        // 저장해버리면, 이 시도가 실패해도 슬롯을 차지해서 다른 미해결 구매 건의
+        // 저장값을 덮어쓸 위험이 있다(슬롯이 1개뿐이라). 영구 저장은 앱이 꺼졌다
+        // 재시작된 뒤 구매가 완료되는 경우에도 "결제를 시작한 계정"을 알기 위함
+        // (메모리 캐시는 프로세스 재시작 시 사라짐).
+        _initiatorToken = token;
+        await _auth.savePendingPurchaseToken(token);
+        // 성공 결과는 purchaseStream을 통해 비동기로 들어옴 — busy는 그때 내림.
+      } else {
         state = state.copyWith(busy: false, message: '구매를 시작하지 못했어요');
       }
-      // 성공 결과는 purchaseStream을 통해 비동기로 들어옴 — busy는 그때 내림.
     } catch (e) {
       if (kDebugMode) debugPrint('[IAP] 구매 시작 실패: $e');
       state = state.copyWith(busy: false, message: '구매를 시작하지 못했어요');
@@ -244,15 +249,25 @@ class IapNotifier extends StateNotifier<IapState> {
         case PurchaseStatus.error:
           if (kDebugMode) debugPrint('[IAP] 구매 오류: ${p.error}');
           state = state.copyWith(busy: false, message: '구매 중 오류가 발생했어요');
+          await _clearPendingTokenIfNotRestore(p);
           if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.canceled:
           state = state.copyWith(busy: false);
+          await _clearPendingTokenIfNotRestore(p);
           if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.pending:
           break;
       }
+    }
+  }
+
+  /// 복원 건은 애초에 저장된 귀속 토큰을 쓰지 않으므로(항상 "현재 로그인 계정" 기준),
+  /// 여기서도 건드리지 않는다 — 지우면 다른 미해결 구매 건의 귀속 정보가 날아갈 수 있다.
+  Future<void> _clearPendingTokenIfNotRestore(PurchaseDetails p) async {
+    if (p.status != PurchaseStatus.restored) {
+      await _auth.savePendingPurchaseToken(null);
     }
   }
 
@@ -278,6 +293,13 @@ class IapNotifier extends StateNotifier<IapState> {
     if (token != null) {
       try {
         result = await _iap.verify(token, p);
+      } on IapVerifyAuthError {
+        // 이 토큰은 만료/무효 — 같은 값으로는 영원히 재시도해봐야 또 실패한다.
+        // 저장해둔 귀속 정보를 지워서, 다음 시도부턴 그 시점의 최신 로그인 토큰을
+        // 쓰게 한다(로그인 상태면 다음 앱 실행/재시도 때 자연히 해결됨).
+        if (kDebugMode) debugPrint('[IAP] 검증 토큰 만료/무효 — 귀속 정보 초기화');
+        await _clearPendingTokenIfNotRestore(p);
+        hadError = true;
       } catch (e) {
         if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
         hadError = true;
@@ -288,8 +310,15 @@ class IapNotifier extends StateNotifier<IapState> {
     switch (decision.outcome) {
       case IapOutcome.grantedCoupons:
         _ref.read(statsProvider.notifier).addHintCoupons(decision.coupons);
-        final sync = _ref.read(syncServiceProvider);
-        await sync.push(token!, _ref.read(statsProvider), _ref.read(settingsProvider));
+        // 동기화 실패는 별도로 잡는다 — 지급 자체(로컬 반영)는 이미 끝났고, 구매도
+        // 서버가 이미 확정했으므로 여기서 예외가 나도 거래 완료 처리는 계속 진행해야
+        // 한다. 동기화는 다음 "지금 동기화"나 재로그인 때 다시 시도된다.
+        try {
+          final sync = _ref.read(syncServiceProvider);
+          await sync.push(token!, _ref.read(statsProvider), _ref.read(settingsProvider));
+        } catch (e) {
+          if (kDebugMode) debugPrint('[IAP] 지급 후 동기화 실패(나중에 재시도됨): $e');
+        }
         break;
       case IapOutcome.grantedAdsRemoved:
         _ref.read(adsRemovedProvider.notifier).setRemoved(true);
@@ -306,11 +335,7 @@ class IapNotifier extends StateNotifier<IapState> {
     // purchaseStream으로 다시 전달됐을 때도 같은 계정으로 재시도된다.
     // (완료 처리부터 해버리면 결제는 되는데 지급은 안 되는 사고가 날 수 있음.)
     if (decision.shouldComplete) {
-      // 복원 건은 애초에 이 저장값을 안 썼으니 지우지 않는다(다른 미해결 구매 건의
-      // 귀속 정보일 수 있어서 건드리면 안 됨).
-      if (p.status != PurchaseStatus.restored) {
-        await _auth.savePendingPurchaseToken(null); // 거래 종결 — 보관해둔 귀속 정보 정리
-      }
+      await _clearPendingTokenIfNotRestore(p); // 거래 종결 — 보관해둔 귀속 정보 정리
       if (p.pendingCompletePurchase) await _iap.completePurchase(p);
     }
   }

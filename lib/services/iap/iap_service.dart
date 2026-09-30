@@ -6,6 +6,13 @@ import 'package:http/http.dart' as http;
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 
+/// 검증 토큰(JWT)이 만료됐거나 무효함(401) — 네트워크/서버 오류와 달리 **같은 토큰으로
+/// 재시도해봐야 절대 성공하지 않는다**. 호출부가 이걸 구분해서 영구 저장된 귀속 토큰을
+/// 정리하고, 다음 시도부턴 최신 로그인 토큰을 쓰게 한다.
+class IapVerifyAuthError implements Exception {
+  const IapVerifyAuthError();
+}
+
 /// 서버 `/iap/verify` 응답.
 class IapVerifyResult {
   final bool verified;
@@ -103,6 +110,9 @@ class IapService {
           body: jsonEncode(body),
         )
         .timeout(const Duration(seconds: 20));
+    if (res.statusCode == 401) {
+      throw const IapVerifyAuthError();
+    }
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('영수증 검증 요청 실패 (${res.statusCode})');
     }
