@@ -254,13 +254,17 @@ class IapNotifier extends StateNotifier<IapState> {
         case PurchaseStatus.error:
           if (kDebugMode) debugPrint('[IAP] 구매 오류: ${p.error}');
           state = state.copyWith(busy: false, message: '구매 중 오류가 발생했어요');
+          _initiatorToken = null;
           await _clearPendingTokenIfNotRestore(p);
-          await _finishPurchase(p);
+          // 검증을 거치지 않은 건이라 consume은 절대 호출하지 않는다(_finishPurchase는
+          // "서버가 검증을 확정한 뒤"에만 쓰는 함수 — 여긴 확인/acknowledge만 필요하면 함).
+          if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.canceled:
           state = state.copyWith(busy: false);
+          _initiatorToken = null;
           await _clearPendingTokenIfNotRestore(p);
-          await _finishPurchase(p);
+          if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.pending:
           break;
@@ -345,10 +349,16 @@ class IapNotifier extends StateNotifier<IapState> {
     }
   }
 
-  /// 스토어 트랜잭션을 최종 마무리한다. Android 소모성 상품(힌트쿠폰)은 buyConsumable을
-  /// autoConsume:false로 호출했으므로, completePurchase(확인/acknowledge)가 아니라
-  /// consume을 직접 호출해야 한다 — consume이 확인도 겸하고, 이래야 사용자가 같은
-  /// 상품을 다시 살 수 있게 풀린다. 그 외(iOS 전체, Android 비소모성)는 completePurchase로 충분.
+  /// 스토어 트랜잭션을 최종 마무리한다. **`decideIapOutcome`이 `shouldComplete:true`를
+  /// 준(=서버 검증이 확정 응답을 준) 건에만 호출할 것** — Android 소모성 상품은 검증도
+  /// 안 거친 `.error`/`.canceled` 건에 이걸 쓰면 안 됨(consume을 호출해버리면 검증 전
+  /// 트랜잭션이 영구 소비돼서 재시도 불가능해짐). 그 케이스들은 이 함수를 쓰지 않고
+  /// 단순 completePurchase만 한다(`_onPurchaseUpdate` 참고).
+  ///
+  /// Android 소모성 상품(힌트쿠폰)은 buyConsumable을 autoConsume:false로 호출했으므로,
+  /// completePurchase(확인/acknowledge)가 아니라 consume을 직접 호출해야 한다 —
+  /// consume이 확인도 겸하고, 이래야 사용자가 같은 상품을 다시 살 수 있게 풀린다.
+  /// 그 외(iOS 전체, Android 비소모성)는 completePurchase로 충분.
   Future<void> _finishPurchase(PurchaseDetails p) async {
     try {
       if (Platform.isAndroid && p.productID == IapService.kHintCoupons10Id) {
