@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart' show kDebugMode, debugPrint;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -198,9 +199,13 @@ class IapNotifier extends StateNotifier<IapState> {
         state = state.copyWith(busy: false, message: '상품 정보를 불러오지 못했어요');
         return;
       }
+      // 구매 요청 자체에 계정 식별자를 심어서, 스토어가 서명한 영수증만으로도 서버가
+      // "이 구매가 원래 어느 계정 건지" 확인할 수 있게 한다(로그인 토큰과는 독립적인
+      // 신호라, JWT가 만료돼도 계정 귀속 정보는 살아남는다).
+      final accountUuid = _ref.read(authProvider).user?.iapAccountUuid;
       final started = productId == IapService.kHintCoupons10Id
-          ? await _iap.buyConsumable(details)
-          : await _iap.buyNonConsumable(details);
+          ? await _iap.buyConsumable(details, accountUuid: accountUuid)
+          : await _iap.buyNonConsumable(details, accountUuid: accountUuid);
       if (started) {
         // 플랫폼에 실제로 구매 요청이 들어간 뒤에만 귀속 정보를 저장한다 — 그 전에
         // 저장해버리면, 이 시도가 실패해도 슬롯을 차지해서 다른 미해결 구매 건의
@@ -250,12 +255,12 @@ class IapNotifier extends StateNotifier<IapState> {
           if (kDebugMode) debugPrint('[IAP] 구매 오류: ${p.error}');
           state = state.copyWith(busy: false, message: '구매 중 오류가 발생했어요');
           await _clearPendingTokenIfNotRestore(p);
-          if (p.pendingCompletePurchase) await _iap.completePurchase(p);
+          await _finishPurchase(p);
           break;
         case PurchaseStatus.canceled:
           state = state.copyWith(busy: false);
           await _clearPendingTokenIfNotRestore(p);
-          if (p.pendingCompletePurchase) await _iap.completePurchase(p);
+          await _finishPurchase(p);
           break;
         case PurchaseStatus.pending:
           break;
@@ -336,7 +341,23 @@ class IapNotifier extends StateNotifier<IapState> {
     // (완료 처리부터 해버리면 결제는 되는데 지급은 안 되는 사고가 날 수 있음.)
     if (decision.shouldComplete) {
       await _clearPendingTokenIfNotRestore(p); // 거래 종결 — 보관해둔 귀속 정보 정리
-      if (p.pendingCompletePurchase) await _iap.completePurchase(p);
+      await _finishPurchase(p);
+    }
+  }
+
+  /// 스토어 트랜잭션을 최종 마무리한다. Android 소모성 상품(힌트쿠폰)은 buyConsumable을
+  /// autoConsume:false로 호출했으므로, completePurchase(확인/acknowledge)가 아니라
+  /// consume을 직접 호출해야 한다 — consume이 확인도 겸하고, 이래야 사용자가 같은
+  /// 상품을 다시 살 수 있게 풀린다. 그 외(iOS 전체, Android 비소모성)는 completePurchase로 충분.
+  Future<void> _finishPurchase(PurchaseDetails p) async {
+    try {
+      if (Platform.isAndroid && p.productID == IapService.kHintCoupons10Id) {
+        await _iap.consumeAndroidPurchase(p);
+      } else if (p.pendingCompletePurchase) {
+        await _iap.completePurchase(p);
+      }
+    } catch (e) {
+      if (kDebugMode) debugPrint('[IAP] 거래 마무리(consume/complete) 실패: $e');
     }
   }
 }

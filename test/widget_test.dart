@@ -12,6 +12,7 @@ import 'package:math_for_adults/models/difficulty.dart';
 import 'package:math_for_adults/models/exam_analysis.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/models/user_stats.dart';
+import 'package:math_for_adults/services/auth/auth_service.dart';
 import 'package:math_for_adults/services/auth/sync_service.dart';
 import 'package:math_for_adults/services/iap/iap_service.dart';
 import 'package:math_for_adults/state/app_state.dart';
@@ -444,6 +445,21 @@ void main() {
   });
 
   group('인앱결제', () {
+    test('AuthUser.fromJson: iapAccountUuid 파싱(구매 계정 귀속용 식별자)', () {
+      final u = AuthUser.fromJson({
+        'id': 1,
+        'nickname': 'guest-abc123',
+        'email': null,
+        'iapAccountUuid': '11111111-2222-3333-4444-555555555555',
+      });
+      expect(u.iapAccountUuid, '11111111-2222-3333-4444-555555555555');
+    });
+
+    test('AuthUser.fromJson: iapAccountUuid 없어도(구버전 응답 등) 안 터짐', () {
+      final u = AuthUser.fromJson({'id': 1});
+      expect(u.iapAccountUuid, isNull);
+    });
+
     test('IapVerifyResult.fromJson: 검증 통과 + 힌트쿠폰 지급 파싱', () {
       final r = IapVerifyResult.fromJson({
         'verified': true,

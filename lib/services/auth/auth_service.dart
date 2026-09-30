@@ -15,13 +15,23 @@ class AuthUser {
   final int id;
   final String? nickname;
   final String? email;
+  /// 인앱결제 구매 요청에 심는 계정 식별자(iOS appAccountToken / Android
+  /// obfuscatedAccountId로 매핑됨). 스토어가 서명한 영수증에 그대로 남아서, 서버가
+  /// JWT 유효기간과 무관하게 "이 영수증이 원래 어느 계정 건지" 대조할 수 있게 해준다.
+  final String? iapAccountUuid;
 
-  const AuthUser({required this.id, this.nickname, this.email});
+  const AuthUser({
+    required this.id,
+    this.nickname,
+    this.email,
+    this.iapAccountUuid,
+  });
 
   factory AuthUser.fromJson(Map<String, dynamic> j) => AuthUser(
     id: j['id'] as int,
     nickname: j['nickname'] as String?,
     email: j['email'] as String?,
+    iapAccountUuid: j['iapAccountUuid'] as String?,
   );
 }
 
@@ -139,6 +149,7 @@ class AuthService {
       'id': user.id,
       'nickname': user.nickname,
       'email': user.email,
+      'iapAccountUuid': user.iapAccountUuid,
     }),
   );
 

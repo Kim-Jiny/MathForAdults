@@ -56,18 +56,42 @@ class IapService {
     return {for (final d in res.productDetails) d.id: d};
   }
 
-  Future<bool> buyConsumable(ProductDetails details) =>
+  /// [accountUuid]가 있으면 구매 요청 자체에 계정 식별자를 심는다(Android는
+  /// obfuscatedAccountId, iOS는 appAccountToken으로 매핑됨 — 둘 다 스토어가 서명한
+  /// 영수증에 그대로 남아서, 서버가 검증 시 "이 영수증은 원래 어느 계정 건지"를
+  /// JWT와 무관하게 직접 확인할 수 있다).
+  Future<bool> buyConsumable(ProductDetails details, {String? accountUuid}) =>
       InAppPurchase.instance.buyConsumable(
-        purchaseParam: PurchaseParam(productDetails: details),
+        purchaseParam: PurchaseParam(
+          productDetails: details,
+          applicationUserName: accountUuid,
+        ),
+        // Android 기본값(true)은 구매 즉시 서버 검증과 무관하게 자동으로 소비 처리해버려서,
+        // 검증 실패/네트워크 오류 시 결제는 되고 지급은 안 되는데 재시도 경로도 없는
+        // 사고로 이어질 수 있다. 우리가 검증에 성공한 뒤에만 [consumeAndroidPurchase]로
+        // 직접 소비 처리한다(iOS는 이 개념이 없어 completePurchase만으로 충분).
+        autoConsume: false,
       );
 
-  Future<bool> buyNonConsumable(ProductDetails details) =>
+  Future<bool> buyNonConsumable(ProductDetails details, {String? accountUuid}) =>
       InAppPurchase.instance.buyNonConsumable(
-        purchaseParam: PurchaseParam(productDetails: details),
+        purchaseParam: PurchaseParam(
+          productDetails: details,
+          applicationUserName: accountUuid,
+        ),
       );
 
   Future<void> completePurchase(PurchaseDetails p) =>
       InAppPurchase.instance.completePurchase(p);
+
+  /// Android 소모성 상품 전용 — consume은 확인(acknowledge)도 겸하므로 completePurchase
+  /// 대신 이걸 호출해야 한다(안 그러면 사용자가 같은 상품을 다시 살 수 없게 막힘).
+  /// 서버 검증이 성공해서 실제로 지급을 마친 뒤에만 호출할 것.
+  Future<void> consumeAndroidPurchase(PurchaseDetails p) async {
+    final addition = InAppPurchase.instance
+        .getPlatformAddition<InAppPurchaseAndroidPlatformAddition>();
+    await addition.consumePurchase(p);
+  }
 
   Future<void> restore() => InAppPurchase.instance.restorePurchases();
 
