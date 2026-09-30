@@ -474,6 +474,65 @@ void main() {
       final reloaded = AdsRemovedNotifier(prefs);
       expect(reloaded.state, isTrue); // 재시작해도 유지
     });
+
+    group('decideIapOutcome (검증 실패/재시도/중복지급 방지 핵심 로직)', () {
+      test('로그인 안 됨(토큰 없음) → 완료 처리 안 함, 재로그인 후 재시도', () {
+        final d = decideIapOutcome(token: null, result: null, hadError: false);
+        expect(d.outcome, IapOutcome.needsLogin);
+        expect(d.shouldComplete, isFalse);
+      });
+
+      test('네트워크/서버 오류로 확정 응답 못 받음 → 완료 처리 안 하고 다음 실행 때 재시도', () {
+        final d = decideIapOutcome(token: 't', result: null, hadError: true);
+        expect(d.outcome, IapOutcome.retryLater);
+        expect(d.shouldComplete, isFalse);
+      });
+
+      test('서버가 검증 실패를 확정적으로 응답 → 완료 처리는 함(재전달 방지), 지급은 안 함', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(verified: false),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.rejected);
+        expect(d.shouldComplete, isTrue);
+        expect(d.coupons, 0);
+      });
+
+      test('힌트쿠폰 검증 통과 → 지급 + 완료 처리', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 10),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedCoupons);
+        expect(d.shouldComplete, isTrue);
+        expect(d.coupons, 10);
+      });
+
+      test('이미 처리된 트랜잭션 재검증(서버가 coupons:0) → 중복 지급 안 함, 완료 처리는 함', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 0),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.noGrant);
+        expect(d.coupons, 0);
+        expect(d.shouldComplete, isTrue);
+      });
+
+      test('광고 제거 검증 통과 → 완료 처리', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(verified: true, kind: 'remove_ads'),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedAdsRemoved);
+        expect(d.shouldComplete, isTrue);
+      });
+    });
   });
 
   group('모의수능 결과 분석', () {

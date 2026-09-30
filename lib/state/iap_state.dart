@@ -29,6 +29,80 @@ final adsRemovedProvider = StateNotifierProvider<AdsRemovedNotifier, bool>(
   (ref) => AdsRemovedNotifier(ref.watch(sharedPreferencesProvider)),
 );
 
+/// [decideIapOutcome]이 내리는 판단. 부수효과(상태 반영·네트워크 push·스토어 완료 처리)는
+/// 전부 [IapNotifier]가 하고, 여기선 "무엇을 해야 하는지"만 순수하게 계산한다 — 그래야
+/// 네트워크·스토어 SDK 없이 핵심 분기(검증 실패 시 미완료 유지, 로그인 안 됨, 중복 지급
+/// 안 함 등)를 단위 테스트할 수 있다.
+enum IapOutcome { needsLogin, retryLater, rejected, noGrant, grantedCoupons, grantedAdsRemoved }
+
+class IapDecision {
+  final IapOutcome outcome;
+  /// true면 스토어 트랜잭션을 완료 처리(completePurchase)해도 안전 — 서버가 확정
+  /// 응답을 줬다는 뜻. false면 완료 처리하지 않고 다음 실행 때 재시도되게 둔다.
+  final bool shouldComplete;
+  final String? message;
+  final int coupons;
+
+  const IapDecision({
+    required this.outcome,
+    required this.shouldComplete,
+    this.message,
+    this.coupons = 0,
+  });
+}
+
+/// 서버 검증 결과(또는 못 받았다는 사실)로부터 무엇을 할지 판단하는 순수 함수.
+/// - [token]이 없으면(로그인 안 됨) 완료 처리하지 않는다 — 로그인 후 재시도됨.
+/// - [hadError]면(네트워크/서버 오류로 확정 응답을 못 받음) 완료 처리하지 않는다 —
+///   안 그러면 결제는 되는데 지급은 안 되는 사고가 날 수 있다.
+/// - 서버가 확정 응답을 줬으면(verified true/false 무관) 완료 처리는 항상 안전하다.
+/// - `coupons`는 서버가 이미 처리된 트랜잭션이면 0을 내려주므로(재지급 방지), 그대로
+///   신뢰하고 0이면 지급하지 않는다(noGrant) — 클라이언트가 별도로 중복을 걸러낼 필요 없음.
+IapDecision decideIapOutcome({
+  required String? token,
+  required IapVerifyResult? result,
+  required bool hadError,
+}) {
+  if (token == null) {
+    return const IapDecision(
+      outcome: IapOutcome.needsLogin,
+      shouldComplete: false,
+      message: '로그인 상태에서만 구매가 반영돼요',
+    );
+  }
+  if (hadError || result == null) {
+    return const IapDecision(
+      outcome: IapOutcome.retryLater,
+      shouldComplete: false,
+      message: '네트워크 오류로 구매 확인을 못했어요. 앱을 다시 열면 재시도돼요',
+    );
+  }
+  if (!result.verified) {
+    return const IapDecision(
+      outcome: IapOutcome.rejected,
+      shouldComplete: true,
+      message: '구매 확인에 실패했어요',
+    );
+  }
+  if (result.kind == 'hint_coupons' && result.coupons > 0) {
+    return IapDecision(
+      outcome: IapOutcome.grantedCoupons,
+      shouldComplete: true,
+      coupons: result.coupons,
+      message: '힌트쿠폰 ${result.coupons}개가 지급됐어요',
+    );
+  }
+  if (result.kind == 'remove_ads') {
+    return const IapDecision(
+      outcome: IapOutcome.grantedAdsRemoved,
+      shouldComplete: true,
+      message: '광고가 제거됐어요',
+    );
+  }
+  // verified:true인데 지급할 게 없음(예: 이미 처리된 힌트쿠폰 재검증 — 서버가 coupons:0 반환).
+  return const IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true);
+}
+
 class IapState {
   final bool busy;
   final String? message; // 스낵바로 한 번 보여주고 넘길 안내/에러 메시지
@@ -55,6 +129,12 @@ class IapNotifier extends StateNotifier<IapState> {
   final AuthService _auth;
   final Ref _ref;
   StreamSubscription<List<PurchaseDetails>>? _sub;
+
+  /// buy() 호출 시점의 로그인 토큰. 구매 결과는 비동기로(때론 앱 재실행 후) 도착하는데,
+  /// 그사이 로그아웃하거나 다른 계정으로 바뀌면 "결제를 시작한 계정"이 아니라 "결과가
+  /// 도착한 시점에 로그인된 계정"에 잘못 귀속될 수 있어서, 시작 시점 토큰을 캡처해둔다.
+  /// 복원(restore)으로 들어온 건은 이 값이 없으므로 자연스럽게 "현재 로그인 계정"으로 검증된다.
+  String? _initiatorToken;
 
   IapNotifier(this._iap, this._auth, this._ref) : super(const IapState()) {
     _sub = _iap.purchaseStream.listen(_onPurchaseUpdate, onError: (e) {
@@ -105,6 +185,7 @@ class IapNotifier extends StateNotifier<IapState> {
       return;
     }
     state = state.copyWith(busy: true, clearMessage: true);
+    _initiatorToken = await _auth.cachedToken;
     try {
       final available = await _iap.isAvailable();
       if (!available) {
@@ -171,44 +252,49 @@ class IapNotifier extends StateNotifier<IapState> {
     }
   }
 
-  /// 구매/복원된 트랜잭션을 서버로 검증하고 결과를 반영한다.
-  /// **서버가 확정 응답(verified true/false)을 줬을 때만 스토어 트랜잭션을 완료 처리한다.**
-  /// 로그인 안 됨·네트워크 오류처럼 확정 답을 못 받은 경우엔 completePurchase를 호출하지
-  /// 않고 남겨둔다 — 그래야 다음 앱 실행 때 purchaseStream으로 다시 전달돼 재시도된다.
-  /// (완료 처리부터 해버리면 결제는 되는데 지급은 안 되는 사고가 날 수 있음.)
+  /// 구매/복원된 트랜잭션을 서버로 검증하고, [decideIapOutcome]의 판단대로 반영한다.
   Future<void> _verifyAndApply(PurchaseDetails p) async {
     state = state.copyWith(busy: true, clearMessage: true);
-    final token = await _auth.cachedToken;
-    if (token == null) {
-      state = state.copyWith(busy: false, message: '로그인 상태에서만 구매가 반영돼요');
-      return;
+    // buy()가 캡처해둔 "결제를 시작한 계정" 토큰을 우선 사용 — 그사이 로그아웃/계정
+    // 전환이 있었어도 엉뚱한 계정에 지급되지 않는다. 복원 등 buy() 경유가 아니면
+    // 캡처된 값이 없으므로 현재 로그인 계정을 쓴다. 1회성이라 쓰고 나면 비운다.
+    final token = _initiatorToken ?? await _auth.cachedToken;
+    _initiatorToken = null;
+
+    IapVerifyResult? result;
+    var hadError = false;
+    if (token != null) {
+      try {
+        result = await _iap.verify(token, p);
+      } catch (e) {
+        if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
+        hadError = true;
+      }
     }
-    final IapVerifyResult result;
-    try {
-      result = await _iap.verify(token, p);
-    } catch (e) {
-      if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
-      state = state.copyWith(
-        busy: false,
-        message: '네트워크 오류로 구매 확인을 못했어요. 앱을 다시 열면 재시도돼요',
-      );
-      return;
+
+    final decision = decideIapOutcome(token: token, result: result, hadError: hadError);
+    switch (decision.outcome) {
+      case IapOutcome.grantedCoupons:
+        _ref.read(statsProvider.notifier).addHintCoupons(decision.coupons);
+        final sync = _ref.read(syncServiceProvider);
+        await sync.push(token!, _ref.read(statsProvider), _ref.read(settingsProvider));
+        break;
+      case IapOutcome.grantedAdsRemoved:
+        _ref.read(adsRemovedProvider.notifier).setRemoved(true);
+        break;
+      case IapOutcome.needsLogin:
+      case IapOutcome.retryLater:
+      case IapOutcome.rejected:
+      case IapOutcome.noGrant:
+        break;
     }
-    // 여기 도달했으면 서버가 확정 응답을 준 것 — verified 여부와 무관하게 완료 처리해도 안전.
-    if (!result.verified) {
-      state = state.copyWith(busy: false, message: '구매 확인에 실패했어요');
-    } else if (result.kind == 'hint_coupons' && result.coupons > 0) {
-      _ref.read(statsProvider.notifier).addHintCoupons(result.coupons);
-      final sync = _ref.read(syncServiceProvider);
-      await sync.push(token, _ref.read(statsProvider), _ref.read(settingsProvider));
-      state = state.copyWith(busy: false, message: '힌트쿠폰 ${result.coupons}개가 지급됐어요');
-    } else if (result.kind == 'remove_ads') {
-      _ref.read(adsRemovedProvider.notifier).setRemoved(true);
-      state = state.copyWith(busy: false, message: '광고가 제거됐어요');
-    } else {
-      state = state.copyWith(busy: false);
+    state = state.copyWith(busy: false, message: decision.message);
+    // shouldComplete=false면(로그인 안 됨/네트워크 오류로 확정 응답을 못 받음) 완료 처리하지
+    // 않고 남겨둔다 — 그래야 다음 앱 실행 때 purchaseStream으로 다시 전달돼 재시도된다.
+    // (완료 처리부터 해버리면 결제는 되는데 지급은 안 되는 사고가 날 수 있음.)
+    if (decision.shouldComplete && p.pendingCompletePurchase) {
+      await _iap.completePurchase(p);
     }
-    if (p.pendingCompletePurchase) await _iap.completePurchase(p);
   }
 }
 
