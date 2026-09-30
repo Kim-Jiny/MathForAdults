@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 로그인/동기화/인앱결제 검증 등 서버 통신용. 광고 SDK가 병합해서 암묵적으로 들어오긴
+         하지만, 서버 검증이 핵심 기능이라 명시적으로 선언해둔다. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 학습 리마인더(로컬 알림) -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>

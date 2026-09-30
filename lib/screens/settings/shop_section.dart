@@ -43,7 +43,7 @@ class ShopSection extends ConsumerWidget {
                     style: TextStyle(fontWeight: FontWeight.w700)),
                 subtitle: Text(adsRemoved
                     ? '배너·전면 광고가 제거됐어요'
-                    : '배너·전면 광고를 영구히 없애요 (6,900원)'),
+                    : '배너·전면 광고를 영구히 없애요${_priceSuffix(iap, IapService.kRemoveAdsId)}'),
                 trailing: adsRemoved
                     ? null
                     : FilledButton(
@@ -64,9 +64,7 @@ class ShopSection extends ConsumerWidget {
                 title: const Text('구매 복원',
                     style: TextStyle(fontWeight: FontWeight.w600)),
                 subtitle: const Text('다른 기기에서 산 항목을 이 기기에도 반영해요'),
-                onTap: iap.busy
-                    ? null
-                    : () => ref.read(iapProvider.notifier).restore(),
+                onTap: iap.busy ? null : () => _restore(context, ref),
               ),
             ],
           ),
@@ -76,13 +74,28 @@ class ShopSection extends ConsumerWidget {
     );
   }
 
+  /// 실제 스토어 가격을 아직 못 받았으면(콘솔 상품 미등록 등) 괄호를 아예 안 붙인다
+  /// — 확정 안 된 가격을 함부로 하드코딩해서 보여주지 않기 위함.
+  String _priceSuffix(IapState iap, String productId) {
+    final price = iap.products[productId]?.price;
+    return price == null ? '' : ' ($price)';
+  }
+
+  bool _requireLogin(BuildContext context, WidgetRef ref) {
+    if (ref.read(authProvider).loggedIn) return true;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요')),
+    );
+    return false;
+  }
+
   void _buyRemoveAds(BuildContext context, WidgetRef ref) {
-    if (!ref.read(authProvider).loggedIn) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요')),
-      );
-      return;
-    }
+    if (!_requireLogin(context, ref)) return;
     ref.read(iapProvider.notifier).buy(IapService.kRemoveAdsId);
+  }
+
+  void _restore(BuildContext context, WidgetRef ref) {
+    if (!_requireLogin(context, ref)) return;
+    ref.read(iapProvider.notifier).restore();
   }
 }
