@@ -288,48 +288,11 @@ void main() {
       expect(n.state.attendance.length, 2);
     });
 
-    test('출석하면 힌트쿠폰 1개, 이미 출석했으면 0개 반환', () {
+    test('checkIn: 오늘 처음 출석하면 true, 이미 출석했으면 false', () {
       final n = StatsNotifier();
       final today = DateTime(2026, 6, 19);
-      final earned = n.checkIn(today);
-      expect(earned, 1);
-      expect(n.state.hintCoupons, 1);
-      expect(n.checkIn(today), 0); // 같은 날 재출석
-      expect(n.state.hintCoupons, 1); // 안 늘어남
-    });
-
-    test('연속 7일 출석하면 그날은 보너스 5개 추가(총 6개)', () {
-      final n = StatsNotifier();
-      final start = DateTime(2026, 6, 1);
-      for (var i = 0; i < 6; i++) {
-        n.checkIn(start.add(Duration(days: i))); // 1~6일차: 1개씩
-      }
-      expect(n.state.hintCoupons, 6);
-      final earnedOnDay7 = n.checkIn(start.add(const Duration(days: 6)));
-      expect(n.state.streakDays, 7);
-      expect(earnedOnDay7, 6); // 1(기본) + 5(보너스)
-      expect(n.state.hintCoupons, 12); // 6 + 6
-    });
-
-    test('useHintCoupon: 있으면 1개 소비하고 true, 없으면 false', () {
-      final n = StatsNotifier();
-      expect(n.useHintCoupon(), isFalse);
-      n.checkIn(DateTime(2026, 6, 19));
-      expect(n.state.hintCoupons, 1);
-      expect(n.useHintCoupon(), isTrue);
-      expect(n.state.hintCoupons, 0);
-      expect(n.useHintCoupon(), isFalse);
-    });
-
-    test('addHintCoupons: 인앱결제로 지급 시 누적, 0 이하는 무시', () {
-      final n = StatsNotifier();
-      n.addHintCoupons(10);
-      expect(n.state.hintCoupons, 10);
-      n.addHintCoupons(5);
-      expect(n.state.hintCoupons, 15);
-      n.addHintCoupons(0);
-      n.addHintCoupons(-3);
-      expect(n.state.hintCoupons, 15);
+      expect(n.checkIn(today), isTrue);
+      expect(n.checkIn(today), isFalse); // 같은 날 재출석
     });
   });
 
@@ -460,16 +423,18 @@ void main() {
       expect(u.iapAccountUuid, isNull);
     });
 
-    test('IapVerifyResult.fromJson: 검증 통과 + 힌트쿠폰 지급 파싱', () {
+    test('IapVerifyResult.fromJson: 검증 통과 + 힌트쿠폰 지급(서버 최종 잔액 포함) 파싱', () {
       final r = IapVerifyResult.fromJson({
         'verified': true,
         'kind': 'hint_coupons',
         'coupons': 10,
         'alreadyProcessed': false,
+        'balance': 10,
       });
       expect(r.verified, isTrue);
       expect(r.kind, 'hint_coupons');
       expect(r.coupons, 10);
+      expect(r.balance, 10);
     });
 
     test('IapVerifyResult.fromJson: 검증 실패는 verified false', () {
@@ -512,30 +477,29 @@ void main() {
         );
         expect(d.outcome, IapOutcome.rejected);
         expect(d.shouldComplete, isTrue);
-        expect(d.coupons, 0);
       });
 
-      test('힌트쿠폰 검증 통과 → 지급 + 완료 처리', () {
+      test('힌트쿠폰 검증 통과 → 서버가 알려준 최종 잔액으로 반영 + 완료 처리', () {
         final d = decideIapOutcome(
           token: 't',
           result: const IapVerifyResult(
-              verified: true, kind: 'hint_coupons', coupons: 10),
+              verified: true, kind: 'hint_coupons', coupons: 10, balance: 10),
           hadError: false,
         );
         expect(d.outcome, IapOutcome.grantedCoupons);
         expect(d.shouldComplete, isTrue);
-        expect(d.coupons, 10);
+        expect(d.balance, 10);
       });
 
-      test('이미 처리된 트랜잭션 재검증(서버가 coupons:0) → 중복 지급 안 함, 완료 처리는 함', () {
+      test('이미 처리된 트랜잭션 재검증(서버가 coupons:0) → 중복 지급 안 하지만 잔액은 동기화, 완료 처리는 함', () {
         final d = decideIapOutcome(
           token: 't',
           result: const IapVerifyResult(
-              verified: true, kind: 'hint_coupons', coupons: 0),
+              verified: true, kind: 'hint_coupons', coupons: 0, balance: 7),
           hadError: false,
         );
         expect(d.outcome, IapOutcome.noGrant);
-        expect(d.coupons, 0);
+        expect(d.balance, 7);
         expect(d.shouldComplete, isTrue);
       });
 

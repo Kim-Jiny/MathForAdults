@@ -202,42 +202,19 @@ class StatsNotifier extends StateNotifier<UserStats> {
     _persist();
   }
 
-  static const _dailyHintCoupon = 1; // 출석 시 매일 지급
-  static const _streakBonusEvery = 7; // 연속 출석 보너스 주기(일)
-  static const _streakBonusAmount = 5; // 연속 7일마다 추가 지급
-
-  /// 오늘 출석 체크. 연속 출석일(streak) 재계산 후 저장.
-  /// 반환값: 이번 출석으로 새로 받은 힌트쿠폰 개수(이미 출석했으면 0).
-  int checkIn(DateTime day) {
+  /// 오늘 출석 체크(캘린더/연속일수 표시용 — 기기 로컬, 게스트도 가능). 연속 출석일(streak)
+  /// 재계산 후 저장. 힌트쿠폰 지급은 더 이상 여기서 하지 않음(로그인 계정당 서버 잔액으로
+  /// 관리 — [IapNotifier.claimDailyCheckIn] 참고. 두 기기에서 각각 체크인해도 쿠폰이
+  /// 중복 지급되지 않게 하려고 서버로 옮김).
+  /// 반환값: 오늘 처음 출석했는지 여부.
+  bool checkIn(DateTime day) {
     final key = dateKey(day);
-    if (state.attendance.contains(key)) return 0; // 이미 출석
+    if (state.attendance.contains(key)) return false; // 이미 출석
     final att = {...state.attendance, key};
     final streak = _streak(att, day);
-    final bonus =
-        (streak > 0 && streak % _streakBonusEvery == 0) ? _streakBonusAmount : 0;
-    final earned = _dailyHintCoupon + bonus;
-    state = state.copyWith(
-      attendance: att,
-      streakDays: streak,
-      hintCoupons: state.hintCoupons + earned,
-    );
-    _persist();
-    return earned;
-  }
-
-  /// 힌트쿠폰 1개 소비. 성공하면 true.
-  bool useHintCoupon() {
-    if (state.hintCoupons <= 0) return false;
-    state = state.copyWith(hintCoupons: state.hintCoupons - 1);
+    state = state.copyWith(attendance: att, streakDays: streak);
     _persist();
     return true;
-  }
-
-  /// 인앱결제로 힌트쿠폰 획득(서버 영수증 검증 통과 후 호출).
-  void addHintCoupons(int n) {
-    if (n <= 0) return;
-    state = state.copyWith(hintCoupons: state.hintCoupons + n);
-    _persist();
   }
 
   /// today(또는 attended면 today, 아니면 yesterday)에서 거슬러 연속 출석일 계산.

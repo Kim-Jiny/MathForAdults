@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../services/iap/iap_service.dart';
-import '../../state/app_state.dart';
 import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
 import '../../widgets/app_card.dart';
@@ -19,7 +18,8 @@ class ShopSection extends ConsumerWidget {
     final scheme = theme.colorScheme;
     final adsRemoved = ref.watch(adsRemovedProvider);
     final iap = ref.watch(iapProvider);
-    final hintCoupons = ref.watch(statsProvider.select((s) => s.hintCoupons));
+    final loggedIn = ref.watch(authProvider).loggedIn;
+    final hintCoupons = iap.hintCoupons;
 
     ref.listen(iapProvider, (prev, next) {
       if (next.message != null && next.message != prev?.message) {
@@ -64,9 +64,11 @@ class ShopSection extends ConsumerWidget {
                     color: scheme.secondary),
                 title: const Text('힌트쿠폰 10개',
                     style: TextStyle(fontWeight: FontWeight.w700)),
-                subtitle: Text(hintCouponsPrice == null
-                    ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
-                    : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)'),
+                subtitle: Text(!loggedIn
+                    ? '로그인 후 구매·사용할 수 있어요'
+                    : hintCouponsPrice == null
+                        ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
+                        : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)'),
                 trailing: _buyButton(
                   busy: iap.busy,
                   onPressed: () => _buyHintCoupons(context, ref),

@@ -13,19 +13,49 @@ class IapVerifyAuthError implements Exception {
   const IapVerifyAuthError();
 }
 
+/// 힌트쿠폰 소비 요청 시 서버 잔액이 이미 0임(다른 기기에서 먼저 썼거나 동시 요청 등).
+/// 호출부가 로컬 표시값을 서버 진실값으로 재동기화하는 계기로 쓴다.
+class InsufficientHintCouponsError implements Exception {
+  const InsufficientHintCouponsError();
+}
+
 /// 서버 `/iap/verify` 응답.
 class IapVerifyResult {
   final bool verified;
   final String? kind; // remove_ads | hint_coupons
   final int coupons;
+  /// kind가 hint_coupons일 때만 채워짐 — 서버 계정의 최종 잔액(증분이 아니라 절대값).
+  final int? balance;
 
-  const IapVerifyResult({required this.verified, this.kind, this.coupons = 0});
+  const IapVerifyResult({
+    required this.verified,
+    this.kind,
+    this.coupons = 0,
+    this.balance,
+  });
 
   factory IapVerifyResult.fromJson(Map<String, dynamic> j) => IapVerifyResult(
     verified: j['verified'] == true,
     kind: j['kind'] as String?,
     coupons: (j['coupons'] as num?)?.toInt() ?? 0,
+    balance: (j['balance'] as num?)?.toInt(),
   );
+}
+
+/// 서버 `/entitlements` 응답 — 계정 기준 영구 엔타이틀먼트(광고 제거)와 힌트쿠폰 잔액.
+class IapEntitlements {
+  final bool adsRemoved;
+  final int hintCoupons;
+
+  const IapEntitlements({required this.adsRemoved, required this.hintCoupons});
+}
+
+/// 서버 `/hint-coupons/checkin` 응답.
+class CheckInResult {
+  final bool granted; // false면 오늘 이미 받음(다른 기기 포함)
+  final int balance;
+
+  const CheckInResult({required this.granted, required this.balance});
 }
 
 /// 인앱결제 — 상품 조회/구매 요청/영수증 서버 검증. 순수 스토어·네트워크 I/O만 담당하고
@@ -143,14 +173,56 @@ class IapService {
     return IapVerifyResult.fromJson(jsonDecode(res.body) as Map<String, dynamic>);
   }
 
-  Future<bool> fetchAdsRemoved(String token) async {
+  Future<IapEntitlements> fetchEntitlements(String token) async {
     final res = await http.get(
       Uri.parse('$_base/entitlements'),
       headers: {'Authorization': 'Bearer $token'},
     ).timeout(const Duration(seconds: 20));
-    if (res.statusCode < 200 || res.statusCode >= 300) return false;
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      return const IapEntitlements(adsRemoved: false, hintCoupons: 0);
+    }
     final data = jsonDecode(res.body) as Map<String, dynamic>;
-    return data['adsRemoved'] == true;
+    return IapEntitlements(
+      adsRemoved: data['adsRemoved'] == true,
+      hintCoupons: (data['hintCoupons'] as num?)?.toInt() ?? 0,
+    );
+  }
+
+  /// 계정당 하루 1회 출석 쿠폰 지급 요청. 실제 "하루 한 번"인지 판단은 전부
+  /// 서버(mfa_checkins PK 충돌)가 맡는다 — 두 기기에서 각각 호출해도 한 번만 지급됨.
+  Future<CheckInResult> claimDailyCheckIn(String token) async {
+    final res = await http
+        .post(
+          Uri.parse('$_base/hint-coupons/checkin'),
+          headers: {'Authorization': 'Bearer $token'},
+        )
+        .timeout(const Duration(seconds: 20));
+    if (res.statusCode == 401) throw const IapVerifyAuthError();
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw Exception('출석 쿠폰 요청 실패 (${res.statusCode})');
+    }
+    final data = jsonDecode(res.body) as Map<String, dynamic>;
+    return CheckInResult(
+      granted: data['granted'] == true,
+      balance: (data['balance'] as num?)?.toInt() ?? 0,
+    );
+  }
+
+  /// 힌트쿠폰 1개 원자적 소비. 잔액 부족(409)이면 [InsufficientHintCouponsError].
+  Future<int> spendHintCoupon(String token) async {
+    final res = await http
+        .post(
+          Uri.parse('$_base/hint-coupons/spend'),
+          headers: {'Authorization': 'Bearer $token'},
+        )
+        .timeout(const Duration(seconds: 20));
+    if (res.statusCode == 401) throw const IapVerifyAuthError();
+    if (res.statusCode == 409) throw const InsufficientHintCouponsError();
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw Exception('힌트쿠폰 사용 요청 실패 (${res.statusCode})');
+    }
+    final data = jsonDecode(res.body) as Map<String, dynamic>;
+    return (data['balance'] as num?)?.toInt() ?? 0;
   }
 }
 

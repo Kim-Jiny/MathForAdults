@@ -98,10 +98,11 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     }
   }
 
-  /// 힌트쿠폰으로 즉시 힌트 열기(광고 없이).
-  void _unlockHintWithCoupon() {
-    final used = ref.read(statsProvider.notifier).useHintCoupon();
-    if (used) setState(() => _revealedHints++);
+  /// 힌트쿠폰으로 즉시 힌트 열기(광고 없이). 소비는 서버 계정 잔액 기준(원자적 차감) —
+  /// 로그인 상태에서만 호출됨(버튼 자체가 비로그인에선 안 보임).
+  Future<void> _unlockHintWithCoupon() async {
+    final used = await ref.read(iapProvider.notifier).useHintCoupon();
+    if (used && mounted) setState(() => _revealedHints++);
   }
 
   Future<void> _buyHintCoupon() async {
@@ -344,8 +345,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
             ),
           if (_revealedHints < p.hints.length)
             Consumer(builder: (context, ref, _) {
-              final coupons =
-                  ref.watch(statsProvider.select((s) => s.hintCoupons));
+              final loggedIn = ref.watch(authProvider).loggedIn;
+              // 힌트쿠폰은 로그인 계정 전용 — 게스트는 쿠폰 사용/구매 UI 자체를 안 보여주고
+              // 광고 버튼만 노출한다(로그인 유도는 홈 출석시트에서 이미 하므로 중복 안내 생략).
+              final coupons = loggedIn
+                  ? ref.watch(iapProvider.select((s) => s.hintCoupons))
+                  : 0;
               if (coupons > 0) {
                 return Align(
                   alignment: Alignment.centerLeft,
@@ -410,35 +415,36 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       },
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Builder(builder: (context) {
-                      final iap = ref.watch(iapProvider);
-                      final price =
-                          iapPriceOf(iap, IapService.kHintCoupons10Id);
-                      final label = iap.busy
-                          ? '구매 처리 중…'
-                          : price == null
-                              ? '힌트쿠폰 10개 구매'
-                              : '힌트쿠폰 10개 구매 ($price)';
-                      return TextButton(
-                        onPressed: iap.busy ? null : _buyHintCoupon,
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
-                          minimumSize: Size.zero,
-                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        ),
-                        child: Text(
-                          label,
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: scheme.onSurfaceVariant,
-                            decoration: TextDecoration.underline,
+                  if (loggedIn)
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Builder(builder: (context) {
+                        final iap = ref.watch(iapProvider);
+                        final price =
+                            iapPriceOf(iap, IapService.kHintCoupons10Id);
+                        final label = iap.busy
+                            ? '구매 처리 중…'
+                            : price == null
+                                ? '힌트쿠폰 10개 구매'
+                                : '힌트쿠폰 10개 구매 ($price)';
+                        return TextButton(
+                          onPressed: iap.busy ? null : _buyHintCoupon,
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            minimumSize: Size.zero,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
-                        ),
-                      );
-                    }),
-                  ),
+                          child: Text(
+                            label,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: scheme.onSurfaceVariant,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
                 ],
               );
             }),

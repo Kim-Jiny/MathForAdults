@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../state/app_state.dart';
+import '../../state/auth_state.dart';
+import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
 
 /// 홈 상단 출석 버튼. 탭하면 출석 달력 시트가 열린다.
@@ -88,6 +90,8 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
     final scheme = theme.colorScheme;
     final stats = ref.watch(statsProvider);
     final attendance = stats.attendance;
+    final loggedIn = ref.watch(authProvider).loggedIn;
+    final hintCoupons = ref.watch(iapProvider.select((s) => s.hintCoupons));
 
     final now = DateTime.now();
     final todayKey = StatsNotifier.dateKey(now);
@@ -135,32 +139,37 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                   ),
                 ),
                 const Spacer(),
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: scheme.secondary.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(20),
+                if (loggedIn)
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: scheme.secondary.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.confirmation_number_rounded,
+                            size: 15, color: scheme.secondary),
+                        const SizedBox(width: 4),
+                        Text('힌트쿠폰 $hintCoupons개',
+                            style: theme.textTheme.labelMedium?.copyWith(
+                                fontWeight: FontWeight.w800,
+                                color: scheme.secondary)),
+                      ],
+                    ),
                   ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.confirmation_number_rounded,
-                          size: 15, color: scheme.secondary),
-                      const SizedBox(width: 4),
-                      Text('힌트쿠폰 ${stats.hintCoupons}개',
-                          style: theme.textTheme.labelMedium?.copyWith(
-                              fontWeight: FontWeight.w800,
-                              color: scheme.secondary)),
-                    ],
-                  ),
-                ),
               ],
             ),
             const SizedBox(height: 4),
-            Text('출석하면 힌트쿠폰 1개, 7일 연속 출석 시 보너스 5개를 더 드려요',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: scheme.onSurfaceVariant)),
+            Text(
+              loggedIn
+                  ? '출석하면 힌트쿠폰 1개를 드려요(하루 1개, 계정당)'
+                  : '로그인하면 출석할 때마다 힌트쿠폰 1개를 받을 수 있어요',
+              style: theme.textTheme.bodySmall
+                  ?.copyWith(color: scheme.onSurfaceVariant),
+            ),
             const SizedBox(height: 16),
 
             // 월 이동
@@ -234,15 +243,26 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
     );
   }
 
-  void _checkIn(BuildContext context, WidgetRef ref, DateTime now) {
-    final earned = ref.read(statsProvider.notifier).checkIn(now);
-    if (earned <= 0) return;
-    final streak = ref.read(statsProvider).streakDays;
-    final bonus = streak > 0 && streak % 7 == 0;
+  Future<void> _checkIn(BuildContext context, WidgetRef ref, DateTime now) async {
+    final newlyAttended = ref.read(statsProvider.notifier).checkIn(now);
+    if (!newlyAttended) return;
+    final loggedIn = ref.read(authProvider).loggedIn;
+    if (!loggedIn) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('출석 완료! 로그인하면 힌트쿠폰도 하루 1장 받을 수 있어요'),
+      ));
+      return;
+    }
+    // 쿠폰 지급 여부는 서버가 최종 판단한다(두 기기에서 같은 날 각각 출석해도 서버가
+    // 하루 한 번만 지급 — mfa_checkins PK 충돌로 보장됨).
+    final result = await ref.read(iapProvider.notifier).claimDailyCheckIn();
+    if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(bonus
-          ? '연속 $streak일 출석! 힌트쿠폰 +$earned개 (보너스 포함)'
-          : '출석 완료! 힌트쿠폰 +$earned개'),
+      content: Text(result == null
+          ? '출석 완료!'
+          : result.granted
+              ? '출석 완료! 힌트쿠폰 +1개'
+              : '출석 완료! (쿠폰은 오늘 이미 받았어요)'),
     ));
   }
 

@@ -7,9 +7,8 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/auth/auth_service.dart';
-import '../services/auth/sync_service.dart';
 import '../services/iap/iap_service.dart';
-import 'app_state.dart';
+import 'app_state.dart' show sharedPreferencesProvider;
 import 'auth_state.dart';
 
 const _kAdsRemovedKey = 'mfa_ads_removed';
@@ -42,13 +41,16 @@ class IapDecision {
   /// 응답을 줬다는 뜻. false면 완료 처리하지 않고 다음 실행 때 재시도되게 둔다.
   final bool shouldComplete;
   final String? message;
-  final int coupons;
+  /// 서버가 알려준 힌트쿠폰 **최종 잔액**(증분이 아니라 절대값) — kind가 hint_coupons일
+  /// 때만 채워짐. 새로 지급된 경우뿐 아니라 이미 처리된 재검증이어도 함께 내려와서,
+  /// 클라이언트 표시값을 항상 서버 진실값으로 맞출 수 있다.
+  final int? balance;
 
   const IapDecision({
     required this.outcome,
     required this.shouldComplete,
     this.message,
-    this.coupons = 0,
+    this.balance,
   });
 }
 
@@ -57,8 +59,8 @@ class IapDecision {
 /// - [hadError]면(네트워크/서버 오류로 확정 응답을 못 받음) 완료 처리하지 않는다 —
 ///   안 그러면 결제는 되는데 지급은 안 되는 사고가 날 수 있다.
 /// - 서버가 확정 응답을 줬으면(verified true/false 무관) 완료 처리는 항상 안전하다.
-/// - `coupons`는 서버가 이미 처리된 트랜잭션이면 0을 내려주므로(재지급 방지), 그대로
-///   신뢰하고 0이면 지급하지 않는다(noGrant) — 클라이언트가 별도로 중복을 걸러낼 필요 없음.
+/// - 힌트쿠폰은 서버가 내려준 `balance`(절대값)를 그대로 신뢰해서 덮어쓴다 — 로컬에서
+///   증분을 더하지 않는다(기기 간 병합으로 소모한 쿠폰이 되살아나는 걸 원천 차단하기 위함).
 IapDecision decideIapOutcome({
   required String? token,
   required IapVerifyResult? result,
@@ -85,13 +87,17 @@ IapDecision decideIapOutcome({
       message: '구매 확인에 실패했어요',
     );
   }
-  if (result.kind == 'hint_coupons' && result.coupons > 0) {
-    return IapDecision(
-      outcome: IapOutcome.grantedCoupons,
-      shouldComplete: true,
-      coupons: result.coupons,
-      message: '힌트쿠폰 ${result.coupons}개가 지급됐어요',
-    );
+  if (result.kind == 'hint_coupons') {
+    if (result.coupons > 0) {
+      return IapDecision(
+        outcome: IapOutcome.grantedCoupons,
+        shouldComplete: true,
+        balance: result.balance,
+        message: '힌트쿠폰 ${result.coupons}개가 지급됐어요',
+      );
+    }
+    // 이미 처리된 재검증(서버가 coupons:0 반환) — 지급은 없지만 서버 잔액으로는 동기화해둔다.
+    return IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true, balance: result.balance);
   }
   if (result.kind == 'remove_ads') {
     return const IapDecision(
@@ -100,7 +106,6 @@ IapDecision decideIapOutcome({
       message: '광고가 제거됐어요',
     );
   }
-  // verified:true인데 지급할 게 없음(예: 이미 처리된 힌트쿠폰 재검증 — 서버가 coupons:0 반환).
   return const IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true);
 }
 
@@ -112,18 +117,27 @@ class IapState {
   final bool busy;
   final String? message; // 스낵바로 한 번 보여주고 넘길 안내/에러 메시지
   final Map<String, ProductDetails> products; // 상점 UI에 실제 스토어 가격 표시용
+  /// 힌트쿠폰 잔액 — 서버 계정 기준(로그인 안 됐으면 항상 0, 로컬 병합 없음).
+  final int hintCoupons;
 
-  const IapState({this.busy = false, this.message, this.products = const {}});
+  const IapState({
+    this.busy = false,
+    this.message,
+    this.products = const {},
+    this.hintCoupons = 0,
+  });
 
   IapState copyWith({
     bool? busy,
     String? message,
     bool clearMessage = false,
     Map<String, ProductDetails>? products,
+    int? hintCoupons,
   }) => IapState(
     busy: busy ?? this.busy,
     message: clearMessage ? null : (message ?? this.message),
     products: products ?? this.products,
+    hintCoupons: hintCoupons ?? this.hintCoupons,
   );
 }
 
@@ -146,11 +160,17 @@ class IapNotifier extends StateNotifier<IapState> {
     _sub = _iap.purchaseStream.listen(_onPurchaseUpdate, onError: (e) {
       if (kDebugMode) debugPrint('[IAP] 구매 스트림 오류: $e');
     });
-    // 이미 로그인된 상태로 앱이 시작됐으면 계정 기준 엔타이틀먼트(광고 제거) 복원.
+    // 이미 로그인된 상태로 앱이 시작됐으면 계정 기준 엔타이틀먼트(광고 제거·힌트쿠폰 잔액) 복원.
     if (_ref.read(authProvider).loggedIn) _refreshEntitlements();
-    // 이후 로그인 성공 시점에도 복원(다른 기기에서 산 광고 제거를 여기서도 반영).
+    // 이후 로그인 성공 시점에도 복원(다른 기기에서 산 광고 제거·쌓인 쿠폰을 여기서도 반영).
+    // 로그아웃/탈퇴 시엔 힌트쿠폰 표시를 0으로 되돌린다 — 계정 잔액이라 게스트 상태에선
+    // 의미가 없고, 로컬에 남겨두면 다른 계정으로 로그인했을 때 잠깐 섞여 보일 수 있다.
     _ref.listen<AuthState>(authProvider, (prev, next) {
-      if (next.loggedIn && prev?.loggedIn != true) _refreshEntitlements();
+      if (next.loggedIn && prev?.loggedIn != true) {
+        _refreshEntitlements();
+      } else if (!next.loggedIn && prev?.loggedIn == true) {
+        state = state.copyWith(hintCoupons: 0);
+      }
     });
     _loadProducts();
   }
@@ -176,10 +196,55 @@ class IapNotifier extends StateNotifier<IapState> {
     final token = await _auth.cachedToken;
     if (token == null) return;
     try {
-      final removed = await _iap.fetchAdsRemoved(token);
-      if (removed) _ref.read(adsRemovedProvider.notifier).setRemoved(true);
+      final entitlements = await _iap.fetchEntitlements(token);
+      if (entitlements.adsRemoved) {
+        _ref.read(adsRemovedProvider.notifier).setRemoved(true);
+      }
+      state = state.copyWith(hintCoupons: entitlements.hintCoupons);
     } catch (e) {
       if (kDebugMode) debugPrint('[IAP] 엔타이틀먼트 조회 실패: $e');
+    }
+  }
+
+  /// 계정당 하루 1회 출석 쿠폰 수령. 로그인 안 돼 있으면 아무 것도 안 한다(호출부가
+  /// 출석 UI에서 로그인 여부를 먼저 판단하지만, 여기서도 한 번 더 방어한다).
+  /// 반환값: 오늘 새로 받았는지(`granted`)와 최신 잔액 — 호출부가 안내 문구를 고르는 데 쓴다.
+  Future<CheckInResult?> claimDailyCheckIn() async {
+    if (!_ref.read(authProvider).loggedIn) return null;
+    final token = await _auth.cachedToken;
+    if (token == null) return null;
+    try {
+      final result = await _iap.claimDailyCheckIn(token);
+      state = state.copyWith(hintCoupons: result.balance);
+      return result;
+    } catch (e) {
+      if (kDebugMode) debugPrint('[IAP] 출석 쿠폰 수령 실패: $e');
+      return null;
+    }
+  }
+
+  /// 힌트쿠폰 1개 소비(퀴즈 힌트용). 로그인 안 돼 있으면 즉시 실패.
+  /// 서버가 잔액 부족(409)을 돌려주면(다른 기기에서 먼저 썼거나 동시 요청) 표시값을
+  /// 서버 진실값으로 재동기화하고 실패를 반환한다 — 호출부는 이때 힌트를 열어주면 안 된다.
+  Future<bool> useHintCoupon() async {
+    if (!_ref.read(authProvider).loggedIn) {
+      state = state.copyWith(message: '로그인이 필요해요');
+      return false;
+    }
+    final token = await _auth.cachedToken;
+    if (token == null) return false;
+    try {
+      final balance = await _iap.spendHintCoupon(token);
+      state = state.copyWith(hintCoupons: balance);
+      return true;
+    } on InsufficientHintCouponsError {
+      state = state.copyWith(message: '힌트쿠폰이 부족해요');
+      await _refreshEntitlements();
+      return false;
+    } catch (e) {
+      if (kDebugMode) debugPrint('[IAP] 힌트쿠폰 소비 실패: $e');
+      state = state.copyWith(message: '힌트쿠폰 사용에 실패했어요');
+      return false;
     }
   }
 
@@ -322,15 +387,11 @@ class IapNotifier extends StateNotifier<IapState> {
     final decision = decideIapOutcome(token: token, result: result, hadError: hadError);
     switch (decision.outcome) {
       case IapOutcome.grantedCoupons:
-        _ref.read(statsProvider.notifier).addHintCoupons(decision.coupons);
-        // 동기화 실패는 별도로 잡는다 — 지급 자체(로컬 반영)는 이미 끝났고, 구매도
-        // 서버가 이미 확정했으므로 여기서 예외가 나도 거래 완료 처리는 계속 진행해야
-        // 한다. 동기화는 다음 "지금 동기화"나 재로그인 때 다시 시도된다.
-        try {
-          final sync = _ref.read(syncServiceProvider);
-          await sync.push(token!, _ref.read(statsProvider), _ref.read(settingsProvider));
-        } catch (e) {
-          if (kDebugMode) debugPrint('[IAP] 지급 후 동기화 실패(나중에 재시도됨): $e');
+      case IapOutcome.noGrant:
+        // 힌트쿠폰은 서버 계정 잔액이 유일한 진실값 — 로컬에 증분을 더하지 않고
+        // 서버가 응답한 최종 잔액을 그대로 반영한다(진도 동기화와도 완전히 무관해짐).
+        if (decision.balance != null) {
+          state = state.copyWith(hintCoupons: decision.balance!);
         }
         break;
       case IapOutcome.grantedAdsRemoved:
@@ -339,7 +400,6 @@ class IapNotifier extends StateNotifier<IapState> {
       case IapOutcome.needsLogin:
       case IapOutcome.retryLater:
       case IapOutcome.rejected:
-      case IapOutcome.noGrant:
         break;
     }
     state = state.copyWith(busy: false, message: decision.message);
