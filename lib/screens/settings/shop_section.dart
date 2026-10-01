@@ -46,16 +46,24 @@ class ShopSection extends ConsumerWidget {
                     : '배너·전면 광고를 영구히 없애요${_priceSuffix(iap, IapService.kRemoveAdsId)}'),
                 trailing: adsRemoved
                     ? null
-                    : FilledButton(
-                        onPressed:
-                            iap.busy ? null : () => _buyRemoveAds(context, ref),
-                        child: iap.busy
-                            ? const SizedBox(
-                                width: 16,
-                                height: 16,
-                                child: CircularProgressIndicator(strokeWidth: 2),
-                              )
-                            : const Text('구매'),
+                    : SizedBox(
+                        width: 72,
+                        child: FilledButton(
+                          style: FilledButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                          ),
+                          onPressed: iap.busy
+                              ? null
+                              : () => _buyRemoveAds(context, ref),
+                          child: iap.busy
+                              ? const SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child:
+                                      CircularProgressIndicator(strokeWidth: 2),
+                                )
+                              : const Text('구매'),
+                        ),
                       ),
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
