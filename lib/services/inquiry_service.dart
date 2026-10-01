@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io' show Platform;
 import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -72,6 +73,26 @@ class InquiryService {
     // 2xx 전체를 성공으로 인정 (서버가 201 Created 등을 반환해도 OK).
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('전송 실패 (${res.statusCode})');
+    }
+  }
+
+  /// 앱 시작 시 1회 호출 — 어드민 DAU/WAU/MAU 통계용(로그인 여부 무관, 게스트 포함).
+  /// 이 호출이 실패해도 앱 기능엔 전혀 영향 없으므로 호출부에서 await하지 않고,
+  /// 예외도 여기서 그냥 삼킨다(통계 수집 실패가 사용자에게 보일 이유가 없음).
+  Future<void> pingDevice() async {
+    try {
+      await http
+          .post(
+            Uri.parse('$_base/device-ping'),
+            headers: {'Content-Type': 'application/json'},
+            body: jsonEncode({
+              'deviceId': deviceId,
+              'platform': Platform.isIOS ? 'ios' : 'android',
+            }),
+          )
+          .timeout(const Duration(seconds: 10));
+    } catch (_) {
+      // 통계용 호출 — 실패해도 무시.
     }
   }
 
