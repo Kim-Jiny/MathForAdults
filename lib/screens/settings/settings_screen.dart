@@ -10,7 +10,9 @@ import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
+import 'account_section.dart';
 import 'inquiry_screen.dart';
+import 'shop_section.dart';
 
 /// 설정 탭: 알림 / 목표 / 테마 / 문의 / 앱 정보.
 class SettingsScreen extends ConsumerWidget {
@@ -27,6 +29,8 @@ class SettingsScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
         children: [
+          const AccountSection(),
+          const ShopSection(),
           const SectionHeader('알림'),
           AppCard(
             padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -144,6 +148,15 @@ class SettingsScreen extends ConsumerWidget {
                   trailing: const Icon(Icons.open_in_new_rounded, size: 18),
                   onTap: () => _openUrl(
                       context, 'https://duo.jiny.shop/mfa/terms'),
+                ),
+                const Divider(height: 1, indent: 16, endIndent: 16),
+                ListTile(
+                  leading: const Icon(Icons.currency_exchange_rounded),
+                  title: const Text('환불 안내',
+                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                  onTap: () => _openUrl(
+                      context, 'https://duo.jiny.shop/mfa/refund'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
@@ -272,7 +285,7 @@ class SettingsScreen extends ConsumerWidget {
 class AboutAppDialog extends StatelessWidget {
   const AboutAppDialog({super.key});
 
-  static const _appVersion = '1.0.3';
+  static const _appVersion = '1.0.5';
 
   @override
   Widget build(BuildContext context) {

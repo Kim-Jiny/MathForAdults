@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../state/app_state.dart';
+import '../../state/auth_state.dart';
+import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
 
 /// 홈 상단 출석 버튼. 탭하면 출석 달력 시트가 열린다.
@@ -70,6 +72,13 @@ class _AttendanceSheet extends ConsumerStatefulWidget {
 
 class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
   late DateTime _month; // 보이는 달의 1일
+  /// 오늘 쿠폰 지급 시도가 서버로부터 확정 응답(지급됨/이미 지급됨 둘 다 포함)을 받았는지.
+  /// 로컬 출석 체크(`attendance`)는 서버 호출 전에 먼저 기록되므로, 이 플래그가 없으면
+  /// 네트워크 오류로 서버 호출이 실패했을 때 "오늘 출석 완료!"로 버튼이 영구히 막혀서
+  /// 그날 쿠폰을 영영 재시도할 방법이 없어진다(서버 자체는 하루 중 몇 번을 호출해도
+  /// 안전 — mfa_checkins PK 충돌로 멱등 처리됨). 화면(바텀시트)이 새로 열릴 때마다
+  /// 리셋되는 건 의도된 동작 — 재진입 시 다시 한번 조용히 맞춰볼 기회를 준다.
+  bool _claimConfirmedToday = false;
 
   @override
   void initState() {
@@ -88,6 +97,8 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
     final scheme = theme.colorScheme;
     final stats = ref.watch(statsProvider);
     final attendance = stats.attendance;
+    final loggedIn = ref.watch(authProvider).loggedIn;
+    final hintCoupons = ref.watch(iapProvider.select((s) => s.hintCoupons));
 
     final now = DateTime.now();
     final todayKey = StatsNotifier.dateKey(now);
@@ -134,7 +145,37 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                     ],
                   ),
                 ),
+                const Spacer(),
+                if (loggedIn)
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: scheme.secondary.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.confirmation_number_rounded,
+                            size: 15, color: scheme.secondary),
+                        const SizedBox(width: 4),
+                        Text('힌트쿠폰 $hintCoupons개',
+                            style: theme.textTheme.labelMedium?.copyWith(
+                                fontWeight: FontWeight.w800,
+                                color: scheme.secondary)),
+                      ],
+                    ),
+                  ),
               ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              loggedIn
+                  ? '출석하면 힌트쿠폰 1개를 드려요(하루 1개, 계정당)'
+                  : '로그인하면 출석할 때마다 힌트쿠폰 1개를 받을 수 있어요',
+              style: theme.textTheme.bodySmall
+                  ?.copyWith(color: scheme.onSurfaceVariant),
             ),
             const SizedBox(height: 16),
 
@@ -193,20 +234,60 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
 
             SizedBox(
               width: double.infinity,
-              child: FilledButton.icon(
-                onPressed: attendedToday
-                    ? null
-                    : () => ref.read(statsProvider.notifier).checkIn(now),
-                icon: Icon(attendedToday
-                    ? Icons.check_circle_rounded
-                    : Icons.event_available_rounded),
-                label: Text(attendedToday ? '오늘 출석 완료!' : '오늘 출석하기'),
-              ),
+              child: Builder(builder: (context) {
+                // 로그인 상태에서 서버 쿠폰 지급이 아직 확정 안 됐으면(네트워크 오류 등)
+                // 로컬 출석 체크가 이미 돼 있어도 버튼을 계속 열어둬서 재시도할 수 있게 한다.
+                final needsRetry =
+                    attendedToday && loggedIn && !_claimConfirmedToday;
+                final done = attendedToday && !needsRetry;
+                return FilledButton.icon(
+                  onPressed: done ? null : () => _checkIn(context, ref, now),
+                  icon: Icon(done
+                      ? Icons.check_circle_rounded
+                      : needsRetry
+                          ? Icons.refresh_rounded
+                          : Icons.event_available_rounded),
+                  label: Text(done
+                      ? '오늘 출석 완료!'
+                      : needsRetry
+                          ? '쿠폰 받기 재시도'
+                          : '오늘 출석하기'),
+                );
+              }),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _checkIn(BuildContext context, WidgetRef ref, DateTime now) async {
+    // 로컬 출석/연속일수는 항상 시도한다(이미 출석했으면 내부적으로 아무것도 안 하고
+    // false를 반환할 뿐이라 재시도 호출에도 안전함).
+    final newlyAttended = ref.read(statsProvider.notifier).checkIn(now);
+    final loggedIn = ref.read(authProvider).loggedIn;
+    if (!loggedIn) {
+      if (!newlyAttended) return; // 게스트는 재시도할 서버 쿠폰 자체가 없음
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('출석 완료! 로그인하면 힌트쿠폰도 하루 1장 받을 수 있어요'),
+      ));
+      return;
+    }
+    // newlyAttended가 false여도(=이미 로컬 출석은 돼 있음) 계속 진행한다 — 바로 이 지점이
+    // "출석은 로컬로 바로 기록되는데, 그 직후 서버 쿠폰 지급 호출만 네트워크 오류로
+    // 실패하면 그날은 영영 재시도를 못 하는" 문제의 핵심이었다. 쿠폰 지급 여부 자체는
+    // 서버가 최종 판단하므로(두 기기 동시 출석해도 하루 한 번만 지급 — mfa_checkins PK
+    // 충돌로 보장됨) 몇 번을 다시 호출해도 안전하다.
+    final result = await ref.read(iapProvider.notifier).claimDailyCheckIn();
+    if (!context.mounted) return;
+    if (result != null) setState(() => _claimConfirmedToday = true);
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(result == null
+          ? '네트워크 오류로 쿠폰 지급을 확인 못했어요. 다시 시도해 주세요'
+          : result.granted
+              ? '출석 완료! 힌트쿠폰 +1개'
+              : '출석 완료! (쿠폰은 오늘 이미 받았어요)'),
+    ));
   }
 
   Widget _dayCell(

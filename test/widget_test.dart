@@ -12,7 +12,11 @@ import 'package:math_for_adults/models/difficulty.dart';
 import 'package:math_for_adults/models/exam_analysis.dart';
 import 'package:math_for_adults/models/math_problem.dart';
 import 'package:math_for_adults/models/user_stats.dart';
+import 'package:math_for_adults/services/auth/auth_service.dart';
+import 'package:math_for_adults/services/auth/sync_service.dart';
+import 'package:math_for_adults/services/iap/iap_service.dart';
 import 'package:math_for_adults/state/app_state.dart';
+import 'package:math_for_adults/state/iap_state.dart';
 import 'package:math_for_adults/screens/quiz/quiz_launcher.dart';
 import 'package:math_for_adults/screens/settings/settings_screen.dart';
 import 'package:math_for_adults/screens/weekly_test/weekly_test_builder.dart';
@@ -283,6 +287,13 @@ void main() {
       n.checkIn(today);
       expect(n.state.attendance.length, 2);
     });
+
+    test('checkIn: 오늘 처음 출석하면 true, 이미 출석했으면 false', () {
+      final n = StatsNotifier();
+      final today = DateTime(2026, 6, 19);
+      expect(n.checkIn(today), isTrue);
+      expect(n.checkIn(today), isFalse); // 같은 날 재출석
+    });
   });
 
   group('Settings', () {
@@ -295,6 +306,212 @@ void main() {
     test('기본값은 꺼짐(옵트인)', () {
       const s = Settings();
       expect(s.weeklyTestReminderOn, isFalse);
+    });
+
+    test('replaceAll은 상태를 통째로 교체하고 저장한다(클라우드 동기화 병합 결과 반영)', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+      final n = SettingsNotifier(prefs);
+      n.replaceAll(const Settings(dailyGoal: DailyGoal.five, reminderHour: 21));
+      expect(n.state.dailyGoal, DailyGoal.five);
+      expect(n.state.reminderHour, 21);
+
+      final reloaded = SettingsNotifier(prefs);
+      expect(reloaded.state.dailyGoal, DailyGoal.five);
+      expect(reloaded.state.reminderHour, 21);
+    });
+  });
+
+  group('SyncService.merge (기기간 동기화 병합)', () {
+    late SyncService sync;
+
+    setUp(() async {
+      SharedPreferences.setMockInitialValues({});
+      sync = SyncService(await SharedPreferences.getInstance());
+    });
+
+    test('클라우드 데이터가 없으면 로컬 그대로 유지', () {
+      const localSettings = Settings(dailyGoal: DailyGoal.three);
+      final result = sync.merge(
+        const CloudProgress(),
+        UserStats.empty(),
+        localSettings,
+      );
+      expect(result.settings.dailyGoal, DailyGoal.three);
+    });
+
+    test('내가 동기화한 적 없고 클라우드에 데이터가 있으면 클라우드 설정 채택', () {
+      const cloudSettings = Settings(dailyGoal: DailyGoal.one);
+      final result = sync.merge(
+        CloudProgress(
+          settings: cloudSettings,
+          updatedAt: DateTime.now(),
+        ),
+        UserStats.empty(),
+        const Settings(dailyGoal: DailyGoal.three),
+      );
+      expect(result.settings.dailyGoal, DailyGoal.one);
+    });
+
+    test('통계는 항상 mergedWith로 누적 병합된다', () {
+      final localStats = UserStats.empty().copyWith(totalSolved: 3, totalCorrect: 2);
+      final cloudStats = UserStats.empty().copyWith(totalSolved: 5, totalCorrect: 1);
+      final result = sync.merge(
+        CloudProgress(stats: cloudStats, updatedAt: DateTime.now()),
+        localStats,
+        const Settings(),
+      );
+      expect(result.stats.totalSolved, 5); // 큰 쪽
+      expect(result.stats.totalCorrect, 2); // 큰 쪽
+    });
+
+    test('양쪽 다 진짜 기록이 있고 푼 문제가 서로 다르면 충돌로 판단', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      final cloudStats = UserStats.empty()
+          .copyWith(totalSolved: 5, solvedIds: {'x', 'y', 'z', 'w', 'v'});
+      expect(
+        sync.hasConflict(CloudProgress(stats: cloudStats), localStats),
+        isTrue,
+      );
+    });
+
+    test('한쪽이 비어 있으면 충돌 아님', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      expect(
+        sync.hasConflict(const CloudProgress(), localStats),
+        isFalse, // 클라우드에 기록 없음(신규 계정) — 그냥 올리면 됨
+      );
+      expect(
+        sync.hasConflict(
+          CloudProgress(
+            stats: UserStats.empty()
+                .copyWith(totalSolved: 5, solvedIds: {'x', 'y'}),
+          ),
+          UserStats.empty(),
+        ),
+        isFalse, // 이 기기에 기록 없음(새 기기) — 그냥 받아오면 됨
+      );
+    });
+
+    test('이미 동기화돼서 푼 문제 집합이 완전히 같으면 충돌 아님', () {
+      final localStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      final cloudStats = UserStats.empty()
+          .copyWith(totalSolved: 3, solvedIds: {'a', 'b', 'c'});
+      expect(
+        sync.hasConflict(CloudProgress(stats: cloudStats), localStats),
+        isFalse,
+      );
+    });
+  });
+
+  group('인앱결제', () {
+    test('AuthUser.fromJson: iapAccountUuid 파싱(구매 계정 귀속용 식별자)', () {
+      final u = AuthUser.fromJson({
+        'id': 1,
+        'nickname': 'guest-abc123',
+        'email': null,
+        'iapAccountUuid': '11111111-2222-3333-4444-555555555555',
+      });
+      expect(u.iapAccountUuid, '11111111-2222-3333-4444-555555555555');
+    });
+
+    test('AuthUser.fromJson: iapAccountUuid 없어도(구버전 응답 등) 안 터짐', () {
+      final u = AuthUser.fromJson({'id': 1});
+      expect(u.iapAccountUuid, isNull);
+    });
+
+    test('IapVerifyResult.fromJson: 검증 통과 + 힌트쿠폰 지급(서버 최종 잔액 포함) 파싱', () {
+      final r = IapVerifyResult.fromJson({
+        'verified': true,
+        'kind': 'hint_coupons',
+        'coupons': 10,
+        'alreadyProcessed': false,
+        'balance': 10,
+      });
+      expect(r.verified, isTrue);
+      expect(r.kind, 'hint_coupons');
+      expect(r.coupons, 10);
+      expect(r.balance, 10);
+    });
+
+    test('IapVerifyResult.fromJson: 검증 실패는 verified false', () {
+      final r = IapVerifyResult.fromJson({'verified': false, 'reason': 'bad_signature'});
+      expect(r.verified, isFalse);
+      expect(r.coupons, 0);
+    });
+
+    test('AdsRemovedNotifier: 기본값 false, 저장된 값 복원, setRemoved 저장', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+      final n = AdsRemovedNotifier(prefs);
+      expect(n.state, isFalse);
+
+      n.setRemoved(true);
+      expect(n.state, isTrue);
+
+      final reloaded = AdsRemovedNotifier(prefs);
+      expect(reloaded.state, isTrue); // 재시작해도 유지
+    });
+
+    group('decideIapOutcome (검증 실패/재시도/중복지급 방지 핵심 로직)', () {
+      test('로그인 안 됨(토큰 없음) → 완료 처리 안 함, 재로그인 후 재시도', () {
+        final d = decideIapOutcome(token: null, result: null, hadError: false);
+        expect(d.outcome, IapOutcome.needsLogin);
+        expect(d.shouldComplete, isFalse);
+      });
+
+      test('네트워크/서버 오류로 확정 응답 못 받음 → 완료 처리 안 하고 다음 실행 때 재시도', () {
+        final d = decideIapOutcome(token: 't', result: null, hadError: true);
+        expect(d.outcome, IapOutcome.retryLater);
+        expect(d.shouldComplete, isFalse);
+      });
+
+      test('서버가 검증 실패를 확정적으로 응답 → 완료 처리는 함(재전달 방지), 지급은 안 함', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(verified: false),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.rejected);
+        expect(d.shouldComplete, isTrue);
+      });
+
+      test('힌트쿠폰 검증 통과 → 서버가 알려준 최종 잔액으로 반영 + 완료 처리', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 10, balance: 10),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedCoupons);
+        expect(d.shouldComplete, isTrue);
+        expect(d.balance, 10);
+      });
+
+      test('이미 처리된 트랜잭션 재검증(서버가 coupons:0) → 중복 지급 안 하지만 잔액은 동기화, 완료 처리는 함', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 0, balance: 7),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.noGrant);
+        expect(d.balance, 7);
+        expect(d.shouldComplete, isTrue);
+      });
+
+      test('광고 제거 검증 통과 → 완료 처리', () {
+        final d = decideIapOutcome(
+          token: 't',
+          result: const IapVerifyResult(verified: true, kind: 'remove_ads'),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedAdsRemoved);
+        expect(d.shouldComplete, isTrue);
+      });
     });
   });
 

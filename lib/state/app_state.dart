@@ -202,13 +202,19 @@ class StatsNotifier extends StateNotifier<UserStats> {
     _persist();
   }
 
-  /// 오늘 출석 체크. 연속 출석일(streak) 재계산 후 저장.
-  void checkIn(DateTime day) {
+  /// 오늘 출석 체크(캘린더/연속일수 표시용 — 기기 로컬, 게스트도 가능). 연속 출석일(streak)
+  /// 재계산 후 저장. 힌트쿠폰 지급은 더 이상 여기서 하지 않음(로그인 계정당 서버 잔액으로
+  /// 관리 — [IapNotifier.claimDailyCheckIn] 참고. 두 기기에서 각각 체크인해도 쿠폰이
+  /// 중복 지급되지 않게 하려고 서버로 옮김).
+  /// 반환값: 오늘 처음 출석했는지 여부.
+  bool checkIn(DateTime day) {
     final key = dateKey(day);
-    if (state.attendance.contains(key)) return; // 이미 출석
+    if (state.attendance.contains(key)) return false; // 이미 출석
     final att = {...state.attendance, key};
-    state = state.copyWith(attendance: att, streakDays: _streak(att, day));
+    final streak = _streak(att, day);
+    state = state.copyWith(attendance: att, streakDays: streak);
     _persist();
+    return true;
   }
 
   /// today(또는 attended면 today, 아니면 yesterday)에서 거슬러 연속 출석일 계산.
@@ -426,6 +432,25 @@ class SettingsNotifier extends StateNotifier<Settings> {
   void setThemeMode(ThemeMode m) {
     state = state.copyWith(themeMode: m);
     _persist();
+  }
+
+  /// 전체 상태 교체 (클라우드 동기화 병합 결과 반영).
+  void replaceAll(Settings next) {
+    state = next;
+    _persist();
+    if (state.notificationsOn) {
+      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+    } else {
+      NotificationService.cancelDaily();
+    }
+    if (state.weeklyTestReminderOn) {
+      NotificationService.scheduleWeeklyTestReminder(
+        state.reminderHour,
+        state.reminderMinute,
+      );
+    } else {
+      NotificationService.cancelWeeklyTestReminder();
+    }
   }
 }
 

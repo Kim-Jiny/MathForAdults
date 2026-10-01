@@ -5,11 +5,15 @@ import '../../models/concept_card.dart';
 import '../../models/math_problem.dart';
 import '../../services/ads/ad_service.dart';
 import '../../state/app_state.dart';
+import '../../state/auth_state.dart';
+import '../../state/iap_state.dart';
+import '../../services/iap/iap_service.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
+import '../../widgets/iap/purchase_confirm_dialog.dart';
 import 'explanation_panel.dart';
 import 'session_result.dart';
 
@@ -34,6 +38,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   bool _finished = false;
   int _revealedHints = 0;
   bool _loadingHintAd = false; // 힌트용 보상형 광고 표시 중
+  bool _usingCoupon = false; // 힌트쿠폰 사용 요청 중(연타 시 2개 소비되는 것 방지)
 
   MathProblem get _problem => widget.problems[_index];
   int get _total => widget.problems.length;
@@ -59,6 +64,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     if (correct) _correctCount++;
     ref.read(statsProvider.notifier).recordAnswer(_problem, correct: correct);
     // 문제 → 채점 전환. (QuizScreen은 일반 문제 전용 — 모의수능은 별도 화면)
+    _maybeShowInterstitial();
+  }
+
+  /// 광고 제거를 구매했으면 전면 광고를 아예 띄우지 않는다.
+  void _maybeShowInterstitial() {
+    if (ref.read(adsRemovedProvider)) return;
     AdService.instance.maybeShowInterstitial(isMockExam: false);
   }
 
@@ -86,6 +97,40 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     if (!AdService.instance.isRewardedReady) {
       AdService.instance.preloadRewarded();
     }
+  }
+
+  /// 힌트쿠폰으로 즉시 힌트 열기(광고 없이). 소비는 서버 계정 잔액 기준(원자적 차감) —
+  /// 로그인 상태에서만 호출됨(버튼 자체가 비로그인에선 안 보임).
+  /// [_usingCoupon]으로 중복 호출을 막는다 — 안 그러면 연타 시 서버에 쿠폰 2개가
+  /// 각각 정상 차감되면서 의도치 않게 힌트가 한 번에 2개 열릴 수 있다.
+  Future<void> _unlockHintWithCoupon() async {
+    if (_usingCoupon) return;
+    setState(() => _usingCoupon = true);
+    final used = await ref.read(iapProvider.notifier).useHintCoupon();
+    if (!mounted) return;
+    setState(() {
+      _usingCoupon = false;
+      if (used) _revealedHints++;
+    });
+  }
+
+  Future<void> _buyHintCoupon() async {
+    if (!ref.read(authProvider).loggedIn) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 설정 > 계정에서 로그인해 주세요')),
+      );
+      return;
+    }
+    final price = iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final confirmed = await confirmPurchaseDialog(
+      context,
+      title: '힌트쿠폰 10개 구매',
+      description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      price: price,
+      consumable: true,
+    );
+    if (!confirmed || !mounted) return;
+    ref.read(iapProvider.notifier).buy(IapService.kHintCoupons10Id);
   }
 
   /// 힌트 잠금 해제: 보상형 광고를 끝까지 봐야만 다음 힌트를 연다.
@@ -117,7 +162,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       _resetForCurrent();
     });
     // 다음 문제 전환.
-    AdService.instance.maybeShowInterstitial(isMockExam: false);
+    _maybeShowInterstitial();
   }
 
   void _retryCurrent() => setState(_resetForCurrent);
@@ -149,6 +194,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(iapProvider, (prev, next) {
+      if (next.message != null && next.message != prev?.message) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text(next.message!)));
+      }
+    });
     if (_finished) {
       return SessionResult(
         total: _total,
@@ -303,49 +354,110 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
               ),
             ),
           if (_revealedHints < p.hints.length)
-            Align(
-              alignment: Alignment.centerLeft,
-              child: ValueListenableBuilder<bool>(
-                valueListenable: AdService.instance.rewardedReadyListenable,
-                builder: (context, adReady, _) {
-                  final busy = _loadingHintAd || !adReady;
-                  final disabledColor =
-                      scheme.onSurface.withValues(alpha: 0.38);
-                  return TextButton.icon(
-                    // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
-                    onPressed:
-                        (adReady && !_loadingHintAd) ? _unlockHintWithAd : null,
-                    icon: busy
-                        ? SizedBox(
-                            width: 16,
-                            height: 16,
-                            child: CircularProgressIndicator(
-                                strokeWidth: 2,
-                                color: _loadingHintAd
-                                    ? scheme.secondary
-                                    : disabledColor),
-                          )
-                        : Icon(Icons.smart_display_outlined,
-                            size: 18, color: scheme.secondary),
+            Consumer(builder: (context, ref, _) {
+              final loggedIn = ref.watch(authProvider).loggedIn;
+              // 힌트쿠폰은 로그인 계정 전용 — 게스트는 쿠폰 사용/구매 UI 자체를 안 보여주고
+              // 광고 버튼만 노출한다(로그인 유도는 홈 출석시트에서 이미 하므로 중복 안내 생략).
+              final coupons = loggedIn
+                  ? ref.watch(iapProvider.select((s) => s.hintCoupons))
+                  : 0;
+              if (coupons > 0) {
+                return Align(
+                  alignment: Alignment.centerLeft,
+                  child: TextButton.icon(
+                    onPressed: _usingCoupon ? null : _unlockHintWithCoupon,
+                    icon: Icon(Icons.confirmation_number_rounded,
+                        size: 18, color: scheme.secondary),
                     label: Text(
-                      _loadingHintAd
-                          ? '광고 표시 중…'
-                          : !adReady
-                              ? '광고 준비 중…'
-                              : _revealedHints == 0
-                                  ? '광고 보고 힌트 보기'
-                                  : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                      '힌트쿠폰 사용 (남은 $coupons개)',
                       style: TextStyle(
-                        color: (adReady && !_loadingHintAd)
-                            ? scheme.secondary
-                            : disabledColor,
+                        color: scheme.secondary,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                  );
-                },
-              ),
-            ),
+                  ),
+                );
+              }
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: ValueListenableBuilder<bool>(
+                      valueListenable: AdService.instance.rewardedReadyListenable,
+                      builder: (context, adReady, _) {
+                        final busy = _loadingHintAd || !adReady;
+                        final disabledColor =
+                            scheme.onSurface.withValues(alpha: 0.38);
+                        return TextButton.icon(
+                          // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
+                          onPressed: (adReady && !_loadingHintAd)
+                              ? _unlockHintWithAd
+                              : null,
+                          icon: busy
+                              ? SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: _loadingHintAd
+                                          ? scheme.secondary
+                                          : disabledColor),
+                                )
+                              : Icon(Icons.smart_display_outlined,
+                                  size: 18, color: scheme.secondary),
+                          label: Text(
+                            _loadingHintAd
+                                ? '광고 표시 중…'
+                                : !adReady
+                                    ? '광고 준비 중…'
+                                    : _revealedHints == 0
+                                        ? '광고 보고 힌트 보기'
+                                        : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                            style: TextStyle(
+                              color: (adReady && !_loadingHintAd)
+                                  ? scheme.secondary
+                                  : disabledColor,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  if (loggedIn)
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Builder(builder: (context) {
+                        final iap = ref.watch(iapProvider);
+                        final price =
+                            iapPriceOf(iap, IapService.kHintCoupons10Id);
+                        final label = iap.busy
+                            ? '구매 처리 중…'
+                            : price == null
+                                ? '힌트쿠폰 10개 구매'
+                                : '힌트쿠폰 10개 구매 ($price)';
+                        return TextButton(
+                          onPressed: iap.busy ? null : _buyHintCoupon,
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            minimumSize: Size.zero,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                          child: Text(
+                            label,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: scheme.onSurfaceVariant,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                ],
+              );
+            }),
         ],
       ),
     );
