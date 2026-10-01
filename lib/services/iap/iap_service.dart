@@ -4,6 +4,7 @@ import 'dart:io' show Platform;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:in_app_purchase_android/billing_client_wrappers.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 
 /// 검증 토큰(JWT)이 만료됐거나 무효함(401) — 네트워크/서버 오류와 달리 **같은 토큰으로
@@ -117,10 +118,19 @@ class IapService {
   /// Android 소모성 상품 전용 — consume은 확인(acknowledge)도 겸하므로 completePurchase
   /// 대신 이걸 호출해야 한다(안 그러면 사용자가 같은 상품을 다시 살 수 없게 막힘).
   /// 서버 검증이 성공해서 실제로 지급을 마친 뒤에만 호출할 것.
+  ///
+  /// `consumePurchase()`는 실패를 예외가 아니라 `BillingResultWrapper.responseCode`로
+  /// 돌려준다 — 결과를 안 보면 실제론 안 끝난(unconsumed) 거래를 끝난 걸로 착각하게 된다.
+  /// (지급 자체는 이미 서버 검증 시 확정됐으므로 여기서 실패해도 되돌릴 건 없지만,
+  /// 실패를 던져서 로그로 남겨야 다음 구매 시도에서 "이미 소유한 상품" 에러가 떴을 때
+  /// 원인을 바로 알 수 있다 — 어차피 미소비 거래는 다음 purchaseStream에서 재시도된다.)
   Future<void> consumeAndroidPurchase(PurchaseDetails p) async {
     final addition = InAppPurchase.instance
         .getPlatformAddition<InAppPurchaseAndroidPlatformAddition>();
-    await addition.consumePurchase(p);
+    final result = await addition.consumePurchase(p);
+    if (result.responseCode != BillingResponse.ok) {
+      throw Exception('Android consume 실패: ${result.responseCode} ${result.debugMessage ?? ''}');
+    }
   }
 
   Future<void> restore() => InAppPurchase.instance.restorePurchases();
@@ -173,13 +183,18 @@ class IapService {
     return IapVerifyResult.fromJson(jsonDecode(res.body) as Map<String, dynamic>);
   }
 
+  /// 네트워크/서버 오류(비2xx)는 예외로 던진다 — 호출부([IapNotifier._refreshEntitlements])가
+  /// 이걸 "진짜 잔액이 0/광고 안 지워짐"과 구분해서 상태를 섣불리 덮어쓰지 않게 하기 위함.
+  /// (예전엔 실패 시 가짜 기본값을 그대로 돌려줘서, 로그인 직후 일시적 5xx 한 번에 화면상
+  /// 힌트쿠폰 잔액이 0으로 보이는 버그가 있었음 — 실제 서버 잔액은 멀쩡한데도.)
   Future<IapEntitlements> fetchEntitlements(String token) async {
     final res = await http.get(
       Uri.parse('$_base/entitlements'),
       headers: {'Authorization': 'Bearer $token'},
     ).timeout(const Duration(seconds: 20));
+    if (res.statusCode == 401) throw const IapVerifyAuthError();
     if (res.statusCode < 200 || res.statusCode >= 300) {
-      return const IapEntitlements(adsRemoved: false, hintCoupons: 0);
+      throw Exception('엔타이틀먼트 조회 실패 (${res.statusCode})');
     }
     final data = jsonDecode(res.body) as Map<String, dynamic>;
     return IapEntitlements(

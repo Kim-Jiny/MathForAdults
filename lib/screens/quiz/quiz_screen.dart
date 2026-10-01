@@ -38,6 +38,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   bool _finished = false;
   int _revealedHints = 0;
   bool _loadingHintAd = false; // 힌트용 보상형 광고 표시 중
+  bool _usingCoupon = false; // 힌트쿠폰 사용 요청 중(연타 시 2개 소비되는 것 방지)
 
   MathProblem get _problem => widget.problems[_index];
   int get _total => widget.problems.length;
@@ -100,9 +101,17 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   /// 힌트쿠폰으로 즉시 힌트 열기(광고 없이). 소비는 서버 계정 잔액 기준(원자적 차감) —
   /// 로그인 상태에서만 호출됨(버튼 자체가 비로그인에선 안 보임).
+  /// [_usingCoupon]으로 중복 호출을 막는다 — 안 그러면 연타 시 서버에 쿠폰 2개가
+  /// 각각 정상 차감되면서 의도치 않게 힌트가 한 번에 2개 열릴 수 있다.
   Future<void> _unlockHintWithCoupon() async {
+    if (_usingCoupon) return;
+    setState(() => _usingCoupon = true);
     final used = await ref.read(iapProvider.notifier).useHintCoupon();
-    if (used && mounted) setState(() => _revealedHints++);
+    if (!mounted) return;
+    setState(() {
+      _usingCoupon = false;
+      if (used) _revealedHints++;
+    });
   }
 
   Future<void> _buyHintCoupon() async {
@@ -355,7 +364,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                 return Align(
                   alignment: Alignment.centerLeft,
                   child: TextButton.icon(
-                    onPressed: _unlockHintWithCoupon,
+                    onPressed: _usingCoupon ? null : _unlockHintWithCoupon,
                     icon: Icon(Icons.confirmation_number_rounded,
                         size: 18, color: scheme.secondary),
                     label: Text(
