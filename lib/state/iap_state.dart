@@ -104,6 +104,10 @@ IapDecision decideIapOutcome({
   return const IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true);
 }
 
+/// 실제 스토어 가격 문자열(현지화 포함). 콘솔에 상품이 아직 없거나 조회 전이면 null —
+/// 확정 안 된 가격을 함부로 하드코딩해서 보여주지 않기 위함(호출부가 폴백 문구를 결정).
+String? iapPriceOf(IapState iap, String productId) => iap.products[productId]?.price;
+
 class IapState {
   final bool busy;
   final String? message; // 스낵바로 한 번 보여주고 넘길 안내/에러 메시지

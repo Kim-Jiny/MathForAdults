@@ -13,6 +13,7 @@ import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
+import '../../widgets/iap/purchase_confirm_dialog.dart';
 import 'explanation_panel.dart';
 import 'session_result.dart';
 
@@ -103,13 +104,21 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     if (used) setState(() => _revealedHints++);
   }
 
-  void _buyHintCoupon() {
+  Future<void> _buyHintCoupon() async {
     if (!ref.read(authProvider).loggedIn) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 설정 > 계정에서 로그인해 주세요')),
       );
       return;
     }
+    final price = iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final confirmed = await confirmPurchaseDialog(
+      context,
+      title: '힌트쿠폰 10개 구매',
+      description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      price: price,
+    );
+    if (!confirmed || !mounted) return;
     ref.read(iapProvider.notifier).buy(IapService.kHintCoupons10Id);
   }
 
@@ -403,23 +412,32 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: TextButton(
-                      onPressed:
-                          ref.watch(iapProvider).busy ? null : _buyHintCoupon,
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        minimumSize: Size.zero,
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      ),
-                      child: Text(
-                        ref.watch(iapProvider).busy ? '구매 처리 중…' : '힌트쿠폰 구매',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: scheme.onSurfaceVariant,
-                          decoration: TextDecoration.underline,
+                    child: Builder(builder: (context) {
+                      final iap = ref.watch(iapProvider);
+                      final price =
+                          iapPriceOf(iap, IapService.kHintCoupons10Id);
+                      final label = iap.busy
+                          ? '구매 처리 중…'
+                          : price == null
+                              ? '힌트쿠폰 10개 구매'
+                              : '힌트쿠폰 10개 구매 ($price)';
+                      return TextButton(
+                        onPressed: iap.busy ? null : _buyHintCoupon,
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          minimumSize: Size.zero,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
-                      ),
-                    ),
+                        child: Text(
+                          label,
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: scheme.onSurfaceVariant,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      );
+                    }),
                   ),
                 ],
               );
