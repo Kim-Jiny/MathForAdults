@@ -151,6 +151,15 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
+                  leading: const Icon(Icons.currency_exchange_rounded),
+                  title: const Text('환불 안내',
+                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+                  onTap: () => _openUrl(
+                      context, 'https://duo.jiny.shop/mfa/refund'),
+                ),
+                const Divider(height: 1, indent: 16, endIndent: 16),
+                ListTile(
                   leading: const Icon(Icons.help_outline_rounded),
                   title: const Text('지원',
                       style: TextStyle(fontWeight: FontWeight.w600)),

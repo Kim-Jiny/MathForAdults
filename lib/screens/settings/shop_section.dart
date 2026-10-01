@@ -142,6 +142,7 @@ class ShopSection extends ConsumerWidget {
       title: '힌트쿠폰 10개 구매',
       description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
       price: price,
+      consumable: true,
     );
     if (!confirmed || !context.mounted) return;
     ref.read(iapProvider.notifier).buy(IapService.kHintCoupons10Id);
