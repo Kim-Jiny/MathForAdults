@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -64,7 +66,10 @@ class ShopSection extends ConsumerWidget {
                     color: scheme.secondary),
                 title: const Text('힌트쿠폰 10개',
                     style: TextStyle(fontWeight: FontWeight.w700)),
-                subtitle: Text(!loggedIn
+                // 안드로이드는 로그인 계정 귀속이라 비로그인 땐 잔액 표시가 의미 없지만,
+                // iOS는 게스트도 기기 로컬 잔액으로 구매·사용 가능해서 항상 실제 잔액을 보여준다
+                // (App Store Review Guideline 5.1.1(v) — 계정과 무관한 상품 구매에 로그인 강제 금지).
+                subtitle: Text(!loggedIn && !Platform.isIOS
                     ? '로그인 후 구매·사용할 수 있어요'
                     : hintCouponsPrice == null
                         ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
@@ -112,12 +117,25 @@ class ShopSection extends ConsumerWidget {
     );
   }
 
+  /// 안드로이드는 로그인 계정 귀속 설계라 구매·복원 전 로그인을 요구하고(기존 그대로),
+  /// iOS는 게스트도 구매·복원 가능해야 해서(App Store Review Guideline 5.1.1(v)) 항상
+  /// 통과시킨다 — Apple ID(스토어 로그인) 기준으로 이미 StoreKit이 구매/복원을 보장한다.
   bool _requireLogin(BuildContext context, WidgetRef ref) {
+    if (Platform.isIOS) return true;
     if (ref.read(authProvider).loggedIn) return true;
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요')),
     );
     return false;
+  }
+
+  /// iOS 게스트 구매 직후 보여줄 안내 — 애플이 권장하는 "등록하면 다른 기기에서도
+  /// 쓸 수 있다"는 설명을 구매 확인 단계에서 미리 전달한다(강제 아님, 정보 제공용).
+  String _withGuestNote(BuildContext context, WidgetRef ref, String description) {
+    if (Platform.isIOS && !ref.read(authProvider).loggedIn) {
+      return '$description\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).';
+    }
+    return description;
   }
 
   Future<void> _buyRemoveAds(BuildContext context, WidgetRef ref) async {
@@ -126,7 +144,11 @@ class ShopSection extends ConsumerWidget {
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '광고 제거 구매',
-      description: '배너·전면 광고를 영구히 없애요. 한 번 구매하면 계정 기준으로 다른 기기에도 적용돼요.',
+      description: _withGuestNote(
+        context,
+        ref,
+        '배너·전면 광고를 영구히 없애요. 한 번 구매하면 계정 기준으로 다른 기기에도 적용돼요.',
+      ),
       price: price,
     );
     if (!confirmed || !context.mounted) return;
@@ -140,7 +162,11 @@ class ShopSection extends ConsumerWidget {
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '힌트쿠폰 10개 구매',
-      description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      description: _withGuestNote(
+        context,
+        ref,
+        '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      ),
       price: price,
       consumable: true,
     );

@@ -457,10 +457,23 @@ void main() {
     });
 
     group('decideIapOutcome (검증 실패/재시도/중복지급 방지 핵심 로직)', () {
-      test('로그인 안 됨(토큰 없음) → 완료 처리 안 함, 재로그인 후 재시도', () {
-        final d = decideIapOutcome(token: null, result: null, hadError: false);
-        expect(d.outcome, IapOutcome.needsLogin);
+      test('게스트(토큰 없음) 구매도 서버 확정 응답을 못 받으면 재시도 — 에러 취급 안 함', () {
+        final d = decideIapOutcome(token: null, result: null, hadError: true);
+        expect(d.outcome, IapOutcome.retryLater);
         expect(d.shouldComplete, isFalse);
+      });
+
+      test('게스트(토큰 없음) 힌트쿠폰 검증 통과 → balance는 null, grantedAmount로 로컬 반영', () {
+        final d = decideIapOutcome(
+          token: null,
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 10),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedCoupons);
+        expect(d.shouldComplete, isTrue);
+        expect(d.balance, isNull);
+        expect(d.grantedAmount, 10);
       });
 
       test('네트워크/서버 오류로 확정 응답 못 받음 → 완료 처리 안 하고 다음 실행 때 재시도', () {

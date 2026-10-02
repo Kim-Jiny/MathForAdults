@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -115,17 +117,24 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   }
 
   Future<void> _buyHintCoupon() async {
-    if (!ref.read(authProvider).loggedIn) {
+    // 안드로이드는 로그인 계정 귀속 설계라 구매 전 로그인을 요구하고(기존 그대로),
+    // iOS는 게스트도 구매 가능해야 해서(App Store Review Guideline 5.1.1(v)) 건너뛴다.
+    if (!Platform.isIOS && !ref.read(authProvider).loggedIn) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 설정 > 계정에서 로그인해 주세요')),
       );
       return;
     }
     final price = iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final isGuest = !ref.read(authProvider).loggedIn;
+    final description = Platform.isIOS && isGuest
+        ? '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.'
+            '\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).'
+        : '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.';
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '힌트쿠폰 10개 구매',
-      description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      description: description,
       price: price,
       consumable: true,
     );
@@ -356,9 +365,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           if (_revealedHints < p.hints.length)
             Consumer(builder: (context, ref, _) {
               final loggedIn = ref.watch(authProvider).loggedIn;
-              // 힌트쿠폰은 로그인 계정 전용 — 게스트는 쿠폰 사용/구매 UI 자체를 안 보여주고
-              // 광고 버튼만 노출한다(로그인 유도는 홈 출석시트에서 이미 하므로 중복 안내 생략).
-              final coupons = loggedIn
+              // 안드로이드 게스트는 힌트쿠폰 UI 자체를 안 보여주고 광고 버튼만 노출한다
+              // (로그인 계정 귀속 설계, 로그인 유도는 홈 출석시트에서 이미 함). iOS는
+              // 게스트도 기기 로컬 잔액으로 구매·사용 가능해야 해서(App Store Review
+              // Guideline 5.1.1(v)) 항상 실제 잔액을 보여준다.
+              final showCoupons = loggedIn || Platform.isIOS;
+              final coupons = showCoupons
                   ? ref.watch(iapProvider.select((s) => s.hintCoupons))
                   : 0;
               if (coupons > 0) {
@@ -425,7 +437,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       },
                     ),
                   ),
-                  if (loggedIn)
+                  if (showCoupons)
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Builder(builder: (context) {

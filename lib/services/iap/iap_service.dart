@@ -144,7 +144,11 @@ class IapService {
   /// 못 줬다"와 "서버가 검증 결과를 줬다(verified true/false)"를 구분해서, 전자일 땐
   /// 스토어 트랜잭션을 completePurchase 하지 않고 다음 실행 때 재시도하게 하기 위함 —
   /// 안 그러면 결제는 되고 지급은 안 되는 사고가 날 수 있다).
-  Future<IapVerifyResult> verify(String token, PurchaseDetails p) async {
+  ///
+  /// [token]이 null이면(iOS 게스트 구매) Authorization 헤더 없이 보낸다 — 서버가
+  /// 로그인 없는 요청도 영수증 검증 자체는 해주고 계정 잔액만 안 건드린다(App Store
+  /// Review Guideline 5.1.1(v): 계정과 무관한 상품 구매에 로그인을 강제할 수 없음).
+  Future<IapVerifyResult> verify(String? token, PurchaseDetails p) async {
     final Map<String, dynamic> body;
     if (Platform.isIOS) {
       body = {
@@ -169,7 +173,7 @@ class IapService {
           Uri.parse('$_base/iap/verify'),
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer $token',
+            if (token != null) 'Authorization': 'Bearer $token',
           },
           body: jsonEncode(body),
         )
