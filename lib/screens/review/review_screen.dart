@@ -89,7 +89,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
                       today,
                       title: '오늘 다시 풀기',
                     ),
-                    child: const Text('지금 복습 시작 ▶'),
+                    child: const Text('지금 복습 시작 →'),
                   ),
                 ),
               ],

@@ -127,7 +127,7 @@ class ConceptDetailScreen extends ConsumerWidget {
                 title: card.title,
               );
             },
-            child: const Text('이 개념 문제 풀러 가기 ▶'),
+            child: const Text('이 개념 문제 풀러 가기 →'),
           ),
         ),
       ),

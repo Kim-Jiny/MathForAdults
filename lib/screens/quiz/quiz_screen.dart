@@ -26,7 +26,15 @@ class QuizScreen extends ConsumerStatefulWidget {
   final List<MathProblem> problems;
   final String? sessionTitle;
 
-  const QuizScreen({super.key, required this.problems, this.sessionTitle});
+  /// 처음부터 이 보기를 고른 채로 채점 화면을 띄운다(스토어 스크린샷 촬영용).
+  final int? initialSelected;
+
+  const QuizScreen({
+    super.key,
+    required this.problems,
+    this.sessionTitle,
+    this.initialSelected,
+  });
 
   @override
   ConsumerState<QuizScreen> createState() => _QuizScreenState();
@@ -53,6 +61,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     super.initState();
     ref.read(conceptsProvider); // 개념 카드 선로드
     AdService.instance.preloadRewarded(); // 힌트용 보상형 광고 미리 로드
+    final pre = widget.initialSelected;
+    if (pre != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _onSelect(pre);
+      });
+    }
   }
 
   @override
@@ -759,6 +773,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                     child: MathText(
                       _problem.choices[i],
                       style: theme.textTheme.titleMedium,
+                      wholeIfMath: true,
                     ),
                   ),
                   ?trailing,

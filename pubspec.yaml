@@ -85,20 +85,20 @@ flutter_launcher_icons:
   image_path: "assets/icon.png"
   remove_alpha_ios: true
   min_sdk_android: 21
-  adaptive_icon_background: "#DEE8F1"
-  adaptive_icon_foreground: "assets/icon.png"
+  adaptive_icon_background: "#9A78EE"
+  adaptive_icon_foreground: "assets/icon_fg.png"
 
 # 스플래시 (dart run flutter_native_splash:create)
 # cover(센터크롭): 짧은 쪽 기준으로 화면을 꽉 채우고 넘치는 부분은 잘라냄.
 flutter_native_splash:
-  color: "#CBDEF1"
+  color: "#9A78EE"
   image: "assets/splash.png"
   fullscreen: false
   ios_content_mode: scaleAspectFill
   android_gravity: fill
   android_12:
-    image: "assets/icon.png"
-    color: "#DEE8F1"
+    image: "assets/icon_fg.png"
+    color: "#9A78EE"
   android: true
   ios: true
   web: false

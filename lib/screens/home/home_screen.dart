@@ -252,7 +252,7 @@ class _TodayCard extends ConsumerWidget {
                           lesson: target.lesson,
                           title: '오늘의 문제',
                         ),
-                        child: const Text('문제 풀기 ▶'),
+                        child: const Text('문제 풀기 →'),
                       ),
                     ),
                   ],

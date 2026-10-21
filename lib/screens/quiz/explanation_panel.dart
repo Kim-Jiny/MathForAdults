@@ -102,7 +102,7 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
                 ),
                 const SizedBox(width: 8),
               ],
-              Expanded(child: MathText(p.correctAnswerDisplay)),
+              Expanded(child: MathText(p.correctAnswerDisplay, wholeIfMath: true)),
             ],
           ),
           const SizedBox(height: 12),

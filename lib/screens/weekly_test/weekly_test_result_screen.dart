@@ -204,7 +204,7 @@ class WeeklyTestResultScreen extends ConsumerWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                Expanded(child: MathText(p.correctAnswerDisplay)),
+                Expanded(child: MathText(p.correctAnswerDisplay, wholeIfMath: true)),
               ],
             ),
             const SizedBox(height: 8),

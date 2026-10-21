@@ -9,14 +9,16 @@ import 'subjects/subjects_screen.dart';
 
 /// 하단 탭 셸: 홈 / 단원 / 다시풀기 / 기록 / 설정.
 class MainShell extends StatefulWidget {
-  const MainShell({super.key});
+  /// 처음 보여줄 탭(스토어 스크린샷 촬영 등에서 사용). 기본은 홈.
+  final int initialIndex;
+  const MainShell({super.key, this.initialIndex = 0});
 
   @override
   State<MainShell> createState() => _MainShellState();
 }
 
 class _MainShellState extends State<MainShell> {
-  int _index = 0;
+  late int _index = widget.initialIndex;
   DateTime? _lastBackAt;
 
   void _openTab(int i) => setState(() => _index = i);

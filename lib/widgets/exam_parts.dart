@@ -175,7 +175,11 @@ class ExamChoiceTile extends StatelessWidget {
                   ),
                   const SizedBox(width: 14),
                   Expanded(
-                    child: MathText(text, style: theme.textTheme.titleMedium),
+                    child: MathText(
+                      text,
+                      style: theme.textTheme.titleMedium,
+                      wholeIfMath: true,
+                    ),
                   ),
                 ],
               ),
