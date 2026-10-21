@@ -24,7 +24,7 @@ class ShopSection extends ConsumerWidget {
     final hintCoupons = iap.hintCoupons;
 
     ref.listen(iapProvider, (prev, next) {
-      if (next.message != null && next.message != prev?.message) {
+      if (next.message != null && next.messageSeq != prev?.messageSeq) {
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text(next.message!)));
       }

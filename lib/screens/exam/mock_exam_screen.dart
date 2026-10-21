@@ -32,6 +32,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   final _shortController = TextEditingController();
   int _index = 0;
   late Duration _remaining;
+  late final DateTime _deadline; // 벽시계 기준 종료 시각 — 백그라운드로 가도 시간이 멈추지 않게
   Timer? _timer;
   bool _submitted = false;
   bool _dialogOpen = false; // 제출/나가기 확인 다이얼로그가 떠 있는지
@@ -43,13 +44,17 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   void initState() {
     super.initState();
     _remaining = widget.duration;
+    _deadline = DateTime.now().add(widget.duration);
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
-      if (_remaining.inSeconds <= 1) {
+      // 타이머 틱 누적 대신 마감 시각과의 차이로 계산한다(앱이 백그라운드에 있는 동안
+      // 타이머가 멈춰도 남은 시간이 정확히 줄어든다).
+      final left = _deadline.difference(DateTime.now());
+      if (left.inSeconds <= 0) {
         _remaining = Duration.zero; // 소요 시간이 전체 시간으로 정확히 찍히도록
         _submit(auto: true);
       } else {
-        setState(() => _remaining -= const Duration(seconds: 1));
+        setState(() => _remaining = left);
       }
     });
     _syncController();

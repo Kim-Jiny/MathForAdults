@@ -12,7 +12,7 @@ class ProgressBar extends StatelessWidget {
     required this.value,
     this.showPercent = true,
     this.color,
-    this.height = 8,
+    this.height = 12,
   });
 
   @override
@@ -27,8 +27,9 @@ class ProgressBar extends StatelessWidget {
             child: LinearProgressIndicator(
               value: value.clamp(0.0, 1.0),
               minHeight: height,
-              backgroundColor: scheme.outlineVariant,
+              backgroundColor: scheme.outlineVariant.withValues(alpha: 0.7),
               valueColor: AlwaysStoppedAnimation(c),
+              borderRadius: BorderRadius.circular(height),
             ),
           ),
         ),

@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-/// 은은한 수학 분위기 배경: 옅은 좌표 그리드 + 사인 곡선.
+/// 은은한 수학 낙서 배경: 흩뿌려진 연산 기호·별·동그라미.
 /// Stack 안에서 콘텐츠 뒤에 깔아 쓴다. 풀이 흐름을 방해하지 않도록 매우 약하게.
 class MathBackdrop extends StatelessWidget {
   final Color color;
@@ -15,52 +15,74 @@ class MathBackdrop extends StatelessWidget {
     return Positioned.fill(
       child: IgnorePointer(
         child: CustomPaint(
-          painter: _MathBackdropPainter(
-            color: color.withValues(alpha: opacity),
-          ),
+          painter: _DoodlePainter(color: color.withValues(alpha: opacity)),
         ),
       ),
     );
   }
 }
 
-class _MathBackdropPainter extends CustomPainter {
+class _DoodlePainter extends CustomPainter {
   final Color color;
-  _MathBackdropPainter({required this.color});
+  _DoodlePainter({required this.color});
+
+  // (x비율, y비율, 글리프, 크기, 회전)
+  static const _glyphs = <(double, double, String, double, double)>[
+    (0.06, 0.12, '+', 30, -0.2),
+    (0.30, 0.78, '−', 34, 0.1),
+    (0.50, 0.10, '×', 28, 0.25),
+    (0.64, 0.58, 'π', 34, -0.15),
+    (0.84, 0.16, '÷', 30, 0.2),
+    (0.18, 0.52, '√', 28, 0.1),
+    (0.90, 0.72, '∑', 30, -0.1),
+  ];
 
   @override
   void paint(Canvas canvas, Size size) {
-    final grid = Paint()
-      ..color = color.withValues(alpha: color.a * 0.6)
-      ..strokeWidth = 1;
-
-    const step = 28.0;
-    for (double x = 0; x < size.width; x += step) {
-      canvas.drawLine(Offset(x, 0), Offset(x, size.height), grid);
+    for (final (fx, fy, g, fs, rot) in _glyphs) {
+      final tp = TextPainter(
+        text: TextSpan(
+          text: g,
+          style: TextStyle(
+            color: color,
+            fontSize: fs,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      canvas.save();
+      canvas.translate(size.width * fx, size.height * fy);
+      canvas.rotate(rot);
+      tp.paint(canvas, Offset(-tp.width / 2, -tp.height / 2));
+      canvas.restore();
     }
-    for (double y = 0; y < size.height; y += step) {
-      canvas.drawLine(Offset(0, y), Offset(size.width, y), grid);
-    }
 
-    // 사인 곡선
-    final curve = Paint()
+    // 동그라미 + 별 장식
+    final ring = Paint()
       ..color = color
-      ..strokeWidth = 2
-      ..style = PaintingStyle.stroke;
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.4;
+    canvas.drawCircle(Offset(size.width * 0.42, size.height * 0.40), 7, ring);
+    canvas.drawCircle(Offset(size.width * 0.76, size.height * 0.88), 5, ring);
+    final dot = Paint()..color = color;
+    canvas.drawCircle(Offset(size.width * 0.10, size.height * 0.86), 4, dot);
+    canvas.drawCircle(Offset(size.width * 0.72, size.height * 0.34), 3, dot);
+    _star(canvas, Offset(size.width * 0.58, size.height * 0.88), 9, dot);
+    _star(canvas, Offset(size.width * 0.94, size.height * 0.42), 7, dot);
+  }
+
+  void _star(Canvas canvas, Offset c, double r, Paint paint) {
     final path = Path();
-    final midY = size.height * 0.62;
-    final amp = size.height * 0.16;
-    for (double x = 0; x <= size.width; x += 4) {
-      final y = midY - amp * math.sin(x / size.width * 4 * math.pi);
-      if (x == 0) {
-        path.moveTo(x, y);
-      } else {
-        path.lineTo(x, y);
-      }
+    for (var i = 0; i < 8; i++) {
+      final a = i * math.pi / 4;
+      final rr = i.isEven ? r : r * 0.38;
+      final p = Offset(c.dx + rr * math.cos(a), c.dy + rr * math.sin(a));
+      i == 0 ? path.moveTo(p.dx, p.dy) : path.lineTo(p.dx, p.dy);
     }
-    canvas.drawPath(path, curve);
+    canvas.drawPath(path..close(), paint);
   }
 
   @override
-  bool shouldRepaint(covariant _MathBackdropPainter old) => old.color != color;
+  bool shouldRepaint(covariant _DoodlePainter old) => old.color != color;
 }

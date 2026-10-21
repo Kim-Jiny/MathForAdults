@@ -111,6 +111,10 @@ class UserStats {
   final Set<String> weeklyLessonKeys; // 이번 주 학습한 레슨 "과목|단원|세부단원". 주가 바뀌면 리셋.
   final List<WeeklyTestRecord> weeklyTestHistory; // 주간시험 응시 기록 (weekKey당 1건, 최신 12건)
   final int weeklyTestStreak; // 주간시험 연속 응시 주차 수
+  /// 오답 목록 변경 시각(ms) — 기기 간 병합 때 "다른 기기에서 이미 맞혀 지운 문제"가
+  /// 되살아나지 않게 한다. [wrongAddedAt]: 오답에 담은 시각, [wrongRemovedAt]: 지운 시각.
+  final Map<String, int> wrongAddedAt;
+  final Map<String, int> wrongRemovedAt;
   final Map<String, MathProblem> weeklyTestWrong; // 주간시험에서 틀려 다음 주로 이월된 문제(정답 맞히면 제거, 주가 바뀌어도 유지)
 
   const UserStats({
@@ -129,6 +133,8 @@ class UserStats {
     this.weeklyTestHistory = const [],
     this.weeklyTestStreak = 0,
     this.weeklyTestWrong = const {},
+    this.wrongAddedAt = const {},
+    this.wrongRemovedAt = const {},
   });
 
   /// 첫 실행/초기화 상태 (전부 0).
@@ -148,7 +154,26 @@ class UserStats {
     weeklyTestHistory: [],
     weeklyTestStreak: 0,
     weeklyTestWrong: {},
+    wrongAddedAt: {},
+    wrongRemovedAt: {},
   );
+
+  /// 오늘(또는 오늘 미출석이면 어제)부터 거슬러 센 현재 연속 출석일. 저장된 [streakDays]는
+  /// 마지막 출석 시점 값이라 며칠 쉬어도 그대로 남으므로, 화면 표시는 이 값을 쓴다.
+  int currentStreak([DateTime? now]) {
+    String key(DateTime d) =>
+        '${d.year.toString().padLeft(4, '0')}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+    var cursor = now ?? DateTime.now();
+    if (!attendance.contains(key(cursor))) {
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    var n = 0;
+    while (attendance.contains(key(cursor))) {
+      n++;
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    return n;
+  }
 
   double get accuracy => totalSolved == 0 ? 0 : totalCorrect / totalSolved;
 
@@ -182,6 +207,8 @@ class UserStats {
     List<WeeklyTestRecord>? weeklyTestHistory,
     int? weeklyTestStreak,
     Map<String, MathProblem>? weeklyTestWrong,
+    Map<String, int>? wrongAddedAt,
+    Map<String, int>? wrongRemovedAt,
   }) {
     return UserStats(
       totalSolved: totalSolved ?? this.totalSolved,
@@ -199,13 +226,46 @@ class UserStats {
       weeklyTestHistory: weeklyTestHistory ?? this.weeklyTestHistory,
       weeklyTestStreak: weeklyTestStreak ?? this.weeklyTestStreak,
       weeklyTestWrong: weeklyTestWrong ?? this.weeklyTestWrong,
+      wrongAddedAt: wrongAddedAt ?? this.wrongAddedAt,
+      wrongRemovedAt: wrongRemovedAt ?? this.wrongRemovedAt,
     );
+  }
+
+  /// 삭제 기록은 최신 [max]건만 유지(무한 증가 방지).
+  static Map<String, int> trimRemoved(Map<String, int> m, [int max = 500]) {
+    if (m.length <= max) return m;
+    final entries = m.entries.toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
+    return {for (final e in entries.take(max)) e.key: e.value};
   }
 
   /// 로컬과 클라우드 상태를 합친다(기기 간 동기화).
   /// 누적값은 큰 쪽, 집합/맵은 합집합(진행률은 과목별 최댓값)으로 보수적 병합.
   UserStats mergedWith(UserStats other) {
-    final wrong = {...other.wrongProblems, ...wrongProblems};
+    // 오답 병합: 문제별로 "담은 시각"과 "지운 시각" 중 더 늦은 쪽이 이긴다.
+    // (시각 기록이 없는 예전 데이터는 담은 시각 0 → 삭제 기록이 없으면 유지)
+    final removed = <String, int>{...other.wrongRemovedAt};
+    wrongRemovedAt.forEach((k, v) {
+      if (v > (removed[k] ?? -1)) removed[k] = v;
+    });
+    final wrong = <String, MathProblem>{};
+    for (final id in {...other.wrongProblems.keys, ...wrongProblems.keys}) {
+      final problem = wrongProblems[id] ?? other.wrongProblems[id]!;
+      var addedAt = 0;
+      if (wrongProblems.containsKey(id)) {
+        addedAt = wrongAddedAt[id] ?? 0;
+      }
+      if (other.wrongProblems.containsKey(id)) {
+        final t = other.wrongAddedAt[id] ?? 0;
+        if (t > addedAt) addedAt = t;
+      }
+      if (addedAt > (removed[id] ?? -1)) wrong[id] = problem;
+    }
+    final addedMerged = <String, int>{
+      for (final id in wrong.keys)
+        id: [wrongAddedAt[id] ?? 0, other.wrongAddedAt[id] ?? 0]
+            .reduce((a, b) => a > b ? a : b),
+    };
     final prog = <String, int>{...other.solvedByChapter};
     solvedByChapter.forEach((k, v) {
       prog[k] = v > (prog[k] ?? 0) ? v : (prog[k] ?? 0);
@@ -268,6 +328,8 @@ class UserStats {
           ? weeklyTestStreak
           : other.weeklyTestStreak,
       weeklyTestWrong: {...other.weeklyTestWrong, ...weeklyTestWrong},
+      wrongAddedAt: addedMerged,
+      wrongRemovedAt: trimRemoved(removed),
     );
   }
 
@@ -313,6 +375,14 @@ class UserStats {
           .map((e) => WeeklyTestRecord.fromJson(e as Map<String, dynamic>))
           .toList(),
       weeklyTestStreak: j['weeklyTestStreak'] as int? ?? 0,
+      wrongAddedAt: {
+        for (final e in (j['wrongAddedAt'] as Map<String, dynamic>? ?? {}).entries)
+          e.key: (e.value as num).toInt(),
+      },
+      wrongRemovedAt: {
+        for (final e in (j['wrongRemovedAt'] as Map<String, dynamic>? ?? {}).entries)
+          e.key: (e.value as num).toInt(),
+      },
       weeklyTestWrong: {
         for (final e in (j['weeklyTestWrong'] as Map<String, dynamic>? ?? {}).entries)
           e.key: MathProblem.fromJson(e.value as Map<String, dynamic>),
@@ -340,5 +410,7 @@ class UserStats {
     'weeklyTestWrong': {
       for (final e in weeklyTestWrong.entries) e.key: e.value.toJson(),
     },
+    'wrongAddedAt': wrongAddedAt,
+    'wrongRemovedAt': wrongRemovedAt,
   };
 }

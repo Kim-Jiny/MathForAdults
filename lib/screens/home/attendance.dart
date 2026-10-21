@@ -36,7 +36,7 @@ class AttendanceButton extends ConsumerWidget {
                   color: done ? AppColors.streakOf(theme.brightness) : scheme.primary),
               const SizedBox(width: 5),
               Text(
-                done ? '${stats.streakDays}일째' : '출석하기',
+                done ? '${stats.currentStreak()}일째' : '출석하기',
                 style: theme.textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.w800,
                   color: done ? scheme.onSurface : scheme.primary,
@@ -136,7 +136,7 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                           size: 15,
                           color: AppColors.streakOf(theme.brightness)),
                       const SizedBox(width: 4),
-                      Text('연속 ${stats.streakDays}일',
+                      Text('연속 ${stats.currentStreak()}일',
                           style: theme.textTheme.labelMedium?.copyWith(
                               fontWeight: FontWeight.w800,
                               color: theme.brightness == Brightness.dark

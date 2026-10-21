@@ -17,8 +17,15 @@ class MathText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final base = (style ?? DefaultTextStyle.of(context).style)
-        .copyWith(height: 1.5);
+    // 문제·해설은 가독성을 위해 항상 본문(시스템) 폰트로 — 제목용 둥근 폰트가 들어와도 걸러낸다.
+    final raw = style ?? DefaultTextStyle.of(context).style;
+    final base = Theme.of(context).textTheme.bodyMedium!.copyWith(
+          fontSize: raw.fontSize,
+          fontWeight: raw.fontWeight,
+          fontStyle: raw.fontStyle,
+          color: raw.color,
+          height: 1.5,
+        );
     final spans = <InlineSpan>[];
     final regex = RegExp(r'\$([^$]*)\$');
     var last = 0;

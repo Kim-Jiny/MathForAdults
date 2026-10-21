@@ -6,6 +6,7 @@ import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/difficulty_badge.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/section_header.dart';
 import '../quiz/quiz_launcher.dart';
 
@@ -34,6 +35,8 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
     }
 
     final subjects = wrong.map((p) => p.subject).toSet().toList();
+    // 선택한 과목의 마지막 오답을 풀어 칩이 사라지면 필터가 남아 빈 화면이 되므로 해제.
+    if (_subject != null && !subjects.contains(_subject)) _subject = null;
     final filtered = wrong.where((p) {
       if (_subject != null && p.subject != _subject) return false;
       if (_difficulty != null && p.difficulty != _difficulty) return false;
@@ -143,12 +146,6 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
 
   Widget _wrongTile(MathProblem p) {
     final theme = Theme.of(context);
-    // 더미: id 기반 결정적 정답률/날짜
-    final h = p.id.codeUnits.fold<int>(0, (a, b) => a + b);
-    final acc = 20 + (h % 5) * 10; // 20~60%
-    final days = h % 7; // 0~6일 전
-    final dateLabel = days == 0 ? '오늘' : '$days일 전';
-
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,7 +173,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
               Icon(Icons.schedule,
                   size: 14, color: theme.colorScheme.onSurfaceVariant),
               const SizedBox(width: 4),
-              Text('$dateLabel · 정답률 $acc%',
+              Text('예상 ${p.estimatedTime}',
                   style: theme.textTheme.bodySmall?.copyWith(
                       color: theme.colorScheme.onSurfaceVariant)),
               const Spacer(),
@@ -202,7 +199,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('🌿', style: TextStyle(fontSize: 56)),
+              const Mascot(size: 110, mood: MascotMood.happy, bounce: true),
               const SizedBox(height: 16),
               Text('다시 풀 문제가 없어요',
                   style: theme.textTheme.titleMedium

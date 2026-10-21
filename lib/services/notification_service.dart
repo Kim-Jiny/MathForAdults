@@ -1,4 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -15,8 +16,16 @@ class NotificationService {
     if (_inited) return;
     try {
       tzdata.initializeTimeZones();
-      // 한국 대상 앱 — 기본 표준시 Asia/Seoul.
-      tz.setLocalLocation(tz.getLocation('Asia/Seoul'));
+      // 기기 시간대를 따른다(해외 체류 시에도 알림 시각이 맞도록). 조회 실패 시 한국 표준시.
+      var zone = 'Asia/Seoul';
+      try {
+        zone = (await FlutterTimezone.getLocalTimezone()).identifier;
+      } catch (_) {}
+      try {
+        tz.setLocalLocation(tz.getLocation(zone));
+      } catch (_) {
+        tz.setLocalLocation(tz.getLocation('Asia/Seoul'));
+      }
 
       const android = AndroidInitializationSettings('@mipmap/ic_launcher');
       const darwin = DarwinInitializationSettings(

@@ -48,7 +48,7 @@ class StatsScreen extends ConsumerWidget {
                 _vline(theme),
                 StatTile(value: '${(s.accuracy * 100).round()}%', label: '정답률'),
                 _vline(theme),
-                StatTile(value: '${s.streakDays}일', label: '연속'),
+                StatTile(value: '${s.currentStreak()}일', label: '연속'),
               ],
             ),
           ),
@@ -70,7 +70,7 @@ class StatsScreen extends ConsumerWidget {
                   child: StatTile(
                     icon: Icons.flag_rounded,
                     value: weakest ?? '-',
-                    label: '약한 단원',
+                    label: '가장 덜 푼 과목',
                     valueColor: AppColors.wrongOf(theme.brightness),
                   ),
                 ),

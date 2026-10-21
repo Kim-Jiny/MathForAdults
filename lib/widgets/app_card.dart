@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// 앱 전역에서 쓰는 카드. 약한 그림자 + 둥근 모서리 + 넉넉한 패딩.
+/// 앱 전역에서 쓰는 카드. 말랑한 테두리 + 아래쪽 "도톰한 입술" 그림자(블러 없는 단색)로
+/// 스티커 같은 귀여운 느낌을 낸다. 과하지 않게 테두리색과 같은 톤만 쓴다.
 class AppCard extends StatelessWidget {
   final Widget child;
   final VoidCallback? onTap;
@@ -18,14 +19,14 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final radius = BorderRadius.circular(24);
     return DecoratedBox(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: radius,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
+            color: scheme.outlineVariant,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
@@ -33,11 +34,11 @@ class AppCard extends StatelessWidget {
         color: color ?? scheme.surface,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: scheme.outlineVariant),
+          borderRadius: radius,
+          side: BorderSide(color: scheme.outlineVariant, width: 2),
         ),
         child: InkWell(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: radius,
           onTap: onTap,
           child: Padding(padding: padding, child: child),
         ),

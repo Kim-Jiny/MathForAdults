@@ -20,6 +20,15 @@ class SectionHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(2, 0, 2, 12),
       child: Row(
         children: [
+          Container(
+            width: 8,
+            height: 8,
+            margin: const EdgeInsets.only(right: 8),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.tertiary,
+              shape: BoxShape.circle,
+            ),
+          ),
           Expanded(
             child: Text(
               title,

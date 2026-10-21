@@ -39,6 +39,8 @@ dependencies:
   flutter_secure_storage: ^11.2.0
   in_app_purchase: ^3.3.1
   in_app_purchase_android: ^0.5.3
+  flutter_timezone: ^5.1.1
+  package_info_plus: ^10.2.2
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +53,24 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  fonts:
+    # 제목/강조용 둥근 한글 폰트(주아체, SIL OFL). 단일 굵기 파일을 모든 weight에 매핑해
+    # w700/w800 지정 시 가짜 볼드가 생기지 않게 한다.
+    - family: Jua
+      fonts:
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 600
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 700
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 800
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 900
 
   assets:
     - assets/problems/

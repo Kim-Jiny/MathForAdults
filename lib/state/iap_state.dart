@@ -121,6 +121,9 @@ String? iapPriceOf(IapState iap, String productId) => iap.products[productId]?.p
 class IapState {
   final bool busy;
   final String? message; // 스낵바로 한 번 보여주고 넘길 안내/에러 메시지
+  /// message가 새로 세팅될 때마다 증가 — 같은 문구가 연속으로 나와도 리스너가 새 메시지로
+  /// 인식해 스낵바를 다시 띄울 수 있게 한다(문자열 비교만으론 두 번째부터 안 뜸).
+  final int messageSeq;
   final Map<String, ProductDetails> products; // 상점 UI에 실제 스토어 가격 표시용
   /// 힌트쿠폰 잔액. 로그인 상태면 서버 계정 기준(로컬 병합 없음), 게스트면 이 기기
   /// 로컬 잔액(iOS만 — 안드로이드 게스트는 구매 자체가 막혀 항상 0).
@@ -129,6 +132,7 @@ class IapState {
   const IapState({
     this.busy = false,
     this.message,
+    this.messageSeq = 0,
     this.products = const {},
     this.hintCoupons = 0,
   });
@@ -142,6 +146,7 @@ class IapState {
   }) => IapState(
     busy: busy ?? this.busy,
     message: clearMessage ? null : (message ?? this.message),
+    messageSeq: message != null ? messageSeq + 1 : messageSeq,
     products: products ?? this.products,
     hintCoupons: hintCoupons ?? this.hintCoupons,
   );
@@ -381,6 +386,9 @@ class IapNotifier extends StateNotifier<IapState> {
           if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.pending:
+          // 가족 승인 대기·지연 결제 등 — 승인/실패 이벤트는 나중에 별도로 도착한다. 그동안
+          // 구매 버튼이 영구히 '처리 중'으로 잠기지 않도록 busy만 풀고 안내한다.
+          state = state.copyWith(busy: false, message: '결제 승인을 기다리고 있어요. 완료되면 자동 반영돼요');
           break;
       }
     }
@@ -413,20 +421,20 @@ class IapNotifier extends StateNotifier<IapState> {
 
     IapVerifyResult? result;
     var hadError = false;
-    if (token != null) {
-      try {
-        result = await _iap.verify(token, p);
-      } on IapVerifyAuthError {
-        // 이 토큰은 만료/무효 — 같은 값으로는 영원히 재시도해봐야 또 실패한다.
-        // 저장해둔 귀속 정보를 지워서, 다음 시도부턴 그 시점의 최신 로그인 토큰을
-        // 쓰게 한다(로그인 상태면 다음 앱 실행/재시도 때 자연히 해결됨).
-        if (kDebugMode) debugPrint('[IAP] 검증 토큰 만료/무효 — 귀속 정보 초기화');
-        await _clearPendingTokenIfNotRestore(p);
-        hadError = true;
-      } catch (e) {
-        if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
-        hadError = true;
-      }
+    // token이 null이어도(iOS 게스트 구매) 검증은 반드시 요청한다 — 건너뛰면 result가
+    // 영영 null이라 지급도 완료 처리도 못 하고 매 실행마다 재시도만 반복된다.
+    try {
+      result = await _iap.verify(token, p);
+    } on IapVerifyAuthError {
+      // 이 토큰은 만료/무효 — 같은 값으로는 영원히 재시도해봐야 또 실패한다.
+      // 저장해둔 귀속 정보를 지워서, 다음 시도부턴 그 시점의 최신 로그인 토큰을
+      // 쓰게 한다(로그인 상태면 다음 앱 실행/재시도 때 자연히 해결됨).
+      if (kDebugMode) debugPrint('[IAP] 검증 토큰 만료/무효 — 귀속 정보 초기화');
+      await _clearPendingTokenIfNotRestore(p);
+      hadError = true;
+    } catch (e) {
+      if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
+      hadError = true;
     }
 
     final decision = decideIapOutcome(token: token, result: result, hadError: hadError);

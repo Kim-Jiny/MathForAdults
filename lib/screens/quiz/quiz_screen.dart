@@ -36,7 +36,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   final _shortController = TextEditingController();
   bool _checked = false;
   bool _lastCorrect = false;
-  int _correctCount = 0;
+  final Set<int> _correctIdx = {}; // 맞힌 문제 인덱스(다시 풀기로 중복 집계되지 않게 집합으로 관리)
+  int get _correctCount => _correctIdx.length;
   bool _finished = false;
   int _revealedHints = 0;
   bool _loadingHintAd = false; // 힌트용 보상형 광고 표시 중
@@ -63,8 +64,12 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       _checked = true;
       _lastCorrect = correct;
     });
-    if (correct) _correctCount++;
-    ref.read(statsProvider.notifier).recordAnswer(_problem, correct: correct);
+    // 이미 이 세션에서 맞힌 문제를 다시 풀 땐 통계에 중복 반영하지 않는다(정답률 부풀림 방지).
+    final alreadyCorrect = _correctIdx.contains(_index);
+    if (correct) _correctIdx.add(_index);
+    if (!alreadyCorrect) {
+      ref.read(statsProvider.notifier).recordAnswer(_problem, correct: correct);
+    }
     // 문제 → 채점 전환. (QuizScreen은 일반 문제 전용 — 모의수능은 별도 화면)
     _maybeShowInterstitial();
   }
@@ -121,15 +126,20 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     // iOS는 게스트도 구매 가능해야 해서(App Store Review Guideline 5.1.1(v)) 건너뛴다.
     if (!Platform.isIOS && !ref.read(authProvider).loggedIn) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 설정 > 계정에서 로그인해 주세요')),
+        const SnackBar(
+          content: Text('구매는 로그인 후 이용할 수 있어요 — 설정 > 계정에서 로그인해 주세요'),
+        ),
       );
       return;
     }
-    final price = iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final price = iapPriceOf(
+      ref.read(iapProvider),
+      IapService.kHintCoupons10Id,
+    );
     final isGuest = !ref.read(authProvider).loggedIn;
     final description = Platform.isIOS && isGuest
         ? '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.'
-            '\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).'
+              '\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).'
         : '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.';
     final confirmed = await confirmPurchaseDialog(
       context,
@@ -155,9 +165,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       if (earned) _revealedHints++;
     });
     if (!earned) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('광고를 끝까지 보면 힌트가 열려요.')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('광고를 끝까지 보면 힌트가 열려요.')));
     }
   }
 
@@ -178,25 +188,21 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
   Future<void> _openSimilar() async {
     final p = _problem;
-    final lessonProblems = await ref.read(contentRepositoryProvider).loadLesson(
-          p.subject,
-          p.chapter,
-          p.lesson,
-        );
+    final lessonProblems = await ref
+        .read(contentRepositoryProvider)
+        .loadLesson(p.subject, p.chapter, p.lesson);
     final pool = lessonProblems.where((q) => q.id != p.id).toList();
     if (!mounted) return;
     if (pool.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('비슷한 문제가 아직 없어요')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('비슷한 문제가 아직 없어요')));
       return;
     }
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => QuizScreen(
-          problems: pool,
-          sessionTitle: '${p.lesson} · 비슷한 문제',
-        ),
+        builder: (_) =>
+            QuizScreen(problems: pool, sessionTitle: '${p.lesson} · 비슷한 문제'),
       ),
     );
   }
@@ -204,9 +210,10 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     ref.listen(iapProvider, (prev, next) {
-      if (next.message != null && next.message != prev?.message) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(next.message!)));
+      if (next.message != null && next.messageSeq != prev?.messageSeq) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.message!)));
       }
     });
     if (_finished) {
@@ -216,7 +223,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
         onRetrySession: () => setState(() {
           _index = 0;
           _resetForCurrent();
-          _correctCount = 0;
+          _correctIdx.clear();
           _finished = false;
         }),
       );
@@ -225,8 +232,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final theme = Theme.of(context);
     final p = _problem;
 
-    final concept = ref.read(conceptsProvider).valueOrNull?[
-        ConceptCard.keyOf(p.subject, p.chapter, p.lesson)];
+    final concept = ref
+        .read(conceptsProvider)
+        .valueOrNull?[ConceptCard.keyOf(p.subject, p.chapter, p.lesson)];
 
     return Scaffold(
       appBar: AppBar(
@@ -273,28 +281,37 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                   const SizedBox(height: 14),
                   Row(
                     children: [
-                      Text('문제 ${_index + 1}',
-                          style: theme.textTheme.labelLarge?.copyWith(
-                            color: theme.colorScheme.primary,
-                            fontWeight: FontWeight.w800,
-                          )),
-                      Text(' / $_total',
-                          style: theme.textTheme.labelLarge?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                          )),
+                      Text(
+                        '문제 ${_index + 1}',
+                        style: theme.textTheme.labelLarge?.copyWith(
+                          color: theme.colorScheme.primary,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        ' / $_total',
+                        style: theme.textTheme.labelLarge?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
                       const Spacer(),
                       if (p.type == ProblemType.short)
                         _typePill(theme, '단답형')
                       else
                         _typePill(theme, '객관식'),
                       const SizedBox(width: 8),
-                      Icon(Icons.schedule,
-                          size: 14, color: theme.colorScheme.onSurfaceVariant),
+                      Icon(
+                        Icons.schedule,
+                        size: 14,
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
                       const SizedBox(width: 4),
-                      Text('예상 ${p.estimatedTime}',
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                          )),
+                      Text(
+                        '예상 ${p.estimatedTime}',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -346,147 +363,173 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
               decoration: BoxDecoration(
                 color: scheme.secondary.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(12),
-                border:
-                    Border.all(color: scheme.secondary.withValues(alpha: 0.3)),
+                border: Border.all(
+                  color: scheme.secondary.withValues(alpha: 0.3),
+                ),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('힌트 ${i + 1}  ',
-                      style: theme.textTheme.labelMedium?.copyWith(
-                          color: scheme.secondary, fontWeight: FontWeight.w800)),
+                  Text(
+                    '힌트 ${i + 1}  ',
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: scheme.secondary,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                   Expanded(
-                    child: MathText(p.hints[i],
-                        style: theme.textTheme.bodyMedium?.copyWith(height: 1.5)),
+                    child: MathText(
+                      p.hints[i],
+                      style: theme.textTheme.bodyMedium?.copyWith(height: 1.5),
+                    ),
                   ),
                 ],
               ),
             ),
           if (_revealedHints < p.hints.length)
-            Consumer(builder: (context, ref, _) {
-              final loggedIn = ref.watch(authProvider).loggedIn;
-              // 안드로이드 게스트는 힌트쿠폰 UI 자체를 안 보여주고 광고 버튼만 노출한다
-              // (로그인 계정 귀속 설계, 로그인 유도는 홈 출석시트에서 이미 함). iOS는
-              // 게스트도 기기 로컬 잔액으로 구매·사용 가능해야 해서(App Store Review
-              // Guideline 5.1.1(v)) 항상 실제 잔액을 보여준다.
-              final showCoupons = loggedIn || Platform.isIOS;
-              final coupons = showCoupons
-                  ? ref.watch(iapProvider.select((s) => s.hintCoupons))
-                  : 0;
-              if (coupons > 0) {
-                return Align(
-                  alignment: Alignment.centerLeft,
-                  child: TextButton.icon(
-                    onPressed: _usingCoupon ? null : _unlockHintWithCoupon,
-                    icon: Icon(Icons.confirmation_number_rounded,
-                        size: 18, color: scheme.secondary),
-                    label: Text(
-                      '힌트쿠폰 사용 (남은 $coupons개)',
-                      style: TextStyle(
+            Consumer(
+              builder: (context, ref, _) {
+                final loggedIn = ref.watch(authProvider).loggedIn;
+                // 안드로이드 게스트는 힌트쿠폰 UI 자체를 안 보여주고 광고 버튼만 노출한다
+                // (로그인 계정 귀속 설계, 로그인 유도는 홈 출석시트에서 이미 함). iOS는
+                // 게스트도 기기 로컬 잔액으로 구매·사용 가능해야 해서(App Store Review
+                // Guideline 5.1.1(v)) 항상 실제 잔액을 보여준다.
+                final showCoupons = loggedIn || Platform.isIOS;
+                final coupons = showCoupons
+                    ? ref.watch(iapProvider.select((s) => s.hintCoupons))
+                    : 0;
+                if (coupons > 0) {
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: TextButton.icon(
+                      onPressed: _usingCoupon ? null : _unlockHintWithCoupon,
+                      icon: Icon(
+                        Icons.confirmation_number_rounded,
+                        size: 18,
                         color: scheme.secondary,
-                        fontWeight: FontWeight.w700,
+                      ),
+                      label: Text(
+                        '힌트쿠폰 사용 (남은 $coupons개)',
+                        style: TextStyle(
+                          color: scheme.secondary,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
-                  ),
-                );
-              }
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: ValueListenableBuilder<bool>(
-                      valueListenable: AdService.instance.rewardedReadyListenable,
-                      builder: (context, adReady, _) {
-                        final busy = _loadingHintAd || !adReady;
-                        final disabledColor =
-                            scheme.onSurface.withValues(alpha: 0.38);
-                        return TextButton.icon(
-                          // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
-                          onPressed: (adReady && !_loadingHintAd)
-                              ? _unlockHintWithAd
-                              : null,
-                          icon: busy
-                              ? SizedBox(
-                                  width: 16,
-                                  height: 16,
-                                  child: CircularProgressIndicator(
+                  );
+                }
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: ValueListenableBuilder<bool>(
+                        valueListenable:
+                            AdService.instance.rewardedReadyListenable,
+                        builder: (context, adReady, _) {
+                          final busy = _loadingHintAd || !adReady;
+                          final disabledColor = scheme.onSurface.withValues(
+                            alpha: 0.38,
+                          );
+                          return TextButton.icon(
+                            // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
+                            onPressed: (adReady && !_loadingHintAd)
+                                ? _unlockHintWithAd
+                                : null,
+                            icon: busy
+                                ? SizedBox(
+                                    width: 16,
+                                    height: 16,
+                                    child: CircularProgressIndicator(
                                       strokeWidth: 2,
                                       color: _loadingHintAd
                                           ? scheme.secondary
-                                          : disabledColor),
-                                )
-                              : Icon(Icons.smart_display_outlined,
-                                  size: 18, color: scheme.secondary),
-                          label: Text(
-                            _loadingHintAd
-                                ? '광고 표시 중…'
-                                : !adReady
-                                    ? '광고 준비 중…'
-                                    : _revealedHints == 0
-                                        ? '광고 보고 힌트 보기'
-                                        : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
-                            style: TextStyle(
-                              color: (adReady && !_loadingHintAd)
-                                  ? scheme.secondary
-                                  : disabledColor,
-                              fontWeight: FontWeight.w700,
+                                          : disabledColor,
+                                    ),
+                                  )
+                                : Icon(
+                                    Icons.smart_display_outlined,
+                                    size: 18,
+                                    color: scheme.secondary,
+                                  ),
+                            label: Text(
+                              _loadingHintAd
+                                  ? '광고 표시 중…'
+                                  : !adReady
+                                  ? '광고 준비 중…'
+                                  : _revealedHints == 0
+                                  ? '광고 보고 힌트 보기'
+                                  : '광고 보고 힌트 더 보기 ($_revealedHints/${p.hints.length})',
+                              style: TextStyle(
+                                color: (adReady && !_loadingHintAd)
+                                    ? scheme.secondary
+                                    : disabledColor,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
-                  ),
-                  if (showCoupons)
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Builder(builder: (context) {
-                        final iap = ref.watch(iapProvider);
-                        final price =
-                            iapPriceOf(iap, IapService.kHintCoupons10Id);
-                        final label = iap.busy
-                            ? '구매 처리 중…'
-                            : price == null
+                    if (showCoupons)
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Builder(
+                          builder: (context) {
+                            final iap = ref.watch(iapProvider);
+                            final price = iapPriceOf(
+                              iap,
+                              IapService.kHintCoupons10Id,
+                            );
+                            final label = iap.busy
+                                ? '구매 처리 중…'
+                                : price == null
                                 ? '힌트쿠폰 10개 구매'
                                 : '힌트쿠폰 10개 구매 ($price)';
-                        return TextButton(
-                          onPressed: iap.busy ? null : _buyHintCoupon,
-                          style: TextButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                            minimumSize: Size.zero,
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          child: Text(
-                            label,
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: scheme.onSurfaceVariant,
-                              decoration: TextDecoration.underline,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                ],
-              );
-            }),
+                            return TextButton(
+                              onPressed: iap.busy ? null : _buyHintCoupon,
+                              style: TextButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                ),
+                                minimumSize: Size.zero,
+                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              ),
+                              child: Text(
+                                label,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: scheme.onSurfaceVariant,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                  ],
+                );
+              },
+            ),
         ],
       ),
     );
   }
 
   Widget _typePill(ThemeData theme, String label) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-        decoration: BoxDecoration(
-          color: theme.colorScheme.surfaceContainerHighest,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(label,
-            style: theme.textTheme.labelSmall?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
-              fontWeight: FontWeight.w700,
-            )),
-      );
+    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+    decoration: BoxDecoration(
+      color: theme.colorScheme.surfaceContainerHighest,
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Text(
+      label,
+      style: theme.textTheme.labelSmall?.copyWith(
+        color: theme.colorScheme.onSurfaceVariant,
+        fontWeight: FontWeight.w700,
+      ),
+    ),
+  );
 
   Widget _shortInput(ThemeData theme) {
     final scheme = theme.colorScheme;
@@ -520,8 +563,10 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: border, width: 1.6),
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 18,
+          vertical: 18,
+        ),
       ),
     );
   }
@@ -564,40 +609,52 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: bg,
-        borderRadius: BorderRadius.circular(16),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => _onSelect(i),
-          child: Container(
-            constraints: const BoxConstraints(minHeight: 60),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                  color: border, width: _checked && isAnswer ? 1.8 : 1.2),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 30,
-                  height: 30,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(color: numBg, shape: BoxShape.circle),
-                  child: Text('${i + 1}',
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [BoxShadow(color: border, offset: const Offset(0, 3))],
+        ),
+        child: Material(
+          color: bg,
+          borderRadius: BorderRadius.circular(20),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(20),
+            onTap: () => _onSelect(i),
+            child: Container(
+              constraints: const BoxConstraints(minHeight: 60),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: border, width: 2),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 30,
+                    height: 30,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: numBg,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      '${i + 1}',
                       style: TextStyle(
-                          color: numFg, fontWeight: FontWeight.w700)),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: MathText(
-                    _problem.choices[i],
-                    style: theme.textTheme.titleMedium,
+                        color: numFg,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
-                ),
-                ?trailing,
-              ],
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: MathText(
+                      _problem.choices[i],
+                      style: theme.textTheme.titleMedium,
+                    ),
+                  ),
+                  ?trailing,
+                ],
+              ),
             ),
           ),
         ),
@@ -641,8 +698,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       child = Text(
         '정답을 선택하면 바로 채점돼요',
         textAlign: TextAlign.center,
-        style: theme.textTheme.bodyMedium
-            ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+        style: theme.textTheme.bodyMedium?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
       );
     }
 

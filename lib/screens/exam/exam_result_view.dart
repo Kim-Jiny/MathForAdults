@@ -5,6 +5,7 @@ import '../../models/exam_analysis.dart';
 import '../../models/math_problem.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 import '../quiz/quiz_launcher.dart';
 import 'exam_analysis_cards.dart';
@@ -41,6 +42,17 @@ class ExamResultView extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
           children: [
+            Center(
+              child: Mascot(
+                size: 88,
+                mood: a.accuracy >= 0.8
+                    ? MascotMood.cheer
+                    : a.accuracy >= 0.5
+                        ? MascotMood.happy
+                        : MascotMood.think,
+              ),
+            ),
+            const SizedBox(height: 8),
             // 어떤 시험 결과인지(프리셋 등) 표시
             Center(
               child: Text(title,

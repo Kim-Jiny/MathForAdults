@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart' show kDebugMode;
+import 'package:flutter/foundation.dart'
+    show kDebugMode, LicenseEntryWithLineBreaks, LicenseRegistry;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -25,6 +26,15 @@ const _kakaoNativeAppKey = String.fromEnvironment(
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // 번들 폰트(주아체) 라이선스를 앱 내 '오픈소스 라이선스' 화면에 노출.
+  LicenseRegistry.addLicense(() async* {
+    yield const LicenseEntryWithLineBreaks(
+      ['Jua (주아체)'],
+      'Copyright 2012 The Jua Project Authors (https://github.com/google/fonts)\n\n'
+      'This Font Software is licensed under the SIL Open Font License, Version 1.1.\n'
+      'https://openfontlicense.org',
+    );
+  });
   final prefs = await SharedPreferences.getInstance();
   await NotificationService.init();
   // 광고 SDK 초기화(설치 시각 기록 + 전면 광고 프리로드). 첫 프레임을 막지 않도록 await 하지 않음.
@@ -35,9 +45,7 @@ Future<void> main() async {
 
   runApp(
     ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWithValue(prefs),
-      ],
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
       child: const AdultMathApp(),
     ),
   );
@@ -49,8 +57,9 @@ Future<void> main() async {
 Future<void> _initSocialLoginSdks() async {
   try {
     await GoogleSignIn.instance.initialize(
-      serverClientId:
-          _googleServerClientId.isEmpty ? null : _googleServerClientId,
+      serverClientId: _googleServerClientId.isEmpty
+          ? null
+          : _googleServerClientId,
     );
   } catch (e) {
     if (kDebugMode) debugPrint('[Auth] GoogleSignIn.initialize 실패: $e');

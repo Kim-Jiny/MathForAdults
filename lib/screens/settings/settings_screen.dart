@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../l10n/app_localizations.dart';
@@ -282,10 +283,23 @@ class SettingsScreen extends ConsumerWidget {
 /// Dialog 자식은 너비 제약이 느슨/무한이라 Row+Expanded·Divider·꽉 찬 버튼이
 /// "infinite width"로 터진다. 그래서 콘텐츠에 **타이트한 너비 앵커**(SizedBox)를
 /// 주고, 액션 버튼은 Expanded 대신 세로 스택(stretch)으로 배치한다.
-class AboutAppDialog extends StatelessWidget {
+class AboutAppDialog extends StatefulWidget {
   const AboutAppDialog({super.key});
 
-  static const _appVersion = '1.0.5';
+  @override
+  State<AboutAppDialog> createState() => _AboutAppDialogState();
+}
+
+class _AboutAppDialogState extends State<AboutAppDialog> {
+  String _appVersion = ''; // pubspec 버전을 네이티브에서 읽어온다(하드코딩 불일치 방지)
+
+  @override
+  void initState() {
+    super.initState();
+    PackageInfo.fromPlatform().then((info) {
+      if (mounted) setState(() => _appVersion = info.version);
+    }).catchError((_) {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -368,7 +382,7 @@ class AboutAppDialog extends StatelessWidget {
                     color: scheme.primary.withValues(alpha: 0.10),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text('버전 $_appVersion',
+                  child: Text(_appVersion.isEmpty ? '버전' : '버전 $_appVersion',
                       style: theme.textTheme.labelMedium?.copyWith(
                           color: scheme.primary, fontWeight: FontWeight.w700)),
                 ),
