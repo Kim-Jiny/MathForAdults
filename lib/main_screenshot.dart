@@ -11,7 +11,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'data/content_repository.dart';
 import 'l10n/app_localizations.dart';
 import 'models/concept_card.dart';
-import 'models/difficulty.dart';
 import 'models/math_problem.dart';
 import 'models/user_stats.dart';
 import 'screens/concept/concept_detail_screen.dart';
@@ -20,6 +19,7 @@ import 'screens/main_shell.dart';
 import 'screens/quiz/quiz_screen.dart';
 import 'state/app_state.dart';
 import 'theme/app_theme.dart';
+import 'widgets/math_format.dart';
 import 'widgets/math_text.dart';
 
 Future<void> main() async {
@@ -111,6 +111,42 @@ Future<void> main() async {
   await prefs.setBool('mfa_ads_removed', true);
 
   // 개념: 공식·예시·실수·O/X가 모두 있는 카드 중 첫 번째
+  // 문제: 힌트·해설이 있고 질문이 비교적 짧은 객관식
+  // 수식이 풍부하게 보이는 문제를 고른다(분수/루트/극한/적분 포함).
+  bool rich(String t) => splitMath(t).any(
+    (g) =>
+        g.isMath &&
+        (g.tex!.contains(r'\frac') ||
+            g.tex!.contains(r'\sqrt') ||
+            g.tex!.contains(r'\lim') ||
+            g.tex!.contains(r'\int') ||
+            g.tex!.contains(r'\sum')),
+  );
+  final calc = await repo.loadSubject('미적분');
+  bool fits(MathProblem p) =>
+      p.type == ProblemType.choice &&
+      p.hints.isNotEmpty &&
+      rich(p.question) &&
+      p.question.length >= 14 &&
+      p.question.length <= 60 &&
+      p.choices.every((c) => c.length <= 14);
+  final quizP = [
+    ...s2,
+    ...calc,
+    ...s1,
+  ].firstWhere(fits, orElse: () => s1.first);
+  final examPs = [
+    ...s1
+        .where((p) =>
+            p.type == ProblemType.choice &&
+            rich(p.question) &&
+            !p.question.contains('lim') &&
+            p.question.length <= 70 &&
+            p.choices.every((c) => c.length <= 16))
+        .take(4),
+    ...[...s2, ...calc].where(fits).take(4),
+  ];
+
   ConceptCard? card;
   for (final c in concepts.values) {
     if (c.subject == '수학Ⅰ' &&
@@ -118,27 +154,13 @@ Future<void> main() async {
         c.examples.isNotEmpty &&
         c.mistakes.isNotEmpty &&
         c.quiz.isNotEmpty &&
-        c.points.length >= 3) {
+        c.points.length >= 3 &&
+        c.points.where(rich).length >= 2) {
       card = c;
       break;
     }
   }
-  // 문제: 힌트·해설이 있고 질문이 비교적 짧은 객관식
-  bool latex(MathProblem p) =>
-      p.question.contains(r'$') && p.choices.every((c) => c.length < 24);
-  final quizP = s1.firstWhere(
-    (p) =>
-        p.type == ProblemType.choice &&
-        p.hints.isNotEmpty &&
-        latex(p) &&
-        p.question.length < 80 &&
-        p.difficulty == Difficulty.typical,
-    orElse: () => s1.firstWhere(latex, orElse: () => s1.first),
-  );
-  final examPs = [
-    ...s1.where((p) => p.type == ProblemType.choice && latex(p)).take(5),
-    ...s2.where((p) => p.type == ProblemType.choice && latex(p)).take(3),
-  ];
+  card ??= concepts.values.firstWhere((c) => c.formulas.isNotEmpty);
 
   final Widget home = switch (shot) {
     'subjects' => const MainShell(initialIndex: 1),
@@ -166,7 +188,7 @@ Future<void> main() async {
         '학생 A, B, C, D, E 5명의 키(cm)가 160, 162, 164',
       ],
     ),
-    'concept' => ConceptDetailScreen(card: card!),
+    'concept' => ConceptDetailScreen(card: card),
     'exam' => MockExamScreen(
       problems: examPs,
       duration: const Duration(minutes: 100),
