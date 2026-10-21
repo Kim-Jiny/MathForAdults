@@ -6,7 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../services/iap/iap_service.dart';
 import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
+import '../../theme/app_colors.dart';
+import '../../theme/app_theme.dart' show kDisplayFont;
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/iap/purchase_confirm_dialog.dart';
 import '../../widgets/section_header.dart';
 
@@ -16,8 +19,6 @@ class ShopSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     final adsRemoved = ref.watch(adsRemovedProvider);
     final iap = ref.watch(iapProvider);
     final loggedIn = ref.watch(authProvider).loggedIn;
@@ -43,33 +44,32 @@ class ShopSection extends ConsumerWidget {
           child: Column(
             children: [
               ListTile(
-                leading: Icon(
-                  adsRemoved ? Icons.check_circle_rounded : Icons.block_rounded,
-                  color: adsRemoved ? Colors.green : scheme.primary,
+                leading: EmojiBadge(
+                  adsRemoved ? '✅' : '🚫',
+                  color: adsRemoved ? AppColors.correct : AppColors.primary,
+                  size: 42,
                 ),
                 title: const Text(
                   '광고 제거',
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
                 subtitle: Text(
-                  adsRemoved
-                      ? '배너·전면 광고가 제거됐어요'
-                      : removeAdsPrice == null
-                      ? '배너·전면 광고를 영구히 없애요'
-                      : '배너·전면 광고를 영구히 없애요 ($removeAdsPrice)',
+                  adsRemoved ? '배너·전면 광고가 제거됐어요' : '배너·전면 광고를 영구히 없애요',
                 ),
                 trailing: adsRemoved
                     ? null
                     : _buyButton(
+                        label: removeAdsPrice ?? '구매',
                         busy: iap.busy,
                         onPressed: () => _buyRemoveAds(context, ref),
                       ),
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
-                leading: Icon(
-                  Icons.confirmation_number_rounded,
-                  color: scheme.secondary,
+                leading: const EmojiBadge(
+                  '🎟️',
+                  color: AppColors.sunny,
+                  size: 42,
                 ),
                 title: const Text(
                   '힌트쿠폰 10개',
@@ -81,18 +81,21 @@ class ShopSection extends ConsumerWidget {
                 subtitle: Text(
                   !loggedIn && !Platform.isIOS
                       ? '로그인 후 구매·사용할 수 있어요'
-                      : hintCouponsPrice == null
-                      ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
-                      : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)',
+                      : '남은 쿠폰 $hintCoupons개 · 한 번에 10개 충전',
                 ),
                 trailing: _buyButton(
+                  label: hintCouponsPrice ?? '구매',
                   busy: iap.busy,
                   onPressed: () => _buyHintCoupons(context, ref),
                 ),
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
-                leading: const Icon(Icons.restore_rounded),
+                leading: const EmojiBadge(
+                  '🔄',
+                  color: AppColors.accent,
+                  size: 42,
+                ),
                 title: const Text(
                   '구매 복원',
                   style: TextStyle(fontWeight: FontWeight.w600),
@@ -111,12 +114,21 @@ class ShopSection extends ConsumerWidget {
   /// ListTile.trailing에 버튼을 바로 꽂으면 특정 레이아웃 패스에서
   /// "Trailing widget consumes the entire tile width" 어서션이 떠서 화면 전체가
   /// 렌더 실패한다 — SizedBox로 폭을 고정해둔다.
-  Widget _buyButton({required bool busy, required VoidCallback onPressed}) {
+  Widget _buyButton({
+    required String label,
+    required bool busy,
+    required VoidCallback onPressed,
+  }) {
     return SizedBox(
-      width: 72,
+      width: 88,
       child: FilledButton(
         style: FilledButton.styleFrom(
+          minimumSize: const Size(0, 40),
           padding: const EdgeInsets.symmetric(horizontal: 8),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          textStyle: const TextStyle(fontFamily: kDisplayFont, fontSize: 15),
         ),
         onPressed: busy ? null : onPressed,
         child: busy
@@ -125,7 +137,7 @@ class ShopSection extends ConsumerWidget {
                 height: 16,
                 child: CircularProgressIndicator(strokeWidth: 2),
               )
-            : const Text('구매'),
+            : FittedBox(fit: BoxFit.scaleDown, child: Text(label)),
       ),
     );
   }

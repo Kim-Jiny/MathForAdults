@@ -522,8 +522,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                       ),
                     ),
                     if (showCoupons)
-                      Align(
-                        alignment: Alignment.centerLeft,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
                         child: Builder(
                           builder: (context) {
                             final iap = ref.watch(iapProvider);
@@ -531,28 +531,10 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                               iap,
                               IapService.kHintCoupons10Id,
                             );
-                            final label = iap.busy
-                                ? '구매 처리 중…'
-                                : price == null
-                                ? '힌트쿠폰 10개 구매'
-                                : '힌트쿠폰 10개 구매 ($price)';
-                            return TextButton(
-                              onPressed: iap.busy ? null : _buyHintCoupon,
-                              style: TextButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                ),
-                                minimumSize: Size.zero,
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                              ),
-                              child: Text(
-                                label,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: scheme.onSurfaceVariant,
-                                  decoration: TextDecoration.underline,
-                                ),
-                              ),
+                            return _couponBuyCard(
+                              theme,
+                              price: price,
+                              busy: iap.busy,
                             );
                           },
                         ),
@@ -562,6 +544,83 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
               },
             ),
         ],
+      ),
+    );
+  }
+
+  /// 힌트쿠폰 구매 카드: 티켓 이모지 + 설명 + 가격 버튼.
+  Widget _couponBuyCard(
+    ThemeData theme, {
+    required String? price,
+    required bool busy,
+  }) {
+    final scheme = theme.colorScheme;
+    final gold = theme.brightness == Brightness.dark
+        ? AppColors.sunny
+        : const Color(0xFF9A6B00);
+    return Material(
+      color: AppColors.sunny.withValues(alpha: 0.16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: BorderSide(
+          color: AppColors.sunny.withValues(alpha: 0.6),
+          width: 2,
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: busy ? null : _buyHintCoupon,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(14, 10, 10, 10),
+          child: Row(
+            children: [
+              const Text('🎟️', style: TextStyle(fontSize: 26)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '힌트쿠폰 10개 충전',
+                      style: theme.textTheme.titleSmall?.copyWith(color: gold),
+                    ),
+                    Text(
+                      '광고 없이 바로 힌트를 볼 수 있어요',
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: scheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Container(
+                constraints: const BoxConstraints(minWidth: 64, minHeight: 36),
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: scheme.primary,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: busy
+                    ? SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: scheme.onPrimary,
+                        ),
+                      )
+                    : Text(
+                        price ?? '구매',
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          color: scheme.onPrimary,
+                        ),
+                      ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

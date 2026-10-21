@@ -5,7 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../state/auth_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/mascot.dart';
 import '../../widgets/section_header.dart';
 
@@ -217,7 +219,7 @@ class _LoggedInView extends ConsumerWidget {
                   height: 20,
                   child: CircularProgressIndicator(strokeWidth: 2),
                 )
-              : const Icon(Icons.sync_rounded),
+              : const EmojiBadge('☁️', color: AppColors.accent, size: 38),
           title: const Text(
             '지금 동기화',
             style: TextStyle(fontWeight: FontWeight.w600),
@@ -226,7 +228,7 @@ class _LoggedInView extends ConsumerWidget {
         ),
         const Divider(height: 1, indent: 16, endIndent: 16),
         ListTile(
-          leading: const Icon(Icons.logout_rounded),
+          leading: const EmojiBadge('👋', color: AppColors.primary, size: 38),
           title: const Text(
             '로그아웃',
             style: TextStyle(fontWeight: FontWeight.w600),
