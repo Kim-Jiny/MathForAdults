@@ -22,9 +22,12 @@ import 'theme/app_theme.dart';
 import 'widgets/math_format.dart';
 import 'widgets/math_text.dart';
 
-Future<void> main() async {
+Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
-  const shot = String.fromEnvironment('SHOT', defaultValue: 'home');
+  // 화면 지정: 실행 인자(Android: --esa dart_entrypoint_args <name>) 또는 --dart-define=SHOT=<name>
+  final shot = args.isNotEmpty
+      ? args.first
+      : const String.fromEnvironment('SHOT', defaultValue: 'home');
   final repo = ContentRepository();
   final s1 = await repo.loadSubject('수학Ⅰ');
   final s2 = await repo.loadSubject('수학Ⅱ');

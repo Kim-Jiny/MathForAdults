@@ -3,7 +3,6 @@
 // 문제 데이터는 수식을 `²`, `₁`, `√`, `1/2` 같은 유니코드·ASCII 텍스트로 적어 두었다.
 // 데이터를 건드리지 않고(정답 채점은 원문 그대로) 화면에 그릴 때만 수식 구간을 찾아
 // TeX로 변환한다. 변환이 불확실하거나 파싱에 실패하면 원문을 그대로 보여준다.
-import 'dart:collection';
 
 /// 텍스트 조각. [tex]가 null이면 일반 글자, 아니면 [text] 자리에 그릴 수식.
 class MathSeg {
@@ -13,7 +12,7 @@ class MathSeg {
   bool get isMath => tex != null;
 }
 
-final _cache = LinkedHashMap<String, List<MathSeg>>();
+final _cache = <String, List<MathSeg>>{}; // 삽입 순서 유지(LinkedHashMap)
 
 /// [source]를 글자/수식 조각으로 나눈다. `$...$`가 이미 있으면 호출하지 말 것.
 /// [wholeIfMath]가 true이고 문자열 전체가 수식 문자로만 이뤄졌으면 숫자만 있어도 수식으로 본다
