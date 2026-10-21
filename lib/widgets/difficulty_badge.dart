@@ -14,7 +14,9 @@ class DifficultyBadge extends StatelessWidget {
     final color = difficulty.color;
     return Container(
       padding: EdgeInsets.symmetric(
-          horizontal: compact ? 8 : 10, vertical: compact ? 3 : 5),
+        horizontal: compact ? 8 : 10,
+        vertical: compact ? 3 : 5,
+      ),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.14),
         borderRadius: BorderRadius.circular(20),

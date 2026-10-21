@@ -72,9 +72,7 @@ class ExamAnalysisCards extends StatelessWidget {
                       child: FilledButton.tonalIcon(
                         onPressed: onRetryWrong,
                         icon: const Icon(Icons.refresh_rounded, size: 18),
-                        label: Text(
-                          '틀린 문제 ${a.wrongProblems.length}개 다시 풀기',
-                        ),
+                        label: Text('틀린 문제 ${a.wrongProblems.length}개 다시 풀기'),
                       ),
                     ),
                   ],
@@ -118,7 +116,12 @@ class ExamAnalysisCards extends StatelessWidget {
     );
   }
 
-  Widget _sectionCard(ThemeData theme, String title, String sub, SectionStat s) {
+  Widget _sectionCard(
+    ThemeData theme,
+    String title,
+    String sub,
+    SectionStat s,
+  ) {
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

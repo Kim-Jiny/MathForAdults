@@ -95,9 +95,7 @@ void showConceptSheet(BuildContext context, ConceptCard card) {
                     );
                   },
                   icon: const Icon(Icons.menu_book_rounded, size: 18),
-                  label: Text(
-                    hidden > 0 ? '자세히 보기 (+$hidden개 더)' : '자세히 보기',
-                  ),
+                  label: Text(hidden > 0 ? '자세히 보기 (+$hidden개 더)' : '자세히 보기'),
                 ),
               ],
             ),

@@ -67,7 +67,10 @@ class ConceptDetailScreen extends ConsumerWidget {
               icon: Icons.warning_amber_rounded,
               title: '자주 하는 실수',
               show: card.mistakes.isNotEmpty,
-              child: _Bullets(items: card.mistakes, color: AppColors.wrongOf(theme.brightness)),
+              child: _Bullets(
+                items: card.mistakes,
+                color: AppColors.wrongOf(theme.brightness),
+              ),
             ),
             _Section(
               icon: Icons.quiz_outlined,
@@ -366,9 +369,7 @@ class _QuizItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
-                  isCorrect
-                      ? Icons.check_circle_rounded
-                      : Icons.cancel_rounded,
+                  isCorrect ? Icons.check_circle_rounded : Icons.cancel_rounded,
                   size: 18,
                   color: isCorrect ? correctColor : wrongColor,
                 ),
@@ -378,7 +379,9 @@ class _QuizItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        isCorrect ? '정답이에요' : '아쉬워요, 정답은 ${quiz.answer ? "O" : "X"}',
+                        isCorrect
+                            ? '정답이에요'
+                            : '아쉬워요, 정답은 ${quiz.answer ? "O" : "X"}',
                         style: theme.textTheme.labelLarge?.copyWith(
                           color: isCorrect ? correctColor : wrongColor,
                           fontWeight: FontWeight.w800,

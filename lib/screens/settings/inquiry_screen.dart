@@ -68,9 +68,12 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
         children: [
-          Text('궁금한 점이나 오류 제보를 남겨주세요. 답변은 이 화면에서 확인할 수 있어요.',
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+          Text(
+            '궁금한 점이나 오류 제보를 남겨주세요. 답변은 이 화면에서 확인할 수 있어요.',
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
           const SizedBox(height: 16),
           TextField(
             controller: _content,
@@ -79,7 +82,8 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
             decoration: InputDecoration(
               hintText: '문의 내용을 입력하세요',
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16)),
+                borderRadius: BorderRadius.circular(16),
+              ),
               alignLabelWithHint: true,
             ),
             onChanged: (_) => setState(() {}),
@@ -88,21 +92,27 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
           SizedBox(
             width: double.infinity,
             child: FilledButton(
-              onPressed: (_sending || _content.text.trim().isEmpty) ? null : _send,
+              onPressed: (_sending || _content.text.trim().isEmpty)
+                  ? null
+                  : _send,
               child: _sending
                   ? const SizedBox(
                       width: 22,
                       height: 22,
-                      child: CircularProgressIndicator(strokeWidth: 2))
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
                   : const Text('문의 보내기'),
             ),
           ),
           const SizedBox(height: 28),
           Row(
             children: [
-              Text('내 문의',
-                  style: theme.textTheme.titleMedium
-                      ?.copyWith(fontWeight: FontWeight.w800)),
+              Text(
+                '내 문의',
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               const Spacer(),
               IconButton(
                 onPressed: _reload,
@@ -139,13 +149,16 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
   }
 
   Widget _hint(ThemeData theme, String msg) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24),
-        child: Center(
-          child: Text(msg,
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+    padding: const EdgeInsets.symmetric(vertical: 24),
+    child: Center(
+      child: Text(
+        msg,
+        style: theme.textTheme.bodyMedium?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
         ),
-      );
+      ),
+    ),
+  );
 
   Widget _inquiryTile(ThemeData theme, MyInquiry q) {
     final green = AppColors.correctOf(theme.brightness);
@@ -159,26 +172,37 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
             Row(
               children: [
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 3,
+                  ),
                   decoration: BoxDecoration(
                     color: color.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text(q.replied ? '답변완료' : '대기중',
-                      style: theme.textTheme.labelSmall
-                          ?.copyWith(color: color, fontWeight: FontWeight.w800)),
+                  child: Text(
+                    q.replied ? '답변완료' : '대기중',
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      color: color,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                 ),
                 const Spacer(),
                 if (q.createdAt != null)
-                  Text(_date(q.createdAt!),
-                      style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant)),
+                  Text(
+                    _date(q.createdAt!),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
               ],
             ),
             const SizedBox(height: 10),
-            Text(q.content,
-                style: theme.textTheme.bodyLarge?.copyWith(height: 1.5)),
+            Text(
+              q.content,
+              style: theme.textTheme.bodyLarge?.copyWith(height: 1.5),
+            ),
             if (q.replied && (q.reply?.isNotEmpty ?? false)) ...[
               const SizedBox(height: 12),
               Container(
@@ -192,12 +216,18 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('답변',
-                        style: theme.textTheme.labelMedium?.copyWith(
-                            color: green, fontWeight: FontWeight.w800)),
+                    Text(
+                      '답변',
+                      style: theme.textTheme.labelMedium?.copyWith(
+                        color: green,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
                     const SizedBox(height: 4),
-                    Text(q.reply!,
-                        style: theme.textTheme.bodyMedium?.copyWith(height: 1.5)),
+                    Text(
+                      q.reply!,
+                      style: theme.textTheme.bodyMedium?.copyWith(height: 1.5),
+                    ),
                   ],
                 ),
               ),

@@ -77,8 +77,8 @@ class WeeklyTestResultScreen extends ConsumerWidget {
                 mood: accuracy >= 0.8
                     ? MascotMood.cheer
                     : accuracy >= 0.5
-                        ? MascotMood.happy
-                        : MascotMood.think,
+                    ? MascotMood.happy
+                    : MascotMood.think,
               ),
             ),
             const SizedBox(height: 8),

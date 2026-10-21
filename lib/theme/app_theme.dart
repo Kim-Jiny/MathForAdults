@@ -10,42 +10,44 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData light() {
-    final scheme = ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.light,
-    ).copyWith(
-      primary: AppColors.primary,
-      onPrimary: Colors.white,
-      secondary: AppColors.accent,
-      tertiary: AppColors.sunny,
-      surface: AppColors.surfaceLight,
-      onSurface: AppColors.ink,
-      onSurfaceVariant: AppColors.inkSoft,
-      outlineVariant: AppColors.outlineLight,
-      surfaceContainerHighest: const Color(0xFFF6EEE2),
-      surfaceContainer: const Color(0xFFFBF3E7),
-      primaryContainer: const Color(0xFFE9E5FF),
-    );
+    final scheme =
+        ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.light,
+        ).copyWith(
+          primary: AppColors.primary,
+          onPrimary: Colors.white,
+          secondary: AppColors.accent,
+          tertiary: AppColors.sunny,
+          surface: AppColors.surfaceLight,
+          onSurface: AppColors.ink,
+          onSurfaceVariant: AppColors.inkSoft,
+          outlineVariant: AppColors.outlineLight,
+          surfaceContainerHighest: const Color(0xFFF6EEE2),
+          surfaceContainer: const Color(0xFFFBF3E7),
+          primaryContainer: const Color(0xFFE9E5FF),
+        );
     return _build(scheme, AppColors.bgLight);
   }
 
   static ThemeData dark() {
-    final scheme = ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.dark,
-    ).copyWith(
-      primary: AppColors.primaryDark,
-      onPrimary: const Color(0xFF241C5C),
-      secondary: AppColors.accent,
-      tertiary: AppColors.sunny,
-      surface: AppColors.surfaceDark,
-      onSurface: AppColors.inkDark,
-      onSurfaceVariant: AppColors.inkSoftDark,
-      outlineVariant: AppColors.outlineDark,
-      surfaceContainerHighest: const Color(0xFF2D2840),
-      surfaceContainer: const Color(0xFF282338),
-      primaryContainer: const Color(0xFF3A3470),
-    );
+    final scheme =
+        ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.dark,
+        ).copyWith(
+          primary: AppColors.primaryDark,
+          onPrimary: const Color(0xFF241C5C),
+          secondary: AppColors.accent,
+          tertiary: AppColors.sunny,
+          surface: AppColors.surfaceDark,
+          onSurface: AppColors.inkDark,
+          onSurfaceVariant: AppColors.inkSoftDark,
+          outlineVariant: AppColors.outlineDark,
+          surfaceContainerHighest: const Color(0xFF2D2840),
+          surfaceContainer: const Color(0xFF282338),
+          primaryContainer: const Color(0xFF3A3470),
+        );
     return _build(scheme, AppColors.bgDark);
   }
 
@@ -148,11 +150,13 @@ class AppTheme {
             color: selected ? scheme.primary : scheme.onSurfaceVariant,
           );
         }),
-        iconTheme: WidgetStateProperty.resolveWith((states) => IconThemeData(
-              color: states.contains(WidgetState.selected)
-                  ? scheme.primary
-                  : scheme.onSurfaceVariant,
-            )),
+        iconTheme: WidgetStateProperty.resolveWith(
+          (states) => IconThemeData(
+            color: states.contains(WidgetState.selected)
+                ? scheme.primary
+                : scheme.onSurfaceVariant,
+          ),
+        ),
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: scheme.surface,

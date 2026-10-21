@@ -109,13 +109,15 @@ class UserStats {
   final Set<String> attendance; // 출석한 날짜 'yyyy-MM-dd'
   final Set<String> solvedIds; // 한 번이라도 푼 문제 id (모의수능 '안 푼 문제 우선'용)
   final Set<String> weeklyLessonKeys; // 이번 주 학습한 레슨 "과목|단원|세부단원". 주가 바뀌면 리셋.
-  final List<WeeklyTestRecord> weeklyTestHistory; // 주간시험 응시 기록 (weekKey당 1건, 최신 12건)
+  final List<WeeklyTestRecord>
+  weeklyTestHistory; // 주간시험 응시 기록 (weekKey당 1건, 최신 12건)
   final int weeklyTestStreak; // 주간시험 연속 응시 주차 수
   /// 오답 목록 변경 시각(ms) — 기기 간 병합 때 "다른 기기에서 이미 맞혀 지운 문제"가
   /// 되살아나지 않게 한다. [wrongAddedAt]: 오답에 담은 시각, [wrongRemovedAt]: 지운 시각.
   final Map<String, int> wrongAddedAt;
   final Map<String, int> wrongRemovedAt;
-  final Map<String, MathProblem> weeklyTestWrong; // 주간시험에서 틀려 다음 주로 이월된 문제(정답 맞히면 제거, 주가 바뀌어도 유지)
+  final Map<String, MathProblem>
+  weeklyTestWrong; // 주간시험에서 틀려 다음 주로 이월된 문제(정답 맞히면 제거, 주가 바뀌어도 유지)
 
   const UserStats({
     required this.totalSolved,
@@ -263,8 +265,10 @@ class UserStats {
     }
     final addedMerged = <String, int>{
       for (final id in wrong.keys)
-        id: [wrongAddedAt[id] ?? 0, other.wrongAddedAt[id] ?? 0]
-            .reduce((a, b) => a > b ? a : b),
+        id: [
+          wrongAddedAt[id] ?? 0,
+          other.wrongAddedAt[id] ?? 0,
+        ].reduce((a, b) => a > b ? a : b),
     };
     final prog = <String, int>{...other.solvedByChapter};
     solvedByChapter.forEach((k, v) {
@@ -376,15 +380,18 @@ class UserStats {
           .toList(),
       weeklyTestStreak: j['weeklyTestStreak'] as int? ?? 0,
       wrongAddedAt: {
-        for (final e in (j['wrongAddedAt'] as Map<String, dynamic>? ?? {}).entries)
+        for (final e
+            in (j['wrongAddedAt'] as Map<String, dynamic>? ?? {}).entries)
           e.key: (e.value as num).toInt(),
       },
       wrongRemovedAt: {
-        for (final e in (j['wrongRemovedAt'] as Map<String, dynamic>? ?? {}).entries)
+        for (final e
+            in (j['wrongRemovedAt'] as Map<String, dynamic>? ?? {}).entries)
           e.key: (e.value as num).toInt(),
       },
       weeklyTestWrong: {
-        for (final e in (j['weeklyTestWrong'] as Map<String, dynamic>? ?? {}).entries)
+        for (final e
+            in (j['weeklyTestWrong'] as Map<String, dynamic>? ?? {}).entries)
           e.key: MathProblem.fromJson(e.value as Map<String, dynamic>),
       },
     );

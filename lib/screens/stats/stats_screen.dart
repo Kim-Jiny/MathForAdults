@@ -7,7 +7,8 @@ import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
-import '../../widgets/stat_tile.dart';
+import '../../widgets/cute.dart';
+import '../../models/curriculum.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
 
 /// 기록 탭: 요약 통계 + 과목별 진행률 + 약한 단원 + 최근 기록.
@@ -29,50 +30,64 @@ class StatsScreen extends ConsumerWidget {
               .key;
     }
     // 최신 주가 앞에 오도록 정렬(최대 8건).
-    final weeklyTestRows = ([...s.weeklyTestHistory]
-          ..sort((a, b) => b.weekKey.compareTo(a.weekKey)))
-        .take(8)
-        .toList();
+    final weeklyTestRows = ([
+      ...s.weeklyTestHistory,
+    ]..sort((a, b) => b.weekKey.compareTo(a.weekKey))).take(8).toList();
 
     return Scaffold(
       appBar: AppBar(title: const Text('내 기록')),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
         children: [
-          // 요약 4분할
-          AppCard(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                StatTile(value: '${s.totalSolved}', label: '푼 문제'),
-                _vline(theme),
-                StatTile(value: '${(s.accuracy * 100).round()}%', label: '정답률'),
-                _vline(theme),
-                StatTile(value: '${s.currentStreak()}일', label: '연속'),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
+          // 요약: 이모지 말풍선 칩
           Row(
             children: [
               Expanded(
-                child: AppCard(
-                  child: StatTile(
-                    icon: Icons.calendar_today_rounded,
-                    value: '${s.weeklySolved}',
-                    label: '이번 주 푼 문제',
-                  ),
+                child: StatBubble(
+                  emoji: '📝',
+                  value: '${s.totalSolved}',
+                  label: '푼 문제',
+                  color: AppColors.primary,
                 ),
               ),
-              const SizedBox(width: 12),
+              const SizedBox(width: 10),
               Expanded(
-                child: AppCard(
-                  child: StatTile(
-                    icon: Icons.flag_rounded,
-                    value: weakest ?? '-',
-                    label: '가장 덜 푼 과목',
-                    valueColor: AppColors.wrongOf(theme.brightness),
-                  ),
+                child: StatBubble(
+                  emoji: '🎯',
+                  value: '${(s.accuracy * 100).round()}%',
+                  label: '정답률',
+                  color: AppColors.accent,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: StatBubble(
+                  emoji: '🔥',
+                  value: '${s.currentStreak()}일',
+                  label: '연속',
+                  color: AppColors.streak,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: StatBubble(
+                  emoji: '📅',
+                  value: '${s.weeklySolved}',
+                  label: '이번 주 푼 문제',
+                  color: const Color(0xFF4DA8E8),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: StatBubble(
+                  emoji: '🌱',
+                  value: weakest ?? '-',
+                  label: '가장 덜 푼 과목',
+                  color: AppColors.wrong,
                 ),
               ),
             ],
@@ -185,20 +200,29 @@ class StatsScreen extends ConsumerWidget {
     );
   }
 
-  Widget _subjectRow(ThemeData theme, String name, double v) => Row(
-    children: [
-      SizedBox(
-        width: 96,
-        child: Text(
-          name,
-          style: const TextStyle(fontWeight: FontWeight.w600),
-          overflow: TextOverflow.ellipsis,
+  Widget _subjectRow(ThemeData theme, String name, double v) {
+    final i = kCurriculum.indexWhere((x) => x.name == name);
+    final emoji = i < 0 ? '📚' : kCurriculum[i].emoji;
+    final color = AppColors.difficultyColors[(i < 0 ? 0 : i) % 6];
+    return Row(
+      children: [
+        EmojiBadge(emoji, color: color, size: 38),
+        const SizedBox(width: 10),
+        SizedBox(
+          width: 82,
+          child: Text(
+            name,
+            style: const TextStyle(fontWeight: FontWeight.w700),
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
-      ),
-      const SizedBox(width: 12),
-      Expanded(child: ProgressBar(value: v)),
-    ],
-  );
+        const SizedBox(width: 8),
+        Expanded(
+          child: ProgressBar(value: v, color: color),
+        ),
+      ],
+    );
+  }
 
   Widget _weeklyTestRow(
     ThemeData theme,
@@ -254,9 +278,6 @@ class StatsScreen extends ConsumerWidget {
     if (d == null) return weekKey;
     return '${d.month}/${d.day} 주';
   }
-
-  Widget _vline(ThemeData theme) =>
-      Container(width: 1, height: 36, color: theme.colorScheme.outlineVariant);
 
   String _recentDateLabel(RecentRecord record) {
     final key = record.dateKey;

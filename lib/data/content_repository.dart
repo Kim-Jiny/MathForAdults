@@ -32,7 +32,7 @@ class ContentRepository {
       final json = jsonDecode(raw) as Map<String, dynamic>;
       _concepts = {
         for (final e in json.entries)
-          e.key: ConceptCard.fromJson(e.key, e.value as Map<String, dynamic>)
+          e.key: ConceptCard.fromJson(e.key, e.value as Map<String, dynamic>),
       };
     } catch (_) {
       _concepts = {};
@@ -79,11 +79,12 @@ class ContentRepository {
   }) async {
     final index = await loadIndex();
     final wanted = difficulties.toSet();
-    final candidateSubjects = index.subjects
-        .where((s) => s.difficulties.any(wanted.contains))
-        .map((s) => s.name)
-        .toList()
-      ..shuffle();
+    final candidateSubjects =
+        index.subjects
+            .where((s) => s.difficulties.any(wanted.contains))
+            .map((s) => s.name)
+            .toList()
+          ..shuffle();
 
     final pool = <MathProblem>[];
     for (final name in candidateSubjects) {

@@ -9,6 +9,7 @@ import '../../services/notification_service.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
 import 'account_section.dart';
@@ -39,8 +40,14 @@ class SettingsScreen extends ConsumerWidget {
               children: [
                 SwitchListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                  title: const Text('학습 리마인더',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  secondary: _lead(
+                    Icons.notifications_active_rounded,
+                    AppColors.streak,
+                  ),
+                  title: const Text(
+                    '학습 리마인더',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   subtitle: const Text('매일 정해진 시간에 한 번 알려드려요'),
                   value: settings.notificationsOn,
                   onChanged: (v) => _toggleReminder(context, ref, v),
@@ -49,14 +56,17 @@ class SettingsScreen extends ConsumerWidget {
                   const Divider(height: 1, indent: 16, endIndent: 16),
                   ListTile(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-                    leading: const Icon(Icons.schedule_rounded, size: 20),
-                    title: const Text('알림 시간',
-                        style: TextStyle(fontWeight: FontWeight.w600)),
+                    leading: _lead(Icons.schedule_rounded, AppColors.primary),
+                    title: const Text(
+                      '알림 시간',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
                     trailing: Text(
                       _fmtTime(settings.reminderHour, settings.reminderMinute),
                       style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          color: theme.colorScheme.primary),
+                        fontWeight: FontWeight.w700,
+                        color: theme.colorScheme.primary,
+                      ),
                     ),
                     onTap: () => _pickTime(context, ref, settings),
                   ),
@@ -64,8 +74,11 @@ class SettingsScreen extends ConsumerWidget {
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 SwitchListTile(
                   contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                  title: const Text('주간시험 리마인더',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  secondary: _lead(Icons.emoji_events_rounded, AppColors.sunny),
+                  title: const Text(
+                    '주간시험 리마인더',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   subtitle: const Text('매주 일요일, 같은 시각에 알려드려요'),
                   value: settings.weeklyTestReminderOn,
                   onChanged: (v) => _toggleWeeklyTestReminder(context, ref, v),
@@ -83,7 +96,7 @@ class SettingsScreen extends ConsumerWidget {
               children: DailyGoal.values.map((g) {
                 final selected = settings.dailyGoal == g;
                 return ChoiceChip(
-                  label: Text(g.label),
+                  label: Text('${_goalEmoji(g)} ${g.label}'),
                   selected: selected,
                   onSelected: (_) => notifier.setGoal(g),
                   showCheckmark: false,
@@ -102,15 +115,22 @@ class SettingsScreen extends ConsumerWidget {
           const SizedBox(height: 22),
 
           const SectionHeader('테마'),
-          AppCard(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              children: [
-                _themeTile(ref, settings, ThemeMode.system, '시스템 설정', Icons.brightness_auto),
-                _themeTile(ref, settings, ThemeMode.light, '라이트', Icons.light_mode),
-                _themeTile(ref, settings, ThemeMode.dark, '다크', Icons.dark_mode),
-              ],
-            ),
+          Row(
+            children: [
+              for (final (mode, emoji, label) in [
+                (ThemeMode.system, '🌗', '자동'),
+                (ThemeMode.light, '☀️', '라이트'),
+                (ThemeMode.dark, '🌙', '다크'),
+              ])
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      right: mode == ThemeMode.dark ? 0 : 10,
+                    ),
+                    child: _themeChoice(ref, settings, mode, emoji, label),
+                  ),
+                ),
+            ],
           ),
           const BannerAdSlot(
             placement: BannerPlacement.settings,
@@ -124,9 +144,11 @@ class SettingsScreen extends ConsumerWidget {
             child: Column(
               children: [
                 ListTile(
-                  leading: const Icon(Icons.mail_outline_rounded),
-                  title: const Text('문의하기',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(Icons.mail_outline_rounded, AppColors.primary),
+                  title: const Text(
+                    '문의하기',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.chevron_right_rounded),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const InquiryScreen()),
@@ -134,45 +156,58 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
-                  leading: const Icon(Icons.privacy_tip_outlined),
-                  title: const Text('개인정보처리방침',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(Icons.privacy_tip_outlined, AppColors.accent),
+                  title: const Text(
+                    '개인정보처리방침',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.open_in_new_rounded, size: 18),
-                  onTap: () => _openUrl(
-                      context, 'https://duo.jiny.shop/mfa/privacy'),
+                  onTap: () =>
+                      _openUrl(context, 'https://duo.jiny.shop/mfa/privacy'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
-                  leading: const Icon(Icons.description_outlined),
-                  title: const Text('이용약관',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(Icons.description_outlined, AppColors.accent),
+                  title: const Text(
+                    '이용약관',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.open_in_new_rounded, size: 18),
-                  onTap: () => _openUrl(
-                      context, 'https://duo.jiny.shop/mfa/terms'),
+                  onTap: () =>
+                      _openUrl(context, 'https://duo.jiny.shop/mfa/terms'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
-                  leading: const Icon(Icons.currency_exchange_rounded),
-                  title: const Text('환불 안내',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(
+                    Icons.currency_exchange_rounded,
+                    AppColors.streak,
+                  ),
+                  title: const Text(
+                    '환불 안내',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.open_in_new_rounded, size: 18),
-                  onTap: () => _openUrl(
-                      context, 'https://duo.jiny.shop/mfa/refund'),
+                  onTap: () =>
+                      _openUrl(context, 'https://duo.jiny.shop/mfa/refund'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
-                  leading: const Icon(Icons.help_outline_rounded),
-                  title: const Text('지원',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(Icons.help_outline_rounded, AppColors.pink),
+                  title: const Text(
+                    '지원',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.open_in_new_rounded, size: 18),
-                  onTap: () => _openUrl(
-                      context, 'https://duo.jiny.shop/mfa/support'),
+                  onTap: () =>
+                      _openUrl(context, 'https://duo.jiny.shop/mfa/support'),
                 ),
                 const Divider(height: 1, indent: 16, endIndent: 16),
                 ListTile(
-                  leading: const Icon(Icons.info_outline_rounded),
-                  title: const Text('앱 정보',
-                      style: TextStyle(fontWeight: FontWeight.w600)),
+                  leading: _lead(Icons.info_outline_rounded, AppColors.primary),
+                  title: const Text(
+                    '앱 정보',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                   trailing: const Icon(Icons.chevron_right_rounded),
                   onTap: () => _showAboutDialog(context),
                 ),
@@ -184,13 +219,34 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
+  /// 목록 아이콘: 파스텔 동그라미 배경.
+  Widget _lead(IconData icon, Color color) => Builder(
+    builder: (context) {
+      final p = Pastel.of(context, color);
+      return Container(
+        width: 38,
+        height: 38,
+        decoration: BoxDecoration(
+          color: p.bg,
+          shape: BoxShape.circle,
+          border: Border.all(color: p.border, width: 1.5),
+        ),
+        child: Icon(icon, size: 20, color: p.fg),
+      );
+    },
+  );
+
   /// 앱 디자인 언어에 맞춘 커스텀 '앱 정보' 다이얼로그.
   void _showAboutDialog(BuildContext context) {
-    showDialog<void>(
-      context: context,
-      builder: (_) => const AboutAppDialog(),
-    );
+    showDialog<void>(context: context, builder: (_) => const AboutAppDialog());
   }
+
+  String _goalEmoji(DailyGoal g) => switch (g) {
+    DailyGoal.one => '🌱',
+    DailyGoal.three => '🌿',
+    DailyGoal.five => '🌳',
+    DailyGoal.free => '🎈',
+  };
 
   String _fmtTime(int h, int m) {
     final period = h < 12 ? '오전' : '오후';
@@ -198,7 +254,11 @@ class SettingsScreen extends ConsumerWidget {
     return '$period $h12:${m.toString().padLeft(2, '0')}';
   }
 
-  Future<void> _toggleReminder(BuildContext context, WidgetRef ref, bool v) async {
+  Future<void> _toggleReminder(
+    BuildContext context,
+    WidgetRef ref,
+    bool v,
+  ) async {
     final messenger = ScaffoldMessenger.of(context);
     final notifier = ref.read(settingsProvider.notifier);
     if (!v) {
@@ -207,18 +267,27 @@ class SettingsScreen extends ConsumerWidget {
     }
     final granted = await NotificationService.requestPermission();
     if (!granted) {
-      messenger.showSnackBar(const SnackBar(
-          content: Text('알림 권한이 꺼져 있어요. 기기 설정에서 허용해 주세요')));
+      messenger.showSnackBar(
+        const SnackBar(content: Text('알림 권한이 꺼져 있어요. 기기 설정에서 허용해 주세요')),
+      );
       return;
     }
     notifier.toggleNotifications(true);
     final s = ref.read(settingsProvider);
-    messenger.showSnackBar(SnackBar(
-        content: Text('매일 ${_fmtTime(s.reminderHour, s.reminderMinute)}에 알려드릴게요')));
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(
+          '매일 ${_fmtTime(s.reminderHour, s.reminderMinute)}에 알려드릴게요',
+        ),
+      ),
+    );
   }
 
   Future<void> _toggleWeeklyTestReminder(
-      BuildContext context, WidgetRef ref, bool v) async {
+    BuildContext context,
+    WidgetRef ref,
+    bool v,
+  ) async {
     final messenger = ScaffoldMessenger.of(context);
     final notifier = ref.read(settingsProvider.notifier);
     if (!v) {
@@ -227,54 +296,98 @@ class SettingsScreen extends ConsumerWidget {
     }
     final granted = await NotificationService.requestPermission();
     if (!granted) {
-      messenger.showSnackBar(const SnackBar(
-          content: Text('알림 권한이 꺼져 있어요. 기기 설정에서 허용해 주세요')));
+      messenger.showSnackBar(
+        const SnackBar(content: Text('알림 권한이 꺼져 있어요. 기기 설정에서 허용해 주세요')),
+      );
       return;
     }
     notifier.toggleWeeklyTestReminder(true);
     messenger.showSnackBar(
-        const SnackBar(content: Text('매주 일요일에 주간시험을 알려드릴게요')));
+      const SnackBar(content: Text('매주 일요일에 주간시험을 알려드릴게요')),
+    );
   }
 
-  Future<void> _pickTime(BuildContext context, WidgetRef ref, Settings s) async {
+  Future<void> _pickTime(
+    BuildContext context,
+    WidgetRef ref,
+    Settings s,
+  ) async {
     final messenger = ScaffoldMessenger.of(context);
     final picked = await showTimePicker(
       context: context,
       initialTime: TimeOfDay(hour: s.reminderHour, minute: s.reminderMinute),
     );
     if (picked == null) return;
-    ref.read(settingsProvider.notifier).setReminderTime(picked.hour, picked.minute);
-    messenger.showSnackBar(SnackBar(
-        content: Text('매일 ${_fmtTime(picked.hour, picked.minute)}에 알려드릴게요')));
+    ref
+        .read(settingsProvider.notifier)
+        .setReminderTime(picked.hour, picked.minute);
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text('매일 ${_fmtTime(picked.hour, picked.minute)}에 알려드릴게요'),
+      ),
+    );
   }
 
   Future<void> _openUrl(BuildContext context, String url) async {
     final messenger = ScaffoldMessenger.of(context);
     try {
-      final ok = await launchUrl(Uri.parse(url),
-          mode: LaunchMode.externalApplication);
+      final ok = await launchUrl(
+        Uri.parse(url),
+        mode: LaunchMode.externalApplication,
+      );
       if (!ok) throw Exception('open failed');
     } catch (_) {
       messenger.showSnackBar(SnackBar(content: Text('페이지를 열 수 없어요: $url')));
     }
   }
 
-  Widget _themeTile(WidgetRef ref, Settings settings, ThemeMode mode,
-      String label, IconData icon) {
+  Widget _themeChoice(
+    WidgetRef ref,
+    Settings settings,
+    ThemeMode mode,
+    String emoji,
+    String label,
+  ) {
     final selected = settings.themeMode == mode;
-    return Builder(builder: (context) {
-      final scheme = Theme.of(context).colorScheme;
-      return ListTile(
-        onTap: () => ref.read(settingsProvider.notifier).setThemeMode(mode),
-        leading: Icon(icon, size: 20),
-        title: Text(label,
-            style: TextStyle(
-                fontWeight: selected ? FontWeight.w700 : FontWeight.w500)),
-        trailing: selected
-            ? Icon(Icons.check_circle_rounded, color: scheme.primary)
-            : Icon(Icons.circle_outlined, color: scheme.outlineVariant),
-      );
-    });
+    return Builder(
+      builder: (context) {
+        final scheme = Theme.of(context).colorScheme;
+        final color = selected ? scheme.primary : scheme.outlineVariant;
+        return DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(22),
+            boxShadow: [BoxShadow(color: color, offset: const Offset(0, 4))],
+          ),
+          child: Material(
+            color: selected ? scheme.primaryContainer : scheme.surface,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22),
+              side: BorderSide(color: color, width: 2),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: () =>
+                  ref.read(settingsProvider.notifier).setThemeMode(mode),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                child: Column(
+                  children: [
+                    Text(emoji, style: const TextStyle(fontSize: 26)),
+                    const SizedBox(height: 4),
+                    Text(
+                      label,
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        color: selected ? scheme.primary : scheme.onSurface,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
 
@@ -296,9 +409,11 @@ class _AboutAppDialogState extends State<AboutAppDialog> {
   @override
   void initState() {
     super.initState();
-    PackageInfo.fromPlatform().then((info) {
-      if (mounted) setState(() => _appVersion = info.version);
-    }).catchError((_) {});
+    PackageInfo.fromPlatform()
+        .then((info) {
+          if (mounted) setState(() => _appVersion = info.version);
+        })
+        .catchError((_) {});
   }
 
   @override
@@ -368,23 +483,32 @@ class _AboutAppDialogState extends State<AboutAppDialog> {
                 ),
               ),
               const SizedBox(height: 18),
-              Text(appName,
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.titleLarge
-                      ?.copyWith(fontWeight: FontWeight.w800)),
+              Text(
+                appName,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               const SizedBox(height: 8),
               // 버전 칩
               Center(
                 child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 5,
+                  ),
                   decoration: BoxDecoration(
                     color: scheme.primary.withValues(alpha: 0.10),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text(_appVersion.isEmpty ? '버전' : '버전 $_appVersion',
-                      style: theme.textTheme.labelMedium?.copyWith(
-                          color: scheme.primary, fontWeight: FontWeight.w700)),
+                  child: Text(
+                    _appVersion.isEmpty ? '버전' : '버전 $_appVersion',
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: scheme.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -392,7 +516,9 @@ class _AboutAppDialogState extends State<AboutAppDialog> {
                 '어른이 다시 시작하는 수학 루틴',
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodyMedium?.copyWith(
-                    color: scheme.onSurfaceVariant, height: 1.5),
+                  color: scheme.onSurfaceVariant,
+                  height: 1.5,
+                ),
               ),
               const SizedBox(height: 20),
               Divider(height: 1, color: scheme.outlineVariant),
@@ -415,10 +541,13 @@ class _AboutAppDialogState extends State<AboutAppDialog> {
                 label: const Text('오픈소스 라이선스'),
               ),
               const SizedBox(height: 2),
-              Text('© 2026 JinSoft',
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.labelSmall
-                      ?.copyWith(color: scheme.onSurfaceVariant)),
+              Text(
+                '© 2026 JinSoft',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: scheme.onSurfaceVariant,
+                ),
+              ),
             ],
           ),
         ),

@@ -20,12 +20,12 @@ class MathText extends StatelessWidget {
     // 문제·해설은 가독성을 위해 항상 본문(시스템) 폰트로 — 제목용 둥근 폰트가 들어와도 걸러낸다.
     final raw = style ?? DefaultTextStyle.of(context).style;
     final base = Theme.of(context).textTheme.bodyMedium!.copyWith(
-          fontSize: raw.fontSize,
-          fontWeight: raw.fontWeight,
-          fontStyle: raw.fontStyle,
-          color: raw.color,
-          height: 1.5,
-        );
+      fontSize: raw.fontSize,
+      fontWeight: raw.fontWeight,
+      fontStyle: raw.fontStyle,
+      color: raw.color,
+      height: 1.5,
+    );
     final spans = <InlineSpan>[];
     final regex = RegExp(r'\$([^$]*)\$');
     var last = 0;
@@ -42,10 +42,8 @@ class MathText extends StatelessWidget {
             expr,
             textStyle: base,
             mathStyle: MathStyle.text,
-            onErrorFallback: (err) => Text(
-              expr,
-              style: base.copyWith(color: Colors.red),
-            ),
+            onErrorFallback: (err) =>
+                Text(expr, style: base.copyWith(color: Colors.red)),
           ),
         ),
       );

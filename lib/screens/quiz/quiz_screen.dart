@@ -11,6 +11,8 @@ import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
 import '../../services/iap/iap_service.dart';
 import '../../theme/app_colors.dart';
+import '../../theme/app_theme.dart' show kDisplayFont;
+import '../../widgets/app_card.dart';
 import '../../widgets/concept_sheet.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/math_text.dart';
@@ -264,62 +266,75 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                 children: [
+                  // 위치(과목 > 단원 > 세부) + 난이도
                   Row(
                     children: [
                       Expanded(
                         child: Text(
                           p.breadcrumb,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: theme.textTheme.bodySmall?.copyWith(
                             color: theme.colorScheme.onSurfaceVariant,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
+                      const SizedBox(width: 8),
                       DifficultyBadge(p.difficulty, compact: true),
                     ],
                   ),
-                  const SizedBox(height: 14),
-                  Row(
-                    children: [
-                      Text(
-                        '문제 ${_index + 1}',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.primary,
-                          fontWeight: FontWeight.w800,
+                  const SizedBox(height: 12),
+                  // 문제 카드: 번호 동그라미 + 유형/시간 칩 + 문제 본문
+                  AppCard(
+                    padding: const EdgeInsets.fromLTRB(18, 16, 18, 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 34,
+                              height: 34,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: theme.colorScheme.primary,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Text(
+                                'Q${_index + 1}',
+                                style: theme.textTheme.labelLarge?.copyWith(
+                                  fontFamily: kDisplayFont,
+                                  color: theme.colorScheme.onPrimary,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              '/ $_total',
+                              style: theme.textTheme.labelLarge?.copyWith(
+                                color: theme.colorScheme.onSurfaceVariant,
+                              ),
+                            ),
+                            const Spacer(),
+                            _typePill(
+                              theme,
+                              p.type == ProblemType.short ? '✍️ 단답형' : '🔘 객관식',
+                            ),
+                            const SizedBox(width: 6),
+                            _typePill(theme, '⏱ ${p.estimatedTime}'),
+                          ],
                         ),
-                      ),
-                      Text(
-                        ' / $_total',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
+                        const SizedBox(height: 16),
+                        MathText(
+                          p.question,
+                          style: theme.textTheme.titleLarge?.copyWith(
+                            fontSize: 19,
+                            height: 1.6,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      const Spacer(),
-                      if (p.type == ProblemType.short)
-                        _typePill(theme, '단답형')
-                      else
-                        _typePill(theme, '객관식'),
-                      const SizedBox(width: 8),
-                      Icon(
-                        Icons.schedule,
-                        size: 14,
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
-                      const SizedBox(width: 4),
-                      Text(
-                        '예상 ${p.estimatedTime}',
-                        style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-                  MathText(
-                    p.question,
-                    style: theme.textTheme.titleLarge?.copyWith(
-                      height: 1.55,
-                      fontWeight: FontWeight.w600,
+                      ],
                     ),
                   ),
                   if (p.hints.isNotEmpty && !_checked) _hintsSection(theme, p),
@@ -705,6 +720,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     }
 
     return Container(
+      width: double.infinity,
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,

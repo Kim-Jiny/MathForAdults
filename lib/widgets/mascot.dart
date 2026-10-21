@@ -52,15 +52,12 @@ class _MascotState extends State<Mascot> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     final body = widget.bodyColor ?? const Color(0xFFB9AEFF);
     Widget paint(double t) => CustomPaint(
-          size: Size.square(widget.size),
-          painter: _MascotPainter(mood: widget.mood, body: body, t: t),
-        );
+      size: Size.square(widget.size),
+      painter: _MascotPainter(mood: widget.mood, body: body, t: t),
+    );
     final c = _c;
     if (c == null) return paint(0);
-    return AnimatedBuilder(
-      animation: c,
-      builder: (_, _) => paint(c.value),
-    );
+    return AnimatedBuilder(animation: c, builder: (_, _) => paint(c.value));
   }
 }
 
@@ -147,8 +144,12 @@ class _MascotPainter extends CustomPainter {
     for (final side in [-1.0, 1.0]) {
       final p = Path()
         ..moveTo(52, 12)
-        ..quadraticBezierTo(52 + side * 10, side < 0 ? 3.0 : 0.0,
-            52 + side * 20, side < 0 ? 7.0 : 13.0)
+        ..quadraticBezierTo(
+          52 + side * 10,
+          side < 0 ? 3.0 : 0.0,
+          52 + side * 20,
+          side < 0 ? 7.0 : 13.0,
+        )
         ..quadraticBezierTo(52 + side * 10, 19, 52, 12)
         ..close();
       canvas.drawPath(p, fill(leaf));
@@ -190,12 +191,20 @@ class _MascotPainter extends CustomPainter {
             eyeStroke,
           );
         case MascotMood.happy || MascotMood.think:
-          final look = mood == MascotMood.think ? const Offset(1.5, -2) : Offset.zero;
+          final look = mood == MascotMood.think
+              ? const Offset(1.5, -2)
+              : Offset.zero;
           final r = Rect.fromCenter(
-              center: Offset(x, 55) + look, width: 10, height: 13);
+            center: Offset(x, 55) + look,
+            width: 10,
+            height: 13,
+          );
           canvas.drawOval(r, eyePaint);
           canvas.drawCircle(
-              Offset(x + 2, 51.5) + look, 2.2, fill(Colors.white));
+            Offset(x + 2, 51.5) + look,
+            2.2,
+            fill(Colors.white),
+          );
       }
     }
 
@@ -227,7 +236,11 @@ class _MascotPainter extends CustomPainter {
           fill(AppColors.pink),
         );
       case MascotMood.think:
-        canvas.drawCircle(const Offset(52, 67), 3, mouthStroke..strokeWidth = 2.6);
+        canvas.drawCircle(
+          const Offset(52, 67),
+          3,
+          mouthStroke..strokeWidth = 2.6,
+        );
       case MascotMood.sleepy:
         canvas.drawArc(
           Rect.fromCenter(center: const Offset(50, 66), width: 9, height: 6),

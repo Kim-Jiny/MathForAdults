@@ -25,6 +25,7 @@ class IapVerifyResult {
   final bool verified;
   final String? kind; // remove_ads | hint_coupons
   final int coupons;
+
   /// kind가 hint_coupons일 때만 채워짐 — 서버 계정의 최종 잔액(증분이 아니라 절대값).
   final int? balance;
 
@@ -104,13 +105,15 @@ class IapService {
         autoConsume: false,
       );
 
-  Future<bool> buyNonConsumable(ProductDetails details, {String? accountUuid}) =>
-      InAppPurchase.instance.buyNonConsumable(
-        purchaseParam: PurchaseParam(
-          productDetails: details,
-          applicationUserName: accountUuid,
-        ),
-      );
+  Future<bool> buyNonConsumable(
+    ProductDetails details, {
+    String? accountUuid,
+  }) => InAppPurchase.instance.buyNonConsumable(
+    purchaseParam: PurchaseParam(
+      productDetails: details,
+      applicationUserName: accountUuid,
+    ),
+  );
 
   Future<void> completePurchase(PurchaseDetails p) =>
       InAppPurchase.instance.completePurchase(p);
@@ -129,7 +132,9 @@ class IapService {
         .getPlatformAddition<InAppPurchaseAndroidPlatformAddition>();
     final result = await addition.consumePurchase(p);
     if (result.responseCode != BillingResponse.ok) {
-      throw Exception('Android consume 실패: ${result.responseCode} ${result.debugMessage ?? ''}');
+      throw Exception(
+        'Android consume 실패: ${result.responseCode} ${result.debugMessage ?? ''}',
+      );
     }
   }
 
@@ -184,7 +189,9 @@ class IapService {
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('영수증 검증 요청 실패 (${res.statusCode})');
     }
-    return IapVerifyResult.fromJson(jsonDecode(res.body) as Map<String, dynamic>);
+    return IapVerifyResult.fromJson(
+      jsonDecode(res.body) as Map<String, dynamic>,
+    );
   }
 
   /// 네트워크/서버 오류(비2xx)는 예외로 던진다 — 호출부([IapNotifier._refreshEntitlements])가
@@ -192,10 +199,12 @@ class IapService {
   /// (예전엔 실패 시 가짜 기본값을 그대로 돌려줘서, 로그인 직후 일시적 5xx 한 번에 화면상
   /// 힌트쿠폰 잔액이 0으로 보이는 버그가 있었음 — 실제 서버 잔액은 멀쩡한데도.)
   Future<IapEntitlements> fetchEntitlements(String token) async {
-    final res = await http.get(
-      Uri.parse('$_base/entitlements'),
-      headers: {'Authorization': 'Bearer $token'},
-    ).timeout(const Duration(seconds: 20));
+    final res = await http
+        .get(
+          Uri.parse('$_base/entitlements'),
+          headers: {'Authorization': 'Bearer $token'},
+        )
+        .timeout(const Duration(seconds: 20));
     if (res.statusCode == 401) throw const IapVerifyAuthError();
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('엔타이틀먼트 조회 실패 (${res.statusCode})');

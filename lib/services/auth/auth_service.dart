@@ -15,6 +15,7 @@ class AuthUser {
   final int id;
   final String? nickname;
   final String? email;
+
   /// 인앱결제 구매 요청에 심는 계정 식별자(iOS appAccountToken / Android
   /// obfuscatedAccountId로 매핑됨). 스토어가 서명한 영수증에 그대로 남아서, 서버가
   /// JWT 유효기간과 무관하게 "이 영수증이 원래 어느 계정 건지" 대조할 수 있게 해준다.
@@ -183,10 +184,12 @@ class AuthService {
   Future<void> deleteAccount() async {
     final token = await cachedToken;
     if (token == null) throw Exception('로그인이 필요해요');
-    final res = await http.delete(
-      Uri.parse('$_base/account'),
-      headers: {'Authorization': 'Bearer $token'},
-    ).timeout(const Duration(seconds: 20));
+    final res = await http
+        .delete(
+          Uri.parse('$_base/account'),
+          headers: {'Authorization': 'Bearer $token'},
+        )
+        .timeout(const Duration(seconds: 20));
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('회원탈퇴 실패 (${res.statusCode})');
     }

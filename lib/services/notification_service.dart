@@ -46,15 +46,22 @@ class NotificationService {
   static Future<bool> requestPermission() async {
     try {
       await init();
-      final ios = _plugin.resolvePlatformSpecificImplementation<
-          IOSFlutterLocalNotificationsPlugin>();
+      final ios = _plugin
+          .resolvePlatformSpecificImplementation<
+            IOSFlutterLocalNotificationsPlugin
+          >();
       if (ios != null) {
         return await ios.requestPermissions(
-                alert: true, badge: true, sound: true) ??
+              alert: true,
+              badge: true,
+              sound: true,
+            ) ??
             false;
       }
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
+      final android = _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >();
       if (android != null) {
         return await android.requestNotificationsPermission() ?? true;
       }
@@ -71,8 +78,14 @@ class NotificationService {
       await _plugin.cancel(_dailyId);
 
       final now = tz.TZDateTime.now(tz.local);
-      var when =
-          tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
+      var when = tz.TZDateTime(
+        tz.local,
+        now.year,
+        now.month,
+        now.day,
+        hour,
+        minute,
+      );
       if (!when.isAfter(now)) when = when.add(const Duration(days: 1));
 
       await _plugin.zonedSchedule(
@@ -114,8 +127,14 @@ class NotificationService {
       await _plugin.cancel(_weeklyTestId);
 
       final now = tz.TZDateTime.now(tz.local);
-      var when =
-          tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
+      var when = tz.TZDateTime(
+        tz.local,
+        now.year,
+        now.month,
+        now.day,
+        hour,
+        minute,
+      );
       final daysUntilSunday = (DateTime.sunday - when.weekday) % 7;
       when = when.add(Duration(days: daysUntilSunday));
       if (!when.isAfter(now)) when = when.add(const Duration(days: 7));

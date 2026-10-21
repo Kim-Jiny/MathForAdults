@@ -5,8 +5,10 @@ import '../../models/difficulty.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/mascot.dart';
+import '../../widgets/math_symbols.dart';
 import '../../widgets/section_header.dart';
 import '../quiz/quiz_launcher.dart';
 
@@ -49,35 +51,45 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
         children: [
-          // 오늘 다시 풀 문제
+          // 오늘 다시 풀 문제: 마스코트가 응원
           AppCard(
             color: theme.colorScheme.primary.withValues(alpha: 0.08),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Text('오늘 다시 풀 문제',
-                        style: theme.textTheme.titleMedium
-                            ?.copyWith(fontWeight: FontWeight.w800)),
-                    const Spacer(),
-                    Text('${today.length}문제',
-                        style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant)),
+                    const Mascot(size: 64, mood: MascotMood.think),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '틀린 문제 ${wrong.length}개',
+                            style: theme.textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            '오늘은 ${today.length}문제만 가볍게 복습해요',
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: theme.colorScheme.onSurfaceVariant,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                const SizedBox(height: 6),
-                Text('틀렸던 문제부터 가볍게 복습해요',
-                    style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant)),
                 const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
-                  child: FilledButton.icon(
-                    onPressed: () =>
-                        QuizLauncher.startWith(context, today, title: '오늘 다시 풀기'),
-                    icon: const Icon(Icons.play_arrow_rounded),
-                    label: const Text('지금 복습 시작'),
+                  child: FilledButton(
+                    onPressed: () => QuizLauncher.startWith(
+                      context,
+                      today,
+                      title: '오늘 다시 풀기',
+                    ),
+                    child: const Text('지금 복습 시작 ▶'),
                   ),
                 ),
               ],
@@ -90,10 +102,12 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
           _filterRow(subjects),
           const SizedBox(height: 12),
 
-          ...filtered.map((p) => Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: _wrongTile(p),
-              )),
+          ...filtered.map(
+            (p) => Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: _wrongTile(p),
+            ),
+          ),
         ],
       ),
     );
@@ -110,14 +124,17 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
               _difficulty = null;
             });
           }),
-          ...subjects.map((s) => _chip(s, _subject == s, () {
-                setState(() => _subject = _subject == s ? null : s);
-              })),
+          ...subjects.map(
+            (s) => _chip(s, _subject == s, () {
+              setState(() => _subject = _subject == s ? null : s);
+            }),
+          ),
           const SizedBox(width: 4),
-          ...[Difficulty.csatBasic, Difficulty.csatReal]
-              .map((d) => _chip(d.label, _difficulty == d, () {
-                    setState(() => _difficulty = _difficulty == d ? null : d);
-                  })),
+          ...[Difficulty.csatBasic, Difficulty.csatReal].map(
+            (d) => _chip(d.label, _difficulty == d, () {
+              setState(() => _difficulty = _difficulty == d ? null : d);
+            }),
+          ),
         ],
       ),
     );
@@ -152,30 +169,45 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
         children: [
           Row(
             children: [
+              EmojiBadge('🤔', color: p.difficulty.color, size: 34),
+              const SizedBox(width: 10),
               Expanded(
-                child: Text(p.breadcrumb,
-                    style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant,
-                        fontWeight: FontWeight.w600)),
+                child: Text(
+                  p.breadcrumb,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
               DifficultyBadge(p.difficulty, compact: true),
             ],
           ),
           const SizedBox(height: 8),
-          Text(p.question,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.titleSmall
-                  ?.copyWith(fontWeight: FontWeight.w600, height: 1.4)),
+          Text(
+            p.question,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: theme.textTheme.titleSmall?.copyWith(
+              fontWeight: FontWeight.w600,
+              height: 1.4,
+            ),
+          ),
           const SizedBox(height: 12),
           Row(
             children: [
-              Icon(Icons.schedule,
-                  size: 14, color: theme.colorScheme.onSurfaceVariant),
+              Icon(
+                Icons.schedule,
+                size: 14,
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
               const SizedBox(width: 4),
-              Text('예상 ${p.estimatedTime}',
-                  style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant)),
+              Text(
+                '예상 ${p.estimatedTime}',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
+              ),
               const Spacer(),
               FilledButton.tonal(
                 style: FilledButton.styleFrom(
@@ -194,23 +226,31 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
   }
 
   Widget _empty(ThemeData theme) => Center(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Mascot(size: 110, mood: MascotMood.happy, bounce: true),
-              const SizedBox(height: 16),
-              Text('다시 풀 문제가 없어요',
-                  style: theme.textTheme.titleMedium
-                      ?.copyWith(fontWeight: FontWeight.w800)),
-              const SizedBox(height: 6),
-              Text('틀린 문제는 여기에 모여요. 부담 없이 한 문제씩!',
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant)),
-            ],
+    child: Padding(
+      padding: const EdgeInsets.all(32),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const SymbolConfetti(
+            child: Mascot(size: 110, mood: MascotMood.happy, bounce: true),
           ),
-        ),
-      );
+          const SizedBox(height: 16),
+          Text(
+            '다시 풀 문제가 없어요',
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            '틀린 문제는 여기에 모여요. 부담 없이 한 문제씩!',
+            textAlign: TextAlign.center,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }

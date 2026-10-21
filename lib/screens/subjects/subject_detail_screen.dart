@@ -7,7 +7,10 @@ import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../../widgets/progress_bar.dart';
+import '../../theme/app_colors.dart';
+import '../../theme/app_theme.dart' show kDisplayFont;
 import 'chapter_lessons_screen.dart';
+import 'subjects_screen.dart';
 
 /// 과목 상세: 단원(chapter) 목록 + 단원별 진행률/추천 난이도.
 class SubjectDetailScreen extends ConsumerWidget {
@@ -27,17 +30,135 @@ class SubjectDetailScreen extends ConsumerWidget {
           final idxSubject = index.subject(subject.name);
           return ListView(
             padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
-            children: subject.chapters.map((chapter) {
-              final idxChapter = idxSubject?.chapter(chapter);
-              return _ChapterCard(
-                subject: subject,
-                chapter: chapter,
-                idxChapter: idxChapter,
-                solved: stats.solvedInChapter(subject.name, chapter),
-              );
-            }).toList(),
+            children: [
+              Text(
+                '차근차근 한 단원씩 따라가 봐요 🐾',
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
+              ),
+              const SizedBox(height: 16),
+              for (var i = 0; i < subject.chapters.length; i++)
+                _PathRow(
+                  number: i + 1,
+                  isLast: i == subject.chapters.length - 1,
+                  color: SubjectsScreen.colorFor(
+                    kCurriculum.indexWhere((s) => s.name == subject.name),
+                  ),
+                  subject: subject,
+                  chapter: subject.chapters[i],
+                  idxChapter: idxSubject?.chapter(subject.chapters[i]),
+                  solved: stats.solvedInChapter(
+                    subject.name,
+                    subject.chapters[i],
+                  ),
+                ),
+            ],
           );
         },
+      ),
+    );
+  }
+}
+
+/// 학습 경로 한 칸: 왼쪽엔 번호 동그라미 + 이어지는 선, 오른쪽엔 단원 카드.
+class _PathRow extends StatelessWidget {
+  final int number;
+  final bool isLast;
+  final Color color;
+  final Subject subject;
+  final String chapter;
+  final IdxChapter? idxChapter;
+  final int solved;
+
+  const _PathRow({
+    required this.number,
+    required this.isLast,
+    required this.color,
+    required this.subject,
+    required this.chapter,
+    required this.idxChapter,
+    required this.solved,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final total = idxChapter?.count ?? 0;
+    final done = total > 0 && solved >= total;
+    final started = solved > 0;
+    final ready = idxChapter != null;
+    final nodeColor = !ready
+        ? scheme.outlineVariant
+        : done
+        ? AppColors.correctOf(Theme.of(context).brightness)
+        : started
+        ? color
+        : scheme.outlineVariant;
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            width: 44,
+            child: Column(
+              children: [
+                Container(
+                  width: 36,
+                  height: 36,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: nodeColor,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: scheme.surface, width: 3),
+                    boxShadow: [
+                      BoxShadow(
+                        color: nodeColor,
+                        blurRadius: 0,
+                        spreadRadius: 1.5,
+                      ),
+                    ],
+                  ),
+                  child: done
+                      ? const Icon(
+                          Icons.star_rounded,
+                          color: Colors.white,
+                          size: 20,
+                        )
+                      : Text(
+                          '$number',
+                          style: TextStyle(
+                            fontFamily: kDisplayFont,
+                            fontSize: 17,
+                            color: (started && ready)
+                                ? Colors.white
+                                : scheme.onSurfaceVariant,
+                          ),
+                        ),
+                ),
+                if (!isLast)
+                  Expanded(
+                    child: Container(
+                      width: 5,
+                      margin: const EdgeInsets.symmetric(vertical: 4),
+                      decoration: BoxDecoration(
+                        color: scheme.outlineVariant,
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: _ChapterCard(
+              subject: subject,
+              chapter: chapter,
+              idxChapter: idxChapter,
+              solved: solved,
+            ),
+          ),
+        ],
       ),
     );
   }

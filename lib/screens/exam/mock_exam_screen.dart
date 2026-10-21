@@ -81,7 +81,8 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
 
   void _selectChoice(int c) => setState(() => _answers[_index] = '$c');
 
-  int get _answeredCount => _answers.values.where((v) => v.trim().isNotEmpty).length;
+  int get _answeredCount =>
+      _answers.values.where((v) => v.trim().isNotEmpty).length;
 
   Future<void> _confirmSubmit() async {
     final unanswered = _ps.length - _answeredCount;
@@ -94,11 +95,13 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
           content: Text('아직 $unanswered문항이 비어 있어요. 그래도 제출하시겠어요?'),
           actions: [
             TextButton(
-                onPressed: () => Navigator.pop(ctx, false),
-                child: const Text('더 풀기')),
+              onPressed: () => Navigator.pop(ctx, false),
+              child: const Text('더 풀기'),
+            ),
             FilledButton(
-                onPressed: () => Navigator.pop(ctx, true),
-                child: const Text('제출')),
+              onPressed: () => Navigator.pop(ctx, true),
+              child: const Text('제출'),
+            ),
           ],
         ),
       );
@@ -125,9 +128,9 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
     }
     setState(() => _submitted = true);
     if (auto && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('시간이 다 되어 자동 제출됐어요')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('시간이 다 되어 자동 제출됐어요')));
     }
   }
 
@@ -159,11 +162,13 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
             content: const Text('지금 나가면 기록되지 않아요.'),
             actions: [
               TextButton(
-                  onPressed: () => Navigator.pop(ctx, false),
-                  child: const Text('계속 풀기')),
+                onPressed: () => Navigator.pop(ctx, false),
+                child: const Text('계속 풀기'),
+              ),
               FilledButton(
-                  onPressed: () => Navigator.pop(ctx, true),
-                  child: const Text('나가기')),
+                onPressed: () => Navigator.pop(ctx, true),
+                child: const Text('나가기'),
+              ),
             ],
           ),
         );
@@ -179,31 +184,38 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
             Center(
               child: Container(
                 margin: const EdgeInsets.only(right: 12),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
                   color: warn
-                      ? AppColors.wrongOf(theme.brightness)
-                          .withValues(alpha: 0.15)
+                      ? AppColors.wrongOf(
+                          theme.brightness,
+                        ).withValues(alpha: 0.15)
                       : theme.colorScheme.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.timer_outlined,
-                        size: 16,
+                    Icon(
+                      Icons.timer_outlined,
+                      size: 16,
+                      color: warn
+                          ? AppColors.wrongOf(theme.brightness)
+                          : theme.colorScheme.primary,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      _fmt(_remaining),
+                      style: theme.textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w800,
                         color: warn
                             ? AppColors.wrongOf(theme.brightness)
-                            : theme.colorScheme.primary),
-                    const SizedBox(width: 4),
-                    Text(_fmt(_remaining),
-                        style: theme.textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w800,
-                          color: warn
-                              ? AppColors.wrongOf(theme.brightness)
-                              : theme.colorScheme.primary,
-                        )),
+                            : theme.colorScheme.primary,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -228,25 +240,37 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                   children: [
                     Row(
                       children: [
-                        Text('${_index + 1}',
-                            style: theme.textTheme.titleMedium?.copyWith(
-                              fontWeight: FontWeight.w900,
-                              color: theme.colorScheme.primary,
-                            )),
-                        Text(' / ${_ps.length}',
-                            style: theme.textTheme.titleMedium?.copyWith(
-                                color: theme.colorScheme.onSurfaceVariant)),
+                        Text(
+                          '${_index + 1}',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w900,
+                            color: theme.colorScheme.primary,
+                          ),
+                        ),
+                        Text(
+                          ' / ${_ps.length}',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
                         const Spacer(),
-                        Text('${p.difficulty.examPoints}점 · ${p.subject}',
-                            style: theme.textTheme.bodySmall?.copyWith(
-                                color: theme.colorScheme.onSurfaceVariant,
-                                fontWeight: FontWeight.w600)),
+                        Text(
+                          '${p.difficulty.examPoints}점 · ${p.subject}',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    MathText(p.question,
-                        style: theme.textTheme.titleLarge
-                            ?.copyWith(height: 1.55, fontWeight: FontWeight.w600)),
+                    MathText(
+                      p.question,
+                      style: theme.textTheme.titleLarge?.copyWith(
+                        height: 1.55,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                     const SizedBox(height: 24),
                     if (p.type == ProblemType.short)
                       _shortInput(theme)
@@ -272,8 +296,10 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
       decoration: InputDecoration(
         hintText: '정답 입력 (예: 12, 3/2, −5)',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 18,
+          vertical: 18,
+        ),
       ),
     );
   }
@@ -314,17 +340,23 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                         : scheme.surfaceContainerHighest,
                     shape: BoxShape.circle,
                   ),
-                  child: Text('${c + 1}',
-                      style: TextStyle(
-                          color: selected
-                              ? scheme.onPrimary
-                              : scheme.onSurfaceVariant,
-                          fontWeight: FontWeight.w700)),
+                  child: Text(
+                    '${c + 1}',
+                    style: TextStyle(
+                      color: selected
+                          ? scheme.onPrimary
+                          : scheme.onSurfaceVariant,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 14),
                 Expanded(
-                    child: MathText(_p.choices[c],
-                        style: theme.textTheme.titleMedium)),
+                  child: MathText(
+                    _p.choices[c],
+                    style: theme.textTheme.titleMedium,
+                  ),
+                ),
               ],
             ),
           ),
@@ -340,7 +372,8 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
         border: Border(
-            top: BorderSide(color: theme.colorScheme.outlineVariant)),
+          top: BorderSide(color: theme.colorScheme.outlineVariant),
+        ),
       ),
       child: Row(
         children: [

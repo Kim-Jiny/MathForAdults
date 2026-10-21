@@ -25,8 +25,9 @@ class ShopSection extends ConsumerWidget {
 
     ref.listen(iapProvider, (prev, next) {
       if (next.message != null && next.messageSeq != prev?.messageSeq) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(next.message!)));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.message!)));
       }
     });
 
@@ -46,13 +47,17 @@ class ShopSection extends ConsumerWidget {
                   adsRemoved ? Icons.check_circle_rounded : Icons.block_rounded,
                   color: adsRemoved ? Colors.green : scheme.primary,
                 ),
-                title: const Text('광고 제거',
-                    style: TextStyle(fontWeight: FontWeight.w700)),
-                subtitle: Text(adsRemoved
-                    ? '배너·전면 광고가 제거됐어요'
-                    : removeAdsPrice == null
-                        ? '배너·전면 광고를 영구히 없애요'
-                        : '배너·전면 광고를 영구히 없애요 ($removeAdsPrice)'),
+                title: const Text(
+                  '광고 제거',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                subtitle: Text(
+                  adsRemoved
+                      ? '배너·전면 광고가 제거됐어요'
+                      : removeAdsPrice == null
+                      ? '배너·전면 광고를 영구히 없애요'
+                      : '배너·전면 광고를 영구히 없애요 ($removeAdsPrice)',
+                ),
                 trailing: adsRemoved
                     ? null
                     : _buyButton(
@@ -62,18 +67,24 @@ class ShopSection extends ConsumerWidget {
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
-                leading: Icon(Icons.confirmation_number_rounded,
-                    color: scheme.secondary),
-                title: const Text('힌트쿠폰 10개',
-                    style: TextStyle(fontWeight: FontWeight.w700)),
+                leading: Icon(
+                  Icons.confirmation_number_rounded,
+                  color: scheme.secondary,
+                ),
+                title: const Text(
+                  '힌트쿠폰 10개',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
                 // 안드로이드는 로그인 계정 귀속이라 비로그인 땐 잔액 표시가 의미 없지만,
                 // iOS는 게스트도 기기 로컬 잔액으로 구매·사용 가능해서 항상 실제 잔액을 보여준다
                 // (App Store Review Guideline 5.1.1(v) — 계정과 무관한 상품 구매에 로그인 강제 금지).
-                subtitle: Text(!loggedIn && !Platform.isIOS
-                    ? '로그인 후 구매·사용할 수 있어요'
-                    : hintCouponsPrice == null
-                        ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
-                        : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)'),
+                subtitle: Text(
+                  !loggedIn && !Platform.isIOS
+                      ? '로그인 후 구매·사용할 수 있어요'
+                      : hintCouponsPrice == null
+                      ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
+                      : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)',
+                ),
                 trailing: _buyButton(
                   busy: iap.busy,
                   onPressed: () => _buyHintCoupons(context, ref),
@@ -82,8 +93,10 @@ class ShopSection extends ConsumerWidget {
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
                 leading: const Icon(Icons.restore_rounded),
-                title: const Text('구매 복원',
-                    style: TextStyle(fontWeight: FontWeight.w600)),
+                title: const Text(
+                  '구매 복원',
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
                 subtitle: const Text('다른 기기에서 산 항목을 이 기기에도 반영해요'),
                 onTap: iap.busy ? null : () => _restore(context, ref),
               ),
@@ -124,14 +137,20 @@ class ShopSection extends ConsumerWidget {
     if (Platform.isIOS) return true;
     if (ref.read(authProvider).loggedIn) return true;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요')),
+      const SnackBar(
+        content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요'),
+      ),
     );
     return false;
   }
 
   /// iOS 게스트 구매 직후 보여줄 안내 — 애플이 권장하는 "등록하면 다른 기기에서도
   /// 쓸 수 있다"는 설명을 구매 확인 단계에서 미리 전달한다(강제 아님, 정보 제공용).
-  String _withGuestNote(BuildContext context, WidgetRef ref, String description) {
+  String _withGuestNote(
+    BuildContext context,
+    WidgetRef ref,
+    String description,
+  ) {
     if (Platform.isIOS && !ref.read(authProvider).loggedIn) {
       return '$description\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).';
     }
@@ -157,8 +176,10 @@ class ShopSection extends ConsumerWidget {
 
   Future<void> _buyHintCoupons(BuildContext context, WidgetRef ref) async {
     if (!_requireLogin(context, ref)) return;
-    final price =
-        iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final price = iapPriceOf(
+      ref.read(iapProvider),
+      IapService.kHintCoupons10Id,
+    );
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '힌트쿠폰 10개 구매',

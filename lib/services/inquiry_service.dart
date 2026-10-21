@@ -27,14 +27,14 @@ class MyInquiry {
   bool get replied => status == 'replied';
 
   factory MyInquiry.fromJson(Map<String, dynamic> j) => MyInquiry(
-        id: j['id'] as int,
-        content: j['content'] as String? ?? '',
-        status: j['status'] as String? ?? 'pending',
-        reply: j['reply'] as String?,
-        createdAt: j['created_at'] != null
-            ? DateTime.tryParse(j['created_at'].toString())
-            : null,
-      );
+    id: j['id'] as int,
+    content: j['content'] as String? ?? '',
+    status: j['status'] as String? ?? 'pending',
+    reply: j['reply'] as String?,
+    createdAt: j['created_at'] != null
+        ? DateTime.tryParse(j['created_at'].toString())
+        : null,
+  );
 }
 
 /// 문의 전송/조회. 로그인 없이 익명 deviceId 기반 (Minigame 서버 /api/mathforadults).
@@ -49,9 +49,12 @@ class InquiryService {
     var id = _prefs.getString(_deviceKey);
     if (id == null || id.isEmpty) {
       final r = Random.secure();
-      final rand =
-          List.generate(10, (_) => r.nextInt(36).toRadixString(36)).join();
-      id = 'mfa_${DateTime.now().microsecondsSinceEpoch.toRadixString(36)}$rand';
+      final rand = List.generate(
+        10,
+        (_) => r.nextInt(36).toRadixString(36),
+      ).join();
+      id =
+          'mfa_${DateTime.now().microsecondsSinceEpoch.toRadixString(36)}$rand';
       _prefs.setString(_deviceKey, id);
     }
     return id;
@@ -98,8 +101,11 @@ class InquiryService {
 
   Future<List<MyInquiry>> fetchMine() async {
     final res = await http
-        .get(Uri.parse(
-            '$_base/inquiries?deviceId=${Uri.encodeQueryComponent(deviceId)}'))
+        .get(
+          Uri.parse(
+            '$_base/inquiries?deviceId=${Uri.encodeQueryComponent(deviceId)}',
+          ),
+        )
         .timeout(const Duration(seconds: 20));
     if (res.statusCode < 200 || res.statusCode >= 300) {
       throw Exception('불러오기 실패 (${res.statusCode})');

@@ -24,14 +24,13 @@ class AppCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: radius,
         boxShadow: [
-          BoxShadow(
-            color: scheme.outlineVariant,
-            offset: const Offset(0, 4),
-          ),
+          BoxShadow(color: scheme.outlineVariant, offset: const Offset(0, 4)),
         ],
       ),
       child: Material(
-        color: color ?? scheme.surface,
+        color: color == null
+            ? scheme.surface
+            : Color.alphaBlend(color!, scheme.surface),
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: radius,

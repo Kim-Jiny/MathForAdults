@@ -16,7 +16,8 @@ const _kAdsRemovedKey = 'mfa_ads_removed';
 /// 광고 제거 여부. 로컬에 영구 저장 + 로그인 시 서버 엔타이틀먼트로 복원(다른 기기 구매 포함).
 class AdsRemovedNotifier extends StateNotifier<bool> {
   final SharedPreferences _prefs;
-  AdsRemovedNotifier(this._prefs) : super(_prefs.getBool(_kAdsRemovedKey) ?? false);
+  AdsRemovedNotifier(this._prefs)
+    : super(_prefs.getBool(_kAdsRemovedKey) ?? false);
 
   void setRemoved(bool v) {
     if (state == v) return;
@@ -33,19 +34,28 @@ final adsRemovedProvider = StateNotifierProvider<AdsRemovedNotifier, bool>(
 /// 전부 [IapNotifier]가 하고, 여기선 "무엇을 해야 하는지"만 순수하게 계산한다 — 그래야
 /// 네트워크·스토어 SDK 없이 핵심 분기(검증 실패 시 미완료 유지, 로그인 안 됨, 중복 지급
 /// 안 함 등)를 단위 테스트할 수 있다.
-enum IapOutcome { retryLater, rejected, noGrant, grantedCoupons, grantedAdsRemoved }
+enum IapOutcome {
+  retryLater,
+  rejected,
+  noGrant,
+  grantedCoupons,
+  grantedAdsRemoved,
+}
 
 class IapDecision {
   final IapOutcome outcome;
+
   /// true면 스토어 트랜잭션을 완료 처리(completePurchase)해도 안전 — 서버가 확정
   /// 응답을 줬다는 뜻. false면 완료 처리하지 않고 다음 실행 때 재시도되게 둔다.
   final bool shouldComplete;
   final String? message;
+
   /// 서버가 알려준 힌트쿠폰 **최종 잔액**(증분이 아니라 절대값) — 로그인 계정일 때만
   /// 채워짐. 새로 지급된 경우뿐 아니라 이미 처리된 재검증이어도 함께 내려와서,
   /// 클라이언트 표시값을 항상 서버 진실값으로 맞출 수 있다. 게스트(토큰 없음)는 서버
   /// 잔액 개념이 없어 항상 null — 이땐 [grantedAmount]를 기기 로컬에 증분해야 한다.
   final int? balance;
+
   /// 이번에 새로 지급된 힌트쿠폰 개수(절대값이 아니라 증분). 로그인/게스트 공통으로
   /// 채워짐 — 로그인 계정은 `balance`를 그대로 신뢰하므로 안 쓰지만, 게스트(iOS 비로그인
   /// 구매)는 서버에 잔액이 없으므로 이 값을 기기 로컬 잔액에 더해야 한다.
@@ -102,7 +112,11 @@ IapDecision decideIapOutcome({
     }
     // 이미 처리된 재검증(서버가 coupons:0 반환) — 지급은 없지만 로그인 계정이면 서버
     // 잔액으로는 동기화해둔다.
-    return IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true, balance: result.balance);
+    return IapDecision(
+      outcome: IapOutcome.noGrant,
+      shouldComplete: true,
+      balance: result.balance,
+    );
   }
   if (result.kind == 'remove_ads') {
     return const IapDecision(
@@ -116,7 +130,8 @@ IapDecision decideIapOutcome({
 
 /// 실제 스토어 가격 문자열(현지화 포함). 콘솔에 상품이 아직 없거나 조회 전이면 null —
 /// 확정 안 된 가격을 함부로 하드코딩해서 보여주지 않기 위함(호출부가 폴백 문구를 결정).
-String? iapPriceOf(IapState iap, String productId) => iap.products[productId]?.price;
+String? iapPriceOf(IapState iap, String productId) =>
+    iap.products[productId]?.price;
 
 class IapState {
   final bool busy;
@@ -189,10 +204,13 @@ class IapNotifier extends StateNotifier<IapState> {
   }
 
   IapNotifier(this._iap, this._auth, this._ref, this._prefs)
-      : super(const IapState()) {
-    _sub = _iap.purchaseStream.listen(_onPurchaseUpdate, onError: (e) {
-      if (kDebugMode) debugPrint('[IAP] 구매 스트림 오류: $e');
-    });
+    : super(const IapState()) {
+    _sub = _iap.purchaseStream.listen(
+      _onPurchaseUpdate,
+      onError: (e) {
+        if (kDebugMode) debugPrint('[IAP] 구매 스트림 오류: $e');
+      },
+    );
     if (_ref.read(authProvider).loggedIn) {
       // 이미 로그인된 상태로 앱이 시작됐으면 계정 기준 엔타이틀먼트(광고 제거·힌트쿠폰 잔액) 복원.
       _refreshEntitlements();
@@ -388,7 +406,10 @@ class IapNotifier extends StateNotifier<IapState> {
         case PurchaseStatus.pending:
           // 가족 승인 대기·지연 결제 등 — 승인/실패 이벤트는 나중에 별도로 도착한다. 그동안
           // 구매 버튼이 영구히 '처리 중'으로 잠기지 않도록 busy만 풀고 안내한다.
-          state = state.copyWith(busy: false, message: '결제 승인을 기다리고 있어요. 완료되면 자동 반영돼요');
+          state = state.copyWith(
+            busy: false,
+            message: '결제 승인을 기다리고 있어요. 완료되면 자동 반영돼요',
+          );
           break;
       }
     }
@@ -415,7 +436,9 @@ class IapNotifier extends StateNotifier<IapState> {
       // 계정 전환이 있었어도 엉뚱한 계정에 지급되지 않는다. 메모리 캐시(같은 프로세스)
       // → 영구 저장값(앱이 꺼졌다 재시작된 뒤 도착한 경우) → 현재 로그인 계정 순.
       token =
-          _initiatorToken ?? await _auth.pendingPurchaseToken ?? await _auth.cachedToken;
+          _initiatorToken ??
+          await _auth.pendingPurchaseToken ??
+          await _auth.cachedToken;
     }
     _initiatorToken = null;
 
@@ -437,7 +460,11 @@ class IapNotifier extends StateNotifier<IapState> {
       hadError = true;
     }
 
-    final decision = decideIapOutcome(token: token, result: result, hadError: hadError);
+    final decision = decideIapOutcome(
+      token: token,
+      result: result,
+      hadError: hadError,
+    );
     switch (decision.outcome) {
       case IapOutcome.grantedCoupons:
       case IapOutcome.noGrant:

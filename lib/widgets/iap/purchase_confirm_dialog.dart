@@ -32,8 +32,8 @@ Future<bool> confirmPurchaseDialog(
                 ? '결제 즉시 제공되는 디지털 상품이에요. 일부라도 사용하면 청약철회(환불)가 제한될 수 있어요.'
                 : '결제 즉시 제공되는 디지털 상품이에요.',
             style: Theme.of(dialogContext).textTheme.bodySmall?.copyWith(
-                  color: Theme.of(dialogContext).colorScheme.onSurfaceVariant,
-                ),
+              color: Theme.of(dialogContext).colorScheme.onSurfaceVariant,
+            ),
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -46,7 +46,10 @@ Future<bool> confirmPurchaseDialog(
               onPressed: () => _openRefundPolicy(dialogContext),
               child: const Text(
                 '환불 안내 보기',
-                style: TextStyle(fontSize: 13, decoration: TextDecoration.underline),
+                style: TextStyle(
+                  fontSize: 13,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ),
@@ -70,8 +73,10 @@ Future<bool> confirmPurchaseDialog(
 Future<void> _openRefundPolicy(BuildContext context) async {
   final messenger = ScaffoldMessenger.of(context);
   try {
-    final ok = await launchUrl(Uri.parse(_refundPolicyUrl),
-        mode: LaunchMode.externalApplication);
+    final ok = await launchUrl(
+      Uri.parse(_refundPolicyUrl),
+      mode: LaunchMode.externalApplication,
+    );
     if (!ok) throw Exception('open failed');
   } catch (_) {
     messenger.showSnackBar(const SnackBar(content: Text('페이지를 열 수 없어요')));

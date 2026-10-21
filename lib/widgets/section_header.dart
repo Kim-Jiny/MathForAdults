@@ -6,12 +6,7 @@ class SectionHeader extends StatelessWidget {
   final String? actionLabel;
   final VoidCallback? onAction;
 
-  const SectionHeader(
-    this.title, {
-    super.key,
-    this.actionLabel,
-    this.onAction,
-  });
+  const SectionHeader(this.title, {super.key, this.actionLabel, this.onAction});
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +27,9 @@ class SectionHeader extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w800),
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w800,
+              ),
             ),
           ),
           if (actionLabel != null)

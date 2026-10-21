@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/mascot.dart';
+import '../../widgets/math_symbols.dart';
 
 /// 세션 종료 결과 화면.
 class SessionResult extends StatelessWidget {
@@ -29,35 +30,47 @@ class SessionResult extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Mascot(size: 120, mood: mood, bounce: true),
+              SymbolConfetti(
+                child: Mascot(size: 120, mood: mood, bounce: true),
+              ),
               const SizedBox(height: 14),
-              Text(msg,
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.headlineSmall
-                      ?.copyWith(fontWeight: FontWeight.w800)),
+              Text(
+                msg,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               const SizedBox(height: 28),
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 36, vertical: 22),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 36,
+                  vertical: 22,
+                ),
                 decoration: BoxDecoration(
                   color: theme.colorScheme.primary.withValues(alpha: 0.10),
                   borderRadius: BorderRadius.circular(24),
                   border: Border.all(
-                      color: theme.colorScheme.primary.withValues(alpha: 0.25),
-                      width: 2),
+                    color: theme.colorScheme.primary.withValues(alpha: 0.25),
+                    width: 2,
+                  ),
                 ),
                 child: Column(
                   children: [
-                    Text('$correct / $total',
-                        style: theme.textTheme.displaySmall?.copyWith(
-                          fontWeight: FontWeight.w800,
-                          color: theme.colorScheme.primary,
-                        )),
+                    Text(
+                      '$correct / $total',
+                      style: theme.textTheme.displaySmall?.copyWith(
+                        fontWeight: FontWeight.w800,
+                        color: theme.colorScheme.primary,
+                      ),
+                    ),
                     const SizedBox(height: 4),
-                    Text('정답률 $rate%',
-                        style: theme.textTheme.titleMedium?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
-                        )),
+                    Text(
+                      '정답률 $rate%',
+                      style: theme.textTheme.titleMedium?.copyWith(
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                    ),
                   ],
                 ),
               ),

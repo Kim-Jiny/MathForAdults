@@ -87,7 +87,9 @@ class StatsNotifier extends StateNotifier<UserStats> {
       addedAt[problem.id] = nowMs;
     }
     // 주간시험 이월 오답도 맞히면 제거(정답 처리는 어느 경로든 동일하게 반영).
-    final weeklyTestWrong = Map<String, MathProblem>.from(state.weeklyTestWrong);
+    final weeklyTestWrong = Map<String, MathProblem>.from(
+      state.weeklyTestWrong,
+    );
     if (correct) weeklyTestWrong.remove(problem.id);
 
     // 처음 푸는 문제면 단원별 진행 카운트를 +1 (정답 여부와 무관, 고유 집계).
@@ -178,11 +180,13 @@ class StatsNotifier extends StateNotifier<UserStats> {
   }) {
     final weekKey = _weekKey(takenAt);
     final attemptDateKey = dateKey(takenAt);
-    final alreadyHasThisWeek =
-        state.weeklyTestHistory.any((r) => r.weekKey == weekKey);
+    final alreadyHasThisWeek = state.weeklyTestHistory.any(
+      (r) => r.weekKey == weekKey,
+    );
     final prevWeekKey = _weekKey(takenAt.subtract(const Duration(days: 7)));
-    final hasPrevWeekRecord =
-        state.weeklyTestHistory.any((r) => r.weekKey == prevWeekKey);
+    final hasPrevWeekRecord = state.weeklyTestHistory.any(
+      (r) => r.weekKey == prevWeekKey,
+    );
     final streak = alreadyHasThisWeek
         ? state.weeklyTestStreak
         : (hasPrevWeekRecord ? state.weeklyTestStreak + 1 : 1);
@@ -196,8 +200,9 @@ class StatsNotifier extends StateNotifier<UserStats> {
         dateKey: attemptDateKey,
       ),
     ]..sort((a, b) => a.weekKey.compareTo(b.weekKey));
-    final trimmed =
-        history.length > 12 ? history.sublist(history.length - 12) : history;
+    final trimmed = history.length > 12
+        ? history.sublist(history.length - 12)
+        : history;
 
     final carryOver = Map<String, MathProblem>.from(state.weeklyTestWrong);
     for (final p in wrongProblems) {
@@ -308,7 +313,11 @@ final subjectProgressProvider = Provider<Map<String, double>>((ref) {
 /// 오늘 푼 문제 수(최근 기록 20건 기준 — 하루 목표 최대 5문제 표시엔 충분).
 final todaySolvedProvider = Provider<int>((ref) {
   final today = StatsNotifier.dateKey(DateTime.now());
-  return ref.watch(statsProvider).recent.where((r) => r.dateKey == today).length;
+  return ref
+      .watch(statsProvider)
+      .recent
+      .where((r) => r.dateKey == today)
+      .length;
 });
 
 enum DailyGoal { one, three, five, free }
@@ -473,7 +482,10 @@ class SettingsNotifier extends StateNotifier<Settings> {
     state = next;
     _persist();
     if (state.notificationsOn) {
-      NotificationService.scheduleDaily(state.reminderHour, state.reminderMinute);
+      NotificationService.scheduleDaily(
+        state.reminderHour,
+        state.reminderMinute,
+      );
     } else {
       NotificationService.cancelDaily();
     }

@@ -8,6 +8,7 @@ import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/concept_sheet.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/difficulty_badge.dart';
 import '../quiz/quiz_launcher.dart';
 
@@ -54,6 +55,14 @@ class ChapterLessonsScreen extends ConsumerWidget {
                         : () => _openDifficultySheet(context, ref, lesson),
                     child: Row(
                       children: [
+                        EmojiBadge(
+                          lesson.difficulties.isEmpty ? '🔒' : '✏️',
+                          color: lesson.difficulties.isEmpty
+                              ? theme.colorScheme.onSurfaceVariant
+                              : lesson.difficulties.first.color,
+                          size: 46,
+                        ),
+                        const SizedBox(width: 14),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +75,7 @@ class ChapterLessonsScreen extends ConsumerWidget {
                               ),
                               const SizedBox(height: 4),
                               Text(
-                                '${lesson.count}문제 · 난이도 ${lesson.difficulties.length}단계',
+                                '${lesson.count}문제 · ${'⭐' * lesson.difficulties.length.clamp(0, 6)}',
                                 style: theme.textTheme.bodySmall?.copyWith(
                                   color: theme.colorScheme.onSurfaceVariant,
                                 ),
