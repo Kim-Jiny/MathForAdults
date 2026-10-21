@@ -3,11 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/concept_card.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 import '../quiz/quiz_launcher.dart';
 
 /// 확장형 개념 페이지. 요약 카드의 "자세히 보기"에서 이어진다.
-/// 공식·조건·예시·자주 하는 실수·미니 O/X 퀴즈를 보여주고,
+/// 마스코트 인트로 → 색깔별 섹션 카드(핵심/공식/조건/예시/실수/O·X 퀴즈) 순서로 읽히고,
 /// 하단에서 이 개념의 문제로 바로 넘어간다.
 class ConceptDetailScreen extends ConsumerWidget {
   final ConceptCard card;
@@ -18,100 +20,153 @@ class ConceptDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
+    final wrong = AppColors.wrongOf(theme.brightness);
 
     return Scaffold(
-      appBar: AppBar(title: Text('개념 · ${card.title}')),
+      appBar: AppBar(title: const Text('개념 노트')),
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+          padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
           children: [
+            // 제목 + 위치
             Text(
-              '${card.subject} › ${card.chapter}',
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: scheme.onSurfaceVariant,
-              ),
+              card.title,
+              style: theme.textTheme.headlineSmall?.copyWith(height: 1.25),
+            ),
+            const SizedBox(height: 6),
+            Wrap(
+              spacing: 6,
+              children: [
+                _chip(context, card.subject, AppColors.primary),
+                _chip(context, card.chapter, AppColors.accent),
+              ],
             ),
             if (card.intro != null) ...[
-              const SizedBox(height: 12),
-              MathText(
-                card.intro!,
-                style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
+              const SizedBox(height: 16),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Mascot(size: 64, mood: MascotMood.think),
+                  const SizedBox(width: 4),
+                  Expanded(
+                    child: SpeechBubble(
+                      child: MathText(
+                        card.intro!,
+                        style: theme.textTheme.bodyLarge?.copyWith(
+                          height: 1.55,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
 
             _Section(
-              icon: Icons.lightbulb_outline_rounded,
+              emoji: '💡',
               title: '핵심 요약',
+              color: AppColors.sunny,
               show: card.points.isNotEmpty,
-              child: _Bullets(items: card.points),
+              child: _Bullets(items: card.points, numbered: true),
             ),
             _Section(
-              icon: Icons.functions_rounded,
+              emoji: '🧮',
               title: '공식',
+              color: AppColors.primary,
               show: card.formulas.isNotEmpty,
               child: _FormulaList(items: card.formulas),
             ),
             _Section(
-              icon: Icons.rule_rounded,
+              emoji: '✅',
               title: '조건 · 주의',
+              color: AppColors.accent,
               show: card.conditions.isNotEmpty,
               child: _Bullets(items: card.conditions),
             ),
             _Section(
-              icon: Icons.menu_book_rounded,
+              emoji: '📝',
               title: '예시',
+              color: const Color(0xFF4DA8E8),
               show: card.examples.isNotEmpty,
               child: _ExampleList(items: card.examples),
             ),
             _Section(
-              icon: Icons.warning_amber_rounded,
+              emoji: '⚠️',
               title: '자주 하는 실수',
+              color: wrong,
               show: card.mistakes.isNotEmpty,
-              child: _Bullets(
-                items: card.mistakes,
-                color: AppColors.wrongOf(theme.brightness),
-              ),
+              child: _Bullets(items: card.mistakes, color: wrong, mark: '✕'),
             ),
             _Section(
-              icon: Icons.quiz_outlined,
+              emoji: '🎯',
               title: '미니 O / X 퀴즈',
+              color: AppColors.pink,
               show: card.quiz.isNotEmpty,
               child: _MiniQuiz(items: card.quiz),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: SafeArea(
-        minimum: const EdgeInsets.fromLTRB(20, 0, 20, 16),
-        child: FilledButton.icon(
-          onPressed: () {
-            QuizLauncher.startLesson(
-              context,
-              ref,
-              subject: card.subject,
-              chapter: card.chapter,
-              lesson: card.lesson,
-              title: card.title,
-            );
-          },
-          icon: const Icon(Icons.play_arrow_rounded),
-          label: const Text('이 개념 문제 풀기'),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: scheme.surface,
+          border: Border(
+            top: BorderSide(color: scheme.outlineVariant, width: 2),
+          ),
+        ),
+        child: SafeArea(
+          minimum: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+          child: FilledButton(
+            onPressed: () {
+              QuizLauncher.startLesson(
+                context,
+                ref,
+                subject: card.subject,
+                chapter: card.chapter,
+                lesson: card.lesson,
+                title: card.title,
+              );
+            },
+            child: const Text('이 개념 문제 풀러 가기 ▶'),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _chip(BuildContext context, String label, Color color) {
+    final p = Pastel.of(context, color);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(
+        color: p.bg,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: p.border, width: 1.5),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+          color: p.fg,
         ),
       ),
     );
   }
 }
 
-/// 아이콘 + 제목을 단 섹션 래퍼. [show]가 false면 아무것도 그리지 않는다.
+/// 이모지 배지 + 제목을 단 색깔 섹션 카드. [show]가 false면 아무것도 그리지 않는다.
 class _Section extends StatelessWidget {
-  final IconData icon;
+  final String emoji;
   final String title;
+  final Color color;
   final bool show;
   final Widget child;
 
   const _Section({
-    required this.icon,
+    required this.emoji,
     required this.title,
+    required this.color,
     required this.show,
     required this.child,
   });
@@ -120,37 +175,52 @@ class _Section extends StatelessWidget {
   Widget build(BuildContext context) {
     if (!show) return const SizedBox.shrink();
     final theme = Theme.of(context);
+    final p = Pastel.of(context, color);
     return Padding(
-      padding: const EdgeInsets.only(top: 22),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(icon, size: 18, color: theme.colorScheme.primary),
-              const SizedBox(width: 8),
-              Text(
-                title,
-                style: theme.textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.w800,
+      padding: const EdgeInsets.only(top: 20),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.alphaBlend(p.bg, theme.colorScheme.surface),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: p.border, width: 2),
+          boxShadow: [BoxShadow(color: p.border, offset: const Offset(0, 4))],
+        ),
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                EmojiBadge(emoji, color: color, size: 38),
+                const SizedBox(width: 10),
+                Text(
+                  title,
+                  style: theme.textTheme.titleMedium?.copyWith(color: p.fg),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          child,
-        ],
+              ],
+            ),
+            const SizedBox(height: 14),
+            child,
+          ],
+        ),
       ),
     );
   }
 }
 
-/// 불릿 목록. [color]를 주면 불릿 점에 그 색을 쓴다(실수 섹션 등).
+/// 불릿 목록. [numbered]면 번호 동그라미, [mark]가 있으면 그 기호, 아니면 점.
 class _Bullets extends StatelessWidget {
   final List<String> items;
   final Color? color;
+  final bool numbered;
+  final String? mark;
 
-  const _Bullets({required this.items, this.color});
+  const _Bullets({
+    required this.items,
+    this.color,
+    this.numbered = false,
+    this.mark,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -159,22 +229,54 @@ class _Bullets extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (final t in items)
+        for (var i = 0; i < items.length; i++)
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 12),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: const EdgeInsets.only(top: 8, right: 10),
-                  width: 6,
-                  height: 6,
-                  decoration: BoxDecoration(color: dot, shape: BoxShape.circle),
+                  margin: const EdgeInsets.only(top: 2, right: 10),
+                  width: 24,
+                  height: 24,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: numbered || mark != null
+                        ? dot.withValues(alpha: 0.9)
+                        : dot.withValues(alpha: 0.18),
+                    shape: BoxShape.circle,
+                  ),
+                  child: numbered
+                      ? Text(
+                          '${i + 1}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        )
+                      : mark != null
+                      ? Text(
+                          mark!,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        )
+                      : Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            color: dot,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
                 ),
                 Expanded(
                   child: MathText(
-                    t,
-                    style: theme.textTheme.bodyLarge?.copyWith(height: 1.5),
+                    items[i],
+                    style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
                   ),
                 ),
               ],
@@ -185,7 +287,7 @@ class _Bullets extends StatelessWidget {
   }
 }
 
-/// 공식을 강조 배경의 칩 카드로 보여준다.
+/// 공식: 흰 카드 + 왼쪽 포인트 띠로 눈에 띄게.
 class _FormulaList extends StatelessWidget {
   final List<String> items;
 
@@ -200,16 +302,35 @@ class _FormulaList extends StatelessWidget {
         for (final f in items)
           Container(
             width: double.infinity,
-            margin: const EdgeInsets.only(bottom: 10),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            margin: const EdgeInsets.only(bottom: 12),
             decoration: BoxDecoration(
-              color: scheme.primary.withValues(alpha: 0.07),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: scheme.primary.withValues(alpha: 0.18)),
+              color: scheme.surface,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: scheme.outlineVariant, width: 2),
             ),
-            child: MathText(
-              f,
-              style: theme.textTheme.titleSmall?.copyWith(height: 1.5),
+            clipBehavior: Clip.antiAlias,
+            child: IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(width: 7, color: scheme.primary),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 14,
+                      ),
+                      child: MathText(
+                        f,
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          fontSize: 18,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
       ],
@@ -217,7 +338,7 @@ class _FormulaList extends StatelessWidget {
   }
 }
 
-/// 예시: 질문(강조) → 풀이.
+/// 예시: Q 배지 + 질문 → "풀이" 라벨 + 풀이.
 class _ExampleList extends StatelessWidget {
   final List<ConceptExample> items;
 
@@ -229,33 +350,82 @@ class _ExampleList extends StatelessWidget {
     final scheme = theme.colorScheme;
     return Column(
       children: [
-        for (final e in items)
+        for (var i = 0; i < items.length; i++)
           Container(
             width: double.infinity,
             margin: const EdgeInsets.only(bottom: 12),
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: scheme.surfaceContainerHighest.withValues(alpha: 0.5),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: scheme.outlineVariant),
+              color: scheme.surface,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: scheme.outlineVariant, width: 2),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                MathText(
-                  e.prompt,
-                  style: theme.textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    height: 1.5,
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 10, top: 1),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF4DA8E8),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        '예${i + 1}',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: MathText(
+                        items[i].prompt,
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                if (e.solution.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  MathText(
-                    e.solution,
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                      color: scheme.onSurfaceVariant,
-                      height: 1.55,
+                if (items[i].solution.isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: scheme.surfaceContainerHighest.withValues(
+                        alpha: 0.6,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '풀이',
+                          style: theme.textTheme.labelMedium?.copyWith(
+                            color: scheme.primary,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        MathText(
+                          items[i].solution,
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: scheme.onSurface,
+                            height: 1.6,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -322,11 +492,12 @@ class _QuizItem extends StatelessWidget {
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: scheme.surface,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(
+          width: 2,
           color: !answered
               ? scheme.outlineVariant
-              : (isCorrect ? correctColor : wrongColor).withValues(alpha: 0.6),
+              : (isCorrect ? correctColor : wrongColor).withValues(alpha: 0.7),
         ),
       ),
       child: Column(
@@ -368,12 +539,11 @@ class _QuizItem extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  isCorrect ? Icons.check_circle_rounded : Icons.cancel_rounded,
-                  size: 18,
-                  color: isCorrect ? correctColor : wrongColor,
+                Text(
+                  isCorrect ? '🎉' : '🤔',
+                  style: const TextStyle(fontSize: 20),
                 ),
-                const SizedBox(width: 6),
+                const SizedBox(width: 8),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -426,30 +596,41 @@ class _OxButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
-    final base = tint ?? scheme.primary;
+    final neutral = label == 'O' ? AppColors.accent : AppColors.wrong;
+    final base = tint ?? (selected ? scheme.primary : neutral);
     final active = selected || tint != null;
     return Expanded(
-      child: Material(
-        color: active ? base.withValues(alpha: 0.12) : scheme.surface,
-        borderRadius: BorderRadius.circular(12),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(12),
-          onTap: onTap,
-          child: Container(
-            height: 48,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: active ? base : scheme.outlineVariant,
-                width: active ? 1.6 : 1.2,
-              ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: active ? base : scheme.outlineVariant,
+              offset: const Offset(0, 3),
             ),
-            child: Text(
-              label,
-              style: theme.textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: active ? base : scheme.onSurface,
+          ],
+        ),
+        child: Material(
+          color: active ? base.withValues(alpha: 0.14) : scheme.surface,
+          borderRadius: BorderRadius.circular(16),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: onTap,
+            child: Container(
+              height: 52,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: active ? base : scheme.outlineVariant,
+                  width: 2,
+                ),
+              ),
+              child: Text(
+                label,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  color: active ? base : neutral,
+                ),
               ),
             ),
           ),

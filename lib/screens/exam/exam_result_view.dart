@@ -5,6 +5,8 @@ import '../../models/exam_analysis.dart';
 import '../../models/math_problem.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/section_header.dart';
 import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 import '../quiz/quiz_launcher.dart';
@@ -91,11 +93,33 @@ class ExamResultView extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _mini(theme, '$correctCount / ${problems.length}', '정답'),
-                      _mini(theme, '${(a.accuracy * 100).round()}%', '정답률'),
-                      _mini(theme, _fmt(elapsed), '소요'),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '✅',
+                          value: '$correctCount/${problems.length}',
+                          label: '정답',
+                          color: AppColors.accent,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '🎯',
+                          value: '${(a.accuracy * 100).round()}%',
+                          label: '정답률',
+                          color: AppColors.primary,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '⏱️',
+                          value: _fmt(elapsed),
+                          label: '소요',
+                          color: AppColors.streak,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -111,13 +135,7 @@ class ExamResultView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            Text(
-              '문항별 해설',
-              style: theme.textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-            const SizedBox(height: 12),
+            const SectionHeader('문항별 해설'),
             ...List.generate(problems.length, (i) => _reviewTile(theme, i)),
             const SizedBox(height: 20),
             SizedBox(
@@ -158,15 +176,15 @@ class ExamResultView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: AppCard(
+        color: color.withValues(alpha: 0.06),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                Icon(
-                  correct ? Icons.check_circle_rounded : Icons.cancel_rounded,
-                  size: 18,
-                  color: color,
+                Text(
+                  correct ? '⭕' : (answered ? '❌' : '➖'),
+                  style: const TextStyle(fontSize: 16),
                 ),
                 const SizedBox(width: 6),
                 Text(
@@ -239,25 +257,6 @@ class ExamResultView extends StatelessWidget {
       ),
     );
   }
-
-  Widget _mini(ThemeData theme, String v, String l) => Column(
-    children: [
-      Text(
-        v,
-        style: theme.textTheme.titleLarge?.copyWith(
-          fontWeight: FontWeight.w800,
-          color: theme.colorScheme.onSurface,
-        ),
-      ),
-      const SizedBox(height: 2),
-      Text(
-        l,
-        style: theme.textTheme.bodySmall?.copyWith(
-          color: theme.colorScheme.onSurfaceVariant,
-        ),
-      ),
-    ],
-  );
 
   String _fmt(Duration d) {
     final m = d.inMinutes.remainder(1000).toString().padLeft(2, '0');

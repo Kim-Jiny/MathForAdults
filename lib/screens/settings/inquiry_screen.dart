@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../services/inquiry_service.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/mascot.dart';
 
 /// 문의하기: 작성 → 서버 전송, 내 문의·답변 조회.
 class InquiryScreen extends ConsumerStatefulWidget {
@@ -68,11 +70,19 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
         children: [
-          Text(
-            '궁금한 점이나 오류 제보를 남겨주세요. 답변은 이 화면에서 확인할 수 있어요.',
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
-            ),
+          Row(
+            children: [
+              const Mascot(size: 64),
+              const SizedBox(width: 4),
+              Expanded(
+                child: SpeechBubble(
+                  child: Text(
+                    '궁금한 점이나 오류 제보를 남겨주세요. 답변은 이 화면에서 확인할 수 있어요.',
+                    style: theme.textTheme.bodyMedium?.copyWith(height: 1.4),
+                  ),
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 16),
           TextField(
@@ -149,13 +159,19 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
   }
 
   Widget _hint(ThemeData theme, String msg) => Padding(
-    padding: const EdgeInsets.symmetric(vertical: 24),
+    padding: const EdgeInsets.symmetric(vertical: 20),
     child: Center(
-      child: Text(
-        msg,
-        style: theme.textTheme.bodyMedium?.copyWith(
-          color: theme.colorScheme.onSurfaceVariant,
-        ),
+      child: Column(
+        children: [
+          const Mascot(size: 72, mood: MascotMood.sleepy),
+          const SizedBox(height: 8),
+          Text(
+            msg,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ],
       ),
     ),
   );
@@ -181,7 +197,7 @@ class _InquiryScreenState extends ConsumerState<InquiryScreen> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    q.replied ? '답변완료' : '대기중',
+                    q.replied ? '💌 답변완료' : '⏳ 대기중',
                     style: theme.textTheme.labelSmall?.copyWith(
                       color: color,
                       fontWeight: FontWeight.w800,

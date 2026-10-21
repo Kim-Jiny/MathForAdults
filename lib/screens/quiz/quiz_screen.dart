@@ -250,11 +250,18 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
             ),
         ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(3),
-          child: LinearProgressIndicator(
-            value: (_index + (_checked ? 1 : 0)) / _total,
-            minHeight: 3,
-            backgroundColor: theme.colorScheme.outlineVariant,
+          preferredSize: const Size.fromHeight(18),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: LinearProgressIndicator(
+                value: (_index + (_checked ? 1 : 0)) / _total,
+                minHeight: 10,
+                backgroundColor: theme.colorScheme.outlineVariant,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
           ),
         ),
       ),
@@ -417,6 +424,18 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                   return Align(
                     alignment: Alignment.centerLeft,
                     child: TextButton.icon(
+                      style: TextButton.styleFrom(
+                        backgroundColor: scheme.secondary.withValues(
+                          alpha: 0.12,
+                        ),
+                        shape: StadiumBorder(
+                          side: BorderSide(
+                            color: scheme.secondary.withValues(alpha: 0.45),
+                            width: 1.5,
+                          ),
+                        ),
+                        padding: const EdgeInsets.symmetric(horizontal: 14),
+                      ),
                       onPressed: _usingCoupon ? null : _unlockHintWithCoupon,
                       icon: Icon(
                         Icons.confirmation_number_rounded,
@@ -447,6 +466,22 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                             alpha: 0.38,
                           );
                           return TextButton.icon(
+                            style: TextButton.styleFrom(
+                              backgroundColor: scheme.secondary.withValues(
+                                alpha: 0.12,
+                              ),
+                              shape: StadiumBorder(
+                                side: BorderSide(
+                                  color: scheme.secondary.withValues(
+                                    alpha: 0.45,
+                                  ),
+                                  width: 1.5,
+                                ),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14,
+                              ),
+                            ),
                             // 광고가 준비됐고 표시 중이 아닐 때만 활성화.
                             onPressed: (adReady && !_loadingHintAd)
                                 ? _unlockHintWithAd

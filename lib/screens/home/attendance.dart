@@ -5,6 +5,7 @@ import '../../state/app_state.dart';
 import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/mascot.dart';
 
 /// 홈 상단 출석 버튼. 탭하면 출석 달력 시트가 열린다.
 class AttendanceButton extends ConsumerWidget {
@@ -123,12 +124,12 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
           children: [
             Row(
               children: [
-                Text(
-                  '출석',
-                  style: theme.textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.w800,
-                  ),
+                Mascot(
+                  size: 44,
+                  mood: attendedToday ? MascotMood.cheer : MascotMood.happy,
                 ),
+                const SizedBox(width: 6),
+                Text('출석', style: theme.textTheme.titleLarge),
                 const SizedBox(width: 10),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -362,7 +363,12 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
         shape: BoxShape.circle,
         color: attended ? scheme.primary : Colors.transparent,
         border: isToday && !attended
-            ? Border.all(color: scheme.primary, width: 1.6)
+            ? Border.all(color: scheme.primary, width: 2.4)
+            : attended
+            ? Border.all(
+                color: scheme.primary.withValues(alpha: 0.35),
+                width: 3,
+              )
             : null,
       ),
       child: Text(

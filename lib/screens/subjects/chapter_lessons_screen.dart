@@ -9,7 +9,6 @@ import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/concept_sheet.dart';
 import '../../widgets/cute.dart';
-import '../../widgets/difficulty_badge.dart';
 import '../quiz/quiz_launcher.dart';
 
 /// 단원 상세: 세부 단원(lesson) 목록 → 난이도 선택 → 풀이 진입.
@@ -175,58 +174,86 @@ class ChapterLessonsScreen extends ConsumerWidget {
                 Flexible(
                   child: ListView(
                     shrinkWrap: true,
-                    children: lesson.difficulties
-                        .map(
-                          (d) => Padding(
-                            padding: const EdgeInsets.only(bottom: 10),
-                            child: Material(
-                              color: d.color.withValues(alpha: 0.08),
-                              borderRadius: BorderRadius.circular(14),
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(14),
-                                onTap: () {
-                                  Navigator.of(sheetCtx).pop();
-                                  ref
-                                      .read(statsProvider.notifier)
-                                      .setContinue(
-                                        ContinueInfo(
-                                          subject: subjectName,
-                                          chapter: chapter,
-                                          lesson: lesson.name,
-                                          progress: 0.1,
-                                        ),
-                                      );
-                                  QuizLauncher.startLesson(
-                                    context,
-                                    ref,
-                                    subject: subjectName,
-                                    chapter: chapter,
-                                    lesson: lesson.name,
-                                    difficulty: d,
-                                    title: '${lesson.name} · ${d.label}',
-                                  );
-                                },
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 16,
-                                    vertical: 14,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      DifficultyBadge(d),
-                                      const Spacer(),
-                                      Icon(
-                                        Icons.play_arrow_rounded,
-                                        color: d.color,
+                    children: lesson.difficulties.map((d) {
+                      final p = Pastel.of(sheetCtx, d.color);
+                      const emojis = ['🌱', '🌿', '🌳', '🔥', '⚡', '👑'];
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: p.border,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Material(
+                            color: Color.alphaBlend(
+                              p.bg,
+                              theme.colorScheme.surface,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              side: BorderSide(color: p.border, width: 2),
+                            ),
+                            clipBehavior: Clip.antiAlias,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(sheetCtx).pop();
+                                ref
+                                    .read(statsProvider.notifier)
+                                    .setContinue(
+                                      ContinueInfo(
+                                        subject: subjectName,
+                                        chapter: chapter,
+                                        lesson: lesson.name,
+                                        progress: 0.1,
                                       ),
-                                    ],
-                                  ),
+                                    );
+                                QuizLauncher.startLesson(
+                                  context,
+                                  ref,
+                                  subject: subjectName,
+                                  chapter: chapter,
+                                  lesson: lesson.name,
+                                  difficulty: d,
+                                  title: '${lesson.name} · ${d.label}',
+                                );
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 14,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      emojis[d.index.clamp(0, 5)],
+                                      style: const TextStyle(fontSize: 26),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Text(
+                                        d.label,
+                                        style: theme.textTheme.titleMedium
+                                            ?.copyWith(color: p.fg),
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.play_circle_fill_rounded,
+                                      color: d.color,
+                                      size: 30,
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
                           ),
-                        )
-                        .toList(),
+                        ),
+                      );
+                    }).toList(),
                   ),
                 ),
               ],

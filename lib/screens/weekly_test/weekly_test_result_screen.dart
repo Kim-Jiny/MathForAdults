@@ -6,6 +6,7 @@ import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/section_header.dart';
 import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 import '../quiz/quiz_launcher.dart';
@@ -137,13 +138,7 @@ class WeeklyTestResultScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 24),
             if (wrongProblems.isNotEmpty) ...[
-              Text(
-                '틀린 문제',
-                style: theme.textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const SizedBox(height: 12),
+              const SectionHeader('틀린 문제'),
               ...wrongProblems.map((p) => _wrongTile(theme, p)),
               const SizedBox(height: 12),
               SizedBox(

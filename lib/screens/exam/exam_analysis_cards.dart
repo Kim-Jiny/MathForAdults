@@ -85,13 +85,18 @@ class ExamAnalysisCards extends StatelessWidget {
   Widget _tierRow(ThemeData theme, TierStat t) {
     return Row(
       children: [
-        SizedBox(
-          width: 44,
+        Container(
+          width: 46,
+          margin: const EdgeInsets.only(right: 10),
+          padding: const EdgeInsets.symmetric(vertical: 4),
+          decoration: BoxDecoration(
+            color: _rateColor(theme, t.accuracy).withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(12),
+          ),
           child: Text(
             '${t.points}점',
-            style: theme.textTheme.titleSmall?.copyWith(
-              fontWeight: FontWeight.w800,
-            ),
+            textAlign: TextAlign.center,
+            style: theme.textTheme.titleSmall,
           ),
         ),
         Expanded(
@@ -223,10 +228,9 @@ class ExamAnalysisCards extends StatelessWidget {
   }
 
   Widget _allCorrect(ThemeData theme) {
-    final c = AppColors.correctOf(theme.brightness);
     return Row(
       children: [
-        Icon(Icons.emoji_events_rounded, color: c),
+        const Text('🏆', style: TextStyle(fontSize: 28)),
         const SizedBox(width: 10),
         Expanded(
           child: Text(
