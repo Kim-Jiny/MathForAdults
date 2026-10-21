@@ -7,9 +7,9 @@ import '../../models/user_stats.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
-import '../../widgets/difficulty_badge.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/math_backdrop.dart';
-import '../../widgets/progress_bar.dart';
 import '../../widgets/section_header.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
 import '../../l10n/app_localizations.dart';
@@ -68,7 +68,6 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
     final stats = ref.watch(statsProvider);
     final wrongCount = ref.watch(wrongProblemsProvider).length;
     final indexAsync = ref.watch(curriculumIndexProvider);
@@ -83,41 +82,91 @@ class HomeScreen extends ConsumerWidget {
             return ListView(
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
               children: [
-                Row(
-                  children: [
-                    Text(AppLocalizations.of(context).appName,
-                        style: theme.textTheme.headlineSmall
-                            ?.copyWith(fontWeight: FontWeight.w900)),
-                    const Spacer(),
-                    const AttendanceButton(),
-                  ],
-                ),
-                const SizedBox(height: 4),
-                Text(AppLocalizations.of(context).homeGreeting,
-                    style: theme.textTheme.bodyLarge
-                        ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-                const SizedBox(height: 20),
+                const _Header(),
+                const SizedBox(height: 18),
                 if (target != null) _TodayCard(target: target),
-                const SizedBox(height: 20),
-                const SectionHeader('이어서 / 도전'),
+                const SizedBox(height: 16),
+                const _DailyGoalCard(),
                 _ContinueCard(),
-                const SizedBox(height: 12),
-                _CsatRandomCard(),
-                const SizedBox(height: 12),
-                _MockExamCard(),
-                const SizedBox(height: 12),
-                _ReviewCard(count: wrongCount, onTap: () => onOpenTab(2)),
+                const SizedBox(height: 22),
+                const SectionHeader('바로 시작'),
+                _QuickGrid(wrongCount: wrongCount, onOpenTab: onOpenTab),
                 const BannerAdSlot(placement: BannerPlacement.home),
-                const SizedBox(height: 20),
+                const SizedBox(height: 22),
                 const SectionHeader('이번 주 기록'),
-                _WeeklyCard(),
-                const SizedBox(height: 12),
-                _WeeklyTestCard(),
+                const _WeeklyStats(),
               ],
             );
           },
         ),
       ),
+    );
+  }
+}
+
+/// 상단: 앱 이름 + 출석 버튼, 그 아래 마스코트가 말풍선으로 말을 건다.
+class _Header extends ConsumerWidget {
+  const _Header();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final stats = ref.watch(statsProvider);
+    final goal = ref.watch(settingsProvider.select((s) => s.dailyGoal));
+    final solved = ref.watch(todaySolvedProvider);
+    final streak = stats.currentStreak();
+    final target = goal.target;
+    final goalDone = target != null && solved >= target;
+
+    final String line;
+    final MascotMood mood;
+    if (goalDone) {
+      line = '오늘 목표 달성! 정말 대단해요';
+      mood = MascotMood.cheer;
+    } else if (solved > 0) {
+      line = '좋아요, 이 기세로 한 문제만 더!';
+      mood = MascotMood.happy;
+    } else if (streak >= 2) {
+      line = '$streak일째 이어가는 중이에요. 오늘도 한 문제만!';
+      mood = MascotMood.happy;
+    } else {
+      line = AppLocalizations.of(context).homeGreeting;
+      mood = MascotMood.happy;
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Text(
+              AppLocalizations.of(context).appName,
+              style: theme.textTheme.titleLarge?.copyWith(
+                color: theme.colorScheme.primary,
+                fontSize: 22,
+              ),
+            ),
+            const Spacer(),
+            const AttendanceButton(),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Mascot(size: 72, mood: mood, bounce: true),
+            const SizedBox(width: 4),
+            Expanded(
+              child: SpeechBubble(
+                child: Text(
+                  line,
+                  style: theme.textTheme.titleSmall?.copyWith(height: 1.35),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
@@ -130,389 +179,424 @@ class _TodayCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(22),
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(22),
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  scheme.primary,
-                  Color.lerp(scheme.primary, scheme.secondary, 0.55)!,
-                ],
-              ),
-            ),
-            child: SizedBox(
-              height: 196,
-              width: double.infinity,
-              child: Stack(
-                children: [
-                  MathBackdrop(color: Colors.white, opacity: 0.10),
-                  Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            const Icon(Icons.wb_sunny_rounded,
-                                color: Colors.white, size: 18),
-                            const SizedBox(width: 6),
-                            Text('오늘의 문제',
-                                style: theme.textTheme.labelLarge?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800)),
-                          ],
-                        ),
-                        const SizedBox(height: 12),
-                        Text('${target.subject} · ${target.chapter}',
-                            style: theme.textTheme.titleLarge?.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800)),
-                        const SizedBox(height: 4),
-                        Text(target.lesson,
-                            style: theme.textTheme.bodyLarge?.copyWith(
-                                color: Colors.white.withValues(alpha: 0.92))),
-                        const Spacer(),
-                        Row(
-                          children: [
-                            DifficultyBadge(target.difficulty, compact: true),
-                            const SizedBox(width: 8),
-                            _whitePill(Icons.list_alt, '${target.count}문제'),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+    final hero = Color.lerp(scheme.primary, AppColors.pink, 0.45)!;
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: Color.lerp(scheme.primary, Colors.black, 0.28)!,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(28),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [scheme.primary, hero],
             ),
           ),
-          Positioned(
-            right: 16,
-            bottom: 16,
-            child: FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: scheme.primary,
-                minimumSize: const Size(0, 44),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Stack(
+            children: [
+              MathBackdrop(color: Colors.white, opacity: 0.24),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        _whitePill(Icons.wb_sunny_rounded, '오늘의 문제'),
+                        const SizedBox(width: 8),
+                        _whitePill(Icons.bolt_rounded, target.difficulty.label),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      '${target.subject} · ${target.chapter}',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.titleLarge?.copyWith(
+                        color: Colors.white,
+                        fontSize: 24,
+                        height: 1.2,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      '${target.lesson} · ${target.count}문제',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.bodyLarge?.copyWith(
+                        color: Colors.white.withValues(alpha: 0.92),
+                      ),
+                    ),
+                    const SizedBox(height: 18),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        style: FilledButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: scheme.primary,
+                          minimumSize: const Size.fromHeight(50),
+                        ),
+                        onPressed: () => QuizLauncher.startLesson(
+                          context,
+                          ref,
+                          subject: target.subject,
+                          chapter: target.chapter,
+                          lesson: target.lesson,
+                          title: '오늘의 문제',
+                        ),
+                        child: const Text('문제 풀기 →'),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              onPressed: () => QuizLauncher.startLesson(
-                context,
-                ref,
-                subject: target.subject,
-                chapter: target.chapter,
-                lesson: target.lesson,
-                title: '오늘의 문제',
-              ),
-              child: const Text('문제 풀기'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _whitePill(IconData icon, String text) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+    decoration: BoxDecoration(
+      color: Colors.white.withValues(alpha: 0.22),
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(icon, color: Colors.white, size: 14),
+        const SizedBox(width: 4),
+        Text(
+          text,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+/// 하루 목표: 별 N개를 채우는 방식. 자유 모드는 오늘 푼 문제 수만 표시.
+class _DailyGoalCard extends ConsumerWidget {
+  const _DailyGoalCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final goal = ref.watch(settingsProvider.select((s) => s.dailyGoal));
+    final solved = ref.watch(todaySolvedProvider);
+    final target = goal.target;
+    final done = target != null && solved >= target;
+    const star = AppColors.sunny;
+
+    return AppCard(
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+      child: Row(
+        children: [
+          if (target == null)
+            const EmojiBadge('📝', color: AppColors.accent, size: 44)
+          else
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (var i = 0; i < target; i++)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 4),
+                    child: Icon(
+                      i < solved
+                          ? Icons.star_rounded
+                          : Icons.star_border_rounded,
+                      size: target > 3 ? 30 : 36,
+                      color: i < solved
+                          ? star
+                          : theme.colorScheme.outlineVariant,
+                    ),
+                  ),
+              ],
+            ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  target == null
+                      ? '오늘 $solved문제'
+                      : done
+                      ? '목표 달성!'
+                      : '오늘 목표 $solved / $target',
+                  style: theme.textTheme.titleSmall,
+                ),
+                Text(
+                  target == null
+                      ? '편하게 풀어요'
+                      : done
+                      ? '별을 다 모았어요 🎉'
+                      : '${target - solved}문제만 더!',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
       ),
     );
   }
-
-  Widget _whitePill(IconData icon, String text) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.18),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, color: Colors.white, size: 13),
-            const SizedBox(width: 4),
-            Text(text,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600)),
-          ],
-        ),
-      );
 }
 
 class _ContinueCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final c = ref.watch(statsProvider).continueFrom;
+    final stats = ref.watch(statsProvider);
+    final c = stats.continueFrom;
     if (c == null) return const SizedBox.shrink();
+    final chapterCount = ref
+        .watch(curriculumIndexProvider)
+        .valueOrNull
+        ?.chapter(c.subject, c.chapter)
+        ?.count;
+    final progress = (chapterCount == null || chapterCount == 0)
+        ? c.progress
+        : (stats.solvedInChapter(c.subject, c.chapter) / chapterCount).clamp(
+            0.0,
+            1.0,
+          );
 
-    return AppCard(
-      onTap: () => QuizLauncher.startLesson(
-        context,
-        ref,
-        subject: c.subject,
-        chapter: c.chapter,
-        lesson: c.lesson,
-        title: '${c.lesson} 이어서',
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: theme.colorScheme.primary.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(12),
+    return Padding(
+      padding: const EdgeInsets.only(top: 14),
+      child: AppCard(
+        onTap: () => QuizLauncher.startLesson(
+          context,
+          ref,
+          subject: c.subject,
+          chapter: c.chapter,
+          lesson: c.lesson,
+          title: '${c.lesson} 이어서',
+        ),
+        child: Row(
+          children: [
+            ProgressRing(
+              value: progress,
+              color: theme.colorScheme.primary,
+              size: 56,
+              child: const Text('📖', style: TextStyle(fontSize: 22)),
             ),
-            child: Icon(Icons.history_rounded, color: theme.colorScheme.primary),
-          ),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('이어 풀던 단원',
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '이어서 풀기',
                     style: theme.textTheme.labelMedium?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant)),
-                const SizedBox(height: 2),
-                Text('${c.subject} > ${c.chapter} > ${c.lesson}',
-                    style: theme.textTheme.titleSmall
-                        ?.copyWith(fontWeight: FontWeight.w800)),
-                const SizedBox(height: 10),
-                ProgressBar(value: c.progress),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _CsatRandomCard extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    return AppCard(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Text('🎯', style: TextStyle(fontSize: 20)),
-              const SizedBox(width: 8),
-              Text('수능 랜덤',
-                  style: theme.textTheme.titleMedium
-                      ?.copyWith(fontWeight: FontWeight.w800)),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Text('배점을 골라 전 과목에서 무작위로 풀어요',
-              style: theme.textTheme.bodySmall?.copyWith(
-                  color: theme.colorScheme.onSurfaceVariant)),
-          const SizedBox(height: 14),
-          Row(
-            children: [2, 3, 4].map((pt) {
-              return Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(right: pt == 4 ? 0 : 10),
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size(0, 48),
-                      padding: EdgeInsets.zero,
+                      color: theme.colorScheme.primary,
+                      fontWeight: FontWeight.w800,
                     ),
-                    onPressed: () => QuizLauncher.startCsat(context, ref, pt),
-                    child: Text('$pt점',
-                        style: const TextStyle(fontWeight: FontWeight.w800)),
                   ),
+                  const SizedBox(height: 2),
+                  Text(c.lesson, style: theme.textTheme.titleSmall),
+                  Text(
+                    '${c.subject} · ${c.chapter}',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Icon(
+              Icons.play_circle_fill_rounded,
+              size: 34,
+              color: theme.colorScheme.primary,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 2×2 바로가기 타일: 수능 랜덤 / 모의수능 / 다시 풀기 / 주간시험.
+class _QuickGrid extends ConsumerWidget {
+  final int wrongCount;
+  final void Function(int tabIndex) onOpenTab;
+  const _QuickGrid({required this.wrongCount, required this.onOpenTab});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final weekly = ref.watch(statsProvider.select((s) => s.weeklySolved));
+    const need = 5;
+    final weeklyReady = weekly >= need;
+
+    final tiles = <Widget>[
+      PastelTile(
+        emoji: '🎯',
+        title: '수능 랜덤',
+        subtitle: '배점 골라 무작위로',
+        color: AppColors.streak,
+        onTap: () => _pickCsat(context, ref),
+      ),
+      PastelTile(
+        emoji: '⏱️',
+        title: '모의수능',
+        subtitle: '시간 재고 실전처럼',
+        color: AppColors.accent,
+        onTap: () => Navigator.of(
+          context,
+        ).push(MaterialPageRoute(builder: (_) => const MockExamSetupScreen())),
+      ),
+      PastelTile(
+        emoji: '🔁',
+        title: '다시 풀 문제',
+        subtitle: wrongCount == 0 ? '아직 없어요, 좋아요!' : '$wrongCount문제 기다려요',
+        color: AppColors.wrong,
+        onTap: () => onOpenTab(2),
+        badge: wrongCount == 0
+            ? null
+            : Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: AppColors.wrong,
+                  borderRadius: BorderRadius.circular(12),
                 ),
-              );
-            }).toList(),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _MockExamCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
-    return AppCard(
-      onTap: () => Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => const MockExamSetupScreen()),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: scheme.secondary.withValues(alpha: 0.14),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(Icons.timer_outlined, color: scheme.secondary),
-          ),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('모의수능 보기',
-                    style: theme.textTheme.titleSmall
-                        ?.copyWith(fontWeight: FontWeight.w800)),
-                const SizedBox(height: 2),
-                Text('공통 + 선택 1과목, 시간 재고 실전처럼',
-                    style: theme.textTheme.bodySmall?.copyWith(
-                        color: scheme.onSurfaceVariant)),
-              ],
-            ),
-          ),
-          Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant),
-        ],
-      ),
-    );
-  }
-}
-
-class _ReviewCard extends StatelessWidget {
-  final int count;
-  final VoidCallback onTap;
-  const _ReviewCard({required this.count, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return AppCard(
-      onTap: onTap,
-      child: Row(
-        children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: AppColors.wrongOf(theme.brightness).withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(Icons.refresh_rounded,
-                color: AppColors.wrongOf(theme.brightness)),
-          ),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('다시 풀 문제',
-                    style: theme.textTheme.titleSmall
-                        ?.copyWith(fontWeight: FontWeight.w800)),
-                const SizedBox(height: 2),
-                Text(count == 0 ? '아직 없어요, 좋아요!' : '$count문제가 기다리고 있어요',
-                    style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant)),
-              ],
-            ),
-          ),
-          Icon(Icons.chevron_right_rounded,
-              color: theme.colorScheme.onSurfaceVariant),
-        ],
-      ),
-    );
-  }
-}
-
-class _WeeklyCard extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final s = ref.watch(statsProvider);
-    return AppCard(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _mini(theme, '${s.weeklySolved}', '이번 주'),
-          _divider(theme),
-          _mini(theme, '${(s.accuracy * 100).round()}%', '정답률'),
-          _divider(theme),
-          _mini(theme, '${s.streakDays}일', '연속'),
-        ],
-      ),
-    );
-  }
-
-  Widget _mini(ThemeData theme, String v, String l) => Column(
-        children: [
-          Text(v,
-              style: theme.textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w900,
-                  color: theme.colorScheme.primary)),
-          const SizedBox(height: 2),
-          Text(l,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-        ],
-      );
-
-  Widget _divider(ThemeData theme) =>
-      Container(width: 1, height: 34, color: theme.colorScheme.outlineVariant);
-}
-
-/// 이번 주 학습을 바탕으로 한 짧은 주간시험 진입 카드.
-class _WeeklyTestCard extends ConsumerWidget {
-  static const _threshold = 5;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
-    final s = ref.watch(statsProvider);
-    final ready = s.weeklySolved >= _threshold;
-    return AppCard(
-      onTap: ready ? () => WeeklyTestLauncher.start(context, ref) : null,
-      child: Row(
-        children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: AppColors.streakOf(
-                theme.brightness,
-              ).withValues(alpha: 0.14),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(
-              Icons.emoji_events_rounded,
-              color: AppColors.streakOf(theme.brightness),
-            ),
-          ),
-          const SizedBox(width: 14),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  '이번 주 시험보기',
-                  style: theme.textTheme.titleSmall?.copyWith(
+                child: Text(
+                  '$wrongCount',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                const SizedBox(height: 2),
-                Text(
-                  ready
-                      ? '이번 주 배운 내용으로 짧게 확인해봐요'
-                      : '${_threshold - s.weeklySolved}문제 더 풀면 열려요',
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: scheme.onSurfaceVariant,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          if (ready)
-            Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant),
-        ],
+              ),
       ),
+      PastelTile(
+        emoji: '🏆',
+        title: '주간 시험',
+        subtitle: weeklyReady ? '이번 주 복습 시험!' : '${need - weekly}문제 더 풀면 열려요',
+        color: AppColors.sunny,
+        onTap: weeklyReady
+            ? () => WeeklyTestLauncher.start(context, ref)
+            : null,
+      ),
+    ];
+
+    return LayoutBuilder(
+      builder: (context, c) {
+        final w = (c.maxWidth - 12) / 2;
+        return Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: [for (final t in tiles) SizedBox(width: w, child: t)],
+        );
+      },
+    );
+  }
+
+  /// 배점(2/3/4점) 선택 시트.
+  void _pickCsat(BuildContext context, WidgetRef ref) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (sheetCtx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 4, 20, 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('🎯 수능 랜덤', style: Theme.of(sheetCtx).textTheme.titleLarge),
+              const SizedBox(height: 4),
+              Text(
+                '배점을 골라 전 과목에서 무작위로 풀어요',
+                style: Theme.of(sheetCtx).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(sheetCtx).colorScheme.onSurfaceVariant,
+                ),
+              ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  for (final (pt, label, color) in [
+                    (2, '가볍게', AppColors.accent),
+                    (3, '적당히', AppColors.primary),
+                    (4, '도전!', AppColors.wrong),
+                  ])
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(right: pt == 4 ? 0 : 10),
+                        child: PastelTile(
+                          emoji: '$pt점',
+                          title: label,
+                          color: color,
+                          onTap: () {
+                            Navigator.pop(sheetCtx);
+                            QuizLauncher.startCsat(context, ref, pt);
+                          },
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// 이번 주 기록: 이모지 칩 3개.
+class _WeeklyStats extends ConsumerWidget {
+  const _WeeklyStats();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final s = ref.watch(statsProvider);
+    return Row(
+      children: [
+        Expanded(
+          child: StatBubble(
+            emoji: '📚',
+            value: '${s.weeklySolved}',
+            label: '이번 주',
+            color: AppColors.primary,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: StatBubble(
+            emoji: '🎯',
+            value: '${(s.accuracy * 100).round()}%',
+            label: '정답률',
+            color: AppColors.accent,
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: StatBubble(
+            emoji: '🔥',
+            value: '${s.currentStreak()}일',
+            label: '연속',
+            color: AppColors.streak,
+          ),
+        ),
+      ],
     );
   }
 }

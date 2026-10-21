@@ -13,9 +13,9 @@ Future<List<MathProblem>> buildWeeklyTest(
   int targetCount = 6,
   int maxReview = 2,
 }) async {
-  final reviewPicks = ([...reviewPool]..shuffle())
-      .take(min(maxReview, targetCount))
-      .toList();
+  final reviewPicks = ([
+    ...reviewPool,
+  ]..shuffle()).take(min(maxReview, targetCount)).toList();
   final reviewIds = reviewPicks.map((p) => p.id).toSet();
 
   final newTarget = targetCount - reviewPicks.length;
@@ -24,10 +24,13 @@ Future<List<MathProblem>> buildWeeklyTest(
     final parts = key.split('|');
     if (parts.length != 3) continue;
     final problems = await repo.loadLesson(parts[0], parts[1], parts[2]);
-    final pool = problems
-        .where((p) => !solvedIds.contains(p.id) && !reviewIds.contains(p.id))
-        .toList()
-      ..shuffle();
+    final pool =
+        problems
+            .where(
+              (p) => !solvedIds.contains(p.id) && !reviewIds.contains(p.id),
+            )
+            .toList()
+          ..shuffle();
     if (pool.isNotEmpty) lessonPools.add(pool);
   }
   lessonPools.shuffle();

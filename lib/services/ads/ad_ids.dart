@@ -19,8 +19,7 @@ class AdIds {
   // ───────── 테스트 ID (구글 공식, 디버그 전용) ─────────
   static const String _testBannerAndroid =
       'ca-app-pub-3940256099942544/6300978111';
-  static const String _testBannerIos =
-      'ca-app-pub-3940256099942544/2934735716';
+  static const String _testBannerIos = 'ca-app-pub-3940256099942544/2934735716';
   static const String _testInterstitialAndroid =
       'ca-app-pub-3940256099942544/1033173712';
   static const String _testInterstitialIos =
@@ -56,8 +55,7 @@ class AdIds {
   // ───────── 운영 보상형(힌트) ─────────
   static const String _rewardedAndroid =
       'ca-app-pub-2707874353926722/5144208552';
-  static const String _rewardedIos =
-      'ca-app-pub-2707874353926722/2359665484';
+  static const String _rewardedIos = 'ca-app-pub-2707874353926722/2359665484';
 
   static String banner(BannerPlacement placement) {
     if (kDebugMode) return _android ? _testBannerAndroid : _testBannerIos;

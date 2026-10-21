@@ -5,6 +5,9 @@ import '../../models/exam_analysis.dart';
 import '../../models/math_problem.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/section_header.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 import '../quiz/quiz_launcher.dart';
 import 'exam_analysis_cards.dart';
@@ -41,13 +44,26 @@ class ExamResultView extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
           children: [
+            Center(
+              child: Mascot(
+                size: 88,
+                mood: a.accuracy >= 0.8
+                    ? MascotMood.cheer
+                    : a.accuracy >= 0.5
+                    ? MascotMood.happy
+                    : MascotMood.think,
+              ),
+            ),
+            const SizedBox(height: 8),
             // 어떤 시험 결과인지(프리셋 등) 표시
             Center(
-              child: Text(title,
-                  style: theme.textTheme.labelLarge?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                    fontWeight: FontWeight.w700,
-                  )),
+              child: Text(
+                title,
+                style: theme.textTheme.labelLarge?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ),
             const SizedBox(height: 12),
             // 점수 요약
@@ -55,25 +71,55 @@ class ExamResultView extends StatelessWidget {
               color: theme.colorScheme.primary.withValues(alpha: 0.10),
               child: Column(
                 children: [
-                  Text('원점수',
-                      style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant)),
+                  Text(
+                    '원점수',
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
                   const SizedBox(height: 4),
-                  Text('$score',
-                      style: theme.textTheme.displayMedium?.copyWith(
-                        fontWeight: FontWeight.w900,
-                        color: theme.colorScheme.primary,
-                      )),
-                  Text('만점 $maxScore점',
-                      style: theme.textTheme.titleSmall?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant)),
+                  Text(
+                    '$score',
+                    style: theme.textTheme.displayMedium?.copyWith(
+                      fontWeight: FontWeight.w900,
+                      color: theme.colorScheme.primary,
+                    ),
+                  ),
+                  Text(
+                    '만점 $maxScore점',
+                    style: theme.textTheme.titleSmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
                   const SizedBox(height: 16),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _mini(theme, '$correctCount / ${problems.length}', '정답'),
-                      _mini(theme, '${(a.accuracy * 100).round()}%', '정답률'),
-                      _mini(theme, _fmt(elapsed), '소요'),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '✅',
+                          value: '$correctCount/${problems.length}',
+                          label: '정답',
+                          color: AppColors.accent,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '🎯',
+                          value: '${(a.accuracy * 100).round()}%',
+                          label: '정답률',
+                          color: AppColors.primary,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: StatBubble(
+                          emoji: '⏱️',
+                          value: _fmt(elapsed),
+                          label: '소요',
+                          color: AppColors.streak,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -89,10 +135,7 @@ class ExamResultView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            Text('문항별 해설',
-                style: theme.textTheme.titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w800)),
-            const SizedBox(height: 12),
+            const SectionHeader('문항별 해설'),
             ...List.generate(problems.length, (i) => _reviewTile(theme, i)),
             const SizedBox(height: 20),
             SizedBox(
@@ -133,25 +176,31 @@ class ExamResultView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: AppCard(
+        color: color.withValues(alpha: 0.06),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                Icon(
-                    correct
-                        ? Icons.check_circle_rounded
-                        : Icons.cancel_rounded,
-                    size: 18,
-                    color: color),
+                Text(
+                  correct ? '⭕' : (answered ? '❌' : '➖'),
+                  style: const TextStyle(fontSize: 16),
+                ),
                 const SizedBox(width: 6),
-                Text('${i + 1}번 · ${p.difficulty.examPoints}점',
-                    style: theme.textTheme.labelLarge
-                        ?.copyWith(fontWeight: FontWeight.w800, color: color)),
+                Text(
+                  '${i + 1}번 · ${p.difficulty.examPoints}점',
+                  style: theme.textTheme.labelLarge?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    color: color,
+                  ),
+                ),
                 const Spacer(),
-                Text(p.lesson,
-                    style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant)),
+                Text(
+                  p.lesson,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 10),
@@ -160,23 +209,32 @@ class ExamResultView extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('내 답  ',
-                    style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w700, color: color)),
+                Text(
+                  '내 답  ',
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: color,
+                  ),
+                ),
                 Flexible(
-                    child: Text(myAnswer,
-                        style:
-                            theme.textTheme.bodyMedium?.copyWith(color: color))),
+                  child: Text(
+                    myAnswer,
+                    style: theme.textTheme.bodyMedium?.copyWith(color: color),
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 4),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('정답  ',
-                    style: theme.textTheme.bodyMedium
-                        ?.copyWith(fontWeight: FontWeight.w700)),
-                Expanded(child: MathText(p.correctAnswerDisplay)),
+                Text(
+                  '정답  ',
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Expanded(child: MathText(p.correctAnswerDisplay, wholeIfMath: true)),
               ],
             ),
             const SizedBox(height: 10),
@@ -184,30 +242,21 @@ class ExamResultView extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: theme.colorScheme.surfaceContainerHighest
-                    .withValues(alpha: 0.5),
+                color: theme.colorScheme.surfaceContainerHighest.withValues(
+                  alpha: 0.5,
+                ),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: MathText(p.explanation,
-                  style: theme.textTheme.bodyMedium?.copyWith(height: 1.5)),
+              child: MathText(
+                p.explanation,
+                style: theme.textTheme.bodyMedium?.copyWith(height: 1.5),
+              ),
             ),
           ],
         ),
       ),
     );
   }
-
-  Widget _mini(ThemeData theme, String v, String l) => Column(
-        children: [
-          Text(v,
-              style: theme.textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.w800, color: theme.colorScheme.onSurface)),
-          const SizedBox(height: 2),
-          Text(l,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-        ],
-      );
 
   String _fmt(Duration d) {
     final m = d.inMinutes.remainder(1000).toString().padLeft(2, '0');

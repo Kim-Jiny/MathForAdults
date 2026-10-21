@@ -87,18 +87,26 @@ class ExamAnalysis {
       section.add(pts: pts, correct: correct);
 
       final key = '${p.subject}|${p.chapter}|${p.lesson}';
-      (lessonAgg[key] ??= _LessonCounter(p.subject, p.chapter, p.lesson))
-          .add(correct);
+      (lessonAgg[key] ??= _LessonCounter(
+        p.subject,
+        p.chapter,
+        p.lesson,
+      )).add(correct);
     }
 
     final tiers =
-        (tierAgg.entries.map((e) => TierStat(e.key, e.value.correct, e.value.total)).toList())
+        (tierAgg.entries
+              .map((e) => TierStat(e.key, e.value.correct, e.value.total))
+              .toList())
           ..sort((a, b) => a.points.compareTo(b.points));
 
     final wrongLessons =
         lessonAgg.values
             .where((c) => c.wrong > 0)
-            .map((c) => LessonStat(c.subject, c.chapter, c.lesson, c.wrong, c.total))
+            .map(
+              (c) =>
+                  LessonStat(c.subject, c.chapter, c.lesson, c.wrong, c.total),
+            )
             .toList()
           ..sort((a, b) {
             final byWrong = b.wrong.compareTo(a.wrong);

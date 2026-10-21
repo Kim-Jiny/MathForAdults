@@ -1,10 +1,15 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../services/iap/iap_service.dart';
 import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
+import '../../theme/app_colors.dart';
+import '../../theme/app_theme.dart' show kDisplayFont;
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import '../../widgets/iap/purchase_confirm_dialog.dart';
 import '../../widgets/section_header.dart';
 
@@ -14,17 +19,16 @@ class ShopSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     final adsRemoved = ref.watch(adsRemovedProvider);
     final iap = ref.watch(iapProvider);
     final loggedIn = ref.watch(authProvider).loggedIn;
     final hintCoupons = iap.hintCoupons;
 
     ref.listen(iapProvider, (prev, next) {
-      if (next.message != null && next.message != prev?.message) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(next.message!)));
+      if (next.message != null && next.messageSeq != prev?.messageSeq) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.message!)));
       }
     });
 
@@ -40,45 +44,62 @@ class ShopSection extends ConsumerWidget {
           child: Column(
             children: [
               ListTile(
-                leading: Icon(
-                  adsRemoved ? Icons.check_circle_rounded : Icons.block_rounded,
-                  color: adsRemoved ? Colors.green : scheme.primary,
+                leading: EmojiBadge(
+                  adsRemoved ? '✅' : '🚫',
+                  color: adsRemoved ? AppColors.correct : AppColors.primary,
+                  size: 42,
                 ),
-                title: const Text('광고 제거',
-                    style: TextStyle(fontWeight: FontWeight.w700)),
-                subtitle: Text(adsRemoved
-                    ? '배너·전면 광고가 제거됐어요'
-                    : removeAdsPrice == null
-                        ? '배너·전면 광고를 영구히 없애요'
-                        : '배너·전면 광고를 영구히 없애요 ($removeAdsPrice)'),
+                title: const Text(
+                  '광고 제거',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                subtitle: Text(
+                  adsRemoved ? '배너·전면 광고가 제거됐어요' : '배너·전면 광고를 영구히 없애요',
+                ),
                 trailing: adsRemoved
                     ? null
                     : _buyButton(
+                        label: removeAdsPrice ?? '구매',
                         busy: iap.busy,
                         onPressed: () => _buyRemoveAds(context, ref),
                       ),
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
-                leading: Icon(Icons.confirmation_number_rounded,
-                    color: scheme.secondary),
-                title: const Text('힌트쿠폰 10개',
-                    style: TextStyle(fontWeight: FontWeight.w700)),
-                subtitle: Text(!loggedIn
-                    ? '로그인 후 구매·사용할 수 있어요'
-                    : hintCouponsPrice == null
-                        ? '현재 남은 쿠폰 $hintCoupons개 · 10개 충전'
-                        : '현재 남은 쿠폰 $hintCoupons개 · 10개 충전 ($hintCouponsPrice)'),
+                leading: const EmojiBadge(
+                  '🎟️',
+                  color: AppColors.sunny,
+                  size: 42,
+                ),
+                title: const Text(
+                  '힌트쿠폰 10개',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                // 안드로이드는 로그인 계정 귀속이라 비로그인 땐 잔액 표시가 의미 없지만,
+                // iOS는 게스트도 기기 로컬 잔액으로 구매·사용 가능해서 항상 실제 잔액을 보여준다
+                // (App Store Review Guideline 5.1.1(v) — 계정과 무관한 상품 구매에 로그인 강제 금지).
+                subtitle: Text(
+                  !loggedIn && !Platform.isIOS
+                      ? '로그인 후 구매·사용할 수 있어요'
+                      : '남은 쿠폰 $hintCoupons개 · 한 번에 10개 충전',
+                ),
                 trailing: _buyButton(
+                  label: hintCouponsPrice ?? '구매',
                   busy: iap.busy,
                   onPressed: () => _buyHintCoupons(context, ref),
                 ),
               ),
               const Divider(height: 1, indent: 16, endIndent: 16),
               ListTile(
-                leading: const Icon(Icons.restore_rounded),
-                title: const Text('구매 복원',
-                    style: TextStyle(fontWeight: FontWeight.w600)),
+                leading: const EmojiBadge(
+                  '🔄',
+                  color: AppColors.accent,
+                  size: 42,
+                ),
+                title: const Text(
+                  '구매 복원',
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
                 subtitle: const Text('다른 기기에서 산 항목을 이 기기에도 반영해요'),
                 onTap: iap.busy ? null : () => _restore(context, ref),
               ),
@@ -93,12 +114,21 @@ class ShopSection extends ConsumerWidget {
   /// ListTile.trailing에 버튼을 바로 꽂으면 특정 레이아웃 패스에서
   /// "Trailing widget consumes the entire tile width" 어서션이 떠서 화면 전체가
   /// 렌더 실패한다 — SizedBox로 폭을 고정해둔다.
-  Widget _buyButton({required bool busy, required VoidCallback onPressed}) {
+  Widget _buyButton({
+    required String label,
+    required bool busy,
+    required VoidCallback onPressed,
+  }) {
     return SizedBox(
-      width: 72,
+      width: 88,
       child: FilledButton(
         style: FilledButton.styleFrom(
+          minimumSize: const Size(0, 40),
           padding: const EdgeInsets.symmetric(horizontal: 8),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          textStyle: const TextStyle(fontFamily: kDisplayFont, fontSize: 15),
         ),
         onPressed: busy ? null : onPressed,
         child: busy
@@ -107,17 +137,36 @@ class ShopSection extends ConsumerWidget {
                 height: 16,
                 child: CircularProgressIndicator(strokeWidth: 2),
               )
-            : const Text('구매'),
+            : FittedBox(fit: BoxFit.scaleDown, child: Text(label)),
       ),
     );
   }
 
+  /// 안드로이드는 로그인 계정 귀속 설계라 구매·복원 전 로그인을 요구하고(기존 그대로),
+  /// iOS는 게스트도 구매·복원 가능해야 해서(App Store Review Guideline 5.1.1(v)) 항상
+  /// 통과시킨다 — Apple ID(스토어 로그인) 기준으로 이미 StoreKit이 구매/복원을 보장한다.
   bool _requireLogin(BuildContext context, WidgetRef ref) {
+    if (Platform.isIOS) return true;
     if (ref.read(authProvider).loggedIn) return true;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요')),
+      const SnackBar(
+        content: Text('구매는 로그인 후 이용할 수 있어요 — 위 계정 섹션에서 먼저 로그인해 주세요'),
+      ),
     );
     return false;
+  }
+
+  /// iOS 게스트 구매 직후 보여줄 안내 — 애플이 권장하는 "등록하면 다른 기기에서도
+  /// 쓸 수 있다"는 설명을 구매 확인 단계에서 미리 전달한다(강제 아님, 정보 제공용).
+  String _withGuestNote(
+    BuildContext context,
+    WidgetRef ref,
+    String description,
+  ) {
+    if (Platform.isIOS && !ref.read(authProvider).loggedIn) {
+      return '$description\n\n로그인하면 이 구매를 다른 기기에서도 쓸 수 있어요(선택).';
+    }
+    return description;
   }
 
   Future<void> _buyRemoveAds(BuildContext context, WidgetRef ref) async {
@@ -126,7 +175,11 @@ class ShopSection extends ConsumerWidget {
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '광고 제거 구매',
-      description: '배너·전면 광고를 영구히 없애요. 한 번 구매하면 계정 기준으로 다른 기기에도 적용돼요.',
+      description: _withGuestNote(
+        context,
+        ref,
+        '배너·전면 광고를 영구히 없애요. 한 번 구매하면 계정 기준으로 다른 기기에도 적용돼요.',
+      ),
       price: price,
     );
     if (!confirmed || !context.mounted) return;
@@ -135,12 +188,18 @@ class ShopSection extends ConsumerWidget {
 
   Future<void> _buyHintCoupons(BuildContext context, WidgetRef ref) async {
     if (!_requireLogin(context, ref)) return;
-    final price =
-        iapPriceOf(ref.read(iapProvider), IapService.kHintCoupons10Id);
+    final price = iapPriceOf(
+      ref.read(iapProvider),
+      IapService.kHintCoupons10Id,
+    );
     final confirmed = await confirmPurchaseDialog(
       context,
       title: '힌트쿠폰 10개 구매',
-      description: '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      description: _withGuestNote(
+        context,
+        ref,
+        '힌트쿠폰 10개를 충전해요. 쿠폰이 있으면 광고 없이 바로 힌트를 볼 수 있어요.',
+      ),
       price: price,
       consumable: true,
     );

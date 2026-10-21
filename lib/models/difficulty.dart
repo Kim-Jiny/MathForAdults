@@ -14,27 +14,27 @@ enum Difficulty {
 
 extension DifficultyInfo on Difficulty {
   String get label => switch (this) {
-        Difficulty.conceptCheck => '개념 확인',
-        Difficulty.basic => '기본 유형',
-        Difficulty.typical => '대표 유형',
-        Difficulty.applied => '응용 유형',
-        Difficulty.csatBasic => '수능 기초',
-        Difficulty.csatReal => '수능 실전',
-      };
+    Difficulty.conceptCheck => '개념 확인',
+    Difficulty.basic => '기본 유형',
+    Difficulty.typical => '대표 유형',
+    Difficulty.applied => '응용 유형',
+    Difficulty.csatBasic => '수능 기초',
+    Difficulty.csatReal => '수능 실전',
+  };
 
   Color get color => AppColors.difficultyColors[index];
 
   /// 모의수능 배점: 쉬움 2점 / 중간 3점 / 어려움 4점
   int get examPoints => switch (this) {
-        Difficulty.conceptCheck || Difficulty.basic => 2,
-        Difficulty.typical || Difficulty.applied => 3,
-        Difficulty.csatBasic || Difficulty.csatReal => 4,
-      };
+    Difficulty.conceptCheck || Difficulty.basic => 2,
+    Difficulty.typical || Difficulty.applied => 3,
+    Difficulty.csatBasic || Difficulty.csatReal => 4,
+  };
 
   static Difficulty fromLabel(String label) => Difficulty.values.firstWhere(
-        (d) => d.label == label,
-        orElse: () => Difficulty.conceptCheck,
-      );
+    (d) => d.label == label,
+    orElse: () => Difficulty.conceptCheck,
+  );
 }
 
 /// 표시/진행 순서

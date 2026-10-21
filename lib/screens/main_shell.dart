@@ -9,14 +9,16 @@ import 'subjects/subjects_screen.dart';
 
 /// 하단 탭 셸: 홈 / 단원 / 다시풀기 / 기록 / 설정.
 class MainShell extends StatefulWidget {
-  const MainShell({super.key});
+  /// 처음 보여줄 탭(스토어 스크린샷 촬영 등에서 사용). 기본은 홈.
+  final int initialIndex;
+  const MainShell({super.key, this.initialIndex = 0});
 
   @override
   State<MainShell> createState() => _MainShellState();
 }
 
 class _MainShellState extends State<MainShell> {
-  int _index = 0;
+  late int _index = widget.initialIndex;
   DateTime? _lastBackAt;
 
   void _openTab(int i) => setState(() => _index = i);
@@ -70,25 +72,30 @@ class _MainShellState extends State<MainShell> {
           onDestinationSelected: _openTab,
           destinations: const [
             NavigationDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home_rounded),
-                label: '홈'),
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home_rounded),
+              label: '홈',
+            ),
             NavigationDestination(
-                icon: Icon(Icons.grid_view_outlined),
-                selectedIcon: Icon(Icons.grid_view_rounded),
-                label: '단원'),
+              icon: Icon(Icons.grid_view_outlined),
+              selectedIcon: Icon(Icons.grid_view_rounded),
+              label: '단원',
+            ),
             NavigationDestination(
-                icon: Icon(Icons.refresh_outlined),
-                selectedIcon: Icon(Icons.refresh_rounded),
-                label: '다시풀기'),
+              icon: Icon(Icons.refresh_outlined),
+              selectedIcon: Icon(Icons.refresh_rounded),
+              label: '다시풀기',
+            ),
             NavigationDestination(
-                icon: Icon(Icons.bar_chart_outlined),
-                selectedIcon: Icon(Icons.bar_chart_rounded),
-                label: '기록'),
+              icon: Icon(Icons.bar_chart_outlined),
+              selectedIcon: Icon(Icons.bar_chart_rounded),
+              label: '기록',
+            ),
             NavigationDestination(
-                icon: Icon(Icons.settings_outlined),
-                selectedIcon: Icon(Icons.settings_rounded),
-                label: '설정'),
+              icon: Icon(Icons.settings_outlined),
+              selectedIcon: Icon(Icons.settings_rounded),
+              label: '설정',
+            ),
           ],
         ),
       ),

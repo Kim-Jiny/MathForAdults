@@ -27,7 +27,10 @@ Future<List<MathProblem>> buildMockExam(
 /// 배점 구간(2/3/4점)별로 지정 수만큼 추출. 각 구간에서 '안 푼 문제' 먼저,
 /// 모자라면 푼 문제로 보충. 그래도 부족하면 인접 구간에서 보충.
 List<MathProblem> _sample(
-    List<MathProblem> pool, TierSpec spec, Set<String> seen) {
+  List<MathProblem> pool,
+  TierSpec spec,
+  Set<String> seen,
+) {
   final byTier = <int, List<MathProblem>>{2: [], 3: [], 4: []};
   for (final p in pool) {
     byTier[p.difficulty.examPoints]!.add(p);
@@ -35,8 +38,9 @@ List<MathProblem> _sample(
   // 각 구간: 무작위 섞은 뒤 '안 푼 문제'를 앞으로 (안 푼 것 우선 출제).
   byTier.forEach((_, list) {
     list.shuffle();
-    list.sort((a, b) =>
-        (seen.contains(a.id) ? 1 : 0) - (seen.contains(b.id) ? 1 : 0));
+    list.sort(
+      (a, b) => (seen.contains(a.id) ? 1 : 0) - (seen.contains(b.id) ? 1 : 0),
+    );
   });
 
   final used = <String>{};

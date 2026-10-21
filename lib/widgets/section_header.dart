@@ -6,12 +6,7 @@ class SectionHeader extends StatelessWidget {
   final String? actionLabel;
   final VoidCallback? onAction;
 
-  const SectionHeader(
-    this.title, {
-    super.key,
-    this.actionLabel,
-    this.onAction,
-  });
+  const SectionHeader(this.title, {super.key, this.actionLabel, this.onAction});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +15,21 @@ class SectionHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(2, 0, 2, 12),
       child: Row(
         children: [
+          Container(
+            width: 8,
+            height: 8,
+            margin: const EdgeInsets.only(right: 8),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.tertiary,
+              shape: BoxShape.circle,
+            ),
+          ),
           Expanded(
             child: Text(
               title,
-              style: theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w800),
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w800,
+              ),
             ),
           ),
           if (actionLabel != null)

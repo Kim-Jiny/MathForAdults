@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../mascot.dart';
+
 const _refundPolicyUrl = 'https://duo.jiny.shop/mfa/refund';
 
 /// 구매 버튼을 누르자마자 바로 스토어 결제창으로 넘기지 않고, 뭘 얼마에 사는지
@@ -20,20 +22,44 @@ Future<bool> confirmPurchaseDialog(
   final confirmed = await showDialog<bool>(
     context: context,
     builder: (dialogContext) => AlertDialog(
-      title: Text(title),
+      title: Row(
+        children: [
+          const Mascot(size: 48, mood: MascotMood.cheer),
+          const SizedBox(width: 10),
+          Expanded(child: Text(title)),
+        ],
+      ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(price == null ? description : '$description\n\n가격: $price'),
+          Text(description),
+          if (price != null) ...[
+            const SizedBox(height: 12),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              decoration: BoxDecoration(
+                color: Theme.of(
+                  dialogContext,
+                ).colorScheme.primary.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Text(
+                price,
+                style: Theme.of(dialogContext).textTheme.titleLarge?.copyWith(
+                  color: Theme.of(dialogContext).colorScheme.primary,
+                ),
+              ),
+            ),
+          ],
           const SizedBox(height: 12),
           Text(
             consumable
                 ? '결제 즉시 제공되는 디지털 상품이에요. 일부라도 사용하면 청약철회(환불)가 제한될 수 있어요.'
                 : '결제 즉시 제공되는 디지털 상품이에요.',
             style: Theme.of(dialogContext).textTheme.bodySmall?.copyWith(
-                  color: Theme.of(dialogContext).colorScheme.onSurfaceVariant,
-                ),
+              color: Theme.of(dialogContext).colorScheme.onSurfaceVariant,
+            ),
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -46,7 +72,10 @@ Future<bool> confirmPurchaseDialog(
               onPressed: () => _openRefundPolicy(dialogContext),
               child: const Text(
                 '환불 안내 보기',
-                style: TextStyle(fontSize: 13, decoration: TextDecoration.underline),
+                style: TextStyle(
+                  fontSize: 13,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ),
@@ -58,6 +87,7 @@ Future<bool> confirmPurchaseDialog(
           child: const Text('취소'),
         ),
         FilledButton(
+          style: FilledButton.styleFrom(minimumSize: const Size(120, 48)),
           onPressed: () => Navigator.of(dialogContext).pop(true),
           child: const Text('구매하기'),
         ),
@@ -70,8 +100,10 @@ Future<bool> confirmPurchaseDialog(
 Future<void> _openRefundPolicy(BuildContext context) async {
   final messenger = ScaffoldMessenger.of(context);
   try {
-    final ok = await launchUrl(Uri.parse(_refundPolicyUrl),
-        mode: LaunchMode.externalApplication);
+    final ok = await launchUrl(
+      Uri.parse(_refundPolicyUrl),
+      mode: LaunchMode.externalApplication,
+    );
     if (!ok) throw Exception('open failed');
   } catch (_) {
     messenger.showSnackBar(const SnackBar(content: Text('페이지를 열 수 없어요')));

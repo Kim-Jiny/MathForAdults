@@ -16,7 +16,8 @@ const _kAdsRemovedKey = 'mfa_ads_removed';
 /// 광고 제거 여부. 로컬에 영구 저장 + 로그인 시 서버 엔타이틀먼트로 복원(다른 기기 구매 포함).
 class AdsRemovedNotifier extends StateNotifier<bool> {
   final SharedPreferences _prefs;
-  AdsRemovedNotifier(this._prefs) : super(_prefs.getBool(_kAdsRemovedKey) ?? false);
+  AdsRemovedNotifier(this._prefs)
+    : super(_prefs.getBool(_kAdsRemovedKey) ?? false);
 
   void setRemoved(bool v) {
     if (state == v) return;
@@ -33,46 +34,58 @@ final adsRemovedProvider = StateNotifierProvider<AdsRemovedNotifier, bool>(
 /// 전부 [IapNotifier]가 하고, 여기선 "무엇을 해야 하는지"만 순수하게 계산한다 — 그래야
 /// 네트워크·스토어 SDK 없이 핵심 분기(검증 실패 시 미완료 유지, 로그인 안 됨, 중복 지급
 /// 안 함 등)를 단위 테스트할 수 있다.
-enum IapOutcome { needsLogin, retryLater, rejected, noGrant, grantedCoupons, grantedAdsRemoved }
+enum IapOutcome {
+  retryLater,
+  rejected,
+  noGrant,
+  grantedCoupons,
+  grantedAdsRemoved,
+}
 
 class IapDecision {
   final IapOutcome outcome;
+
   /// true면 스토어 트랜잭션을 완료 처리(completePurchase)해도 안전 — 서버가 확정
   /// 응답을 줬다는 뜻. false면 완료 처리하지 않고 다음 실행 때 재시도되게 둔다.
   final bool shouldComplete;
   final String? message;
-  /// 서버가 알려준 힌트쿠폰 **최종 잔액**(증분이 아니라 절대값) — kind가 hint_coupons일
-  /// 때만 채워짐. 새로 지급된 경우뿐 아니라 이미 처리된 재검증이어도 함께 내려와서,
-  /// 클라이언트 표시값을 항상 서버 진실값으로 맞출 수 있다.
+
+  /// 서버가 알려준 힌트쿠폰 **최종 잔액**(증분이 아니라 절대값) — 로그인 계정일 때만
+  /// 채워짐. 새로 지급된 경우뿐 아니라 이미 처리된 재검증이어도 함께 내려와서,
+  /// 클라이언트 표시값을 항상 서버 진실값으로 맞출 수 있다. 게스트(토큰 없음)는 서버
+  /// 잔액 개념이 없어 항상 null — 이땐 [grantedAmount]를 기기 로컬에 증분해야 한다.
   final int? balance;
+
+  /// 이번에 새로 지급된 힌트쿠폰 개수(절대값이 아니라 증분). 로그인/게스트 공통으로
+  /// 채워짐 — 로그인 계정은 `balance`를 그대로 신뢰하므로 안 쓰지만, 게스트(iOS 비로그인
+  /// 구매)는 서버에 잔액이 없으므로 이 값을 기기 로컬 잔액에 더해야 한다.
+  final int? grantedAmount;
 
   const IapDecision({
     required this.outcome,
     required this.shouldComplete,
     this.message,
     this.balance,
+    this.grantedAmount,
   });
 }
 
 /// 서버 검증 결과(또는 못 받았다는 사실)로부터 무엇을 할지 판단하는 순수 함수.
-/// - [token]이 없으면(로그인 안 됨) 완료 처리하지 않는다 — 로그인 후 재시도됨.
+/// - [token]이 없는 건 더 이상 에러가 아니다 — iOS는 로그인 없이도 구매할 수 있어야
+///   하므로(App Store Review Guideline 5.1.1(v)), 게스트 구매도 정상 케이스로 취급한다.
+///   안드로이드는 애초에 `IapNotifier.buy()` 단계에서 로그인 없인 시작도 안 하므로
+///   이 함수까지 토큰 없이 들어올 일이 없다.
 /// - [hadError]면(네트워크/서버 오류로 확정 응답을 못 받음) 완료 처리하지 않는다 —
 ///   안 그러면 결제는 되는데 지급은 안 되는 사고가 날 수 있다.
 /// - 서버가 확정 응답을 줬으면(verified true/false 무관) 완료 처리는 항상 안전하다.
-/// - 힌트쿠폰은 서버가 내려준 `balance`(절대값)를 그대로 신뢰해서 덮어쓴다 — 로컬에서
-///   증분을 더하지 않는다(기기 간 병합으로 소모한 쿠폰이 되살아나는 걸 원천 차단하기 위함).
+/// - 힌트쿠폰: 로그인 계정이면 서버가 내려준 `balance`(절대값)를 그대로 신뢰해서
+///   덮어쓴다(기기 간 병합으로 소모한 쿠폰이 되살아나는 걸 원천 차단). 게스트는 서버
+///   잔액이 없으므로 `grantedAmount`(증분)를 호출부가 기기 로컬 잔액에 더하게 한다.
 IapDecision decideIapOutcome({
   required String? token,
   required IapVerifyResult? result,
   required bool hadError,
 }) {
-  if (token == null) {
-    return const IapDecision(
-      outcome: IapOutcome.needsLogin,
-      shouldComplete: false,
-      message: '로그인 상태에서만 구매가 반영돼요',
-    );
-  }
   if (hadError || result == null) {
     return const IapDecision(
       outcome: IapOutcome.retryLater,
@@ -93,11 +106,17 @@ IapDecision decideIapOutcome({
         outcome: IapOutcome.grantedCoupons,
         shouldComplete: true,
         balance: result.balance,
+        grantedAmount: result.coupons,
         message: '힌트쿠폰 ${result.coupons}개가 지급됐어요',
       );
     }
-    // 이미 처리된 재검증(서버가 coupons:0 반환) — 지급은 없지만 서버 잔액으로는 동기화해둔다.
-    return IapDecision(outcome: IapOutcome.noGrant, shouldComplete: true, balance: result.balance);
+    // 이미 처리된 재검증(서버가 coupons:0 반환) — 지급은 없지만 로그인 계정이면 서버
+    // 잔액으로는 동기화해둔다.
+    return IapDecision(
+      outcome: IapOutcome.noGrant,
+      shouldComplete: true,
+      balance: result.balance,
+    );
   }
   if (result.kind == 'remove_ads') {
     return const IapDecision(
@@ -111,18 +130,24 @@ IapDecision decideIapOutcome({
 
 /// 실제 스토어 가격 문자열(현지화 포함). 콘솔에 상품이 아직 없거나 조회 전이면 null —
 /// 확정 안 된 가격을 함부로 하드코딩해서 보여주지 않기 위함(호출부가 폴백 문구를 결정).
-String? iapPriceOf(IapState iap, String productId) => iap.products[productId]?.price;
+String? iapPriceOf(IapState iap, String productId) =>
+    iap.products[productId]?.price;
 
 class IapState {
   final bool busy;
   final String? message; // 스낵바로 한 번 보여주고 넘길 안내/에러 메시지
+  /// message가 새로 세팅될 때마다 증가 — 같은 문구가 연속으로 나와도 리스너가 새 메시지로
+  /// 인식해 스낵바를 다시 띄울 수 있게 한다(문자열 비교만으론 두 번째부터 안 뜸).
+  final int messageSeq;
   final Map<String, ProductDetails> products; // 상점 UI에 실제 스토어 가격 표시용
-  /// 힌트쿠폰 잔액 — 서버 계정 기준(로그인 안 됐으면 항상 0, 로컬 병합 없음).
+  /// 힌트쿠폰 잔액. 로그인 상태면 서버 계정 기준(로컬 병합 없음), 게스트면 이 기기
+  /// 로컬 잔액(iOS만 — 안드로이드 게스트는 구매 자체가 막혀 항상 0).
   final int hintCoupons;
 
   const IapState({
     this.busy = false,
     this.message,
+    this.messageSeq = 0,
     this.products = const {},
     this.hintCoupons = 0,
   });
@@ -136,17 +161,20 @@ class IapState {
   }) => IapState(
     busy: busy ?? this.busy,
     message: clearMessage ? null : (message ?? this.message),
+    messageSeq: message != null ? messageSeq + 1 : messageSeq,
     products: products ?? this.products,
     hintCoupons: hintCoupons ?? this.hintCoupons,
   );
 }
 
-/// 구매 오케스트레이션: 로그인 확인 → 스토어 구매 요청 → (구매 스트림) 서버 검증 →
-/// 검증 통과 시 힌트쿠폰 지급/광고 제거 반영. [IapService]는 순수 I/O만, 상태 반영은 여기서.
+/// 구매 오케스트레이션: 로그인 확인(안드로이드만 필수 — 아래 [_purchaseRequiresLogin])
+/// → 스토어 구매 요청 → (구매 스트림) 서버 검증 → 검증 통과 시 힌트쿠폰 지급/광고 제거
+/// 반영. [IapService]는 순수 I/O만, 상태 반영은 여기서.
 class IapNotifier extends StateNotifier<IapState> {
   final IapService _iap;
   final AuthService _auth;
   final Ref _ref;
+  final SharedPreferences _prefs;
   StreamSubscription<List<PurchaseDetails>>? _sub;
 
   /// buy() 호출 시점의 로그인 토큰(같은 프로세스 내 빠른 경로용 메모리 캐시).
@@ -156,20 +184,47 @@ class IapNotifier extends StateNotifier<IapState> {
   /// 복원(restore)으로 들어온 건은 이 값이 없으므로 자연스럽게 "현재 로그인 계정"으로 검증된다.
   String? _initiatorToken;
 
-  IapNotifier(this._iap, this._auth, this._ref) : super(const IapState()) {
-    _sub = _iap.purchaseStream.listen(_onPurchaseUpdate, onError: (e) {
-      if (kDebugMode) debugPrint('[IAP] 구매 스트림 오류: $e');
-    });
-    // 이미 로그인된 상태로 앱이 시작됐으면 계정 기준 엔타이틀먼트(광고 제거·힌트쿠폰 잔액) 복원.
-    if (_ref.read(authProvider).loggedIn) _refreshEntitlements();
+  /// App Store Review Guideline 5.1.1(v): 계정과 무관한 상품 구매에 로그인을 강제할
+  /// 수 없다 — iOS는 게스트도 구매 가능해야 한다. 안드로이드는 Google Play에 이런
+  /// 제약이 없어서 기존 설계(로그인 계정 귀속) 그대로 유지한다.
+  bool get _purchaseRequiresLogin => !Platform.isIOS;
+
+  static const _kLocalHintCouponsKey = 'mfa_local_hint_coupons';
+
+  /// iOS 게스트 전용 기기 로컬 힌트쿠폰 잔액(서버 계정과 별개 저장소 — 소모성 상품은
+  /// Apple도 "구매 복원"을 지원하지 않아 계정 복원이 애초에 불가능하므로 기기에만 둔다).
+  /// 안드로이드는 로그인 전에 구매 자체가 막혀서 이 값이 쓰일 일이 없다.
+  int get _localHintCoupons => _prefs.getInt(_kLocalHintCouponsKey) ?? 0;
+
+  void _setLocalHintCoupons(int v) {
+    _prefs.setInt(_kLocalHintCouponsKey, v);
+    if (!_ref.read(authProvider).loggedIn) {
+      state = state.copyWith(hintCoupons: v);
+    }
+  }
+
+  IapNotifier(this._iap, this._auth, this._ref, this._prefs)
+    : super(const IapState()) {
+    _sub = _iap.purchaseStream.listen(
+      _onPurchaseUpdate,
+      onError: (e) {
+        if (kDebugMode) debugPrint('[IAP] 구매 스트림 오류: $e');
+      },
+    );
+    if (_ref.read(authProvider).loggedIn) {
+      // 이미 로그인된 상태로 앱이 시작됐으면 계정 기준 엔타이틀먼트(광고 제거·힌트쿠폰 잔액) 복원.
+      _refreshEntitlements();
+    } else {
+      // 게스트로 시작했으면 이 기기에 로컬로 쌓여있던(iOS) 힌트쿠폰 잔액을 바로 보여준다.
+      state = state.copyWith(hintCoupons: _localHintCoupons);
+    }
     // 이후 로그인 성공 시점에도 복원(다른 기기에서 산 광고 제거·쌓인 쿠폰을 여기서도 반영).
-    // 로그아웃/탈퇴 시엔 힌트쿠폰 표시를 0으로 되돌린다 — 계정 잔액이라 게스트 상태에선
-    // 의미가 없고, 로컬에 남겨두면 다른 계정으로 로그인했을 때 잠깐 섞여 보일 수 있다.
+    // 로그아웃/탈퇴 시엔 서버 잔액 대신 이 기기의 로컬 잔액(게스트 상태 표시값)으로 되돌린다.
     _ref.listen<AuthState>(authProvider, (prev, next) {
       if (next.loggedIn && prev?.loggedIn != true) {
         _refreshEntitlements();
       } else if (!next.loggedIn && prev?.loggedIn == true) {
-        state = state.copyWith(hintCoupons: 0);
+        state = state.copyWith(hintCoupons: _localHintCoupons);
       }
     });
     _loadProducts();
@@ -223,13 +278,25 @@ class IapNotifier extends StateNotifier<IapState> {
     }
   }
 
-  /// 힌트쿠폰 1개 소비(퀴즈 힌트용). 로그인 안 돼 있으면 즉시 실패.
-  /// 서버가 잔액 부족(409)을 돌려주면(다른 기기에서 먼저 썼거나 동시 요청) 표시값을
-  /// 서버 진실값으로 재동기화하고 실패를 반환한다 — 호출부는 이때 힌트를 열어주면 안 된다.
+  /// 힌트쿠폰 1개 소비(퀴즈 힌트용). 안드로이드는 로그인 안 돼 있으면 즉시 실패(기존
+  /// 그대로). iOS는 게스트면 서버 호출 없이 기기 로컬 잔액에서 바로 차감한다.
+  /// 로그인 상태(두 플랫폼 공통)면 서버가 잔액 부족(409)을 돌려줄 때(다른 기기에서
+  /// 먼저 썼거나 동시 요청) 표시값을 서버 진실값으로 재동기화하고 실패를 반환한다 —
+  /// 호출부는 이때 힌트를 열어주면 안 된다.
   Future<bool> useHintCoupon() async {
-    if (!_ref.read(authProvider).loggedIn) {
-      state = state.copyWith(message: '로그인이 필요해요');
-      return false;
+    final loggedIn = _ref.read(authProvider).loggedIn;
+    if (!loggedIn) {
+      if (_purchaseRequiresLogin) {
+        state = state.copyWith(message: '로그인이 필요해요');
+        return false;
+      }
+      final current = _localHintCoupons;
+      if (current <= 0) {
+        state = state.copyWith(message: '힌트쿠폰이 부족해요');
+        return false;
+      }
+      _setLocalHintCoupons(current - 1);
+      return true;
     }
     final token = await _auth.cachedToken;
     if (token == null) return false;
@@ -248,10 +315,11 @@ class IapNotifier extends StateNotifier<IapState> {
     }
   }
 
-  /// 상품 구매 시작. 로그인 안 돼 있으면 시작하지 않고 에러 메시지만 세팅
-  /// (버튼 쪽에서도 미리 로그인 유도하는 게 원칙이지만, 여기서도 한 번 더 막는다).
+  /// 상품 구매 시작. 안드로이드는 로그인 안 돼 있으면 시작하지 않고 에러 메시지만
+  /// 세팅(기존 그대로 — 버튼 쪽에서도 미리 로그인 유도하지만 여기서도 한 번 더 막는다).
+  /// iOS는 로그인 없이도 구매를 시작할 수 있다(Apple 심사 가이드라인 5.1.1(v)).
   Future<void> buy(String productId) async {
-    if (!_ref.read(authProvider).loggedIn) {
+    if (_purchaseRequiresLogin && !_ref.read(authProvider).loggedIn) {
       state = state.copyWith(message: '로그인이 필요해요', clearMessage: false);
       return;
     }
@@ -294,7 +362,7 @@ class IapNotifier extends StateNotifier<IapState> {
   }
 
   Future<void> restore() async {
-    if (!_ref.read(authProvider).loggedIn) {
+    if (_purchaseRequiresLogin && !_ref.read(authProvider).loggedIn) {
       state = state.copyWith(message: '로그인이 필요해요');
       return;
     }
@@ -336,6 +404,12 @@ class IapNotifier extends StateNotifier<IapState> {
           if (p.pendingCompletePurchase) await _iap.completePurchase(p);
           break;
         case PurchaseStatus.pending:
+          // 가족 승인 대기·지연 결제 등 — 승인/실패 이벤트는 나중에 별도로 도착한다. 그동안
+          // 구매 버튼이 영구히 '처리 중'으로 잠기지 않도록 busy만 풀고 안내한다.
+          state = state.copyWith(
+            busy: false,
+            message: '결제 승인을 기다리고 있어요. 완료되면 자동 반영돼요',
+          );
           break;
       }
     }
@@ -362,42 +436,52 @@ class IapNotifier extends StateNotifier<IapState> {
       // 계정 전환이 있었어도 엉뚱한 계정에 지급되지 않는다. 메모리 캐시(같은 프로세스)
       // → 영구 저장값(앱이 꺼졌다 재시작된 뒤 도착한 경우) → 현재 로그인 계정 순.
       token =
-          _initiatorToken ?? await _auth.pendingPurchaseToken ?? await _auth.cachedToken;
+          _initiatorToken ??
+          await _auth.pendingPurchaseToken ??
+          await _auth.cachedToken;
     }
     _initiatorToken = null;
 
     IapVerifyResult? result;
     var hadError = false;
-    if (token != null) {
-      try {
-        result = await _iap.verify(token, p);
-      } on IapVerifyAuthError {
-        // 이 토큰은 만료/무효 — 같은 값으로는 영원히 재시도해봐야 또 실패한다.
-        // 저장해둔 귀속 정보를 지워서, 다음 시도부턴 그 시점의 최신 로그인 토큰을
-        // 쓰게 한다(로그인 상태면 다음 앱 실행/재시도 때 자연히 해결됨).
-        if (kDebugMode) debugPrint('[IAP] 검증 토큰 만료/무효 — 귀속 정보 초기화');
-        await _clearPendingTokenIfNotRestore(p);
-        hadError = true;
-      } catch (e) {
-        if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
-        hadError = true;
-      }
+    // token이 null이어도(iOS 게스트 구매) 검증은 반드시 요청한다 — 건너뛰면 result가
+    // 영영 null이라 지급도 완료 처리도 못 하고 매 실행마다 재시도만 반복된다.
+    try {
+      result = await _iap.verify(token, p);
+    } on IapVerifyAuthError {
+      // 이 토큰은 만료/무효 — 같은 값으로는 영원히 재시도해봐야 또 실패한다.
+      // 저장해둔 귀속 정보를 지워서, 다음 시도부턴 그 시점의 최신 로그인 토큰을
+      // 쓰게 한다(로그인 상태면 다음 앱 실행/재시도 때 자연히 해결됨).
+      if (kDebugMode) debugPrint('[IAP] 검증 토큰 만료/무효 — 귀속 정보 초기화');
+      await _clearPendingTokenIfNotRestore(p);
+      hadError = true;
+    } catch (e) {
+      if (kDebugMode) debugPrint('[IAP] 검증 요청 실패(재시도 예정): $e');
+      hadError = true;
     }
 
-    final decision = decideIapOutcome(token: token, result: result, hadError: hadError);
+    final decision = decideIapOutcome(
+      token: token,
+      result: result,
+      hadError: hadError,
+    );
     switch (decision.outcome) {
       case IapOutcome.grantedCoupons:
       case IapOutcome.noGrant:
-        // 힌트쿠폰은 서버 계정 잔액이 유일한 진실값 — 로컬에 증분을 더하지 않고
-        // 서버가 응답한 최종 잔액을 그대로 반영한다(진도 동기화와도 완전히 무관해짐).
         if (decision.balance != null) {
+          // 로그인 계정 — 서버 계정 잔액이 유일한 진실값. 로컬에 증분을 더하지 않고
+          // 서버가 응답한 최종 잔액을 그대로 반영한다(진도 동기화와도 완전히 무관해짐).
           state = state.copyWith(hintCoupons: decision.balance!);
+        } else if (token == null &&
+            decision.grantedAmount != null &&
+            decision.grantedAmount! > 0) {
+          // 게스트(iOS) 구매 — 서버 계정 잔액이 없으므로 이 기기 로컬 잔액에 증분.
+          _setLocalHintCoupons(_localHintCoupons + decision.grantedAmount!);
         }
         break;
       case IapOutcome.grantedAdsRemoved:
         _ref.read(adsRemovedProvider.notifier).setRemoved(true);
         break;
-      case IapOutcome.needsLogin:
       case IapOutcome.retryLater:
       case IapOutcome.rejected:
         break;
@@ -441,5 +525,6 @@ final iapProvider = StateNotifierProvider<IapNotifier, IapState>((ref) {
     ref.watch(iapServiceProvider),
     ref.watch(authServiceProvider),
     ref,
+    ref.watch(sharedPreferencesProvider),
   );
 });

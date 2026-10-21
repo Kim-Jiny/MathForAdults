@@ -2,7 +2,7 @@ name: math_for_adults
 description: "어른을 위한 수능 수학 — 다시 시작하는 수학 학습 앱"
 publish_to: 'none'
 
-version: 1.0.5+8
+version: 1.1.0+12
 
 environment:
   sdk: ^3.11.0
@@ -39,6 +39,8 @@ dependencies:
   flutter_secure_storage: ^11.2.0
   in_app_purchase: ^3.3.1
   in_app_purchase_android: ^0.5.3
+  flutter_timezone: ^5.1.1
+  package_info_plus: ^10.2.2
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +53,24 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  fonts:
+    # 제목/강조용 둥근 한글 폰트(주아체, SIL OFL). 단일 굵기 파일을 모든 weight에 매핑해
+    # w700/w800 지정 시 가짜 볼드가 생기지 않게 한다.
+    - family: Jua
+      fonts:
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 600
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 700
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 800
+        - asset: assets/fonts/Jua-Regular.ttf
+          weight: 900
 
   assets:
     - assets/problems/
@@ -65,20 +85,20 @@ flutter_launcher_icons:
   image_path: "assets/icon.png"
   remove_alpha_ios: true
   min_sdk_android: 21
-  adaptive_icon_background: "#DEE8F1"
-  adaptive_icon_foreground: "assets/icon.png"
+  adaptive_icon_background: "#9A78EE"
+  adaptive_icon_foreground: "assets/icon_fg.png"
 
 # 스플래시 (dart run flutter_native_splash:create)
 # cover(센터크롭): 짧은 쪽 기준으로 화면을 꽉 채우고 넘치는 부분은 잘라냄.
 flutter_native_splash:
-  color: "#CBDEF1"
+  color: "#9A78EE"
   image: "assets/splash.png"
   fullscreen: false
   ios_content_mode: scaleAspectFill
   android_gravity: fill
   android_12:
-    image: "assets/icon.png"
-    color: "#DEE8F1"
+    image: "assets/icon_fg.png"
+    color: "#9A78EE"
   android: true
   ios: true
   web: false

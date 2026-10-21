@@ -7,7 +7,7 @@ import '../../models/difficulty.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/math_text.dart';
+import '../../widgets/exam_parts.dart';
 import 'exam_result_view.dart';
 
 /// 모의수능 응시 화면: 시간제한 + 제출 전 정답 비공개 + 일괄 채점.
@@ -32,6 +32,7 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   final _shortController = TextEditingController();
   int _index = 0;
   late Duration _remaining;
+  late final DateTime _deadline; // 벽시계 기준 종료 시각 — 백그라운드로 가도 시간이 멈추지 않게
   Timer? _timer;
   bool _submitted = false;
   bool _dialogOpen = false; // 제출/나가기 확인 다이얼로그가 떠 있는지
@@ -43,13 +44,17 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
   void initState() {
     super.initState();
     _remaining = widget.duration;
+    _deadline = DateTime.now().add(widget.duration);
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
-      if (_remaining.inSeconds <= 1) {
+      // 타이머 틱 누적 대신 마감 시각과의 차이로 계산한다(앱이 백그라운드에 있는 동안
+      // 타이머가 멈춰도 남은 시간이 정확히 줄어든다).
+      final left = _deadline.difference(DateTime.now());
+      if (left.inSeconds <= 0) {
         _remaining = Duration.zero; // 소요 시간이 전체 시간으로 정확히 찍히도록
         _submit(auto: true);
       } else {
-        setState(() => _remaining -= const Duration(seconds: 1));
+        setState(() => _remaining = left);
       }
     });
     _syncController();
@@ -76,7 +81,8 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
 
   void _selectChoice(int c) => setState(() => _answers[_index] = '$c');
 
-  int get _answeredCount => _answers.values.where((v) => v.trim().isNotEmpty).length;
+  int get _answeredCount =>
+      _answers.values.where((v) => v.trim().isNotEmpty).length;
 
   Future<void> _confirmSubmit() async {
     final unanswered = _ps.length - _answeredCount;
@@ -89,11 +95,13 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
           content: Text('아직 $unanswered문항이 비어 있어요. 그래도 제출하시겠어요?'),
           actions: [
             TextButton(
-                onPressed: () => Navigator.pop(ctx, false),
-                child: const Text('더 풀기')),
+              onPressed: () => Navigator.pop(ctx, false),
+              child: const Text('더 풀기'),
+            ),
             FilledButton(
-                onPressed: () => Navigator.pop(ctx, true),
-                child: const Text('제출')),
+              onPressed: () => Navigator.pop(ctx, true),
+              child: const Text('제출'),
+            ),
           ],
         ),
       );
@@ -120,9 +128,9 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
     }
     setState(() => _submitted = true);
     if (auto && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('시간이 다 되어 자동 제출됐어요')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('시간이 다 되어 자동 제출됐어요')));
     }
   }
 
@@ -154,11 +162,13 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
             content: const Text('지금 나가면 기록되지 않아요.'),
             actions: [
               TextButton(
-                  onPressed: () => Navigator.pop(ctx, false),
-                  child: const Text('계속 풀기')),
+                onPressed: () => Navigator.pop(ctx, false),
+                child: const Text('계속 풀기'),
+              ),
               FilledButton(
-                  onPressed: () => Navigator.pop(ctx, true),
-                  child: const Text('나가기')),
+                onPressed: () => Navigator.pop(ctx, true),
+                child: const Text('나가기'),
+              ),
             ],
           ),
         );
@@ -174,44 +184,44 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
             Center(
               child: Container(
                 margin: const EdgeInsets.only(right: 12),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
                   color: warn
-                      ? AppColors.wrongOf(theme.brightness)
-                          .withValues(alpha: 0.15)
+                      ? AppColors.wrongOf(
+                          theme.brightness,
+                        ).withValues(alpha: 0.15)
                       : theme.colorScheme.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.timer_outlined,
-                        size: 16,
+                    Icon(
+                      Icons.timer_outlined,
+                      size: 16,
+                      color: warn
+                          ? AppColors.wrongOf(theme.brightness)
+                          : theme.colorScheme.primary,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      _fmt(_remaining),
+                      style: theme.textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w800,
                         color: warn
                             ? AppColors.wrongOf(theme.brightness)
-                            : theme.colorScheme.primary),
-                    const SizedBox(width: 4),
-                    Text(_fmt(_remaining),
-                        style: theme.textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w800,
-                          color: warn
-                              ? AppColors.wrongOf(theme.brightness)
-                              : theme.colorScheme.primary,
-                        )),
+                            : theme.colorScheme.primary,
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
           ],
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(3),
-            child: LinearProgressIndicator(
-              value: (_index + 1) / _ps.length,
-              minHeight: 3,
-              backgroundColor: theme.colorScheme.outlineVariant,
-            ),
-          ),
+          bottom: examProgressBar(theme, (_index + 1) / _ps.length),
         ),
         body: SafeArea(
           top: false,
@@ -221,28 +231,13 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                   children: [
-                    Row(
-                      children: [
-                        Text('${_index + 1}',
-                            style: theme.textTheme.titleMedium?.copyWith(
-                              fontWeight: FontWeight.w900,
-                              color: theme.colorScheme.primary,
-                            )),
-                        Text(' / ${_ps.length}',
-                            style: theme.textTheme.titleMedium?.copyWith(
-                                color: theme.colorScheme.onSurfaceVariant)),
-                        const Spacer(),
-                        Text('${p.difficulty.examPoints}점 · ${p.subject}',
-                            style: theme.textTheme.bodySmall?.copyWith(
-                                color: theme.colorScheme.onSurfaceVariant,
-                                fontWeight: FontWeight.w600)),
-                      ],
+                    ExamQuestionCard(
+                      index: _index,
+                      total: _ps.length,
+                      label: '${p.difficulty.examPoints}점 · ${p.subject}',
+                      question: p.question,
                     ),
-                    const SizedBox(height: 16),
-                    MathText(p.question,
-                        style: theme.textTheme.titleLarge
-                            ?.copyWith(height: 1.55, fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 20),
                     if (p.type == ProblemType.short)
                       _shortInput(theme)
                     else
@@ -267,76 +262,50 @@ class _MockExamScreenState extends ConsumerState<MockExamScreen> {
       decoration: InputDecoration(
         hintText: '정답 입력 (예: 12, 3/2, −5)',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
-      ),
-    );
-  }
-
-  Widget _choiceTile(int c) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
-    final selected = _answers[_index] == '$c';
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: selected
-            ? scheme.primaryContainer.withValues(alpha: 0.35)
-            : scheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => _selectChoice(c),
-          child: Container(
-            constraints: const BoxConstraints(minHeight: 58),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: selected ? scheme.primary : scheme.outlineVariant,
-                width: selected ? 1.6 : 1.2,
-              ),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 30,
-                  height: 30,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: selected
-                        ? scheme.primary
-                        : scheme.surfaceContainerHighest,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Text('${c + 1}',
-                      style: TextStyle(
-                          color: selected
-                              ? scheme.onPrimary
-                              : scheme.onSurfaceVariant,
-                          fontWeight: FontWeight.w700)),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                    child: MathText(_p.choices[c],
-                        style: theme.textTheme.titleMedium)),
-              ],
-            ),
-          ),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 18,
+          vertical: 18,
         ),
       ),
     );
   }
 
+  Widget _choiceTile(int c) => ExamChoiceTile(
+    number: c + 1,
+    text: _p.choices[c],
+    selected: _answers[_index] == '$c',
+    onTap: () => _selectChoice(c),
+  );
+
   Widget _navBar(ThemeData theme) {
     final isLast = _index + 1 >= _ps.length;
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+      padding: const EdgeInsets.fromLTRB(0, 12, 0, 16),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
         border: Border(
-            top: BorderSide(color: theme.colorScheme.outlineVariant)),
+          top: BorderSide(color: theme.colorScheme.outlineVariant, width: 2),
+        ),
       ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ExamNavigator(
+            count: _ps.length,
+            current: _index,
+            answered: (i) => (_answers[i] ?? '').trim().isNotEmpty,
+            onTap: _go,
+          ),
+          const SizedBox(height: 10),
+          _buttons(theme, isLast),
+        ],
+      ),
+    );
+  }
+
+  Widget _buttons(ThemeData theme, bool isLast) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           Expanded(

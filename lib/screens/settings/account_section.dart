@@ -5,7 +5,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../state/auth_state.dart';
+import '../../theme/app_colors.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/section_header.dart';
 
 const _kakaoYellow = Color(0xFFFEE500);
@@ -23,8 +26,9 @@ class AccountSection extends ConsumerWidget {
 
     ref.listen(authProvider, (prev, next) {
       if (next.error != null && next.error != prev?.error) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(next.error!)));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.error!)));
       }
       if (next.conflict != null && prev?.conflict == null) {
         _showConflictDialog(context, ref, next.conflict!);
@@ -195,9 +199,11 @@ class _LoggedInView extends ConsumerWidget {
     return Column(
       children: [
         ListTile(
-          leading: const CircleAvatar(child: Icon(Icons.person_rounded)),
-          title: Text('$displayName님',
-              style: const TextStyle(fontWeight: FontWeight.w700)),
+          leading: const Mascot(size: 46, mood: MascotMood.happy),
+          title: Text(
+            '$displayName님',
+            style: const TextStyle(fontWeight: FontWeight.w700),
+          ),
           subtitle: Text(_syncLabel(auth.lastSyncedAt)),
           trailing: IconButton(
             icon: const Icon(Icons.edit_outlined, size: 20),
@@ -213,27 +219,38 @@ class _LoggedInView extends ConsumerWidget {
                   height: 20,
                   child: CircularProgressIndicator(strokeWidth: 2),
                 )
-              : const Icon(Icons.sync_rounded),
-          title: const Text('지금 동기화',
-              style: TextStyle(fontWeight: FontWeight.w600)),
+              : const EmojiBadge('☁️', color: AppColors.accent, size: 38),
+          title: const Text(
+            '지금 동기화',
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
           onTap: auth.syncing ? null : notifier.syncNow,
         ),
         const Divider(height: 1, indent: 16, endIndent: 16),
         ListTile(
-          leading: const Icon(Icons.logout_rounded),
-          title: const Text('로그아웃',
-              style: TextStyle(fontWeight: FontWeight.w600)),
+          leading: const EmojiBadge('👋', color: AppColors.primary, size: 38),
+          title: const Text(
+            '로그아웃',
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
           onTap: auth.syncing ? null : notifier.logout,
         ),
         const Divider(height: 1, indent: 16, endIndent: 16),
         ListTile(
-          leading: Icon(Icons.person_remove_outlined,
-              color: Theme.of(context).colorScheme.error),
-          title: Text('회원탈퇴',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Theme.of(context).colorScheme.error)),
-          onTap: auth.syncing ? null : () => _confirmDeleteAccount(context, ref),
+          leading: Icon(
+            Icons.person_remove_outlined,
+            color: Theme.of(context).colorScheme.error,
+          ),
+          title: Text(
+            '회원탈퇴',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: Theme.of(context).colorScheme.error,
+            ),
+          ),
+          onTap: auth.syncing
+              ? null
+              : () => _confirmDeleteAccount(context, ref),
         ),
       ],
     );
@@ -247,7 +264,10 @@ class _LoggedInView extends ConsumerWidget {
   }
 
   Future<void> _editNickname(
-      BuildContext context, WidgetRef ref, String current) async {
+    BuildContext context,
+    WidgetRef ref,
+    String current,
+  ) async {
     final controller = TextEditingController(text: current);
     final messenger = ScaffoldMessenger.of(context);
     final result = await showDialog<String>(
@@ -266,7 +286,8 @@ class _LoggedInView extends ConsumerWidget {
             child: const Text('취소'),
           ),
           FilledButton(
-            onPressed: () => Navigator.of(dialogContext).pop(controller.text.trim()),
+            onPressed: () =>
+                Navigator.of(dialogContext).pop(controller.text.trim()),
             child: const Text('저장'),
           ),
         ],
@@ -279,7 +300,10 @@ class _LoggedInView extends ConsumerWidget {
     }
   }
 
-  Future<void> _confirmDeleteAccount(BuildContext context, WidgetRef ref) async {
+  Future<void> _confirmDeleteAccount(
+    BuildContext context,
+    WidgetRef ref,
+  ) async {
     final messenger = ScaffoldMessenger.of(context);
     final confirmed = await showDialog<bool>(
       context: context,
@@ -315,7 +339,10 @@ class _LoggedInView extends ConsumerWidget {
 /// 로그인 직후 이 기기와 계정(클라우드) 기록이 둘 다 있을 때 — 조용히 합치지 않고
 /// 합치기/계정 기록으로 교체/취소 중에서 고르게 한다.
 Future<void> _showConflictDialog(
-    BuildContext context, WidgetRef ref, ProgressConflict conflict) async {
+  BuildContext context,
+  WidgetRef ref,
+  ProgressConflict conflict,
+) async {
   final notifier = ref.read(authProvider.notifier);
   final available = MediaQuery.sizeOf(context).width - 72;
   final width = available > 340 ? 340.0 : available;

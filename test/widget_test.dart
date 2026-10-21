@@ -457,10 +457,23 @@ void main() {
     });
 
     group('decideIapOutcome (검증 실패/재시도/중복지급 방지 핵심 로직)', () {
-      test('로그인 안 됨(토큰 없음) → 완료 처리 안 함, 재로그인 후 재시도', () {
-        final d = decideIapOutcome(token: null, result: null, hadError: false);
-        expect(d.outcome, IapOutcome.needsLogin);
+      test('게스트(토큰 없음) 구매도 서버 확정 응답을 못 받으면 재시도 — 에러 취급 안 함', () {
+        final d = decideIapOutcome(token: null, result: null, hadError: true);
+        expect(d.outcome, IapOutcome.retryLater);
         expect(d.shouldComplete, isFalse);
+      });
+
+      test('게스트(토큰 없음) 힌트쿠폰 검증 통과 → balance는 null, grantedAmount로 로컬 반영', () {
+        final d = decideIapOutcome(
+          token: null,
+          result: const IapVerifyResult(
+              verified: true, kind: 'hint_coupons', coupons: 10),
+          hadError: false,
+        );
+        expect(d.outcome, IapOutcome.grantedCoupons);
+        expect(d.shouldComplete, isTrue);
+        expect(d.balance, isNull);
+        expect(d.grantedAmount, 10);
       });
 
       test('네트워크/서버 오류로 확정 응답 못 받음 → 완료 처리 안 하고 다음 실행 때 재시도', () {
@@ -742,6 +755,60 @@ void main() {
       for (final key in concepts.keys) {
         expect(valid.contains(key), isTrue, reason: '연결 안되는 개념 키: $key');
       }
+    });
+  });
+
+  group('회귀: 연속 출석·IAP 메시지', () {
+    test('currentStreak는 며칠 쉬면 0으로 돌아간다(저장된 streakDays와 무관)', () {
+      final now = DateTime(2026, 10, 21);
+      final stats = UserStats.empty().copyWith(
+        streakDays: 7,
+        attendance: {'2026-10-15', '2026-10-16', '2026-10-17'},
+      );
+      expect(stats.currentStreak(now), 0);
+      final recent = stats.copyWith(
+          attendance: {'2026-10-19', '2026-10-20', '2026-10-21'});
+      expect(recent.currentStreak(now), 3);
+      // 오늘 미출석이어도 어제까지 이어졌으면 유지
+      final yesterdayOnly =
+          stats.copyWith(attendance: {'2026-10-19', '2026-10-20'});
+      expect(yesterdayOnly.currentStreak(now), 2);
+    });
+
+    test('IapState는 같은 문구여도 messageSeq가 증가해 새 메시지로 인식된다', () {
+      var s = const IapState();
+      s = s.copyWith(message: '힌트쿠폰이 부족해요');
+      final first = s.messageSeq;
+      s = s.copyWith(busy: false); // 다른 필드 변경은 seq 유지
+      expect(s.messageSeq, first);
+      s = s.copyWith(message: '힌트쿠폰이 부족해요');
+      expect(s.messageSeq, first + 1);
+    });
+  });
+
+  group('오답 병합(삭제 기록)', () {
+    test('다른 기기에서 나중에 맞혀 지운 문제는 병합 후 되살아나지 않는다', () {
+      final a = UserStats.empty().copyWith(
+        wrongProblems: {_p.id: _p},
+        wrongAddedAt: {_p.id: 1000},
+      );
+      final b = UserStats.empty().copyWith(wrongRemovedAt: {_p.id: 2000});
+      expect(a.mergedWith(b).wrongProblems, isEmpty);
+      expect(b.mergedWith(a).wrongProblems, isEmpty);
+    });
+
+    test('지운 뒤 다시 틀려 담은 문제는 유지된다', () {
+      final a = UserStats.empty().copyWith(
+        wrongProblems: {_p.id: _p},
+        wrongAddedAt: {_p.id: 3000},
+      );
+      final b = UserStats.empty().copyWith(wrongRemovedAt: {_p.id: 2000});
+      expect(a.mergedWith(b).wrongProblems.containsKey(_p.id), isTrue);
+    });
+
+    test('시각 기록이 없는 예전 데이터는 그대로 합집합', () {
+      final a = UserStats.empty().copyWith(wrongProblems: {_p.id: _p});
+      expect(a.mergedWith(UserStats.empty()).wrongProblems.length, 1);
     });
   });
 }

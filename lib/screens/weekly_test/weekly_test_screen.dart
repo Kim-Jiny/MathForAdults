@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
-import '../../widgets/math_text.dart';
+import '../../widgets/exam_parts.dart';
 import 'weekly_test_result_screen.dart';
 
 /// 주간시험 응시 화면: 제출 전 정답 비공개 + 일괄 채점(모의수능과 동일 패턴, 타이머 없음).
@@ -139,14 +139,7 @@ class _WeeklyTestScreenState extends ConsumerState<WeeklyTestScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('이번 주 시험'),
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(3),
-            child: LinearProgressIndicator(
-              value: (_index + 1) / _ps.length,
-              minHeight: 3,
-              backgroundColor: theme.colorScheme.outlineVariant,
-            ),
-          ),
+          bottom: examProgressBar(theme, (_index + 1) / _ps.length),
         ),
         body: SafeArea(
           top: false,
@@ -156,40 +149,13 @@ class _WeeklyTestScreenState extends ConsumerState<WeeklyTestScreen> {
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          '${_index + 1}',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.w900,
-                            color: theme.colorScheme.primary,
-                          ),
-                        ),
-                        Text(
-                          ' / ${_ps.length}',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          p.lesson,
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.onSurfaceVariant,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
+                    ExamQuestionCard(
+                      index: _index,
+                      total: _ps.length,
+                      label: p.lesson,
+                      question: p.question,
                     ),
-                    const SizedBox(height: 16),
-                    MathText(
-                      p.question,
-                      style: theme.textTheme.titleLarge?.copyWith(
-                        height: 1.55,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 20),
                     if (p.type == ProblemType.short)
                       _shortInput(theme)
                     else
@@ -222,75 +188,42 @@ class _WeeklyTestScreenState extends ConsumerState<WeeklyTestScreen> {
     );
   }
 
-  Widget _choiceTile(int c) {
-    final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
-    final selected = _answers[_index] == '$c';
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        color: selected
-            ? scheme.primaryContainer.withValues(alpha: 0.35)
-            : scheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => _selectChoice(c),
-          child: Container(
-            constraints: const BoxConstraints(minHeight: 58),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: selected ? scheme.primary : scheme.outlineVariant,
-                width: selected ? 1.6 : 1.2,
-              ),
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 30,
-                  height: 30,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: selected
-                        ? scheme.primary
-                        : scheme.surfaceContainerHighest,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Text(
-                    '${c + 1}',
-                    style: TextStyle(
-                      color: selected
-                          ? scheme.onPrimary
-                          : scheme.onSurfaceVariant,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: MathText(
-                    _p.choices[c],
-                    style: theme.textTheme.titleMedium,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+  Widget _choiceTile(int c) => ExamChoiceTile(
+    number: c + 1,
+    text: _p.choices[c],
+    selected: _answers[_index] == '$c',
+    onTap: () => _selectChoice(c),
+  );
 
   Widget _navBar(ThemeData theme) {
     final isLast = _index + 1 >= _ps.length;
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+      padding: const EdgeInsets.fromLTRB(0, 12, 0, 16),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        border: Border(top: BorderSide(color: theme.colorScheme.outlineVariant)),
+        border: Border(
+          top: BorderSide(color: theme.colorScheme.outlineVariant, width: 2),
+        ),
       ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ExamNavigator(
+            count: _ps.length,
+            current: _index,
+            answered: (i) => (_answers[i] ?? '').trim().isNotEmpty,
+            onTap: _go,
+          ),
+          const SizedBox(height: 10),
+          _buttons(theme, isLast),
+        ],
+      ),
+    );
+  }
+
+  Widget _buttons(ThemeData theme, bool isLast) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           Expanded(

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/math_problem.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/math_text.dart';
 
 /// 정답/해설 패널. 정답 여부 → 짧은 해설 → 상세 해설(접기) → 액션들.
@@ -43,8 +44,8 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: bg,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: color.withValues(alpha: 0.35)),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: color.withValues(alpha: 0.45), width: 2),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,17 +53,19 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
           // 정답 여부 (부드러운 칭찬 / 부담 없는 문구)
           Row(
             children: [
-              Icon(
-                correct
-                    ? Icons.check_circle_rounded
-                    : Icons.lightbulb_outline_rounded,
-                color: color,
+              Mascot(
+                size: 52,
+                mood: correct ? MascotMood.cheer : MascotMood.think,
               ),
-              const SizedBox(width: 8),
-              Text(
-                correct ? '정답이에요, 좋아요!' : '괜찮아요, 같이 볼까요',
-                style: theme.textTheme.titleMedium
-                    ?.copyWith(color: color, fontWeight: FontWeight.w800),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  correct ? '정답이에요, 좋아요!' : '괜찮아요, 같이 볼까요',
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    color: color,
+                    fontSize: 18,
+                  ),
+                ),
               ),
             ],
           ),
@@ -71,36 +74,45 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('정답  ',
-                  style: theme.textTheme.bodyMedium
-                      ?.copyWith(fontWeight: FontWeight.w800)),
+              Text(
+                '정답  ',
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               if (p.type == ProblemType.choice) ...[
                 Container(
                   width: 22,
                   height: 22,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: AppColors.correctOf(theme.brightness),
-                      shape: BoxShape.circle),
-                  child: Text('${p.answerIndex + 1}',
-                      style: TextStyle(
-                          color: theme.brightness == Brightness.dark
-                              ? const Color(0xFF14181C)
-                              : Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700)),
+                    color: AppColors.correctOf(theme.brightness),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(
+                    '${p.answerIndex + 1}',
+                    style: TextStyle(
+                      color: theme.brightness == Brightness.dark
+                          ? const Color(0xFF14181C)
+                          : Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 8),
               ],
-              Expanded(child: MathText(p.correctAnswerDisplay)),
+              Expanded(child: MathText(p.correctAnswerDisplay, wholeIfMath: true)),
             ],
           ),
           const SizedBox(height: 12),
           Divider(color: color.withValues(alpha: 0.2)),
           const SizedBox(height: 8),
           // 짧은 해설
-          MathText(p.explanation,
-              style: theme.textTheme.bodyLarge?.copyWith(height: 1.55)),
+          MathText(
+            p.explanation,
+            style: theme.textTheme.bodyLarge?.copyWith(height: 1.55),
+          ),
           // 상세 해설 (접기/펼치기)
           if (p.detailedExplanation != null) ...[
             const SizedBox(height: 8),
@@ -111,11 +123,13 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
                 padding: const EdgeInsets.symmetric(vertical: 6),
                 child: Row(
                   children: [
-                    Text('자세한 풀이',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.primary,
-                          fontWeight: FontWeight.w700,
-                        )),
+                    Text(
+                      '자세한 풀이',
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        color: theme.colorScheme.primary,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                     Icon(
                       _expanded ? Icons.expand_less : Icons.expand_more,
                       size: 20,
@@ -137,8 +151,10 @@ class _ExplanationPanelState extends ConsumerState<ExplanationPanel> {
                   color: theme.colorScheme.surface.withValues(alpha: 0.7),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: MathText(p.detailedExplanation!,
-                    style: theme.textTheme.bodyMedium?.copyWith(height: 1.6)),
+                child: MathText(
+                  p.detailedExplanation!,
+                  style: theme.textTheme.bodyMedium?.copyWith(height: 1.6),
+                ),
               ),
               secondChild: const SizedBox(width: double.infinity),
             ),

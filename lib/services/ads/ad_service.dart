@@ -47,8 +47,7 @@ class AdService {
 
     // 설치(최초 실행) 시각을 30분 게이트 기준으로 기록.
     if (!prefs.containsKey(_kInstallAtKey)) {
-      await prefs.setInt(
-          _kInstallAtKey, DateTime.now().millisecondsSinceEpoch);
+      await prefs.setInt(_kInstallAtKey, DateTime.now().millisecondsSinceEpoch);
     }
 
     try {
@@ -241,9 +240,11 @@ class AdService {
       },
     );
 
-    ad.show(onUserEarnedReward: (ad, reward) {
-      earned = true;
-    });
+    ad.show(
+      onUserEarnedReward: (ad, reward) {
+        earned = true;
+      },
+    );
 
     return completer.future;
   }

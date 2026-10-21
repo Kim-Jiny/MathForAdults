@@ -16,7 +16,8 @@ class CurriculumIndex {
   IdxChapter? chapter(String subjectName, String chapterName) =>
       subject(subjectName)?.chapter(chapterName);
 
-  factory CurriculumIndex.fromJson(Map<String, dynamic> json) => CurriculumIndex(
+  factory CurriculumIndex.fromJson(Map<String, dynamic> json) =>
+      CurriculumIndex(
         (json['subjects'] as List<dynamic>)
             .map((s) => IdxSubject.fromJson(s as Map<String, dynamic>))
             .toList(),
@@ -44,17 +45,18 @@ class IdxSubject {
   }
 
   /// 이 과목에 존재하는 난이도 집합
-  Set<Difficulty> get difficulties =>
-      {for (final c in chapters) ...c.difficulties};
+  Set<Difficulty> get difficulties => {
+    for (final c in chapters) ...c.difficulties,
+  };
 
   factory IdxSubject.fromJson(Map<String, dynamic> json) => IdxSubject(
-        name: json['name'] as String,
-        emoji: json['emoji'] as String? ?? '📚',
-        file: json['file'] as String,
-        chapters: (json['chapters'] as List<dynamic>)
-            .map((c) => IdxChapter.fromJson(c as Map<String, dynamic>))
-            .toList(),
-      );
+    name: json['name'] as String,
+    emoji: json['emoji'] as String? ?? '📚',
+    file: json['file'] as String,
+    chapters: (json['chapters'] as List<dynamic>)
+        .map((c) => IdxChapter.fromJson(c as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 class IdxChapter {
@@ -68,16 +70,17 @@ class IdxChapter {
     required this.lessons,
   });
 
-  Set<Difficulty> get difficulties =>
-      {for (final l in lessons) ...l.difficulties};
+  Set<Difficulty> get difficulties => {
+    for (final l in lessons) ...l.difficulties,
+  };
 
   factory IdxChapter.fromJson(Map<String, dynamic> json) => IdxChapter(
-        name: json['name'] as String,
-        count: json['count'] as int? ?? 0,
-        lessons: (json['lessons'] as List<dynamic>)
-            .map((l) => IdxLesson.fromJson(l as Map<String, dynamic>))
-            .toList(),
-      );
+    name: json['name'] as String,
+    count: json['count'] as int? ?? 0,
+    lessons: (json['lessons'] as List<dynamic>)
+        .map((l) => IdxLesson.fromJson(l as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 class IdxLesson {
@@ -92,10 +95,10 @@ class IdxLesson {
   });
 
   factory IdxLesson.fromJson(Map<String, dynamic> json) => IdxLesson(
-        name: json['name'] as String,
-        difficulties: (json['difficulties'] as List<dynamic>)
-            .map((d) => DifficultyInfo.fromLabel(d as String))
-            .toList(),
-        count: json['count'] as int? ?? 0,
-      );
+    name: json['name'] as String,
+    difficulties: (json['difficulties'] as List<dynamic>)
+        .map((d) => DifficultyInfo.fromLabel(d as String))
+        .toList(),
+    count: json['count'] as int? ?? 0,
+  );
 }

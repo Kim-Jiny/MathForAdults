@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/concept_card.dart';
 import '../screens/concept/concept_detail_screen.dart';
+import 'mascot.dart';
 import 'math_text.dart';
 
 /// 개념 요약 바텀시트. 핵심 포인트 몇 개만 빠르게 훑고,
@@ -9,12 +10,7 @@ import 'math_text.dart';
 void showConceptSheet(BuildContext context, ConceptCard card) {
   showModalBottomSheet(
     context: context,
-    showDragHandle: true,
     isScrollControlled: true,
-    backgroundColor: Theme.of(context).colorScheme.surface,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-    ),
     builder: (ctx) {
       final theme = Theme.of(ctx);
       final scheme = theme.colorScheme;
@@ -33,23 +29,23 @@ void showConceptSheet(BuildContext context, ConceptCard card) {
               children: [
                 Row(
                   children: [
-                    const Text('📘', style: TextStyle(fontSize: 22)),
-                    const SizedBox(width: 8),
+                    const Mascot(size: 52, mood: MascotMood.think),
+                    const SizedBox(width: 10),
                     Expanded(
-                      child: Text(
-                        '개념 · ${card.title}',
-                        style: theme.textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.w800,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(card.title, style: theme.textTheme.titleLarge),
+                          Text(
+                            '${card.subject} › ${card.chapter}',
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: scheme.onSurfaceVariant,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
-                ),
-                Text(
-                  '${card.subject} › ${card.chapter}',
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: scheme.onSurfaceVariant,
-                  ),
                 ),
                 const SizedBox(height: 14),
                 Flexible(
@@ -61,12 +57,21 @@ void showConceptSheet(BuildContext context, ConceptCard card) {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 7, right: 10),
-                          width: 6,
-                          height: 6,
+                          margin: const EdgeInsets.only(top: 2, right: 10),
+                          width: 24,
+                          height: 24,
+                          alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: scheme.primary,
                             shape: BoxShape.circle,
+                          ),
+                          child: Text(
+                            '${i + 1}',
+                            style: TextStyle(
+                              color: scheme.onPrimary,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
+                            ),
                           ),
                         ),
                         Expanded(
@@ -84,7 +89,7 @@ void showConceptSheet(BuildContext context, ConceptCard card) {
                 const SizedBox(height: 16),
                 FilledButton.tonalIcon(
                   style: FilledButton.styleFrom(
-                    minimumSize: const Size.fromHeight(48),
+                    minimumSize: const Size.fromHeight(52),
                   ),
                   onPressed: () {
                     Navigator.of(ctx).pop();
@@ -95,9 +100,7 @@ void showConceptSheet(BuildContext context, ConceptCard card) {
                     );
                   },
                   icon: const Icon(Icons.menu_book_rounded, size: 18),
-                  label: Text(
-                    hidden > 0 ? '자세히 보기 (+$hidden개 더)' : '자세히 보기',
-                  ),
+                  label: Text(hidden > 0 ? '자세히 보기 (+$hidden개 더)' : '자세히 보기'),
                 ),
               ],
             ),

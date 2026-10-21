@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/exam.dart';
 import '../../state/app_state.dart';
 import '../../widgets/app_card.dart';
+import '../../widgets/cute.dart';
 import 'exam_builder.dart';
 import 'mock_exam_screen.dart';
 
@@ -81,25 +82,26 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
             ),
           ),
           const SizedBox(height: 10),
-          Wrap(
-            spacing: 10,
-            children: kElectiveSubjects.map((s) {
-              final sel = _elective == s;
-              return ChoiceChip(
-                label: Text(s),
-                selected: sel,
-                onSelected: (_) => setState(() => _elective = s),
-                showCheckmark: false,
-                labelStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: sel
-                      ? theme.colorScheme.onPrimary
-                      : theme.colorScheme.onSurfaceVariant,
-                ),
-                selectedColor: theme.colorScheme.primary,
-                side: BorderSide(color: theme.colorScheme.outlineVariant),
+          LayoutBuilder(
+            builder: (context, c) {
+              final w = (c.maxWidth - 20) / 3;
+              const emojis = {'확률과 통계': '🎲', '미적분': '📈', '기하': '📐'};
+              return Wrap(
+                spacing: 10,
+                children: [
+                  for (final s in kElectiveSubjects)
+                    SizedBox(
+                      width: w,
+                      child: _ElectiveTile(
+                        emoji: emojis[s] ?? '📚',
+                        label: s,
+                        selected: _elective == s,
+                        onTap: () => setState(() => _elective = s),
+                      ),
+                    ),
+                ],
               );
-            }).toList(),
+            },
           ),
           const SizedBox(height: 24),
 
@@ -121,13 +123,16 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
                     : null,
                 child: Row(
                   children: [
-                    Icon(
-                      sel
-                          ? Icons.radio_button_checked
-                          : Icons.radio_button_unchecked,
+                    EmojiBadge(
+                      switch (p) {
+                        ExamPreset.real => '🏫',
+                        ExamPreset.half => '📝',
+                        ExamPreset.mini => '🍀',
+                      },
                       color: sel
                           ? theme.colorScheme.primary
-                          : theme.colorScheme.outline,
+                          : theme.colorScheme.outlineVariant,
+                      size: 46,
                     ),
                     const SizedBox(width: 14),
                     Expanded(
@@ -176,6 +181,60 @@ class _MockExamSetupScreenState extends ConsumerState<MockExamSetupScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// 선택 과목 큰 타일.
+class _ElectiveTile extends StatelessWidget {
+  final String emoji;
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+  const _ElectiveTile({
+    required this.emoji,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final color = selected ? scheme.primary : scheme.outlineVariant;
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [BoxShadow(color: color, offset: const Offset(0, 4))],
+      ),
+      child: Material(
+        color: selected ? scheme.primaryContainer : scheme.surface,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(22),
+          side: BorderSide(color: color, width: 2),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 14),
+            child: Column(
+              children: [
+                Text(emoji, style: const TextStyle(fontSize: 28)),
+                const SizedBox(height: 6),
+                Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.titleSmall?.copyWith(
+                    color: selected ? scheme.primary : scheme.onSurface,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

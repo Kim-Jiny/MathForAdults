@@ -49,8 +49,8 @@ class MathProblem {
   String get correctAnswerDisplay => type == ProblemType.short
       ? (answerText ?? '')
       : (answerIndex >= 0 && answerIndex < choices.length
-          ? choices[answerIndex]
-          : '');
+            ? choices[answerIndex]
+            : '');
 
   /// 응답이 정답인지 판정.
   /// - choice: 선택한 보기 인덱스 문자열("0"~"3")
@@ -66,42 +66,42 @@ class MathProblem {
       s.replaceAll(RegExp(r'\s+'), '').toLowerCase();
 
   factory MathProblem.fromJson(Map<String, dynamic> json) => MathProblem(
-        id: json['id'] as String,
-        subject: json['subject'] as String,
-        chapter: json['chapter'] as String,
-        lesson: json['lesson'] as String,
-        difficulty: DifficultyInfo.fromLabel(json['difficulty'] as String),
-        type: (json['type'] as String?) == 'short'
-            ? ProblemType.short
-            : ProblemType.choice,
-        question: json['question'] as String,
-        choices: (json['choices'] as List<dynamic>? ?? const [])
-            .map((e) => e.toString())
-            .toList(),
-        answerIndex: json['answerIndex'] as int? ?? 0,
-        answerText: json['answer'] as String?,
-        explanation: json['explanation'] as String,
-        detailedExplanation: json['detailedExplanation'] as String?,
-        hints: (json['hints'] as List<dynamic>? ?? const [])
-            .map((e) => e.toString())
-            .toList(),
-        estimatedTime: json['estimatedTime'] as String? ?? '1분',
-      );
+    id: json['id'] as String,
+    subject: json['subject'] as String,
+    chapter: json['chapter'] as String,
+    lesson: json['lesson'] as String,
+    difficulty: DifficultyInfo.fromLabel(json['difficulty'] as String),
+    type: (json['type'] as String?) == 'short'
+        ? ProblemType.short
+        : ProblemType.choice,
+    question: json['question'] as String,
+    choices: (json['choices'] as List<dynamic>? ?? const [])
+        .map((e) => e.toString())
+        .toList(),
+    answerIndex: json['answerIndex'] as int? ?? 0,
+    answerText: json['answer'] as String?,
+    explanation: json['explanation'] as String,
+    detailedExplanation: json['detailedExplanation'] as String?,
+    hints: (json['hints'] as List<dynamic>? ?? const [])
+        .map((e) => e.toString())
+        .toList(),
+    estimatedTime: json['estimatedTime'] as String? ?? '1분',
+  );
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'subject': subject,
-        'chapter': chapter,
-        'lesson': lesson,
-        'difficulty': difficulty.label,
-        'type': type == ProblemType.short ? 'short' : 'choice',
-        'question': question,
-        'choices': choices,
-        'answerIndex': answerIndex,
-        if (answerText != null) 'answer': answerText,
-        'explanation': explanation,
-        'detailedExplanation': detailedExplanation,
-        if (hints.isNotEmpty) 'hints': hints,
-        'estimatedTime': estimatedTime,
-      };
+    'id': id,
+    'subject': subject,
+    'chapter': chapter,
+    'lesson': lesson,
+    'difficulty': difficulty.label,
+    'type': type == ProblemType.short ? 'short' : 'choice',
+    'question': question,
+    'choices': choices,
+    'answerIndex': answerIndex,
+    if (answerText != null) 'answer': answerText,
+    'explanation': explanation,
+    'detailedExplanation': detailedExplanation,
+    if (hints.isNotEmpty) 'hints': hints,
+    'estimatedTime': estimatedTime,
+  };
 }

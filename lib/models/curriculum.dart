@@ -23,29 +23,9 @@ const List<Subject> kCurriculum = [
     emoji: '📘',
     chapters: ['다항식', '방정식과 부등식', '도형의 방정식', '집합과 명제', '함수', '경우의 수'],
   ),
-  Subject(
-    name: '수학Ⅰ',
-    emoji: '📐',
-    chapters: ['지수함수와 로그함수', '삼각함수', '수열'],
-  ),
-  Subject(
-    name: '수학Ⅱ',
-    emoji: '📈',
-    chapters: ['함수의 극한과 연속', '미분', '적분'],
-  ),
-  Subject(
-    name: '확률과 통계',
-    emoji: '🎲',
-    chapters: ['경우의 수', '확률', '통계'],
-  ),
-  Subject(
-    name: '미적분',
-    emoji: '♾️',
-    chapters: ['수열의 극한', '미분법', '적분법'],
-  ),
-  Subject(
-    name: '기하',
-    emoji: '📏',
-    chapters: ['이차곡선', '평면벡터', '공간도형과 공간좌표'],
-  ),
+  Subject(name: '수학Ⅰ', emoji: '📐', chapters: ['지수함수와 로그함수', '삼각함수', '수열']),
+  Subject(name: '수학Ⅱ', emoji: '📈', chapters: ['함수의 극한과 연속', '미분', '적분']),
+  Subject(name: '확률과 통계', emoji: '🎲', chapters: ['경우의 수', '확률', '통계']),
+  Subject(name: '미적분', emoji: '♾️', chapters: ['수열의 극한', '미분법', '적분법']),
+  Subject(name: '기하', emoji: '📏', chapters: ['이차곡선', '평면벡터', '공간도형과 공간좌표']),
 ];

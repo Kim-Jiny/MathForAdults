@@ -5,6 +5,7 @@ import '../../state/app_state.dart';
 import '../../state/auth_state.dart';
 import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/mascot.dart';
 
 /// 홈 상단 출석 버튼. 탭하면 출석 달력 시트가 열린다.
 class AttendanceButton extends ConsumerWidget {
@@ -31,12 +32,18 @@ class AttendanceButton extends ConsumerWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(done ? Icons.local_fire_department_rounded : Icons.event_available_rounded,
-                  size: 16,
-                  color: done ? AppColors.streakOf(theme.brightness) : scheme.primary),
+              Icon(
+                done
+                    ? Icons.local_fire_department_rounded
+                    : Icons.event_available_rounded,
+                size: 16,
+                color: done
+                    ? AppColors.streakOf(theme.brightness)
+                    : scheme.primary,
+              ),
               const SizedBox(width: 5),
               Text(
-                done ? '${stats.streakDays}일째' : '출석하기',
+                done ? '${stats.currentStreak()}일째' : '출석하기',
                 style: theme.textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.w800,
                   color: done ? scheme.onSurface : scheme.primary,
@@ -117,31 +124,42 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
           children: [
             Row(
               children: [
-                Text('출석',
-                    style: theme.textTheme.titleLarge
-                        ?.copyWith(fontWeight: FontWeight.w800)),
+                Mascot(
+                  size: 44,
+                  mood: attendedToday ? MascotMood.cheer : MascotMood.happy,
+                ),
+                const SizedBox(width: 6),
+                Text('출석', style: theme.textTheme.titleLarge),
                 const SizedBox(width: 10),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
                   decoration: BoxDecoration(
-                    color: AppColors.streakOf(theme.brightness)
-                        .withValues(alpha: 0.14),
+                    color: AppColors.streakOf(
+                      theme.brightness,
+                    ).withValues(alpha: 0.14),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.local_fire_department_rounded,
-                          size: 15,
-                          color: AppColors.streakOf(theme.brightness)),
+                      Icon(
+                        Icons.local_fire_department_rounded,
+                        size: 15,
+                        color: AppColors.streakOf(theme.brightness),
+                      ),
                       const SizedBox(width: 4),
-                      Text('연속 ${stats.streakDays}일',
-                          style: theme.textTheme.labelMedium?.copyWith(
-                              fontWeight: FontWeight.w800,
-                              color: theme.brightness == Brightness.dark
-                                  ? AppColors.streakDark
-                                  : const Color(0xFFB96B22))),
+                      Text(
+                        '연속 ${stats.currentStreak()}일',
+                        style: theme.textTheme.labelMedium?.copyWith(
+                          fontWeight: FontWeight.w800,
+                          color: theme.brightness == Brightness.dark
+                              ? AppColors.streakDark
+                              : const Color(0xFFB96B22),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -149,7 +167,9 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                 if (loggedIn)
                   Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 4),
+                      horizontal: 10,
+                      vertical: 4,
+                    ),
                     decoration: BoxDecoration(
                       color: scheme.secondary.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(20),
@@ -157,13 +177,19 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.confirmation_number_rounded,
-                            size: 15, color: scheme.secondary),
+                        Icon(
+                          Icons.confirmation_number_rounded,
+                          size: 15,
+                          color: scheme.secondary,
+                        ),
                         const SizedBox(width: 4),
-                        Text('힌트쿠폰 $hintCoupons개',
-                            style: theme.textTheme.labelMedium?.copyWith(
-                                fontWeight: FontWeight.w800,
-                                color: scheme.secondary)),
+                        Text(
+                          '힌트쿠폰 $hintCoupons개',
+                          style: theme.textTheme.labelMedium?.copyWith(
+                            fontWeight: FontWeight.w800,
+                            color: scheme.secondary,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -174,8 +200,9 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
               loggedIn
                   ? '출석하면 힌트쿠폰 1개를 드려요(하루 1개, 계정당)'
                   : '로그인하면 출석할 때마다 힌트쿠폰 1개를 받을 수 있어요',
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: scheme.onSurfaceVariant),
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: scheme.onSurfaceVariant,
+              ),
             ),
             const SizedBox(height: 16),
 
@@ -183,36 +210,49 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
             Row(
               children: [
                 IconButton(
-                    onPressed: () => _shiftMonth(-1),
-                    icon: const Icon(Icons.chevron_left_rounded)),
+                  onPressed: () => _shiftMonth(-1),
+                  icon: const Icon(Icons.chevron_left_rounded),
+                ),
                 Expanded(
-                  child: Text('${_month.year}년 ${_month.month}월',
-                      textAlign: TextAlign.center,
-                      style: theme.textTheme.titleMedium
-                          ?.copyWith(fontWeight: FontWeight.w700)),
+                  child: Text(
+                    '${_month.year}년 ${_month.month}월',
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
                 IconButton(
-                    onPressed: () => _shiftMonth(1),
-                    icon: const Icon(Icons.chevron_right_rounded)),
+                  onPressed: () => _shiftMonth(1),
+                  icon: const Icon(Icons.chevron_right_rounded),
+                ),
               ],
             ),
             const SizedBox(height: 4),
-            Text('이번 달 $monthCount일 출석',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: scheme.onSurfaceVariant)),
+            Text(
+              '이번 달 $monthCount일 출석',
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: scheme.onSurfaceVariant,
+              ),
+            ),
             const SizedBox(height: 12),
 
             // 요일 헤더
             Row(
               children: ['일', '월', '화', '수', '목', '금', '토']
-                  .map((d) => Expanded(
-                        child: Center(
-                          child: Text(d,
-                              style: theme.textTheme.labelSmall?.copyWith(
-                                  color: scheme.onSurfaceVariant,
-                                  fontWeight: FontWeight.w700)),
+                  .map(
+                    (d) => Expanded(
+                      child: Center(
+                        child: Text(
+                          d,
+                          style: theme.textTheme.labelSmall?.copyWith(
+                            color: scheme.onSurfaceVariant,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
-                      ))
+                      ),
+                    ),
+                  )
                   .toList(),
             ),
             const SizedBox(height: 6),
@@ -234,26 +274,32 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
 
             SizedBox(
               width: double.infinity,
-              child: Builder(builder: (context) {
-                // 로그인 상태에서 서버 쿠폰 지급이 아직 확정 안 됐으면(네트워크 오류 등)
-                // 로컬 출석 체크가 이미 돼 있어도 버튼을 계속 열어둬서 재시도할 수 있게 한다.
-                final needsRetry =
-                    attendedToday && loggedIn && !_claimConfirmedToday;
-                final done = attendedToday && !needsRetry;
-                return FilledButton.icon(
-                  onPressed: done ? null : () => _checkIn(context, ref, now),
-                  icon: Icon(done
-                      ? Icons.check_circle_rounded
-                      : needsRetry
+              child: Builder(
+                builder: (context) {
+                  // 로그인 상태에서 서버 쿠폰 지급이 아직 확정 안 됐으면(네트워크 오류 등)
+                  // 로컬 출석 체크가 이미 돼 있어도 버튼을 계속 열어둬서 재시도할 수 있게 한다.
+                  final needsRetry =
+                      attendedToday && loggedIn && !_claimConfirmedToday;
+                  final done = attendedToday && !needsRetry;
+                  return FilledButton.icon(
+                    onPressed: done ? null : () => _checkIn(context, ref, now),
+                    icon: Icon(
+                      done
+                          ? Icons.check_circle_rounded
+                          : needsRetry
                           ? Icons.refresh_rounded
-                          : Icons.event_available_rounded),
-                  label: Text(done
-                      ? '오늘 출석 완료!'
-                      : needsRetry
+                          : Icons.event_available_rounded,
+                    ),
+                    label: Text(
+                      done
+                          ? '오늘 출석 완료!'
+                          : needsRetry
                           ? '쿠폰 받기 재시도'
-                          : '오늘 출석하기'),
-                );
-              }),
+                          : '오늘 출석하기',
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
@@ -261,16 +307,20 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
     );
   }
 
-  Future<void> _checkIn(BuildContext context, WidgetRef ref, DateTime now) async {
+  Future<void> _checkIn(
+    BuildContext context,
+    WidgetRef ref,
+    DateTime now,
+  ) async {
     // 로컬 출석/연속일수는 항상 시도한다(이미 출석했으면 내부적으로 아무것도 안 하고
     // false를 반환할 뿐이라 재시도 호출에도 안전함).
     final newlyAttended = ref.read(statsProvider.notifier).checkIn(now);
     final loggedIn = ref.read(authProvider).loggedIn;
     if (!loggedIn) {
       if (!newlyAttended) return; // 게스트는 재시도할 서버 쿠폰 자체가 없음
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('출석 완료! 로그인하면 힌트쿠폰도 하루 1장 받을 수 있어요'),
-      ));
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('출석 완료! 로그인하면 힌트쿠폰도 하루 1장 받을 수 있어요')),
+      );
       return;
     }
     // newlyAttended가 false여도(=이미 로컬 출석은 돼 있음) 계속 진행한다 — 바로 이 지점이
@@ -281,23 +331,30 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
     final result = await ref.read(iapProvider.notifier).claimDailyCheckIn();
     if (!context.mounted) return;
     if (result != null) setState(() => _claimConfirmedToday = true);
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(result == null
-          ? '네트워크 오류로 쿠폰 지급을 확인 못했어요. 다시 시도해 주세요'
-          : result.granted
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          result == null
+              ? '네트워크 오류로 쿠폰 지급을 확인 못했어요. 다시 시도해 주세요'
+              : result.granted
               ? '출석 완료! 힌트쿠폰 +1개'
-              : '출석 완료! (쿠폰은 오늘 이미 받았어요)'),
-    ));
+              : '출석 완료! (쿠폰은 오늘 이미 받았어요)',
+        ),
+      ),
+    );
   }
 
   Widget _dayCell(
-      ThemeData theme, int day, Set<String> attendance, DateTime now) {
+    ThemeData theme,
+    int day,
+    Set<String> attendance,
+    DateTime now,
+  ) {
     final scheme = theme.colorScheme;
     final date = DateTime(_month.year, _month.month, day);
     final attended = attendance.contains(StatsNotifier.dateKey(date));
-    final isToday = date.year == now.year &&
-        date.month == now.month &&
-        date.day == now.day;
+    final isToday =
+        date.year == now.year && date.month == now.month && date.day == now.day;
     final isFuture = date.isAfter(DateTime(now.year, now.month, now.day));
 
     return Container(
@@ -306,7 +363,12 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
         shape: BoxShape.circle,
         color: attended ? scheme.primary : Colors.transparent,
         border: isToday && !attended
-            ? Border.all(color: scheme.primary, width: 1.6)
+            ? Border.all(color: scheme.primary, width: 2.4)
+            : attended
+            ? Border.all(
+                color: scheme.primary.withValues(alpha: 0.35),
+                width: 3,
+              )
             : null,
       ),
       child: Text(
@@ -316,8 +378,8 @@ class _AttendanceSheetState extends ConsumerState<_AttendanceSheet> {
           color: attended
               ? scheme.onPrimary
               : isFuture
-                  ? scheme.onSurfaceVariant.withValues(alpha: 0.4)
-                  : scheme.onSurface,
+              ? scheme.onSurfaceVariant.withValues(alpha: 0.4)
+              : scheme.onSurface,
         ),
       ),
     );

@@ -15,36 +15,36 @@ class TierSpec {
 
 extension ExamPresetInfo on ExamPreset {
   String get label => switch (this) {
-        ExamPreset.real => '실전 모의 (30문항 · 100분)',
-        ExamPreset.half => '하프 모의 (15문항 · 50분)',
-        ExamPreset.mini => '미니 모의 (10문항 · 25분)',
-      };
+    ExamPreset.real => '실전 모의 (30문항 · 100분)',
+    ExamPreset.half => '하프 모의 (15문항 · 50분)',
+    ExamPreset.mini => '미니 모의 (10문항 · 25분)',
+  };
 
   String get short => switch (this) {
-        ExamPreset.real => '실전',
-        ExamPreset.half => '하프',
-        ExamPreset.mini => '미니',
-      };
+    ExamPreset.real => '실전',
+    ExamPreset.half => '하프',
+    ExamPreset.mini => '미니',
+  };
 
   Duration get duration => switch (this) {
-        ExamPreset.real => const Duration(minutes: 100),
-        ExamPreset.half => const Duration(minutes: 50),
-        ExamPreset.mini => const Duration(minutes: 25),
-      };
+    ExamPreset.real => const Duration(minutes: 100),
+    ExamPreset.half => const Duration(minutes: 50),
+    ExamPreset.mini => const Duration(minutes: 25),
+  };
 
   /// 공통(수Ⅰ+수Ⅱ) 구간별 문항 수
   TierSpec get common => switch (this) {
-        ExamPreset.real => const TierSpec(3, 11, 8), // 22문항, 71점
-        ExamPreset.half => const TierSpec(2, 6, 3), // 11문항
-        ExamPreset.mini => const TierSpec(2, 4, 1), // 7문항
-      };
+    ExamPreset.real => const TierSpec(3, 11, 8), // 22문항, 71점
+    ExamPreset.half => const TierSpec(2, 6, 3), // 11문항
+    ExamPreset.mini => const TierSpec(2, 4, 1), // 7문항
+  };
 
   /// 선택 1과목 구간별 문항 수
   TierSpec get elective => switch (this) {
-        ExamPreset.real => const TierSpec(0, 3, 5), // 8문항, 29점 → 합 100점
-        ExamPreset.half => const TierSpec(0, 2, 2), // 4문항
-        ExamPreset.mini => const TierSpec(0, 2, 1), // 3문항
-      };
+    ExamPreset.real => const TierSpec(0, 3, 5), // 8문항, 29점 → 합 100점
+    ExamPreset.half => const TierSpec(0, 2, 2), // 4문항
+    ExamPreset.mini => const TierSpec(0, 2, 1), // 3문항
+  };
 
   int get totalQuestions => common.count + elective.count;
   int get totalPoints => common.points + elective.points;
