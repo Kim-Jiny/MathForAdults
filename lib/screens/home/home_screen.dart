@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,6 +16,7 @@ import '../../widgets/section_header.dart';
 import '../../widgets/ads/banner_ad_slot.dart';
 import '../../l10n/app_localizations.dart';
 import '../exam/mock_exam_setup_screen.dart';
+import '../game/sokoban_screen.dart';
 import '../quiz/quiz_launcher.dart';
 import '../weekly_test/weekly_test_launcher.dart';
 import 'attendance.dart';
@@ -91,6 +94,8 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: 22),
                 const SectionHeader('바로 시작'),
                 _QuickGrid(wrongCount: wrongCount, onOpenTab: onOpenTab),
+                const SizedBox(height: 12),
+                const _SokobanEntry(),
                 const BannerAdSlot(placement: BannerPlacement.home),
                 const SizedBox(height: 22),
                 const SectionHeader('이번 주 기록'),
@@ -556,6 +561,94 @@ class _QuickGrid extends ConsumerWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// 미니게임(소코반) 진입 카드 — 새싹이가 상자를 밀며 논다.
+class _SokobanEntry extends StatefulWidget {
+  const _SokobanEntry();
+
+  @override
+  State<_SokobanEntry> createState() => _SokobanEntryState();
+}
+
+class _SokobanEntryState extends State<_SokobanEntry>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 2400),
+  )..repeat();
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final p = Pastel.of(context, AppColors.primary);
+    return AppCard(
+      onTap: () => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (_) => const SokobanMenuScreen())),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 104,
+            height: 56,
+            child: AnimatedBuilder(
+              animation: _c,
+              builder: (_, _) {
+                // 0~0.5: 오른쪽으로 상자를 밀고, 0.5~1: 제자리로 돌아온다.
+                final t = _c.value;
+                final push = t < 0.5
+                    ? Curves.easeInOut.transform(t * 2)
+                    : 1 - Curves.easeInOut.transform((t - 0.5) * 2);
+                final hop = math.sin(t * math.pi * 6).abs() * 4;
+                return Stack(
+                  children: [
+                    Positioned(
+                      right: 2,
+                      top: 6,
+                      child: const Text('🌸', style: TextStyle(fontSize: 26)),
+                    ),
+                    Positioned(
+                      left: 34 + push * 30,
+                      top: 12,
+                      child: const Text('🎁', style: TextStyle(fontSize: 30)),
+                    ),
+                    Positioned(
+                      left: push * 30,
+                      top: 6 - hop,
+                      child: const Mascot(size: 40),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('상자 옮기기 게임', style: theme.textTheme.titleMedium),
+                const SizedBox(height: 2),
+                Text(
+                  '머리 식힐 겸 한 판! 소코반',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(Icons.chevron_right_rounded, color: p.fg),
+        ],
       ),
     );
   }
