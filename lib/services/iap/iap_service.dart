@@ -101,8 +101,9 @@ class IapService {
         // Android 기본값(true)은 구매 즉시 서버 검증과 무관하게 자동으로 소비 처리해버려서,
         // 검증 실패/네트워크 오류 시 결제는 되고 지급은 안 되는데 재시도 경로도 없는
         // 사고로 이어질 수 있다. 우리가 검증에 성공한 뒤에만 [consumeAndroidPurchase]로
-        // 직접 소비 처리한다(iOS는 이 개념이 없어 completePurchase만으로 충분).
-        autoConsume: false,
+        // 직접 소비 처리한다(iOS는 이 개념이 없어 completePurchase만으로 충분하고,
+        // StoreKit 플러그인이 항상 autoConsume:true를 요구하므로 Android에서만 false).
+        autoConsume: !Platform.isAndroid,
       );
 
   Future<bool> buyNonConsumable(
