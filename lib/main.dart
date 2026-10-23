@@ -10,6 +10,7 @@ import 'app.dart';
 import 'services/ads/ad_service.dart';
 import 'services/inquiry_service.dart';
 import 'services/notification_service.dart';
+import 'services/usage_events.dart';
 import 'state/app_state.dart';
 
 // Google 웹 클라이언트 ID / Kakao 네이티브 앱 키는 비밀값이 아니라 기본값으로 박아둔다.
@@ -41,6 +42,8 @@ Future<void> main() async {
   AdService.instance.init(prefs);
   // 어드민 DAU/WAU/MAU 통계용 ping. 로그인 여부 무관(게스트 포함) — 마찬가지로 await 안 함.
   InquiryService(prefs).pingDevice();
+  // 소코반·광고 사용 지표(익명). 릴리스 빌드에서만 보내고, 실패해도 앱엔 영향 없음.
+  UsageEvents.instance.init(prefs, deviceId: () => InquiryService(prefs).deviceId);
   await _initSocialLoginSdks();
 
   runApp(

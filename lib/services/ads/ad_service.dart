@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../usage_events.dart';
 import 'ad_ids.dart';
 
 /// 전면(전환형) 광고 노출 정책을 담당하는 싱글톤.
@@ -132,7 +133,10 @@ class AdService {
   /// 일반 문제 풀이의 전환 시점에서 호출. 정책을 모두 만족하면 전면 광고를 띄운다.
   ///
   /// [isMockExam] 가 true(모의수능)면 아무 것도 하지 않는다.
-  void maybeShowInterstitial({required bool isMockExam}) {
+  void maybeShowInterstitial({
+    required bool isMockExam,
+    String placement = 'quiz',
+  }) {
     if (!_initialized || isMockExam) return;
 
     final prefs = _prefs;
@@ -157,6 +161,7 @@ class AdService {
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (ad) {
         ad.dispose();
+        UsageEvents.instance.log('ad_dismissed', extra: placement);
         _loadInterstitial(); // 다음 노출용 프리로드
       },
       onAdFailedToShowFullScreenContent: (ad, error) {
@@ -165,6 +170,7 @@ class AdService {
         debugPrint('전면 광고 표시 실패: $error');
       },
     );
+    UsageEvents.instance.log('ad_shown', extra: placement);
     ad.show();
   }
 
@@ -179,7 +185,7 @@ class AdService {
   /// 확률 없이 전면 광고를 띄운다(설치 경과·쿨타임 게이트는 공통 적용). 게이트에 걸렸거나
   /// 광고가 준비되지 않았으면 아무것도 안 하고 바로 끝나고, 띄웠으면 광고가 닫힌 뒤에 끝난다.
   /// 호출 측은 이어서 할 일을 해도 된다. (소코반 '새로 하기'용)
-  Future<void> showInterstitialNow() async {
+  Future<void> showInterstitialNow({String placement = 'restart'}) async {
     final prefs = _prefs;
     if (!_initialized || prefs == null) return;
     final now = DateTime.now().millisecondsSinceEpoch;
@@ -195,6 +201,7 @@ class AdService {
     ad.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (ad) {
         ad.dispose();
+        UsageEvents.instance.log('ad_dismissed', extra: placement);
         _loadInterstitial();
         if (!done.isCompleted) done.complete();
       },
@@ -205,6 +212,7 @@ class AdService {
         if (!done.isCompleted) done.complete();
       },
     );
+    UsageEvents.instance.log('ad_shown', extra: placement);
     ad.show();
     await done.future;
   }

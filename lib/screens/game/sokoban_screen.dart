@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../services/ads/ad_service.dart';
+import '../../services/usage_events.dart';
 import '../../state/app_state.dart';
 import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
@@ -325,24 +326,36 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
   void initState() {
     super.initState();
     _resetTimer();
-    _resume();
+    _enter();
     WidgetsBinding.instance.addPostFrameCallback((_) => _showTips());
   }
 
-  /// 저장된 진행 상황이 있으면 그 자리에서 이어서 한다.
-  void _resume() {
+  /// 단계에 들어올 때 한 번: 저장된 판이 있으면 이어서(sk_resume), 아니면 새로(sk_start).
+  void _enter() {
+    UsageEvents.instance.log(
+      _resume() ? 'sk_resume' : 'sk_start',
+      level: _level + 1,
+    );
+  }
+
+  /// 저장된 진행 상황이 있으면 그 자리에서 이어서 한다. 이어했으면 true.
+  bool _resume() {
     final s = _store.load(_level);
-    if (s == null) return;
+    if (s == null) return false;
     if (!_game.restore(s.path, s.moves)) {
       _store.clear(_level);
-      return;
+      return false;
     }
     final total = _lv.seconds;
     if (total != null && s.timeLeft != null) {
       _elapsedBase = total - s.timeLeft!.clamp(0, total.toDouble());
       _timeLeft.value = s.timeLeft!;
     }
+    return true;
   }
+
+  void _logFail(String why) =>
+      UsageEvents.instance.log('sk_fail', level: _level + 1, extra: why);
 
   /// 진행 중이면 저장하고, 끝났거나 처음 상태면 저장을 지운다.
   void _persist() {
@@ -396,6 +409,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
         _clock.stop();
         HapticFeedback.heavyImpact();
         _store.clear(_level);
+        _logFail('bomb');
         setState(() {
           _phase = _Phase.exploded;
           _mood = MascotMood.sleepy;
@@ -461,7 +475,10 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
   /// 광고 제거를 구매했으면 전면 광고를 띄우지 않는다. 노출 정책은 AdService가 정한다.
   void _maybeShowInterstitial() {
     if (ref.read(adsRemovedProvider)) return;
-    AdService.instance.maybeShowInterstitial(isMockExam: false);
+    AdService.instance.maybeShowInterstitial(
+      isMockExam: false,
+      placement: 'next',
+    );
   }
 
   void _move(int dr, int dc) {
@@ -497,10 +514,17 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
         _stopTimer();
         _confetti.forward(from: 0);
         _saveBest(ref, _level, _game.moves);
+        UsageEvents.instance.log(
+          'sk_clear',
+          level: _level + 1,
+          value: _game.moves,
+          extra: '${_lv.starsFor(_game.moves)}',
+        );
       } else if ((_game.movesLeft ?? 1) <= 0) {
         _phase = _Phase.outOfSteps;
         _mood = MascotMood.sleepy;
         _stopTimer();
+        _logFail('steps');
       }
     });
     _persist();
@@ -514,6 +538,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
         _phase = _Phase.outOfSteps;
         _mood = MascotMood.sleepy;
         _stopTimer();
+        _logFail('steps');
       }
     });
     _persist();
@@ -524,7 +549,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
   Future<void> _onRefresh() async {
     if (_busy) return;
     if (_phase != _Phase.playing || _game.moves == 0) {
-      _restart();
+      _restart(count: false); // 아직 안 움직였으면 새 시도로 세지 않는다
       return;
     }
     setState(() => _busy = true);
@@ -549,6 +574,11 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
       if (mounted) setState(() => _busy = false);
       return;
     }
+    UsageEvents.instance.log(
+      'sk_restart',
+      level: _level + 1,
+      value: _game.moves,
+    );
     // 광고 제거 구매자는 광고 없이 바로 시작한다.
     if (!ref.read(adsRemovedProvider)) {
       await AdService.instance.showInterstitialNow();
@@ -558,7 +588,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
     _restart();
   }
 
-  void _restart({int? level}) {
+  void _restart({int? level, bool count = true}) {
     _store.clear(_level); // 지금 단계의 저장은 버린다
     setState(() {
       if (level != null) {
@@ -572,8 +602,12 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
       _hint = null;
       _confetti.reset();
       _resetTimer();
-      if (level != null) _resume(); // 다음 단계에 진행 중이던 판이 있으면 이어서
     });
+    if (level != null) {
+      _enter(); // 다음 단계에 진행 중이던 판이 있으면 이어서
+    } else if (count) {
+      UsageEvents.instance.log('sk_start', level: _level + 1); // 같은 단계 새 시도
+    }
     if (level != null) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _showTips());
     }
