@@ -233,7 +233,7 @@ class _LoggedInView extends ConsumerWidget {
             '로그아웃',
             style: TextStyle(fontWeight: FontWeight.w600),
           ),
-          onTap: auth.syncing ? null : notifier.logout,
+          onTap: auth.syncing ? null : () => _confirmLogout(context, notifier),
         ),
         const Divider(height: 1, indent: 16, endIndent: 16),
         ListTile(
@@ -300,6 +300,31 @@ class _LoggedInView extends ConsumerWidget {
     }
   }
 
+  Future<void> _confirmLogout(
+    BuildContext context,
+    AuthNotifier notifier,
+  ) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('로그아웃'),
+        content: const Text('로그아웃할까요?\n이 기기의 학습기록은 그대로 남아요.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('취소'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('로그아웃'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+    await notifier.logout();
+  }
+
   Future<void> _confirmDeleteAccount(
     BuildContext context,
     WidgetRef ref,
@@ -307,32 +332,82 @@ class _LoggedInView extends ConsumerWidget {
     final messenger = ScaffoldMessenger.of(context);
     final confirmed = await showDialog<bool>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('회원탈퇴'),
-        content: const Text(
-          '계정과 클라우드에 저장된 학습기록·구매 연결 정보가 삭제돼요. 이 기기에 남아있는 학습기록은 '
-          '그대로 유지되고(게스트로 계속 사용 가능), 되돌릴 수 없어요.\n\n정말 탈퇴할까요?',
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(false),
-            child: const Text('취소'),
-          ),
-          FilledButton(
-            style: FilledButton.styleFrom(
-              backgroundColor: Theme.of(dialogContext).colorScheme.error,
-            ),
-            onPressed: () => Navigator.of(dialogContext).pop(true),
-            child: const Text('탈퇴하기'),
-          ),
-        ],
-      ),
+      builder: (_) => const DeleteAccountDialog(),
     );
     if (confirmed != true) return;
     final ok = await ref.read(authProvider.notifier).deleteAccount();
     if (ok) {
       messenger.showSnackBar(const SnackBar(content: Text('탈퇴 처리됐어요')));
     }
+  }
+}
+
+/// 회원탈퇴 확인: 경고를 읽고 '회원탈퇴'를 직접 입력해야 탈퇴 버튼이 켜진다.
+class DeleteAccountDialog extends StatefulWidget {
+  const DeleteAccountDialog({super.key});
+
+  @override
+  State<DeleteAccountDialog> createState() => DeleteAccountDialogState();
+}
+
+class DeleteAccountDialogState extends State<DeleteAccountDialog> {
+  static const _phrase = '회원탈퇴';
+  final _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final error = Theme.of(context).colorScheme.error;
+    final matches = _controller.text.trim() == _phrase;
+    return AlertDialog(
+      title: const Text('회원탈퇴'),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            '계정과 클라우드에 저장된 학습기록·구매 연결 정보가 삭제돼요. 이 기기에 남아있는 학습기록은 '
+            '그대로 유지되고(게스트로 계속 사용 가능), 되돌릴 수 없어요.',
+          ),
+          const SizedBox(height: 16),
+          Text.rich(
+            TextSpan(
+              children: [
+                const TextSpan(text: '탈퇴하려면 아래 칸에 '),
+                TextSpan(
+                  text: _phrase,
+                  style: TextStyle(fontWeight: FontWeight.w800, color: error),
+                ),
+                const TextSpan(text: '를 입력해 주세요.'),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            controller: _controller,
+            autofocus: true,
+            onChanged: (_) => setState(() {}),
+            decoration: const InputDecoration(hintText: _phrase),
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(false),
+          child: const Text('취소'),
+        ),
+        FilledButton(
+          style: FilledButton.styleFrom(backgroundColor: error),
+          onPressed: matches ? () => Navigator.of(context).pop(true) : null,
+          child: const Text('탈퇴하기'),
+        ),
+      ],
+    );
   }
 }
 
