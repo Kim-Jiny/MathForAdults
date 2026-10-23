@@ -3,7 +3,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kDebugMode;
 
 /// 배너가 들어가는 화면 위치. 위치마다 별도의 AdMob 광고 단위를 쓴다.
-enum BannerPlacement { home, subjects, stats, settings, quiz }
+enum BannerPlacement { home, subjects, stats, settings, quiz, sokoban }
 
 /// AdMob 광고 단위 ID 모음.
 ///
@@ -36,6 +36,7 @@ class AdIds {
     BannerPlacement.stats: 'ca-app-pub-2707874353926722/9823719979',
     BannerPlacement.settings: 'ca-app-pub-2707874353926722/3151068632',
     BannerPlacement.quiz: 'ca-app-pub-2707874353926722/7197556633',
+    BannerPlacement.sokoban: 'ca-app-pub-2707874353926722/6131873972',
   };
 
   static const Map<BannerPlacement, String> _bannerIos = {
@@ -44,6 +45,7 @@ class AdIds {
     BannerPlacement.stats: 'ca-app-pub-2707874353926722/5594654750',
     BannerPlacement.settings: 'ca-app-pub-2707874353926722/7123358844',
     BannerPlacement.quiz: 'ca-app-pub-2707874353926722/7720869031',
+    BannerPlacement.sokoban: 'ca-app-pub-2707874353926722/1609552910',
   };
 
   // ───────── 운영 전면(전환형) ─────────

@@ -5,12 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../services/ads/ad_service.dart';
 import '../../state/app_state.dart';
+import '../../state/iap_state.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/ads/banner_ad_slot.dart';
 import '../../widgets/app_card.dart';
 import '../../widgets/mascot.dart';
 import 'sokoban_levels.dart';
 import 'sokoban_logic.dart';
+import 'sokoban_store.dart';
 
 const _kBestKey = 'sokoban_best_v1'; // "레벨:최소이동" 목록
 const _kTipsKey = 'sokoban_tips_v1'; // 설명을 본 규칙 이름
@@ -101,12 +105,14 @@ class _SokobanMenuState extends ConsumerState<SokobanMenuScreen> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final best = _readBest(ref);
-    // 앞에서부터 이어서 깬 단계 + 2개까지 열린다.
+    final store = SokobanStore(ref.read(sharedPreferencesProvider));
+    final saved = store.savedLevels;
+    // 앞에서부터 이어서 깬 단계 바로 다음 한 단계까지만 열린다.
     var prefix = 0;
     while (best.containsKey(prefix) && prefix < sokobanLevels.length) {
       prefix++;
     }
-    final unlocked = prefix + 2;
+    final unlocked = prefix + 1;
     var stars = 0;
     for (final e in best.entries) {
       stars += sokobanLevels[e.key].starsFor(e.value);
@@ -126,9 +132,14 @@ class _SokobanMenuState extends ConsumerState<SokobanMenuScreen> {
           ),
         ],
       ),
+      const BannerAdSlot(
+        placement: BannerPlacement.sokoban,
+        margin: EdgeInsets.only(top: 14),
+      ),
     ];
     var start = 0;
     for (final (last, name, emoji) in _chapters) {
+      final from = start; // LayoutBuilder가 나중에 실행되므로 현재 값을 붙잡아 둔다
       final end = math.min(last, sokobanLevels.length);
       children
         ..add(const SizedBox(height: 22))
@@ -136,7 +147,7 @@ class _SokobanMenuState extends ConsumerState<SokobanMenuScreen> {
           Padding(
             padding: const EdgeInsets.only(bottom: 10, left: 2),
             child: Text(
-              '$emoji $name  ·  ${start + 1}~$end단계',
+              '$emoji $name  ·  ${from + 1}~$end단계',
               style: theme.textTheme.titleMedium,
             ),
           ),
@@ -149,7 +160,7 @@ class _SokobanMenuState extends ConsumerState<SokobanMenuScreen> {
                 spacing: 10,
                 runSpacing: 10,
                 children: [
-                  for (var i = start; i < end; i++)
+                  for (var i = from; i < end; i++)
                     SizedBox(
                       width: w,
                       height: w * 1.08,
@@ -158,7 +169,8 @@ class _SokobanMenuState extends ConsumerState<SokobanMenuScreen> {
                         stars: best[i] == null
                             ? 0
                             : sokobanLevels[i].starsFor(best[i]!),
-                        locked: i >= unlocked,
+                        locked: i >= unlocked && !saved.contains(i),
+                        resume: saved.contains(i),
                         onTap: () => _open(i),
                       ),
                     ),
@@ -204,11 +216,13 @@ class _LevelTile extends StatelessWidget {
   final int number;
   final int stars;
   final bool locked;
+  final bool resume; // 진행 중인 판이 저장돼 있다
   final VoidCallback onTap;
   const _LevelTile({
     required this.number,
     required this.stars,
     required this.locked,
+    this.resume = false,
     required this.onTap,
   });
 
@@ -244,7 +258,11 @@ class _LevelTile extends StatelessWidget {
                     : Text('$number', style: theme.textTheme.titleMedium),
                 const SizedBox(height: 2),
                 Text(
-                  locked ? '' : '⭐' * stars + '·' * (3 - stars),
+                  locked
+                      ? ''
+                      : resume
+                      ? '▶ 이어서'
+                      : '⭐' * stars + '·' * (3 - stars),
                   style: const TextStyle(fontSize: 9, height: 1),
                 ),
               ],
@@ -270,6 +288,10 @@ class SokobanPlayScreen extends ConsumerStatefulWidget {
 
 class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
     with TickerProviderStateMixin {
+  late final SokobanStore _store = SokobanStore(
+    ref.read(sharedPreferencesProvider),
+  );
+  bool _busy = false; // 새로고침 확인·광고 중
   late int _level = widget.level;
   late SokobanGame _game = SokobanGame(sokobanLevels[_level]);
   late final AnimationController _hop = AnimationController(
@@ -293,6 +315,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
   final _timeLeft = ValueNotifier<double>(0);
   Timer? _ticker;
   final _clock = Stopwatch();
+  double _elapsedBase = 0; // 이어하기로 복원한 시점까지 이미 쓴 시간(초)
 
   // 막혔을 때 잠깐 뜨는 안내
   String? _hint;
@@ -302,11 +325,44 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
   void initState() {
     super.initState();
     _resetTimer();
+    _resume();
     WidgetsBinding.instance.addPostFrameCallback((_) => _showTips());
+  }
+
+  /// 저장된 진행 상황이 있으면 그 자리에서 이어서 한다.
+  void _resume() {
+    final s = _store.load(_level);
+    if (s == null) return;
+    if (!_game.restore(s.path, s.moves)) {
+      _store.clear(_level);
+      return;
+    }
+    final total = _lv.seconds;
+    if (total != null && s.timeLeft != null) {
+      _elapsedBase = total - s.timeLeft!.clamp(0, total.toDouble());
+      _timeLeft.value = s.timeLeft!;
+    }
+  }
+
+  /// 진행 중이면 저장하고, 끝났거나 처음 상태면 저장을 지운다.
+  void _persist() {
+    if (_phase != _Phase.playing || _game.path.isEmpty) {
+      _store.clear(_level);
+      return;
+    }
+    _store.save(
+      _level,
+      SokobanSave(
+        _game.path,
+        _game.moves,
+        _lv.seconds == null ? null : _timeLeft.value,
+      ),
+    );
   }
 
   @override
   void dispose() {
+    if (_phase == _Phase.playing && _game.path.isNotEmpty) _persist();
     _ticker?.cancel();
     _hintTimer?.cancel();
     _timeLeft.dispose();
@@ -324,6 +380,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
     _clock
       ..stop()
       ..reset();
+    _elapsedBase = 0;
     _timeLeft.value = (_lv.seconds ?? 0).toDouble();
   }
 
@@ -332,12 +389,13 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
     if (total == null || _clock.isRunning) return;
     _clock.start();
     _ticker = Timer.periodic(const Duration(milliseconds: 100), (_) {
-      final left = total - _clock.elapsedMilliseconds / 1000;
+      final left = total - _elapsedBase - _clock.elapsedMilliseconds / 1000;
       _timeLeft.value = math.max(0, left);
       if (left <= 0 && _phase == _Phase.playing) {
         _ticker?.cancel();
         _clock.stop();
         HapticFeedback.heavyImpact();
+        _store.clear(_level);
         setState(() {
           _phase = _Phase.exploded;
           _mood = MascotMood.sleepy;
@@ -400,6 +458,12 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
     });
   }
 
+  /// 광고 제거를 구매했으면 전면 광고를 띄우지 않는다. 노출 정책은 AdService가 정한다.
+  void _maybeShowInterstitial() {
+    if (ref.read(adsRemovedProvider)) return;
+    AdService.instance.maybeShowInterstitial(isMockExam: false);
+  }
+
   void _move(int dr, int dc) {
     if (_phase != _Phase.playing) return;
     final res = _game.move(dr, dc);
@@ -439,6 +503,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
         _stopTimer();
       }
     });
+    _persist();
   }
 
   void _undo() {
@@ -451,9 +516,50 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
         _stopTimer();
       }
     });
+    _persist();
+  }
+
+  /// 진행 중인 판을 처음부터 다시 할 때: 확인 후 전면 광고를 보여주고 다시 시작한다.
+  /// 아직 한 걸음도 안 움직였으면 광고 없이 바로 다시 시작한다.
+  Future<void> _onRefresh() async {
+    if (_busy) return;
+    if (_phase != _Phase.playing || _game.moves == 0) {
+      _restart();
+      return;
+    }
+    setState(() => _busy = true);
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('🔄 처음부터 다시 할까요?'),
+        content: const Text('지금까지 진행한 내용이 사라져요.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('취소'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('다시 하기'),
+          ),
+        ],
+      ),
+    );
+    if (ok != true || !mounted) {
+      if (mounted) setState(() => _busy = false);
+      return;
+    }
+    // 광고 제거 구매자는 광고 없이 바로 시작한다.
+    if (!ref.read(adsRemovedProvider)) {
+      await AdService.instance.showInterstitialNow();
+    }
+    if (!mounted) return;
+    setState(() => _busy = false);
+    _restart();
   }
 
   void _restart({int? level}) {
+    _store.clear(_level); // 지금 단계의 저장은 버린다
     setState(() {
       if (level != null) {
         _level = level;
@@ -466,6 +572,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
       _hint = null;
       _confetti.reset();
       _resetTimer();
+      if (level != null) _resume(); // 다음 단계에 진행 중이던 판이 있으면 이어서
     });
     if (level != null) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _showTips());
@@ -523,7 +630,7 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
             ),
             IconButton(
               tooltip: '다시 시작',
-              onPressed: _restart,
+              onPressed: _onRefresh,
               icon: const Icon(Icons.refresh_rounded),
             ),
           ],
@@ -620,7 +727,12 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
                   title: '🎉 클리어! ${g.moves}걸음',
                   stars: lv.starsFor(g.moves),
                   onRetry: _restart,
-                  onNext: hasNext ? () => _restart(level: _level + 1) : null,
+                  onNext: hasNext
+                      ? () {
+                          _maybeShowInterstitial();
+                          _restart(level: _level + 1);
+                        }
+                      : null,
                   onMenu: () => Navigator.pop(context),
                 ),
                 _Phase.outOfSteps => _ResultPanel(
@@ -644,6 +756,10 @@ class _SokobanPlayState extends ConsumerState<SokobanPlayScreen>
                     color: theme.colorScheme.onSurfaceVariant,
                   ),
                 ),
+              const BannerAdSlot(
+                placement: BannerPlacement.sokoban,
+                margin: EdgeInsets.only(top: 8),
+              ),
               const SizedBox(height: 8),
             ],
           ),

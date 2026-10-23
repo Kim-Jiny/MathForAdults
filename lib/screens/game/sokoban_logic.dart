@@ -64,7 +64,8 @@ class _Snapshot {
   final List<Box> boxes;
   final int moves;
   final int pushes;
-  _Snapshot(this.player, this.boxes, this.moves, this.pushes);
+  final String dir; // 이 스냅샷 다음에 한 걸음의 방향(U/D/L/R)
+  _Snapshot(this.player, this.boxes, this.moves, this.pushes, this.dir);
 }
 
 enum MoveResult {
@@ -169,6 +170,26 @@ class SokobanGame {
 
   bool get canUndo => _history.isNotEmpty;
 
+  /// 지금 판으로 오기까지의 걸음 방향(되돌린 걸음은 빠진다). 저장·복원용.
+  String get path => _history.map((h) => h.dir).join();
+
+  /// [path]를 처음부터 다시 걸어 판을 복원한다. [totalMoves]는 되돌리기까지 센 걸음 수.
+  /// 저장된 경로가 지금 규칙과 맞지 않으면 false를 돌려주고 처음 상태로 둔다.
+  bool restore(String path, int totalMoves) {
+    reset();
+    const dirs = {'U': (-1, 0), 'D': (1, 0), 'L': (0, -1), 'R': (0, 1)};
+    for (final ch in path.split('')) {
+      final d = dirs[ch];
+      final res = d == null ? MoveResult.blocked : move(d.$1, d.$2);
+      if (res != MoveResult.moved && res != MoveResult.pushed) {
+        reset();
+        return false;
+      }
+    }
+    moves = totalMoves < _history.length ? _history.length : totalMoves;
+    return true;
+  }
+
   int? get limit => level.limit;
   int? get movesLeft => limit == null ? null : limit! - moves;
 
@@ -217,7 +238,19 @@ class SokobanGame {
     if (walls.contains(next)) return MoveResult.blocked;
     final box = _boxAt(next);
     var result = MoveResult.moved;
-    final snap = _Snapshot(player, boxes, moves, pushes);
+    final snap = _Snapshot(
+      player,
+      boxes,
+      moves,
+      pushes,
+      dr < 0
+          ? 'U'
+          : dr > 0
+          ? 'D'
+          : dc < 0
+          ? 'L'
+          : 'R',
+    );
     if (box != null) {
       if (isLocked(box)) return MoveResult.locked;
       final beyond = (next.$1 + dr, next.$2 + dc);

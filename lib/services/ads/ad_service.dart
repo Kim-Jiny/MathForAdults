@@ -16,6 +16,9 @@ import 'ad_ids.dart';
 ///  - 앱 설치 후 30분이 지난 사용자에게만
 ///  - 직전 광고를 본 뒤 3분(쿨타임)이 지나야
 ///  - 위 조건을 모두 통과한 전환의 20% 확률로만
+///
+/// 설치 30분·쿨타임은 모든 전면 광고가 같은 기준(마지막 노출 시각)을 공유한다.
+/// 소코반 '새로 하기'([showInterstitialNow])는 확률만 빼고 같은 조건을 쓴다.
 class AdService {
   AdService._();
   static final AdService instance = AdService._();
@@ -136,14 +139,7 @@ class AdService {
     if (prefs == null) return;
 
     final now = DateTime.now().millisecondsSinceEpoch;
-
-    // 설치 30분 경과 게이트
-    final installAt = prefs.getInt(_kInstallAtKey) ?? now;
-    if (now - installAt < _minAgeAfterInstall.inMilliseconds) return;
-
-    // 3분 쿨타임 게이트
-    final lastShown = prefs.getInt(_kLastShownKey) ?? 0;
-    if (now - lastShown < _cooldown.inMilliseconds) return;
+    if (!_gatesPassed(prefs, now)) return;
 
     // 광고가 아직 준비되지 않았으면 다음을 위해 미리 로드만 하고 종료
     final ad = _interstitial;
@@ -170,6 +166,47 @@ class AdService {
       },
     );
     ad.show();
+  }
+
+  /// 설치 후 경과 시간·쿨타임 게이트. 모든 전면 광고가 공통으로 쓴다.
+  bool _gatesPassed(SharedPreferences prefs, int now) {
+    final installAt = prefs.getInt(_kInstallAtKey) ?? now;
+    if (now - installAt < _minAgeAfterInstall.inMilliseconds) return false;
+    final lastShown = prefs.getInt(_kLastShownKey) ?? 0;
+    return now - lastShown >= _cooldown.inMilliseconds;
+  }
+
+  /// 확률 없이 전면 광고를 띄운다(설치 경과·쿨타임 게이트는 공통 적용). 게이트에 걸렸거나
+  /// 광고가 준비되지 않았으면 아무것도 안 하고 바로 끝나고, 띄웠으면 광고가 닫힌 뒤에 끝난다.
+  /// 호출 측은 이어서 할 일을 해도 된다. (소코반 '새로 하기'용)
+  Future<void> showInterstitialNow() async {
+    final prefs = _prefs;
+    if (!_initialized || prefs == null) return;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    if (!_gatesPassed(prefs, now)) return;
+    final ad = _interstitial;
+    if (ad == null) {
+      _loadInterstitial();
+      return;
+    }
+    prefs.setInt(_kLastShownKey, now);
+    _interstitial = null;
+    final done = Completer<void>();
+    ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: (ad) {
+        ad.dispose();
+        _loadInterstitial();
+        if (!done.isCompleted) done.complete();
+      },
+      onAdFailedToShowFullScreenContent: (ad, error) {
+        ad.dispose();
+        _loadInterstitial();
+        debugPrint('전면 광고 표시 실패: $error');
+        if (!done.isCompleted) done.complete();
+      },
+    );
+    ad.show();
+    await done.future;
   }
 
   void _loadRewarded() {
